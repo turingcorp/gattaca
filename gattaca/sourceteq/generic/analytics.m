@@ -2,6 +2,15 @@
 
 @implementation analytics
 
++(instancetype)singleton
+{
+    static analytics *single;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^(void) { single = [[self alloc] init]; });
+    
+    return single;
+}
+
 //+(void)session
 //{
 //    [[GAI sharedInstance] trackerWithTrackingId:analyticsid];

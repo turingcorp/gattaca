@@ -5,13 +5,13 @@
     CFStringRef stringref;
 }
 
-+(instancetype)sha
++(instancetype)singleton
 {
-    static tools *sha;
+    static tools *single;
     static dispatch_once_t once;
-    dispatch_once(&once, ^(void) { sha = [[self alloc] init];});
+    dispatch_once(&once, ^(void) { single = [[self alloc] init]; });
     
-    return sha;
+    return single;
 }
 
 +(void)rateapp
