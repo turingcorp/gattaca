@@ -16,15 +16,6 @@
 
 // notifications
 
-#define notclosealert           @"closealert"
-#define notgxdraw               @"gxdraw"
-#define notgxmove               @"gxmove"
-#define notticker               @"ticker"
-#define notupdatescore          @"updatescore"
-
 // extra
 
-#define analyticsid             @"UA-72037850-1"
 #define stringdrawing           NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin
-#define pixelsize               64.0
-#define maxbeads                7

@@ -10,7 +10,7 @@
     [updater launch];
     window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [window makeKeyAndVisible];
-    [window setRootViewController:[ctrmain sha]];
+//    [window setRootViewController:[ctrmain sha]];
     
     [analytics session];
     
@@ -31,7 +31,6 @@
 
 -(void)applicationDidBecomeActive:(UIApplication*)_app
 {
-    [[gkman sha] login];
 }
 
 -(void)applicationWillTerminate:(UIApplication*)_app

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
 		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
 		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
 		DA4A744D1C3D9B240092A405 /* appdel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A74331C3D9B240092A405 /* appdel.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4A742C1C3D9B240092A405 /* defs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defs.plist; sourceTree = "<group>"; };
 		DA4A742E1C3D9B240092A405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -36,9 +39,6 @@
 		DA4A743D1C3D9B240092A405 /* updater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updater.m; sourceTree = "<group>"; };
 		DA4A74401C3D9B240092A405 /* timerbg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timerbg.h; sourceTree = "<group>"; };
 		DA4A74411C3D9B240092A405 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
-		DA4A74461C3D9B240092A405 /* ctr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ctr.h; sourceTree = "<group>"; };
-		DA4A74481C3D9B240092A405 /* mod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mod.h; sourceTree = "<group>"; };
-		DA4A744A1C3D9B240092A405 /* vi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vi.h; sourceTree = "<group>"; };
 		DA4A74541C3D9CA10092A405 /* privateconstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA4A74551C3D9CC20092A405 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +77,7 @@
 				DA4A74281C3D9B240092A405 /* imateq */,
 				DA4A742B1C3D9B240092A405 /* langteq */,
 				DA4A74301C3D9B240092A405 /* sourceteq */,
+				DA388D781C3DA8A600672F8D /* Images.xcassets */,
 			);
 			path = gattaca;
 			sourceTree = "<group>";
@@ -171,6 +172,7 @@
 		DA4A74421C3D9B240092A405 /* private */ = {
 			isa = PBXGroup;
 			children = (
+				DA388D7A1C3DA92600672F8D /* private.h */,
 				DA4A74541C3D9CA10092A405 /* privateconstants.h */,
 			);
 			path = private;
@@ -179,35 +181,8 @@
 		DA4A74441C3D9B240092A405 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				DA4A74451C3D9B240092A405 /* ctr */,
-				DA4A74471C3D9B240092A405 /* mod */,
-				DA4A74491C3D9B240092A405 /* vi */,
 			);
 			path = source;
-			sourceTree = "<group>";
-		};
-		DA4A74451C3D9B240092A405 /* ctr */ = {
-			isa = PBXGroup;
-			children = (
-				DA4A74461C3D9B240092A405 /* ctr.h */,
-			);
-			path = ctr;
-			sourceTree = "<group>";
-		};
-		DA4A74471C3D9B240092A405 /* mod */ = {
-			isa = PBXGroup;
-			children = (
-				DA4A74481C3D9B240092A405 /* mod.h */,
-			);
-			path = mod;
-			sourceTree = "<group>";
-		};
-		DA4A74491C3D9B240092A405 /* vi */ = {
-			isa = PBXGroup;
-			children = (
-				DA4A744A1C3D9B240092A405 /* vi.h */,
-			);
-			path = vi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4A744B1C3D9B240092A405 /* defs.plist in Resources */,
+				DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */,
 				DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */,
 				DA4A744E1C3D9B240092A405 /* Info.plist in Resources */,
 			);
@@ -391,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/gattaca/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -408,6 +385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = "$(SRCROOT)/gattaca/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
