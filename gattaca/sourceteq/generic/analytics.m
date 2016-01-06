@@ -32,7 +32,7 @@
 
 -(void)start
 {
-    [[GAI sharedInstance] trackerWithTrackingId:];
+    [[GAI sharedInstance] trackerWithTrackingId:analyticsid];
 }
 
 -(void)trackscreen:(ga_screen)screen
