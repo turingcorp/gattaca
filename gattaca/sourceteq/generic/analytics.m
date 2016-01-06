@@ -11,6 +11,31 @@
     return single;
 }
 
+-(instancetype)init
+{
+    self = [super init];
+    
+    NSDictionary *plist = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"analytics" withExtension:@"plist"]];
+    self.screens = plist[@"screens"];
+    self.events = plist[@"events"];
+    
+    return self;
+}
+
+#pragma mark public
+
+-(void)start
+{
+    
+}
+
+-(void)trackscreen:(ga_screen)screen
+{
+    
+}
+
+-(void)track
+
 //+(void)session
 //{
 //    [[GAI sharedInstance] trackerWithTrackingId:analyticsid];

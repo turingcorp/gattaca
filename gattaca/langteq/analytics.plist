@@ -7,6 +7,14 @@
 		<string>home</string>
 	</array>
 	<key>events</key>
-	<array/>
+	<array>
+		<string>application_rate</string>
+	</array>
+	<key>actions</key>
+	<array>
+		<string>on</string>
+		<string>off</string>
+		<string>opt-in</string>
+	</array>
 </dict>
 </plist>
