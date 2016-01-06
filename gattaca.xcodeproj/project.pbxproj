@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
+		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
+		DA4A744D1C3D9B240092A405 /* appdel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A74331C3D9B240092A405 /* appdel.m */; };
+		DA4A744E1C3D9B240092A405 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A74341C3D9B240092A405 /* Info.plist */; };
+		DA4A744F1C3D9B240092A405 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A74351C3D9B240092A405 /* main.m */; };
+		DA4A74501C3D9B240092A405 /* analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A74381C3D9B240092A405 /* analytics.m */; };
+		DA4A74511C3D9B240092A405 /* tools.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A743B1C3D9B240092A405 /* tools.m */; };
+		DA4A74521C3D9B240092A405 /* updater.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A743D1C3D9B240092A405 /* updater.m */; };
+		DA4A74531C3D9B240092A405 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4A74411C3D9B240092A405 /* libtimerbg.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4A742C1C3D9B240092A405 /* defs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defs.plist; sourceTree = "<group>"; };
+		DA4A742E1C3D9B240092A405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA4A742F1C3D9B240092A405 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA4A74321C3D9B240092A405 /* appdel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appdel.h; sourceTree = "<group>"; };
+		DA4A74331C3D9B240092A405 /* appdel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = appdel.m; sourceTree = "<group>"; };
+		DA4A74341C3D9B240092A405 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA4A74351C3D9B240092A405 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA4A74371C3D9B240092A405 /* analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = analytics.h; sourceTree = "<group>"; };
+		DA4A74381C3D9B240092A405 /* analytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = analytics.m; sourceTree = "<group>"; };
+		DA4A74391C3D9B240092A405 /* generic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generic.h; sourceTree = "<group>"; };
+		DA4A743A1C3D9B240092A405 /* tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
+		DA4A743B1C3D9B240092A405 /* tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tools.m; sourceTree = "<group>"; };
+		DA4A743C1C3D9B240092A405 /* updater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updater.h; sourceTree = "<group>"; };
+		DA4A743D1C3D9B240092A405 /* updater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updater.m; sourceTree = "<group>"; };
+		DA4A74401C3D9B240092A405 /* timerbg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timerbg.h; sourceTree = "<group>"; };
+		DA4A74411C3D9B240092A405 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
+		DA4A74461C3D9B240092A405 /* ctr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ctr.h; sourceTree = "<group>"; };
+		DA4A74481C3D9B240092A405 /* mod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mod.h; sourceTree = "<group>"; };
+		DA4A744A1C3D9B240092A405 /* vi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vi.h; sourceTree = "<group>"; };
+		DA4A74541C3D9CA10092A405 /* privateconstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
+		DA4A74551C3D9CC20092A405 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA4A740B1C3D95E00092A405 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4A74531C3D9B240092A405 /* libtimerbg.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA4A74051C3D95E00092A405 = {
+			isa = PBXGroup;
+			children = (
+				DA4A74101C3D95E00092A405 /* gattaca */,
+				DA4A740F1C3D95E00092A405 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA4A740F1C3D95E00092A405 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A740E1C3D95E00092A405 /* gattaca.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA4A74101C3D95E00092A405 /* gattaca */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A74281C3D9B240092A405 /* imateq */,
+				DA4A742B1C3D9B240092A405 /* langteq */,
+				DA4A74301C3D9B240092A405 /* sourceteq */,
+			);
+			path = gattaca;
+			sourceTree = "<group>";
+		};
+		DA4A74281C3D9B240092A405 /* imateq */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A74291C3D9B240092A405 /* in */,
+				DA4A742A1C3D9B240092A405 /* ui */,
+			);
+			path = imateq;
+			sourceTree = "<group>";
+		};
+		DA4A74291C3D9B240092A405 /* in */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = in;
+			sourceTree = "<group>";
+		};
+		DA4A742A1C3D9B240092A405 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		DA4A742B1C3D9B240092A405 /* langteq */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A742C1C3D9B240092A405 /* defs.plist */,
+				DA4A742D1C3D9B240092A405 /* Localizable.strings */,
+			);
+			path = langteq;
+			sourceTree = "<group>";
+		};
+		DA4A74301C3D9B240092A405 /* sourceteq */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A74311C3D9B240092A405 /* core */,
+				DA4A74361C3D9B240092A405 /* generic */,
+				DA4A743E1C3D9B240092A405 /* lib */,
+				DA4A74411C3D9B240092A405 /* libtimerbg.a */,
+				DA4A74421C3D9B240092A405 /* private */,
+				DA4A74441C3D9B240092A405 /* source */,
+			);
+			path = sourceteq;
+			sourceTree = "<group>";
+		};
+		DA4A74311C3D9B240092A405 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A74321C3D9B240092A405 /* appdel.h */,
+				DA4A74331C3D9B240092A405 /* appdel.m */,
+				DA4A74341C3D9B240092A405 /* Info.plist */,
+				DA4A74351C3D9B240092A405 /* main.m */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		DA4A74361C3D9B240092A405 /* generic */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A74551C3D9CC20092A405 /* constants.h */,
+				DA4A74371C3D9B240092A405 /* analytics.h */,
+				DA4A74381C3D9B240092A405 /* analytics.m */,
+				DA4A74391C3D9B240092A405 /* generic.h */,
+				DA4A743A1C3D9B240092A405 /* tools.h */,
+				DA4A743B1C3D9B240092A405 /* tools.m */,
+				DA4A743C1C3D9B240092A405 /* updater.h */,
+				DA4A743D1C3D9B240092A405 /* updater.m */,
+			);
+			path = generic;
+			sourceTree = "<group>";
+		};
+		DA4A743E1C3D9B240092A405 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A743F1C3D9B240092A405 /* timerbg */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		DA4A743F1C3D9B240092A405 /* timerbg */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A74401C3D9B240092A405 /* timerbg.h */,
+			);
+			path = timerbg;
+			sourceTree = "<group>";
+		};
+		DA4A74421C3D9B240092A405 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A74541C3D9CA10092A405 /* privateconstants.h */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+		DA4A74441C3D9B240092A405 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A74451C3D9B240092A405 /* ctr */,
+				DA4A74471C3D9B240092A405 /* mod */,
+				DA4A74491C3D9B240092A405 /* vi */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		DA4A74451C3D9B240092A405 /* ctr */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A74461C3D9B240092A405 /* ctr.h */,
+			);
+			path = ctr;
+			sourceTree = "<group>";
+		};
+		DA4A74471C3D9B240092A405 /* mod */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A74481C3D9B240092A405 /* mod.h */,
+			);
+			path = mod;
+			sourceTree = "<group>";
+		};
+		DA4A74491C3D9B240092A405 /* vi */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A744A1C3D9B240092A405 /* vi.h */,
+			);
+			path = vi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA4A740D1C3D95E00092A405 /* gattaca */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA4A74251C3D95E00092A405 /* Build configuration list for PBXNativeTarget "gattaca" */;
+			buildPhases = (
+				DA4A740A1C3D95E00092A405 /* Sources */,
+				DA4A740B1C3D95E00092A405 /* Frameworks */,
+				DA4A740C1C3D95E00092A405 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gattaca;
+			productName = gattaca;
+			productReference = DA4A740E1C3D95E00092A405 /* gattaca.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA4A74061C3D95E00092A405 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Iturbide;
+				TargetAttributes = {
+					DA4A740D1C3D95E00092A405 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7AMWG3RLHN;
+					};
+				};
+			};
+			buildConfigurationList = DA4A74091C3D95E00092A405 /* Build configuration list for PBXProject "gattaca" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+			);
+			mainGroup = DA4A74051C3D95E00092A405;
+			productRefGroup = DA4A740F1C3D95E00092A405 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA4A740D1C3D95E00092A405 /* gattaca */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA4A740C1C3D95E00092A405 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4A744B1C3D9B240092A405 /* defs.plist in Resources */,
+				DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */,
+				DA4A744E1C3D9B240092A405 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA4A740A1C3D95E00092A405 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4A744F1C3D9B240092A405 /* main.m in Sources */,
+				DA4A744D1C3D9B240092A405 /* appdel.m in Sources */,
+				DA4A74501C3D9B240092A405 /* analytics.m in Sources */,
+				DA4A74511C3D9B240092A405 /* tools.m in Sources */,
+				DA4A74521C3D9B240092A405 /* updater.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA4A742D1C3D9B240092A405 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA4A742E1C3D9B240092A405 /* en */,
+				DA4A742F1C3D9B240092A405 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA4A74231C3D95E00092A405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA4A74241C3D95E00092A405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA4A74261C3D95E00092A405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/gattaca/sourceteq/core/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/gattaca/sourceteq",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.gattaca;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA4A74271C3D95E00092A405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				INFOPLIST_FILE = "$(SRCROOT)/gattaca/sourceteq/core/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/gattaca/sourceteq",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.gattaca;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA4A74091C3D95E00092A405 /* Build configuration list for PBXProject "gattaca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA4A74231C3D95E00092A405 /* Debug */,
+				DA4A74241C3D95E00092A405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA4A74251C3D95E00092A405 /* Build configuration list for PBXNativeTarget "gattaca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA4A74261C3D95E00092A405 /* Debug */,
+				DA4A74271C3D95E00092A405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA4A74061C3D95E00092A405 /* Project object */;
+}
