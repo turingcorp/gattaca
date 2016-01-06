@@ -24,6 +24,9 @@
 		172D94B9242E43D73828A848 /* libPods-gattaca.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gattaca.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4478D6F5F04BF335E780B7FA /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
 		CCA345502A1E697843858F3E /* Pods-gattaca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.release.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.release.xcconfig"; sourceTree = "<group>"; };
+		DA2965901C3DB2F900BC713E /* c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
+		DA2965911C3DB30600BC713E /* m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
+		DA2965921C3DB30D00BC713E /* v.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +78,30 @@
 				CCA345502A1E697843858F3E /* Pods-gattaca.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA29658D1C3DB2EC00BC713E /* c */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965901C3DB2F900BC713E /* c.h */,
+			);
+			path = c;
+			sourceTree = "<group>";
+		};
+		DA29658E1C3DB2EC00BC713E /* m */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965911C3DB30600BC713E /* m.h */,
+			);
+			path = m;
+			sourceTree = "<group>";
+		};
+		DA29658F1C3DB2EC00BC713E /* v */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965921C3DB30D00BC713E /* v.h */,
+			);
+			path = v;
 			sourceTree = "<group>";
 		};
 		DA4A74051C3D95E00092A405 = {
@@ -205,6 +232,9 @@
 		DA4A74441C3D9B240092A405 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				DA29658D1C3DB2EC00BC713E /* c */,
+				DA29658E1C3DB2EC00BC713E /* m */,
+				DA29658F1C3DB2EC00BC713E /* v */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -445,6 +475,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/gattaca/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -464,6 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/gattaca/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
