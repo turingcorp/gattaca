@@ -4,7 +4,7 @@
 
 -(void)loadView
 {
-    self.view = [[vbrowse alloc] init];
+    self.view = [[vbrowse alloc] init:self];
 }
 
 @end
