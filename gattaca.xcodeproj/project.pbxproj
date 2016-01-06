@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D2233BBF0363DC0A31972538 /* libPods-gattaca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 172D94B9242E43D73828A848 /* libPods-gattaca.a */; };
 		DA2965961C3DB72C00BC713E /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2965951C3DB72C00BC713E /* analytics.plist */; };
+		DA29659D1C3DC3E300BC713E /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA29659C1C3DC3E300BC713E /* cmain.m */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
 		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
 		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
@@ -30,6 +31,8 @@
 		DA2965921C3DB30D00BC713E /* v.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
 		DA2965941C3DB51D00BC713E /* mgeneral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mgeneral.h; sourceTree = "<group>"; };
 		DA2965951C3DB72C00BC713E /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
+		DA29659B1C3DC3E300BC713E /* cmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmain.h; sourceTree = "<group>"; };
+		DA29659C1C3DC3E300BC713E /* cmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmain.m; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2965901C3DB2F900BC713E /* c.h */,
+				DA29659A1C3DC3E300BC713E /* main */,
 			);
 			path = c;
 			sourceTree = "<group>";
@@ -114,6 +118,15 @@
 				DA2965941C3DB51D00BC713E /* mgeneral.h */,
 			);
 			path = general;
+			sourceTree = "<group>";
+		};
+		DA29659A1C3DC3E300BC713E /* main */ = {
+			isa = PBXGroup;
+			children = (
+				DA29659B1C3DC3E300BC713E /* cmain.h */,
+				DA29659C1C3DC3E300BC713E /* cmain.m */,
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 		DA4A74051C3D95E00092A405 = {
@@ -377,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
 				DA4A744F1C3D9B240092A405 /* main.m in Sources */,
 				DA4A744D1C3D9B240092A405 /* appdel.m in Sources */,
 				DA4A74501C3D9B240092A405 /* analytics.m in Sources */,

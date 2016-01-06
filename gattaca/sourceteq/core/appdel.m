@@ -12,7 +12,7 @@
     [window makeKeyAndVisible];
 //    [window setRootViewController:[ctrmain sha]];
     
-    [analytics session];
+    [[analytics singleton] start];
     
     return YES;
 }
