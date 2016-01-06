@@ -1,10 +1,10 @@
 #import <Foundation/Foundation.h>
 
-typedef enum
+typedef NS_ENUM(NSInteger, timerstate)
 {
     timerstateactive,
     timerstatepaused
-}timerstate;
+};
 
 @protocol timerbgdel <NSObject>
 
