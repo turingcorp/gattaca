@@ -15,6 +15,8 @@
 		DA2965A91C3DC74600BC713E /* ccontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A81C3DC74600BC713E /* ccontact.m */; };
 		DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965AC1C3DC95100BC713E /* vbrowse.m */; };
 		DA2965AF1C3DD89F00BC713E /* in in Resources */ = {isa = PBXBuildFile; fileRef = DA2965AE1C3DD89F00BC713E /* in */; };
+		DA2965B41C3DDDE800BC713E /* vconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965B31C3DDDE800BC713E /* vconfig.m */; };
+		DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965B61C3DDDF100BC713E /* vcontact.m */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
 		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
 		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
@@ -47,6 +49,10 @@
 		DA2965AB1C3DC95100BC713E /* vbrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vbrowse.h; sourceTree = "<group>"; };
 		DA2965AC1C3DC95100BC713E /* vbrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vbrowse.m; sourceTree = "<group>"; };
 		DA2965AE1C3DD89F00BC713E /* in */ = {isa = PBXFileReference; lastKnownFileType = folder; path = in; sourceTree = "<group>"; };
+		DA2965B21C3DDDE800BC713E /* vconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfig.h; sourceTree = "<group>"; };
+		DA2965B31C3DDDE800BC713E /* vconfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfig.m; sourceTree = "<group>"; };
+		DA2965B51C3DDDF100BC713E /* vcontact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcontact.h; sourceTree = "<group>"; };
+		DA2965B61C3DDDF100BC713E /* vcontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcontact.m; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				DA2965921C3DB30D00BC713E /* v.h */,
+				DA2965B01C3DDDD700BC713E /* config */,
+				DA2965B11C3DDDD700BC713E /* contact */,
 				DA2965AA1C3DC94200BC713E /* browse */,
 			);
 			path = v;
@@ -181,6 +189,24 @@
 				DA2965AC1C3DC95100BC713E /* vbrowse.m */,
 			);
 			path = browse;
+			sourceTree = "<group>";
+		};
+		DA2965B01C3DDDD700BC713E /* config */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965B21C3DDDE800BC713E /* vconfig.h */,
+				DA2965B31C3DDDE800BC713E /* vconfig.m */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		DA2965B11C3DDDD700BC713E /* contact */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965B51C3DDDF100BC713E /* vcontact.h */,
+				DA2965B61C3DDDF100BC713E /* vcontact.m */,
+			);
+			path = contact;
 			sourceTree = "<group>";
 		};
 		DA4A74051C3D95E00092A405 = {
@@ -439,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
+				DA2965B41C3DDDE800BC713E /* vconfig.m in Sources */,
 				DA2965A91C3DC74600BC713E /* ccontact.m in Sources */,
 				DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
@@ -448,6 +475,7 @@
 				DA2965A61C3DC73C00BC713E /* cconfig.m in Sources */,
 				DA4A74511C3D9B240092A405 /* tools.m in Sources */,
 				DA4A74521C3D9B240092A405 /* updater.m in Sources */,
+				DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
