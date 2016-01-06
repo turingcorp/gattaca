@@ -1,5 +1,7 @@
 # Xcode
 #
+gattaca/sourceteq/private/**
+#
 build/
 *.pbxuser
 !default.pbxuser
