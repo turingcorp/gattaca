@@ -1,5 +1,6 @@
 #import "appdel.h"
+#import "viewbase.h"
 
-@interface vconfig:UIView
+@interface vconfig:viewbase
 
 @end

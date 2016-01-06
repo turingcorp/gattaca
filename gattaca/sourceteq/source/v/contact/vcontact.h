@@ -1,5 +1,6 @@
 #import "appdel.h"
+#import "viewbase.h"
 
-@interface vcontact:UIView
+@interface vcontact:viewbase
 
 @end
