@@ -1,6 +1,11 @@
 #import "analytics.h"
 
 @implementation analytics
+{
+    NSArray *screens;
+    NSArray *events;
+    NSArray *actions;
+}
 
 +(instancetype)singleton
 {
@@ -16,8 +21,9 @@
     self = [super init];
     
     NSDictionary *plist = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"analytics" withExtension:@"plist"]];
-    self.screens = plist[@"screens"];
-    self.events = plist[@"events"];
+    screens = plist[@"screens"];
+    events = plist[@"events"];
+    actions = plist[@"actions"];
     
     return self;
 }
@@ -26,7 +32,7 @@
 
 -(void)start
 {
-    
+    [[GAI sharedInstance] trackerWithTrackingId:];
 }
 
 -(void)trackscreen:(ga_screen)screen
@@ -34,7 +40,10 @@
     
 }
 
--(void)track
+-(void)trackevent:(ga_event)event action:(ga_action)action
+{
+    
+}
 
 //+(void)session
 //{
