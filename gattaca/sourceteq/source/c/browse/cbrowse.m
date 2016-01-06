@@ -2,4 +2,9 @@
 
 @implementation cbrowse
 
+-(void)loadView
+{
+    self.view = [[vbrowse alloc] init];
+}
+
 @end
