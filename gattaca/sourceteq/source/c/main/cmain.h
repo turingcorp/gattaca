@@ -2,4 +2,6 @@
 
 @interface cmain:UIPageViewController
 
++(instancetype)singleton;
+
 @end
