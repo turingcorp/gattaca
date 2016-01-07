@@ -16,11 +16,4 @@
     self.view = [[vlogin alloc] init:self];
 }
 
-#pragma mark public
-
--(void)facebook
-{
-    
-}
-
 @end

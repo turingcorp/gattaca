@@ -59,16 +59,8 @@
     [strongindicators setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.indicators = strongindicators;
     
-    UIButton *btnlogin = [[UIButton alloc] init];
-    [btnlogin setClipsToBounds:YES];
-    [btnlogin setBackgroundColor:[UIColor blueColor]];
-    [btnlogin setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btnlogin setTitleColor:[UIColor colorWithWhite:1 alpha:0.1] forState:UIControlStateHighlighted];
-    [btnlogin setTitle:NSLocalizedString(@"login_btn", nil) forState:UIControlStateNormal];
+    FBSDKLoginButton *btnlogin = [[FBSDKLoginButton alloc] init];
     [btnlogin setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [btnlogin.titleLabel setFont:[UIFont fontWithName:fontboldname size:16]];
-    [btnlogin.layer setCornerRadius:3];
-    [btnlogin addTarget:controller action:@selector(facebook) forControlEvents:UIControlEventTouchUpInside];
     
     UILabel *disclaimer = [[UILabel alloc] init];
     [disclaimer setBackgroundColor:[UIColor clearColor]];
@@ -89,9 +81,9 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[steps]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[steps]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[indicators]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[indicators(indiheight)]-50-[btn]-20-[disclaimer]-40-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[indicators(indiheight)]-30-[btn(40)]-20-[disclaimer]-40-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[disclaimer]-20-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-70-[btn]-70-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[btn]-20-|" options:0 metrics:metrics views:views]];
     
     return self;
 }

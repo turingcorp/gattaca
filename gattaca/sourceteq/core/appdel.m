@@ -37,6 +37,7 @@
 
 -(void)applicationDidBecomeActive:(UIApplication*)app
 {
+    [FBSDKAppEvents activateApp];
 }
 
 -(void)applicationWillTerminate:(UIApplication*)app
