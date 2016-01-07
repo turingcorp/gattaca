@@ -2,9 +2,9 @@
 
 @implementation vconfig
 
--(instancetype)init
+-(instancetype)init:(UIViewController*)controller
 {
-    self = [super init];
+    self = [super init:controller];
     [self setBackgroundColor:[UIColor redColor]];
     
     return self;

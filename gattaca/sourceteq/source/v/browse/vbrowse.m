@@ -2,17 +2,19 @@
 
 @implementation vbrowse
 
--(instancetype)init
+-(instancetype)init:(UIViewController*)controller
 {
-    self = [super init];
+    self = [super init:controller];
     [self setBackgroundColor:[UIColor whiteColor]];
     
     UIButton *buttonconfig = [[UIButton alloc] init];
     [buttonconfig setTitle:@"config" forState:UIControlStateNormal];
+    [buttonconfig setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [buttonconfig setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     UIButton *buttoncontact = [[UIButton alloc] init];
     [buttoncontact setTitle:@"contact" forState:UIControlStateNormal];
+    [buttoncontact setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [buttoncontact setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     [self addSubview:buttonconfig];
