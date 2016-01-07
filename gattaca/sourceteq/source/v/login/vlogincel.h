@@ -1,5 +1,5 @@
 #import "appdel.h"
 
-@interface vlogincel : NSObject
+@interface vlogincel:UICollectionViewCell
 
 @end
