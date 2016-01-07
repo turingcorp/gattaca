@@ -1,13 +1,17 @@
-//
-//  mloginthird.m
-//  gattaca
-//
-//  Created by zero on 1/7/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mloginthird.h"
 
 @implementation mloginthird
+
+#pragma mark public
+
+-(NSString*)imagename
+{
+    return @"";
+}
+
+-(NSString*)title
+{
+    return @"Third step";
+}
 
 @end

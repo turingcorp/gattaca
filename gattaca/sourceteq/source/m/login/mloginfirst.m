@@ -1,13 +1,17 @@
-//
-//  mloginfirst.m
-//  gattaca
-//
-//  Created by zero on 1/7/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mloginfirst.h"
 
 @implementation mloginfirst
+
+#pragma mark public
+
+-(NSString*)imagename
+{
+    return @"";
+}
+
+-(NSString*)title
+{
+    return @"First step";
+}
 
 @end
