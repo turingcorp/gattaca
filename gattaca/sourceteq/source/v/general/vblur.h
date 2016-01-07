@@ -1,13 +1,8 @@
-//
-//  vblur.h
-//  gattaca
-//
-//  Created by zero on 1/7/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface vblur:UIView
 
-@interface vblur : NSObject
++(vblur*)dark;
++(vblur*)light;
 
 @end

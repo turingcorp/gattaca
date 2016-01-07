@@ -5,18 +5,14 @@
 -(instancetype)init
 {
     self = [super init];
+    vblur *blur = [vblur light];
+    [self addSubview:blur];
     
-    if(1)
-    {
-        [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.95]];
-    }
-    else
-    {
-        UIVisualEffectView *blur = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-        [blur setUserInteractionEnabled:NO];
-        
-        [self addSubview:blur];
-    }
+    NSDictionary *views = @{@"blur":blur};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
