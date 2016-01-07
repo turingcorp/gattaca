@@ -1,7 +1,12 @@
 #import "appdel.h"
+#import "mloginprotocol.h"
 
-@interface mlogin:NSArray
+@interface mlogin:NSObject
 
-+(NSArray*)generate;
++(mlogin*)generate;
+-(NSInteger)count;
+-(id<mloginprotocol>)step:(NSInteger)index;
+
+@property(nonatomic)NSInteger selected;
 
 @end
