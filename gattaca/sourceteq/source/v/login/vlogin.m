@@ -73,7 +73,7 @@
     UILabel *disclaimer = [[UILabel alloc] init];
     [disclaimer setBackgroundColor:[UIColor clearColor]];
     [disclaimer setFont:[UIFont fontWithName:fontname size:17]];
-    [disclaimer setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
+    [disclaimer setTextColor:[UIColor colorWithWhite:0 alpha:0.5]];
     [disclaimer setNumberOfLines:0];
     [disclaimer setTextAlignment:NSTextAlignmentCenter];
     [disclaimer setText:NSLocalizedString(@"login_disclaimer", nil)];
@@ -91,7 +91,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[indicators]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[indicators(indiheight)]-50-[btn]-20-[disclaimer]-40-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[disclaimer]-20-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-100-[btn]-100-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-70-[btn]-70-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
