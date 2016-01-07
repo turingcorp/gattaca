@@ -20,7 +20,7 @@
 -(void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
     CGContextSetFillColorWithColor(context, fillcollor.CGColor);
     CGContextAddEllipseInRect(context, circlerect);
     CGContextDrawPath(context, kCGPathFillStroke);
@@ -44,7 +44,7 @@
 {
     if(self.isSelected || self.isHighlighted)
     {
-        fillcollor = [UIColor whiteColor];
+        fillcollor = [UIColor blackColor];
     }
     else
     {
