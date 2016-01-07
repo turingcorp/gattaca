@@ -13,7 +13,14 @@
 
 -(void)loadView
 {
-    self.view = [[vlogin alloc] init];
+    self.view = [[vlogin alloc] init:self];
+}
+
+#pragma mark public
+
+-(void)facebook
+{
+    
 }
 
 @end

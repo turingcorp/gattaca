@@ -8,10 +8,12 @@
     NSInteger indicatorheight;
 }
 
--(instancetype)init
+-(instancetype)init:(UIViewController*)controller
 {
     self = [super init];
     [self setBackgroundColor:[UIColor whiteColor]];
+    self.controller = controller;
+    
     indicatorid = @"indicator";
     indicatorwidth = 12;
     indicatorheight = 12;
@@ -57,17 +59,53 @@
     [strongindicators setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.indicators = strongindicators;
     
+    UIButton *btnlogin = [[UIButton alloc] init];
+    [btnlogin setClipsToBounds:YES];
+    [btnlogin setBackgroundColor:[UIColor blueColor]];
+    [btnlogin setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btnlogin setTitleColor:[UIColor colorWithWhite:1 alpha:0.1] forState:UIControlStateHighlighted];
+    [btnlogin setTitle:NSLocalizedString(@"login_btn", nil) forState:UIControlStateNormal];
+    [btnlogin setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [btnlogin.titleLabel setFont:[UIFont fontWithName:fontboldname size:16]];
+    [btnlogin.layer setCornerRadius:3];
+    [btnlogin addTarget:controller action:@selector(facebook) forControlEvents:UIControlEventTouchUpInside];
+    
+    UILabel *disclaimer = [[UILabel alloc] init];
+    [disclaimer setBackgroundColor:[UIColor clearColor]];
+    [disclaimer setFont:[UIFont fontWithName:fontname size:17]];
+    [disclaimer setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
+    [disclaimer setNumberOfLines:0];
+    [disclaimer setTextAlignment:NSTextAlignmentCenter];
+    [disclaimer setText:NSLocalizedString(@"login_disclaimer", nil)];
+    [disclaimer setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
     [self addSubview:strongsteps];
     [self addSubview:strongindicators];
+    [self addSubview:disclaimer];
+    [self addSubview:btnlogin];
     
-    NSDictionary *views = @{@"steps":strongsteps, @"indicators":strongindicators};
+    NSDictionary *views = @{@"steps":strongsteps, @"indicators":strongindicators, @"btn":btnlogin, @"disclaimer":disclaimer};
     NSDictionary *metrics = @{@"indiheight":@(indicatorheight)};
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[steps]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[steps]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[indicators]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[indicators(indiheight)]-180-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[indicators(indiheight)]-50-[btn]-20-[disclaimer]-40-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[disclaimer]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-100-[btn]-100-|" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark functionality
+
+-(void)indicatorselect:(NSInteger)item
+{
+    [self.indicators selectItemAtIndexPath:[NSIndexPath indexPathForItem:item inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionNone];
+}
+
+-(void)stepscroll:(NSInteger)item
+{
+    [self.steps scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:item inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
 }
 
 #pragma mark -
@@ -128,6 +166,7 @@
     {
         cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
         [(vlogincel*)cel config:[self.model step:item]];
+        [self indicatorselect:item];
     }
     else
     {
@@ -136,6 +175,24 @@
     }
     
     return cel;
+}
+
+-(BOOL)collectionView:(UICollectionView*)col shouldSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    BOOL should = NO;
+    
+    if(self.indicators == col)
+    {
+        should = YES;
+    }
+    
+    return should;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    NSInteger item = index.item;
+    [self stepscroll:item];
 }
 
 @end
