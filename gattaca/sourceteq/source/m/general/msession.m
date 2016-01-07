@@ -11,4 +11,16 @@
     return single;
 }
 
+-(instancetype)init
+{
+    self = [super init];
+    
+    if([FBSDKAccessToken currentAccessToken])
+    {
+        
+    }
+    
+    return self;
+}
+
 @end

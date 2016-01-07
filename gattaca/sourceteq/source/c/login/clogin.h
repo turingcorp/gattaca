@@ -1,6 +1,6 @@
 #import "appdel.h"
 
-@interface clogin:UIViewController
+@interface clogin:UIViewController<FBSDKLoginButtonDelegate>
 
 +(void)asklogin:(BOOL)_animated;
 

@@ -71,5 +71,10 @@
 	<string>1710288525883882</string>
 	<key>FacebookDisplayName</key>
 	<string>Gattaca</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fbauth2</string>
+    </array>
 </dict>
 </plist>
