@@ -1,5 +1,14 @@
 #import <Foundation/Foundation.h>
 
+// app
+
+typedef NS_ENUM(NSInteger, appsection)
+{
+    appsectionconfig,
+    appsectionbrowse,
+    appsectioncontact
+};
+
 // analytics
 
 typedef NS_ENUM(NSInteger, ga_screen)

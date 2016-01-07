@@ -4,9 +4,9 @@
 
 #pragma mark public
 
--(NSInteger)index
+-(appsection)section
 {
-    return 0;
+    return appsectionconfig;
 }
 
 -(UIViewController*)controller

@@ -2,7 +2,7 @@
 
 @protocol msectionprotocol <NSObject>
 
--(NSInteger)index;
+-(appsection)section;
 -(UIViewController*)controller;
 
 @end
