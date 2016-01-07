@@ -5,6 +5,7 @@
 #import "msectionconfig.h"
 #import "msectionbrowse.h"
 #import "msectioncontact.h"
+#import "msectionlogin.h"
 #import "mlogin.h"
 #import "mloginprotocol.h"
 #import "mloginfirst.h"

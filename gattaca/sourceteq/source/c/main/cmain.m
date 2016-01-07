@@ -21,7 +21,6 @@
     }
     else
     {
-        [self opensection:[msection config] animated:NO];
         [clogin asklogin:NO];
     }
     

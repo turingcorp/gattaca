@@ -10,6 +10,7 @@
     [updater launch];
     window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [window makeKeyAndVisible];
+    [window setBackgroundColor:[UIColor whiteColor]];
     
     [[FBSDKApplicationDelegate sharedInstance] application:app didFinishLaunchingWithOptions:options];
     [window setRootViewController:[cmain singleton]];

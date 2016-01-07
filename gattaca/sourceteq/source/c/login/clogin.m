@@ -7,7 +7,7 @@
     dispatch_async(dispatch_get_main_queue(),
                    ^(void)
                    {
-                       [[cmain singleton] presentViewController:[[clogin alloc] init] animated:_animated completion:nil];
+                       [[cmain singleton] opensection:[msection login] animated:_animated];
                    });
 }
 

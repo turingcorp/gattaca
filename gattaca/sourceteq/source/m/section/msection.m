@@ -19,4 +19,9 @@
     return [[msectioncontact alloc] init];
 }
 
++(msectionlogin*)login
+{
+    return [[msectionlogin alloc] init];
+}
+
 @end
