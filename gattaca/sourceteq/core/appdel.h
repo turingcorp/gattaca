@@ -15,6 +15,8 @@ typedef NS_ENUM (NSInteger, ioslevel)
 
 #import <UIKit/UIKit.h>
 #import <Google/Analytics.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "analytics.h"
 #import "timerbg.h"
 #import "generic.h"

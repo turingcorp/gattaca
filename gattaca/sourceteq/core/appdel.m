@@ -5,7 +5,7 @@
     UIWindow *window;
 }
 
--(BOOL)application:(UIApplication*)_app didFinishLaunchingWithOptions:(NSDictionary*)_options
+-(BOOL)application:(UIApplication*)app didFinishLaunchingWithOptions:(NSDictionary*)options
 {
     [updater launch];
     window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -13,27 +13,33 @@
     [window setRootViewController:[cmain singleton]];
     
     [[analytics singleton] start];
+    [[FBSDKApplicationDelegate sharedInstance] application:app didFinishLaunchingWithOptions:options];
     
     return YES;
 }
 
--(void)applicationWillResignActive:(UIApplication*)_app
+-(BOOL)application:(UIApplication*)app openURL:(NSURL*)url sourceApplication:(NSString*)source annotation:(id)ann
+{
+    return [[FBSDKApplicationDelegate sharedInstance] application:app openURL:url sourceApplication:source annotation:ann];
+}
+
+-(void)applicationWillResignActive:(UIApplication*)app
 {
 }
 
--(void)applicationDidEnterBackground:(UIApplication*)_app
+-(void)applicationDidEnterBackground:(UIApplication*)app
 {
 }
 
--(void)applicationWillEnterForeground:(UIApplication*)_app
+-(void)applicationWillEnterForeground:(UIApplication*)app
 {
 }
 
--(void)applicationDidBecomeActive:(UIApplication*)_app
+-(void)applicationDidBecomeActive:(UIApplication*)app
 {
 }
 
--(void)applicationWillTerminate:(UIApplication*)_app
+-(void)applicationWillTerminate:(UIApplication*)app
 {
 }
 
