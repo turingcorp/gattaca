@@ -2,6 +2,6 @@
 
 @interface clogin:UIViewController
 
-+(void)asklogin;
++(void)asklogin:(BOOL)_animated;
 
 @end
