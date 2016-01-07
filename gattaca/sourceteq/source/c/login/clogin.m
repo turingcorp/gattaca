@@ -32,6 +32,8 @@
     {
         [[analytics singleton] trackevent:ga_event_login action:ga_action_error label:error.localizedDescription];
         NSLog(@"error %@", error);
+        
+        [calert show];
     }
     else
     {

@@ -4,6 +4,7 @@
 
 typedef NS_ENUM(NSInteger, appsection)
 {
+    appsectionlogin,
     appsectionconfig,
     appsectionbrowse,
     appsectioncontact

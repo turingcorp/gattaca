@@ -32,6 +32,8 @@
 		DA30972A1C3EB81F00E8AFA2 /* vlogincel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3097291C3EB81F00E8AFA2 /* vlogincel.m */; };
 		DA30972D1C3EB8DB00E8AFA2 /* vloginindicatorcel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30972C1C3EB8DB00E8AFA2 /* vloginindicatorcel.m */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
+		DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD0C1C3F128F00472BC9 /* calert.m */; };
+		DA46BD111C3F12C000472BC9 /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD101C3F12C000472BC9 /* valert.m */; };
 		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
 		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
 		DA4A744D1C3D9B240092A405 /* appdel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A74331C3D9B240092A405 /* appdel.m */; };
@@ -98,6 +100,10 @@
 		DA30972C1C3EB8DB00E8AFA2 /* vloginindicatorcel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vloginindicatorcel.m; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
+		DA46BD0B1C3F128F00472BC9 /* calert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calert.h; sourceTree = "<group>"; };
+		DA46BD0C1C3F128F00472BC9 /* calert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calert.m; sourceTree = "<group>"; };
+		DA46BD0F1C3F12C000472BC9 /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
+		DA46BD101C3F12C000472BC9 /* valert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = valert.m; sourceTree = "<group>"; };
 		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4A742C1C3D9B240092A405 /* defs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defs.plist; sourceTree = "<group>"; };
 		DA4A742E1C3D9B240092A405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 			children = (
 				DA2965901C3DB2F900BC713E /* c.h */,
 				DA29659A1C3DC3E300BC713E /* main */,
+				DA46BD0A1C3F128F00472BC9 /* alert */,
 				DA29659E1C3DC70100BC713E /* browse */,
 				DA2965D21C3DEFFC00BC713E /* login */,
 				DA29659F1C3DC70100BC713E /* config */,
@@ -178,6 +185,7 @@
 			children = (
 				DA2965921C3DB30D00BC713E /* v.h */,
 				DA2965B81C3DDF7900BC713E /* general */,
+				DA46BD0E1C3F12B300472BC9 /* alert */,
 				DA2965B01C3DDDD700BC713E /* config */,
 				DA2965B11C3DDDD700BC713E /* contact */,
 				DA2965D61C3DF0D000BC713E /* login */,
@@ -320,6 +328,24 @@
 				DA3097231C3EAB5500E8AFA2 /* mloginthird.m */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		DA46BD0A1C3F128F00472BC9 /* alert */ = {
+			isa = PBXGroup;
+			children = (
+				DA46BD0B1C3F128F00472BC9 /* calert.h */,
+				DA46BD0C1C3F128F00472BC9 /* calert.m */,
+			);
+			path = alert;
+			sourceTree = "<group>";
+		};
+		DA46BD0E1C3F12B300472BC9 /* alert */ = {
+			isa = PBXGroup;
+			children = (
+				DA46BD0F1C3F12C000472BC9 /* valert.h */,
+				DA46BD101C3F12C000472BC9 /* valert.m */,
+			);
+			path = alert;
 			sourceTree = "<group>";
 		};
 		DA4A74051C3D95E00092A405 = {
@@ -590,12 +616,14 @@
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
 				DA4A744F1C3D9B240092A405 /* main.m in Sources */,
+				DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */,
 				DA4A744D1C3D9B240092A405 /* appdel.m in Sources */,
 				DA3097211C3EAB4700E8AFA2 /* mloginsecond.m in Sources */,
 				DA4A74501C3D9B240092A405 /* analytics.m in Sources */,
 				DA2965A61C3DC73C00BC713E /* cconfig.m in Sources */,
 				DA2965D51C3DEFFC00BC713E /* clogin.m in Sources */,
 				DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */,
+				DA46BD111C3F12C000472BC9 /* valert.m in Sources */,
 				DA4A74511C3D9B240092A405 /* tools.m in Sources */,
 				DA4A74521C3D9B240092A405 /* updater.m in Sources */,
 				DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */,

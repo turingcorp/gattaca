@@ -4,3 +4,4 @@
 #import "vlogin.h"
 #import "vlogincel.h"
 #import "vloginindicatorcel.h"
+#import "valert.h"
