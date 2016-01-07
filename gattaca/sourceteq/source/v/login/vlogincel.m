@@ -10,8 +10,8 @@
 
     UILabel *strongtitle = [[UILabel alloc] init];
     [strongtitle setBackgroundColor:[UIColor clearColor]];
-    [strongtitle setFont:[UIFont fontWithName:fontname size:20]];
-    [strongtitle setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
+    [strongtitle setFont:[UIFont fontWithName:fontname size:22]];
+    [strongtitle setTextColor:[UIColor colorWithWhite:0 alpha:0.7]];
     [strongtitle setTextAlignment:NSTextAlignmentCenter];
     [strongtitle setTranslatesAutoresizingMaskIntoConstraints:NO];
     [strongtitle setNumberOfLines:0];
