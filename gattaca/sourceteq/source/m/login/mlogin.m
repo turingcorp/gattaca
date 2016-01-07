@@ -2,9 +2,9 @@
 
 @implementation mlogin
 
-+(instancetype)generate
++(NSArray*)generate
 {
-    return [[self alloc] initWithObjects:
+    return [[NSArray alloc] initWithObjects:
             [[mloginfirst alloc] init],
             [[mloginsecond alloc] init],
             [[mloginthird alloc] init],

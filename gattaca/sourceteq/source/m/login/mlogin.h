@@ -2,6 +2,6 @@
 
 @interface mlogin:NSArray
 
-+(instancetype)generate;
++(NSArray*)generate;
 
 @end
