@@ -3,8 +3,7 @@
 @interface cmain:UIPageViewController
 
 +(instancetype)singleton;
--(void)changesection:(appsection)section;
 
-@property(nonatomic)appsection section;
+@property(strong, nonatomic)id<msectionprotocol> section;
 
 @end
