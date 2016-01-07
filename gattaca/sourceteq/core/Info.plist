@@ -28,10 +28,18 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>iturbide.gattaca</string>
+			<string>main</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>gattaca</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Facebook deeplink</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1710288525883882</string>
 			</array>
 		</dict>
 	</array>
@@ -39,6 +47,11 @@
 	<string>1.0.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -54,5 +67,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>FacebookAppID</key>
+	<string>1710288525883882</string>
+	<key>FacebookDisplayName</key>
+	<string>Gattaca</string>
 </dict>
 </plist>
