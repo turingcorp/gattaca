@@ -19,20 +19,30 @@
 #pragma mark -
 #pragma mark login button del
 
+-(BOOL)loginButtonWillLogin:(FBSDKLoginButton*)button
+{
+    [[analytics singleton] trackevent:ga_event_login action:ga_action_start];
+    
+    return YES;
+}
+
 -(void)loginButton:(FBSDKLoginButton*)button didCompleteWithResult:(FBSDKLoginManagerLoginResult*)result error:(NSError*)error
 {
     if(error)
     {
+        [[analytics singleton] trackevent:ga_event_login openaction:error.localizedDescription];
         NSLog(@"error %@", error);
     }
     else
     {
         if(result.isCancelled)
         {
+            [[analytics singleton] trackevent:ga_event_login action:ga_action_cancelled];
             NSLog(@"login cancelled");
         }
         else
         {
+            [[analytics singleton] trackevent:ga_event_login action:ga_action_done];
             NSLog(@"Granted %@", result.grantedPermissions);
             NSLog(@"Declined %@", result.declinedPermissions);
         }
