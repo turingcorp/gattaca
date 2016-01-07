@@ -18,13 +18,13 @@
 		DA2965B41C3DDDE800BC713E /* vconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965B31C3DDDE800BC713E /* vconfig.m */; };
 		DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965B61C3DDDF100BC713E /* vcontact.m */; };
 		DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965BA1C3DDF9300BC713E /* viewbase.m */; };
-		DA2965C41C3DE48100BC713E /* msectionconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965C31C3DE48100BC713E /* msectionconfig.m */; };
-		DA2965C71C3DE48D00BC713E /* msectionbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965C61C3DE48D00BC713E /* msectionbrowse.m */; };
-		DA2965CA1C3DE49900BC713E /* msectioncontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965C91C3DE49900BC713E /* msectioncontact.m */; };
-		DA2965CD1C3DE54300BC713E /* msection.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965CC1C3DE54300BC713E /* msection.m */; };
 		DA2965D51C3DEFFC00BC713E /* clogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965D41C3DEFFC00BC713E /* clogin.m */; };
 		DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965D81C3DF0DF00BC713E /* vlogin.m */; };
 		DA2965DC1C3DF1B900BC713E /* msession.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965DB1C3DF1B900BC713E /* msession.m */; };
+		DA2965E71C3DF2FF00BC713E /* msection.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965DF1C3DF2FF00BC713E /* msection.m */; };
+		DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965E11C3DF2FF00BC713E /* msectionbrowse.m */; };
+		DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965E31C3DF2FF00BC713E /* msectionconfig.m */; };
+		DA2965EA1C3DF2FF00BC713E /* msectioncontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965E51C3DF2FF00BC713E /* msectioncontact.m */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
 		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
 		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
@@ -63,21 +63,21 @@
 		DA2965B61C3DDDF100BC713E /* vcontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcontact.m; sourceTree = "<group>"; };
 		DA2965B91C3DDF9300BC713E /* viewbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewbase.h; sourceTree = "<group>"; };
 		DA2965BA1C3DDF9300BC713E /* viewbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = viewbase.m; sourceTree = "<group>"; };
-		DA2965C21C3DE48100BC713E /* msectionconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectionconfig.h; sourceTree = "<group>"; };
-		DA2965C31C3DE48100BC713E /* msectionconfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectionconfig.m; sourceTree = "<group>"; };
-		DA2965C51C3DE48D00BC713E /* msectionbrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectionbrowse.h; sourceTree = "<group>"; };
-		DA2965C61C3DE48D00BC713E /* msectionbrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectionbrowse.m; sourceTree = "<group>"; };
-		DA2965C81C3DE49900BC713E /* msectioncontact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectioncontact.h; sourceTree = "<group>"; };
-		DA2965C91C3DE49900BC713E /* msectioncontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectioncontact.m; sourceTree = "<group>"; };
-		DA2965CB1C3DE54300BC713E /* msection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msection.h; sourceTree = "<group>"; };
-		DA2965CC1C3DE54300BC713E /* msection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msection.m; sourceTree = "<group>"; };
-		DA2965CE1C3DE6DD00BC713E /* msectionprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectionprotocol.h; sourceTree = "<group>"; };
 		DA2965D31C3DEFFC00BC713E /* clogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clogin.h; sourceTree = "<group>"; };
 		DA2965D41C3DEFFC00BC713E /* clogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = clogin.m; sourceTree = "<group>"; };
 		DA2965D71C3DF0DF00BC713E /* vlogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlogin.h; sourceTree = "<group>"; };
 		DA2965D81C3DF0DF00BC713E /* vlogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlogin.m; sourceTree = "<group>"; };
 		DA2965DA1C3DF1B900BC713E /* msession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msession.h; sourceTree = "<group>"; };
 		DA2965DB1C3DF1B900BC713E /* msession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msession.m; sourceTree = "<group>"; };
+		DA2965DE1C3DF2FF00BC713E /* msection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msection.h; sourceTree = "<group>"; };
+		DA2965DF1C3DF2FF00BC713E /* msection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msection.m; sourceTree = "<group>"; };
+		DA2965E01C3DF2FF00BC713E /* msectionbrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectionbrowse.h; sourceTree = "<group>"; };
+		DA2965E11C3DF2FF00BC713E /* msectionbrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectionbrowse.m; sourceTree = "<group>"; };
+		DA2965E21C3DF2FF00BC713E /* msectionconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectionconfig.h; sourceTree = "<group>"; };
+		DA2965E31C3DF2FF00BC713E /* msectionconfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectionconfig.m; sourceTree = "<group>"; };
+		DA2965E41C3DF2FF00BC713E /* msectioncontact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectioncontact.h; sourceTree = "<group>"; };
+		DA2965E51C3DF2FF00BC713E /* msectioncontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectioncontact.m; sourceTree = "<group>"; };
+		DA2965E61C3DF2FF00BC713E /* msectionprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectionprotocol.h; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +149,7 @@
 			children = (
 				DA2965911C3DB30600BC713E /* m.h */,
 				DA2965931C3DB50900BC713E /* general */,
+				DA2965DD1C3DF2FF00BC713E /* section */,
 			);
 			path = m;
 			sourceTree = "<group>";
@@ -172,15 +173,6 @@
 				DA2965941C3DB51D00BC713E /* mgeneral.h */,
 				DA2965DA1C3DF1B900BC713E /* msession.h */,
 				DA2965DB1C3DF1B900BC713E /* msession.m */,
-				DA2965CB1C3DE54300BC713E /* msection.h */,
-				DA2965CC1C3DE54300BC713E /* msection.m */,
-				DA2965CE1C3DE6DD00BC713E /* msectionprotocol.h */,
-				DA2965C21C3DE48100BC713E /* msectionconfig.h */,
-				DA2965C31C3DE48100BC713E /* msectionconfig.m */,
-				DA2965C51C3DE48D00BC713E /* msectionbrowse.h */,
-				DA2965C61C3DE48D00BC713E /* msectionbrowse.m */,
-				DA2965C81C3DE49900BC713E /* msectioncontact.h */,
-				DA2965C91C3DE49900BC713E /* msectioncontact.m */,
 			);
 			path = general;
 			sourceTree = "<group>";
@@ -273,6 +265,22 @@
 				DA2965D81C3DF0DF00BC713E /* vlogin.m */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		DA2965DD1C3DF2FF00BC713E /* section */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965DE1C3DF2FF00BC713E /* msection.h */,
+				DA2965DF1C3DF2FF00BC713E /* msection.m */,
+				DA2965E01C3DF2FF00BC713E /* msectionbrowse.h */,
+				DA2965E11C3DF2FF00BC713E /* msectionbrowse.m */,
+				DA2965E21C3DF2FF00BC713E /* msectionconfig.h */,
+				DA2965E31C3DF2FF00BC713E /* msectionconfig.m */,
+				DA2965E41C3DF2FF00BC713E /* msectioncontact.h */,
+				DA2965E51C3DF2FF00BC713E /* msectioncontact.m */,
+				DA2965E61C3DF2FF00BC713E /* msectionprotocol.h */,
+			);
+			path = section;
 			sourceTree = "<group>";
 		};
 		DA4A74051C3D95E00092A405 = {
@@ -535,8 +543,9 @@
 				DA2965DC1C3DF1B900BC713E /* msession.m in Sources */,
 				DA2965A91C3DC74600BC713E /* ccontact.m in Sources */,
 				DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */,
+				DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */,
+				DA2965EA1C3DF2FF00BC713E /* msectioncontact.m in Sources */,
 				DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */,
-				DA2965CD1C3DE54300BC713E /* msection.m in Sources */,
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
 				DA4A744F1C3D9B240092A405 /* main.m in Sources */,
@@ -544,12 +553,11 @@
 				DA4A74501C3D9B240092A405 /* analytics.m in Sources */,
 				DA2965A61C3DC73C00BC713E /* cconfig.m in Sources */,
 				DA2965D51C3DEFFC00BC713E /* clogin.m in Sources */,
-				DA2965CA1C3DE49900BC713E /* msectioncontact.m in Sources */,
+				DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */,
 				DA4A74511C3D9B240092A405 /* tools.m in Sources */,
-				DA2965C41C3DE48100BC713E /* msectionconfig.m in Sources */,
 				DA4A74521C3D9B240092A405 /* updater.m in Sources */,
 				DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */,
-				DA2965C71C3DE48D00BC713E /* msectionbrowse.m in Sources */,
+				DA2965E71C3DF2FF00BC713E /* msection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
