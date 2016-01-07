@@ -11,11 +11,13 @@
     [buttonconfig setTitle:@"config" forState:UIControlStateNormal];
     [buttonconfig setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [buttonconfig setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttonconfig addTarget:controller action:@selector(sectionleft) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *buttoncontact = [[UIButton alloc] init];
     [buttoncontact setTitle:@"contact" forState:UIControlStateNormal];
     [buttoncontact setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [buttoncontact setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttoncontact addTarget:controller action:@selector(sectionright) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:buttonconfig];
     [self addSubview:buttoncontact];
