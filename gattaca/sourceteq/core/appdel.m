@@ -10,9 +10,9 @@
     [updater launch];
     window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [window makeKeyAndVisible];
-//    [window setRootViewController:[ctrmain sha]];
+    [window setRootViewController:[cmain singleton]];
     
-    [analytics session];
+    [[analytics singleton] start];
     
     return YES;
 }

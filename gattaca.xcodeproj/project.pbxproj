@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2233BBF0363DC0A31972538 /* libPods-gattaca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 172D94B9242E43D73828A848 /* libPods-gattaca.a */; };
+		DA2965961C3DB72C00BC713E /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2965951C3DB72C00BC713E /* analytics.plist */; };
+		DA29659D1C3DC3E300BC713E /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA29659C1C3DC3E300BC713E /* cmain.m */; };
+		DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A21C3DC72C00BC713E /* cbrowse.m */; };
+		DA2965A61C3DC73C00BC713E /* cconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A51C3DC73C00BC713E /* cconfig.m */; };
+		DA2965A91C3DC74600BC713E /* ccontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A81C3DC74600BC713E /* ccontact.m */; };
+		DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965AC1C3DC95100BC713E /* vbrowse.m */; };
+		DA2965AF1C3DD89F00BC713E /* in in Resources */ = {isa = PBXBuildFile; fileRef = DA2965AE1C3DD89F00BC713E /* in */; };
+		DA2965B41C3DDDE800BC713E /* vconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965B31C3DDDE800BC713E /* vconfig.m */; };
+		DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965B61C3DDDF100BC713E /* vcontact.m */; };
+		DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965BA1C3DDF9300BC713E /* viewbase.m */; };
+		DA2965D51C3DEFFC00BC713E /* clogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965D41C3DEFFC00BC713E /* clogin.m */; };
+		DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965D81C3DF0DF00BC713E /* vlogin.m */; };
+		DA2965DC1C3DF1B900BC713E /* msession.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965DB1C3DF1B900BC713E /* msession.m */; };
+		DA2965E71C3DF2FF00BC713E /* msection.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965DF1C3DF2FF00BC713E /* msection.m */; };
+		DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965E11C3DF2FF00BC713E /* msectionbrowse.m */; };
+		DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965E31C3DF2FF00BC713E /* msectionconfig.m */; };
+		DA2965EA1C3DF2FF00BC713E /* msectioncontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965E51C3DF2FF00BC713E /* msectioncontact.m */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
 		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
 		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
@@ -20,6 +38,46 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		172D94B9242E43D73828A848 /* libPods-gattaca.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gattaca.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4478D6F5F04BF335E780B7FA /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
+		CCA345502A1E697843858F3E /* Pods-gattaca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.release.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.release.xcconfig"; sourceTree = "<group>"; };
+		DA2965901C3DB2F900BC713E /* c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
+		DA2965911C3DB30600BC713E /* m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
+		DA2965921C3DB30D00BC713E /* v.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
+		DA2965941C3DB51D00BC713E /* mgeneral.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mgeneral.h; sourceTree = "<group>"; };
+		DA2965951C3DB72C00BC713E /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
+		DA29659B1C3DC3E300BC713E /* cmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmain.h; sourceTree = "<group>"; };
+		DA29659C1C3DC3E300BC713E /* cmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmain.m; sourceTree = "<group>"; };
+		DA2965A11C3DC72C00BC713E /* cbrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cbrowse.h; sourceTree = "<group>"; };
+		DA2965A21C3DC72C00BC713E /* cbrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cbrowse.m; sourceTree = "<group>"; };
+		DA2965A41C3DC73C00BC713E /* cconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cconfig.h; sourceTree = "<group>"; };
+		DA2965A51C3DC73C00BC713E /* cconfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfig.m; sourceTree = "<group>"; };
+		DA2965A71C3DC74600BC713E /* ccontact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccontact.h; sourceTree = "<group>"; };
+		DA2965A81C3DC74600BC713E /* ccontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ccontact.m; sourceTree = "<group>"; };
+		DA2965AB1C3DC95100BC713E /* vbrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vbrowse.h; sourceTree = "<group>"; };
+		DA2965AC1C3DC95100BC713E /* vbrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vbrowse.m; sourceTree = "<group>"; };
+		DA2965AE1C3DD89F00BC713E /* in */ = {isa = PBXFileReference; lastKnownFileType = folder; path = in; sourceTree = "<group>"; };
+		DA2965B21C3DDDE800BC713E /* vconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfig.h; sourceTree = "<group>"; };
+		DA2965B31C3DDDE800BC713E /* vconfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfig.m; sourceTree = "<group>"; };
+		DA2965B51C3DDDF100BC713E /* vcontact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcontact.h; sourceTree = "<group>"; };
+		DA2965B61C3DDDF100BC713E /* vcontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcontact.m; sourceTree = "<group>"; };
+		DA2965B91C3DDF9300BC713E /* viewbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewbase.h; sourceTree = "<group>"; };
+		DA2965BA1C3DDF9300BC713E /* viewbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = viewbase.m; sourceTree = "<group>"; };
+		DA2965D31C3DEFFC00BC713E /* clogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clogin.h; sourceTree = "<group>"; };
+		DA2965D41C3DEFFC00BC713E /* clogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = clogin.m; sourceTree = "<group>"; };
+		DA2965D71C3DF0DF00BC713E /* vlogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlogin.h; sourceTree = "<group>"; };
+		DA2965D81C3DF0DF00BC713E /* vlogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlogin.m; sourceTree = "<group>"; };
+		DA2965DA1C3DF1B900BC713E /* msession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msession.h; sourceTree = "<group>"; };
+		DA2965DB1C3DF1B900BC713E /* msession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msession.m; sourceTree = "<group>"; };
+		DA2965DE1C3DF2FF00BC713E /* msection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msection.h; sourceTree = "<group>"; };
+		DA2965DF1C3DF2FF00BC713E /* msection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msection.m; sourceTree = "<group>"; };
+		DA2965E01C3DF2FF00BC713E /* msectionbrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectionbrowse.h; sourceTree = "<group>"; };
+		DA2965E11C3DF2FF00BC713E /* msectionbrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectionbrowse.m; sourceTree = "<group>"; };
+		DA2965E21C3DF2FF00BC713E /* msectionconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectionconfig.h; sourceTree = "<group>"; };
+		DA2965E31C3DF2FF00BC713E /* msectionconfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectionconfig.m; sourceTree = "<group>"; };
+		DA2965E41C3DF2FF00BC713E /* msectioncontact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectioncontact.h; sourceTree = "<group>"; };
+		DA2965E51C3DF2FF00BC713E /* msectioncontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectioncontact.m; sourceTree = "<group>"; };
+		DA2965E61C3DF2FF00BC713E /* msectionprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectionprotocol.h; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,17 +107,189 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4A74531C3D9B240092A405 /* libtimerbg.a in Frameworks */,
+				D2233BBF0363DC0A31972538 /* libPods-gattaca.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		888682718E9135D8FB18B6C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				172D94B9242E43D73828A848 /* libPods-gattaca.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C6D9024AA6AD54EEF136910 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4478D6F5F04BF335E780B7FA /* Pods-gattaca.debug.xcconfig */,
+				CCA345502A1E697843858F3E /* Pods-gattaca.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA29658D1C3DB2EC00BC713E /* c */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965901C3DB2F900BC713E /* c.h */,
+				DA29659A1C3DC3E300BC713E /* main */,
+				DA29659E1C3DC70100BC713E /* browse */,
+				DA2965D21C3DEFFC00BC713E /* login */,
+				DA29659F1C3DC70100BC713E /* config */,
+				DA2965A01C3DC70100BC713E /* contact */,
+			);
+			path = c;
+			sourceTree = "<group>";
+		};
+		DA29658E1C3DB2EC00BC713E /* m */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965911C3DB30600BC713E /* m.h */,
+				DA2965931C3DB50900BC713E /* general */,
+				DA2965DD1C3DF2FF00BC713E /* section */,
+			);
+			path = m;
+			sourceTree = "<group>";
+		};
+		DA29658F1C3DB2EC00BC713E /* v */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965921C3DB30D00BC713E /* v.h */,
+				DA2965B81C3DDF7900BC713E /* general */,
+				DA2965B01C3DDDD700BC713E /* config */,
+				DA2965B11C3DDDD700BC713E /* contact */,
+				DA2965D61C3DF0D000BC713E /* login */,
+				DA2965AA1C3DC94200BC713E /* browse */,
+			);
+			path = v;
+			sourceTree = "<group>";
+		};
+		DA2965931C3DB50900BC713E /* general */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965941C3DB51D00BC713E /* mgeneral.h */,
+				DA2965DA1C3DF1B900BC713E /* msession.h */,
+				DA2965DB1C3DF1B900BC713E /* msession.m */,
+			);
+			path = general;
+			sourceTree = "<group>";
+		};
+		DA29659A1C3DC3E300BC713E /* main */ = {
+			isa = PBXGroup;
+			children = (
+				DA29659B1C3DC3E300BC713E /* cmain.h */,
+				DA29659C1C3DC3E300BC713E /* cmain.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		DA29659E1C3DC70100BC713E /* browse */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965A11C3DC72C00BC713E /* cbrowse.h */,
+				DA2965A21C3DC72C00BC713E /* cbrowse.m */,
+			);
+			path = browse;
+			sourceTree = "<group>";
+		};
+		DA29659F1C3DC70100BC713E /* config */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965A41C3DC73C00BC713E /* cconfig.h */,
+				DA2965A51C3DC73C00BC713E /* cconfig.m */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		DA2965A01C3DC70100BC713E /* contact */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965A71C3DC74600BC713E /* ccontact.h */,
+				DA2965A81C3DC74600BC713E /* ccontact.m */,
+			);
+			path = contact;
+			sourceTree = "<group>";
+		};
+		DA2965AA1C3DC94200BC713E /* browse */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965AB1C3DC95100BC713E /* vbrowse.h */,
+				DA2965AC1C3DC95100BC713E /* vbrowse.m */,
+			);
+			path = browse;
+			sourceTree = "<group>";
+		};
+		DA2965B01C3DDDD700BC713E /* config */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965B21C3DDDE800BC713E /* vconfig.h */,
+				DA2965B31C3DDDE800BC713E /* vconfig.m */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		DA2965B11C3DDDD700BC713E /* contact */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965B51C3DDDF100BC713E /* vcontact.h */,
+				DA2965B61C3DDDF100BC713E /* vcontact.m */,
+			);
+			path = contact;
+			sourceTree = "<group>";
+		};
+		DA2965B81C3DDF7900BC713E /* general */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965B91C3DDF9300BC713E /* viewbase.h */,
+				DA2965BA1C3DDF9300BC713E /* viewbase.m */,
+			);
+			path = general;
+			sourceTree = "<group>";
+		};
+		DA2965D21C3DEFFC00BC713E /* login */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965D31C3DEFFC00BC713E /* clogin.h */,
+				DA2965D41C3DEFFC00BC713E /* clogin.m */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		DA2965D61C3DF0D000BC713E /* login */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965D71C3DF0DF00BC713E /* vlogin.h */,
+				DA2965D81C3DF0DF00BC713E /* vlogin.m */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		DA2965DD1C3DF2FF00BC713E /* section */ = {
+			isa = PBXGroup;
+			children = (
+				DA2965DE1C3DF2FF00BC713E /* msection.h */,
+				DA2965DF1C3DF2FF00BC713E /* msection.m */,
+				DA2965E01C3DF2FF00BC713E /* msectionbrowse.h */,
+				DA2965E11C3DF2FF00BC713E /* msectionbrowse.m */,
+				DA2965E21C3DF2FF00BC713E /* msectionconfig.h */,
+				DA2965E31C3DF2FF00BC713E /* msectionconfig.m */,
+				DA2965E41C3DF2FF00BC713E /* msectioncontact.h */,
+				DA2965E51C3DF2FF00BC713E /* msectioncontact.m */,
+				DA2965E61C3DF2FF00BC713E /* msectionprotocol.h */,
+			);
+			path = section;
+			sourceTree = "<group>";
+		};
 		DA4A74051C3D95E00092A405 = {
 			isa = PBXGroup;
 			children = (
 				DA4A74101C3D95E00092A405 /* gattaca */,
 				DA4A740F1C3D95E00092A405 /* Products */,
+				9C6D9024AA6AD54EEF136910 /* Pods */,
+				888682718E9135D8FB18B6C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,17 +315,10 @@
 		DA4A74281C3D9B240092A405 /* imateq */ = {
 			isa = PBXGroup;
 			children = (
-				DA4A74291C3D9B240092A405 /* in */,
+				DA2965AE1C3DD89F00BC713E /* in */,
 				DA4A742A1C3D9B240092A405 /* ui */,
 			);
 			path = imateq;
-			sourceTree = "<group>";
-		};
-		DA4A74291C3D9B240092A405 /* in */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = in;
 			sourceTree = "<group>";
 		};
 		DA4A742A1C3D9B240092A405 /* ui */ = {
@@ -108,6 +331,7 @@
 		DA4A742B1C3D9B240092A405 /* langteq */ = {
 			isa = PBXGroup;
 			children = (
+				DA2965951C3DB72C00BC713E /* analytics.plist */,
 				DA4A742C1C3D9B240092A405 /* defs.plist */,
 				DA4A742D1C3D9B240092A405 /* Localizable.strings */,
 			);
@@ -181,6 +405,9 @@
 		DA4A74441C3D9B240092A405 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				DA29658D1C3DB2EC00BC713E /* c */,
+				DA29658E1C3DB2EC00BC713E /* m */,
+				DA29658F1C3DB2EC00BC713E /* v */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -192,9 +419,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA4A74251C3D95E00092A405 /* Build configuration list for PBXNativeTarget "gattaca" */;
 			buildPhases = (
+				CF294047123A715D2716C995 /* Check Pods Manifest.lock */,
 				DA4A740A1C3D95E00092A405 /* Sources */,
 				DA4A740B1C3D95E00092A405 /* Frameworks */,
 				DA4A740C1C3D95E00092A405 /* Resources */,
+				3A39F304CDE3AA2F511CF47F /* Embed Pods Frameworks */,
+				23D8D5A7B6F847D4BD2496B1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,24 +475,89 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4A744B1C3D9B240092A405 /* defs.plist in Resources */,
+				DA2965961C3DB72C00BC713E /* analytics.plist in Resources */,
 				DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */,
 				DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */,
 				DA4A744E1C3D9B240092A405 /* Info.plist in Resources */,
+				DA2965AF1C3DD89F00BC713E /* in in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23D8D5A7B6F847D4BD2496B1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gattaca/Pods-gattaca-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A39F304CDE3AA2F511CF47F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gattaca/Pods-gattaca-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF294047123A715D2716C995 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA4A740A1C3D95E00092A405 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
+				DA2965B41C3DDDE800BC713E /* vconfig.m in Sources */,
+				DA2965DC1C3DF1B900BC713E /* msession.m in Sources */,
+				DA2965A91C3DC74600BC713E /* ccontact.m in Sources */,
+				DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */,
+				DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */,
+				DA2965EA1C3DF2FF00BC713E /* msectioncontact.m in Sources */,
+				DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */,
+				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
+				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
 				DA4A744F1C3D9B240092A405 /* main.m in Sources */,
 				DA4A744D1C3D9B240092A405 /* appdel.m in Sources */,
 				DA4A74501C3D9B240092A405 /* analytics.m in Sources */,
+				DA2965A61C3DC73C00BC713E /* cconfig.m in Sources */,
+				DA2965D51C3DEFFC00BC713E /* clogin.m in Sources */,
+				DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */,
 				DA4A74511C3D9B240092A405 /* tools.m in Sources */,
 				DA4A74521C3D9B240092A405 /* updater.m in Sources */,
+				DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */,
+				DA2965E71C3DF2FF00BC713E /* msection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,10 +660,12 @@
 		};
 		DA4A74261C3D95E00092A405 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4478D6F5F04BF335E780B7FA /* Pods-gattaca.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/gattaca/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -383,10 +680,12 @@
 		};
 		DA4A74271C3D95E00092A405 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCA345502A1E697843858F3E /* Pods-gattaca.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/gattaca/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
