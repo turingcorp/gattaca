@@ -3,7 +3,8 @@
 @interface cmain:UIPageViewController
 
 +(instancetype)singleton;
--(void)showbrowse;
--(void)showcontact;
+-(void)changesection:(appsection)section;
+
+@property(nonatomic)appsection section;
 
 @end

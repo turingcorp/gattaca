@@ -19,4 +19,29 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)changesection:(appsection)section
+{
+    if(self.section != section)
+    {
+        UIViewController *controller;
+        
+        switch(section)
+        {
+            case appsectionconfig:
+                
+                break;
+                
+            case appsectionbrowse:
+                
+                break;
+                
+            case appsectioncontact:
+                
+                break;
+        }
+    }
+}
+
 @end
