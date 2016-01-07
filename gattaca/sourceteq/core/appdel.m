@@ -10,10 +10,10 @@
     [updater launch];
     window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [window makeKeyAndVisible];
-    [window setRootViewController:[cmain singleton]];
     
-    [[analytics singleton] start];
     [[FBSDKApplicationDelegate sharedInstance] application:app didFinishLaunchingWithOptions:options];
+    [window setRootViewController:[cmain singleton]];
+    [[analytics singleton] start];
     
     return YES;
 }
