@@ -22,6 +22,7 @@
 		DA2965C41C3DE48100BC713E /* msectionconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965C31C3DE48100BC713E /* msectionconfig.m */; };
 		DA2965C71C3DE48D00BC713E /* msectionbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965C61C3DE48D00BC713E /* msectionbrowse.m */; };
 		DA2965CA1C3DE49900BC713E /* msectioncontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965C91C3DE49900BC713E /* msectioncontact.m */; };
+		DA2965CD1C3DE54300BC713E /* msection.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965CC1C3DE54300BC713E /* msection.m */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
 		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
 		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
@@ -68,6 +69,8 @@
 		DA2965C61C3DE48D00BC713E /* msectionbrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectionbrowse.m; sourceTree = "<group>"; };
 		DA2965C81C3DE49900BC713E /* msectioncontact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectioncontact.h; sourceTree = "<group>"; };
 		DA2965C91C3DE49900BC713E /* msectioncontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectioncontact.m; sourceTree = "<group>"; };
+		DA2965CB1C3DE54300BC713E /* msection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msection.h; sourceTree = "<group>"; };
+		DA2965CC1C3DE54300BC713E /* msection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msection.m; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				DA2965941C3DB51D00BC713E /* mgeneral.h */,
+				DA2965CB1C3DE54300BC713E /* msection.h */,
+				DA2965CC1C3DE54300BC713E /* msection.m */,
 				DA2965BF1C3DE46D00BC713E /* msectionbase.h */,
 				DA2965C01C3DE46D00BC713E /* msectionbase.m */,
 				DA2965C21C3DE48100BC713E /* msectionconfig.h */,
@@ -502,6 +507,7 @@
 				DA2965A91C3DC74600BC713E /* ccontact.m in Sources */,
 				DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */,
 				DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */,
+				DA2965CD1C3DE54300BC713E /* msection.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
 				DA2965C11C3DE46D00BC713E /* msectionbase.m in Sources */,
 				DA4A744F1C3D9B240092A405 /* main.m in Sources */,
