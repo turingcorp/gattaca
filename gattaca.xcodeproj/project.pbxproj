@@ -35,6 +35,7 @@
 		DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD0C1C3F128F00472BC9 /* calert.m */; };
 		DA46BD111C3F12C000472BC9 /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD101C3F12C000472BC9 /* valert.m */; };
 		DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD131C3F14B800472BC9 /* msectionlogin.m */; };
+		DA46BD171C3F1B2E00472BC9 /* vblur.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD161C3F1B2E00472BC9 /* vblur.m */; };
 		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
 		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
 		DA4A744D1C3D9B240092A405 /* appdel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A74331C3D9B240092A405 /* appdel.m */; };
@@ -107,6 +108,8 @@
 		DA46BD101C3F12C000472BC9 /* valert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = valert.m; sourceTree = "<group>"; };
 		DA46BD121C3F14B800472BC9 /* msectionlogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msectionlogin.h; sourceTree = "<group>"; };
 		DA46BD131C3F14B800472BC9 /* msectionlogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msectionlogin.m; sourceTree = "<group>"; };
+		DA46BD151C3F1B2E00472BC9 /* vblur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vblur.h; sourceTree = "<group>"; };
+		DA46BD161C3F1B2E00472BC9 /* vblur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vblur.m; sourceTree = "<group>"; };
 		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4A742C1C3D9B240092A405 /* defs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defs.plist; sourceTree = "<group>"; };
 		DA4A742E1C3D9B240092A405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 			children = (
 				DA2965B91C3DDF9300BC713E /* viewbase.h */,
 				DA2965BA1C3DDF9300BC713E /* viewbase.m */,
+				DA46BD151C3F1B2E00472BC9 /* vblur.h */,
+				DA46BD161C3F1B2E00472BC9 /* vblur.m */,
 			);
 			path = general;
 			sourceTree = "<group>";
@@ -628,6 +633,7 @@
 				DA4A74501C3D9B240092A405 /* analytics.m in Sources */,
 				DA2965A61C3DC73C00BC713E /* cconfig.m in Sources */,
 				DA2965D51C3DEFFC00BC713E /* clogin.m in Sources */,
+				DA46BD171C3F1B2E00472BC9 /* vblur.m in Sources */,
 				DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */,
 				DA46BD111C3F12C000472BC9 /* valert.m in Sources */,
 				DA4A74511C3D9B240092A405 /* tools.m in Sources */,

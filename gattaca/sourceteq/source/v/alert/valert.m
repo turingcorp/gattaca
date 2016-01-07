@@ -6,7 +6,7 @@
 {
     self = [super init];
     
-    if(applicationios == ioslevel7)
+    if(1)
     {
         [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.95]];
     }
