@@ -15,7 +15,15 @@
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
 
-    [self opensection:[msection browse] animated:NO];
+    if([msession singleton].userid)
+    {
+        [self opensection:[msection browse] animated:NO];
+    }
+    else
+    {
+        [self opensection:[msection config] animated:NO];
+        [clogin asklogin:NO];
+    }
     
     return self;
 }

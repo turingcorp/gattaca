@@ -4,4 +4,6 @@
 
 +(instancetype)singleton;
 
+@property(copy, nonatomic)NSString *userid;
+
 @end
