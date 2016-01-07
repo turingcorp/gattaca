@@ -29,5 +29,6 @@ typedef NS_ENUM(NSInteger, ga_action)
     ga_action_optin,
     ga_action_start,
     ga_action_cancelled,
+    ga_action_error,
     ga_action_done
 };

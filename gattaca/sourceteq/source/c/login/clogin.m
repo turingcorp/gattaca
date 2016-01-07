@@ -21,7 +21,7 @@
 
 -(BOOL)loginButtonWillLogin:(FBSDKLoginButton*)button
 {
-    [[analytics singleton] trackevent:ga_event_login action:ga_action_start];
+    [[analytics singleton] trackevent:ga_event_login action:ga_action_start label:@""];
     
     return YES;
 }
@@ -30,23 +30,26 @@
 {
     if(error)
     {
-        [[analytics singleton] trackevent:ga_event_login openaction:error.localizedDescription];
+        [[analytics singleton] trackevent:ga_event_login action:ga_action_error label:error.localizedDescription];
         NSLog(@"error %@", error);
     }
     else
     {
         if(result.isCancelled)
         {
-            [[analytics singleton] trackevent:ga_event_login action:ga_action_cancelled];
+            [[analytics singleton] trackevent:ga_event_login action:ga_action_cancelled label:@""];
             NSLog(@"login cancelled");
         }
         else
         {
-            [[analytics singleton] trackevent:ga_event_login action:ga_action_done];
-            NSLog(@"Granted %@", result.grantedPermissions);
-            NSLog(@"Declined %@", result.declinedPermissions);
+            [[analytics singleton] trackevent:ga_event_login action:ga_action_done label:@""];
         }
     }
+}
+
+-(void)loginButtonDidLogOut:(FBSDKLoginButton*)button
+{
+    
 }
 
 @end

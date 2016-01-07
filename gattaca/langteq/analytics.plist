@@ -18,6 +18,7 @@
 		<string>opt-in</string>
 		<string>start</string>
 		<string>cancelled</string>
+		<string>error</string>
 		<string>done</string>
 	</array>
 </dict>

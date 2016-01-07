@@ -43,16 +43,11 @@
     [self.tracker send:[[[GAIDictionaryBuilder createScreenView] set:screens[screen] forKey:kGAIScreenName] build]];
 }
 
--(void)trackevent:(ga_event)event action:(ga_action)action
-{
-    NSString *eventaction = actions[action];
-    [self trackevent:event openaction:eventaction];
-}
-
--(void)trackevent:(ga_event)event openaction:(NSString*)openaction
+-(void)trackevent:(ga_event)event action:(ga_action)action label:(NSString*)label
 {
     NSString *eventname = events[event];
-    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:eventname action:openaction label:@"label1" value:@(1)] build]];
+    NSString *eventaction = actions[action];
+    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:eventname action:eventaction label:label value:@(1)] build]];
 }
 
 @end
