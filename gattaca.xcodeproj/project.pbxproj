@@ -29,6 +29,7 @@
 		DA30971E1C3EAB3C00E8AFA2 /* mloginfirst.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30971D1C3EAB3C00E8AFA2 /* mloginfirst.m */; };
 		DA3097211C3EAB4700E8AFA2 /* mloginsecond.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3097201C3EAB4700E8AFA2 /* mloginsecond.m */; };
 		DA3097241C3EAB5500E8AFA2 /* mloginthird.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3097231C3EAB5500E8AFA2 /* mloginthird.m */; };
+		DA30972A1C3EB81F00E8AFA2 /* vlogincel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3097291C3EB81F00E8AFA2 /* vlogincel.m */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
 		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
 		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
@@ -91,6 +92,8 @@
 		DA3097201C3EAB4700E8AFA2 /* mloginsecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mloginsecond.m; sourceTree = "<group>"; };
 		DA3097221C3EAB5500E8AFA2 /* mloginthird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mloginthird.h; sourceTree = "<group>"; };
 		DA3097231C3EAB5500E8AFA2 /* mloginthird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mloginthird.m; sourceTree = "<group>"; };
+		DA3097281C3EB81F00E8AFA2 /* vlogincel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlogincel.h; sourceTree = "<group>"; };
+		DA3097291C3EB81F00E8AFA2 /* vlogincel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlogincel.m; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,6 +280,8 @@
 			children = (
 				DA2965D71C3DF0DF00BC713E /* vlogin.h */,
 				DA2965D81C3DF0DF00BC713E /* vlogin.m */,
+				DA3097281C3EB81F00E8AFA2 /* vlogincel.h */,
+				DA3097291C3EB81F00E8AFA2 /* vlogincel.m */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -590,6 +595,7 @@
 				DA4A74511C3D9B240092A405 /* tools.m in Sources */,
 				DA4A74521C3D9B240092A405 /* updater.m in Sources */,
 				DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */,
+				DA30972A1C3EB81F00E8AFA2 /* vlogincel.m in Sources */,
 				DA30971E1C3EAB3C00E8AFA2 /* mloginfirst.m in Sources */,
 				DA2965E71C3DF2FF00BC713E /* msection.m in Sources */,
 			);

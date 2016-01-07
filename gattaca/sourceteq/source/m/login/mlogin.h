@@ -1,5 +1,7 @@
 #import "appdel.h"
 
-@interface mlogin:NSObject
+@interface mlogin:NSArray
+
++(instancetype)generate;
 
 @end
