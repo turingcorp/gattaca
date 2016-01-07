@@ -14,6 +14,7 @@
 -(instancetype)init
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
 
     if([msession singleton].userid)
     {

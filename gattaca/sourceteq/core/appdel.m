@@ -24,25 +24,9 @@
     return [[FBSDKApplicationDelegate sharedInstance] application:app openURL:url sourceApplication:source annotation:ann];
 }
 
--(void)applicationWillResignActive:(UIApplication*)app
-{
-}
-
--(void)applicationDidEnterBackground:(UIApplication*)app
-{
-}
-
--(void)applicationWillEnterForeground:(UIApplication*)app
-{
-}
-
 -(void)applicationDidBecomeActive:(UIApplication*)app
 {
     [FBSDKAppEvents activateApp];
-}
-
--(void)applicationWillTerminate:(UIApplication*)app
-{
 }
 
 @end
