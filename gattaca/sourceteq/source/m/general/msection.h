@@ -1,13 +1,9 @@
-//
-//  msection.h
-//  gattaca
-//
-//  Created by zero on 1/6/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface msection:NSObject
 
-@interface msection : NSObject
++(msectionconfig*)config;
++(msectionbrowse*)browse;
++(msectioncontact*)contact;
 
 @end

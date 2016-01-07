@@ -1,4 +1,5 @@
 #import "mgeneral.h"
+#import "msection.h"
 #import "msectionconfig.h"
 #import "msectionbrowse.h"
 #import "msectioncontact.h"
