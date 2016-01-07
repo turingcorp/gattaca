@@ -2,8 +2,7 @@
 
 @protocol msectionprotocol <NSObject>
 
+-(NSInteger)index;
 -(UIViewController*)controller;
-
-@property(nonatomic)NSInteger index;
 
 @end
