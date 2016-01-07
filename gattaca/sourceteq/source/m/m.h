@@ -1,4 +1,5 @@
 #import "mgeneral.h"
+#import "msession.h"
 #import "msection.h"
 #import "msectionprotocol.h"
 #import "msectionconfig.h"
