@@ -1,6 +1,5 @@
 #import "appdel.h"
-#import "msectionbase.h"
 
-@interface msectionbrowse:msectionbase
+@interface msectionbrowse:NSObject<msectionprotocol>
 
 @end

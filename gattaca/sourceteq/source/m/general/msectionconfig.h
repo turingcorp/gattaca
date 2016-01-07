@@ -1,6 +1,5 @@
 #import "appdel.h"
-#import "msectionbase.h"
 
-@interface msectionconfig:msectionbase
+@interface msectionconfig:NSObject<msectionprotocol>
 
 @end
