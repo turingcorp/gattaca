@@ -35,7 +35,6 @@
 		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
 		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
 		DA4A744D1C3D9B240092A405 /* appdel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A74331C3D9B240092A405 /* appdel.m */; };
-		DA4A744E1C3D9B240092A405 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A74341C3D9B240092A405 /* Info.plist */; };
 		DA4A744F1C3D9B240092A405 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A74351C3D9B240092A405 /* main.m */; };
 		DA4A74501C3D9B240092A405 /* analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A74381C3D9B240092A405 /* analytics.m */; };
 		DA4A74511C3D9B240092A405 /* tools.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A743B1C3D9B240092A405 /* tools.m */; };
@@ -518,7 +517,6 @@
 				DA2965961C3DB72C00BC713E /* analytics.plist in Resources */,
 				DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */,
 				DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */,
-				DA4A744E1C3D9B240092A405 /* Info.plist in Resources */,
 				DA2965AF1C3DD89F00BC713E /* in in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
