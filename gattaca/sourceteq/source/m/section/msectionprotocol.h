@@ -4,5 +4,7 @@
 
 -(appsection)section;
 -(UIViewController*)controller;
+-(BOOL)available;
+-(BOOL)current;
 
 @end

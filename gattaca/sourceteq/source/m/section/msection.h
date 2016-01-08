@@ -1,4 +1,5 @@
 #import "appdel.h"
+#import "msectionprotocol.h"
 
 @class msectionconfig;
 @class msectionbrowse;
@@ -11,5 +12,8 @@
 +(msectionbrowse*)browse;
 +(msectioncontact*)contact;
 +(msectionlogin*)login;
++(instancetype)menu;
+-(NSInteger)count;
+-(id<msectionprotocol>)item:(NSInteger)item;
 
 @end
