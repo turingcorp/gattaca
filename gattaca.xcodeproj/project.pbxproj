@@ -39,6 +39,7 @@
 		DA46BD1B1C3F40A300472BC9 /* mconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD1A1C3F40A300472BC9 /* mconfig.m */; };
 		DA46BD1F1C3F487300472BC9 /* mconfigsettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD1E1C3F487300472BC9 /* mconfigsettings.m */; };
 		DA46BD221C3F4BA700472BC9 /* vconfigcel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD211C3F4BA700472BC9 /* vconfigcel.m */; };
+		DA46BD261C3F4DE600472BC9 /* mprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD251C3F4DE600472BC9 /* mprofile.m */; };
 		DA4A744B1C3D9B240092A405 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742C1C3D9B240092A405 /* defs.plist */; };
 		DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA4A742D1C3D9B240092A405 /* Localizable.strings */; };
 		DA4A744D1C3D9B240092A405 /* appdel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A74331C3D9B240092A405 /* appdel.m */; };
@@ -120,6 +121,8 @@
 		DA46BD1E1C3F487300472BC9 /* mconfigsettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigsettings.m; sourceTree = "<group>"; };
 		DA46BD201C3F4BA700472BC9 /* vconfigcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigcel.h; sourceTree = "<group>"; };
 		DA46BD211C3F4BA700472BC9 /* vconfigcel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigcel.m; sourceTree = "<group>"; };
+		DA46BD241C3F4DE600472BC9 /* mprofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofile.h; sourceTree = "<group>"; };
+		DA46BD251C3F4DE600472BC9 /* mprofile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofile.m; sourceTree = "<group>"; };
 		DA4A740E1C3D95E00092A405 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4A742C1C3D9B240092A405 /* defs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defs.plist; sourceTree = "<group>"; };
 		DA4A742E1C3D9B240092A405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -387,6 +390,8 @@
 		DA46BD231C3F4DD000472BC9 /* profile */ = {
 			isa = PBXGroup;
 			children = (
+				DA46BD241C3F4DE600472BC9 /* mprofile.h */,
+				DA46BD251C3F4DE600472BC9 /* mprofile.m */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -648,6 +653,7 @@
 				DA46BD1F1C3F487300472BC9 /* mconfigsettings.m in Sources */,
 				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
 				DA30972D1C3EB8DB00E8AFA2 /* vloginindicatorcel.m in Sources */,
+				DA46BD261C3F4DE600472BC9 /* mprofile.m in Sources */,
 				DA3097241C3EAB5500E8AFA2 /* mloginthird.m in Sources */,
 				DA2965B41C3DDDE800BC713E /* vconfig.m in Sources */,
 				DA30971A1C3EAAA800E8AFA2 /* mlogin.m in Sources */,
