@@ -1,6 +1,6 @@
 #import "appdel.h"
 
-@interface vmenu:UIView
+@interface vmenu:UIView<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 +(void)addto:(UIView*)view;
 

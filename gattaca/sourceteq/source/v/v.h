@@ -1,4 +1,5 @@
 #import "vmenu.h"
+#import "vmenucel.h"
 #import "vblur.h"
 #import "valert.h"
 #import "vbrowse.h"
