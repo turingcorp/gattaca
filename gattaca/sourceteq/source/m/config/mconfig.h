@@ -1,4 +1,5 @@
 #import "appdel.h"
+#import "mconfigprofile.h"
 #import "mconfigprotocol.h"
 
 @interface mconfig:NSObject

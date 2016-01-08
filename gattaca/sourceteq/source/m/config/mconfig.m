@@ -15,6 +15,8 @@
     self = [super init];
  
     array = [NSArray arrayWithObjects:
+             [[mconfigprofile alloc] init],
+             [[mconfigbrowsing alloc] init],
              [[mconfigsettings alloc] init],
              nil];
     

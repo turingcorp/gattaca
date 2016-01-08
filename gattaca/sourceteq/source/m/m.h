@@ -14,4 +14,5 @@
 #import "mloginthird.h"
 #import "mconfig.h"
 #import "mconfigprotocol.h"
+#import "mconfigbrowsing.h"
 #import "mconfigsettings.h"

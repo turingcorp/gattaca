@@ -13,7 +13,7 @@
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setHeaderReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:10];
+    [flow setMinimumLineSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
     [flow setSectionInset:UIEdgeInsetsMake(30, 0, 40, 0)];
     

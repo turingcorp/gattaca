@@ -24,7 +24,7 @@
     self.color = strongcolor;
     
     attrtitle = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:18], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.8]};
-    attrdescr = @{NSFontAttributeName:[UIFont fontWithName:fontname size:16], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.5]};
+    attrdescr = @{NSFontAttributeName:[UIFont fontWithName:fontname size:14], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.5]};
     
     [self addSubview:stronglbl];
     [self addSubview:strongcolor];

@@ -1,8 +1,12 @@
 "login_btn"="Login with Facebook";
 "login_disclaimer"="We won't post anything to Facebook";
 
+"config_profile_title"="Profile";
+"config_profile_descr"="The way others find you";
+"config_browsing_title"="Browsing";
+"config_browsing_descr"="What you are looking for";
 "config_settings_title"="Configuration";
-"config_settings_descr"="How the app works better for you";
+"config_settings_descr"="How you want the app";
 
 "alert_accept"="Accept";
 
