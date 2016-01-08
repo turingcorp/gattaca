@@ -14,6 +14,11 @@
     return [[ccontact alloc] init];
 }
 
+-(NSString*)image
+{
+    return @"engine";
+}
+
 -(BOOL)available
 {
     return YES;

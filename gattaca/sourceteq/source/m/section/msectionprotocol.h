@@ -4,6 +4,7 @@
 
 -(appsection)section;
 -(UIViewController*)controller;
+-(NSString*)image;
 -(BOOL)available;
 -(BOOL)current;
 

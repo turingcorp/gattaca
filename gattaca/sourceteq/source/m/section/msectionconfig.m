@@ -14,6 +14,11 @@
     return [[cconfig alloc] init];
 }
 
+-(NSString*)image
+{
+    return @"engine";
+}
+
 -(BOOL)available
 {
     return YES;
