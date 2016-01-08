@@ -16,7 +16,7 @@
 
 -(NSString*)image
 {
-    return @"engine";
+    return @"loader";
 }
 
 -(BOOL)available
