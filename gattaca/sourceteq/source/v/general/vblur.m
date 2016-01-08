@@ -51,7 +51,7 @@
 
 -(void)lighteffect
 {
-    [self geneffect:UIBlurEffectStyleLight];
+    [self geneffect:UIBlurEffectStyleExtraLight];
 }
 
 -(void)geneffect:(UIBlurEffectStyle)style
@@ -67,12 +67,12 @@
 
 -(void)darkbackground
 {
-    [self setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.97]];
+    [self setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.98]];
 }
 
 -(void)lightbackground
 {
-    [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.97]];
+    [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.98]];
 }
 
 @end

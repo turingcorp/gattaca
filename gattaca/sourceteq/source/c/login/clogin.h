@@ -2,6 +2,6 @@
 
 @interface clogin:UIViewController<FBSDKLoginButtonDelegate>
 
-+(void)asklogin:(BOOL)_animated;
++(void)asklogin:(BOOL)animated;
 
 @end

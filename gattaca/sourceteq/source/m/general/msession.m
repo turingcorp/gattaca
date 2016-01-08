@@ -21,7 +21,7 @@
     
     if([FBSDKAccessToken currentAccessToken])
     {
-        self.userid = [FBSDKAccessToken currentAccessToken].userID;
+        [self loaduser];
     }
     
     return self;
@@ -39,6 +39,13 @@
 }
 
 -(void)notifiedtokenchanged:(NSNotification*)notification
+{
+    [self loaduser];
+}
+
+#pragma mark functionality
+
+-(void)loaduser
 {
     self.userid = [FBSDKAccessToken currentAccessToken].userID;
 }

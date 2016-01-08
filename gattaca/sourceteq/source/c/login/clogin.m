@@ -2,12 +2,12 @@
 
 @implementation clogin
 
-+(void)asklogin:(BOOL)_animated
++(void)asklogin:(BOOL)animated
 {
     dispatch_async(dispatch_get_main_queue(),
                    ^(void)
                    {
-                       [[cmain singleton] opensection:[msection login] animated:_animated];
+                       [[cmain singleton] opensection:[msection login] animated:animated];
                    });
 }
 
@@ -24,6 +24,13 @@
     self.view = [[vlogin alloc] init:self];
 }
 
+#pragma mark functionality
+
+-(void)logincomplete
+{
+    [[cmain singleton] opensection:[msection config] animated:YES];
+}
+
 #pragma mark -
 #pragma mark login button del
 
@@ -38,28 +45,28 @@
 {
     if(error)
     {
-        [[analytics singleton] trackevent:ga_event_login action:ga_action_error label:error.localizedDescription];
-        NSLog(@"error %@", error);
+        NSString *errordescr = error.localizedDescription;
+        [[analytics singleton] trackevent:ga_event_login action:ga_action_error label:errordescr];
+        NSLog(@"%@", errordescr);
         
-        [calert show];
+        [calert show:NSLocalizedString(@"error_login_facebook", nil)];
     }
     else
     {
         if(result.isCancelled)
         {
             [[analytics singleton] trackevent:ga_event_login action:ga_action_cancelled label:@""];
-            NSLog(@"login cancelled");
         }
         else
         {
             [[analytics singleton] trackevent:ga_event_login action:ga_action_done label:@""];
+            [self logincomplete];
         }
     }
 }
 
 -(void)loginButtonDidLogOut:(FBSDKLoginButton*)button
 {
-    
 }
 
 @end

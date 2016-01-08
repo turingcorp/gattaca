@@ -28,9 +28,9 @@
     return self;
 }
 
-#pragma mark public
+#pragma mark functionality
 
--(void)opensection:(id<msectionprotocol>)section animated:(BOOL)_animated
+-(void)safeopensection:(id<msectionprotocol>)section animated:(BOOL)animated
 {
     UIPageViewControllerNavigationDirection direction = UIPageViewControllerNavigationDirectionForward;
     UIViewController *controller = [section controller];
@@ -41,7 +41,18 @@
     }
     
     self.section = section;
-    [self setViewControllers:@[controller] direction:direction animated:_animated completion:nil];
+    [self setViewControllers:@[controller] direction:direction animated:animated completion:nil];
+}
+
+#pragma mark public
+
+-(void)opensection:(id<msectionprotocol>)section animated:(BOOL)animated
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^(void)
+                   {
+                       [self safeopensection:section animated:animated];
+                   });
 }
 
 @end
