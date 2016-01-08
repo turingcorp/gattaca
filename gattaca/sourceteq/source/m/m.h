@@ -11,3 +11,6 @@
 #import "mloginfirst.h"
 #import "mloginsecond.h"
 #import "mloginthird.h"
+#import "mconfig.h"
+#import "mconfigprotocol.h"
+#import "mconfigsettings.h"

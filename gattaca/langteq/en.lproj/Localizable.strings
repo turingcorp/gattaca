@@ -1,6 +1,9 @@
 "login_btn"="Login with Facebook";
 "login_disclaimer"="We won't post anything to Facebook";
 
+"config_settings_title"="Configuration";
+"config_settings_descr"="How the apps works better for you";
+
 "alert_accept"="Accept";
 
 "error_login_facebook"="There was an error login with Facebook, please try again later";
