@@ -28,6 +28,12 @@
     return self;
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [vmenu addto:self.view];
+}
+
 #pragma mark functionality
 
 -(void)safeopensection:(id<msectionprotocol>)section animated:(BOOL)animated
