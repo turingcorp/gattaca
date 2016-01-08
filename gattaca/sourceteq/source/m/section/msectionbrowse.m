@@ -14,4 +14,14 @@
     return [[cbrowse alloc] init];
 }
 
+-(BOOL)available
+{
+    return YES;
+}
+
+-(BOOL)current
+{
+    return [[cmain singleton].section section] == [self section];
+}
+
 @end
