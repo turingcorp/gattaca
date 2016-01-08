@@ -10,7 +10,6 @@
 {
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor clearColor]];
     
     UILabel *stronglbl = [[UILabel alloc] init];
     [stronglbl setBackgroundColor:[UIColor clearColor]];
@@ -39,6 +38,32 @@
     return self;
 }
 
+-(void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    [self hover];
+}
+
+-(void)setHighlighted:(BOOL)highlighted
+{
+    [super setHighlighted:highlighted];
+    [self hover];
+}
+
+#pragma mark functionality
+
+-(void)hover
+{
+    if(self.isSelected || self.isHighlighted)
+    {
+        [self setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
+    }
+    else
+    {
+        [self setBackgroundColor:[UIColor clearColor]];
+    }
+}
+
 #pragma mark public
 
 -(void)config:(id<mconfigprotocol>)item
@@ -50,6 +75,7 @@
     
     [self.lbl setAttributedText:mut];
     [self.color setBackgroundColor:[item color]];
+    [self hover];
 }
 
 @end
