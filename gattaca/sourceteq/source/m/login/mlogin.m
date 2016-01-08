@@ -15,7 +15,7 @@
     self = [super init];
     
     self.selected = 0;
-    array = [[NSArray alloc] initWithObjects:
+    array = [NSArray arrayWithObjects:
              [[mloginfirst alloc] init],
              [[mloginsecond alloc] init],
              [[mloginthird alloc] init],

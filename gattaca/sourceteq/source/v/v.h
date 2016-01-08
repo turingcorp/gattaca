@@ -2,6 +2,7 @@
 #import "valert.h"
 #import "vbrowse.h"
 #import "vconfig.h"
+#import "vconfigcel.h"
 #import "vcontact.h"
 #import "vlogin.h"
 #import "vlogincel.h"

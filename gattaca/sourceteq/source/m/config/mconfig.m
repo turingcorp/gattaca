@@ -7,14 +7,16 @@
 
 +(mconfig*)generate
 {
-    mconfig *config = [[mconfig alloc] init];
-    
-    return config;
+    return [[mconfig alloc] init];
 }
 
 -(instancetype)init
 {
     self = [super init];
+ 
+    array = [NSArray arrayWithObjects:
+             [[mconfigsettings alloc] init],
+             nil];
     
     return self;
 }
