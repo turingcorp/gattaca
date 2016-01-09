@@ -8,7 +8,10 @@
 -(void)lazyload
 {
     array = [NSArray arrayWithObjects:
-             nil,
+             [[mconfigsettingsnotifications alloc] init],
+             [[mconfigsettingsreview alloc] init],
+             [[mconfigsettingslogout alloc] init],
+             [[mconfigsettingsdelete alloc] init],
              nil];
 }
 
