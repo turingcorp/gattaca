@@ -5,10 +5,14 @@
 -(instancetype)init
 {
     self = [super initWithRootViewController:[[cconfigmain alloc] init]];
-    [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
-    [self setNavigationBarHidden:YES];
-    
+
     return self;
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontboldname size:16], NSForegroundColorAttributeName:[UIColor blackColor]}];
 }
 
 @end

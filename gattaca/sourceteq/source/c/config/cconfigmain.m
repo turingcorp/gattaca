@@ -2,12 +2,10 @@
 
 @implementation cconfigmain
 
--(instancetype)init
+-(void)viewDidLoad
 {
-    self = [super init];
-    [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
-    
-    return self;
+    [super viewDidLoad];
+    [self setTitle:NSLocalizedString(@"config_title", nil)];
 }
 
 -(void)viewDidAppear:(BOOL)animated

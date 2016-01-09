@@ -2,6 +2,11 @@
 
 @implementation mconfigsettings
 
+-(UIViewController*)controller
+{
+    return [[cconfigsettings alloc] init];
+}
+
 -(NSString*)title
 {
     return NSLocalizedString(@"config_settings_title", nil);

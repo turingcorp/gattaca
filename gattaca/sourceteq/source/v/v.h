@@ -6,6 +6,7 @@
 #import "vbrowse.h"
 #import "vconfig.h"
 #import "vconfigcel.h"
+#import "vconfigsettings.h"
 #import "vcontact.h"
 #import "vlogin.h"
 #import "vlogincel.h"
