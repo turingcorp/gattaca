@@ -2,6 +2,9 @@
 
 @implementation mconfigsettings
 
+#pragma mark -
+#pragma mark config protocol
+
 -(UIViewController*)controller
 {
     return [[cconfigsettings alloc] init];

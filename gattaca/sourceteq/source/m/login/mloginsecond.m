@@ -2,7 +2,8 @@
 
 @implementation mloginsecond
 
-#pragma mark public
+#pragma mark -
+#pragma mark login protocol
 
 -(NSString*)imagename
 {

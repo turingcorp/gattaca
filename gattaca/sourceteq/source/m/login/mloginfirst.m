@@ -2,7 +2,8 @@
 
 @implementation mloginfirst
 
-#pragma mark public
+#pragma mark -
+#pragma mark login protocol
 
 -(NSString*)imagename
 {

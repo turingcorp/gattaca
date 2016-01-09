@@ -2,7 +2,8 @@
 
 @implementation msectioncontact
 
-#pragma mark public
+#pragma mark -
+#pragma mark section protocol
 
 -(appsection)section
 {
