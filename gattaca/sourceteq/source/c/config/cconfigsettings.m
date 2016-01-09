@@ -2,7 +2,7 @@
 
 @implementation cconfigsettings
 
--(instancetype)init
+-(instancetype)init:(mconfigsettings*)model
 {
     self = [super init];
     [self setTitle:NSLocalizedString(@"config_settings_title", nil)];
