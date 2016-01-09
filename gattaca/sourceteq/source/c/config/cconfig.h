@@ -1,5 +1,5 @@
 #import "appdel.h"
 
-@interface cconfig:UIViewController
+@interface cconfig:UINavigationController
 
 @end
