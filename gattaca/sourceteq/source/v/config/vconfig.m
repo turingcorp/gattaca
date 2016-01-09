@@ -16,7 +16,7 @@
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(30, 0, 40, 0)];
+    [flow setSectionInset:UIEdgeInsetsMake(0, 0, 40, 0)];
     
     UICollectionView *strongcollection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [strongcollection setBackgroundColor:[UIColor clearColor]];
@@ -75,7 +75,7 @@
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    
+    [self.controller push:[self.model item:index.item]];
 }
 
 @end

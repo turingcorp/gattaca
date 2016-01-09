@@ -6,6 +6,7 @@
 {
     self = [super initWithRootViewController:[[cconfigmain alloc] init]];
     [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    [self setNavigationBarHidden:YES];
     
     return self;
 }

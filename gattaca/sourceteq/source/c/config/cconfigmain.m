@@ -26,7 +26,7 @@
 
 -(void)push:(id<mconfigprotocol>)item
 {
-    
+    [self.navigationController pushViewController:[item controller] animated:YES];
 }
 
 @end
