@@ -17,3 +17,7 @@
 #import "mconfigbrowsing.h"
 #import "mconfigsettings.h"
 #import "mconfigsettingsprotocol.h"
+#import "mconfigsettingsnotifications.h"
+#import "mconfigsettingsreview.h"
+#import "mconfigsettingslogout.h"
+#import "mconfigsettingsdelete.h"
