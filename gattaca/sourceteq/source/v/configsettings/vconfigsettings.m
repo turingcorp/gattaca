@@ -15,7 +15,7 @@
     [flow setSectionInset:UIEdgeInsetsMake(10, 0, menuheight + 20, 0)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
-    [collection setClipsToBounds:NO];
+    [collection setClipsToBounds:YES];
     [collection setBackgroundColor:[UIColor clearColor]];
     [collection setAlwaysBounceVertical:YES];
     [collection setShowsHorizontalScrollIndicator:NO];
@@ -41,7 +41,7 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    return CGSizeMake(self.bounds.size.width, 340);
+    return CGSizeMake(self.bounds.size.width, 240);
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index

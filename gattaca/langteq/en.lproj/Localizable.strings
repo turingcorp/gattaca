@@ -9,6 +9,9 @@
 "config_settings_title"="Configuration";
 "config_settings_descr"="How you want the app";
 
+"config_settings_header_title"="Gattaca";
+"config_settings_header_version"="Version %@";
+
 "alert_accept"="Accept";
 
 "error_login_facebook"="There was an error login with Facebook, please try again later";
