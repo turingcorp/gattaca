@@ -57,6 +57,7 @@
 		DA322A401C40C628004C6958 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA322A3D1C40C628004C6958 /* logo@2x.png */; };
 		DA322A411C40C628004C6958 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA322A3E1C40C628004C6958 /* logo@3x.png */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
+		DA3B17931C41CB57002EBD21 /* vconfigsettingscel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B17921C41CB57002EBD21 /* vconfigsettingscel.m */; };
 		DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD0C1C3F128F00472BC9 /* calert.m */; };
 		DA46BD111C3F12C000472BC9 /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD101C3F12C000472BC9 /* valert.m */; };
 		DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD131C3F14B800472BC9 /* msectionlogin.m */; };
@@ -170,6 +171,8 @@
 		DA322A3E1C40C628004C6958 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
+		DA3B17911C41CB57002EBD21 /* vconfigsettingscel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingscel.h; sourceTree = "<group>"; };
+		DA3B17921C41CB57002EBD21 /* vconfigsettingscel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingscel.m; sourceTree = "<group>"; };
 		DA46BD0B1C3F128F00472BC9 /* calert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calert.h; sourceTree = "<group>"; };
 		DA46BD0C1C3F128F00472BC9 /* calert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calert.m; sourceTree = "<group>"; };
 		DA46BD0F1C3F12C000472BC9 /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
@@ -464,6 +467,8 @@
 				DA322A371C40C285004C6958 /* vconfigsettings.m */,
 				DA322A391C40C2AF004C6958 /* vconfigsettingsheader.h */,
 				DA322A3A1C40C2AF004C6958 /* vconfigsettingsheader.m */,
+				DA3B17911C41CB57002EBD21 /* vconfigsettingscel.h */,
+				DA3B17921C41CB57002EBD21 /* vconfigsettingscel.m */,
 			);
 			path = configsettings;
 			sourceTree = "<group>";
@@ -805,6 +810,7 @@
 				DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */,
 				DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */,
 				DA2965EA1C3DF2FF00BC713E /* msectioncontact.m in Sources */,
+				DA3B17931C41CB57002EBD21 /* vconfigsettingscel.m in Sources */,
 				DA322A201C40A348004C6958 /* cconfigsettings.m in Sources */,
 				DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */,
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
