@@ -30,6 +30,9 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontname size:16]} forState:UIControlStateNormal];
+    
     [vmenu addto:self.view];
 }
 
