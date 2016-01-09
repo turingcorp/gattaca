@@ -16,7 +16,7 @@
 
 -(NSString*)image
 {
-    return @"engine";
+    return @"contact";
 }
 
 -(BOOL)available

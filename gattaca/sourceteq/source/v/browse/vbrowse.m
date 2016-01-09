@@ -19,14 +19,20 @@
     [buttoncontact setTranslatesAutoresizingMaskIntoConstraints:NO];
     [buttoncontact addTarget:controller action:@selector(sectionright) forControlEvents:UIControlEventTouchUpInside];
     
+    vspinner *strongspinner = [[vspinner alloc] init];
+    self.spinner = strongspinner;
+    
     [self addSubview:buttonconfig];
     [self addSubview:buttoncontact];
+    [self addSubview:strongspinner];
     
     NSDictionary *metrics = @{};
-    NSDictionary *views = @{@"config":buttonconfig, @"contact":buttoncontact};
+    NSDictionary *views = @{@"config":buttonconfig, @"contact":buttoncontact, @"spinner":strongspinner};
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[config][contact]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[config]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[contact]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[spinner]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[spinner]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
