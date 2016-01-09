@@ -7,6 +7,7 @@
 #import "vconfig.h"
 #import "vconfigcel.h"
 #import "vconfigsettings.h"
+#import "vconfigsettingsheader.h"
 #import "vcontact.h"
 #import "vlogin.h"
 #import "vlogincel.h"

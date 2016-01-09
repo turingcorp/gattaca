@@ -52,6 +52,7 @@
 		DA322A311C40C087004C6958 /* mconfigsettingsnotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A301C40C087004C6958 /* mconfigsettingsnotifications.m */; };
 		DA322A341C40C0C2004C6958 /* mconfigsettingslogout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A331C40C0C2004C6958 /* mconfigsettingslogout.m */; };
 		DA322A381C40C285004C6958 /* vconfigsettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A371C40C285004C6958 /* vconfigsettings.m */; };
+		DA322A3B1C40C2AF004C6958 /* vconfigsettingsheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A3A1C40C2AF004C6958 /* vconfigsettingsheader.m */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
 		DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD0C1C3F128F00472BC9 /* calert.m */; };
 		DA46BD111C3F12C000472BC9 /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD101C3F12C000472BC9 /* valert.m */; };
@@ -159,6 +160,8 @@
 		DA322A331C40C0C2004C6958 /* mconfigsettingslogout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigsettingslogout.m; sourceTree = "<group>"; };
 		DA322A361C40C285004C6958 /* vconfigsettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettings.h; sourceTree = "<group>"; };
 		DA322A371C40C285004C6958 /* vconfigsettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettings.m; sourceTree = "<group>"; };
+		DA322A391C40C2AF004C6958 /* vconfigsettingsheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingsheader.h; sourceTree = "<group>"; };
+		DA322A3A1C40C2AF004C6958 /* vconfigsettingsheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingsheader.m; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA46BD0B1C3F128F00472BC9 /* calert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calert.h; sourceTree = "<group>"; };
@@ -453,6 +456,8 @@
 			children = (
 				DA322A361C40C285004C6958 /* vconfigsettings.h */,
 				DA322A371C40C285004C6958 /* vconfigsettings.m */,
+				DA322A391C40C2AF004C6958 /* vconfigsettingsheader.h */,
+				DA322A3A1C40C2AF004C6958 /* vconfigsettingsheader.m */,
 			);
 			path = configsettings;
 			sourceTree = "<group>";
@@ -792,6 +797,7 @@
 				DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */,
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
+				DA322A3B1C40C2AF004C6958 /* vconfigsettingsheader.m in Sources */,
 				DA4A744F1C3D9B240092A405 /* main.m in Sources */,
 				DA46BD1B1C3F40A300472BC9 /* mconfig.m in Sources */,
 				DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */,
