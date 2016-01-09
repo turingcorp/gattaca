@@ -6,8 +6,6 @@
 {
     self = [super init:controller];
     [self setBackgroundColor:[UIColor whiteColor]];
-
-    self.controller = controller;
     self.model = [mconfig generate];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
@@ -75,7 +73,7 @@
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    [self.controller push:[self.model item:index.item]];
+    [(cconfigmain*)self.controller push:[self.model item:index.item]];
 }
 
 @end

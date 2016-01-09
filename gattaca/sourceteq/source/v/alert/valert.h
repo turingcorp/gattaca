@@ -1,11 +1,6 @@
 #import "appdel.h"
+#import "viewbase.h"
 
-@class calert;
-
-@interface valert:UIView
-
--(instancetype)init:(calert*)controller;
-
-@property(weak, nonatomic)calert *controller;
+@interface valert:viewbase
 
 @end

@@ -1,11 +1,6 @@
 #import "appdel.h"
+#import "viewbase.h"
 
-@class cconfigsettings;
-
-@interface vconfigsettings:UIView
-
--(instancetype)init:(cconfigsettings*)controller;
-
-@property(weak, nonatomic)cconfigsettings *controller;
+@interface vconfigsettings:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @end

@@ -10,9 +10,8 @@
 
 -(instancetype)init:(clogin*)controller
 {
-    self = [super init];
+    self = [super init:controller];
     [self setBackgroundColor:[UIColor whiteColor]];
-    self.controller = controller;
     
     indicatorid = @"indicator";
     indicatorwidth = 12;

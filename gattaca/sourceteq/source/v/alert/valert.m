@@ -4,8 +4,8 @@
 
 -(instancetype)init:(calert*)controller
 {
-    self = [super init];
-    self.controller = controller;
+    self = [super init:controller];
+    
     vblur *blur = [vblur light];
     
     UILabel *lbl = [[UILabel alloc] init];
