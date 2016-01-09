@@ -37,7 +37,7 @@
 
 -(UIViewController*)controller
 {
-    return [[cconfigsettings alloc] init];
+    return [[cconfigsettings alloc] init:self];
 }
 
 -(NSString*)title

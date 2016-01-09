@@ -7,6 +7,8 @@
     self = [super init];
     [self setTitle:NSLocalizedString(@"config_settings_title", nil)];
     
+    self.model = model;
+    
     return self;
 }
 

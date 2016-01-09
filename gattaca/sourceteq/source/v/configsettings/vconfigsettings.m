@@ -57,7 +57,7 @@
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    return [[(cconfigsettings*)self.controller model] count];
 }
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index

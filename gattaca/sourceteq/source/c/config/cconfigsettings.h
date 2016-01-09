@@ -6,4 +6,6 @@
 
 -(instancetype)init:(mconfigsettings*)model;
 
+@property(weak, nonatomic)mconfigsettings *model;
+
 @end
