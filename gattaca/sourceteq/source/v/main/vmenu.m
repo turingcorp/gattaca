@@ -36,21 +36,22 @@
     [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     [flow setSectionInset:UIEdgeInsetsZero];
     
-    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
-    [collection setClipsToBounds:YES];
-    [collection setBackgroundColor:[UIColor clearColor]];
-    [collection setDataSource:self];
-    [collection setDelegate:self];
-    [collection setBounces:NO];
-    [collection setScrollEnabled:NO];
-    [collection registerClass:[vmenucel class] forCellWithReuseIdentifier:celid];
-    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    UICollectionView *strongcollection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [strongcollection setClipsToBounds:YES];
+    [strongcollection setBackgroundColor:[UIColor clearColor]];
+    [strongcollection setDataSource:self];
+    [strongcollection setDelegate:self];
+    [strongcollection setBounces:NO];
+    [strongcollection setScrollEnabled:NO];
+    [strongcollection registerClass:[vmenucel class] forCellWithReuseIdentifier:celid];
+    [strongcollection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.collection = strongcollection;
     
     [self addSubview:blur];
     [self addSubview:border];
-    [self addSubview:collection];
+    [self addSubview:strongcollection];
     
-    NSDictionary *views = @{@"blur":blur, @"border":border, @"col":collection};
+    NSDictionary *views = @{@"blur":blur, @"border":border, @"col":strongcollection};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
@@ -60,7 +61,21 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border(1)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedupdatemenu:) name:notmenuchanged object:nil];
+    
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedupdatemenu:(NSNotification*)notification
+{
+    [self.collection reloadData];
 }
 
 #pragma mark -

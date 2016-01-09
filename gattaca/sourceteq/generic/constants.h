@@ -15,6 +15,8 @@
 
 // notifications
 
+#define notmenuchanged          @"menuchanged"
+
 // extra
 
 #define stringdrawing           NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin

@@ -58,6 +58,7 @@
                    ^(void)
                    {
                        [self safeopensection:section animated:animated];
+                       [[NSNotificationCenter defaultCenter] postNotificationName:notmenuchanged object:nil];
                    });
 }
 

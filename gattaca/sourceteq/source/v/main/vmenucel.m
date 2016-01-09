@@ -56,7 +56,7 @@
 -(void)config:(id<msectionprotocol>)item
 {
     [self.image setImage:[[UIImage imageNamed:[item image]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
-    [self hover];
+    [self setSelected:[item current]];
 }
 
 @end
