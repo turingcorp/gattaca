@@ -51,7 +51,7 @@
 
 -(void)lighteffect
 {
-    [self geneffect:UIBlurEffectStyleExtraLight];
+    [self geneffect:UIBlurEffectStyleLight];
 }
 
 -(void)geneffect:(UIBlurEffectStyle)style

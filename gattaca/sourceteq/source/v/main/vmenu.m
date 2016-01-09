@@ -104,4 +104,9 @@
     return cel;
 }
 
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    [[cmain singleton] opensection:[self.sections item:index.item] animated:YES];
+}
+
 @end

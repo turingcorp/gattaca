@@ -17,25 +17,33 @@
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
     [flow setSectionInset:UIEdgeInsetsMake(30, 0, 40, 0)];
     
-    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
-    [collection setBackgroundColor:[UIColor clearColor]];
-    [collection setShowsHorizontalScrollIndicator:NO];
-    [collection setShowsVerticalScrollIndicator:NO];
-    [collection setAlwaysBounceVertical:YES];
-    [collection setDelegate:self];
-    [collection setDataSource:self];
-    [collection setClipsToBounds:YES];
-    [collection registerClass:[vconfigcel class] forCellWithReuseIdentifier:celid];
-    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    UICollectionView *strongcollection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [strongcollection setBackgroundColor:[UIColor clearColor]];
+    [strongcollection setShowsHorizontalScrollIndicator:NO];
+    [strongcollection setShowsVerticalScrollIndicator:NO];
+    [strongcollection setAlwaysBounceVertical:YES];
+    [strongcollection setDelegate:self];
+    [strongcollection setDataSource:self];
+    [strongcollection setClipsToBounds:YES];
+    [strongcollection registerClass:[vconfigcel class] forCellWithReuseIdentifier:celid];
+    [strongcollection setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+    self.collection = strongcollection;
+    [self addSubview:strongcollection];
     
-    [self addSubview:collection];
-    
-    NSDictionary *views = @{@"col":collection};
+    NSDictionary *views = @{@"col":strongcollection};
     NSDictionary *metrics = @{};
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark public
+
+-(void)refresh
+{
+    [self.collection reloadData];
 }
 
 #pragma mark -
