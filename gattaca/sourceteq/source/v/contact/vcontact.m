@@ -2,7 +2,7 @@
 
 @implementation vcontact
 
--(instancetype)init:(UIViewController*)controller
+-(instancetype)init:(ccontact*)controller
 {
     self = [super init:controller];
     [self setBackgroundColor:[UIColor blueColor]];

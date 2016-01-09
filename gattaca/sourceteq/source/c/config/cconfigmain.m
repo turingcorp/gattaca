@@ -22,4 +22,11 @@
     self.viewconfig = (vconfig*)self.view;
 }
 
+#pragma mark public
+
+-(void)push:(id<mconfigprotocol>)item
+{
+    
+}
+
 @end

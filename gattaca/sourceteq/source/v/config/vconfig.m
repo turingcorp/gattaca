@@ -2,11 +2,12 @@
 
 @implementation vconfig
 
--(instancetype)init:(UIViewController*)controller
+-(instancetype)init:(cconfigmain*)controller
 {
     self = [super init:controller];
     [self setBackgroundColor:[UIColor whiteColor]];
 
+    self.controller = controller;
     self.model = [mconfig generate];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
@@ -70,6 +71,11 @@
     [cel config:[self.model item:index.item]];
     
     return cel;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)index
+{
+    
 }
 
 @end

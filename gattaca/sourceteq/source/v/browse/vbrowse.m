@@ -2,7 +2,7 @@
 
 @implementation vbrowse
 
--(instancetype)init:(UIViewController*)controller
+-(instancetype)init:(cbrowse*)controller
 {
     self = [super init:controller];
     [self setBackgroundColor:[UIColor whiteColor]];

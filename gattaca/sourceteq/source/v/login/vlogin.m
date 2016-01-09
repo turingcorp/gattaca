@@ -8,7 +8,7 @@
     NSInteger indicatorheight;
 }
 
--(instancetype)init:(UIViewController*)controller
+-(instancetype)init:(clogin*)controller
 {
     self = [super init];
     [self setBackgroundColor:[UIColor whiteColor]];
@@ -62,7 +62,7 @@
     FBSDKLoginButton *btnlogin = [[FBSDKLoginButton alloc] init];
     [btnlogin setTranslatesAutoresizingMaskIntoConstraints:NO];
     btnlogin.readPermissions = @[@"public_profile"];
-    [btnlogin setDelegate:(clogin*)controller];
+    [btnlogin setDelegate:controller];
     
     UILabel *disclaimer = [[UILabel alloc] init];
     [disclaimer setBackgroundColor:[UIColor clearColor]];

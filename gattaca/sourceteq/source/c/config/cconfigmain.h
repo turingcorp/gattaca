@@ -4,6 +4,8 @@
 
 @interface cconfigmain:UIViewController
 
+-(void)push:(id<mconfigprotocol>)item;
+
 @property(weak, nonatomic)vconfig *viewconfig;
 
 @end
