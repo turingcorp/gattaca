@@ -5,14 +5,14 @@
 -(instancetype)init:(cconfigsettings*)controller
 {
     self = [super init:controller];
-    [self setBackgroundColor:[UIColor whiteColor]];
+    [self setBackgroundColor:[UIColor colorWithWhite:0.98 alpha:1]];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:10];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(10, 0, 40, 0)];
+    [flow setSectionInset:UIEdgeInsetsMake(10, 0, menuheight + 20, 0)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setClipsToBounds:NO];
@@ -27,6 +27,12 @@
     
     [self addSubview:collection];
     
+    NSDictionary *views = @{@"col":collection};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    
     return self;
 }
 
@@ -35,7 +41,7 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    return CGSizeMake(self.bounds.size.width, 250);
+    return CGSizeMake(self.bounds.size.width, 300);
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
@@ -45,7 +51,7 @@
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
-    return 0;
+    return 1;
 }
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
