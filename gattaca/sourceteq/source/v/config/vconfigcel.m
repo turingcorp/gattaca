@@ -4,6 +4,8 @@
 {
     NSDictionary *attrtitle;
     NSDictionary *attrdescr;
+    NSDictionary *attrtitlehl;
+    NSDictionary *attrdescrhl;
 }
 
 -(instancetype)initWithFrame:(CGRect)frame
@@ -25,6 +27,9 @@
     
     attrtitle = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:18], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.8]};
     attrdescr = @{NSFontAttributeName:[UIFont fontWithName:fontname size:14], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.5]};
+    
+    attrtitlehl = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:18], NSForegroundColorAttributeName:[UIColor whiteColor]};
+    attrdescrhl = @{NSFontAttributeName:[UIFont fontWithName:fontname size:14], NSForegroundColorAttributeName:[UIColor colorWithWhite:1 alpha:0.7]};
     
     [self addSubview:stronglbl];
     [self addSubview:strongcolor];
@@ -54,26 +59,35 @@
 
 -(void)hover
 {
+    NSDictionary *fortitle;
+    NSDictionary *fordescr;
+    
     if(self.isSelected || self.isHighlighted)
     {
-        [self setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
+        fortitle = attrtitlehl;
+        fordescr = attrdescrhl;
+        [self setBackgroundColor:[self.item color]];
     }
     else
     {
+        fortitle = attrtitle;
+        fordescr = attrdescr;
         [self setBackgroundColor:[UIColor clearColor]];
     }
+    
+    NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] init];
+    [mut appendAttributedString:[[NSAttributedString alloc] initWithString:[self.item title] attributes:fortitle]];
+    [mut appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n" attributes:fordescr]];
+    [mut appendAttributedString:[[NSAttributedString alloc] initWithString:[self.item descr] attributes:fordescr]];
+    
+    [self.lbl setAttributedText:mut];
 }
 
 #pragma mark public
 
 -(void)config:(id<mconfigprotocol>)item
 {
-    NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] init];
-    [mut appendAttributedString:[[NSAttributedString alloc] initWithString:[item title] attributes:attrtitle]];
-    [mut appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n" attributes:attrdescr]];
-    [mut appendAttributedString:[[NSAttributedString alloc] initWithString:[item descr] attributes:attrdescr]];
-    
-    [self.lbl setAttributedText:mut];
+    self.item = item;
     [self.color setBackgroundColor:[item color]];
     [self hover];
 }
