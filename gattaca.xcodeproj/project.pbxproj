@@ -437,14 +437,14 @@
 			isa = PBXGroup;
 			children = (
 				DA322A281C40BE10004C6958 /* mconfigsettingsprotocol.h */,
-				DA322A291C40C004004C6958 /* mconfigsettingsdelete.h */,
-				DA322A2A1C40C004004C6958 /* mconfigsettingsdelete.m */,
-				DA322A2C1C40C038004C6958 /* mconfigsettingsreview.h */,
-				DA322A2D1C40C038004C6958 /* mconfigsettingsreview.m */,
 				DA322A2F1C40C087004C6958 /* mconfigsettingsnotifications.h */,
 				DA322A301C40C087004C6958 /* mconfigsettingsnotifications.m */,
+				DA322A2C1C40C038004C6958 /* mconfigsettingsreview.h */,
+				DA322A2D1C40C038004C6958 /* mconfigsettingsreview.m */,
 				DA322A321C40C0C2004C6958 /* mconfigsettingslogout.h */,
 				DA322A331C40C0C2004C6958 /* mconfigsettingslogout.m */,
+				DA322A291C40C004004C6958 /* mconfigsettingsdelete.h */,
+				DA322A2A1C40C004004C6958 /* mconfigsettingsdelete.m */,
 			);
 			path = configsettings;
 			sourceTree = "<group>";
