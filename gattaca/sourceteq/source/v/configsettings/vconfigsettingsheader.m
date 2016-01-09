@@ -9,6 +9,10 @@
     [self setUserInteractionEnabled:NO];
     [self setBackgroundColor:[UIColor whiteColor]];
     
+    UIImageView *icon = [[UIImageView alloc] init];
+    
+    [self addSubview:icon];
+    
     return self;
 }
 
