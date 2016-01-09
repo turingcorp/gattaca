@@ -16,3 +16,4 @@
 #import "mconfigprotocol.h"
 #import "mconfigbrowsing.h"
 #import "mconfigsettings.h"
+#import "mconfigsettingsprotocol.h"

@@ -2,6 +2,11 @@
 
 @implementation mconfigprofile
 
+-(UIViewController*)controller
+{
+    return [[UIViewController alloc] init];
+}
+
 -(NSString*)title
 {
     return NSLocalizedString(@"config_profile_title", nil);

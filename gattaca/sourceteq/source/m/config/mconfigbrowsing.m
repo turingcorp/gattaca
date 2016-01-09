@@ -2,6 +2,11 @@
 
 @implementation mconfigbrowsing
 
+-(UIViewController*)controller
+{
+    return [[UIViewController alloc] init];
+}
+
 -(NSString*)title
 {
     return NSLocalizedString(@"config_browsing_title", nil);

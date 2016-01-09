@@ -146,6 +146,7 @@
 		DA322A1F1C40A348004C6958 /* cconfigsettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfigsettings.m; sourceTree = "<group>"; };
 		DA322A241C40A4BB004C6958 /* vconfigsettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettings.h; sourceTree = "<group>"; };
 		DA322A251C40A4BB004C6958 /* vconfigsettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettings.m; sourceTree = "<group>"; };
+		DA322A281C40BE10004C6958 /* mconfigsettingsprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfigsettingsprotocol.h; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA46BD0B1C3F128F00472BC9 /* calert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calert.h; sourceTree = "<group>"; };
@@ -238,6 +239,7 @@
 				DA46BD231C3F4DD000472BC9 /* profile */,
 				DA3097171C3EA9E000E8AFA2 /* login */,
 				DA46BD181C3F403500472BC9 /* config */,
+				DA322A271C40BCE8004C6958 /* configsettings */,
 				DA2965DD1C3DF2FF00BC713E /* section */,
 			);
 			path = m;
@@ -417,6 +419,14 @@
 				DA322A051C403A49004C6958 /* vmenucel.m */,
 			);
 			path = main;
+			sourceTree = "<group>";
+		};
+		DA322A271C40BCE8004C6958 /* configsettings */ = {
+			isa = PBXGroup;
+			children = (
+				DA322A281C40BE10004C6958 /* mconfigsettingsprotocol.h */,
+			);
+			path = configsettings;
 			sourceTree = "<group>";
 		};
 		DA46BD0A1C3F128F00472BC9 /* alert */ = {
