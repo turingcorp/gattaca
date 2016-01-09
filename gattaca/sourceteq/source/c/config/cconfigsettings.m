@@ -5,14 +5,14 @@
 -(instancetype)init
 {
     self = [super init];
-    [self setTitle:@"mao tao"];
+    [self setTitle:NSLocalizedString(@"config_settings_title", nil)];
     
     return self;
 }
 
 -(void)loadView
 {
-    self.view = [[vconfigsettings alloc] init];
+    self.view = [[vconfigsettings alloc] init:self];
 }
 
 @end

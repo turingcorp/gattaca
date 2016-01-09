@@ -5,7 +5,7 @@
 
 @interface vlogin:UIView<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
--(instancetype)init:(UIViewController*)controller;
+-(instancetype)init:(clogin*)controller;
 
 @property(strong, nonatomic)mlogin *model;
 @property(weak, nonatomic)clogin *controller;

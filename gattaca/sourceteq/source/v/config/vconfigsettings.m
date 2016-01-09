@@ -2,10 +2,12 @@
 
 @implementation vconfigsettings
 
--(instancetype)init
+-(instancetype)init:(cconfigsettings*)controller
 {
     self = [super init];
     [self setBackgroundColor:[UIColor whiteColor]];
+
+    self.controller = controller;
     
     return self;
 }

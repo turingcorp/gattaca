@@ -5,7 +5,7 @@
 -(instancetype)init:(ccontact*)controller
 {
     self = [super init:controller];
-    [self setBackgroundColor:[UIColor blueColor]];
+    [self setBackgroundColor:[UIColor whiteColor]];
     
     return self;
 }
