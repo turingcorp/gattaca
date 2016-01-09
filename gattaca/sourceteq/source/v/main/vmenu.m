@@ -8,10 +8,10 @@
     
     [view addSubview:menu];
     NSDictionary *views = @{@"menu":menu};
-    NSDictionary *metrics = @{};
+    NSDictionary *metrics = @{@"menuheight":@(menuheight)};
     
     [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[menu]-0-|" options:0 metrics:metrics views:views]];
-    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[menu(50)]-0-|" options:0 metrics:metrics views:views]];
+    [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[menu(menuheight)]-0-|" options:0 metrics:metrics views:views]];
 }
 
 -(instancetype)init

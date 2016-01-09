@@ -14,7 +14,7 @@
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(0, 0, 40, 0)];
+    [flow setSectionInset:UIEdgeInsetsMake(0, 0, menuheight + 20, 0)];
     
     UICollectionView *strongcollection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [strongcollection setBackgroundColor:[UIColor clearColor]];
