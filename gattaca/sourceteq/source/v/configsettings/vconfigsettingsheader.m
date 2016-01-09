@@ -1,13 +1,15 @@
-//
-//  vconfigsettingsheader.m
-//  gattaca
-//
-//  Created by zero on 1/8/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "vconfigsettingsheader.h"
 
 @implementation vconfigsettingsheader
+
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    [self setClipsToBounds:YES];
+    [self setUserInteractionEnabled:NO];
+    [self setBackgroundColor:[UIColor whiteColor]];
+    
+    return self;
+}
 
 @end
