@@ -22,6 +22,7 @@
     [collection setShowsVerticalScrollIndicator:NO];
     [collection setDelegate:self];
     [collection setDataSource:self];
+    [collection registerClass:[vconfigsettingscel class] forCellWithReuseIdentifier:celid];
     [collection registerClass:[vconfigsettingsheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     
@@ -66,7 +67,9 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    return nil;
+    vconfigsettingscel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    
+    return cel;
 }
 
 @end
