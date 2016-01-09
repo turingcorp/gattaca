@@ -1,6 +1,33 @@
 #import "mconfigsettings.h"
 
 @implementation mconfigsettings
+{
+    NSArray *array;
+}
+
+-(void)lazyload
+{
+    array = [NSArray arrayWithObjects:
+             nil,
+             nil];
+}
+
+#pragma mark public
+
+-(NSInteger)count
+{
+    if(!array)
+    {
+        [self lazyload];
+    }
+    
+    return array.count;
+}
+
+-(id<mconfigsettingsprotocol>)item:(NSInteger)item
+{
+    return array[item];
+}
 
 #pragma mark -
 #pragma mark config protocol
