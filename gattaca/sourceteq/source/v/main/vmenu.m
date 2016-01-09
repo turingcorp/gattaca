@@ -104,6 +104,19 @@
     return cel;
 }
 
+-(BOOL)collectionView:(UICollectionView*)col shouldSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    BOOL selectable = NO;
+    id<msectionprotocol> item = [self.sections item:index.item];
+    
+    if(![item current])
+    {
+        selectable = [item available];
+    }
+    
+    return selectable;
+}
+
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
     [[cmain singleton] opensection:[self.sections item:index.item] animated:YES];
