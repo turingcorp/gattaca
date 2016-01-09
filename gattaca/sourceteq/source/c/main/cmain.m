@@ -21,16 +21,24 @@
     }
     else
     {
-        [self opensection:[msection config] animated:NO];
         [clogin asklogin:NO];
     }
     
     return self;
 }
 
-#pragma mark public
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontname size:16]} forState:UIControlStateNormal];
+    
+    [vmenu addto:self.view];
+}
 
--(void)opensection:(id<msectionprotocol>)section animated:(BOOL)_animated
+#pragma mark functionality
+
+-(void)safeopensection:(id<msectionprotocol>)section animated:(BOOL)animated
 {
     UIPageViewControllerNavigationDirection direction = UIPageViewControllerNavigationDirectionForward;
     UIViewController *controller = [section controller];
@@ -41,7 +49,19 @@
     }
     
     self.section = section;
-    [self setViewControllers:@[controller] direction:direction animated:_animated completion:nil];
+    [self setViewControllers:@[controller] direction:direction animated:animated completion:nil];
+}
+
+#pragma mark public
+
+-(void)opensection:(id<msectionprotocol>)section animated:(BOOL)animated
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^(void)
+                   {
+                       [self safeopensection:section animated:animated];
+                       [[NSNotificationCenter defaultCenter] postNotificationName:notmenuchanged object:nil];
+                   });
 }
 
 @end

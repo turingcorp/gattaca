@@ -2,7 +2,8 @@
 
 @implementation msectioncontact
 
-#pragma mark public
+#pragma mark -
+#pragma mark section protocol
 
 -(appsection)section
 {
@@ -12,6 +13,21 @@
 -(UIViewController*)controller
 {
     return [[ccontact alloc] init];
+}
+
+-(NSString*)image
+{
+    return @"contact";
+}
+
+-(BOOL)available
+{
+    return YES;
+}
+
+-(BOOL)current
+{
+    return [[cmain singleton].section section] == [self section];
 }
 
 @end

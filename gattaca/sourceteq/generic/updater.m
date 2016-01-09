@@ -3,8 +3,6 @@
 @implementation updater
 
 NSString *documents;
-apptype applicationtype;
-ioslevel applicationios;
 
 +(void)launch
 {
@@ -35,26 +33,6 @@ ioslevel applicationios;
         {
             [updater firsttime:defaults];
         }
-    }
-    
-    [updater environment];
-}
-
-+(void)environment
-{
-    NSInteger iosint = [UIDevice currentDevice].systemVersion.integerValue;
-    
-    if(iosint <= 7)
-    {
-        applicationios = ioslevel7;
-    }
-    else if(iosint <= 8)
-    {
-        applicationios = ioslevel8;
-    }
-    else
-    {
-        applicationios = ioslevel9;
     }
 }
 

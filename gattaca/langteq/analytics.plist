@@ -4,10 +4,11 @@
 <dict>
 	<key>screens</key>
 	<array>
-		<string>home</string>
+		<string>login</string>
 	</array>
 	<key>events</key>
 	<array>
+		<string>login</string>
 		<string>application_rate</string>
 	</array>
 	<key>actions</key>
@@ -15,6 +16,10 @@
 		<string>on</string>
 		<string>off</string>
 		<string>opt-in</string>
+		<string>start</string>
+		<string>cancelled</string>
+		<string>error</string>
+		<string>done</string>
 	</array>
 </dict>
 </plist>

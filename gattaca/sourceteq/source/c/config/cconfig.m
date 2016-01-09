@@ -2,9 +2,18 @@
 
 @implementation cconfig
 
--(void)loadView
+-(instancetype)init
 {
-    self.view = [[vconfig alloc] init:self];
+    self = [super initWithRootViewController:[[cconfigmain alloc] init]];
+
+    return self;
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self.navigationBar setTintColor:colormain];
+    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontboldname size:16], NSForegroundColorAttributeName:[UIColor blackColor]}];
 }
 
 @end

@@ -1,0 +1,17 @@
+"login_btn"="Login with Facebook";
+"login_disclaimer"="We won't post anything to Facebook";
+
+"config_title"="Settings";
+"config_profile_title"="Profile";
+"config_profile_descr"="The way others find you";
+"config_browsing_title"="Browsing";
+"config_browsing_descr"="What you are looking for";
+"config_settings_title"="Configuration";
+"config_settings_descr"="How you want the app";
+
+"config_settings_header_title"="Gattaca";
+"config_settings_header_version"="Version %@";
+
+"alert_accept"="Accept";
+
+"error_login_facebook"="There was an error login with Facebook, please try again later";
