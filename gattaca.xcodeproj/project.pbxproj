@@ -47,11 +47,11 @@
 		DA322A1A1C40875F004C6958 /* contact@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA322A171C40875F004C6958 /* contact@3x.png */; };
 		DA322A1D1C409A52004C6958 /* cconfigmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A1C1C409A52004C6958 /* cconfigmain.m */; };
 		DA322A201C40A348004C6958 /* cconfigsettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A1F1C40A348004C6958 /* cconfigsettings.m */; };
-		DA322A261C40A4BB004C6958 /* vconfigsettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A251C40A4BB004C6958 /* vconfigsettings.m */; };
 		DA322A2B1C40C004004C6958 /* mconfigsettingsdelete.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A2A1C40C004004C6958 /* mconfigsettingsdelete.m */; };
 		DA322A2E1C40C038004C6958 /* mconfigsettingsreview.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A2D1C40C038004C6958 /* mconfigsettingsreview.m */; };
 		DA322A311C40C087004C6958 /* mconfigsettingsnotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A301C40C087004C6958 /* mconfigsettingsnotifications.m */; };
 		DA322A341C40C0C2004C6958 /* mconfigsettingslogout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A331C40C0C2004C6958 /* mconfigsettingslogout.m */; };
+		DA322A381C40C285004C6958 /* vconfigsettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DA322A371C40C285004C6958 /* vconfigsettings.m */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
 		DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD0C1C3F128F00472BC9 /* calert.m */; };
 		DA46BD111C3F12C000472BC9 /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD101C3F12C000472BC9 /* valert.m */; };
@@ -148,8 +148,6 @@
 		DA322A1C1C409A52004C6958 /* cconfigmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfigmain.m; sourceTree = "<group>"; };
 		DA322A1E1C40A348004C6958 /* cconfigsettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cconfigsettings.h; sourceTree = "<group>"; };
 		DA322A1F1C40A348004C6958 /* cconfigsettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfigsettings.m; sourceTree = "<group>"; };
-		DA322A241C40A4BB004C6958 /* vconfigsettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettings.h; sourceTree = "<group>"; };
-		DA322A251C40A4BB004C6958 /* vconfigsettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettings.m; sourceTree = "<group>"; };
 		DA322A281C40BE10004C6958 /* mconfigsettingsprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfigsettingsprotocol.h; sourceTree = "<group>"; };
 		DA322A291C40C004004C6958 /* mconfigsettingsdelete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfigsettingsdelete.h; sourceTree = "<group>"; };
 		DA322A2A1C40C004004C6958 /* mconfigsettingsdelete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigsettingsdelete.m; sourceTree = "<group>"; };
@@ -159,6 +157,8 @@
 		DA322A301C40C087004C6958 /* mconfigsettingsnotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigsettingsnotifications.m; sourceTree = "<group>"; };
 		DA322A321C40C0C2004C6958 /* mconfigsettingslogout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfigsettingslogout.h; sourceTree = "<group>"; };
 		DA322A331C40C0C2004C6958 /* mconfigsettingslogout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigsettingslogout.m; sourceTree = "<group>"; };
+		DA322A361C40C285004C6958 /* vconfigsettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettings.h; sourceTree = "<group>"; };
+		DA322A371C40C285004C6958 /* vconfigsettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettings.m; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA46BD0B1C3F128F00472BC9 /* calert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calert.h; sourceTree = "<group>"; };
@@ -265,6 +265,7 @@
 				DA3229F71C4027E9004C6958 /* main */,
 				DA46BD0E1C3F12B300472BC9 /* alert */,
 				DA2965B01C3DDDD700BC713E /* config */,
+				DA322A351C40C265004C6958 /* configsettings */,
 				DA2965B11C3DDDD700BC713E /* contact */,
 				DA2965D61C3DF0D000BC713E /* login */,
 				DA2965AA1C3DC94200BC713E /* browse */,
@@ -338,8 +339,6 @@
 				DA2965B31C3DDDE800BC713E /* vconfig.m */,
 				DA46BD201C3F4BA700472BC9 /* vconfigcel.h */,
 				DA46BD211C3F4BA700472BC9 /* vconfigcel.m */,
-				DA322A241C40A4BB004C6958 /* vconfigsettings.h */,
-				DA322A251C40A4BB004C6958 /* vconfigsettings.m */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -445,6 +444,15 @@
 				DA322A331C40C0C2004C6958 /* mconfigsettingslogout.m */,
 				DA322A291C40C004004C6958 /* mconfigsettingsdelete.h */,
 				DA322A2A1C40C004004C6958 /* mconfigsettingsdelete.m */,
+			);
+			path = configsettings;
+			sourceTree = "<group>";
+		};
+		DA322A351C40C265004C6958 /* configsettings */ = {
+			isa = PBXGroup;
+			children = (
+				DA322A361C40C285004C6958 /* vconfigsettings.h */,
+				DA322A371C40C285004C6958 /* vconfigsettings.m */,
 			);
 			path = configsettings;
 			sourceTree = "<group>";
@@ -769,7 +777,6 @@
 				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
 				DA30972D1C3EB8DB00E8AFA2 /* vloginindicatorcel.m in Sources */,
 				DA46BD261C3F4DE600472BC9 /* mprofile.m in Sources */,
-				DA322A261C40A4BB004C6958 /* vconfigsettings.m in Sources */,
 				DA3097241C3EAB5500E8AFA2 /* mloginthird.m in Sources */,
 				DA322A1D1C409A52004C6958 /* cconfigmain.m in Sources */,
 				DA2965B41C3DDDE800BC713E /* vconfig.m in Sources */,
@@ -798,6 +805,7 @@
 				DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */,
 				DA3229F31C4018B0004C6958 /* mconfigbrowsing.m in Sources */,
 				DA3229F01C4011FC004C6958 /* mconfigprofile.m in Sources */,
+				DA322A381C40C285004C6958 /* vconfigsettings.m in Sources */,
 				DA46BD111C3F12C000472BC9 /* valert.m in Sources */,
 				DA4A74511C3D9B240092A405 /* tools.m in Sources */,
 				DA322A061C403A49004C6958 /* vmenucel.m in Sources */,
