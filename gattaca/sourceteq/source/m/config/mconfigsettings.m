@@ -32,6 +32,21 @@
     return array[item];
 }
 
+-(NSInteger)countclasses
+{
+    
+}
+
+-(Class)classname:(NSInteger)item
+{
+    
+}
+
+-(NSInteger*)identifier:(NSInteger)item;
+{
+    
+}
+
 #pragma mark -
 #pragma mark config protocol
 
