@@ -9,6 +9,8 @@
 #import "vconfigsettings.h"
 #import "vconfigsettingsheader.h"
 #import "vconfigsettingscel.h"
+#import "vconfigsettingscelswitch.h"
+#import "vconfigsettingscelbutton.h"
 #import "vcontact.h"
 #import "vlogin.h"
 #import "vlogincel.h"

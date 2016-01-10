@@ -74,6 +74,8 @@
 		DA4A74511C3D9B240092A405 /* tools.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A743B1C3D9B240092A405 /* tools.m */; };
 		DA4A74521C3D9B240092A405 /* updater.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A743D1C3D9B240092A405 /* updater.m */; };
 		DA4A74531C3D9B240092A405 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4A74411C3D9B240092A405 /* libtimerbg.a */; };
+		DA70A9B51C420DC50015A865 /* vconfigsettingscelswitch.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9B41C420DC50015A865 /* vconfigsettingscelswitch.m */; };
+		DA70A9B81C420DDB0015A865 /* vconfigsettingscelbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9B71C420DDB0015A865 /* vconfigsettingscelbutton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -209,6 +211,10 @@
 		DA4A74411C3D9B240092A405 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DA4A74541C3D9CA10092A405 /* privateconstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA4A74551C3D9CC20092A405 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		DA70A9B31C420DC50015A865 /* vconfigsettingscelswitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingscelswitch.h; sourceTree = "<group>"; };
+		DA70A9B41C420DC50015A865 /* vconfigsettingscelswitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingscelswitch.m; sourceTree = "<group>"; };
+		DA70A9B61C420DDB0015A865 /* vconfigsettingscelbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingscelbutton.h; sourceTree = "<group>"; };
+		DA70A9B71C420DDB0015A865 /* vconfigsettingscelbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingscelbutton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +475,10 @@
 				DA322A3A1C40C2AF004C6958 /* vconfigsettingsheader.m */,
 				DA3B17911C41CB57002EBD21 /* vconfigsettingscel.h */,
 				DA3B17921C41CB57002EBD21 /* vconfigsettingscel.m */,
+				DA70A9B31C420DC50015A865 /* vconfigsettingscelswitch.h */,
+				DA70A9B41C420DC50015A865 /* vconfigsettingscelswitch.m */,
+				DA70A9B61C420DDB0015A865 /* vconfigsettingscelbutton.h */,
+				DA70A9B71C420DDB0015A865 /* vconfigsettingscelbutton.m */,
 			);
 			path = configsettings;
 			sourceTree = "<group>";
@@ -795,8 +805,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA46BD1F1C3F487300472BC9 /* mconfigsettings.m in Sources */,
+				DA70A9B51C420DC50015A865 /* vconfigsettingscelswitch.m in Sources */,
 				DA322A141C407683004C6958 /* vspinner.m in Sources */,
 				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
+				DA70A9B81C420DDB0015A865 /* vconfigsettingscelbutton.m in Sources */,
 				DA30972D1C3EB8DB00E8AFA2 /* vloginindicatorcel.m in Sources */,
 				DA46BD261C3F4DE600472BC9 /* mprofile.m in Sources */,
 				DA3097241C3EAB5500E8AFA2 /* mloginthird.m in Sources */,
