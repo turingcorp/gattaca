@@ -57,7 +57,6 @@
 		DA322A401C40C628004C6958 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA322A3D1C40C628004C6958 /* logo@2x.png */; };
 		DA322A411C40C628004C6958 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA322A3E1C40C628004C6958 /* logo@3x.png */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
-		DA3B17931C41CB57002EBD21 /* vconfigsettingscel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B17921C41CB57002EBD21 /* vconfigsettingscel.m */; };
 		DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD0C1C3F128F00472BC9 /* calert.m */; };
 		DA46BD111C3F12C000472BC9 /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD101C3F12C000472BC9 /* valert.m */; };
 		DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD131C3F14B800472BC9 /* msectionlogin.m */; };
@@ -74,8 +73,8 @@
 		DA4A74511C3D9B240092A405 /* tools.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A743B1C3D9B240092A405 /* tools.m */; };
 		DA4A74521C3D9B240092A405 /* updater.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A743D1C3D9B240092A405 /* updater.m */; };
 		DA4A74531C3D9B240092A405 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4A74411C3D9B240092A405 /* libtimerbg.a */; };
-		DA70A9B51C420DC50015A865 /* vconfigsettingscelswitch.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9B41C420DC50015A865 /* vconfigsettingscelswitch.m */; };
-		DA70A9B81C420DDB0015A865 /* vconfigsettingscelbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9B71C420DDB0015A865 /* vconfigsettingscelbutton.m */; };
+		DA70A9BB1C42100D0015A865 /* vconfigsettingsswitch.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9BA1C42100D0015A865 /* vconfigsettingsswitch.m */; };
+		DA70A9BE1C42101D0015A865 /* vconfigsettingsbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9BD1C42101D0015A865 /* vconfigsettingsbutton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,8 +172,6 @@
 		DA322A3E1C40C628004C6958 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
-		DA3B17911C41CB57002EBD21 /* vconfigsettingscel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingscel.h; sourceTree = "<group>"; };
-		DA3B17921C41CB57002EBD21 /* vconfigsettingscel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingscel.m; sourceTree = "<group>"; };
 		DA46BD0B1C3F128F00472BC9 /* calert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calert.h; sourceTree = "<group>"; };
 		DA46BD0C1C3F128F00472BC9 /* calert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calert.m; sourceTree = "<group>"; };
 		DA46BD0F1C3F12C000472BC9 /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
@@ -211,10 +208,10 @@
 		DA4A74411C3D9B240092A405 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DA4A74541C3D9CA10092A405 /* privateconstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA4A74551C3D9CC20092A405 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
-		DA70A9B31C420DC50015A865 /* vconfigsettingscelswitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingscelswitch.h; sourceTree = "<group>"; };
-		DA70A9B41C420DC50015A865 /* vconfigsettingscelswitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingscelswitch.m; sourceTree = "<group>"; };
-		DA70A9B61C420DDB0015A865 /* vconfigsettingscelbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingscelbutton.h; sourceTree = "<group>"; };
-		DA70A9B71C420DDB0015A865 /* vconfigsettingscelbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingscelbutton.m; sourceTree = "<group>"; };
+		DA70A9B91C42100D0015A865 /* vconfigsettingsswitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingsswitch.h; sourceTree = "<group>"; };
+		DA70A9BA1C42100D0015A865 /* vconfigsettingsswitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingsswitch.m; sourceTree = "<group>"; };
+		DA70A9BC1C42101D0015A865 /* vconfigsettingsbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingsbutton.h; sourceTree = "<group>"; };
+		DA70A9BD1C42101D0015A865 /* vconfigsettingsbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingsbutton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -473,12 +470,10 @@
 				DA322A371C40C285004C6958 /* vconfigsettings.m */,
 				DA322A391C40C2AF004C6958 /* vconfigsettingsheader.h */,
 				DA322A3A1C40C2AF004C6958 /* vconfigsettingsheader.m */,
-				DA3B17911C41CB57002EBD21 /* vconfigsettingscel.h */,
-				DA3B17921C41CB57002EBD21 /* vconfigsettingscel.m */,
-				DA70A9B31C420DC50015A865 /* vconfigsettingscelswitch.h */,
-				DA70A9B41C420DC50015A865 /* vconfigsettingscelswitch.m */,
-				DA70A9B61C420DDB0015A865 /* vconfigsettingscelbutton.h */,
-				DA70A9B71C420DDB0015A865 /* vconfigsettingscelbutton.m */,
+				DA70A9B91C42100D0015A865 /* vconfigsettingsswitch.h */,
+				DA70A9BA1C42100D0015A865 /* vconfigsettingsswitch.m */,
+				DA70A9BC1C42101D0015A865 /* vconfigsettingsbutton.h */,
+				DA70A9BD1C42101D0015A865 /* vconfigsettingsbutton.m */,
 			);
 			path = configsettings;
 			sourceTree = "<group>";
@@ -805,10 +800,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA46BD1F1C3F487300472BC9 /* mconfigsettings.m in Sources */,
-				DA70A9B51C420DC50015A865 /* vconfigsettingscelswitch.m in Sources */,
 				DA322A141C407683004C6958 /* vspinner.m in Sources */,
 				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
-				DA70A9B81C420DDB0015A865 /* vconfigsettingscelbutton.m in Sources */,
 				DA30972D1C3EB8DB00E8AFA2 /* vloginindicatorcel.m in Sources */,
 				DA46BD261C3F4DE600472BC9 /* mprofile.m in Sources */,
 				DA3097241C3EAB5500E8AFA2 /* mloginthird.m in Sources */,
@@ -822,8 +815,8 @@
 				DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */,
 				DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */,
 				DA2965EA1C3DF2FF00BC713E /* msectioncontact.m in Sources */,
-				DA3B17931C41CB57002EBD21 /* vconfigsettingscel.m in Sources */,
 				DA322A201C40A348004C6958 /* cconfigsettings.m in Sources */,
+				DA70A9BB1C42100D0015A865 /* vconfigsettingsswitch.m in Sources */,
 				DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */,
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
@@ -850,6 +843,7 @@
 				DA4A74521C3D9B240092A405 /* updater.m in Sources */,
 				DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */,
 				DA3229FA1C40280B004C6958 /* vmenu.m in Sources */,
+				DA70A9BE1C42101D0015A865 /* vconfigsettingsbutton.m in Sources */,
 				DA30972A1C3EB81F00E8AFA2 /* vlogincel.m in Sources */,
 				DA30971E1C3EAB3C00E8AFA2 /* mloginfirst.m in Sources */,
 				DA2965E71C3DF2FF00BC713E /* msection.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  vconfigsettingscelbutton.h
+//  vconfigsettingsbutton.h
 //  gattaca
 //
 //  Created by zero on 1/9/16.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface vconfigsettingscelbutton : NSObject
+@interface vconfigsettingsbutton : NSObject
 
 @end
