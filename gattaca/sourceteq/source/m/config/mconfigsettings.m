@@ -13,8 +13,6 @@
              [[mconfigsettingslogout alloc] init],
              [[mconfigsettingsdelete alloc] init],
              nil];
-    
-    
 }
 
 #pragma mark public
@@ -34,20 +32,14 @@
     return array[item];
 }
 
--(void)registerforcels:(UICollectionView*)collection
+-(void)registercels:(UICollectionView*)collection
 {
-    NSMutableDictionary classes = [NSMutableDictionary dictionary];
     NSInteger qty = [self count];
     
     for(NSInteger i = 0; i < qty; i++)
     {
-        Class c = [[self item:i] class];
-        NSString *classname = NSStringFromClass(c);
-        
-        if(!classes[classname])
-        {
-            [classes setValue:c forKey:classname];
-        }
+        id<mconfigsettingsprotocol> item = [self item:i];
+        [collection registerClass:[item celclass] forCellWithReuseIdentifier:[item celname]];
     }
 }
 

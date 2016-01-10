@@ -5,6 +5,6 @@
 
 -(NSInteger)count;
 -(id<mconfigsettingsprotocol>)item:(NSInteger)item;
--(void)registerforcels:(UICollectionView*)collection;
+-(void)registercels:(UICollectionView*)collection;
 
 @end
