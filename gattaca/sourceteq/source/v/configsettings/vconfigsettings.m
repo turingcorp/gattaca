@@ -67,7 +67,10 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    UICollectionViewCell *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    id<mconfigsettingsprotocol> item = [[(cconfigsettings*)self.controller model] item:index.item];
+    
+    UICollectionViewCell<vconfigsettingscelprotocol> *cel = [col dequeueReusableCellWithReuseIdentifier:[item celname] forIndexPath:index];
+    [cel config:item];
     
     return cel;
 }
