@@ -22,7 +22,6 @@
     [collection setShowsVerticalScrollIndicator:NO];
     [collection setDelegate:self];
     [collection setDataSource:self];
-    [collection registerClass:[vconfigsettingscel class] forCellWithReuseIdentifier:celid];
     [collection registerClass:[vconfigsettingsheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     

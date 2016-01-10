@@ -3,7 +3,6 @@
 @implementation mconfigsettings
 {
     NSArray *array;
-    NSMutableDictionary *classes;
 }
 
 -(void)lazyload
@@ -15,19 +14,7 @@
              [[mconfigsettingsdelete alloc] init],
              nil];
     
-    classes = [NSMutableDictionary dictionary];
-    NSInteger qty = [self count];
     
-    for(NSInteger i = 0; i < qty; i++)
-    {
-        Class c = [[self item:i] class];
-        NSString *classname = NSStringFromClass(c);
-        
-        if(!classes[classname])
-        {
-            [classes setValue:c forKey:classname];
-        }
-    }
 }
 
 #pragma mark public
@@ -49,7 +36,19 @@
 
 -(void)registerforcels:(UICollectionView*)collection
 {
+    NSMutableDictionary classes = [NSMutableDictionary dictionary];
+    NSInteger qty = [self count];
     
+    for(NSInteger i = 0; i < qty; i++)
+    {
+        Class c = [[self item:i] class];
+        NSString *classname = NSStringFromClass(c);
+        
+        if(!classes[classname])
+        {
+            [classes setValue:c forKey:classname];
+        }
+    }
 }
 
 #pragma mark -
