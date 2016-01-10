@@ -24,6 +24,7 @@
     [collection setDataSource:self];
     [collection registerClass:[vconfigsettingsheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [controller.model registercels:collection];
     
     [self addSubview:collection];
     
