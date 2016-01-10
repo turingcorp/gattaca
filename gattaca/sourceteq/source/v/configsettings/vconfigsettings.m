@@ -1,5 +1,4 @@
 #import "vconfigsettings.h"
-#import "vconfigsettingscel.m"
 
 @implementation vconfigsettings
 
@@ -68,7 +67,7 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    vconfigsettingscel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    UICollectionViewCell *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
     
     return cel;
 }

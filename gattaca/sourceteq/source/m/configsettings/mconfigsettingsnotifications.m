@@ -7,7 +7,7 @@
 
 -(Class)celclass
 {
-    return [vconfigsettingscelswitch class];
+    return [vconfigsettingsswitch class];
 }
 
 -(NSString*)celname

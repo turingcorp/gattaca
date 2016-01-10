@@ -1,13 +1,5 @@
-//
-//  vconfigsettingsbutton.h
-//  gattaca
-//
-//  Created by zero on 1/9/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
-
-@interface vconfigsettingsbutton : NSObject
+@interface vconfigsettingsbutton:UICollectionViewCell
 
 @end
