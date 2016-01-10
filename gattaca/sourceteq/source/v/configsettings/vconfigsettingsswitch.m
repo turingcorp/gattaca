@@ -16,7 +16,11 @@
     [strongtitle setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.title = strongtitle;
     
+    UISwitch *strongsw = [[UISwitch alloc] init];
+    self.sw = strongsw;
+    
     [self addSubview:strongtitle];
+    [self addSubview:strongsw];
     
     return self;
 }
