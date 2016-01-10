@@ -212,6 +212,7 @@
 		DA70A9BA1C42100D0015A865 /* vconfigsettingsswitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingsswitch.m; sourceTree = "<group>"; };
 		DA70A9BC1C42101D0015A865 /* vconfigsettingsbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingsbutton.h; sourceTree = "<group>"; };
 		DA70A9BD1C42101D0015A865 /* vconfigsettingsbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingsbutton.m; sourceTree = "<group>"; };
+		DA70A9BF1C4211090015A865 /* vconfigsettingscelprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingscelprotocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,6 +469,7 @@
 			children = (
 				DA322A361C40C285004C6958 /* vconfigsettings.h */,
 				DA322A371C40C285004C6958 /* vconfigsettings.m */,
+				DA70A9BF1C4211090015A865 /* vconfigsettingscelprotocol.h */,
 				DA322A391C40C2AF004C6958 /* vconfigsettingsheader.h */,
 				DA322A3A1C40C2AF004C6958 /* vconfigsettingsheader.m */,
 				DA70A9B91C42100D0015A865 /* vconfigsettingsswitch.h */,
