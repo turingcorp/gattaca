@@ -2,4 +2,9 @@
 
 @implementation mconfigsettingsnotifications
 
+-(Class)cel
+{
+    return [vconfigsettingscel class];
+}
+
 @end

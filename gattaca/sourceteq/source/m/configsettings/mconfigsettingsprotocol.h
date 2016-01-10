@@ -2,4 +2,6 @@
 
 @protocol mconfigsettingsprotocol <NSObject>
 
+-(Class)celtype;
+
 @end
