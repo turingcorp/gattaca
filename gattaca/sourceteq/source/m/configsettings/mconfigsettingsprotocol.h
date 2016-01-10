@@ -2,6 +2,8 @@
 
 @protocol mconfigsettingsprotocol <NSObject>
 
--(Class)celtype;
+-(Class)celclass;
+
+@property(copy, nonatomic)NSString *celname;
 
 @end

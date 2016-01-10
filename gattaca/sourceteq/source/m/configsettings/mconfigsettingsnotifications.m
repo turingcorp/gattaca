@@ -2,7 +2,21 @@
 
 @implementation mconfigsettingsnotifications
 
--(Class)cel
+@synthesize celname;
+
+-(instancetype)init
+{
+    self = [super init];
+    
+    celname = @"notifications";
+    
+    return self;
+}
+
+#pragma mark
+#pragma mark configsetting
+
+-(Class)celclass
 {
     return [vconfigsettingscel class];
 }
