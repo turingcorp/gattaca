@@ -1,7 +1,7 @@
-#import "appdel.h"
+#import <UIKit/UIKit.h>
 
 @interface vconfigsettingscel:UICollectionViewCell
 
--(void)config:(id<mconfigsettingsprotocol>)item;
+-(void)config:(id)item;
 
 @end

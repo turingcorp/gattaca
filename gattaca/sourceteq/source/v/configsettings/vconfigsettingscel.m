@@ -13,7 +13,7 @@
 
 #pragma mark public
 
--(void)config:(id<mconfigsettingsprotocol>)item
+-(void)config:(id)item
 {
     
 }

@@ -1,6 +1,5 @@
 #import "appdel.h"
-#import "vconfigsettingscel.m"
 
-@interface vconfigsettingscelswitch:vconfigsettingscel
+@interface vconfigsettingscelswitch:UICollectionViewCell
 
 @end

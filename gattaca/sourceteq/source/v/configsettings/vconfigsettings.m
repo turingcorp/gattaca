@@ -1,4 +1,5 @@
 #import "vconfigsettings.h"
+#import "vconfigsettingscel.m"
 
 @implementation vconfigsettings
 
