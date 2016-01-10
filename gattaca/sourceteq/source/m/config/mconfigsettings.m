@@ -47,17 +47,7 @@
     return array[item];
 }
 
--(NSInteger)countclasses
-{
-    
-}
-
--(Class)classname:(NSInteger)item
-{
-    
-}
-
--(NSInteger*)identifier:(NSInteger)item;
+-(void)registerforcels:(UICollectionView*)collection
 {
     
 }
