@@ -11,4 +11,11 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)config:(id<mconfigsettingsprotocol>)item
+{
+    
+}
+
 @end

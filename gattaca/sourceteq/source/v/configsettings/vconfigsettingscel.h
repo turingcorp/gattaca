@@ -2,4 +2,6 @@
 
 @interface vconfigsettingscel:UICollectionViewCell
 
+-(void)config:(id<mconfigsettingsprotocol>)item;
+
 @end
