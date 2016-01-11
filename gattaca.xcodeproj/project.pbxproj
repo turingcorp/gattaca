@@ -87,6 +87,10 @@
 		DA7AB9421C446E700058756C /* vprofilecircle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9411C446E700058756C /* vprofilecircle.m */; };
 		DA7AB9461C44714A0058756C /* mmyprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9451C44714A0058756C /* mmyprofile.m */; };
 		DA7AB94A1C4473A00058756C /* mprofilemetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9491C4473A00058756C /* mprofilemetrics.m */; };
+		DA7AB94D1C4474AA0058756C /* mprofilemetricscience.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB94C1C4474AA0058756C /* mprofilemetricscience.m */; };
+		DA7AB9501C4474BE0058756C /* mprofilemetricart.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB94F1C4474BE0058756C /* mprofilemetricart.m */; };
+		DA7AB9531C4474CE0058756C /* mprofilemetricsocial.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9521C4474CE0058756C /* mprofilemetricsocial.m */; };
+		DA7AB9561C4474E20058756C /* mprofilemetricsport.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9551C4474E20058756C /* mprofilemetricsport.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -250,6 +254,14 @@
 		DA7AB9471C4472960058756C /* mprofilemetricprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilemetricprotocol.h; sourceTree = "<group>"; };
 		DA7AB9481C4473A00058756C /* mprofilemetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilemetrics.h; sourceTree = "<group>"; };
 		DA7AB9491C4473A00058756C /* mprofilemetrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilemetrics.m; sourceTree = "<group>"; };
+		DA7AB94B1C4474AA0058756C /* mprofilemetricscience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilemetricscience.h; sourceTree = "<group>"; };
+		DA7AB94C1C4474AA0058756C /* mprofilemetricscience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilemetricscience.m; sourceTree = "<group>"; };
+		DA7AB94E1C4474BE0058756C /* mprofilemetricart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilemetricart.h; sourceTree = "<group>"; };
+		DA7AB94F1C4474BE0058756C /* mprofilemetricart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilemetricart.m; sourceTree = "<group>"; };
+		DA7AB9511C4474CE0058756C /* mprofilemetricsocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilemetricsocial.h; sourceTree = "<group>"; };
+		DA7AB9521C4474CE0058756C /* mprofilemetricsocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilemetricsocial.m; sourceTree = "<group>"; };
+		DA7AB9541C4474E20058756C /* mprofilemetricsport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilemetricsport.h; sourceTree = "<group>"; };
+		DA7AB9551C4474E20058756C /* mprofilemetricsport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilemetricsport.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -572,6 +584,14 @@
 				DA7AB9481C4473A00058756C /* mprofilemetrics.h */,
 				DA7AB9491C4473A00058756C /* mprofilemetrics.m */,
 				DA7AB9471C4472960058756C /* mprofilemetricprotocol.h */,
+				DA7AB94B1C4474AA0058756C /* mprofilemetricscience.h */,
+				DA7AB94C1C4474AA0058756C /* mprofilemetricscience.m */,
+				DA7AB94E1C4474BE0058756C /* mprofilemetricart.h */,
+				DA7AB94F1C4474BE0058756C /* mprofilemetricart.m */,
+				DA7AB9541C4474E20058756C /* mprofilemetricsport.h */,
+				DA7AB9551C4474E20058756C /* mprofilemetricsport.m */,
+				DA7AB9511C4474CE0058756C /* mprofilemetricsocial.h */,
+				DA7AB9521C4474CE0058756C /* mprofilemetricsocial.m */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -901,6 +921,7 @@
 				DA322A341C40C0C2004C6958 /* mconfigsettingslogout.m in Sources */,
 				DA2965DC1C3DF1B900BC713E /* msession.m in Sources */,
 				DA2965A91C3DC74600BC713E /* ccontact.m in Sources */,
+				DA7AB9531C4474CE0058756C /* mprofilemetricsocial.m in Sources */,
 				DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */,
 				DA7AB91F1C43F17F0058756C /* cconfigsettingsdelete.m in Sources */,
 				DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */,
@@ -909,6 +930,7 @@
 				DA322A201C40A348004C6958 /* cconfigsettings.m in Sources */,
 				DA70A9BB1C42100D0015A865 /* vconfigsettingsswitch.m in Sources */,
 				DA7AB9351C4466B20058756C /* vconfigprofilecel.m in Sources */,
+				DA7AB94D1C4474AA0058756C /* mprofilemetricscience.m in Sources */,
 				DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */,
 				DA7AB9281C43F31E0058756C /* vconfigsettingslogout.m in Sources */,
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
@@ -939,7 +961,9 @@
 				DA322A2E1C40C038004C6958 /* mconfigsettingsreview.m in Sources */,
 				DA4A74521C3D9B240092A405 /* updater.m in Sources */,
 				DA7AB94A1C4473A00058756C /* mprofilemetrics.m in Sources */,
+				DA7AB9501C4474BE0058756C /* mprofilemetricart.m in Sources */,
 				DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */,
+				DA7AB9561C4474E20058756C /* mprofilemetricsport.m in Sources */,
 				DA7AB92B1C445C990058756C /* cconfigprofile.m in Sources */,
 				DA3229FA1C40280B004C6958 /* vmenu.m in Sources */,
 				DA70A9BE1C42101D0015A865 /* vconfigsettingsbutton.m in Sources */,
