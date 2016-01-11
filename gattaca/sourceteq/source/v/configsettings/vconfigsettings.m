@@ -10,7 +10,7 @@
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:10];
+    [flow setMinimumLineSpacing:2];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
     [flow setSectionInset:UIEdgeInsetsMake(10, 0, menuheight + 20, 0)];
     

@@ -11,8 +11,8 @@
     UILabel *strongtitle = [[UILabel alloc] init];
     [strongtitle setBackgroundColor:[UIColor clearColor]];
     [strongtitle setUserInteractionEnabled:NO];
-    [strongtitle setFont:[UIFont fontWithName:fontname size:17]];
-    [strongtitle setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
+    [strongtitle setFont:[UIFont fontWithName:fontname size:16]];
+    [strongtitle setTextColor:[UIColor colorWithWhite:0.3 alpha:1]];
     [strongtitle setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.title = strongtitle;
     
@@ -31,7 +31,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[title]-150-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[sw]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[title]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[sw]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-15-[sw]" options:0 metrics:metrics views:views]];
     
     return self;
 }
