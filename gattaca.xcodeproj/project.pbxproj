@@ -75,6 +75,7 @@
 		DA4A74531C3D9B240092A405 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4A74411C3D9B240092A405 /* libtimerbg.a */; };
 		DA70A9BB1C42100D0015A865 /* vconfigsettingsswitch.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9BA1C42100D0015A865 /* vconfigsettingsswitch.m */; };
 		DA70A9BE1C42101D0015A865 /* vconfigsettingsbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9BD1C42101D0015A865 /* vconfigsettingsbutton.m */; };
+		DA7AB91F1C43F17F0058756C /* cconfigsettingsdelete.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB91E1C43F17F0058756C /* cconfigsettingsdelete.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -213,6 +214,8 @@
 		DA70A9BC1C42101D0015A865 /* vconfigsettingsbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingsbutton.h; sourceTree = "<group>"; };
 		DA70A9BD1C42101D0015A865 /* vconfigsettingsbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingsbutton.m; sourceTree = "<group>"; };
 		DA70A9BF1C4211090015A865 /* vconfigsettingscelprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingscelprotocol.h; sourceTree = "<group>"; };
+		DA7AB91D1C43F17F0058756C /* cconfigsettingsdelete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cconfigsettingsdelete.h; sourceTree = "<group>"; };
+		DA7AB91E1C43F17F0058756C /* cconfigsettingsdelete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfigsettingsdelete.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +329,8 @@
 				DA322A1C1C409A52004C6958 /* cconfigmain.m */,
 				DA322A1E1C40A348004C6958 /* cconfigsettings.h */,
 				DA322A1F1C40A348004C6958 /* cconfigsettings.m */,
+				DA7AB91D1C43F17F0058756C /* cconfigsettingsdelete.h */,
+				DA7AB91E1C43F17F0058756C /* cconfigsettingsdelete.m */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -814,6 +819,7 @@
 				DA2965DC1C3DF1B900BC713E /* msession.m in Sources */,
 				DA2965A91C3DC74600BC713E /* ccontact.m in Sources */,
 				DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */,
+				DA7AB91F1C43F17F0058756C /* cconfigsettingsdelete.m in Sources */,
 				DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */,
 				DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */,
 				DA2965EA1C3DF2FF00BC713E /* msectioncontact.m in Sources */,

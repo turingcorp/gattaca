@@ -6,13 +6,11 @@
 {
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
     
     UILabel *strongtitle = [[UILabel alloc] init];
     [strongtitle setBackgroundColor:[UIColor clearColor]];
     [strongtitle setUserInteractionEnabled:NO];
     [strongtitle setFont:[UIFont fontWithName:fontboldname size:15]];
-    [strongtitle setTextColor:[UIColor colorWithWhite:0.2 alpha:1]];
     [strongtitle setTextAlignment:NSTextAlignmentCenter];
     [strongtitle setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.title = strongtitle;
@@ -28,11 +26,38 @@
     return self;
 }
 
+-(void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    [self hover];
+}
+
+-(void)setHighlighted:(BOOL)highlighted
+{
+    [super setHighlighted:highlighted];
+    [self hover];
+}
+
+-(void)hover
+{
+    if(self.isSelected || self.isHighlighted)
+    {
+        [self.title setTextColor:[UIColor whiteColor]];
+        [self setBackgroundColor:colormain];
+    }
+    else
+    {
+        [self.title setTextColor:[UIColor colorWithWhite:0.2 alpha:1]];
+        [self setBackgroundColor:[UIColor whiteColor]];
+    }
+}
+
 #pragma mark -
 #pragma mark cel protocol
 
 -(void)config:(id<mconfigsettingsprotocol>)item
 {
     [self.title setText:[item title]];
+    [self hover];
 }
 @end

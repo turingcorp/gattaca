@@ -75,4 +75,16 @@
     return cel;
 }
 
+-(BOOL)collectionView:(UICollectionView*)col shouldSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    BOOL should = NO;
+    
+    if([[[(cconfigsettings*)self.controller model] item:index.item] celclass] == [vconfigsettingsbutton class])
+    {
+        should = YES;
+    }
+    
+    return should;
+}
+
 @end
