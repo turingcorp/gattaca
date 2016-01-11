@@ -4,5 +4,10 @@
 
 -(Class)celclass;
 -(NSString*)celname;
+-(NSString*)title;
+
+@optional
+
+-(BOOL)value;
 
 @end

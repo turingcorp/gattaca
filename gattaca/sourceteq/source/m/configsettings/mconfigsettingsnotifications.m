@@ -15,4 +15,16 @@
     return @"notifications";
 }
 
+-(NSString*)title
+{
+    return NSLocalizedString(@"", nil);
+}
+
+-(BOOL)value
+{
+#warning "needs revision"
+    
+    return YES;
+}
+
 @end
