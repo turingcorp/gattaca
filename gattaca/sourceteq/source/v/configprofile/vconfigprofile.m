@@ -9,6 +9,11 @@
     [self setBackgroundColor:[UIColor whiteColor]];
  
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    [flow setFooterReferenceSize:CGSizeZero];
+    [flow setMinimumInteritemSpacing:0];
+    [flow setMinimumLineSpacing:2];
+    [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
+    [flow setSectionInset:UIEdgeInsetsMake(20, 0, menuheight + 20, 0)];
     
     UICollectionView *strongcollection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [strongcollection setBackgroundColor:[UIColor clearColor]];
