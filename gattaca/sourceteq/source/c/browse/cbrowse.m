@@ -9,6 +9,16 @@
     return self;
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
 -(void)loadView
 {
     self.view = [[vbrowse alloc] init:self];

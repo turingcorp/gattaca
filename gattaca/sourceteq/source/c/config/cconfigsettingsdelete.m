@@ -32,4 +32,14 @@
     [[analytics singleton] trackscreen:ga_screen_delete];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
 @end

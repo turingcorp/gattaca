@@ -32,4 +32,14 @@
     [[analytics singleton] trackscreen:ga_screen_logout];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
 @end

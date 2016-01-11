@@ -14,6 +14,16 @@
     [self.viewconfig refresh];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
 -(void)loadView
 {
     self.view = [[vconfig alloc] init:self];

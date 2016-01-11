@@ -36,6 +36,16 @@
     [vmenu addto:self.view];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
 #pragma mark functionality
 
 -(void)safeopensection:(id<msectionprotocol>)section animated:(BOOL)animated
