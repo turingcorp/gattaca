@@ -86,6 +86,7 @@
 		DA7AB93F1C446E620058756C /* vprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB93E1C446E620058756C /* vprofile.m */; };
 		DA7AB9421C446E700058756C /* vprofilecircle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9411C446E700058756C /* vprofilecircle.m */; };
 		DA7AB9461C44714A0058756C /* mmyprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9451C44714A0058756C /* mmyprofile.m */; };
+		DA7AB94A1C4473A00058756C /* mprofilemetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9491C4473A00058756C /* mprofilemetrics.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -247,6 +248,8 @@
 		DA7AB9441C44714A0058756C /* mmyprofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmyprofile.h; sourceTree = "<group>"; };
 		DA7AB9451C44714A0058756C /* mmyprofile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mmyprofile.m; sourceTree = "<group>"; };
 		DA7AB9471C4472960058756C /* mprofilemetricprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilemetricprotocol.h; sourceTree = "<group>"; };
+		DA7AB9481C4473A00058756C /* mprofilemetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilemetrics.h; sourceTree = "<group>"; };
+		DA7AB9491C4473A00058756C /* mprofilemetrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilemetrics.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -566,6 +569,8 @@
 			children = (
 				DA46BD241C3F4DE600472BC9 /* mprofile.h */,
 				DA46BD251C3F4DE600472BC9 /* mprofile.m */,
+				DA7AB9481C4473A00058756C /* mprofilemetrics.h */,
+				DA7AB9491C4473A00058756C /* mprofilemetrics.m */,
 				DA7AB9471C4472960058756C /* mprofilemetricprotocol.h */,
 			);
 			path = profile;
@@ -933,6 +938,7 @@
 				DA46BD221C3F4BA700472BC9 /* vconfigcel.m in Sources */,
 				DA322A2E1C40C038004C6958 /* mconfigsettingsreview.m in Sources */,
 				DA4A74521C3D9B240092A405 /* updater.m in Sources */,
+				DA7AB94A1C4473A00058756C /* mprofilemetrics.m in Sources */,
 				DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */,
 				DA7AB92B1C445C990058756C /* cconfigprofile.m in Sources */,
 				DA3229FA1C40280B004C6958 /* vmenu.m in Sources */,

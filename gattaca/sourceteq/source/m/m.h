@@ -7,6 +7,8 @@
 #import "msectioncontact.h"
 #import "msectionlogin.h"
 #import "mprofile.h"
+#import "mprofilemetrics.h"
+#import "mprofilemetricprotocol.h"
 #import "mmyprofile.h"
 #import "mlogin.h"
 #import "mloginprotocol.h"
