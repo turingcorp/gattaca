@@ -3,6 +3,4 @@
 
 @interface vconfigsettings:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property(weak, nonatomic)UICollectionView *collection;
-
 @end

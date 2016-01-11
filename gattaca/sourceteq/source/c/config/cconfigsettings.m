@@ -12,12 +12,6 @@
     return self;
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [[(vconfigsettings*)self.view collection] reloadData];
-}
-
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleDefault;
