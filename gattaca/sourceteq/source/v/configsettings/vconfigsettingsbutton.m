@@ -11,8 +11,9 @@
     UILabel *strongtitle = [[UILabel alloc] init];
     [strongtitle setBackgroundColor:[UIColor clearColor]];
     [strongtitle setUserInteractionEnabled:NO];
-    [strongtitle setFont:[UIFont fontWithName:fontname size:16]];
-    [strongtitle setTextColor:[UIColor colorWithWhite:0.3 alpha:1]];
+    [strongtitle setFont:[UIFont fontWithName:fontboldname size:15]];
+    [strongtitle setTextColor:[UIColor colorWithWhite:0.2 alpha:1]];
+    [strongtitle setTextAlignment:NSTextAlignmentCenter];
     [strongtitle setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.title = strongtitle;
     

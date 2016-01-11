@@ -12,7 +12,7 @@
     [strongtitle setBackgroundColor:[UIColor clearColor]];
     [strongtitle setUserInteractionEnabled:NO];
     [strongtitle setFont:[UIFont fontWithName:fontname size:16]];
-    [strongtitle setTextColor:[UIColor colorWithWhite:0.3 alpha:1]];
+    [strongtitle setTextColor:[UIColor colorWithWhite:0.4 alpha:1]];
     [strongtitle setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.title = strongtitle;
     
