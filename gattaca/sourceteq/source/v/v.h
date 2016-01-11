@@ -11,6 +11,8 @@
 #import "vconfigsettingscelprotocol.h"
 #import "vconfigsettingsswitch.h"
 #import "vconfigsettingsbutton.h"
+#import "vconfigsettingslogout.h"
+#import "vconfigsettingsdelete.h"
 #import "vcontact.h"
 #import "vlogin.h"
 #import "vlogincel.h"
