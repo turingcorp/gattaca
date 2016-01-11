@@ -14,21 +14,22 @@
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
     [flow setSectionInset:UIEdgeInsetsMake(10, 0, menuheight + 20, 0)];
     
-    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
-    [collection setClipsToBounds:YES];
-    [collection setBackgroundColor:[UIColor clearColor]];
-    [collection setAlwaysBounceVertical:YES];
-    [collection setShowsHorizontalScrollIndicator:NO];
-    [collection setShowsVerticalScrollIndicator:NO];
-    [collection setDelegate:self];
-    [collection setDataSource:self];
-    [collection registerClass:[vconfigsettingsheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
-    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [controller.model registercels:collection];
+    UICollectionView *strongcontroller = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [strongcontroller setClipsToBounds:YES];
+    [strongcontroller setBackgroundColor:[UIColor clearColor]];
+    [strongcontroller setAlwaysBounceVertical:YES];
+    [strongcontroller setShowsHorizontalScrollIndicator:NO];
+    [strongcontroller setShowsVerticalScrollIndicator:NO];
+    [strongcontroller setDelegate:self];
+    [strongcontroller setDataSource:self];
+    [strongcontroller registerClass:[vconfigsettingsheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
+    [strongcontroller setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [controller.model registercels:strongcontroller];
+    self.collection = strongcontroller;
     
-    [self addSubview:collection];
+    [self addSubview:strongcontroller];
     
-    NSDictionary *views = @{@"col":collection};
+    NSDictionary *views = @{@"col":strongcontroller};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
@@ -90,6 +91,13 @@
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
     [[[(cconfigsettings*)self.controller model] item:index.item] change];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC),
+                   dispatch_get_main_queue(),
+                   ^(void)
+                   {
+                       [self.collection reloadData];
+                   });
 }
 
 @end
