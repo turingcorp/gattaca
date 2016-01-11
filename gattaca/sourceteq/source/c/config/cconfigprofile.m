@@ -11,7 +11,7 @@
 
 -(void)loadView
 {
-    self.view = 
+    self.view = [[vconfigprofile alloc] init:self];
 }
 
 @end

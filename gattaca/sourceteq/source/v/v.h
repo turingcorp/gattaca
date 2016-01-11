@@ -13,6 +13,7 @@
 #import "vconfigsettingsbutton.h"
 #import "vconfigsettingslogout.h"
 #import "vconfigsettingsdelete.h"
+#import "vconfigprofile.h"
 #import "vcontact.h"
 #import "vlogin.h"
 #import "vlogincel.h"
