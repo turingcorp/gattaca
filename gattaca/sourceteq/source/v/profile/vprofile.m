@@ -6,6 +6,10 @@
 {
     self = [super init];
     
+    vprofilecircle *circle = [[vprofilecircle alloc] init];
+    
+    [self addSubview:circle];
+    
     return self;
 }
 
