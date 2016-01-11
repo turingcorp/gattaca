@@ -5,6 +5,7 @@
 #import "cconfigsettings.h"
 #import "cconfigsettingslogout.h"
 #import "cconfigsettingsdelete.h"
+#import "cconfigprofile.h"
 #import "ccontact.h"
 #import "clogin.h"
 #import "calert.h"

@@ -79,6 +79,7 @@
 		DA7AB9221C43F29D0058756C /* cconfigsettingslogout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9211C43F29D0058756C /* cconfigsettingslogout.m */; };
 		DA7AB9251C43F3060058756C /* vconfigsettingsdelete.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9241C43F3060058756C /* vconfigsettingsdelete.m */; };
 		DA7AB9281C43F31E0058756C /* vconfigsettingslogout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9271C43F31E0058756C /* vconfigsettingslogout.m */; };
+		DA7AB92B1C445C990058756C /* cconfigprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB92A1C445C990058756C /* cconfigprofile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -225,6 +226,8 @@
 		DA7AB9241C43F3060058756C /* vconfigsettingsdelete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingsdelete.m; sourceTree = "<group>"; };
 		DA7AB9261C43F31E0058756C /* vconfigsettingslogout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingslogout.h; sourceTree = "<group>"; };
 		DA7AB9271C43F31E0058756C /* vconfigsettingslogout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingslogout.m; sourceTree = "<group>"; };
+		DA7AB9291C445C990058756C /* cconfigprofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cconfigprofile.h; sourceTree = "<group>"; };
+		DA7AB92A1C445C990058756C /* cconfigprofile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfigprofile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +345,8 @@
 				DA7AB9211C43F29D0058756C /* cconfigsettingslogout.m */,
 				DA7AB91D1C43F17F0058756C /* cconfigsettingsdelete.h */,
 				DA7AB91E1C43F17F0058756C /* cconfigsettingsdelete.m */,
+				DA7AB9291C445C990058756C /* cconfigprofile.h */,
+				DA7AB92A1C445C990058756C /* cconfigprofile.m */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -868,6 +873,7 @@
 				DA322A2E1C40C038004C6958 /* mconfigsettingsreview.m in Sources */,
 				DA4A74521C3D9B240092A405 /* updater.m in Sources */,
 				DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */,
+				DA7AB92B1C445C990058756C /* cconfigprofile.m in Sources */,
 				DA3229FA1C40280B004C6958 /* vmenu.m in Sources */,
 				DA70A9BE1C42101D0015A865 /* vconfigsettingsbutton.m in Sources */,
 				DA30972A1C3EB81F00E8AFA2 /* vlogincel.m in Sources */,
