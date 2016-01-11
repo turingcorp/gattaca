@@ -17,10 +17,14 @@
     self.title = strongtitle;
     
     UISwitch *strongsw = [[UISwitch alloc] init];
+    [strongsw setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.sw = strongsw;
     
     [self addSubview:strongtitle];
     [self addSubview:strongsw];
+    
+    NSDictionary *views = @{};
+    NSDictionary *metrics = @{};
     
     return self;
 }
