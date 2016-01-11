@@ -80,6 +80,7 @@
 		DA7AB9251C43F3060058756C /* vconfigsettingsdelete.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9241C43F3060058756C /* vconfigsettingsdelete.m */; };
 		DA7AB9281C43F31E0058756C /* vconfigsettingslogout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9271C43F31E0058756C /* vconfigsettingslogout.m */; };
 		DA7AB92B1C445C990058756C /* cconfigprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB92A1C445C990058756C /* cconfigprofile.m */; };
+		DA7AB92F1C44615C0058756C /* vconfigprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB92E1C44615C0058756C /* vconfigprofile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -228,6 +229,8 @@
 		DA7AB9271C43F31E0058756C /* vconfigsettingslogout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingslogout.m; sourceTree = "<group>"; };
 		DA7AB9291C445C990058756C /* cconfigprofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cconfigprofile.h; sourceTree = "<group>"; };
 		DA7AB92A1C445C990058756C /* cconfigprofile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfigprofile.m; sourceTree = "<group>"; };
+		DA7AB92D1C44615C0058756C /* vconfigprofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigprofile.h; sourceTree = "<group>"; };
+		DA7AB92E1C44615C0058756C /* vconfigprofile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigprofile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +299,7 @@
 				DA3229F71C4027E9004C6958 /* main */,
 				DA46BD0E1C3F12B300472BC9 /* alert */,
 				DA2965B01C3DDDD700BC713E /* config */,
+				DA7AB92C1C4461310058756C /* configprofile */,
 				DA322A351C40C265004C6958 /* configsettings */,
 				DA2965B11C3DDDD700BC713E /* contact */,
 				DA2965D61C3DF0D000BC713E /* login */,
@@ -689,6 +693,15 @@
 			path = source;
 			sourceTree = "<group>";
 		};
+		DA7AB92C1C4461310058756C /* configprofile */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB92D1C44615C0058756C /* vconfigprofile.h */,
+				DA7AB92E1C44615C0058756C /* vconfigprofile.m */,
+			);
+			path = configprofile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -857,6 +870,7 @@
 				DA4A744D1C3D9B240092A405 /* appdel.m in Sources */,
 				DA3097211C3EAB4700E8AFA2 /* mloginsecond.m in Sources */,
 				DA4A74501C3D9B240092A405 /* analytics.m in Sources */,
+				DA7AB92F1C44615C0058756C /* vconfigprofile.m in Sources */,
 				DA322A311C40C087004C6958 /* mconfigsettingsnotifications.m in Sources */,
 				DA2965A61C3DC73C00BC713E /* cconfig.m in Sources */,
 				DA2965D51C3DEFFC00BC713E /* clogin.m in Sources */,

@@ -9,4 +9,9 @@
     [[analytics singleton] trackscreen:ga_screen_config_profile];
 }
 
+-(void)loadView
+{
+    self.view = 
+}
+
 @end
