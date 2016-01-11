@@ -7,7 +7,7 @@
     dispatch_async(dispatch_get_main_queue(),
                    ^(void)
                    {
-                       
+                       [[cmain singleton] presentViewController:[[cconfigsettingsdelete alloc] init] animated:YES completion:nil];
                    });
 }
 
