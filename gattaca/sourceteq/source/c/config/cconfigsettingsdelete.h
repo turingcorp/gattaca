@@ -2,4 +2,6 @@
 
 @interface cconfigsettingsdelete:UIViewController
 
++(void)askconfirmation;
+
 @end

@@ -2,4 +2,6 @@
 
 @interface cconfigsettingslogout:UIViewController
 
++(void)askconfirmation;
+
 @end

@@ -2,6 +2,11 @@
 
 @implementation cconfigsettingslogout
 
++(void)askconfirmation
+{
+    
+}
+
 -(instancetype)init
 {
     self = [super init];
@@ -13,7 +18,7 @@
 
 -(void)loadView
 {
-    
+    self.view = [[vconfigsettingslogout alloc] init];
 }
 
 @end
