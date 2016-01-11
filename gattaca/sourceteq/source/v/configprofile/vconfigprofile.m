@@ -6,12 +6,12 @@
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
+    [self setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1]];
  
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:2];
+    [flow setMinimumLineSpacing:10];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
     [flow setSectionInset:UIEdgeInsetsMake(20, 0, menuheight + 20, 0)];
     
@@ -25,15 +25,32 @@
     [strongcollection setDataSource:self];
     [strongcollection registerClass:[vconfigprofilecel class] forCellWithReuseIdentifier:celid];
     [strongcollection registerClass:[vconfigprofileheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
+    [strongcollection setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     self.collection = strongcollection;
     [self addSubview:strongcollection];
+    
+    NSDictionary *views = @{@"col":strongcollection};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
 
 #pragma mark -
 #pragma mark col del
+
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    return CGSizeMake(self.bounds.size.width, 320);
+}
+
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
+{
+    return CGSizeMake(self.bounds.size.width, 50);
+}
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
