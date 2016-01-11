@@ -17,6 +17,8 @@
 #import "vconfigprofileheader.h"
 #import "vconfigprofilecel.h"
 #import "vcontact.h"
+#import "vprofile.h"
+#import "vprofilecircle.h"
 #import "vlogin.h"
 #import "vlogincel.h"
 #import "vloginindicatorcel.h"
