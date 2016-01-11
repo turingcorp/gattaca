@@ -5,10 +5,11 @@
 -(Class)celclass;
 -(NSString*)celname;
 -(NSString*)title;
--(void)change;
 
 @optional
 
 -(BOOL)value;
+-(void)activate;
+-(void)change:(BOOL)newvalue;
 
 @end

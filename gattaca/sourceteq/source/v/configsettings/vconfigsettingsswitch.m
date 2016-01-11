@@ -20,6 +20,7 @@
     [strongsw setOnTintColor:colormain];
     [strongsw setTintColor:[UIColor colorWithWhite:0.9 alpha:1]];
     [strongsw setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [strongsw addTarget:self action:@selector(actionswitch:) forControlEvents:UIControlEventValueChanged];
     self.sw = strongsw;
     
     [self addSubview:strongtitle];
@@ -36,11 +37,20 @@
     return self;
 }
 
+#pragma mark actions
+
+-(void)actionswitch:(UISwitch*)sw
+{
+    [self.item change:sw.isOn];
+}
+
 #pragma mark -
 #pragma mark cel protocol
 
 -(void)config:(id<mconfigsettingsprotocol>)item
 {
+    self.item = item;
+    
     [self.title setText:[item title]];
     [self.sw setOn:[item value] animated:NO];
 }

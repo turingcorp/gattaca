@@ -25,7 +25,7 @@
     return YES;
 }
 
--(void)change
+-(void)change:(BOOL)newvalue
 {
     
 }

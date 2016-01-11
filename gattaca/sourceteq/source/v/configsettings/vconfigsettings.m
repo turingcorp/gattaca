@@ -90,7 +90,7 @@
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    [[[(cconfigsettings*)self.controller model] item:index.item] change];
+    [[[(cconfigsettings*)self.controller model] item:index.item] activate];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC),
                    dispatch_get_main_queue(),

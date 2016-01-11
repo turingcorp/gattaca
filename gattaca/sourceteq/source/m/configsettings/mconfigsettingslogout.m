@@ -20,7 +20,7 @@
     return NSLocalizedString(@"config_settings_logout_title", nil);
 }
 
--(void)change
+-(void)activate
 {
     [cconfigsettingslogout askconfirmation];
 }
