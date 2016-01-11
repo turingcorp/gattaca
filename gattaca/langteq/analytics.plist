@@ -14,6 +14,7 @@
 		<string>logout</string>
 		<string>delete</string>
 		<string>application_rate</string>
+		<string>configuration/notifications</string>
 	</array>
 	<key>actions</key>
 	<array>

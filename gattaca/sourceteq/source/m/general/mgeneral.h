@@ -24,7 +24,8 @@ typedef NS_ENUM(NSInteger, ga_event)
     ga_event_login,
     ga_event_logout,
     ga_event_delete,
-    ga_event_apprate
+    ga_event_apprate,
+    ga_event_configuration_notifications
 };
 
 typedef NS_ENUM(NSInteger, ga_action)

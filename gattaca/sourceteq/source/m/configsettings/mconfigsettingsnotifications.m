@@ -27,7 +27,14 @@
 
 -(void)change:(BOOL)newvalue
 {
+    ga_action action = ga_action_off;
     
+    if(newvalue)
+    {
+        action = ga_action_on;
+    }
+    
+    [[analytics singleton] trackevent:ga_event_configuration_notifications action:action label:@""];
 }
 
 @end
