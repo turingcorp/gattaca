@@ -1,5 +1,5 @@
 #import "appdel.h"
 
-@interface vconfigsettingsdelete:UIView
+@interface vconfigsettingsdelete:viewbase
 
 @end

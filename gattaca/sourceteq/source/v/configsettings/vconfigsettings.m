@@ -87,4 +87,9 @@
     return should;
 }
 
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    [[[(cconfigsettings*)self.controller model] item:index.item] change];
+}
+
 @end

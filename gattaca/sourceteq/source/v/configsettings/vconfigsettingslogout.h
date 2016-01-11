@@ -1,5 +1,5 @@
 #import "appdel.h"
 
-@interface vconfigsettingslogout:UIView
+@interface vconfigsettingslogout:viewbase
 
 @end
