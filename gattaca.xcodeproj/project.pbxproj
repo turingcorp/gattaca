@@ -76,6 +76,7 @@
 		DA70A9BB1C42100D0015A865 /* vconfigsettingsswitch.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9BA1C42100D0015A865 /* vconfigsettingsswitch.m */; };
 		DA70A9BE1C42101D0015A865 /* vconfigsettingsbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9BD1C42101D0015A865 /* vconfigsettingsbutton.m */; };
 		DA7AB91F1C43F17F0058756C /* cconfigsettingsdelete.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB91E1C43F17F0058756C /* cconfigsettingsdelete.m */; };
+		DA7AB9221C43F29D0058756C /* cconfigsettingslogout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9211C43F29D0058756C /* cconfigsettingslogout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -216,6 +217,8 @@
 		DA70A9BF1C4211090015A865 /* vconfigsettingscelprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingscelprotocol.h; sourceTree = "<group>"; };
 		DA7AB91D1C43F17F0058756C /* cconfigsettingsdelete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cconfigsettingsdelete.h; sourceTree = "<group>"; };
 		DA7AB91E1C43F17F0058756C /* cconfigsettingsdelete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfigsettingsdelete.m; sourceTree = "<group>"; };
+		DA7AB9201C43F29D0058756C /* cconfigsettingslogout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cconfigsettingslogout.h; sourceTree = "<group>"; };
+		DA7AB9211C43F29D0058756C /* cconfigsettingslogout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfigsettingslogout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +332,8 @@
 				DA322A1C1C409A52004C6958 /* cconfigmain.m */,
 				DA322A1E1C40A348004C6958 /* cconfigsettings.h */,
 				DA322A1F1C40A348004C6958 /* cconfigsettings.m */,
+				DA7AB9201C43F29D0058756C /* cconfigsettingslogout.h */,
+				DA7AB9211C43F29D0058756C /* cconfigsettingslogout.m */,
 				DA7AB91D1C43F17F0058756C /* cconfigsettingsdelete.h */,
 				DA7AB91E1C43F17F0058756C /* cconfigsettingsdelete.m */,
 			);
@@ -829,6 +834,7 @@
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
 				DA322A3B1C40C2AF004C6958 /* vconfigsettingsheader.m in Sources */,
+				DA7AB9221C43F29D0058756C /* cconfigsettingslogout.m in Sources */,
 				DA4A744F1C3D9B240092A405 /* main.m in Sources */,
 				DA46BD1B1C3F40A300472BC9 /* mconfig.m in Sources */,
 				DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */,
