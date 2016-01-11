@@ -42,4 +42,16 @@
     return NO;
 }
 
+#pragma mark public
+
+-(void)cancel
+{
+    [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)deleteaccount
+{
+    
+}
+
 @end
