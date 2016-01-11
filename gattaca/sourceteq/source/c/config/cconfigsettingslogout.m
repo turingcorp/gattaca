@@ -22,7 +22,7 @@
 
 -(void)loadView
 {
-    self.view = [[vconfigsettingslogout alloc] init];
+    self.view = [[vconfigsettingslogout alloc] init:self];
 }
 
 -(void)viewDidLoad

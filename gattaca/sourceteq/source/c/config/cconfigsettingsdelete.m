@@ -22,7 +22,7 @@
 
 -(void)loadView
 {
-    self.view = [[vconfigsettingsdelete alloc] init];
+    self.view = [[vconfigsettingsdelete alloc] init:self];
 }
 
 -(void)viewDidLoad

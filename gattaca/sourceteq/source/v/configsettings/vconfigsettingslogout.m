@@ -2,9 +2,9 @@
 
 @implementation vconfigsettingslogout
 
--(instancetype)init
+-(instancetype)init:(cconfigsettingslogout*)controller
 {
-    self = [super init];
+    self = [super init:controller];
     
     return self;
 }
