@@ -11,9 +11,9 @@
 	<key>events</key>
 	<array>
 		<string>login</string>
-		<string>application_rate</string>
 		<string>logout</string>
 		<string>delete</string>
+		<string>application_rate</string>
 	</array>
 	<key>actions</key>
 	<array>
