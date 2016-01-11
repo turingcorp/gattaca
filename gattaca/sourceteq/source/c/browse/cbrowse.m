@@ -24,6 +24,12 @@
     self.view = [[vbrowse alloc] init:self];
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [[analytics singleton] trackscreen:ga_screen_browse];
+}
+
 #pragma mark public
 
 

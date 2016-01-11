@@ -6,6 +6,8 @@
 {
     [super viewDidLoad];
     [self setTitle:NSLocalizedString(@"config_title", nil)];
+    
+    [[analytics singleton] trackscreen:ga_screen_config];
 }
 
 -(void)viewDidAppear:(BOOL)animated

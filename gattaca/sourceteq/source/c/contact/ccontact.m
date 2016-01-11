@@ -24,4 +24,10 @@
     self.view = [[vcontact alloc] init:self];
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [[analytics singleton] trackscreen:ga_screen_contact];
+}
+
 @end

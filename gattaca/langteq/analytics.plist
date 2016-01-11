@@ -10,6 +10,7 @@
 		<string>browse</string>
 		<string>config</string>
 		<string>config/settings</string>
+		<string>config/profile</string>
 		<string>contact</string>
 	</array>
 	<key>events</key>

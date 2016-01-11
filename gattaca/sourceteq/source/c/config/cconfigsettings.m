@@ -27,4 +27,11 @@
     self.view = [[vconfigsettings alloc] init:self];
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [[analytics singleton] trackscreen:ga_screen_config_settings];
+}
+
 @end
