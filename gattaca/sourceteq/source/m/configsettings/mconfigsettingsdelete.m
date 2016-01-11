@@ -20,4 +20,9 @@
     return NSLocalizedString(@"config_settings_delete_title", nil);
 }
 
+-(void)change
+{
+    
+}
+
 @end

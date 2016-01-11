@@ -20,4 +20,9 @@
     return NSLocalizedString(@"config_settings_review_title", nil);
 }
 
+-(void)change
+{
+    
+}
+
 @end

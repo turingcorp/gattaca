@@ -5,6 +5,7 @@
 -(Class)celclass;
 -(NSString*)celname;
 -(NSString*)title;
+-(void)change;
 
 @optional
 
