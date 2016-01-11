@@ -49,7 +49,7 @@ typedef NS_ENUM(NSInteger, ga_action)
 typedef NS_ENUM(NSInteger, profile_metric)
 {
     profile_metric_science,
-    profile_metric_arts,
-    profile_metric_sports,
+    profile_metric_art,
+    profile_metric_sport,
     profile_metric_social
 };

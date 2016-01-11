@@ -1,13 +1,5 @@
-//
-//  mprofilemetricscience.h
-//  gattaca
-//
-//  Created by zero on 1/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mprofilemetricscience : NSObject
+@interface mprofilemetricscience:NSObject<mprofilemetricprotocol>
 
 @end
