@@ -14,7 +14,11 @@
 "config_settings_notifications_title"="Notifications";
 "config_settings_review_title"="Review in the App Store";
 "config_settings_logout_title"="Logout";
+"config_settings_logout_descr"="Your account will still be active and you can resume as soon as you login again";
 "config_settings_delete_title"="Delete account";
+"config_settings_delete_descr"="Deleting your account will erase your register with us and your contacts";
+"config_settings_delete_cancel"="Cancel";
+"config_settings_delete_delete"="Delete";
 
 "alert_accept"="Accept";
 
