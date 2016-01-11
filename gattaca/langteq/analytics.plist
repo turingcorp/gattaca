@@ -7,6 +7,10 @@
 		<string>login</string>
 		<string>logout</string>
 		<string>delete</string>
+		<string>browse</string>
+		<string>config</string>
+		<string>config/settings</string>
+		<string>contact</string>
 	</array>
 	<key>events</key>
 	<array>
@@ -14,7 +18,7 @@
 		<string>logout</string>
 		<string>delete</string>
 		<string>application_rate</string>
-		<string>configuration/notifications</string>
+		<string>config/notifications</string>
 	</array>
 	<key>actions</key>
 	<array>
