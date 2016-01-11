@@ -14,6 +14,8 @@
 #import "vconfigsettingslogout.h"
 #import "vconfigsettingsdelete.h"
 #import "vconfigprofile.h"
+#import "vconfigprofileheader.h"
+#import "vconfigprofilecel.h"
 #import "vcontact.h"
 #import "vlogin.h"
 #import "vlogincel.h"

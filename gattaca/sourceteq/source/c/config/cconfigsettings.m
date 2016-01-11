@@ -5,7 +5,6 @@
 -(instancetype)init:(mconfigsettings*)model
 {
     self = [super init];
-    [self setTitle:NSLocalizedString(@"config_settings_title", nil)];
     
     self.model = model;
     
@@ -31,6 +30,7 @@
 {
     [super viewDidLoad];
     
+    [self setTitle:NSLocalizedString(@"config_settings_title", nil)];
     [[analytics singleton] trackscreen:ga_screen_config_settings];
 }
 
