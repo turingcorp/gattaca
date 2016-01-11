@@ -15,4 +15,9 @@
     return @"logout";
 }
 
+-(NSString*)title
+{
+    return NSLocalizedString(@"config_settings_logout_title", nil);
+}
+
 @end

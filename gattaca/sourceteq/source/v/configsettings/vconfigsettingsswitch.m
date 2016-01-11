@@ -11,14 +11,14 @@
     UILabel *strongtitle = [[UILabel alloc] init];
     [strongtitle setBackgroundColor:[UIColor clearColor]];
     [strongtitle setUserInteractionEnabled:NO];
-    [strongtitle setFont:[UIFont fontWithName:fontname size:18]];
-    [strongtitle setTextColor:[UIColor colorWithWhite:0 alpha:0.7]];
+    [strongtitle setFont:[UIFont fontWithName:fontname size:17]];
+    [strongtitle setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
     [strongtitle setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.title = strongtitle;
     
     UISwitch *strongsw = [[UISwitch alloc] init];
     [strongsw setOnTintColor:colormain];
-    [strongsw setTintColor:[UIColor colorWithWhite:0.85 alpha:1]];
+    [strongsw setTintColor:[UIColor colorWithWhite:0.9 alpha:1]];
     [strongsw setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.sw = strongsw;
     
@@ -41,7 +41,8 @@
 
 -(void)config:(id<mconfigsettingsprotocol>)item
 {
-    [self.title setText:[item ]];
+    [self.title setText:[item title]];
+    [self.sw setOn:[item value] animated:NO];
 }
 
 @end

@@ -15,4 +15,9 @@
     return @"delete";
 }
 
+-(NSString*)title
+{
+    return NSLocalizedString(@"config_settings_delete_title", nil);
+}
+
 @end

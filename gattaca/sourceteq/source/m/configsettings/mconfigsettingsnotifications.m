@@ -17,13 +17,11 @@
 
 -(NSString*)title
 {
-    return NSLocalizedString(@"", nil);
+    return NSLocalizedString(@"config_settings_notifications_title", nil);
 }
 
 -(BOOL)value
 {
-#warning "needs revision"
-    
     return YES;
 }
 

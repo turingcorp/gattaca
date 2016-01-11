@@ -11,6 +11,10 @@
 
 "config_settings_header_title"="Gattaca";
 "config_settings_header_version"="Version %@";
+"config_settings_notifications_title"="Notifications";
+"config_settings_review_title"="Review in the App Store";
+"config_settings_logout_title"="Logout";
+"config_settings_delete_title"="Delete account";
 
 "alert_accept"="Accept";
 
