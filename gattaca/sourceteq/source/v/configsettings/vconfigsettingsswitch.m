@@ -23,7 +23,7 @@
     [self addSubview:strongtitle];
     [self addSubview:strongsw];
     
-    NSDictionary *views = @{};
+    NSDictionary *views = @{@"title":strongtitle, @"sw":strongsw};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"" options:0 metrics:metrics views:views]];
