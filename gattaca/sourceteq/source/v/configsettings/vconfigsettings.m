@@ -14,21 +14,22 @@
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
     [flow setSectionInset:UIEdgeInsetsMake(10, 0, menuheight + 20, 0)];
     
-    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
-    [collection setClipsToBounds:YES];
-    [collection setBackgroundColor:[UIColor clearColor]];
-    [collection setAlwaysBounceVertical:YES];
-    [collection setShowsHorizontalScrollIndicator:NO];
-    [collection setShowsVerticalScrollIndicator:NO];
-    [collection setDelegate:self];
-    [collection setDataSource:self];
-    [collection registerClass:[vconfigsettingsheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
-    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [controller.model registercels:collection];
+    UICollectionView *strongcollection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [strongcollection setClipsToBounds:YES];
+    [strongcollection setBackgroundColor:[UIColor clearColor]];
+    [strongcollection setAlwaysBounceVertical:YES];
+    [strongcollection setShowsHorizontalScrollIndicator:NO];
+    [strongcollection setShowsVerticalScrollIndicator:NO];
+    [strongcollection setDelegate:self];
+    [strongcollection setDataSource:self];
+    [strongcollection registerClass:[vconfigsettingsheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
+    [strongcollection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [controller.model registercels:strongcollection];
     
-    [self addSubview:collection];
+    self.collection = strongcollection;
+    [self addSubview:strongcollection];
     
-    NSDictionary *views = @{@"col":collection};
+    NSDictionary *views = @{@"col":strongcollection};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];

@@ -25,6 +25,7 @@
     [cancel setTitle:NSLocalizedString(@"config_settings_delete_cancel", nil) forState:UIControlStateNormal];
     [cancel.layer setCornerRadius:3];
     [cancel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [cancel addTarget:controller action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *delete = [[UIButton alloc] init];
     [delete setBackgroundColor:[UIColor colorWithRed:1 green:0 blue:0 alpha:0.8]];
@@ -33,6 +34,7 @@
     [delete setTitle:NSLocalizedString(@"config_settings_delete_delete", nil) forState:UIControlStateNormal];
     [delete.layer setCornerRadius:3];
     [delete setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [delete addTarget:controller action:@selector(deleteaccount) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:blur];
     [self addSubview:descr];
