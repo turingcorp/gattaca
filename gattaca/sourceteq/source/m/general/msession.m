@@ -48,6 +48,8 @@
 -(void)loaduser
 {
     self.userid = [FBSDKAccessToken currentAccessToken].userID;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:notmenuchanged object:nil];
 }
 
 @end

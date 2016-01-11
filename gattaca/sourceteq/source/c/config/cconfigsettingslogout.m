@@ -71,6 +71,7 @@
                    ^(void)
                    {
                        [self cancel];
+                       [clogin asklogin:YES];
                    });
 }
 

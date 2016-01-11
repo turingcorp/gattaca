@@ -19,6 +19,7 @@
     self = [super init];
     [self setClipsToBounds:YES];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self setAlpha:0];
     
     self.sections = [msection menu];
     vblur *blur = [vblur light];
