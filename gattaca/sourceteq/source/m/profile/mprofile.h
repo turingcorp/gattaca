@@ -2,7 +2,4 @@
 
 @interface mprofile:NSObject
 
-+(instancetype)singleton;
--(BOOL)completed;
-
 @end
