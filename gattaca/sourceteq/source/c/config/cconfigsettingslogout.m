@@ -25,4 +25,11 @@
     self.view = [[vconfigsettingslogout alloc] init];
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [[analytics singleton] trackscreen:ga_screen_logout];
+}
+
 @end

@@ -23,6 +23,13 @@
     self.view = [[vlogin alloc] init:self];
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [[analytics singleton] trackscreen:ga_screen_login];
+}
+
 #pragma mark functionality
 
 -(void)logincomplete

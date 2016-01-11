@@ -22,7 +22,7 @@
 
 -(void)change
 {
-    
+    [cconfigsettingslogout askconfirmation];
 }
 
 @end

@@ -14,12 +14,16 @@ typedef NS_ENUM(NSInteger, appsection)
 
 typedef NS_ENUM(NSInteger, ga_screen)
 {
-    ga_screen_login
+    ga_screen_login,
+    ga_screen_logout,
+    ga_screen_delete
 };
 
 typedef NS_ENUM(NSInteger, ga_event)
 {
     ga_event_login,
+    ga_event_logout,
+    ga_event_delete,
     ga_event_apprate
 };
 

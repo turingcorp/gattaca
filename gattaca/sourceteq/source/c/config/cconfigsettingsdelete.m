@@ -25,4 +25,11 @@
     self.view = [[vconfigsettingsdelete alloc] init];
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [[analytics singleton] trackscreen:ga_screen_delete];
+}
+
 @end

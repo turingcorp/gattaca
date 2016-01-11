@@ -22,7 +22,7 @@
 
 -(void)change
 {
-    
+    [cconfigsettingsdelete askconfirmation];
 }
 
 @end
