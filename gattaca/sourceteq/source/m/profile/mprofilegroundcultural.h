@@ -1,13 +1,6 @@
-//
-//  mprofilegroundcultural.h
-//  gattaca
-//
-//  Created by zero on 1/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mprofilegroundprotocol.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mprofilegroundcultural : NSObject
+@interface mprofilegroundcultural:NSObject<mprofilegroundprotocol>
 
 @end

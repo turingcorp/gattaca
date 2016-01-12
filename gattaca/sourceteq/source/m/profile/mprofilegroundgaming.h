@@ -1,13 +1,6 @@
-//
-//  mprofilegroundgaming.h
-//  gattaca
-//
-//  Created by zero on 1/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mprofilegroundprotocol.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mprofilegroundgaming : NSObject
+@interface mprofilegroundgaming:NSObject<mprofilegroundprotocol>
 
 @end

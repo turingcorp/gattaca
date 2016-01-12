@@ -1,13 +1,6 @@
-//
-//  mprofilelikesport.h
-//  gattaca
-//
-//  Created by zero on 1/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mprofilelikeprotocol.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mprofilelikesport : NSObject
+@interface mprofilelikesport:NSObject<mprofilelikeprotocol>
 
 @end
