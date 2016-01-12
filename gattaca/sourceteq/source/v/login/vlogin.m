@@ -60,7 +60,7 @@
     
     FBSDKLoginButton *btnlogin = [[FBSDKLoginButton alloc] init];
     [btnlogin setTranslatesAutoresizingMaskIntoConstraints:NO];
-    btnlogin.readPermissions = @[@"public_profile"];
+    btnlogin.readPermissions = @[@"public_profile", @"user_about_me"];
     [btnlogin setDelegate:controller];
     
     UILabel *disclaimer = [[UILabel alloc] init];

@@ -52,6 +52,7 @@
     if(self.userid)
     {
         [[mmyprofile singleton] loaduser];
+        [self updateprofile];
     }
     
     [[NSNotificationCenter defaultCenter] postNotificationName:notmenuchanged object:nil];
@@ -89,8 +90,6 @@
 {
     return name && name.length > 1;
 }
-
-#pragma mark public
 
 -(void)updateprofile
 {
@@ -162,5 +161,7 @@
         [[mmyprofile singleton] changenameto:newtype name:updatename];
     }
 }
+
+#pragma mark public
 
 @end

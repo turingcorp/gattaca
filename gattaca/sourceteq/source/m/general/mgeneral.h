@@ -46,6 +46,12 @@ typedef NS_ENUM(NSInteger, ga_action)
 
 // profile
 
+typedef NS_ENUM(NSInteger, profile_gender)
+{
+    profile_gender_male,
+    profile_gender_female
+};
+
 typedef NS_ENUM(NSInteger, profile_name)
 {
     profile_name_firstname,
