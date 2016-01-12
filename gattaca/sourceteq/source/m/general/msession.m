@@ -51,12 +51,43 @@
     
     if(self.userid)
     {
-        self.firstname = [FBSDKProfile currentProfile].firstName;
-        self.lastname = [FBSDKProfile currentProfile].lastName;
-        self.
+        [[mmyprofile singleton] loaduser];
     }
     
     [[NSNotificationCenter defaultCenter] postNotificationName:notmenuchanged object:nil];
+}
+
+#pragma mark public
+
+-(void)updateprofile
+{
+    NSString *updatename;
+    
+    switch([mmyprofile singleton].nametype)
+    {
+        case profile_name_firstname:
+            
+            updatename = [FBSDKProfile currentProfile].firstName;
+            
+            break;
+            
+        case profile_name_middelname:
+            
+            updatename = [FBSDKProfile currentProfile].middleName;
+            
+            break;
+            
+        case profile_name_lastname:
+            
+            updatename = [FBSDKProfile currentProfile].lastName;
+            
+            break;
+    }
+    
+    if(updatename && updatename.length > 1)
+    {
+        
+    }
 }
 
 @end

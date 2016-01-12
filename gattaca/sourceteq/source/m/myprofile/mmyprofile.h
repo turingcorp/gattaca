@@ -4,6 +4,8 @@
 
 +(instancetype)singleton;
 -(void)loaduser;
+-(void)updatename:(NSString*)newname;
+-(void)changenameto:(profile_name)nametype name:(NSString*)newname;
 
 @property(copy, nonatomic)NSString *namestr;
 @property(nonatomic)profile_name nametype;
