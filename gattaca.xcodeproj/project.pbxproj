@@ -97,6 +97,7 @@
 		DA7AB9731C447DB80058756C /* mprofilegroundgaming.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9721C447DB80058756C /* mprofilegroundgaming.m */; };
 		DA7AB9761C447DDD0058756C /* mprofilegroundpartying.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9751C447DDD0058756C /* mprofilegroundpartying.m */; };
 		DA7AB9781C448C730058756C /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7AB9771C448C730058756C /* libdb.a */; };
+		DA7AB97D1C4492B50058756C /* gattaca.db in Resources */ = {isa = PBXBuildFile; fileRef = DA7AB97C1C4492B50058756C /* gattaca.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -281,6 +282,7 @@
 		DA7AB9751C447DDD0058756C /* mprofilegroundpartying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilegroundpartying.m; sourceTree = "<group>"; };
 		DA7AB9771C448C730058756C /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DA7AB97A1C448C8C0058756C /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
+		DA7AB97C1C4492B50058756C /* gattaca.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gattaca.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -648,6 +650,7 @@
 		DA4A74101C3D95E00092A405 /* gattaca */ = {
 			isa = PBXGroup;
 			children = (
+				DA7AB97B1C4492B50058756C /* db */,
 				DA4A74281C3D9B240092A405 /* imateq */,
 				DA4A742B1C3D9B240092A405 /* langteq */,
 				DA4A74301C3D9B240092A405 /* sourceteq */,
@@ -811,6 +814,14 @@
 			path = db;
 			sourceTree = "<group>";
 		};
+		DA7AB97B1C4492B50058756C /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB97C1C4492B50058756C /* gattaca.db */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -888,6 +899,7 @@
 				DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */,
 				DA322A3F1C40C628004C6958 /* logo.png in Resources */,
 				DA2965AF1C3DD89F00BC713E /* in in Resources */,
+				DA7AB97D1C4492B50058756C /* gattaca.db in Resources */,
 				DA322A1A1C40875F004C6958 /* contact@3x.png in Resources */,
 				DA322A191C40875F004C6958 /* contact@2x.png in Resources */,
 			);
