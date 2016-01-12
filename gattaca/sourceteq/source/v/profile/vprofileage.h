@@ -1,6 +1,6 @@
 #import "appdel.h"
 #import "viewbase.h"
 
-@interface vprofileage:viewbase
+@interface vprofileage:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @end
