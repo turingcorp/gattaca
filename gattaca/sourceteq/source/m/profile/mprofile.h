@@ -1,6 +1,7 @@
 #import "appdel.h"
 
 @class mprofilelike;
+@class mprofileground;
 
 @interface mprofile:NSObject
 
