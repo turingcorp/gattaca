@@ -9,5 +9,6 @@
 @property(nonatomic)NSInteger latitude;
 @property(nonatomic)NSInteger longitude;
 @property(nonatomic)NSInteger age;
+@property(nonatomic)BOOL coordsactive;
 
 @end
