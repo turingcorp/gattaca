@@ -98,6 +98,9 @@
 		DA7AB9761C447DDD0058756C /* mprofilegroundpartying.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9751C447DDD0058756C /* mprofilegroundpartying.m */; };
 		DA7AB9781C448C730058756C /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7AB9771C448C730058756C /* libdb.a */; };
 		DA7AB97D1C4492B50058756C /* gattaca.db in Resources */ = {isa = PBXBuildFile; fileRef = DA7AB97C1C4492B50058756C /* gattaca.db */; };
+		DA7AB9811C449AF10058756C /* mdb.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9801C449AF10058756C /* mdb.m */; };
+		DA7AB9841C449AFD0058756C /* mdbcreate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9831C449AFD0058756C /* mdbcreate.m */; };
+		DA7AB9871C449B0E0058756C /* mdbclean.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9861C449B0E0058756C /* mdbclean.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -283,6 +286,12 @@
 		DA7AB9771C448C730058756C /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DA7AB97A1C448C8C0058756C /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
 		DA7AB97C1C4492B50058756C /* gattaca.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gattaca.db; sourceTree = "<group>"; };
+		DA7AB97F1C449AF10058756C /* mdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdb.h; sourceTree = "<group>"; };
+		DA7AB9801C449AF10058756C /* mdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdb.m; sourceTree = "<group>"; };
+		DA7AB9821C449AFD0058756C /* mdbcreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdbcreate.h; sourceTree = "<group>"; };
+		DA7AB9831C449AFD0058756C /* mdbcreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdbcreate.m; sourceTree = "<group>"; };
+		DA7AB9851C449B0E0058756C /* mdbclean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdbclean.h; sourceTree = "<group>"; };
+		DA7AB9861C449B0E0058756C /* mdbclean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdbclean.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2965911C3DB30600BC713E /* m.h */,
+				DA7AB97E1C449ACC0058756C /* db */,
 				DA2965931C3DB50900BC713E /* general */,
 				DA46BD231C3F4DD000472BC9 /* profile */,
 				DA7AB9431C4471340058756C /* myprofile */,
@@ -822,6 +832,19 @@
 			path = db;
 			sourceTree = "<group>";
 		};
+		DA7AB97E1C449ACC0058756C /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB97F1C449AF10058756C /* mdb.h */,
+				DA7AB9801C449AF10058756C /* mdb.m */,
+				DA7AB9821C449AFD0058756C /* mdbcreate.h */,
+				DA7AB9831C449AFD0058756C /* mdbcreate.m */,
+				DA7AB9851C449B0E0058756C /* mdbclean.h */,
+				DA7AB9861C449B0E0058756C /* mdbclean.m */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -961,10 +984,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA46BD1F1C3F487300472BC9 /* mconfigsettings.m in Sources */,
+				DA7AB9871C449B0E0058756C /* mdbclean.m in Sources */,
 				DA322A141C407683004C6958 /* vspinner.m in Sources */,
 				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
 				DA30972D1C3EB8DB00E8AFA2 /* vloginindicatorcel.m in Sources */,
 				DA46BD261C3F4DE600472BC9 /* mprofile.m in Sources */,
+				DA7AB9841C449AFD0058756C /* mdbcreate.m in Sources */,
 				DA7AB9421C446E700058756C /* vprofilecircle.m in Sources */,
 				DA3097241C3EAB5500E8AFA2 /* mloginthird.m in Sources */,
 				DA7AB9461C44714A0058756C /* mmyprofile.m in Sources */,
@@ -987,6 +1012,7 @@
 				DA7AB9351C4466B20058756C /* vconfigprofilecel.m in Sources */,
 				DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */,
 				DA7AB9281C43F31E0058756C /* vconfigsettingslogout.m in Sources */,
+				DA7AB9811C449AF10058756C /* mdb.m in Sources */,
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
 				DA7AB93F1C446E620058756C /* vprofile.m in Sources */,
