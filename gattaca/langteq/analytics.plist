@@ -20,6 +20,7 @@
 		<string>delete</string>
 		<string>application_rate</string>
 		<string>config/notifications</string>
+		<string>facebook/profile</string>
 	</array>
 	<key>actions</key>
 	<array>

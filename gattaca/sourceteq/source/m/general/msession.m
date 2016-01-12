@@ -36,6 +36,7 @@
 
 -(void)notifiedprofilechange:(NSNotification*)notification
 {
+    [self loaduser];
 }
 
 -(void)notifiedtokenchanged:(NSNotification*)notification
@@ -89,6 +90,40 @@
 -(BOOL)validname:(NSString*)name
 {
     return name && name.length > 1;
+}
+
+-(void)retrievefromfacebook
+{
+    [[analytics singleton] trackevent:ga_event_facebook_profile action:ga_action_start label:@""];
+    
+    dispatch_async(dispatch_get_main_queue(),
+                   ^(void)
+                   {
+                       [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields":@"gender"}] startWithCompletionHandler:
+                        ^(FBSDKGraphRequestConnection *connection, id result, NSError *error)
+                        {
+                            if(error)
+                            {
+                                NSString *errordescription = error.localizedDescription;
+                                [[analytics singleton] trackevent:ga_event_facebook_profile action:ga_action_error label:errordescription];
+                                
+                                NSLog(@"%@", errordescription);
+                            }
+                            else
+                            {
+                                profile_gender prof_gender = profile_gender_female;
+                                NSString *gender = [result[@"gender"] lowercaseString];
+                                [[analytics singleton] trackevent:ga_event_facebook_profile action:ga_action_done label:gender];
+                                
+                                if([gender isEqualToString:@"male"])
+                                {
+                                    prof_gender = profile_gender_male;
+                                }
+                                
+                                [[mmyprofile singleton] updategender:prof_gender];
+                            }
+                        }];
+                   });
 }
 
 -(void)updateprofile
@@ -160,8 +195,8 @@
         
         [[mmyprofile singleton] changenameto:newtype name:updatename];
     }
+    
+    [self retrievefromfacebook];
 }
-
-#pragma mark public
 
 @end

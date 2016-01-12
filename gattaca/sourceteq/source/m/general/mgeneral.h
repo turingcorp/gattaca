@@ -30,7 +30,8 @@ typedef NS_ENUM(NSInteger, ga_event)
     ga_event_logout,
     ga_event_delete,
     ga_event_apprate,
-    ga_event_config_noti
+    ga_event_config_noti,
+    ga_event_facebook_profile
 };
 
 typedef NS_ENUM(NSInteger, ga_action)
