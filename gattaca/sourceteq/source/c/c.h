@@ -1,4 +1,5 @@
 #import "cmain.h"
+#import "cloading.h"
 #import "cbrowse.h"
 #import "cconfig.h"
 #import "cconfigmain.h"

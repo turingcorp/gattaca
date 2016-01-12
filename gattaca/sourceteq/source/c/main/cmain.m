@@ -14,15 +14,7 @@
 -(instancetype)init
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-
-    if([msession singleton].userid)
-    {
-        [self opensection:[msection browse] animated:NO];
-    }
-    else
-    {
-        [clogin asklogin:NO];
-    }
+    [self setViewControllers:@[[[cloading alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     return self;
 }

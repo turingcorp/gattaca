@@ -1,5 +1,8 @@
 #import "mgeneral.h"
 #import "msession.h"
+#import "mdb.h"
+#import "mdbcreate.h"
+#import "mdbclean.h"
 #import "msection.h"
 #import "msectionprotocol.h"
 #import "msectionconfig.h"

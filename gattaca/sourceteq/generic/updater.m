@@ -6,7 +6,7 @@ NSString *documents;
 
 +(void)launch
 {
-    [updater update];
+    //[updater update];
 }
 
 #pragma mark private
@@ -27,7 +27,11 @@ NSString *documents;
         {
             [updater firsttime:defaults];
         }
+        
+        [mdb updatedb];
     }
+    
+    dbname = [documents stringByAppendingPathComponent:[properties valueForKey:@"dbname"]];
 }
 
 +(void)firsttime:(NSDictionary*)_plist
@@ -44,6 +48,8 @@ NSString *documents;
     [userdef setValue:[[NSUUID UUID] UUIDString] forKey:@"uuid"];
     [userdef setValue:dictionary forKey:@"settings"];
     [userdef synchronize];
+    
+    [mdb firsttime];
 }
 
 @end

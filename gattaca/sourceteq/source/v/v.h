@@ -1,3 +1,4 @@
+#import "vloading.h"
 #import "vmenu.h"
 #import "vmenucel.h"
 #import "vblur.h"
