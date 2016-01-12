@@ -25,15 +25,16 @@
 
 -(void)firsttime
 {
-    self.age = 50;
+    self.age = 21;
+    self.gender = profile_gender_female;
     self.nametype = profile_name_firstname;
     self.namestr = NSLocalizedString(@"profile_default_user", nil);
     
     NSInteger now = [NSDate date].timeIntervalSince1970;
     NSString *query = [NSString stringWithFormat:
-                       @"INSERT INTO profile (created, syncstamp, updated, name, namestr, age) "
-                       "VALUES(%@, 0, %@, %@, \"%@\", %@);",
-                       @(now), @(now), @(self.nametype), self.namestr, @(self.age)];
+                       @"INSERT INTO profile (created, syncstamp, updated, name, namestr, age, gender) "
+                       "VALUES(%@, 0, %@, %@, \"%@\", %@, %@);",
+                       @(now), @(now), @(self.nametype), self.namestr, @(self.age), @(self.gender)];
     
     [db query:query];
 }
@@ -42,8 +43,8 @@
 {
     NSInteger now = [NSDate date].timeIntervalSince1970;
     NSString *query = [NSString stringWithFormat:
-                       @"UPDATE profile set updated=%@, name=%@, namestr=\"%@\", age=%@",
-                       @(now), @(self.nametype), self.namestr, @(self.age)];
+                       @"UPDATE profile set updated=%@, name=%@, namestr=\"%@\", age=%@, gender=%@",
+                       @(now), @(self.nametype), self.namestr, @(self.age), @(self.gender)];
     
     [db query:query];
 }
@@ -52,7 +53,7 @@
 
 -(void)loaduser
 {
-    NSString *query = @"SELECT name, namestr, age FROM profile limit 1;";
+    NSString *query = @"SELECT name, namestr, age, gender FROM profile limit 1;";
     NSDictionary *rawuser = [db row:query];
     
     if(rawuser)
@@ -60,6 +61,7 @@
         self.nametype = (profile_name)[rawuser[@"name"] integerValue];
         self.namestr = rawuser[@"namestr"];
         self.age = [rawuser[@"age"] integerValue];
+        self.gender = (profile_gender)[rawuser[@"gender"] integerValue];
     }
     else
     {
@@ -78,6 +80,20 @@
 {
     self.nametype = nametype;
     self.namestr = newname;
+    
+    [self saveuser];
+}
+
+-(void)updategender:(profile_gender)newgender
+{
+    self.gender = newgender;
+    
+    [self saveuser];
+}
+
+-(void)updateage:(NSInteger)newage
+{
+    self.age = newage;
     
     [self saveuser];
 }
