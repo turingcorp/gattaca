@@ -7,6 +7,7 @@
 #import "cconfigsettingslogout.h"
 #import "cconfigsettingsdelete.h"
 #import "cprofile.h"
+#import "cprofileage.h"
 #import "ccontact.h"
 #import "clogin.h"
 #import "calert.h"
