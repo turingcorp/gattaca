@@ -1,13 +1,13 @@
-//
-//  mmyprofile.h
-//  gattaca
-//
-//  Created by zero on 1/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface mmyprofile:NSObject
 
-@interface mmyprofile : NSObject
++(instancetype)singleton;
+
+@property(copy, nonatomic)NSString *namestr;
+@property(nonatomic)profile_name nametype;
+@property(nonatomic)NSInteger latitude;
+@property(nonatomic)NSInteger longitude;
+@property(nonatomic)NSInteger age;
 
 @end
