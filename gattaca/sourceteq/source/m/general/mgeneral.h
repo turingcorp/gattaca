@@ -46,10 +46,18 @@ typedef NS_ENUM(NSInteger, ga_action)
 
 // profile
 
-typedef NS_ENUM(NSInteger, profile_metric)
+typedef NS_ENUM(NSInteger, profile_like)
 {
-    profile_metric_science,
-    profile_metric_art,
-    profile_metric_sport,
-    profile_metric_social
+    profile_like_science,
+    profile_like_art,
+    profile_like_sport,
+    profile_like_social
+};
+
+typedef NS_ENUM(NSInteger, profile_ground)
+{
+    profile_ground_cultural,
+    profile_ground_gaming,
+    profile_ground_entertainment,
+    profile_ground_partying
 };
