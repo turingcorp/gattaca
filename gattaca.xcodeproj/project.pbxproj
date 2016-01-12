@@ -96,6 +96,7 @@
 		DA7AB9701C447DA40058756C /* mprofilegroundenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB96F1C447DA40058756C /* mprofilegroundenter.m */; };
 		DA7AB9731C447DB80058756C /* mprofilegroundgaming.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9721C447DB80058756C /* mprofilegroundgaming.m */; };
 		DA7AB9761C447DDD0058756C /* mprofilegroundpartying.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9751C447DDD0058756C /* mprofilegroundpartying.m */; };
+		DA7AB9781C448C730058756C /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7AB9771C448C730058756C /* libdb.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -278,6 +279,8 @@
 		DA7AB9721C447DB80058756C /* mprofilegroundgaming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilegroundgaming.m; sourceTree = "<group>"; };
 		DA7AB9741C447DDD0058756C /* mprofilegroundpartying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilegroundpartying.h; sourceTree = "<group>"; };
 		DA7AB9751C447DDD0058756C /* mprofilegroundpartying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilegroundpartying.m; sourceTree = "<group>"; };
+		DA7AB9771C448C730058756C /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
+		DA7AB97A1C448C8C0058756C /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +288,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7AB9781C448C730058756C /* libdb.a in Frameworks */,
 				DA4A74531C3D9B240092A405 /* libtimerbg.a in Frameworks */,
 				D2233BBF0363DC0A31972538 /* libPods-gattaca.a in Frameworks */,
 			);
@@ -693,6 +697,7 @@
 		DA4A74301C3D9B240092A405 /* sourceteq */ = {
 			isa = PBXGroup;
 			children = (
+				DA7AB9771C448C730058756C /* libdb.a */,
 				DA4A74311C3D9B240092A405 /* core */,
 				DA4A74361C3D9B240092A405 /* generic */,
 				DA4A743E1C3D9B240092A405 /* lib */,
@@ -732,6 +737,7 @@
 		DA4A743E1C3D9B240092A405 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				DA7AB9791C448C8C0058756C /* db */,
 				DA4A743F1C3D9B240092A405 /* timerbg */,
 			);
 			path = lib;
@@ -795,6 +801,14 @@
 				DA7AB9451C44714A0058756C /* mmyprofile.m */,
 			);
 			path = myprofile;
+			sourceTree = "<group>";
+		};
+		DA7AB9791C448C8C0058756C /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB97A1C448C8C0058756C /* db.h */,
+			);
+			path = db;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
