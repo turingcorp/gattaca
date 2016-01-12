@@ -1,13 +1,13 @@
 //
-//  mprofileage.m
+//  mmyprofileages.m
 //  gattaca
 //
 //  Created by zero on 1/12/16.
 //  Copyright © 2016 Iturbide. All rights reserved.
 //
 
-#import "mprofileage.h"
+#import "mmyprofileages.h"
 
-@implementation mprofileage
+@implementation mmyprofileages
 
 @end

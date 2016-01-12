@@ -1,5 +1,5 @@
 //
-//  mprofileage.h
+//  mmyprofileage.h
 //  gattaca
 //
 //  Created by zero on 1/12/16.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface mprofileage : NSObject
+@interface mmyprofileage : NSObject
 
 @end
