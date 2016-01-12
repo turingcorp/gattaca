@@ -40,7 +40,12 @@
 
 -(void)saveuser
 {
+    NSInteger now = [NSDate date].timeIntervalSince1970;
+    NSString *query = [NSString stringWithFormat:
+                       @"UPDATE profile set updated=%@, name=%@, namestr=\"%@\", age=%@",
+                       @(now), @(self.nametype), self.namestr, @(self.age)];
     
+    [db query:query];
 }
 
 #pragma mark public
@@ -65,12 +70,16 @@
 -(void)updatename:(NSString*)newname
 {
     self.namestr = newname;
+    
+    [self saveuser];
 }
 
 -(void)changenameto:(profile_name)nametype name:(NSString*)newname;
 {
     self.nametype = nametype;
     self.namestr = newname;
+    
+    [self saveuser];
 }
 
 @end

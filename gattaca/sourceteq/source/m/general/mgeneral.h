@@ -49,7 +49,7 @@ typedef NS_ENUM(NSInteger, ga_action)
 typedef NS_ENUM(NSInteger, profile_name)
 {
     profile_name_firstname,
-    profile_name_middelname,
+    profile_name_middlename,
     profile_name_lastname
 };
 

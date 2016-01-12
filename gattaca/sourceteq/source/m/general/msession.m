@@ -57,36 +57,57 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:notmenuchanged object:nil];
 }
 
-#pragma mark public
-
--(void)updateprofile
+-(NSString*)namefortype:(profile_name)nametype
 {
-    NSString *updatename;
+    NSString *name;
     
-    switch([mmyprofile singleton].nametype)
+    switch(nametype)
     {
         case profile_name_firstname:
             
-            updatename = [FBSDKProfile currentProfile].firstName;
+            name = [FBSDKProfile currentProfile].firstName;
             
             break;
             
-        case profile_name_middelname:
+        case profile_name_middlename:
             
-            updatename = [FBSDKProfile currentProfile].middleName;
+            name = [FBSDKProfile currentProfile].middleName;
             
             break;
             
         case profile_name_lastname:
             
-            updatename = [FBSDKProfile currentProfile].lastName;
+            name = [FBSDKProfile currentProfile].lastName;
             
             break;
     }
     
-    if(updatename && updatename.length > 1)
+    return name;
+}
+
+-(BOOL)validname:(NSString*)name
+{
+    return name && name.length > 1;
+}
+
+#pragma mark public
+
+-(void)updateprofile
+{
+    NSString *updatename = [self namefortype:[mmyprofile singleton].nametype];
+    
+    if(![self validname:updatename])
     {
+        profile_name newtype;
         
+        if([mmyprofile singleton].nametype == profile_name_firstname)
+        {
+            newtype = profile_name_lastname;
+            updatename = [self namefortype:newtype];
+            
+            if(!updatename || updatename.length < 2)
+                }
+        else
     }
 }
 
