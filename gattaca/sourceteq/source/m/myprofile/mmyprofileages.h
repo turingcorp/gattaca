@@ -1,5 +1,7 @@
 #import "appdel.h"
 
+@class mmyprofileage;
+
 @interface mmyprofileages:NSObject
 
 -(NSInteger)count;

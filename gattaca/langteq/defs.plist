@@ -10,5 +10,12 @@
 	<string>sqlite</string>
 	<key>dbname</key>
 	<string>gattaca.db</string>
+	<key>profle</key>
+	<dict>
+		<key>minage</key>
+		<integer>17</integer>
+		<key>maxage</key>
+		<integer>70</integer>
+	</dict>
 </dict>
 </plist>
