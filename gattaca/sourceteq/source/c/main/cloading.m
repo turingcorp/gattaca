@@ -27,6 +27,8 @@
 {
     if([msession singleton].userid)
     {
+        [[mmyprofile singleton] loaduser];
+        
         //[self opensection:[msection browse] animated:NO];
     }
     else

@@ -23,6 +23,23 @@
 
 #pragma mark functionality
 
+-(void)firsttime
+{
+    self.age = 50;
+    self.nametype = profile_name_firstname;
+    self.namestr = NSLocalizedString(@"profile_default_user", nil);
+    
+    NSInteger now = [NSDate date].timeIntervalSince1970;
+    NSString *query = [NSString stringWithFormat:
+                       @"INSERT INTO profile (created, syncstamp, name, namestr, age) "
+                       "VALUES(%@, 0, %@, \"%@\", %@);",
+                       @(now), @(self.nametype), self.namestr, @(self.age)];
+    
+    [db query:query];
+}
+
+#pragma mark public
+
 -(void)loaduser
 {
     NSString *query = @"SELECT name, namestr, age FROM profile limit 1;";
@@ -38,21 +55,6 @@
     {
         [self firsttime];
     }
-}
-
--(void)firsttime
-{
-    self.age = 50;
-    self.nametype = profile_name_firstname;
-    self.namestr = NSLocalizedString(@"profile_default_user", nil);
-    
-    NSInteger now = [NSDate date].timeIntervalSince1970;
-    NSString *query = [NSString stringWithFormat:
-                       @"INSERT INTO profile (created, syncstamp, name, namestr, age) "
-                       "VALUES(%@, 0, %@, \"%@\", %@);",
-                       @(now), @(self.nametype), self.namestr, @(self.age)];
-    
-    [db query:query];
 }
 
 @end

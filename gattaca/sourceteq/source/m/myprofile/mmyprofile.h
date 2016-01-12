@@ -3,6 +3,7 @@
 @interface mmyprofile:NSObject
 
 +(instancetype)singleton;
+-(void)loaduser;
 
 @property(copy, nonatomic)NSString *namestr;
 @property(nonatomic)profile_name nametype;
