@@ -48,11 +48,4 @@
     [dbcon query:query];
 }
 
-+(void)savefirst:(NSString*)first middle:(NSString*)middle last:(NSString*)last
-{
-    db *dbcon = [db begin];
-    
-    [dbcon commit];
-}
-
 @end
