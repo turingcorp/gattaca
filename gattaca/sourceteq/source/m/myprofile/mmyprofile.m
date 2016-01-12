@@ -25,7 +25,7 @@
 
 -(void)firsttime
 {
-    self.age = 21;
+    self.age = 0;
     self.gender = profile_gender_female;
     self.nametype = profile_name_firstname;
     self.namestr = NSLocalizedString(@"profile_default_user", nil);
