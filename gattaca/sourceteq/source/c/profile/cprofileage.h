@@ -1,13 +1,5 @@
-//
-//  cprofileage.h
-//  gattaca
-//
-//  Created by zero on 1/12/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
-
-@interface cprofileage : NSObject
+@interface cprofileage:UIViewController
 
 @end
