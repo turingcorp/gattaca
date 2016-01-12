@@ -56,7 +56,7 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    
+    return nil;
 }
 
 @end
