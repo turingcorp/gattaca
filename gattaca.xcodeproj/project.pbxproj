@@ -86,6 +86,8 @@
 		DA7AB93F1C446E620058756C /* vprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB93E1C446E620058756C /* vprofile.m */; };
 		DA7AB9421C446E700058756C /* vprofilecircle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9411C446E700058756C /* vprofilecircle.m */; };
 		DA7AB9461C44714A0058756C /* mmyprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9451C44714A0058756C /* mmyprofile.m */; };
+		DA7AB9591C447C830058756C /* mprofilelike.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9581C447C830058756C /* mprofilelike.m */; };
+		DA7AB95C1C447C920058756C /* mprofileground.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB95B1C447C920058756C /* mprofileground.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -246,6 +248,10 @@
 		DA7AB9411C446E700058756C /* vprofilecircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilecircle.m; sourceTree = "<group>"; };
 		DA7AB9441C44714A0058756C /* mmyprofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmyprofile.h; sourceTree = "<group>"; };
 		DA7AB9451C44714A0058756C /* mmyprofile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mmyprofile.m; sourceTree = "<group>"; };
+		DA7AB9571C447C830058756C /* mprofilelike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilelike.h; sourceTree = "<group>"; };
+		DA7AB9581C447C830058756C /* mprofilelike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilelike.m; sourceTree = "<group>"; };
+		DA7AB95A1C447C920058756C /* mprofileground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofileground.h; sourceTree = "<group>"; };
+		DA7AB95B1C447C920058756C /* mprofileground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofileground.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,6 +571,10 @@
 			children = (
 				DA46BD241C3F4DE600472BC9 /* mprofile.h */,
 				DA46BD251C3F4DE600472BC9 /* mprofile.m */,
+				DA7AB9571C447C830058756C /* mprofilelike.h */,
+				DA7AB9581C447C830058756C /* mprofilelike.m */,
+				DA7AB95A1C447C920058756C /* mprofileground.h */,
+				DA7AB95B1C447C920058756C /* mprofileground.m */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -896,7 +906,9 @@
 				DA2965A91C3DC74600BC713E /* ccontact.m in Sources */,
 				DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */,
 				DA7AB91F1C43F17F0058756C /* cconfigsettingsdelete.m in Sources */,
+				DA7AB9591C447C830058756C /* mprofilelike.m in Sources */,
 				DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */,
+				DA7AB95C1C447C920058756C /* mprofileground.m in Sources */,
 				DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */,
 				DA2965EA1C3DF2FF00BC713E /* msectioncontact.m in Sources */,
 				DA322A201C40A348004C6958 /* cconfigsettings.m in Sources */,

@@ -6,8 +6,6 @@
 {
     self = [super init];
     
-    self.metrics = [[mprofilemetrics alloc] init];
-    
     return self;
 }
 
