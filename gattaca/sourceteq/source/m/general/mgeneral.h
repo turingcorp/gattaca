@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, ga_screen)
     ga_screen_config,
     ga_screen_config_settings,
     ga_screen_profile,
+    ga_screen_profile_age,
     ga_screen_contact
 };
 

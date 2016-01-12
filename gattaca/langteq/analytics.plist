@@ -11,6 +11,7 @@
 		<string>config</string>
 		<string>config/settings</string>
 		<string>profile</string>
+		<string>profile/age</string>
 		<string>contact</string>
 	</array>
 	<key>events</key>

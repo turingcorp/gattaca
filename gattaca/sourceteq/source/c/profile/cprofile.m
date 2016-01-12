@@ -16,4 +16,14 @@
     self.view = [[vconfigprofile alloc] init:self];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
 @end
