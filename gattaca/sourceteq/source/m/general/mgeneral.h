@@ -46,6 +46,13 @@ typedef NS_ENUM(NSInteger, ga_action)
 
 // profile
 
+typedef NS_ENUM(NSInteger, profile_name)
+{
+    profile_name_firstname,
+    profile_name_middelname,
+    profile_name_lastname
+};
+
 typedef NS_ENUM(NSInteger, profile_like)
 {
     profile_like_science,
