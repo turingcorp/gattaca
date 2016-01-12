@@ -38,11 +38,13 @@
 {
     if(self.isSelected || self.isHighlighted)
     {
-        
+        [self setBackgroundColor:colormain];
+        [self.lbl setTextColor:[UIColor whiteColor]];
     }
     else
     {
-        
+        [self setBackgroundColor:[UIColor clearColor]];
+        [self.lbl setTextColor:[UIColor colorWithWhite:0.4 alpha:1]];
     }
 }
 
@@ -50,6 +52,7 @@
 
 -(void)config:(mmyprofileage*)age
 {
+    [self.lbl setText:age.valuestr];
     [self hover];
 }
 

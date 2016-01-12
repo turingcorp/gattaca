@@ -7,6 +7,7 @@
     self = [super init];
     
     self.value = age;
+    self.valuestr = [NSString stringWithFormat:@"%@", @(age)];
     
     return self;
 }
