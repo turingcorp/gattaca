@@ -31,11 +31,16 @@
     
     NSInteger now = [NSDate date].timeIntervalSince1970;
     NSString *query = [NSString stringWithFormat:
-                       @"INSERT INTO profile (created, syncstamp, name, namestr, age) "
-                       "VALUES(%@, 0, %@, \"%@\", %@);",
-                       @(now), @(self.nametype), self.namestr, @(self.age)];
+                       @"INSERT INTO profile (created, syncstamp, updated, name, namestr, age) "
+                       "VALUES(%@, 0, %@, %@, \"%@\", %@);",
+                       @(now), @(now), @(self.nametype), self.namestr, @(self.age)];
     
     [db query:query];
+}
+
+-(void)saveuser
+{
+    
 }
 
 #pragma mark public
@@ -55,6 +60,17 @@
     {
         [self firsttime];
     }
+}
+
+-(void)updatename:(NSString*)newname
+{
+    self.namestr = newname;
+}
+
+-(void)changenameto:(profile_name)nametype name:(NSString*)newname;
+{
+    self.nametype = nametype;
+    self.namestr = newname;
 }
 
 @end
