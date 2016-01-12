@@ -14,6 +14,7 @@
     [userdef setValue:relative forKey:@"dbname"];
     
     NSString *originaldb = [[NSBundle mainBundle] pathForResource:defdbname ofType:@""];
+    dbname = [documents stringByAppendingPathComponent:relative];
     [mdirs createdir:[NSURL fileURLWithPath:dbfolder]];
     [mdirs copyfilefrom:originaldb to:dbname];
 }
