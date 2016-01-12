@@ -252,6 +252,8 @@
 		DA7AB9581C447C830058756C /* mprofilelike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilelike.m; sourceTree = "<group>"; };
 		DA7AB95A1C447C920058756C /* mprofileground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofileground.h; sourceTree = "<group>"; };
 		DA7AB95B1C447C920058756C /* mprofileground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofileground.m; sourceTree = "<group>"; };
+		DA7AB95D1C447CD30058756C /* mprofilelikeprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilelikeprotocol.h; sourceTree = "<group>"; };
+		DA7AB95E1C447CDF0058756C /* mprofilegroundprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilegroundprotocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -575,6 +577,8 @@
 				DA7AB9581C447C830058756C /* mprofilelike.m */,
 				DA7AB95A1C447C920058756C /* mprofileground.h */,
 				DA7AB95B1C447C920058756C /* mprofileground.m */,
+				DA7AB95D1C447CD30058756C /* mprofilelikeprotocol.h */,
+				DA7AB95E1C447CDF0058756C /* mprofilegroundprotocol.h */,
 			);
 			path = profile;
 			sourceTree = "<group>";
