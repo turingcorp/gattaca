@@ -613,10 +613,10 @@
 				DA7AB9691C447D750058756C /* mprofilelikesocial.m */,
 				DA7AB96B1C447D8A0058756C /* mprofilegroundcultural.h */,
 				DA7AB96C1C447D8A0058756C /* mprofilegroundcultural.m */,
-				DA7AB96E1C447DA40058756C /* mprofilegroundenter.h */,
-				DA7AB96F1C447DA40058756C /* mprofilegroundenter.m */,
 				DA7AB9711C447DB80058756C /* mprofilegroundgaming.h */,
 				DA7AB9721C447DB80058756C /* mprofilegroundgaming.m */,
+				DA7AB96E1C447DA40058756C /* mprofilegroundenter.h */,
+				DA7AB96F1C447DA40058756C /* mprofilegroundenter.m */,
 				DA7AB9741C447DDD0058756C /* mprofilegroundpartying.h */,
 				DA7AB9751C447DDD0058756C /* mprofilegroundpartying.m */,
 			);
