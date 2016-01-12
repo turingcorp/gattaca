@@ -17,6 +17,8 @@
     dbname = [documents stringByAppendingPathComponent:relative];
     [mdirs createdir:[NSURL fileURLWithPath:dbfolder]];
     [mdirs copyfilefrom:originaldb to:dbname];
+    
+    [mdbcreate create];
 }
 
 @end

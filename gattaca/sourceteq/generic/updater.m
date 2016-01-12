@@ -10,6 +10,7 @@ NSString *documents;
                    ^(void)
                    {
                        [updater update];
+                       [[analytics singleton] start];
                        [[NSNotificationCenter defaultCenter] postNotificationName:notloadfinish object:nil];
                    });
 }
