@@ -7,7 +7,7 @@
 
 -(UIViewController*)controller
 {
-    return [[cconfigprofile alloc] init];
+    return [[cprofile alloc] init];
 }
 
 -(NSString*)title

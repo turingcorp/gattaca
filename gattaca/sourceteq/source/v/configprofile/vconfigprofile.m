@@ -2,7 +2,7 @@
 
 @implementation vconfigprofile
 
--(instancetype)init:(cconfigprofile*)controller
+-(instancetype)init:(cprofile*)controller
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];

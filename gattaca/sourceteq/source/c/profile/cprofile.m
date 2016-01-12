@@ -1,6 +1,6 @@
-#import "cconfigprofile.h"
+#import "cprofile.h"
 
-@implementation cconfigprofile
+@implementation cprofile
 
 -(void)viewDidLoad
 {
