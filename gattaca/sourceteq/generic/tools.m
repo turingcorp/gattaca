@@ -24,7 +24,7 @@
 
 +(NSDictionary*)defaultdict
 {
-    return [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"defs" ofType:@"plist"]];
+    return [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"defs" withExtension:@"plist"]];
 }
 
 +(NSInteger)timestamp
