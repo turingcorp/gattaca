@@ -25,14 +25,14 @@
 
 -(void)notifiedloadingfinished:(NSNotification*)notification
 {
-//    if([msession singleton].userid)
-//    {
-//        [self opensection:[msection browse] animated:NO];
-//    }
-//    else
-//    {
-//        [clogin asklogin:NO];
-//    }
+    if([msession singleton].userid)
+    {
+        //[self opensection:[msection browse] animated:NO];
+    }
+    else
+    {
+        [clogin asklogin:NO];
+    }
 }
 
 @end

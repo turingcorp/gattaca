@@ -103,6 +103,7 @@
 		DA7AB9871C449B0E0058756C /* mdbclean.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9861C449B0E0058756C /* mdbclean.m */; };
 		DA7AB98A1C44A3530058756C /* cloading.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9891C44A3530058756C /* cloading.m */; };
 		DA7AB98D1C44A8B00058756C /* vloading.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB98C1C44A8B00058756C /* vloading.m */; };
+		DA7AB9911C44ACB80058756C /* mdirs.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9901C44ACB80058756C /* mdirs.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -298,6 +299,8 @@
 		DA7AB9891C44A3530058756C /* cloading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cloading.m; sourceTree = "<group>"; };
 		DA7AB98B1C44A8B00058756C /* vloading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vloading.h; sourceTree = "<group>"; };
 		DA7AB98C1C44A8B00058756C /* vloading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vloading.m; sourceTree = "<group>"; };
+		DA7AB98F1C44ACB80058756C /* mdirs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdirs.h; sourceTree = "<group>"; };
+		DA7AB9901C44ACB80058756C /* mdirs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdirs.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +353,7 @@
 			children = (
 				DA2965911C3DB30600BC713E /* m.h */,
 				DA2965931C3DB50900BC713E /* general */,
+				DA7AB98E1C44ACA90058756C /* dirs */,
 				DA7AB97E1C449ACC0058756C /* db */,
 				DA46BD231C3F4DD000472BC9 /* profile */,
 				DA7AB9431C4471340058756C /* myprofile */,
@@ -855,6 +859,15 @@
 			path = db;
 			sourceTree = "<group>";
 		};
+		DA7AB98E1C44ACA90058756C /* dirs */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB98F1C44ACB80058756C /* mdirs.h */,
+				DA7AB9901C44ACB80058756C /* mdirs.m */,
+			);
+			path = dirs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1030,6 +1043,7 @@
 				DA7AB9671C447D660058756C /* mprofilelikesport.m in Sources */,
 				DA322A3B1C40C2AF004C6958 /* vconfigsettingsheader.m in Sources */,
 				DA7AB9221C43F29D0058756C /* cconfigsettingslogout.m in Sources */,
+				DA7AB9911C44ACB80058756C /* mdirs.m in Sources */,
 				DA4A744F1C3D9B240092A405 /* main.m in Sources */,
 				DA46BD1B1C3F40A300472BC9 /* mconfig.m in Sources */,
 				DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */,

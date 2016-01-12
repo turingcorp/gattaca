@@ -1,5 +1,6 @@
 #import "mgeneral.h"
 #import "msession.h"
+#import "mdirs.h"
 #import "mdb.h"
 #import "mdbcreate.h"
 #import "mdbclean.h"

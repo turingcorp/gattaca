@@ -6,7 +6,12 @@ NSString *documents;
 
 +(void)launch
 {
-    //[updater update];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^(void)
+                   {
+                       [updater update];
+                       [[NSNotificationCenter defaultCenter] postNotificationName:notloadfinish object:nil];
+                   });
 }
 
 #pragma mark private
