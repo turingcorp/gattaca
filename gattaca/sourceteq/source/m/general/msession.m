@@ -96,18 +96,70 @@
 {
     NSString *updatename = [self namefortype:[mmyprofile singleton].nametype];
     
-    if(![self validname:updatename])
+    if([self validname:updatename])
+    {
+        [[mmyprofile singleton] updatename:updatename];
+    }
+    else
     {
         profile_name newtype;
         
-        if([mmyprofile singleton].nametype == profile_name_firstname)
+        switch([mmyprofile singleton].nametype)
         {
-            newtype = profile_name_lastname;
+            case profile_name_firstname:
+                
+                newtype = profile_name_middlename;
+                
+                break;
+                
+            case profile_name_middlename:
+                
+                newtype = profile_name_lastname;
+                
+                break;
+                
+            case profile_name_lastname:
+                
+                newtype = profile_name_firstname;
+                
+                break;
+        }
+        
+        updatename = [self namefortype:newtype];
+        
+        if(![self validname:updatename])
+        {
+            switch([mmyprofile singleton].nametype)
+            {
+                case profile_name_firstname:
+                    
+                    newtype = profile_name_lastname;
+                    
+                    break;
+                    
+                case profile_name_middlename:
+                    
+                    newtype = profile_name_firstname;
+                    
+                    break;
+                    
+                case profile_name_lastname:
+                    
+                    newtype = profile_name_middlename;
+                    
+                    break;
+            }
+            
             updatename = [self namefortype:newtype];
             
-            if(!updatename || updatename.length < 2)
-                }
-        else
+            if(![self validname:updatename])
+            {
+                newtype = profile_name_firstname;
+                updatename = NSLocalizedString(@"profile_default_user", nil);
+            }
+        }
+        
+        [[mmyprofile singleton] changenameto:newtype name:updatename];
     }
 }
 
