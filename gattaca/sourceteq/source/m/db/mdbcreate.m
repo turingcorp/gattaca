@@ -2,4 +2,14 @@
 
 @implementation mdbcreate
 
++(void)create
+{
+    
+}
+
++(void)firstvalues
+{
+    
+}
+
 @end

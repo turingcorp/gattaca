@@ -2,7 +2,6 @@
 
 @interface mdb:NSObject
 
-+(void)firsttime;
 +(void)updatedb;
 
 @end

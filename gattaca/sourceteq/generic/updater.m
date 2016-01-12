@@ -53,8 +53,6 @@ NSString *documents;
     [userdef setValue:[[NSUUID UUID] UUIDString] forKey:@"uuid"];
     [userdef setValue:dictionary forKey:@"settings"];
     [userdef synchronize];
-    
-    [mdb firsttime];
 }
 
 @end

@@ -2,4 +2,6 @@
 
 @interface mdbcreate:NSObject
 
++(void)create;
+
 @end
