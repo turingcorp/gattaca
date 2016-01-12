@@ -697,10 +697,10 @@
 		DA4A74301C3D9B240092A405 /* sourceteq */ = {
 			isa = PBXGroup;
 			children = (
-				DA7AB9771C448C730058756C /* libdb.a */,
 				DA4A74311C3D9B240092A405 /* core */,
 				DA4A74361C3D9B240092A405 /* generic */,
 				DA4A743E1C3D9B240092A405 /* lib */,
+				DA7AB9771C448C730058756C /* libdb.a */,
 				DA4A74411C3D9B240092A405 /* libtimerbg.a */,
 				DA4A74421C3D9B240092A405 /* private */,
 				DA4A74441C3D9B240092A405 /* source */,
