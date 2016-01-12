@@ -18,9 +18,29 @@
     return self;
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
 -(void)loadView
 {
     self.view = [[vlogin alloc] init:self];
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    NSLog(@"%@", [db rows:@"select * from profilelike"]);
+    NSLog(@"%@", [db rows:@"select * from profileground"]);
+    
+    [[analytics singleton] trackscreen:ga_screen_login];
 }
 
 #pragma mark functionality

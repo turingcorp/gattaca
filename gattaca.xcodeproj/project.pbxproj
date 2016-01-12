@@ -73,6 +73,37 @@
 		DA4A74511C3D9B240092A405 /* tools.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A743B1C3D9B240092A405 /* tools.m */; };
 		DA4A74521C3D9B240092A405 /* updater.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A743D1C3D9B240092A405 /* updater.m */; };
 		DA4A74531C3D9B240092A405 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4A74411C3D9B240092A405 /* libtimerbg.a */; };
+		DA70A9BB1C42100D0015A865 /* vconfigsettingsswitch.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9BA1C42100D0015A865 /* vconfigsettingsswitch.m */; };
+		DA70A9BE1C42101D0015A865 /* vconfigsettingsbutton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70A9BD1C42101D0015A865 /* vconfigsettingsbutton.m */; };
+		DA7AB91F1C43F17F0058756C /* cconfigsettingsdelete.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB91E1C43F17F0058756C /* cconfigsettingsdelete.m */; };
+		DA7AB9221C43F29D0058756C /* cconfigsettingslogout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9211C43F29D0058756C /* cconfigsettingslogout.m */; };
+		DA7AB9251C43F3060058756C /* vconfigsettingsdelete.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9241C43F3060058756C /* vconfigsettingsdelete.m */; };
+		DA7AB9281C43F31E0058756C /* vconfigsettingslogout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9271C43F31E0058756C /* vconfigsettingslogout.m */; };
+		DA7AB92B1C445C990058756C /* cconfigprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB92A1C445C990058756C /* cconfigprofile.m */; };
+		DA7AB92F1C44615C0058756C /* vconfigprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB92E1C44615C0058756C /* vconfigprofile.m */; };
+		DA7AB9321C44668C0058756C /* vconfigprofileheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9311C44668C0058756C /* vconfigprofileheader.m */; };
+		DA7AB9351C4466B20058756C /* vconfigprofilecel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9341C4466B20058756C /* vconfigprofilecel.m */; };
+		DA7AB93F1C446E620058756C /* vprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB93E1C446E620058756C /* vprofile.m */; };
+		DA7AB9421C446E700058756C /* vprofilecircle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9411C446E700058756C /* vprofilecircle.m */; };
+		DA7AB9461C44714A0058756C /* mmyprofile.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9451C44714A0058756C /* mmyprofile.m */; };
+		DA7AB9591C447C830058756C /* mprofilelike.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9581C447C830058756C /* mprofilelike.m */; };
+		DA7AB95C1C447C920058756C /* mprofileground.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB95B1C447C920058756C /* mprofileground.m */; };
+		DA7AB9611C447D300058756C /* mprofilelikescience.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9601C447D300058756C /* mprofilelikescience.m */; };
+		DA7AB9641C447D3D0058756C /* mprofilelikeart.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9631C447D3D0058756C /* mprofilelikeart.m */; };
+		DA7AB9671C447D660058756C /* mprofilelikesport.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9661C447D660058756C /* mprofilelikesport.m */; };
+		DA7AB96A1C447D750058756C /* mprofilelikesocial.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9691C447D750058756C /* mprofilelikesocial.m */; };
+		DA7AB96D1C447D8A0058756C /* mprofilegroundcultural.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB96C1C447D8A0058756C /* mprofilegroundcultural.m */; };
+		DA7AB9701C447DA40058756C /* mprofilegroundenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB96F1C447DA40058756C /* mprofilegroundenter.m */; };
+		DA7AB9731C447DB80058756C /* mprofilegroundgaming.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9721C447DB80058756C /* mprofilegroundgaming.m */; };
+		DA7AB9761C447DDD0058756C /* mprofilegroundpartying.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9751C447DDD0058756C /* mprofilegroundpartying.m */; };
+		DA7AB9781C448C730058756C /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7AB9771C448C730058756C /* libdb.a */; };
+		DA7AB97D1C4492B50058756C /* gattaca.db in Resources */ = {isa = PBXBuildFile; fileRef = DA7AB97C1C4492B50058756C /* gattaca.db */; };
+		DA7AB9811C449AF10058756C /* mdb.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9801C449AF10058756C /* mdb.m */; };
+		DA7AB9841C449AFD0058756C /* mdbcreate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9831C449AFD0058756C /* mdbcreate.m */; };
+		DA7AB9871C449B0E0058756C /* mdbclean.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9861C449B0E0058756C /* mdbclean.m */; };
+		DA7AB98A1C44A3530058756C /* cloading.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9891C44A3530058756C /* cloading.m */; };
+		DA7AB98D1C44A8B00058756C /* vloading.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB98C1C44A8B00058756C /* vloading.m */; };
+		DA7AB9911C44ACB80058756C /* mdirs.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB9901C44ACB80058756C /* mdirs.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,6 +237,70 @@
 		DA4A74411C3D9B240092A405 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DA4A74541C3D9CA10092A405 /* privateconstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA4A74551C3D9CC20092A405 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		DA70A9B91C42100D0015A865 /* vconfigsettingsswitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingsswitch.h; sourceTree = "<group>"; };
+		DA70A9BA1C42100D0015A865 /* vconfigsettingsswitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingsswitch.m; sourceTree = "<group>"; };
+		DA70A9BC1C42101D0015A865 /* vconfigsettingsbutton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingsbutton.h; sourceTree = "<group>"; };
+		DA70A9BD1C42101D0015A865 /* vconfigsettingsbutton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingsbutton.m; sourceTree = "<group>"; };
+		DA70A9BF1C4211090015A865 /* vconfigsettingscelprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingscelprotocol.h; sourceTree = "<group>"; };
+		DA7AB91D1C43F17F0058756C /* cconfigsettingsdelete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cconfigsettingsdelete.h; sourceTree = "<group>"; };
+		DA7AB91E1C43F17F0058756C /* cconfigsettingsdelete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfigsettingsdelete.m; sourceTree = "<group>"; };
+		DA7AB9201C43F29D0058756C /* cconfigsettingslogout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cconfigsettingslogout.h; sourceTree = "<group>"; };
+		DA7AB9211C43F29D0058756C /* cconfigsettingslogout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfigsettingslogout.m; sourceTree = "<group>"; };
+		DA7AB9231C43F3060058756C /* vconfigsettingsdelete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingsdelete.h; sourceTree = "<group>"; };
+		DA7AB9241C43F3060058756C /* vconfigsettingsdelete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingsdelete.m; sourceTree = "<group>"; };
+		DA7AB9261C43F31E0058756C /* vconfigsettingslogout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsettingslogout.h; sourceTree = "<group>"; };
+		DA7AB9271C43F31E0058756C /* vconfigsettingslogout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsettingslogout.m; sourceTree = "<group>"; };
+		DA7AB9291C445C990058756C /* cconfigprofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cconfigprofile.h; sourceTree = "<group>"; };
+		DA7AB92A1C445C990058756C /* cconfigprofile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cconfigprofile.m; sourceTree = "<group>"; };
+		DA7AB92D1C44615C0058756C /* vconfigprofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigprofile.h; sourceTree = "<group>"; };
+		DA7AB92E1C44615C0058756C /* vconfigprofile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigprofile.m; sourceTree = "<group>"; };
+		DA7AB9301C44668C0058756C /* vconfigprofileheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigprofileheader.h; sourceTree = "<group>"; };
+		DA7AB9311C44668C0058756C /* vconfigprofileheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigprofileheader.m; sourceTree = "<group>"; };
+		DA7AB9331C4466B20058756C /* vconfigprofilecel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigprofilecel.h; sourceTree = "<group>"; };
+		DA7AB9341C4466B20058756C /* vconfigprofilecel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigprofilecel.m; sourceTree = "<group>"; };
+		DA7AB93D1C446E620058756C /* vprofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofile.h; sourceTree = "<group>"; };
+		DA7AB93E1C446E620058756C /* vprofile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofile.m; sourceTree = "<group>"; };
+		DA7AB9401C446E700058756C /* vprofilecircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofilecircle.h; sourceTree = "<group>"; };
+		DA7AB9411C446E700058756C /* vprofilecircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilecircle.m; sourceTree = "<group>"; };
+		DA7AB9441C44714A0058756C /* mmyprofile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmyprofile.h; sourceTree = "<group>"; };
+		DA7AB9451C44714A0058756C /* mmyprofile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mmyprofile.m; sourceTree = "<group>"; };
+		DA7AB9571C447C830058756C /* mprofilelike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilelike.h; sourceTree = "<group>"; };
+		DA7AB9581C447C830058756C /* mprofilelike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilelike.m; sourceTree = "<group>"; };
+		DA7AB95A1C447C920058756C /* mprofileground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofileground.h; sourceTree = "<group>"; };
+		DA7AB95B1C447C920058756C /* mprofileground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofileground.m; sourceTree = "<group>"; };
+		DA7AB95D1C447CD30058756C /* mprofilelikeprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilelikeprotocol.h; sourceTree = "<group>"; };
+		DA7AB95E1C447CDF0058756C /* mprofilegroundprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilegroundprotocol.h; sourceTree = "<group>"; };
+		DA7AB95F1C447D300058756C /* mprofilelikescience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilelikescience.h; sourceTree = "<group>"; };
+		DA7AB9601C447D300058756C /* mprofilelikescience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilelikescience.m; sourceTree = "<group>"; };
+		DA7AB9621C447D3D0058756C /* mprofilelikeart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilelikeart.h; sourceTree = "<group>"; };
+		DA7AB9631C447D3D0058756C /* mprofilelikeart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilelikeart.m; sourceTree = "<group>"; };
+		DA7AB9651C447D660058756C /* mprofilelikesport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilelikesport.h; sourceTree = "<group>"; };
+		DA7AB9661C447D660058756C /* mprofilelikesport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilelikesport.m; sourceTree = "<group>"; };
+		DA7AB9681C447D750058756C /* mprofilelikesocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilelikesocial.h; sourceTree = "<group>"; };
+		DA7AB9691C447D750058756C /* mprofilelikesocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilelikesocial.m; sourceTree = "<group>"; };
+		DA7AB96B1C447D8A0058756C /* mprofilegroundcultural.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilegroundcultural.h; sourceTree = "<group>"; };
+		DA7AB96C1C447D8A0058756C /* mprofilegroundcultural.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilegroundcultural.m; sourceTree = "<group>"; };
+		DA7AB96E1C447DA40058756C /* mprofilegroundenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilegroundenter.h; sourceTree = "<group>"; };
+		DA7AB96F1C447DA40058756C /* mprofilegroundenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilegroundenter.m; sourceTree = "<group>"; };
+		DA7AB9711C447DB80058756C /* mprofilegroundgaming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilegroundgaming.h; sourceTree = "<group>"; };
+		DA7AB9721C447DB80058756C /* mprofilegroundgaming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilegroundgaming.m; sourceTree = "<group>"; };
+		DA7AB9741C447DDD0058756C /* mprofilegroundpartying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilegroundpartying.h; sourceTree = "<group>"; };
+		DA7AB9751C447DDD0058756C /* mprofilegroundpartying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilegroundpartying.m; sourceTree = "<group>"; };
+		DA7AB9771C448C730058756C /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
+		DA7AB97A1C448C8C0058756C /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
+		DA7AB97C1C4492B50058756C /* gattaca.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gattaca.db; sourceTree = "<group>"; };
+		DA7AB97F1C449AF10058756C /* mdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdb.h; sourceTree = "<group>"; };
+		DA7AB9801C449AF10058756C /* mdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdb.m; sourceTree = "<group>"; };
+		DA7AB9821C449AFD0058756C /* mdbcreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdbcreate.h; sourceTree = "<group>"; };
+		DA7AB9831C449AFD0058756C /* mdbcreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdbcreate.m; sourceTree = "<group>"; };
+		DA7AB9851C449B0E0058756C /* mdbclean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdbclean.h; sourceTree = "<group>"; };
+		DA7AB9861C449B0E0058756C /* mdbclean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdbclean.m; sourceTree = "<group>"; };
+		DA7AB9881C44A3530058756C /* cloading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cloading.h; sourceTree = "<group>"; };
+		DA7AB9891C44A3530058756C /* cloading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cloading.m; sourceTree = "<group>"; };
+		DA7AB98B1C44A8B00058756C /* vloading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vloading.h; sourceTree = "<group>"; };
+		DA7AB98C1C44A8B00058756C /* vloading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vloading.m; sourceTree = "<group>"; };
+		DA7AB98F1C44ACB80058756C /* mdirs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdirs.h; sourceTree = "<group>"; };
+		DA7AB9901C44ACB80058756C /* mdirs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdirs.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +308,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7AB9781C448C730058756C /* libdb.a in Frameworks */,
 				DA4A74531C3D9B240092A405 /* libtimerbg.a in Frameworks */,
 				D2233BBF0363DC0A31972538 /* libPods-gattaca.a in Frameworks */,
 			);
@@ -257,7 +353,10 @@
 			children = (
 				DA2965911C3DB30600BC713E /* m.h */,
 				DA2965931C3DB50900BC713E /* general */,
+				DA7AB98E1C44ACA90058756C /* dirs */,
+				DA7AB97E1C449ACC0058756C /* db */,
 				DA46BD231C3F4DD000472BC9 /* profile */,
+				DA7AB9431C4471340058756C /* myprofile */,
 				DA3097171C3EA9E000E8AFA2 /* login */,
 				DA46BD181C3F403500472BC9 /* config */,
 				DA322A271C40BCE8004C6958 /* configsettings */,
@@ -273,7 +372,9 @@
 				DA2965B81C3DDF7900BC713E /* general */,
 				DA3229F71C4027E9004C6958 /* main */,
 				DA46BD0E1C3F12B300472BC9 /* alert */,
+				DA7AB9361C446DB80058756C /* profile */,
 				DA2965B01C3DDDD700BC713E /* config */,
+				DA7AB92C1C4461310058756C /* configprofile */,
 				DA322A351C40C265004C6958 /* configsettings */,
 				DA2965B11C3DDDD700BC713E /* contact */,
 				DA2965D61C3DF0D000BC713E /* login */,
@@ -297,6 +398,8 @@
 			children = (
 				DA29659B1C3DC3E300BC713E /* cmain.h */,
 				DA29659C1C3DC3E300BC713E /* cmain.m */,
+				DA7AB9881C44A3530058756C /* cloading.h */,
+				DA7AB9891C44A3530058756C /* cloading.m */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -319,6 +422,12 @@
 				DA322A1C1C409A52004C6958 /* cconfigmain.m */,
 				DA322A1E1C40A348004C6958 /* cconfigsettings.h */,
 				DA322A1F1C40A348004C6958 /* cconfigsettings.m */,
+				DA7AB9201C43F29D0058756C /* cconfigsettingslogout.h */,
+				DA7AB9211C43F29D0058756C /* cconfigsettingslogout.m */,
+				DA7AB91D1C43F17F0058756C /* cconfigsettingsdelete.h */,
+				DA7AB91E1C43F17F0058756C /* cconfigsettingsdelete.m */,
+				DA7AB9291C445C990058756C /* cconfigprofile.h */,
+				DA7AB92A1C445C990058756C /* cconfigprofile.m */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -437,6 +546,8 @@
 				DA3229F91C40280B004C6958 /* vmenu.m */,
 				DA322A041C403A49004C6958 /* vmenucel.h */,
 				DA322A051C403A49004C6958 /* vmenucel.m */,
+				DA7AB98B1C44A8B00058756C /* vloading.h */,
+				DA7AB98C1C44A8B00058756C /* vloading.m */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -464,6 +575,15 @@
 				DA322A371C40C285004C6958 /* vconfigsettings.m */,
 				DA322A391C40C2AF004C6958 /* vconfigsettingsheader.h */,
 				DA322A3A1C40C2AF004C6958 /* vconfigsettingsheader.m */,
+				DA70A9BF1C4211090015A865 /* vconfigsettingscelprotocol.h */,
+				DA70A9B91C42100D0015A865 /* vconfigsettingsswitch.h */,
+				DA70A9BA1C42100D0015A865 /* vconfigsettingsswitch.m */,
+				DA70A9BC1C42101D0015A865 /* vconfigsettingsbutton.h */,
+				DA70A9BD1C42101D0015A865 /* vconfigsettingsbutton.m */,
+				DA7AB9261C43F31E0058756C /* vconfigsettingslogout.h */,
+				DA7AB9271C43F31E0058756C /* vconfigsettingslogout.m */,
+				DA7AB9231C43F3060058756C /* vconfigsettingsdelete.h */,
+				DA7AB9241C43F3060058756C /* vconfigsettingsdelete.m */,
 			);
 			path = configsettings;
 			sourceTree = "<group>";
@@ -507,6 +627,28 @@
 			children = (
 				DA46BD241C3F4DE600472BC9 /* mprofile.h */,
 				DA46BD251C3F4DE600472BC9 /* mprofile.m */,
+				DA7AB9571C447C830058756C /* mprofilelike.h */,
+				DA7AB9581C447C830058756C /* mprofilelike.m */,
+				DA7AB95A1C447C920058756C /* mprofileground.h */,
+				DA7AB95B1C447C920058756C /* mprofileground.m */,
+				DA7AB95D1C447CD30058756C /* mprofilelikeprotocol.h */,
+				DA7AB95E1C447CDF0058756C /* mprofilegroundprotocol.h */,
+				DA7AB95F1C447D300058756C /* mprofilelikescience.h */,
+				DA7AB9601C447D300058756C /* mprofilelikescience.m */,
+				DA7AB9621C447D3D0058756C /* mprofilelikeart.h */,
+				DA7AB9631C447D3D0058756C /* mprofilelikeart.m */,
+				DA7AB9651C447D660058756C /* mprofilelikesport.h */,
+				DA7AB9661C447D660058756C /* mprofilelikesport.m */,
+				DA7AB9681C447D750058756C /* mprofilelikesocial.h */,
+				DA7AB9691C447D750058756C /* mprofilelikesocial.m */,
+				DA7AB96B1C447D8A0058756C /* mprofilegroundcultural.h */,
+				DA7AB96C1C447D8A0058756C /* mprofilegroundcultural.m */,
+				DA7AB9711C447DB80058756C /* mprofilegroundgaming.h */,
+				DA7AB9721C447DB80058756C /* mprofilegroundgaming.m */,
+				DA7AB96E1C447DA40058756C /* mprofilegroundenter.h */,
+				DA7AB96F1C447DA40058756C /* mprofilegroundenter.m */,
+				DA7AB9741C447DDD0058756C /* mprofilegroundpartying.h */,
+				DA7AB9751C447DDD0058756C /* mprofilegroundpartying.m */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -532,6 +674,7 @@
 		DA4A74101C3D95E00092A405 /* gattaca */ = {
 			isa = PBXGroup;
 			children = (
+				DA7AB97B1C4492B50058756C /* db */,
 				DA4A74281C3D9B240092A405 /* imateq */,
 				DA4A742B1C3D9B240092A405 /* langteq */,
 				DA4A74301C3D9B240092A405 /* sourceteq */,
@@ -584,6 +727,7 @@
 				DA4A74311C3D9B240092A405 /* core */,
 				DA4A74361C3D9B240092A405 /* generic */,
 				DA4A743E1C3D9B240092A405 /* lib */,
+				DA7AB9771C448C730058756C /* libdb.a */,
 				DA4A74411C3D9B240092A405 /* libtimerbg.a */,
 				DA4A74421C3D9B240092A405 /* private */,
 				DA4A74441C3D9B240092A405 /* source */,
@@ -620,6 +764,7 @@
 		DA4A743E1C3D9B240092A405 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				DA7AB9791C448C8C0058756C /* db */,
 				DA4A743F1C3D9B240092A405 /* timerbg */,
 			);
 			path = lib;
@@ -650,6 +795,77 @@
 				DA29658F1C3DB2EC00BC713E /* v */,
 			);
 			path = source;
+			sourceTree = "<group>";
+		};
+		DA7AB92C1C4461310058756C /* configprofile */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB92D1C44615C0058756C /* vconfigprofile.h */,
+				DA7AB92E1C44615C0058756C /* vconfigprofile.m */,
+				DA7AB9301C44668C0058756C /* vconfigprofileheader.h */,
+				DA7AB9311C44668C0058756C /* vconfigprofileheader.m */,
+				DA7AB9331C4466B20058756C /* vconfigprofilecel.h */,
+				DA7AB9341C4466B20058756C /* vconfigprofilecel.m */,
+			);
+			path = configprofile;
+			sourceTree = "<group>";
+		};
+		DA7AB9361C446DB80058756C /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB93D1C446E620058756C /* vprofile.h */,
+				DA7AB93E1C446E620058756C /* vprofile.m */,
+				DA7AB9401C446E700058756C /* vprofilecircle.h */,
+				DA7AB9411C446E700058756C /* vprofilecircle.m */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		DA7AB9431C4471340058756C /* myprofile */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB9441C44714A0058756C /* mmyprofile.h */,
+				DA7AB9451C44714A0058756C /* mmyprofile.m */,
+			);
+			path = myprofile;
+			sourceTree = "<group>";
+		};
+		DA7AB9791C448C8C0058756C /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB97A1C448C8C0058756C /* db.h */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		DA7AB97B1C4492B50058756C /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB97C1C4492B50058756C /* gattaca.db */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		DA7AB97E1C449ACC0058756C /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB97F1C449AF10058756C /* mdb.h */,
+				DA7AB9801C449AF10058756C /* mdb.m */,
+				DA7AB9821C449AFD0058756C /* mdbcreate.h */,
+				DA7AB9831C449AFD0058756C /* mdbcreate.m */,
+				DA7AB9851C449B0E0058756C /* mdbclean.h */,
+				DA7AB9861C449B0E0058756C /* mdbclean.m */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		DA7AB98E1C44ACA90058756C /* dirs */ = {
+			isa = PBXGroup;
+			children = (
+				DA7AB98F1C44ACB80058756C /* mdirs.h */,
+				DA7AB9901C44ACB80058756C /* mdirs.m */,
+			);
+			path = dirs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -729,6 +945,7 @@
 				DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */,
 				DA322A3F1C40C628004C6958 /* logo.png in Resources */,
 				DA2965AF1C3DD89F00BC713E /* in in Resources */,
+				DA7AB97D1C4492B50058756C /* gattaca.db in Resources */,
 				DA322A1A1C40875F004C6958 /* contact@3x.png in Resources */,
 				DA322A191C40875F004C6958 /* contact@2x.png in Resources */,
 			);
@@ -790,11 +1007,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA46BD1F1C3F487300472BC9 /* mconfigsettings.m in Sources */,
+				DA7AB9871C449B0E0058756C /* mdbclean.m in Sources */,
 				DA322A141C407683004C6958 /* vspinner.m in Sources */,
 				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
 				DA30972D1C3EB8DB00E8AFA2 /* vloginindicatorcel.m in Sources */,
 				DA46BD261C3F4DE600472BC9 /* mprofile.m in Sources */,
+				DA7AB9841C449AFD0058756C /* mdbcreate.m in Sources */,
+				DA7AB9421C446E700058756C /* vprofilecircle.m in Sources */,
 				DA3097241C3EAB5500E8AFA2 /* mloginthird.m in Sources */,
+				DA7AB9461C44714A0058756C /* mmyprofile.m in Sources */,
 				DA322A1D1C409A52004C6958 /* cconfigmain.m in Sources */,
 				DA2965B41C3DDDE800BC713E /* vconfig.m in Sources */,
 				DA30971A1C3EAAA800E8AFA2 /* mlogin.m in Sources */,
@@ -802,20 +1023,36 @@
 				DA2965DC1C3DF1B900BC713E /* msession.m in Sources */,
 				DA2965A91C3DC74600BC713E /* ccontact.m in Sources */,
 				DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */,
+				DA7AB91F1C43F17F0058756C /* cconfigsettingsdelete.m in Sources */,
+				DA7AB9591C447C830058756C /* mprofilelike.m in Sources */,
 				DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */,
+				DA7AB95C1C447C920058756C /* mprofileground.m in Sources */,
 				DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */,
+				DA7AB9731C447DB80058756C /* mprofilegroundgaming.m in Sources */,
 				DA2965EA1C3DF2FF00BC713E /* msectioncontact.m in Sources */,
 				DA322A201C40A348004C6958 /* cconfigsettings.m in Sources */,
+				DA70A9BB1C42100D0015A865 /* vconfigsettingsswitch.m in Sources */,
+				DA7AB9351C4466B20058756C /* vconfigprofilecel.m in Sources */,
 				DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */,
+				DA7AB98A1C44A3530058756C /* cloading.m in Sources */,
+				DA7AB9281C43F31E0058756C /* vconfigsettingslogout.m in Sources */,
+				DA7AB9811C449AF10058756C /* mdb.m in Sources */,
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
+				DA7AB93F1C446E620058756C /* vprofile.m in Sources */,
+				DA7AB9671C447D660058756C /* mprofilelikesport.m in Sources */,
 				DA322A3B1C40C2AF004C6958 /* vconfigsettingsheader.m in Sources */,
+				DA7AB9221C43F29D0058756C /* cconfigsettingslogout.m in Sources */,
+				DA7AB9911C44ACB80058756C /* mdirs.m in Sources */,
 				DA4A744F1C3D9B240092A405 /* main.m in Sources */,
 				DA46BD1B1C3F40A300472BC9 /* mconfig.m in Sources */,
 				DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */,
 				DA4A744D1C3D9B240092A405 /* appdel.m in Sources */,
 				DA3097211C3EAB4700E8AFA2 /* mloginsecond.m in Sources */,
 				DA4A74501C3D9B240092A405 /* analytics.m in Sources */,
+				DA7AB98D1C44A8B00058756C /* vloading.m in Sources */,
+				DA7AB92F1C44615C0058756C /* vconfigprofile.m in Sources */,
+				DA7AB96A1C447D750058756C /* mprofilelikesocial.m in Sources */,
 				DA322A311C40C087004C6958 /* mconfigsettingsnotifications.m in Sources */,
 				DA2965A61C3DC73C00BC713E /* cconfig.m in Sources */,
 				DA2965D51C3DEFFC00BC713E /* clogin.m in Sources */,
@@ -823,19 +1060,28 @@
 				DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */,
 				DA3229F31C4018B0004C6958 /* mconfigbrowsing.m in Sources */,
 				DA3229F01C4011FC004C6958 /* mconfigprofile.m in Sources */,
+				DA7AB9761C447DDD0058756C /* mprofilegroundpartying.m in Sources */,
+				DA7AB9701C447DA40058756C /* mprofilegroundenter.m in Sources */,
 				DA322A381C40C285004C6958 /* vconfigsettings.m in Sources */,
+				DA7AB96D1C447D8A0058756C /* mprofilegroundcultural.m in Sources */,
+				DA7AB9251C43F3060058756C /* vconfigsettingsdelete.m in Sources */,
 				DA46BD111C3F12C000472BC9 /* valert.m in Sources */,
+				DA7AB9611C447D300058756C /* mprofilelikescience.m in Sources */,
 				DA4A74511C3D9B240092A405 /* tools.m in Sources */,
 				DA322A061C403A49004C6958 /* vmenucel.m in Sources */,
 				DA46BD221C3F4BA700472BC9 /* vconfigcel.m in Sources */,
 				DA322A2E1C40C038004C6958 /* mconfigsettingsreview.m in Sources */,
 				DA4A74521C3D9B240092A405 /* updater.m in Sources */,
+				DA7AB9641C447D3D0058756C /* mprofilelikeart.m in Sources */,
 				DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */,
+				DA7AB92B1C445C990058756C /* cconfigprofile.m in Sources */,
 				DA3229FA1C40280B004C6958 /* vmenu.m in Sources */,
+				DA70A9BE1C42101D0015A865 /* vconfigsettingsbutton.m in Sources */,
 				DA30972A1C3EB81F00E8AFA2 /* vlogincel.m in Sources */,
 				DA30971E1C3EAB3C00E8AFA2 /* mloginfirst.m in Sources */,
 				DA2965E71C3DF2FF00BC713E /* msection.m in Sources */,
 				DA322A2B1C40C004004C6958 /* mconfigsettingsdelete.m in Sources */,
+				DA7AB9321C44668C0058756C /* vconfigprofileheader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

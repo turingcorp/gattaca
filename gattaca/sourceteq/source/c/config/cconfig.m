@@ -16,4 +16,14 @@
     [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontboldname size:16], NSForegroundColorAttributeName:[UIColor blackColor]}];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
 @end

@@ -19,6 +19,7 @@
     self = [super init];
     [self setClipsToBounds:YES];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self setAlpha:0];
     
     self.sections = [msection menu];
     vblur *blur = [vblur light];
@@ -75,7 +76,30 @@
 
 -(void)notifiedupdatemenu:(NSNotification*)notification
 {
-    [self.collection reloadData];
+    dispatch_async(dispatch_get_main_queue(),
+                   ^(void)
+                   {
+                       [self.collection reloadData];
+                       [self showmenu];
+                   });
+}
+
+#pragma mark functionality
+
+-(void)showmenu
+{
+    CGFloat alpha = 0;
+    
+    if([msession singleton].userid)
+    {
+        alpha = 1;
+    }
+    
+    [UIView animateWithDuration:0.5 animations:
+     ^(void)
+     {
+         [self setAlpha:alpha];
+     }];
 }
 
 #pragma mark -

@@ -21,6 +21,16 @@
     return self;
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
 -(void)loadView
 {
     self.view = [[valert alloc] init:self];

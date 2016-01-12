@@ -19,6 +19,7 @@
 
 // notifications
 
+#define notloadfinish           @"loadfinish"
 #define notmenuchanged          @"menuchanged"
 
 // extra

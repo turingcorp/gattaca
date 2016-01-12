@@ -6,12 +6,24 @@
 {
     [super viewDidLoad];
     [self setTitle:NSLocalizedString(@"config_title", nil)];
+    
+    [[analytics singleton] trackscreen:ga_screen_config];
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     [self.viewconfig refresh];
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
 }
 
 -(void)loadView

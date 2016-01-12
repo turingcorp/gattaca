@@ -5,6 +5,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "analytics.h"
+#import "db.h"
 #import "timerbg.h"
 #import "generic.h"
 #import "private.h"

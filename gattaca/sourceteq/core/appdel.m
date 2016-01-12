@@ -7,14 +7,13 @@
 
 -(BOOL)application:(UIApplication*)app didFinishLaunchingWithOptions:(NSDictionary*)options
 {
-    [updater launch];
     window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [window makeKeyAndVisible];
     [window setBackgroundColor:[UIColor whiteColor]];
-    
-    [[FBSDKApplicationDelegate sharedInstance] application:app didFinishLaunchingWithOptions:options];
     [window setRootViewController:[cmain singleton]];
-    [[analytics singleton] start];
+
+    [[FBSDKApplicationDelegate sharedInstance] application:app didFinishLaunchingWithOptions:options];
+    [updater launch];
     
     return YES;
 }

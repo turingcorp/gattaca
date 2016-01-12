@@ -5,11 +5,21 @@
 	<key>screens</key>
 	<array>
 		<string>login</string>
+		<string>logout</string>
+		<string>delete</string>
+		<string>browse</string>
+		<string>config</string>
+		<string>config/settings</string>
+		<string>config/profile</string>
+		<string>contact</string>
 	</array>
 	<key>events</key>
 	<array>
 		<string>login</string>
+		<string>logout</string>
+		<string>delete</string>
 		<string>application_rate</string>
+		<string>config/notifications</string>
 	</array>
 	<key>actions</key>
 	<array>

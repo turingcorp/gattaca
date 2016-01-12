@@ -32,12 +32,23 @@
     return array[item];
 }
 
+-(void)registercels:(UICollectionView*)collection
+{
+    NSInteger qty = [self count];
+    
+    for(NSInteger i = 0; i < qty; i++)
+    {
+        id<mconfigsettingsprotocol> item = [self item:i];
+        [collection registerClass:[item celclass] forCellWithReuseIdentifier:[item celname]];
+    }
+}
+
 #pragma mark -
 #pragma mark config protocol
 
 -(UIViewController*)controller
 {
-    return [[cconfigsettings alloc] init];
+    return [[cconfigsettings alloc] init:self];
 }
 
 -(NSString*)title

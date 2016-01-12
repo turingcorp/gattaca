@@ -1,8 +1,13 @@
 #import "appdel.h"
 
+@class mprofilelike;
+@class mprofileground;
+
 @interface mprofile:NSObject
 
-+(instancetype)singleton;
--(BOOL)completed;
+-(instancetype)init:(NSDictionary*)json;
+
+@property(strong, nonatomic)mprofilelike *like;
+@property(strong, nonatomic)mprofileground *ground;
 
 @end

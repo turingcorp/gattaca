@@ -6,12 +6,12 @@ NSString *documents;
 
 +(void)launch
 {
-    [updater update];
-    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                    ^(void)
                    {
-//                       [[modsettings sha] loadpreferences];
+                       [updater update];
+                       [[analytics singleton] start];
+                       [[NSNotificationCenter defaultCenter] postNotificationName:notloadfinish object:nil];
                    });
 }
 
@@ -33,7 +33,11 @@ NSString *documents;
         {
             [updater firsttime:defaults];
         }
+        
+        [mdb updatedb];
     }
+    
+    dbname = [documents stringByAppendingPathComponent:[properties valueForKey:@"dbname"]];
 }
 
 +(void)firsttime:(NSDictionary*)_plist

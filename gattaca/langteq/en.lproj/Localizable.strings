@@ -11,6 +11,14 @@
 
 "config_settings_header_title"="Gattaca";
 "config_settings_header_version"="Version %@";
+"config_settings_notifications_title"="Notifications";
+"config_settings_review_title"="Review in the App Store";
+"config_settings_logout_title"="Logout";
+"config_settings_logout_descr"="You will close your session and it'll be ready next time you log in";
+"config_settings_delete_title"="Delete account";
+"config_settings_delete_descr"="Deleting your account will erase your profile and every register you have with us\n\nThis can't be undone";
+"config_settings_delete_cancel"="Cancel";
+"config_settings_delete_delete"="Delete";
 
 "alert_accept"="Accept";
 

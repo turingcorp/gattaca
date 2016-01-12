@@ -14,15 +14,7 @@
 -(instancetype)init
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-
-    if([msession singleton].userid)
-    {
-        [self opensection:[msection browse] animated:NO];
-    }
-    else
-    {
-        [clogin asklogin:NO];
-    }
+    [self setViewControllers:@[[[cloading alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     return self;
 }
@@ -34,6 +26,16 @@
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontname size:16]} forState:UIControlStateNormal];
     
     [vmenu addto:self.view];
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
 }
 
 #pragma mark functionality
