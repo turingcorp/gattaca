@@ -29,6 +29,26 @@
     {
         [[mmyprofile singleton] loaduser];
         
+        NSString *newnamestr;
+        NSString *firstname = ;
+        NSString *middlename;
+        NSString *lastname;
+        
+        switch([mmyprofile singleton].nametype)
+        {
+            case profile_name_firstname:
+                
+                break;
+                
+            case profile_name_middelname:
+                
+                break;
+                
+            case profile_name_lastname:
+                
+                break;
+        }
+        
         //[self opensection:[msection browse] animated:NO];
     }
     else

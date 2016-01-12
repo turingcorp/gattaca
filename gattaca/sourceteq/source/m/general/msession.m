@@ -51,7 +51,9 @@
     
     if(self.userid)
     {
-        
+        self.firstname = [FBSDKProfile currentProfile].firstName;
+        self.lastname = [FBSDKProfile currentProfile].lastName;
+        self.
     }
     
     [[NSNotificationCenter defaultCenter] postNotificationName:notmenuchanged object:nil];
