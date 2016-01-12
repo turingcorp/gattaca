@@ -11,11 +11,11 @@
     
     [dbcon query:query];
     
-    query = @"CREATE TABLE profilelike (id INTEGER PRIMARY KEY, liketype INTEGER, amount INTEGER);";
+    query = @"CREATE TABLE profilelike (id INTEGER PRIMARY KEY, liketype INTEGER, amount INTEGER, CONSTRAINT profilelike_unique unique(liketype));";
     
     [dbcon query:query];
     
-    query = @"CREATE TABLE profileground (id INTEGER PRIMARY KEY, groundtype INTEGER, amount INTEGER);";
+    query = @"CREATE TABLE profileground (id INTEGER PRIMARY KEY, groundtype INTEGER, amount INTEGER, CONSTRAINT profileground_unique unique(groundtype));";
     
     [dbcon query:query];
     
