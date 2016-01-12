@@ -8,7 +8,7 @@
     
     [self setTitle:NSLocalizedString(@"config_profile_title", nil)];
     
-    [[analytics singleton] trackscreen:ga_screen_config_profile];
+    [[analytics singleton] trackscreen:ga_screen_profile];
 }
 
 -(void)loadView
