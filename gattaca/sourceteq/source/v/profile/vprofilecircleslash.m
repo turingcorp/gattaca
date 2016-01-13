@@ -29,21 +29,23 @@
     CGContextSetLineWidth(context, self.linewidth);
     CGContextSetStrokeColorWithColor(context, self.tintColor.CGColor);
     CGContextSetFillColorWithColor(context, self.tintColor.CGColor);
+    CGContextAddArc(context, width_2, height_2, radius, self.start, self.start, 0);
+    pointstart = CGContextGetPathCurrentPoint(context);
     CGContextAddArc(context, width_2, height_2, radius, self.start, self.end, 0);
     pointend = CGContextGetPathCurrentPoint(context);
     CGContextDrawPath(context, kCGPathStroke);
-//    CGContextAddArc(context, width_2, height_2, radius, self.end, self.start, 0);
-    pointstart = CGContextGetPathCurrentPoint(context);
-    CGContextAddEllipseInRect(context, [self rectwithpoint:pointstart]);
-    CGContextAddEllipseInRect(context, [self rectwithpoint:pointend]);
-//    CGContextDrawPath(context, kCGPathFill);
+    CGRect rectstart = [self rectwithpoint:pointstart];
+    CGRect rectend = [self rectwithpoint:pointend];
+    CGContextAddEllipseInRect(context, rectstart);
+    CGContextAddEllipseInRect(context, rectend);
+    CGContextDrawPath(context, kCGPathFill);
 }
 
 #pragma mark functionality
 
 -(CGRect)rectwithpoint:(CGPoint)point
 {
-    return CGRectMake(point.x - self.linewidth_2, point.y - self.linewidth_2, point.x + self.linewidth_2, point.y + self.linewidth_2);
+    return CGRectMake(point.x - self.linewidth_2, point.y - self.linewidth_2, self.linewidth, self.linewidth);
 }
 
 @end
