@@ -90,7 +90,7 @@
 
 -(void)actionaccept
 {
-    [(cprofileage*)self.controller selectage:0];
+    [(cprofileage*)self.controller selectage:self.current.value];
 }
 
 #pragma mark functionality

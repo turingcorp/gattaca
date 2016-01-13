@@ -43,7 +43,7 @@
 {
     NSInteger now = [NSDate date].timeIntervalSince1970;
     NSString *query = [NSString stringWithFormat:
-                       @"UPDATE profile set updated=%@, name=%@, namestr=\"%@\", age=%@, gender=%@",
+                       @"UPDATE profile set updated=%@, name=%@, namestr=\"%@\", age=%@, gender=%@;",
                        @(now), @(self.nametype), self.namestr, @(self.age), @(self.gender)];
     
     [db query:query];
@@ -53,10 +53,10 @@
 
 -(void)loaduser
 {
-    NSString *query = @"SELECT name, namestr, age, gender FROM profile limit 1;";
+    NSString *query = @"SELECT id, name, namestr, age, gender FROM profile;";
     NSDictionary *rawuser = [db row:query];
     
-    if(rawuser)
+    if(rawuser[@"id"])
     {
         self.nametype = (profile_name)[rawuser[@"name"] integerValue];
         self.namestr = rawuser[@"namestr"];

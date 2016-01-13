@@ -46,6 +46,7 @@
 
 -(void)selectage:(NSInteger)age
 {
+    [[mmyprofile singleton] updateage:age];
     [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -32,7 +32,7 @@
     {
         [[cmain singleton] opensection:[msection browse] animated:NO];
         
-        if(![mmyprofile singleton].age)
+        if(![mmyprofile singleton].age || YES)
         {
             [cprofileage askage];
         }
