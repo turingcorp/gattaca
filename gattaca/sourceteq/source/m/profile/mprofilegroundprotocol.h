@@ -6,5 +6,6 @@
 -(profile_ground)type;
 -(NSInteger)amount;
 -(UIColor*)color;
+-(void)updateamount:(NSInteger)newamount;
 
 @end
