@@ -35,7 +35,7 @@
     NSString *query = [NSString stringWithFormat:
                        @"INSERT INTO profile (created, syncstamp, updated, name, namestr, age, gender) "
                        "VALUES(%@, 0, %@, %@, \"%@\", %@, %@);",
-                       @(now), @(now), @(self.nametype), self.namestr, @(self.age), @(self.gender)];
+                       @(now), @(now), @(self.nametype), self.profile.name, @(self.profile.age), @(self.profile.gender)];
     
     [db query:query];
 }
@@ -45,7 +45,7 @@
     NSInteger now = [NSDate date].timeIntervalSince1970;
     NSString *query = [NSString stringWithFormat:
                        @"UPDATE profile set updated=%@, name=%@, namestr=\"%@\", age=%@, gender=%@;",
-                       @(now), @(self.nametype), self.namestr, @(self.age), @(self.gender)];
+                       @(now), @(self.nametype), self.profile.name, @(self.profile.age), @(self.profile.gender)];
     
     [db query:query];
 }
@@ -69,9 +69,9 @@
     if(rawuser[@"id"])
     {
         self.nametype = (profile_name)[rawuser[@"name"] integerValue];
-        self.namestr = rawuser[@"namestr"];
-        self.age = [rawuser[@"age"] integerValue];
-        self.gender = (profile_gender)[rawuser[@"gender"] integerValue];
+        self.profile.name = rawuser[@"namestr"];
+        self.profile.age = [rawuser[@"age"] integerValue];
+        self.profile.gender = (profile_gender)[rawuser[@"gender"] integerValue];
     }
     else
     {
@@ -81,7 +81,7 @@
 
 -(void)updatename:(NSString*)newname
 {
-    self.namestr = newname;
+    self.profile.name = newname;
     
     [self saveuser];
 }
@@ -89,21 +89,21 @@
 -(void)changenameto:(profile_name)nametype name:(NSString*)newname;
 {
     self.nametype = nametype;
-    self.namestr = newname;
+    self.profile.name = newname;
     
     [self saveuser];
 }
 
 -(void)updategender:(profile_gender)newgender
 {
-    self.gender = newgender;
+    self.profile.gender = newgender;
     
     [self saveuser];
 }
 
 -(void)updateage:(NSInteger)newage
 {
-    self.age = newage;
+    self.profile.age = newage;
     
     [self saveuser];
 }
