@@ -20,7 +20,6 @@
 -(void)drawRect:(CGRect)rect
 {
     CGFloat width_2 = rect.size.width / 2.0;
-    CGFloat height_2 = rect.size.height / 2.0;
     CGFloat radius = width_2 - self.linewidth_2;
     CGPoint pointstart;
     CGPoint pointend;
@@ -29,9 +28,9 @@
     CGContextSetLineWidth(context, self.linewidth);
     CGContextSetStrokeColorWithColor(context, self.tintColor.CGColor);
     CGContextSetFillColorWithColor(context, self.tintColor.CGColor);
-    CGContextAddArc(context, width_2, height_2, radius, self.start, self.start, 0);
+    CGContextAddArc(context, width_2, width_2, radius, self.start, self.start, 0);
     pointstart = CGContextGetPathCurrentPoint(context);
-    CGContextAddArc(context, width_2, height_2, radius, self.start, self.end, 0);
+    CGContextAddArc(context, width_2, width_2, radius, self.start, self.end, 0);
     pointend = CGContextGetPathCurrentPoint(context);
     CGContextDrawPath(context, kCGPathStroke);
     CGRect rectstart = [self rectwithpoint:pointstart];

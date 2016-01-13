@@ -34,12 +34,12 @@
 
 -(void)render
 {
-    CGFloat linewidth = 10;
+    CGFloat linewidth = 20;
     NSInteger added = 0;
     mprofilelike *like = self.circle.profile.like;
     NSInteger count = [like count];
     
-    for(NSInteger i = 0; i < 1; i++)
+    for(NSInteger i = count - 1; i >= 0; i--)
     {
         id<mprofilelikeprotocol> item = [like item:i];
         

@@ -24,7 +24,7 @@
 
 -(UIColor*)color
 {
-    return [UIColor colorWithRed:1 green:0.2 blue:0 alpha:1];
+    return [UIColor colorWithRed:0.9 green:0.5 blue:0.2 alpha:1];
 }
 
 -(NSInteger)currentamount
