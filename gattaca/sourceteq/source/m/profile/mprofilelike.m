@@ -9,7 +9,6 @@
 {
     self = [super init];
     
-    array = [NSMutableArray array];
     [self loadfromdb];
     
     return self;
@@ -28,13 +27,37 @@
 
 -(void)loadfromdb
 {
+    array = [NSMutableArray array];
     NSString *query = @"SELECT liketype, amount FROM profilelike ORDER BY liketype ASC;";
     NSArray *rows = [db rows:query];
     NSInteger count = rows.count;
     
     for(NSInteger i = 0; i < count; i++)
     {
-        NSDictionary *
+        NSDictionary *raw = rows[i];
+        profile_like liketype = (profile_like)[raw[@"liketype"] integerValue];
+        NSInteger amount = [raw[@"amount"] integerValue];
+        
+        switch(liketype)
+        {
+            case profile_like_science:
+                
+                [array addObject:[[mprofilelikescience alloc] init]];
+                
+                break;
+                
+            case profile_like_art:
+                
+                break;
+                
+            case profile_like_social:
+                
+                break;
+                
+            case profile_like_sport:
+                
+                break;
+        }
     }
 }
 
