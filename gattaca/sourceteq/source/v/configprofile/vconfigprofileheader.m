@@ -8,7 +8,14 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
+    vprofilecircle *circle = [[vprofilecircle alloc] init:[mmyprofile singleton].profile];
+    [self addSubview:circle];
     
+    NSDictionary *views = @{@"circle":circle};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[circle]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[circle]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }

@@ -32,11 +32,11 @@
     CGContextAddArc(context, width_2, height_2, radius, self.start, self.end, 0);
     pointend = CGContextGetPathCurrentPoint(context);
     CGContextDrawPath(context, kCGPathStroke);
-    CGContextAddArc(context, width_2, height_2, radius, self.end, self.start, 0);
+//    CGContextAddArc(context, width_2, height_2, radius, self.end, self.start, 0);
     pointstart = CGContextGetPathCurrentPoint(context);
     CGContextAddEllipseInRect(context, [self rectwithpoint:pointstart]);
     CGContextAddEllipseInRect(context, [self rectwithpoint:pointend]);
-    CGContextDrawPath(context, kCGPathFill);
+//    CGContextDrawPath(context, kCGPathFill);
 }
 
 #pragma mark functionality
