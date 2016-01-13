@@ -3,6 +3,7 @@
 
 "profile_default_user"="User";
 "profile_age_btnaccept"="Accept";
+"profile_age_lbldescr"="Your age";
 
 "config_title"="Settings";
 "config_profile_title"="Profile";

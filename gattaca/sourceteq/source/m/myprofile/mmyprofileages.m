@@ -18,7 +18,7 @@
     
     if(!currentage)
     {
-        currentage = agemin + 10;
+        currentage = [defaults[@"agedef"] integerValue];
     }
     
     for(NSInteger i = agemin; i <= agemax; i++)

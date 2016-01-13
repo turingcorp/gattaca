@@ -6,5 +6,7 @@
 	<integer>17</integer>
 	<key>agemax</key>
 	<integer>80</integer>
+	<key>agedef</key>
+	<string>25</string>
 </dict>
 </plist>

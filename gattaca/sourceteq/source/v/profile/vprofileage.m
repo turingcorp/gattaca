@@ -27,6 +27,16 @@
     [btnaccept setTranslatesAutoresizingMaskIntoConstraints:NO];
     [btnaccept addTarget:self action:@selector(actionaccept) forControlEvents:UIControlEventTouchUpInside];
     
+    UILabel *lbl = [[UILabel alloc] init];
+    [lbl setBackgroundColor:[UIColor clearColor]];
+    [lbl setUserInteractionEnabled:NO];
+    [lbl setTextAlignment:NSTextAlignmentCenter];
+    [lbl setFont:[UIFont fontWithName:fontname size:28]];
+    [lbl setTextColor:[UIColor colorWithWhite:0 alpha:0.7]];
+    [lbl setText:NSLocalizedString(@"profile_age_lbldescr", nil)];
+    [lbl setNumberOfLines:0];
+    [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setHeaderReferenceSize:CGSizeZero];
@@ -48,17 +58,19 @@
     self.collection = collection;
     
     [self addSubview:blur];
+    [self addSubview:lbl];
     [self addSubview:btnaccept];
     [self addSubview:collection];
     
-    NSDictionary *views = @{@"blur":blur, @"btn":btnaccept, @"col":collection};
+    NSDictionary *views = @{@"blur":blur, @"btn":btnaccept, @"col":collection, @"lbl":lbl};
     NSDictionary *metrics = @{@"colheight":@(celheight)};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[btn]-20-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[col(colheight)]-100-[btn(36)]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lbl]-40-[col(colheight)]-240-[btn(36)]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[lbl]-20-|" options:0 metrics:metrics views:views]];
     
     self.ages = [[mmyprofileages alloc] init];
     
