@@ -62,6 +62,9 @@
     
     self.ages = [[mmyprofileages alloc] init];
     
+    [self chooseage:self.ages.current];
+    [collection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.ages.current inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    
     return self;
 }
 

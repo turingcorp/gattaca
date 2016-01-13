@@ -7,4 +7,6 @@
 -(NSInteger)count;
 -(mmyprofileage*)item:(NSInteger)index;
 
+@property(nonatomic)NSInteger current;
+
 @end

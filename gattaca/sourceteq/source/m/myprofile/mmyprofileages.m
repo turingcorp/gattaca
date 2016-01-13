@@ -14,9 +14,20 @@
     
     NSInteger agemin = [defaults[@"agemin"] integerValue];
     NSInteger agemax = [defaults[@"agemax"] integerValue];
+    NSInteger currentage = [mmyprofile singleton].age;
+    
+    if(!currentage)
+    {
+        currentage = agemin + 10;
+    }
     
     for(NSInteger i = agemin; i <= agemax; i++)
     {
+        if(i == currentage)
+        {
+            self.current = i;
+        }
+        
         [array addObject:[[mmyprofileage alloc] init:i]];
     }
     
