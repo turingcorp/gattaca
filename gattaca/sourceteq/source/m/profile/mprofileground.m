@@ -35,4 +35,14 @@
     return array[index];
 }
 
+-(void)update:(id<mprofilegroundprotocol>)ground amount:(NSInteger)newamount
+{
+    [ground newamount:newamount];
+    
+    NSString *query = [NSString stringWithFormat:
+                       @"UPDATE profileground set amount=%@ where groundtype=%@;",
+                       @([ground type]), @(newamount)];
+    [db query:query];
+}
+
 @end
