@@ -37,24 +37,31 @@
         NSDictionary *raw = rows[i];
         profile_like liketype = (profile_like)[raw[@"liketype"] integerValue];
         NSInteger amount = [raw[@"amount"] integerValue];
+        id<mprofilelikeprotocol> item;
         
         switch(liketype)
         {
             case profile_like_science:
                 
-                [array addObject:[[mprofilelikescience alloc] init]];
+                item = [[mprofilelikescience alloc] init:amount];
                 
                 break;
                 
             case profile_like_art:
                 
+                item = [[mprofilelikeart alloc] init:amount];
+                
                 break;
                 
             case profile_like_social:
                 
+                item = [[mprofilelikesocial alloc] init:amount];
+                
                 break;
                 
             case profile_like_sport:
+                
+                item = [[mprofilelikescience alloc] init:amount];
                 
                 break;
         }
