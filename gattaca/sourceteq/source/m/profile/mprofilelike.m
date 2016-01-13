@@ -2,7 +2,7 @@
 
 @implementation mprofilelike
 {
-    NSMutableArray *array;
+    NSMutableDictionary *dictionary;
 }
 
 -(instancetype)init
@@ -18,8 +18,6 @@
 {
     self = [super init];
     
-    array = [NSMutableArray array];
-    
     return self;
 }
 
@@ -27,7 +25,7 @@
 
 -(void)loadfromdb
 {
-    array = [NSMutableArray array];
+    dictionary = [NSMutableDictionary dictionary];
     NSString *query = @"SELECT liketype, amount FROM profilelike ORDER BY liketype ASC;";
     NSArray *rows = [db rows:query];
     NSInteger count = rows.count;
@@ -68,16 +66,21 @@
     }
 }
 
+-(NSString*)liketokey:(profile_like)like
+{
+    return [NSString stringWithFormat:@"%@", @(like)];
+}
+
 #pragma mark public
 
 -(NSInteger)count
 {
-    return array.count;
+    return dictionary.allKeys.count;
 }
 
 -(id<mprofilelikeprotocol>)item:(NSInteger)index
 {
-    return array[index];
+    return dictionary[[self liketokey:(profile_like)index]];
 }
 
 -(void)update:(id<mprofilelikeprotocol>)like amount:(NSInteger)newamount
