@@ -20,6 +20,7 @@
 #import "vcontact.h"
 #import "vprofile.h"
 #import "vprofilecircle.h"
+#import "vprofilecircleribbon.h"
 #import "vprofilecirclelike.h"
 #import "vprofilecircleground.h"
 #import "vprofilecircleslash.h"
