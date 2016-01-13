@@ -24,6 +24,8 @@
 #import "mprofilegroundenter.h"
 #import "mprofilegroundpartying.h"
 #import "mmyprofile.h"
+#import "mmyprofileages.h"
+#import "mmyprofileage.h"
 #import "mlogin.h"
 #import "mloginprotocol.h"
 #import "mloginfirst.h"

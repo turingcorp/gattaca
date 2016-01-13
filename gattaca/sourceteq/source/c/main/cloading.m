@@ -1,6 +1,9 @@
 #import "cloading.h"
 
 @implementation cloading
+{
+    FBSDKGraphRequest *request;
+}
 
 -(instancetype)init
 {
@@ -27,7 +30,7 @@
 {
     if([msession singleton].userid)
     {
-        //[self opensection:[msection browse] animated:NO];
+        [[cmain singleton] openinitial];
     }
     else
     {

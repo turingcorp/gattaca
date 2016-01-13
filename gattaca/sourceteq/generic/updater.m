@@ -40,9 +40,9 @@ NSString *documents;
     dbname = [documents stringByAppendingPathComponent:[properties valueForKey:@"dbname"]];
 }
 
-+(void)firsttime:(NSDictionary*)_plist
++(void)firsttime:(NSDictionary*)plist
 {
-    NSNumber *appid = _plist[@"appid"];
+    NSNumber *appid = plist[@"appid"];
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
     
     NSUserDefaults *userdef = [NSUserDefaults standardUserDefaults];

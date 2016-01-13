@@ -7,7 +7,7 @@
     NSString *query;
     db *dbcon = [db begin];
     
-    query = @"CREATE TABLE profile (id INTEGER PRIMARY KEY, created INTEGER, syncstamp INTEGER, name INTEGER, namestr TEXT COLLATE NOCASE, age INTEGER, latitude INTEGER, longitude INTEGER);";
+    query = @"CREATE TABLE profile (id INTEGER PRIMARY KEY, created INTEGER, syncstamp INTEGER, updated INTEGER, name INTEGER, namestr TEXT COLLATE NOCASE, age INTEGER, gender INTEGER);";
     
     [dbcon query:query];
     

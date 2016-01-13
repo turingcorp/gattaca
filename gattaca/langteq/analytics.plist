@@ -10,7 +10,8 @@
 		<string>browse</string>
 		<string>config</string>
 		<string>config/settings</string>
-		<string>config/profile</string>
+		<string>profile</string>
+		<string>profile/age</string>
 		<string>contact</string>
 	</array>
 	<key>events</key>
@@ -20,6 +21,8 @@
 		<string>delete</string>
 		<string>application_rate</string>
 		<string>config/notifications</string>
+		<string>facebook/profile</string>
+		<string>profile/age</string>
 	</array>
 	<key>actions</key>
 	<array>
@@ -30,6 +33,7 @@
 		<string>cancelled</string>
 		<string>error</string>
 		<string>done</string>
+		<string>changed</string>
 	</array>
 </dict>
 </plist>

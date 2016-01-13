@@ -56,6 +56,16 @@
 
 #pragma mark public
 
+-(void)openinitial
+{
+    [[cmain singleton] opensection:[msection browse] animated:NO];
+    
+    if(![mmyprofile singleton].age)
+    {
+        [cprofileage askage];
+    }
+}
+
 -(void)opensection:(id<msectionprotocol>)section animated:(BOOL)animated
 {
     dispatch_async(dispatch_get_main_queue(),

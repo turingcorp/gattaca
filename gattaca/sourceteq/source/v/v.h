@@ -20,6 +20,8 @@
 #import "vcontact.h"
 #import "vprofile.h"
 #import "vprofilecircle.h"
+#import "vprofileage.h"
+#import "vprofileagecel.h"
 #import "vlogin.h"
 #import "vlogincel.h"
 #import "vloginindicatorcel.h"

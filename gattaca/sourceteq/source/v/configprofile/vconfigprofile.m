@@ -2,7 +2,7 @@
 
 @implementation vconfigprofile
 
--(instancetype)init:(cconfigprofile*)controller
+-(instancetype)init:(cprofile*)controller
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];
@@ -15,22 +15,22 @@
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
     [flow setSectionInset:UIEdgeInsetsMake(20, 0, menuheight + 20, 0)];
     
-    UICollectionView *strongcollection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
-    [strongcollection setBackgroundColor:[UIColor clearColor]];
-    [strongcollection setClipsToBounds:YES];
-    [strongcollection setShowsHorizontalScrollIndicator:NO];
-    [strongcollection setShowsVerticalScrollIndicator:NO];
-    [strongcollection setAlwaysBounceVertical:YES];
-    [strongcollection setDelegate:self];
-    [strongcollection setDataSource:self];
-    [strongcollection registerClass:[vconfigprofilecel class] forCellWithReuseIdentifier:celid];
-    [strongcollection registerClass:[vconfigprofileheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
-    [strongcollection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [collection setBackgroundColor:[UIColor clearColor]];
+    [collection setClipsToBounds:YES];
+    [collection setShowsHorizontalScrollIndicator:NO];
+    [collection setShowsVerticalScrollIndicator:NO];
+    [collection setAlwaysBounceVertical:YES];
+    [collection setDelegate:self];
+    [collection setDataSource:self];
+    [collection registerClass:[vconfigprofilecel class] forCellWithReuseIdentifier:celid];
+    [collection registerClass:[vconfigprofileheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
+    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    self.collection = strongcollection;
-    [self addSubview:strongcollection];
+    self.collection = collection;
+    [self addSubview:collection];
     
-    NSDictionary *views = @{@"col":strongcollection};
+    NSDictionary *views = @{@"col":collection};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];

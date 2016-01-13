@@ -37,9 +37,6 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"%@", [db rows:@"select * from profilelike"]);
-    NSLog(@"%@", [db rows:@"select * from profileground"]);
-    
     [[analytics singleton] trackscreen:ga_screen_login];
 }
 
@@ -47,7 +44,7 @@
 
 -(void)logincomplete
 {
-    [[cmain singleton] opensection:[msection config] animated:YES];
+    [[cmain singleton] openinitial];
 }
 
 #pragma mark -

@@ -8,25 +8,25 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
-    UILabel *strongtitle = [[UILabel alloc] init];
-    [strongtitle setBackgroundColor:[UIColor clearColor]];
-    [strongtitle setUserInteractionEnabled:NO];
-    [strongtitle setFont:[UIFont fontWithName:fontname size:16]];
-    [strongtitle setTextColor:[UIColor colorWithWhite:0.4 alpha:1]];
-    [strongtitle setTranslatesAutoresizingMaskIntoConstraints:NO];
-    self.title = strongtitle;
+    UILabel *title = [[UILabel alloc] init];
+    [title setBackgroundColor:[UIColor clearColor]];
+    [title setUserInteractionEnabled:NO];
+    [title setFont:[UIFont fontWithName:fontname size:16]];
+    [title setTextColor:[UIColor colorWithWhite:0.4 alpha:1]];
+    [title setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.title = title;
     
-    UISwitch *strongsw = [[UISwitch alloc] init];
-    [strongsw setOnTintColor:colormain];
-    [strongsw setTintColor:[UIColor colorWithWhite:0.9 alpha:1]];
-    [strongsw setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [strongsw addTarget:self action:@selector(actionswitch:) forControlEvents:UIControlEventValueChanged];
-    self.sw = strongsw;
+    UISwitch *sw = [[UISwitch alloc] init];
+    [sw setOnTintColor:colormain];
+    [sw setTintColor:[UIColor colorWithWhite:0.9 alpha:1]];
+    [sw setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [sw addTarget:self action:@selector(actionswitch:) forControlEvents:UIControlEventValueChanged];
+    self.sw = sw;
     
-    [self addSubview:strongtitle];
-    [self addSubview:strongsw];
+    [self addSubview:title];
+    [self addSubview:sw];
     
-    NSDictionary *views = @{@"title":strongtitle, @"sw":strongsw};
+    NSDictionary *views = @{@"title":title, @"sw":sw};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[title]-150-|" options:0 metrics:metrics views:views]];

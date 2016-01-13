@@ -20,7 +20,8 @@ typedef NS_ENUM(NSInteger, ga_screen)
     ga_screen_browse,
     ga_screen_config,
     ga_screen_config_settings,
-    ga_screen_config_profile,
+    ga_screen_profile,
+    ga_screen_profile_age,
     ga_screen_contact
 };
 
@@ -30,7 +31,9 @@ typedef NS_ENUM(NSInteger, ga_event)
     ga_event_logout,
     ga_event_delete,
     ga_event_apprate,
-    ga_event_config_noti
+    ga_event_config_noti,
+    ga_event_facebook_profile,
+    ga_event_profile_age
 };
 
 typedef NS_ENUM(NSInteger, ga_action)
@@ -41,15 +44,22 @@ typedef NS_ENUM(NSInteger, ga_action)
     ga_action_start,
     ga_action_cancelled,
     ga_action_error,
-    ga_action_done
+    ga_action_done,
+    ga_action_changed
 };
 
 // profile
 
+typedef NS_ENUM(NSInteger, profile_gender)
+{
+    profile_gender_male,
+    profile_gender_female
+};
+
 typedef NS_ENUM(NSInteger, profile_name)
 {
     profile_name_firstname,
-    profile_name_middelname,
+    profile_name_middlename,
     profile_name_lastname
 };
 

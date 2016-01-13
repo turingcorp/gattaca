@@ -33,30 +33,30 @@
     [flowindicator setMinimumLineSpacing:0];
     [flowindicator setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     
-    UICollectionView *strongsteps = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowsteps];
-    [strongsteps setClipsToBounds:YES];
-    [strongsteps setBackgroundColor:[UIColor clearColor]];
-    [strongsteps setShowsHorizontalScrollIndicator:NO];
-    [strongsteps setShowsVerticalScrollIndicator:NO];
-    [strongsteps setAlwaysBounceHorizontal:YES];
-    [strongsteps setPagingEnabled:YES];
-    [strongsteps setDelegate:self];
-    [strongsteps setDataSource:self];
-    [strongsteps registerClass:[vlogincel class] forCellWithReuseIdentifier:celid];
-    [strongsteps setTranslatesAutoresizingMaskIntoConstraints:NO];
-    self.steps = strongsteps;
+    UICollectionView *steps = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowsteps];
+    [steps setClipsToBounds:YES];
+    [steps setBackgroundColor:[UIColor clearColor]];
+    [steps setShowsHorizontalScrollIndicator:NO];
+    [steps setShowsVerticalScrollIndicator:NO];
+    [steps setAlwaysBounceHorizontal:YES];
+    [steps setPagingEnabled:YES];
+    [steps setDelegate:self];
+    [steps setDataSource:self];
+    [steps registerClass:[vlogincel class] forCellWithReuseIdentifier:celid];
+    [steps setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.steps = steps;
     
-    UICollectionView *strongindicators = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowindicator];
-    [strongindicators setClipsToBounds:YES];
-    [strongindicators setBackgroundColor:[UIColor clearColor]];
-    [strongindicators setShowsHorizontalScrollIndicator:NO];
-    [strongindicators setShowsVerticalScrollIndicator:NO];
-    [strongindicators setAlwaysBounceHorizontal:YES];
-    [strongindicators setDelegate:self];
-    [strongindicators setDataSource:self];
-    [strongindicators registerClass:[vloginindicatorcel class] forCellWithReuseIdentifier:indicatorid];
-    [strongindicators setTranslatesAutoresizingMaskIntoConstraints:NO];
-    self.indicators = strongindicators;
+    UICollectionView *indicators = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowindicator];
+    [indicators setClipsToBounds:YES];
+    [indicators setBackgroundColor:[UIColor clearColor]];
+    [indicators setShowsHorizontalScrollIndicator:NO];
+    [indicators setShowsVerticalScrollIndicator:NO];
+    [indicators setAlwaysBounceHorizontal:YES];
+    [indicators setDelegate:self];
+    [indicators setDataSource:self];
+    [indicators registerClass:[vloginindicatorcel class] forCellWithReuseIdentifier:indicatorid];
+    [indicators setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.indicators = indicators;
     
     FBSDKLoginButton *btnlogin = [[FBSDKLoginButton alloc] init];
     [btnlogin setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -72,12 +72,12 @@
     [disclaimer setText:NSLocalizedString(@"login_disclaimer", nil)];
     [disclaimer setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    [self addSubview:strongsteps];
-    [self addSubview:strongindicators];
+    [self addSubview:steps];
+    [self addSubview:indicators];
     [self addSubview:disclaimer];
     [self addSubview:btnlogin];
     
-    NSDictionary *views = @{@"steps":strongsteps, @"indicators":strongindicators, @"btn":btnlogin, @"disclaimer":disclaimer};
+    NSDictionary *views = @{@"steps":steps, @"indicators":indicators, @"btn":btnlogin, @"disclaimer":disclaimer};
     NSDictionary *metrics = @{@"indiheight":@(indicatorheight)};
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[steps]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[steps]-0-|" options:0 metrics:metrics views:views]];
