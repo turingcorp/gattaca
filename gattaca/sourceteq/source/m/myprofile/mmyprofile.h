@@ -12,6 +12,7 @@
 -(void)updateage:(NSInteger)newage;
 
 @property(strong, nonatomic)mprofile *profile;
+@property(nonatomic)profile_name nametype;
 @property(nonatomic)BOOL coordsactive;
 
 @end

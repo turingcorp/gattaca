@@ -15,8 +15,8 @@
 {
     self = [super init];
     
-    
     self.coordsactive = NO;
+    self.profile = [[mprofile alloc] init];
     [self loaduser];
     
     return self;
@@ -26,10 +26,10 @@
 
 -(void)firsttime
 {
-    self.age = 0;
-    self.gender = profile_gender_female;
+    self.profile.age = 0;
+    self.profile.gender = profile_gender_female;
     self.nametype = profile_name_firstname;
-    self.namestr = NSLocalizedString(@"profile_default_user", nil);
+    self.profile.name = NSLocalizedString(@"profile_default_user", nil);
     
     NSInteger now = [NSDate date].timeIntervalSince1970;
     NSString *query = [NSString stringWithFormat:
@@ -77,8 +77,6 @@
     {
         [self firsttime];
     }
-    
-    [self loadprofile];
 }
 
 -(void)updatename:(NSString*)newname
