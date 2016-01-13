@@ -22,6 +22,7 @@
 #import "vprofilecircle.h"
 #import "vprofilecirclelike.h"
 #import "vprofilecircleground.h"
+#import "vprofilecircleslash.h"
 #import "vprofileage.h"
 #import "vprofileagecel.h"
 #import "vlogin.h"
