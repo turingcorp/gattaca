@@ -44,12 +44,7 @@
 
 -(void)logincomplete
 {
-    [[cmain singleton] opensection:[msection config] animated:YES];
-    
-    if(![mmyprofile singleton].age)
-    {
-        [cprofileage askage];
-    }
+    [[cmain singleton] openinitial];
 }
 
 #pragma mark -

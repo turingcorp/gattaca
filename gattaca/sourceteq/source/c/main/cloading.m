@@ -30,12 +30,7 @@
 {
     if([msession singleton].userid)
     {
-        [[cmain singleton] opensection:[msection browse] animated:NO];
-        
-        if(![mmyprofile singleton].age || YES)
-        {
-            [cprofileage askage];
-        }
+        [[cmain singleton] openinitial];
     }
     else
     {

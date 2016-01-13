@@ -46,6 +46,7 @@
 
 -(void)selectage:(NSInteger)age
 {
+    [[analytics singleton] trackevent:ga_event_profile_age action:ga_action_changed label:[NSString stringWithFormat:@"%@", @(age)]];
     [[mmyprofile singleton] updateage:age];
     [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
 }
