@@ -2,15 +2,6 @@
 
 @implementation mprofile
 
-+(void)restartprofile
-{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
-                   ^(void)
-                   {
-                       
-                   });
-}
-
 -(instancetype)init
 {
     self = [super init];
