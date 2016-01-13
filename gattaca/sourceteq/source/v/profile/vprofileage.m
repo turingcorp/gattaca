@@ -72,8 +72,25 @@
     [(cprofileage*)self.controller selectage:0];
 }
 
+#pragma mark functionality
+
+-(void)chooseage:(NSInteger)index
+{
+    self.current = [self.ages item:index];
+}
+
 #pragma mark -
 #pragma mark col del
+
+-(void)scrollViewWillBeginDragging:(UIScrollView*)drag
+{
+    trackscroll = YES;
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView*)scroll
+{
+    trackscroll = NO;
+}
 
 -(void)scrollViewDidScroll:(UIScrollView*)scroll
 {
@@ -86,7 +103,7 @@
         
         if(index)
         {
-            [self insideselectcountryindex:index.item];
+            [self chooseage:index.item];
             [self.collection selectItemAtIndexPath:index animated:YES scrollPosition:UICollectionViewScrollPositionNone];
         }
     }
@@ -115,6 +132,13 @@
     [cel config:[self.ages item:index.item]];
     
     return cel;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    [self.collection scrollToItemAtIndexPath:index atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    [self chooseage:index.item];
+    trackscroll = NO;
 }
 
 @end
