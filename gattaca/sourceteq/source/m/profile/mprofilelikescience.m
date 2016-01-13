@@ -5,7 +5,7 @@
     NSInteger qty;
 }
 
--(instancetype)init:(NSInteger)amount
+-(instancetype)init:(mprofilelike*)like amount:(NSInteger)amount
 {
     self = [super init];
     

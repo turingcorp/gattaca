@@ -4,8 +4,8 @@
 
 -(instancetype)init:(NSInteger)amount;
 -(profile_like)type;
--(NSInteger)amount;
 -(UIColor*)color;
--(void)updateamount:(NSInteger)newamount;
+
+@property(nonatomic)NSInteger amount;
 
 @end

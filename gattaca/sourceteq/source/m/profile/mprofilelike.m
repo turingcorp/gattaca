@@ -73,4 +73,12 @@
     return array[index];
 }
 
+-(void)update:(id<mprofilelikeprotocol>)like amount:(NSInteger)newamount
+{
+    NSString *query = [NSString stringWithFormat:
+                       @"UPDATE profilelike set amount=%@ where liketype=%@;",
+                       @([like type]), @(newamount)];
+    [db query:query];
+}
+
 @end
