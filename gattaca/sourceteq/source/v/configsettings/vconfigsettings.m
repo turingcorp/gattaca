@@ -14,22 +14,22 @@
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
     [flow setSectionInset:UIEdgeInsetsMake(10, 0, menuheight + 20, 0)];
     
-    UICollectionView *strongcontroller = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
-    [strongcontroller setClipsToBounds:YES];
-    [strongcontroller setBackgroundColor:[UIColor clearColor]];
-    [strongcontroller setAlwaysBounceVertical:YES];
-    [strongcontroller setShowsHorizontalScrollIndicator:NO];
-    [strongcontroller setShowsVerticalScrollIndicator:NO];
-    [strongcontroller setDelegate:self];
-    [strongcontroller setDataSource:self];
-    [strongcontroller registerClass:[vconfigsettingsheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
-    [strongcontroller setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [controller.model registercels:strongcontroller];
-    self.collection = strongcontroller;
+    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [collection setClipsToBounds:YES];
+    [collection setBackgroundColor:[UIColor clearColor]];
+    [collection setAlwaysBounceVertical:YES];
+    [collection setShowsHorizontalScrollIndicator:NO];
+    [collection setShowsVerticalScrollIndicator:NO];
+    [collection setDelegate:self];
+    [collection setDataSource:self];
+    [collection registerClass:[vconfigsettingsheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
+    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [controller.model registercels:collection];
+    self.collection = collection;
     
-    [self addSubview:strongcontroller];
+    [self addSubview:collection];
     
-    NSDictionary *views = @{@"col":strongcontroller};
+    NSDictionary *views = @{@"col":collection};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];

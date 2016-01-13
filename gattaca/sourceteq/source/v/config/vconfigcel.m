@@ -13,17 +13,17 @@
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
     
-    UILabel *stronglbl = [[UILabel alloc] init];
-    [stronglbl setBackgroundColor:[UIColor clearColor]];
-    [stronglbl setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [stronglbl setNumberOfLines:0];
-    [stronglbl setUserInteractionEnabled:NO];
-    self.lbl = stronglbl;
+    UILabel *lbl = [[UILabel alloc] init];
+    [lbl setBackgroundColor:[UIColor clearColor]];
+    [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [lbl setNumberOfLines:0];
+    [lbl setUserInteractionEnabled:NO];
+    self.lbl = lbl;
     
-    UIView *strongcolor = [[UIView alloc] init];
-    [strongcolor setUserInteractionEnabled:NO];
-    [strongcolor setTranslatesAutoresizingMaskIntoConstraints:NO];
-    self.color = strongcolor;
+    UIView *color = [[UIView alloc] init];
+    [color setUserInteractionEnabled:NO];
+    [color setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.color = color;
     
     attrtitle = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:18], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.8]};
     attrdescr = @{NSFontAttributeName:[UIFont fontWithName:fontname size:14], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.5]};
@@ -31,10 +31,10 @@
     attrtitlehl = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:18], NSForegroundColorAttributeName:[UIColor whiteColor]};
     attrdescrhl = @{NSFontAttributeName:[UIFont fontWithName:fontname size:14], NSForegroundColorAttributeName:[UIColor colorWithWhite:1 alpha:0.7]};
     
-    [self addSubview:stronglbl];
-    [self addSubview:strongcolor];
+    [self addSubview:lbl];
+    [self addSubview:color];
     
-    NSDictionary *views = @{@"lbl":stronglbl, @"color":strongcolor};
+    NSDictionary *views = @{@"lbl":lbl, @"color":color};
     NSDictionary *metrics = @{};
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[lbl]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[color]-0-|" options:0 metrics:metrics views:views]];
