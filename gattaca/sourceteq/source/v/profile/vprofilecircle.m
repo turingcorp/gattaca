@@ -18,26 +18,34 @@
     vprofilecircleground *ground = [[vprofilecircleground alloc] init:self];
     self.ground = ground;
     
+    UIView *ribbon = [[UIView alloc] init];
+    [ribbon setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [ribbon setBackgroundColor:[vprofile colorforgender:profile.gender]];
+    
     UILabel *lbl = [[UILabel alloc] init];
     [lbl setBackgroundColor:[UIColor clearColor]];
     [lbl setTextAlignment:NSTextAlignmentCenter];
-    [lbl setTextColor:[UIColor colorWithWhite:0 alpha:0.8]];
-    [lbl setFont:[UIFont fontWithName:fontname size:15]];
+    [lbl setTextColor:[UIColor whiteColor]];
+    [lbl setFont:[UIFont fontWithName:fontboldname size:20]];
+    [lbl setText:profile.name];
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     
+    [self addSubview:ribbon];
     [self addSubview:lbl];
     [self addSubview:like];
     [self addSubview:ground];
     
-    NSDictionary *views = @{@"like":like, @"ground":ground, @"lbl":lbl};
+    NSDictionary *views = @{@"like":like, @"ground":ground, @"lbl":lbl, @"ribbon":ribbon};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-40-[like]-40-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[like]-40-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-50-[ground]-50-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[ground]-50-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[lbl]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-50-[lbl]-50-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[lbl]-70-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-50-[ribbon]-50-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-120-[ribbon]-120-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
