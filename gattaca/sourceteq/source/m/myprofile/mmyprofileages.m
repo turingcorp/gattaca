@@ -14,7 +14,7 @@
     
     NSInteger agemin = [defaults[@"agemin"] integerValue];
     NSInteger agemax = [defaults[@"agemax"] integerValue];
-    NSInteger currentage = [mmyprofile singleton].age;
+    NSInteger currentage = [mmyprofile singleton].profile.age;
     
     if(!currentage)
     {

@@ -50,12 +50,12 @@
     [db query:query];
 }
 
--(void)loadprofile
+-(void)loadstats
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                    ^(void)
                    {
-                       self.profile = [[mprofile alloc] init];
+                       [self.profile loadstats];
                    });
 }
 
@@ -77,6 +77,8 @@
     {
         [self firsttime];
     }
+    
+    [self loadstats];
 }
 
 -(void)updatename:(NSString*)newname

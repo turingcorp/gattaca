@@ -5,7 +5,6 @@
 
 @interface mprofile:NSObject
 
--(instancetype)init:(NSDictionary*)json;
 -(void)loadstats;
 -(void)loadstats:(NSDictionary*)json;
 
