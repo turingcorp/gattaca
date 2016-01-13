@@ -2,14 +2,14 @@
 
 @implementation mprofilelikescience
 {
-    NSInteger qty;
+    NSInteger current;
 }
 
--(instancetype)init:(mprofilelike*)like amount:(NSInteger)amount
+-(instancetype)init:(NSInteger)amount
 {
     self = [super init];
     
-    qty = amount;
+    current = amount;
     
     return self;
 }
@@ -22,20 +22,19 @@
     return profile_like_science;
 }
 
--(NSInteger)amount
-{
-    return qty;
-}
-
 -(UIColor*)color
 {
     return [UIColor colorWithRed:1 green:0.2 blue:0 alpha:1];
 }
 
--(void)updateamount:(NSInteger)newamount
+-(NSInteger)currentamount
 {
-    qty = newamount;
-    
+    return current;
+}
+
+-(void)newamount:(NSInteger)newamount
+{
+    current = newamount;
 }
 
 @end
