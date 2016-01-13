@@ -23,6 +23,40 @@
 
 #pragma mark functionality
 
+-(id<mprofilelikeprotocol>)factory:(profile_like)like amount:(NSInteger)amount
+{
+    id<mprofilelikeprotocol> item;
+    
+    switch(like)
+    {
+        case profile_like_science:
+            
+            item = [[mprofilelikescience alloc] init:amount];
+            
+            break;
+            
+        case profile_like_art:
+            
+            item = [[mprofilelikeart alloc] init:amount];
+            
+            break;
+            
+        case profile_like_social:
+            
+            item = [[mprofilelikesocial alloc] init:amount];
+            
+            break;
+            
+        case profile_like_sport:
+            
+            item = [[mprofilelikesport alloc] init:amount];
+            
+            break;
+    }
+    
+    return item;
+}
+
 -(void)loadfromdb
 {
     dictionary = [NSMutableDictionary dictionary];
@@ -35,34 +69,8 @@
         NSDictionary *raw = rows[i];
         profile_like liketype = (profile_like)[raw[@"liketype"] integerValue];
         NSInteger amount = [raw[@"amount"] integerValue];
-        id<mprofilelikeprotocol> item;
         
-        switch(liketype)
-        {
-            case profile_like_science:
-                
-                item = [[mprofilelikescience alloc] init:amount];
-                
-                break;
-                
-            case profile_like_art:
-                
-                item = [[mprofilelikeart alloc] init:amount];
-                
-                break;
-                
-            case profile_like_social:
-                
-                item = [[mprofilelikesocial alloc] init:amount];
-                
-                break;
-                
-            case profile_like_sport:
-                
-                item = [[mprofilelikescience alloc] init:amount];
-                
-                break;
-        }
+        dictionary[[self liketokey:liketype]] = [self factory:liketype amount:amount];
     }
 }
 
@@ -91,6 +99,11 @@
                        @"UPDATE profilelike set amount=%@ where liketype=%@;",
                        @([like type]), @(newamount)];
     [db query:query];
+}
+
+-(id<mprofilelikeprotocol>)like:(profile_like)like
+{
+    return dictionary[[self liketokey:like]];
 }
 
 @end

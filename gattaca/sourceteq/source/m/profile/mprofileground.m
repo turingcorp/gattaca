@@ -2,14 +2,13 @@
 
 @implementation mprofileground
 {
-    NSMutableArray *array;
+    NSMutableDictionary *dictionary;
 }
 
 -(instancetype)init
 {
     self = [super init];
     
-    array = [NSMutableArray array];
     
     return self;
 }
