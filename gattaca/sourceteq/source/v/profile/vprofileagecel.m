@@ -7,17 +7,17 @@
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
     
-    UILabel *stronglbl = [[UILabel alloc] init];
-    [stronglbl setBackgroundColor:[UIColor clearColor]];
-    [stronglbl setUserInteractionEnabled:NO];
-    [stronglbl setTextAlignment:NSTextAlignmentCenter];
-    [stronglbl setFont:[UIFont fontWithName:fontboldname size:20]];
-    [stronglbl setTranslatesAutoresizingMaskIntoConstraints:NO];
+    UILabel *lbl = [[UILabel alloc] init];
+    [lbl setBackgroundColor:[UIColor clearColor]];
+    [lbl setUserInteractionEnabled:NO];
+    [lbl setTextAlignment:NSTextAlignmentCenter];
+    [lbl setFont:[UIFont fontWithName:fontboldname size:20]];
+    [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    self.lbl = stronglbl;
-    [self addSubview:stronglbl];
+    self.lbl = lbl;
+    [self addSubview:lbl];
     
-    NSDictionary *views = @{@"lbl":stronglbl};
+    NSDictionary *views = @{@"lbl":lbl};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[lbl]-0-|" options:0 metrics:metrics views:views]];

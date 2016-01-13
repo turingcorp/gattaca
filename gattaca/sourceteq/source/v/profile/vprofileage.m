@@ -82,12 +82,12 @@
         CGFloat leftoffset = scroll.contentOffset.x;
         
         CGPoint point = CGPointMake(leftoffset + (scroll.bounds.size.width / 2), scroll.bounds.size.height / 2);
-        NSIndexPath *index = [collection indexPathForItemAtPoint:point];
+        NSIndexPath *index = [self.collection indexPathForItemAtPoint:point];
         
         if(index)
         {
             [self insideselectcountryindex:index.item];
-            [collection selectItemAtIndexPath:index animated:YES scrollPosition:UICollectionViewScrollPositionNone];
+            [self.collection selectItemAtIndexPath:index animated:YES scrollPosition:UICollectionViewScrollPositionNone];
         }
     }
 }
