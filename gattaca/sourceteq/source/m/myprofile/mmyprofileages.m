@@ -25,7 +25,7 @@
     {
         if(i == currentage)
         {
-            self.current = i;
+            self.current = i - agemin;
         }
         
         [array addObject:[[mmyprofileage alloc] init:i]];

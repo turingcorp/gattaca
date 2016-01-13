@@ -13,7 +13,7 @@
     
     trackscroll = NO;
     vblur *blur = [vblur light];
-    celwidth = 44;
+    celwidth = 40;
     NSInteger celheight = 54;
     
     UIButton *btnaccept = [[UIButton alloc] init];
@@ -62,8 +62,14 @@
     
     self.ages = [[mmyprofileages alloc] init];
     
-    [self chooseage:self.ages.current];
-    [collection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.ages.current inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    NSInteger current = self.ages.current;
+    [self chooseage:current];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 300), dispatch_get_main_queue(),
+                   ^(void)
+                   {
+                       [self.collection selectItemAtIndexPath:[NSIndexPath indexPathForItem:current inSection:0] animated:NO scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+                   });
     
     return self;
 }

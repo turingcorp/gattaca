@@ -11,7 +11,7 @@
     [lbl setBackgroundColor:[UIColor clearColor]];
     [lbl setUserInteractionEnabled:NO];
     [lbl setTextAlignment:NSTextAlignmentCenter];
-    [lbl setFont:[UIFont fontWithName:fontboldname size:20]];
+    [lbl setFont:[UIFont fontWithName:fontboldname size:19]];
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     self.lbl = lbl;
