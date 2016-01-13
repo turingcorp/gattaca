@@ -3,7 +3,6 @@
 @implementation vprofileage
 {
     NSInteger celwidth;
-    NSInteger verticalmargin;
 }
 
 -(instancetype)init:(cprofileage*)controller
@@ -12,10 +11,8 @@
     [self setBackgroundColor:[UIColor clearColor]];
     
     vblur *blur = [vblur light];
-    celwidth = 100;
-    verticalmargin = 20;
-    NSInteger celheight = 50;
-    NSInteger colheight = celheight + (verticalmargin * 2);
+    celwidth = 44;
+    NSInteger celheight = 54;
     
     UIButton *btnaccept = [[UIButton alloc] init];
     [btnaccept setBackgroundColor:colormain];
@@ -38,7 +35,7 @@
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setClipsToBounds:YES];
-    [collection setBackgroundColor:[UIColor redColor]];
+    [collection setBackgroundColor:[UIColor clearColor]];
     [collection setShowsHorizontalScrollIndicator:NO];
     [collection setShowsVerticalScrollIndicator:NO];
     [collection setAlwaysBounceHorizontal:YES];
@@ -52,12 +49,12 @@
     [self addSubview:collection];
     
     NSDictionary *views = @{@"blur":blur, @"btn":btnaccept, @"col":collection};
-    NSDictionary *metrics = @{@"colheight":@(colheight)};
+    NSDictionary *metrics = @{@"colheight":@(celheight)};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[btn]-20-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[col(colheight)]-20-[btn(36)]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[col(colheight)]-100-[btn(36)]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
     self.ages = [[mmyprofileages alloc] init];
@@ -79,7 +76,7 @@
 {
     CGFloat hrmargin = (self.bounds.size.width - celwidth) / 2;
     
-    return UIEdgeInsetsMake(verticalmargin, hrmargin, verticalmargin, hrmargin);
+    return UIEdgeInsetsMake(0, hrmargin, 0, hrmargin);
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col

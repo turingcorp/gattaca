@@ -11,11 +11,17 @@
     [stronglbl setBackgroundColor:[UIColor clearColor]];
     [stronglbl setUserInteractionEnabled:NO];
     [stronglbl setTextAlignment:NSTextAlignmentCenter];
-    [stronglbl setFont:[UIFont fontWithName:fontboldname size:22]];
+    [stronglbl setFont:[UIFont fontWithName:fontboldname size:20]];
     [stronglbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     self.lbl = stronglbl;
     [self addSubview:stronglbl];
+    
+    NSDictionary *views = @{@"lbl":stronglbl};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[lbl]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[lbl]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -44,7 +50,7 @@
     else
     {
         [self setBackgroundColor:[UIColor clearColor]];
-        [self.lbl setTextColor:[UIColor colorWithWhite:0.4 alpha:1]];
+        [self.lbl setTextColor:[UIColor colorWithWhite:0.8 alpha:1]];
     }
 }
 

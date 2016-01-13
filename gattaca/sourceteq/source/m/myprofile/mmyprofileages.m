@@ -15,7 +15,7 @@
     NSInteger agemin = [defaults[@"agemin"] integerValue];
     NSInteger agemax = [defaults[@"agemax"] integerValue];
     
-    for(NSInteger i = agemin; i < agemax; i++)
+    for(NSInteger i = agemin; i <= agemax; i++)
     {
         [array addObject:[[mmyprofileage alloc] init:i]];
     }
