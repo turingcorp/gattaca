@@ -10,6 +10,7 @@
     self = [super init];
     
     array = [NSMutableArray array];
+    [self loadfromdb];
     
     return self;
 }
@@ -21,6 +22,20 @@
     array = [NSMutableArray array];
     
     return self;
+}
+
+#pragma mark functionality
+
+-(void)loadfromdb
+{
+    NSString *query = @"SELECT liketype, amount FROM profilelike ORDER BY liketype ASC;";
+    NSArray *rows = [db rows:query];
+    NSInteger count = rows.count;
+    
+    for(NSInteger i = 0; i < count; i++)
+    {
+        NSDictionary *
+    }
 }
 
 #pragma mark public
