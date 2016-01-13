@@ -49,6 +49,15 @@
     [db query:query];
 }
 
+-(void)loadprofile
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^(void)
+                   {
+                       self.profile = [[mprofile alloc] init];
+                   });
+}
+
 #pragma mark public
 
 -(void)loaduser
@@ -67,6 +76,8 @@
     {
         [self firsttime];
     }
+    
+    [self loadprofile];
 }
 
 -(void)updatename:(NSString*)newname
