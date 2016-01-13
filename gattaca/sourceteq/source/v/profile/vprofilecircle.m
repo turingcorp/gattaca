@@ -11,16 +11,23 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
 
     self.profile = profile;
+    
     vprofilecirclelike *like = [[vprofilecirclelike alloc] init:self];
     self.like = like;
     
-    [self addSubview:like];
+    vprofilecircleground *ground = [[vprofilecircleground alloc] init:self];
+    self.ground = ground;
     
-    NSDictionary *views = @{@"like":like};
+    [self addSubview:like];
+    [self addSubview:ground];
+    
+    NSDictionary *views = @{@"like":like, @"ground":ground};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-40-[like]-40-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[like]-40-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-46-[ground]-46-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-46-[ground]-46-|" options:0 metrics:metrics views:views]];
     
     return self;
 }

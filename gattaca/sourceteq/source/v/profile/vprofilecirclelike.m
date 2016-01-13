@@ -34,7 +34,7 @@
 
 -(void)render
 {
-    CGFloat linewidth = 20;
+    CGFloat linewidth = 10;
     NSInteger added = 0;
     mprofilelike *like = self.circle.profile.like;
     NSInteger count = [like count];
