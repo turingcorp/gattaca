@@ -2,7 +2,7 @@
 
 @implementation vprofilecircle
 
--(instancetype)init
+-(instancetype)init:(mprofile*)profile
 {
     self = [super init];
     [self setClipsToBounds:YES];
