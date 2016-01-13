@@ -18,19 +18,8 @@
     vprofilecircleground *ground = [[vprofilecircleground alloc] init:self];
     self.ground = ground;
     
-    vprofilecircleribbon *ribbon = [[vprofilecircleribbon alloc] init];
-    
-    UIView *ribbon = [[UIView alloc] init];
-    [ribbon setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [ribbon setBackgroundColor:[vprofile colorforgender:profile.gender]];
-    
-    UILabel *lbl = [[UILabel alloc] init];
-    [lbl setBackgroundColor:[UIColor clearColor]];
-    [lbl setTextAlignment:NSTextAlignmentCenter];
-    [lbl setTextColor:[UIColor whiteColor]];
-    [lbl setFont:[UIFont fontWithName:fontboldname size:20]];
-    [lbl setText:profile.name];
-    [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
+    vprofilecircleribbon *ribbon = [[vprofilecircleribbon alloc] init:self];
+    self.ribbon = ribbon;
     
     [self addSubview:ribbon];
     [self addSubview:like];
