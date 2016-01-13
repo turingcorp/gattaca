@@ -6,5 +6,6 @@
 @interface vprofileage:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property(strong, nonatomic)mmyprofileages *ages;
+@property(weak, nonatomic)UICollectionView *collection;
 
 @end

@@ -3,6 +3,7 @@
 @implementation vprofileage
 {
     NSInteger celwidth;
+    BOOL trackscroll;
 }
 
 -(instancetype)init:(cprofileage*)controller
@@ -10,6 +11,7 @@
     self = [super init:controller];
     [self setBackgroundColor:[UIColor clearColor]];
     
+    trackscroll = NO;
     vblur *blur = [vblur light];
     celwidth = 44;
     NSInteger celheight = 54;
@@ -43,6 +45,7 @@
     [collection setDelegate:self];
     [collection registerClass:[vprofileagecel class] forCellWithReuseIdentifier:celid];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.collection = collection;
     
     [self addSubview:blur];
     [self addSubview:btnaccept];
@@ -71,6 +74,23 @@
 
 #pragma mark -
 #pragma mark col del
+
+-(void)scrollViewDidScroll:(UIScrollView*)scroll
+{
+    if(trackscroll)
+    {
+        CGFloat leftoffset = scroll.contentOffset.x;
+        
+        CGPoint point = CGPointMake(leftoffset + (scroll.bounds.size.width / 2), scroll.bounds.size.height / 2);
+        NSIndexPath *index = [collection indexPathForItemAtPoint:point];
+        
+        if(index)
+        {
+            [self insideselectcountryindex:index.item];
+            [collection selectItemAtIndexPath:index animated:YES scrollPosition:UICollectionViewScrollPositionNone];
+        }
+    }
+}
 
 -(UIEdgeInsets)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout insetForSectionAtIndex:(NSInteger)section
 {
