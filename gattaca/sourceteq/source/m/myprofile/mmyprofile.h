@@ -1,5 +1,7 @@
 #import "appdel.h"
 
+@class mprofile;
+
 @interface mmyprofile:NSObject
 
 +(instancetype)singleton;
@@ -9,6 +11,7 @@
 -(void)updategender:(profile_gender)newgender;
 -(void)updateage:(NSInteger)newage;
 
+@property(strong, nonatomic)mprofile *profile;
 @property(copy, nonatomic)NSString *namestr;
 @property(nonatomic)profile_name nametype;
 @property(nonatomic)profile_gender gender;
