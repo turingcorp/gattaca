@@ -6,4 +6,6 @@
 
 -(instancetype)init:(mprofile*)profile;
 
+@property(weak, nonatomic)mprofile *profile;
+
 @end

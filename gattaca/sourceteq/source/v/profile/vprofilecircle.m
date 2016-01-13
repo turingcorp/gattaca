@@ -9,6 +9,8 @@
     [self setBackgroundColor:[UIColor clearColor]];
     [self setUserInteractionEnabled:NO];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+    self.profile = profile;
     
     return self;
 }
