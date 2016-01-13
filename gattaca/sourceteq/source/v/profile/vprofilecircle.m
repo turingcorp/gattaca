@@ -11,14 +11,9 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
 
     self.profile = profile;
+    self.like = [[vprofilecirclelike alloc] init];
     
     return self;
-}
-
--(void)drawRect:(CGRect)rect
-{
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, 10);
 }
 
 @end
