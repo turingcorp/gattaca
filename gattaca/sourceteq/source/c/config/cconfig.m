@@ -11,7 +11,6 @@
 
 -(void)viewDidLoad
 {
-#warning here
     [super viewDidLoad];
     [self.navigationBar setTintColor:colormain];
     [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontboldname size:16], NSForegroundColorAttributeName:[UIColor blackColor]}];
