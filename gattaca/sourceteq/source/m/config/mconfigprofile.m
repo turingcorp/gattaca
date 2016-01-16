@@ -2,6 +2,8 @@
 
 @implementation mconfigprofile
 
+@synthesize array;
+
 #pragma mark -
 #pragma mark config protocol
 
@@ -28,6 +30,29 @@
 -(UIColor*)color
 {
     return colormain;
+}
+
+-(void)lazyload
+{
+    array = [NSArray arrayWithObjects:
+             [[mconfigprofilename alloc] init],
+             [[mconfigprofileage alloc] init],
+             nil];
+}
+
+-(NSInteger)count
+{
+    if(!array)
+    {
+        [self lazyload];
+    }
+    
+    return array.count;
+}
+
+-(id<mconfigprofileprotocol>)item:(NSInteger)item
+{
+    return array[item];
 }
 
 @end
