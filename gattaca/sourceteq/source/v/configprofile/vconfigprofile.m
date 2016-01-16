@@ -51,7 +51,7 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    return CGSizeMake(self.bounds.size.width, 50);
+    return CGSizeMake(self.bounds.size.width, 60);
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
@@ -72,6 +72,7 @@
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
     vconfigprofilecel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    [cel config:[[(cprofile*)self.controller model] item:index.item]];
     
     return cel;
 }
