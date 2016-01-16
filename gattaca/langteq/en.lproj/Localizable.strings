@@ -24,6 +24,8 @@
 "config_settings_delete_cancel"="Cancel";
 "config_settings_delete_delete"="Delete";
 
+"config_profile_btnedit"="Edit";
+
 "alert_accept"="Accept";
 
 "error_login_facebook"="There was an error login with Facebook, please try again later";
