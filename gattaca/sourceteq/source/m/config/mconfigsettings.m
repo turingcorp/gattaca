@@ -1,36 +1,10 @@
 #import "mconfigsettings.h"
 
 @implementation mconfigsettings
-{
-    NSArray *array;
-}
 
--(void)lazyload
-{
-    array = [NSArray arrayWithObjects:
-             [[mconfigsettingsnotifications alloc] init],
-             [[mconfigsettingsreview alloc] init],
-             [[mconfigsettingslogout alloc] init],
-             [[mconfigsettingsdelete alloc] init],
-             nil];
-}
+@synthesize array;
 
 #pragma mark public
-
--(NSInteger)count
-{
-    if(!array)
-    {
-        [self lazyload];
-    }
-    
-    return array.count;
-}
-
--(id<mconfigsettingsprotocol>)item:(NSInteger)item
-{
-    return array[item];
-}
 
 -(void)registercels:(UICollectionView*)collection
 {
@@ -69,6 +43,31 @@
 -(UIColor*)color
 {
     return [UIColor colorWithRed:1 green:0 blue:0 alpha:1];
+}
+
+-(void)lazyload
+{
+    array = [NSArray arrayWithObjects:
+             [[mconfigsettingsnotifications alloc] init],
+             [[mconfigsettingsreview alloc] init],
+             [[mconfigsettingslogout alloc] init],
+             [[mconfigsettingsdelete alloc] init],
+             nil];
+}
+
+-(NSInteger)count
+{
+    if(!array)
+    {
+        [self lazyload];
+    }
+    
+    return array.count;
+}
+
+-(id<mconfigsettingsprotocol>)item:(NSInteger)item
+{
+    return array[item];
 }
 
 @end

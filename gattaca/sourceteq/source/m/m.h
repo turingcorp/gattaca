@@ -40,3 +40,6 @@
 #import "mconfigsettingsreview.h"
 #import "mconfigsettingslogout.h"
 #import "mconfigsettingsdelete.h"
+#import "mconfigprofileprotocol.h"
+#import "mconfigprofilename.h"
+#import "mconfigprofileage.h"
