@@ -9,7 +9,11 @@
     [self setBackgroundColor:[UIColor whiteColor]];
     
     vprofilecircle *circle = [[vprofilecircle alloc] init:[mmyprofile singleton].profile];
+    
+    UIButton *btn = [[UIButton alloc] init];
+    
     [self addSubview:circle];
+    [self addSubview:btn];
     
     NSDictionary *views = @{@"circle":circle};
     NSDictionary *metrics = @{};
