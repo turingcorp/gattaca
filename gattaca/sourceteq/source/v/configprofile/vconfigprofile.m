@@ -61,7 +61,7 @@
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    return [[(cprofile*)self.controller model] count];
 }
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
@@ -71,7 +71,9 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    return nil;
+    vconfigprofilecel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    
+    return cel;
 }
 
 @end
