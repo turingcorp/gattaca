@@ -35,6 +35,7 @@
 -(void)lazyload
 {
     array = [NSArray arrayWithObjects:
+             [[mconfigprofileedit alloc] init],
              [[mconfigprofilename alloc] init],
              [[mconfigprofileage alloc] init],
              nil];

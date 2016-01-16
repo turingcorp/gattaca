@@ -43,3 +43,4 @@
 #import "mconfigprofileprotocol.h"
 #import "mconfigprofilename.h"
 #import "mconfigprofileage.h"
+#import "mconfigprofileedit.h"

@@ -61,6 +61,7 @@
 		DA3F6E0F1C46BBB8007E2888 /* vprofilecircleground.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F6E0E1C46BBB8007E2888 /* vprofilecircleground.m */; };
 		DA3F6E121C46BC89007E2888 /* vprofilecircleslash.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F6E111C46BC89007E2888 /* vprofilecircleslash.m */; };
 		DA3F6E151C46E08B007E2888 /* vprofilecircleribbon.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F6E141C46E08B007E2888 /* vprofilecircleribbon.m */; };
+		DA462AE11C4AD4F20060265A /* mconfigprofileedit.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AE01C4AD4F20060265A /* mconfigprofileedit.m */; };
 		DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD0C1C3F128F00472BC9 /* calert.m */; };
 		DA46BD111C3F12C000472BC9 /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD101C3F12C000472BC9 /* valert.m */; };
 		DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD131C3F14B800472BC9 /* msectionlogin.m */; };
@@ -221,6 +222,8 @@
 		DA3F6E111C46BC89007E2888 /* vprofilecircleslash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilecircleslash.m; sourceTree = "<group>"; };
 		DA3F6E131C46E08B007E2888 /* vprofilecircleribbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofilecircleribbon.h; sourceTree = "<group>"; };
 		DA3F6E141C46E08B007E2888 /* vprofilecircleribbon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilecircleribbon.m; sourceTree = "<group>"; };
+		DA462ADF1C4AD4F20060265A /* mconfigprofileedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfigprofileedit.h; sourceTree = "<group>"; };
+		DA462AE01C4AD4F20060265A /* mconfigprofileedit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigprofileedit.m; sourceTree = "<group>"; };
 		DA46BD0B1C3F128F00472BC9 /* calert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calert.h; sourceTree = "<group>"; };
 		DA46BD0C1C3F128F00472BC9 /* calert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calert.m; sourceTree = "<group>"; };
 		DA46BD0F1C3F12C000472BC9 /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
@@ -389,7 +392,6 @@
 			isa = PBXGroup;
 			children = (
 				DA2965911C3DB30600BC713E /* m.h */,
-				DAAA3BAD1C49E4BC002FEE26 /* configprofile */,
 				DA2965931C3DB50900BC713E /* general */,
 				DA7AB98E1C44ACA90058756C /* dirs */,
 				DA7AB97E1C449ACC0058756C /* db */,
@@ -397,6 +399,7 @@
 				DA7AB9431C4471340058756C /* myprofile */,
 				DA3097171C3EA9E000E8AFA2 /* login */,
 				DA46BD181C3F403500472BC9 /* config */,
+				DAAA3BAD1C49E4BC002FEE26 /* configprofile */,
 				DA322A271C40BCE8004C6958 /* configsettings */,
 				DA2965DD1C3DF2FF00BC713E /* section */,
 			);
@@ -940,6 +943,8 @@
 				DAAA3BB91C49EFFE002FEE26 /* mconfigprofilename.m */,
 				DAAA3BBB1C49F009002FEE26 /* mconfigprofileage.h */,
 				DAAA3BBC1C49F009002FEE26 /* mconfigprofileage.m */,
+				DA462ADF1C4AD4F20060265A /* mconfigprofileedit.h */,
+				DA462AE01C4AD4F20060265A /* mconfigprofileedit.m */,
 			);
 			path = configprofile;
 			sourceTree = "<group>";
@@ -1140,6 +1145,7 @@
 				DAAA3BBD1C49F009002FEE26 /* mconfigprofileage.m in Sources */,
 				DA2965D51C3DEFFC00BC713E /* clogin.m in Sources */,
 				DA46BD171C3F1B2E00472BC9 /* vblur.m in Sources */,
+				DA462AE11C4AD4F20060265A /* mconfigprofileedit.m in Sources */,
 				DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */,
 				DA3229F31C4018B0004C6958 /* mconfigbrowsing.m in Sources */,
 				DA3229F01C4011FC004C6958 /* mconfigprofile.m in Sources */,
