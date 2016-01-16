@@ -9,7 +9,7 @@
 
 -(UIViewController*)controller
 {
-    return [[cprofile alloc] init];
+    return [[cprofile alloc] init:self];
 }
 
 -(NSString*)title
