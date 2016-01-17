@@ -9,9 +9,20 @@
     [self setBackgroundColor:[UIColor whiteColor]];
     
     UILabel *title = [[UILabel alloc] init];
+    [title setBackgroundColor:[UIColor clearColor]];
+    [title setFont:[UIFont fontWithName:fontname size:13]];
+    [title setUserInteractionEnabled:NO];
+    [title setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [title setTextColor:[UIColor colorWithWhite:0 alpha:0.8]];
     self.title = title;
     
     UILabel *value = [[UILabel alloc] init];
+    [value setBackgroundColor:[UIColor clearColor]];
+    [value setFont:[UIFont fontWithName:fontboldname size:17]];
+    [value setUserInteractionEnabled:NO];
+    [value setTextAlignment:NSTextAlignmentRight];
+    [value setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [value setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
     self.value = value;
     
     [self addSubview:title];
