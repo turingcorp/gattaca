@@ -15,7 +15,7 @@
 
 -(void)config:(id<mconfigprofileprotocol>)item
 {
-    
+    [self.lbl setText:[item]];
 }
 
 @end
