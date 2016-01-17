@@ -4,4 +4,6 @@
 
 -(void)config:(id<mconfigprofileprotocol>)item;
 
+@property(weak, nonatomic)UILabel *lbl;
+
 @end
