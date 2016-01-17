@@ -8,6 +8,14 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
+    UILabel *title = [[UILabel alloc] init];
+    
+    UILabel *value = [[UILabel alloc] init];
+    
+    
+    [self addSubview:title];
+    [self addSubview:value];
+    
     return self;
 }
 
@@ -15,7 +23,8 @@
 
 -(void)config:(id<mconfigprofileprotocol>)item
 {
-    [self.lbl setText:[item]];
+    [self.title setText:[item title]];
+    [self.value setText:[item value]];
 }
 
 @end
