@@ -6,14 +6,13 @@
 {
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
     
     UILabel *lbl = [[UILabel alloc] init];
     [lbl setBackgroundColor:[UIColor clearColor]];
     [lbl setUserInteractionEnabled:NO];
     [lbl setFont:[UIFont fontWithName:fontboldname size:18]];
     [lbl setTextAlignment:NSTextAlignmentRight];
-    [lbl setTextColor:[UIColor colorWithWhite:0 alpha:0.7]];
+    
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.lbl = lbl;
     
@@ -28,9 +27,40 @@
     return self;
 }
 
+-(void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    [self hover];
+}
+
+-(void)setHighlighted:(BOOL)highlighted
+{
+    [super setHighlighted:highlighted];
+    [self hover];
+}
+
+#pragma mark functionality
+
+-(void)hover
+{
+    if(self.isSelected || self.isHighlighted)
+    {
+        [self.lbl setTextColor:[UIColor whiteColor]];
+        [self setBackgroundColor:colormain];
+    }
+    else
+    {
+        [self.lbl setTextColor:colormain];
+        [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.3]];
+    }
+}
+
+#pragma mark public
+
 -(void)config:(mmyprofilename*)name
 {
     [self.lbl setText:name.value];
+    [self hover];
 }
 
 @end

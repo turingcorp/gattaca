@@ -1,13 +1,14 @@
 #import "appdel.h"
 
 @class mprofile;
+@class mmyprofilename;
 
 @interface mmyprofile:NSObject
 
 +(instancetype)singleton;
 -(void)loaduser;
 -(void)updatename:(NSString*)newname;
--(void)changenameto:(profile_name)nametype name:(NSString*)newname;
+-(void)changenameto:(mmyprofilename*)name;
 -(void)updategender:(profile_gender)newgender;
 -(void)updateage:(NSInteger)newage;
 

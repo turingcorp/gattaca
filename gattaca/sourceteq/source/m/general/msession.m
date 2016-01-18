@@ -110,7 +110,7 @@
             newname = [[mmyprofilename alloc] init:profile_name_firstname value:NSLocalizedString(@"profile_default_user", nil)];
         }
         
-        [[mmyprofile singleton] changenameto:newname.type name:newname.value];
+        [[mmyprofile singleton] changenameto:newname];
     }
     
     [self retrievefromfacebook];

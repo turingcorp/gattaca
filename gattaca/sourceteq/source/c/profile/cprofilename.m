@@ -46,11 +46,13 @@
 
 -(void)selectname:(profile_name)type
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:notprofileupdate object:nil];
+    [[analytics singleton] trackevent:ga_event_profile_name action:ga_action_changed label:[NSString stringWithFormat:@"%@", @(type)]];
+    [[mmyprofile singleton] changenameto:[mmyprofilenames namemodel:type]];
     
-//    [[analytics singleton] trackevent:ga_event_profile_age action:ga_action_changed label:[NSString stringWithFormat:@"%@", @(age)]];
-//    [[mmyprofile singleton] updateage:age];
-//    [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
+    [[cmain singleton] dismissViewControllerAnimated:YES completion:
+     ^{
+         [[NSNotificationCenter defaultCenter] postNotificationName:notprofileupdate object:nil];
+     }];
 }
 
 @end

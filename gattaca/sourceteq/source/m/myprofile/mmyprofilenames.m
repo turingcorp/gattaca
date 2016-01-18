@@ -91,7 +91,7 @@
 
 -(void)addifvalid:(profile_name)type
 {
-    mmyprofilename *name = [mmyprofilenames namemodel:profile_name_firstname];
+    mmyprofilename *name = [mmyprofilenames namemodel:type];
     
     if(name)
     {

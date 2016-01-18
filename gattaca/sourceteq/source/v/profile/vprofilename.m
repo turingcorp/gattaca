@@ -46,7 +46,7 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    return CGSizeMake(self.bounds.size.width, 200);
+    return CGSizeMake(self.bounds.size.width, 240);
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
@@ -75,6 +75,11 @@
     [cel config:[self.model name:index.item]];
     
     return cel;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    [(cprofilename*)self.controller selectname:[self.model name:index.item].type];
 }
 
 @end

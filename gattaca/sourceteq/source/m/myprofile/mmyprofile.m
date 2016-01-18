@@ -88,10 +88,10 @@
     [self saveuser];
 }
 
--(void)changenameto:(profile_name)nametype name:(NSString*)newname;
+-(void)changenameto:(mmyprofilename*)name
 {
-    self.nametype = nametype;
-    self.profile.name = newname;
+    self.nametype = name.type;
+    self.profile.name = name.value;
     
     [self saveuser];
 }
