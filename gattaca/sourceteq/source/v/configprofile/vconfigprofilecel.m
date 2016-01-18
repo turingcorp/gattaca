@@ -16,7 +16,7 @@
     
     UILabel *value = [[UILabel alloc] init];
     [value setBackgroundColor:[UIColor clearColor]];
-    [value setFont:[UIFont fontWithName:fontboldname size:20]];
+    [value setFont:[UIFont fontWithName:fontboldname size:18]];
     [value setUserInteractionEnabled:NO];
     [value setTextAlignment:NSTextAlignmentRight];
     [value setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -39,8 +39,8 @@
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-15-[title]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[value]-60-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[title]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[value]-50-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-8-[title]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[value]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[icon(30)]-10-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[icon]-0-|" options:0 metrics:metrics views:views]];
@@ -73,9 +73,9 @@
     }
     else
     {
-        [self.title setTextColor:[UIColor colorWithWhite:0 alpha:0.7]];
-        [self.value setTextColor:[UIColor colorWithWhite:0 alpha:0.35]];
-        [self.icon setTintColor:[UIColor colorWithWhite:0 alpha:0.35]];
+        [self.title setTextColor:[UIColor colorWithWhite:0 alpha:0.8]];
+        [self.value setTextColor:colormain];
+        [self.icon setTintColor:[UIColor colorWithWhite:0 alpha:0.3]];
         [self setBackgroundColor:[UIColor whiteColor]];
     }
 }
