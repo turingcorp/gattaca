@@ -45,19 +45,31 @@
     return [mmyprofilenames validname:name];
 }
 
-+(NSString*)firstvalid
++(mmyprofilename*)namemodel:(profile_name)nametype
 {
-    NSString *name;
+    mmyprofilename *model;
+    NSString *name = [mmyprofilenames namefortype:nametype];
+    
+    if(name)
+    {
+        model = [[mmyprofilename alloc] init:nametype value:name];
+    }
+    
+    return model;
+}
 
-    name = [mmyprofilenames namefortype:profile_name_firstname];
++(mmyprofilename*)firstvalid
+{
+    mmyprofilename *name = [mmyprofilenames namemodel:profile_name_firstname];
+
+    if(!name)
+    {
+        name = [mmyprofilenames namemodel:profile_name_middlename];
+    }
     
     if(!name)
     {
-        name = [mmyprofilenames namefortype:profile_name_middlename];
-    }
-    else
-    {
-        name = [mmyprofilenames namefortype:profile_name_lastname];
+        name = [mmyprofilenames namemodel:profile_name_lastname];
     }
     
     return name;
@@ -69,7 +81,24 @@
     
     array = [NSMutableArray array];
     
+    NSString *firstname = [mmyprofilenames namefortype:profile_name_firstname];
+    NSString *middlename = [mmyprofilenames namefortype:profile_name_middlename];
+    NSString *lastname = [mmyprofilenames namefortype:profile_name_lastname];
     
+    if(firstname)
+    {
+        [array addObject:firstname];
+    }
+    
+    if(middlename)
+    {
+        [array addObject:middlename];
+    }
+    
+    if(lastname)
+    {
+        [array addObject:lastname];
+    }
     
     return self;
 }

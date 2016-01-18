@@ -103,64 +103,14 @@
     }
     else
     {
-        profile_name newtype;
+        mmyprofilename *newname = [mmyprofilenames firstvalid];
         
-        switch([mmyprofile singleton].nametype)
+        if(!newname)
         {
-            case profile_name_firstname:
-                
-                newtype = profile_name_middlename;
-                
-                break;
-                
-            case profile_name_middlename:
-                
-                newtype = profile_name_lastname;
-                
-                break;
-                
-            case profile_name_lastname:
-                
-                newtype = profile_name_firstname;
-                
-                break;
+            newname = [[mmyprofilename alloc] init:profile_name_firstname value:NSLocalizedString(@"profile_default_user", nil)];
         }
         
-        updatename = [self namefortype:newtype];
-        
-        if(![self validname:updatename])
-        {
-            switch([mmyprofile singleton].nametype)
-            {
-                case profile_name_firstname:
-                    
-                    newtype = profile_name_lastname;
-                    
-                    break;
-                    
-                case profile_name_middlename:
-                    
-                    newtype = profile_name_firstname;
-                    
-                    break;
-                    
-                case profile_name_lastname:
-                    
-                    newtype = profile_name_middlename;
-                    
-                    break;
-            }
-            
-            updatename = [self namefortype:newtype];
-            
-            if(![self validname:updatename])
-            {
-                newtype = profile_name_firstname;
-                updatename = NSLocalizedString(@"profile_default_user", nil);
-            }
-        }
-        
-        [[mmyprofile singleton] changenameto:newtype name:updatename];
+        [[mmyprofile singleton] changenameto:newname.type name:newname.value];
     }
     
     [self retrievefromfacebook];
