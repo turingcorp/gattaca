@@ -2,10 +2,20 @@
 
 @implementation cgattaca
 
++(void)test
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^(void)
+                   {
+                       [[cmain singleton] presentViewController:[[cgattaca alloc] init] animated:YES completion:nil];
+                   });
+}
+
 -(instancetype)init
 {
     self = [super init];
     
+    [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
     
     return self;
 }
@@ -21,7 +31,7 @@
 
 -(void)loadView
 {
-    self.view = [[vconfigprofile alloc] init:self];
+    self.view = [[vgattaca alloc] init];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
@@ -32,6 +42,16 @@
 -(BOOL)prefersStatusBarHidden
 {
     return NO;
+}
+
+#pragma mark public
+
+-(void)cancel
+{
+    [[cmain singleton] dismissViewControllerAnimated:YES completion:
+     ^{
+         [[NSNotificationCenter defaultCenter] postNotificationName:notprofileupdate object:nil];
+     }];
 }
 
 @end

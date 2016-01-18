@@ -17,7 +17,7 @@
 
 -(void)change
 {
-    
+    [cgattaca test];
 }
 
 @end

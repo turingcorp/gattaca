@@ -74,6 +74,8 @@
 		DA462AFC1C4D6D810060265A /* vprofilecircleage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AFB1C4D6D810060265A /* vprofilecircleage.m */; };
 		DA462B021C4D86EC0060265A /* cgattaca.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462B011C4D86EC0060265A /* cgattaca.m */; };
 		DA462B051C4D898A0060265A /* vgattaca.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462B041C4D898A0060265A /* vgattaca.m */; };
+		DA462B081C4D8C450060265A /* vgattacaheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462B071C4D8C450060265A /* vgattacaheader.m */; };
+		DA462B0B1C4D8C530060265A /* vgattacacel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462B0A1C4D8C530060265A /* vgattacacel.m */; };
 		DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD0C1C3F128F00472BC9 /* calert.m */; };
 		DA46BD111C3F12C000472BC9 /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD101C3F12C000472BC9 /* valert.m */; };
 		DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD131C3F14B800472BC9 /* msectionlogin.m */; };
@@ -257,6 +259,10 @@
 		DA462B011C4D86EC0060265A /* cgattaca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgattaca.m; sourceTree = "<group>"; };
 		DA462B031C4D898A0060265A /* vgattaca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattaca.h; sourceTree = "<group>"; };
 		DA462B041C4D898A0060265A /* vgattaca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattaca.m; sourceTree = "<group>"; };
+		DA462B061C4D8C450060265A /* vgattacaheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacaheader.h; sourceTree = "<group>"; };
+		DA462B071C4D8C450060265A /* vgattacaheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacaheader.m; sourceTree = "<group>"; };
+		DA462B091C4D8C530060265A /* vgattacacel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacacel.h; sourceTree = "<group>"; };
+		DA462B0A1C4D8C530060265A /* vgattacacel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacacel.m; sourceTree = "<group>"; };
 		DA46BD0B1C3F128F00472BC9 /* calert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calert.h; sourceTree = "<group>"; };
 		DA46BD0C1C3F128F00472BC9 /* calert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calert.m; sourceTree = "<group>"; };
 		DA46BD0F1C3F12C000472BC9 /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
@@ -668,6 +674,10 @@
 			children = (
 				DA462B031C4D898A0060265A /* vgattaca.h */,
 				DA462B041C4D898A0060265A /* vgattaca.m */,
+				DA462B061C4D8C450060265A /* vgattacaheader.h */,
+				DA462B071C4D8C450060265A /* vgattacaheader.m */,
+				DA462B091C4D8C530060265A /* vgattacacel.h */,
+				DA462B0A1C4D8C530060265A /* vgattacacel.m */,
 			);
 			path = gattaca;
 			sourceTree = "<group>";
@@ -1233,6 +1243,7 @@
 				DA2965D51C3DEFFC00BC713E /* clogin.m in Sources */,
 				DA46BD171C3F1B2E00472BC9 /* vblur.m in Sources */,
 				DA462AE11C4AD4F20060265A /* mconfigprofileedit.m in Sources */,
+				DA462B0B1C4D8C530060265A /* vgattacacel.m in Sources */,
 				DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */,
 				DA3229F31C4018B0004C6958 /* mconfigbrowsing.m in Sources */,
 				DA3229F01C4011FC004C6958 /* mconfigprofile.m in Sources */,
@@ -1248,6 +1259,7 @@
 				DA7AB9611C447D300058756C /* mprofilelikescience.m in Sources */,
 				DA4A74511C3D9B240092A405 /* tools.m in Sources */,
 				DA3F6E121C46BC89007E2888 /* vprofilecircleslash.m in Sources */,
+				DA462B081C4D8C450060265A /* vgattacaheader.m in Sources */,
 				DA462AF31C4D3E0C0060265A /* vprofilenameheader.m in Sources */,
 				DA322A061C403A49004C6958 /* vmenucel.m in Sources */,
 				DA46BD221C3F4BA700472BC9 /* vconfigcel.m in Sources */,

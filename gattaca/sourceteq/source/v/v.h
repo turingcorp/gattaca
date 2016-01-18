@@ -34,3 +34,5 @@
 #import "vlogincel.h"
 #import "vloginindicatorcel.h"
 #import "vgattaca.h"
+#import "vgattacaheader.h"
+#import "vgattacacel.h"
