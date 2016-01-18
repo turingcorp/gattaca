@@ -66,6 +66,8 @@
 		DA462AE61C4D363A0060265A /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA462AE31C4D363A0060265A /* next@2x.png */; };
 		DA462AE71C4D363A0060265A /* next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA462AE41C4D363A0060265A /* next@3x.png */; };
 		DA462AEA1C4D39930060265A /* cprofilename.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AE91C4D39930060265A /* cprofilename.m */; };
+		DA462AED1C4D3A4D0060265A /* vprofilename.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AEC1C4D3A4D0060265A /* vprofilename.m */; };
+		DA462AF01C4D3A6B0060265A /* vprofilenamecel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AEF1C4D3A6B0060265A /* vprofilenamecel.m */; };
 		DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD0C1C3F128F00472BC9 /* calert.m */; };
 		DA46BD111C3F12C000472BC9 /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD101C3F12C000472BC9 /* valert.m */; };
 		DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD131C3F14B800472BC9 /* msectionlogin.m */; };
@@ -233,6 +235,10 @@
 		DA462AE41C4D363A0060265A /* next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@3x.png"; sourceTree = "<group>"; };
 		DA462AE81C4D39930060265A /* cprofilename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cprofilename.h; sourceTree = "<group>"; };
 		DA462AE91C4D39930060265A /* cprofilename.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cprofilename.m; sourceTree = "<group>"; };
+		DA462AEB1C4D3A4D0060265A /* vprofilename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofilename.h; sourceTree = "<group>"; };
+		DA462AEC1C4D3A4D0060265A /* vprofilename.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilename.m; sourceTree = "<group>"; };
+		DA462AEE1C4D3A6B0060265A /* vprofilenamecel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofilenamecel.h; sourceTree = "<group>"; };
+		DA462AEF1C4D3A6B0060265A /* vprofilenamecel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilenamecel.m; sourceTree = "<group>"; };
 		DA46BD0B1C3F128F00472BC9 /* calert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calert.h; sourceTree = "<group>"; };
 		DA46BD0C1C3F128F00472BC9 /* calert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calert.m; sourceTree = "<group>"; };
 		DA46BD0F1C3F12C000472BC9 /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
@@ -894,6 +900,10 @@
 				DA4C0EF61C459B8200203315 /* vprofileage.m */,
 				DA4C0F061C45A88100203315 /* vprofileagecel.h */,
 				DA4C0F071C45A88100203315 /* vprofileagecel.m */,
+				DA462AEB1C4D3A4D0060265A /* vprofilename.h */,
+				DA462AEC1C4D3A4D0060265A /* vprofilename.m */,
+				DA462AEE1C4D3A6B0060265A /* vprofilenamecel.h */,
+				DA462AEF1C4D3A6B0060265A /* vprofilenamecel.m */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -1110,6 +1120,7 @@
 				DA322A141C407683004C6958 /* vspinner.m in Sources */,
 				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
 				DA30972D1C3EB8DB00E8AFA2 /* vloginindicatorcel.m in Sources */,
+				DA462AED1C4D3A4D0060265A /* vprofilename.m in Sources */,
 				DA46BD261C3F4DE600472BC9 /* mprofile.m in Sources */,
 				DA7AB9841C449AFD0058756C /* mdbcreate.m in Sources */,
 				DA7AB9421C446E700058756C /* vprofilecircle.m in Sources */,
@@ -1139,6 +1150,7 @@
 				DA7AB9811C449AF10058756C /* mdb.m in Sources */,
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
 				DA4C0F081C45A88100203315 /* vprofileagecel.m in Sources */,
+				DA462AF01C4D3A6B0060265A /* vprofilenamecel.m in Sources */,
 				DA4C0EF11C459A1600203315 /* cprofile.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
 				DA7AB93F1C446E620058756C /* vprofile.m in Sources */,
