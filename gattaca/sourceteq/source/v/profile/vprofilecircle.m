@@ -21,6 +21,8 @@
     vprofilecircleribbon *ribbon = [[vprofilecircleribbon alloc] init:self];
     self.ribbon = ribbon;
     
+    vprofilecircleage *age = [[vprofilecircleage alloc] init];
+    
     [self addSubview:ribbon];
     [self addSubview:like];
     [self addSubview:ground];
