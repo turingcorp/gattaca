@@ -28,7 +28,7 @@
     UIImageView *icon = [[UIImageView alloc] init];
     [icon setClipsToBounds:YES];
     [icon setContentMode:UIViewContentModeScaleAspectFit];
-    [icon setImage:[[UIImage imageNamed:@""] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    [icon setImage:[[UIImage imageNamed:@"next"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     [icon setUserInteractionEnabled:NO];
     [icon setTranslatesAutoresizingMaskIntoConstraints:NO];
     
