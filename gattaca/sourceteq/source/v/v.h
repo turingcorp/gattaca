@@ -27,6 +27,7 @@
 #import "vprofileage.h"
 #import "vprofileagecel.h"
 #import "vprofilename.h"
+#import "vprofilenameheader.h"
 #import "vprofilenamecel.h"
 #import "vlogin.h"
 #import "vlogincel.h"
