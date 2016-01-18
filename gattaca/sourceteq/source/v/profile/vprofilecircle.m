@@ -21,13 +21,15 @@
     vprofilecircleribbon *ribbon = [[vprofilecircleribbon alloc] init:self];
     self.ribbon = ribbon;
     
-    vprofilecircleage *age = [[vprofilecircleage alloc] init];
+    vprofilecircleage *age = [[vprofilecircleage alloc] init:self];
+    self.age = age;
     
+    [self addSubview:age];
     [self addSubview:ribbon];
     [self addSubview:like];
     [self addSubview:ground];
     
-    NSDictionary *views = @{@"like":like, @"ground":ground, @"ribbon":ribbon};
+    NSDictionary *views = @{@"like":like, @"ground":ground, @"ribbon":ribbon, @"age":age};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[like]-0-|" options:0 metrics:metrics views:views]];
@@ -36,6 +38,8 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[ground]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[ribbon]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[ribbon]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[age]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[age]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
