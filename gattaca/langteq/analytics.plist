@@ -14,6 +14,7 @@
 		<string>profile/age</string>
 		<string>profile/name</string>
 		<string>contact</string>
+		<string>gattaca/main</string>
 	</array>
 	<key>events</key>
 	<array>

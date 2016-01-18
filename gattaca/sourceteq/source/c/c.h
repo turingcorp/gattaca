@@ -11,4 +11,5 @@
 #import "cprofilename.h"
 #import "ccontact.h"
 #import "clogin.h"
+#import "cgattaca.h"
 #import "calert.h"

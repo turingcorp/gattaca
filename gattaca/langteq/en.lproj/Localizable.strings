@@ -30,6 +30,8 @@
 "config_profile_edit_title"="Profile";
 "config_profile_edit_descr"="Gattaca test";
 
+"gattaca_main_title"="Gattaca test";
+
 "alert_accept"="Accept";
 
 "error_login_facebook"="There was an error login with Facebook, please try again later";
