@@ -12,6 +12,7 @@
 		<string>config/settings</string>
 		<string>profile</string>
 		<string>profile/age</string>
+		<string>profile/name</string>
 		<string>contact</string>
 	</array>
 	<key>events</key>
@@ -23,6 +24,7 @@
 		<string>config/notifications</string>
 		<string>facebook/profile</string>
 		<string>profile/age</string>
+		<string>profile/name</string>
 	</array>
 	<key>actions</key>
 	<array>

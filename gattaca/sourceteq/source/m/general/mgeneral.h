@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, ga_screen)
     ga_screen_config_settings,
     ga_screen_profile,
     ga_screen_profile_age,
+    ga_screen_profile_name,
     ga_screen_contact
 };
 
@@ -33,7 +34,8 @@ typedef NS_ENUM(NSInteger, ga_event)
     ga_event_apprate,
     ga_event_config_noti,
     ga_event_facebook_profile,
-    ga_event_profile_age
+    ga_event_profile_age,
+    ga_event_profile_name
 };
 
 typedef NS_ENUM(NSInteger, ga_action)
