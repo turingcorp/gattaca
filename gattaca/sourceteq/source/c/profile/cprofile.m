@@ -24,6 +24,8 @@
 {
     [super viewDidAppear:animated];
     
+    NSLog(@"did appear");
+    
     [[(vconfigprofile*)self.view collection] reloadData];
 }
 

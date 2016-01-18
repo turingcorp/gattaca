@@ -17,7 +17,7 @@
 
 -(void)change
 {
-    
+    [cprofilename askname];
 }
 
 @end
