@@ -20,4 +20,30 @@
     return self;
 }
 
+#pragma mark -
+#pragma mark col del
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
+{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
+{
+    return 2;
+}
+
+-(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
+{
+    return [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerid forIndexPath:index];
+}
+
+-(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
+{
+    vgattacacel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+//    [cel ];
+    
+    return cel;
+}
+
 @end
