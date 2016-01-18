@@ -18,11 +18,11 @@
     
     UILabel *value = [[UILabel alloc] init];
     [value setBackgroundColor:[UIColor clearColor]];
-    [value setFont:[UIFont fontWithName:fontboldname size:17]];
+    [value setFont:[UIFont fontWithName:fontboldname size:20]];
     [value setUserInteractionEnabled:NO];
     [value setTextAlignment:NSTextAlignmentRight];
     [value setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [value setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
+    [value setTextColor:[UIColor colorWithWhite:0 alpha:0.4]];
     self.value = value;
     
     [self addSubview:title];
@@ -33,7 +33,7 @@
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[title]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[value]-20-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[title]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[title]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[value]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
