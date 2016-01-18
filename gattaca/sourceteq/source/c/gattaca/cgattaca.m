@@ -31,7 +31,7 @@
 
 -(void)loadView
 {
-    self.view = [[vgattaca alloc] init];
+    self.view = [[vgattaca alloc] init:self];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle

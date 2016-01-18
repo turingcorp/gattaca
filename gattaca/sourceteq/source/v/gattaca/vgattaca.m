@@ -8,8 +8,22 @@
     [self setClipsToBounds:YES];
     
     vblur *blur = [vblur light];
+
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    
+    UICollectionView *collection = [[UICollectionView alloc] init];
+    [collection setClipsToBounds:YES];
+    [collection setBackgroundColor:[UIColor clearColor]];
+    [collection setScrollEnabled:NO];
+    [collection setBounces:NO];
+    [collection setDataSource:self];
+    [collection setDelegate:self];
+    [collection registerClass:[vgattacacel class] forCellWithReuseIdentifier:celid];
+    [collection registerClass:[vgattacaheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
+    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     [self addSubview:blur];
+    [self addSubview:collection];
     
     NSDictionary *views = @{@"blur":blur};
     NSDictionary *metrics = @{};
