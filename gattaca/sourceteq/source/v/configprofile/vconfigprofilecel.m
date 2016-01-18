@@ -25,14 +25,24 @@
     [value setTextColor:[UIColor colorWithWhite:0 alpha:0.4]];
     self.value = value;
     
+    UIImageView *icon = [[UIImageView alloc] init];
+    [icon setClipsToBounds:YES];
+    [icon setContentMode:UIViewContentModeScaleAspectFit];
+    [icon setImage:[[UIImage imageNamed:@""] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    [icon setUserInteractionEnabled:NO];
+    [icon setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    self.icon = icon;
+    
     [self addSubview:title];
     [self addSubview:value];
+    [self addSubview:icon];
     
-    NSDictionary *views = @{@"title":title, @"value":value};
+    NSDictionary *views = @{@"title":title, @"value":value, @"icon":icon};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[title]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[value]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[value]-60-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[title]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[value]-0-|" options:0 metrics:metrics views:views]];
     
