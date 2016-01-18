@@ -59,39 +59,6 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:notmenuchanged object:nil];
 }
 
--(NSString*)namefortype:(profile_name)nametype
-{
-    NSString *name;
-    
-    switch(nametype)
-    {
-        case profile_name_firstname:
-            
-            name = [FBSDKProfile currentProfile].firstName;
-            
-            break;
-            
-        case profile_name_middlename:
-            
-            name = [FBSDKProfile currentProfile].middleName;
-            
-            break;
-            
-        case profile_name_lastname:
-            
-            name = [FBSDKProfile currentProfile].lastName;
-            
-            break;
-    }
-    
-    return name;
-}
-
--(BOOL)validname:(NSString*)name
-{
-    return name && name.length > 1;
-}
-
 -(void)retrievefromfacebook
 {
     [[analytics singleton] trackevent:ga_event_facebook_profile action:ga_action_start label:@""];
@@ -128,9 +95,9 @@
 
 -(void)updateprofile
 {
-    NSString *updatename = [self namefortype:[mmyprofile singleton].nametype];
+    NSString *updatename = [mmyprofilenames namefortype:[mmyprofile singleton].nametype];
     
-    if([self validname:updatename])
+    if(updatename)
     {
         [[mmyprofile singleton] updatename:updatename];
     }
