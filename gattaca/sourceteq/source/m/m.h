@@ -26,6 +26,8 @@
 #import "mmyprofile.h"
 #import "mmyprofileages.h"
 #import "mmyprofileage.h"
+#import "mmyprofilenames.h"
+#import "mmyprofilename.h"
 #import "mlogin.h"
 #import "mloginprotocol.h"
 #import "mloginfirst.h"

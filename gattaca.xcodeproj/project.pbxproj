@@ -69,6 +69,8 @@
 		DA462AED1C4D3A4D0060265A /* vprofilename.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AEC1C4D3A4D0060265A /* vprofilename.m */; };
 		DA462AF01C4D3A6B0060265A /* vprofilenamecel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AEF1C4D3A6B0060265A /* vprofilenamecel.m */; };
 		DA462AF31C4D3E0C0060265A /* vprofilenameheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AF21C4D3E0C0060265A /* vprofilenameheader.m */; };
+		DA462AF61C4D4B160060265A /* mmyprofilenames.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AF51C4D4B160060265A /* mmyprofilenames.m */; };
+		DA462AF91C4D4B210060265A /* mmyprofilename.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AF81C4D4B210060265A /* mmyprofilename.m */; };
 		DA46BD0D1C3F128F00472BC9 /* calert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD0C1C3F128F00472BC9 /* calert.m */; };
 		DA46BD111C3F12C000472BC9 /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD101C3F12C000472BC9 /* valert.m */; };
 		DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46BD131C3F14B800472BC9 /* msectionlogin.m */; };
@@ -242,6 +244,10 @@
 		DA462AEF1C4D3A6B0060265A /* vprofilenamecel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilenamecel.m; sourceTree = "<group>"; };
 		DA462AF11C4D3E0C0060265A /* vprofilenameheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofilenameheader.h; sourceTree = "<group>"; };
 		DA462AF21C4D3E0C0060265A /* vprofilenameheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilenameheader.m; sourceTree = "<group>"; };
+		DA462AF41C4D4B160060265A /* mmyprofilenames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmyprofilenames.h; sourceTree = "<group>"; };
+		DA462AF51C4D4B160060265A /* mmyprofilenames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mmyprofilenames.m; sourceTree = "<group>"; };
+		DA462AF71C4D4B210060265A /* mmyprofilename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmyprofilename.h; sourceTree = "<group>"; };
+		DA462AF81C4D4B210060265A /* mmyprofilename.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mmyprofilename.m; sourceTree = "<group>"; };
 		DA46BD0B1C3F128F00472BC9 /* calert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calert.h; sourceTree = "<group>"; };
 		DA46BD0C1C3F128F00472BC9 /* calert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calert.m; sourceTree = "<group>"; };
 		DA46BD0F1C3F12C000472BC9 /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
@@ -922,6 +928,10 @@
 				DA4C0EFF1C45A34E00203315 /* mmyprofileages.m */,
 				DA4C0F011C45A35A00203315 /* mmyprofileage.h */,
 				DA4C0F021C45A35A00203315 /* mmyprofileage.m */,
+				DA462AF41C4D4B160060265A /* mmyprofilenames.h */,
+				DA462AF51C4D4B160060265A /* mmyprofilenames.m */,
+				DA462AF71C4D4B210060265A /* mmyprofilename.h */,
+				DA462AF81C4D4B210060265A /* mmyprofilename.m */,
 			);
 			path = myprofile;
 			sourceTree = "<group>";
@@ -1124,6 +1134,7 @@
 				DA7AB9871C449B0E0058756C /* mdbclean.m in Sources */,
 				DA322A141C407683004C6958 /* vspinner.m in Sources */,
 				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
+				DA462AF61C4D4B160060265A /* mmyprofilenames.m in Sources */,
 				DA30972D1C3EB8DB00E8AFA2 /* vloginindicatorcel.m in Sources */,
 				DA462AED1C4D3A4D0060265A /* vprofilename.m in Sources */,
 				DA46BD261C3F4DE600472BC9 /* mprofile.m in Sources */,
@@ -1207,6 +1218,7 @@
 				DA70A9BE1C42101D0015A865 /* vconfigsettingsbutton.m in Sources */,
 				DA30972A1C3EB81F00E8AFA2 /* vlogincel.m in Sources */,
 				DA4C0EF41C459B2F00203315 /* cprofileage.m in Sources */,
+				DA462AF91C4D4B210060265A /* mmyprofilename.m in Sources */,
 				DA30971E1C3EAB3C00E8AFA2 /* mloginfirst.m in Sources */,
 				DA2965E71C3DF2FF00BC713E /* msection.m in Sources */,
 				DA322A2B1C40C004004C6958 /* mconfigsettingsdelete.m in Sources */,
