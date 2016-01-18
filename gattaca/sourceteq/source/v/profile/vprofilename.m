@@ -1,13 +1,14 @@
-//
-//  vprofilename.m
-//  gattaca
-//
-//  Created by zero on 1/18/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "vprofilename.h"
 
 @implementation vprofilename
+
+-(instancetype)init:(cprofilename*)controller
+{
+    self = [super init:controller];
+    
+    
+    
+    return self;
+}
 
 @end
