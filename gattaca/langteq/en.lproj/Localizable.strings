@@ -24,7 +24,9 @@
 "config_settings_delete_cancel"="Cancel";
 "config_settings_delete_delete"="Delete";
 
-"config_profile_btnedit"="Edit";
+"config_profile_name_title"="Your name";
+"config_profile_age_title"="Your age";
+"config_profile_edit_title"="Edit profile";
 
 "alert_accept"="Accept";
 

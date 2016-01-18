@@ -7,10 +7,15 @@
 
 -(NSString*)title
 {
-    
+    return NSLocalizedString(@"config_profile_name_title", nil);
 }
 
 -(NSString*)value
+{
+    return @"";
+}
+
+-(void)change
 {
     
 }
