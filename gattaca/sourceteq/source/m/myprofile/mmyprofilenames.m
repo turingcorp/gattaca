@@ -80,34 +80,23 @@
     self = [super init];
     
     array = [NSMutableArray array];
-    
-    NSString *firstname = [mmyprofilenames namefortype:profile_name_firstname];
-    NSString *middlename = [mmyprofilenames namefortype:profile_name_middlename];
-    NSString *lastname = [mmyprofilenames namefortype:profile_name_lastname];
-    
-    if(firstname)
-    {
-        [array addObject:firstname];
-    }
-    
-    if(middlename)
-    {
-        [array addObject:middlename];
-    }
-    
-    if(lastname)
-    {
-        [array addObject:lastname];
-    }
+    [self addifvalid:profile_name_firstname];
+    [self addifvalid:profile_name_middlename];
+    [self addifvalid:profile_name_lastname];
     
     return self;
 }
 
 #pragma mark functionality
 
--(void)add:(profile_name)type value:(NSString*)value
+-(void)addifvalid:(profile_name)type
 {
-    [array addObject:[[mmyprofilename alloc] init:type value:value]];
+    mmyprofilename *name = [mmyprofilenames namemodel:profile_name_firstname];
+    
+    if(name)
+    {
+        [array addObject:name];
+    }
 }
 
 #pragma mark public
