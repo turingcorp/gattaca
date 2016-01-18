@@ -4,6 +4,7 @@
 @class vprofilecircleribbon;
 @class vprofilecirclelike;
 @class vprofilecircleground;
+@class vprofilecircleage;
 
 @interface vprofilecircle:UIView
 
@@ -13,5 +14,6 @@
 @property(weak, nonatomic)vprofilecircleribbon *ribbon;
 @property(weak, nonatomic)vprofilecirclelike *like;
 @property(weak, nonatomic)vprofilecircleground *ground;
+@property(weak, nonatomic)vprofilecircleage *age;
 
 @end
