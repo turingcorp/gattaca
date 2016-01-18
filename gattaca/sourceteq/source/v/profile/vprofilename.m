@@ -6,6 +6,7 @@
 {
     self = [super init:controller];
     
+    self.model = [[mmyprofilenames alloc] init];
     vblur *blur = [vblur light];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
@@ -60,7 +61,7 @@
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.model count];
 }
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
@@ -71,6 +72,7 @@
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
     vprofilenamecel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    [cel config:[self.model name:index.item]];
     
     return cel;
 }
