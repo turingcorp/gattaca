@@ -12,7 +12,7 @@
 
 -(NSString*)value
 {
-    return @"";
+    return NSLocalizedString(@"config_profile_edit_descr", nil);
 }
 
 -(void)change

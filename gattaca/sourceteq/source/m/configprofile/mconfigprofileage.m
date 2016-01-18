@@ -12,7 +12,7 @@
 
 -(NSString*)value
 {
-    return @"";
+    return [NSString stringWithFormat:@"%@", @([mmyprofile singleton].profile.age)];
 }
 
 -(void)change

@@ -26,7 +26,8 @@
 
 "config_profile_name_title"="Your name";
 "config_profile_age_title"="Your age";
-"config_profile_edit_title"="Edit profile";
+"config_profile_edit_title"="Profile";
+"config_profile_edit_descr"="Take the Gattaca test";
 
 "alert_accept"="Accept";
 

@@ -10,10 +10,10 @@
     
     UILabel *title = [[UILabel alloc] init];
     [title setBackgroundColor:[UIColor clearColor]];
-    [title setFont:[UIFont fontWithName:fontname size:13]];
+    [title setFont:[UIFont fontWithName:fontname size:14]];
     [title setUserInteractionEnabled:NO];
     [title setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [title setTextColor:[UIColor colorWithWhite:0 alpha:0.8]];
+    [title setTextColor:[UIColor colorWithWhite:0 alpha:0.7]];
     self.title = title;
     
     UILabel *value = [[UILabel alloc] init];

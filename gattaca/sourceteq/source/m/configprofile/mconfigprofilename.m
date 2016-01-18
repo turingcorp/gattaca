@@ -12,7 +12,7 @@
 
 -(NSString*)value
 {
-    return @"";
+    return [mmyprofile singleton].profile.name;
 }
 
 -(void)change
