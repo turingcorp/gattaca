@@ -24,6 +24,7 @@
     [collection setDataSource:self];
     [collection registerClass:[vprofilenameheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
     [collection registerClass:[vprofilenamecel class] forCellWithReuseIdentifier:celid];
+    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     [self addSubview:blur];
     [self addSubview:collection];

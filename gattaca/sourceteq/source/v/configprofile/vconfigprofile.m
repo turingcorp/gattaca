@@ -36,7 +36,25 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedupdateprofile:) name:notprofileupdate object:nil];
+    
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedupdateprofile:(NSNotification*)notification
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^(void)
+                   {
+                       [self.collection reloadData];
+                   });
 }
 
 #pragma mark -

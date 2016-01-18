@@ -20,15 +20,6 @@
     [[analytics singleton] trackscreen:ga_screen_profile];
 }
 
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    NSLog(@"did appear");
-    
-    [[(vconfigprofile*)self.view collection] reloadData];
-}
-
 -(void)loadView
 {
     self.view = [[vconfigprofile alloc] init:self];
