@@ -17,6 +17,12 @@
     
     [self addSubview:lbl];
     
+    NSDictionary *views = @{@"lbl":lbl};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[lbl]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[lbl]-0-|" options:0 metrics:metrics views:views]];
+    
     return self;
 }
 
@@ -49,6 +55,7 @@
 -(void)showaccept
 {
     self.accept = YES;
+    [self.lbl setText:NSLocalizedString(@"gattaca_main_accept", nil)];
     
     [self hover];
 }
@@ -56,6 +63,7 @@
 -(void)showcancel
 {
     self.accept = NO;
+    [self.lbl setText:NSLocalizedString(@"gattaca_main_cancel", nil)];
     
     [self hover];
 }

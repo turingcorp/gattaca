@@ -1,5 +1,6 @@
 #import "appdel.h"
+#import "viewbase.h"
 
-@interface vgattaca:UIView<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface vgattaca:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @end

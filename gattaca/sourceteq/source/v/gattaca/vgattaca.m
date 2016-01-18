@@ -2,9 +2,9 @@
 
 @implementation vgattaca
 
--(instancetype)init
+-(instancetype)init:(cgattaca*)controller
 {
-    self = [super init];
+    self = [super init:controller];
     [self setClipsToBounds:YES];
     
     vblur *blur = [vblur light];
@@ -41,9 +41,29 @@
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
     vgattacacel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
-//    [cel ];
+    
+    if(index.item)
+    {
+        [cel showcancel];
+    }
+    else
+    {
+        [cel showaccept];
+    }
     
     return cel;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    if(index.item)
+    {
+        [(cgattaca*)self.controller cancel];
+    }
+    else
+    {
+        
+    }
 }
 
 @end
