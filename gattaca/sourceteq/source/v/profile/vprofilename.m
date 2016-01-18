@@ -8,7 +8,6 @@
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
-    [flow setHeaderReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:10];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
@@ -21,6 +20,7 @@
     [collection setBounces:NO];
     [collection setDelegate:self];
     [collection setDataSource:self];
+    [collection registerClass:[vprofilenameheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
     [collection registerClass:[vprofilenamecel class] forCellWithReuseIdentifier:celid];
     
     [self addSubview:collection];
@@ -31,9 +31,14 @@
 #pragma mark -
 #pragma mark col del
 
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    return CGSizeMake(self.bounds.size.width, 200);
+}
+
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    return CGSizeMake(self.bounds.size.width, 80);
+    return CGSizeMake(self.bounds.size.width, 70);
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
