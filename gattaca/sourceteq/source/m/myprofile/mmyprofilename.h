@@ -1,13 +1,10 @@
-//
-//  mmyprofilename.h
-//  gattaca
-//
-//  Created by zero on 1/18/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface mmyprofilename:NSObject
 
-@interface mmyprofilename : NSObject
+-(instancetype)init:(profile_name)type value:(NSString*)value;
+
+@property(copy, nonatomic)NSString *value;
+@property(nonatomic)profile_name type;
 
 @end
