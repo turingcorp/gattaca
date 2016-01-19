@@ -42,6 +42,8 @@
 		DA05806F1C4EF32F007FF899 /* test_02_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA0580631C4EF32F007FF899 /* test_02_4.jpg */; };
 		DA0580701C4EF32F007FF899 /* test_02_4@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA0580641C4EF32F007FF899 /* test_02_4@2x.jpg */; };
 		DA0580711C4EF32F007FF899 /* test_02_4@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA0580651C4EF32F007FF899 /* test_02_4@3x.jpg */; };
+		DA0580741C4EF54A007FF899 /* cgattacaend.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580731C4EF54A007FF899 /* cgattacaend.m */; };
+		DA0580771C4EF654007FF899 /* vgattacaend.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580761C4EF654007FF899 /* vgattacaend.m */; };
 		DA2965961C3DB72C00BC713E /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2965951C3DB72C00BC713E /* analytics.plist */; };
 		DA29659D1C3DC3E300BC713E /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA29659C1C3DC3E300BC713E /* cmain.m */; };
 		DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A21C3DC72C00BC713E /* cbrowse.m */; };
@@ -214,6 +216,10 @@
 		DA0580631C4EF32F007FF899 /* test_02_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_02_4.jpg; sourceTree = "<group>"; };
 		DA0580641C4EF32F007FF899 /* test_02_4@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test_02_4@2x.jpg"; sourceTree = "<group>"; };
 		DA0580651C4EF32F007FF899 /* test_02_4@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test_02_4@3x.jpg"; sourceTree = "<group>"; };
+		DA0580721C4EF54A007FF899 /* cgattacaend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgattacaend.h; sourceTree = "<group>"; };
+		DA0580731C4EF54A007FF899 /* cgattacaend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgattacaend.m; sourceTree = "<group>"; };
+		DA0580751C4EF654007FF899 /* vgattacaend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacaend.h; sourceTree = "<group>"; };
+		DA0580761C4EF654007FF899 /* vgattacaend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacaend.m; sourceTree = "<group>"; };
 		DA2965901C3DB2F900BC713E /* c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
 		DA2965911C3DB30600BC713E /* m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
 		DA2965921C3DB30D00BC713E /* v.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
@@ -810,6 +816,8 @@
 				DA0580571C4EAB6C007FF899 /* vgattacatesterfooter.m */,
 				DA05801F1C4E850B007FF899 /* vgattacatestercel.h */,
 				DA0580201C4E850B007FF899 /* vgattacatestercel.m */,
+				DA0580751C4EF654007FF899 /* vgattacaend.h */,
+				DA0580761C4EF654007FF899 /* vgattacaend.m */,
 			);
 			path = gattaca;
 			sourceTree = "<group>";
@@ -836,6 +844,8 @@
 				DA462B011C4D86EC0060265A /* cgattaca.m */,
 				DA0580531C4EA9B8007FF899 /* cgattacatester.h */,
 				DA0580541C4EA9B8007FF899 /* cgattacatester.m */,
+				DA0580721C4EF54A007FF899 /* cgattacaend.h */,
+				DA0580731C4EF54A007FF899 /* cgattacaend.m */,
 			);
 			path = gattaca;
 			sourceTree = "<group>";
@@ -1363,6 +1373,7 @@
 				DA7AB9461C44714A0058756C /* mmyprofile.m in Sources */,
 				DA322A1D1C409A52004C6958 /* cconfigmain.m in Sources */,
 				DA4C0F031C45A35A00203315 /* mmyprofileage.m in Sources */,
+				DA0580741C4EF54A007FF899 /* cgattacaend.m in Sources */,
 				DA2965B41C3DDDE800BC713E /* vconfig.m in Sources */,
 				DA30971A1C3EAAA800E8AFA2 /* mlogin.m in Sources */,
 				DA322A341C40C0C2004C6958 /* mconfigsettingslogout.m in Sources */,
@@ -1449,6 +1460,7 @@
 				DA30972A1C3EB81F00E8AFA2 /* vlogincel.m in Sources */,
 				DA4C0EF41C459B2F00203315 /* cprofileage.m in Sources */,
 				DA462AF91C4D4B210060265A /* mmyprofilename.m in Sources */,
+				DA0580771C4EF654007FF899 /* vgattacaend.m in Sources */,
 				DA30971E1C3EAB3C00E8AFA2 /* mloginfirst.m in Sources */,
 				DA462B051C4D898A0060265A /* vgattaca.m in Sources */,
 				DA2965E71C3DF2FF00BC713E /* msection.m in Sources */,

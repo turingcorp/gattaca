@@ -40,3 +40,4 @@
 #import "vgattacatesterheader.h"
 #import "vgattacatesterfooter.h"
 #import "vgattacatestercel.h"
+#import "vgattacaend.h"

@@ -1,8 +1,8 @@
-#import "cgattacatester.h"
+#import "cgattacaend.h"
 
-@implementation cgattacatester
+@implementation cgattacaend
 
-+(void)start
++(void)finish
 {
     dispatch_async(dispatch_get_main_queue(),
                    ^(void)
@@ -16,7 +16,6 @@
     self = [super init];
     
     [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
-    self.test = [mgattacatest test];
     
     return self;
 }
@@ -30,10 +29,7 @@
 
 -(void)loadView
 {
-    self.view = [[vgattacatester alloc] init:self];
-    self.viewtester = (vgattacatester*)self.view;
-    
-    [self showcurrent];
+    self.view = [[vgattacaend alloc] init:self];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
@@ -46,13 +42,6 @@
     return NO;
 }
 
-#pragma mark functionality
-
--(void)showcurrent
-{
-    [self.viewtester load:[self.test current]];
-}
-
 #pragma mark public
 
 -(void)cancel
@@ -61,21 +50,6 @@
      ^{
          [[NSNotificationCenter defaultCenter] postNotificationName:notprofileupdate object:nil];
      }];
-}
-
--(void)nextstep
-{
-    if([self.test next])
-    {
-        [self showcurrent];
-    }
-    else
-    {
-        [[cmain singleton] dismissViewControllerAnimated:NO completion:
-         ^{
-             [cgattacaend finish];
-         }];
-    }
 }
 
 @end

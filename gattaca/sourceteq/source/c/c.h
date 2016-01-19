@@ -13,4 +13,5 @@
 #import "clogin.h"
 #import "cgattaca.h"
 #import "cgattacatester.h"
+#import "cgattacaend.h"
 #import "calert.h"
