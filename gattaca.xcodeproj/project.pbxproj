@@ -28,6 +28,7 @@
 		DA0580501C4E94E3007FF899 /* test_01_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA05804D1C4E94E3007FF899 /* test_01_4.jpg */; };
 		DA0580511C4E94E3007FF899 /* test_01_4@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA05804E1C4E94E3007FF899 /* test_01_4@2x.jpg */; };
 		DA0580521C4E94E3007FF899 /* test_01_4@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA05804F1C4E94E3007FF899 /* test_01_4@3x.jpg */; };
+		DA0580551C4EA9B8007FF899 /* cgattacatester.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580541C4EA9B8007FF899 /* cgattacatester.m */; };
 		DA2965961C3DB72C00BC713E /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2965951C3DB72C00BC713E /* analytics.plist */; };
 		DA29659D1C3DC3E300BC713E /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA29659C1C3DC3E300BC713E /* cmain.m */; };
 		DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A21C3DC72C00BC713E /* cbrowse.m */; };
@@ -184,6 +185,8 @@
 		DA05804D1C4E94E3007FF899 /* test_01_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_01_4.jpg; sourceTree = "<group>"; };
 		DA05804E1C4E94E3007FF899 /* test_01_4@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test_01_4@2x.jpg"; sourceTree = "<group>"; };
 		DA05804F1C4E94E3007FF899 /* test_01_4@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test_01_4@3x.jpg"; sourceTree = "<group>"; };
+		DA0580531C4EA9B8007FF899 /* cgattacatester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgattacatester.h; sourceTree = "<group>"; };
+		DA0580541C4EA9B8007FF899 /* cgattacatester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgattacatester.m; sourceTree = "<group>"; };
 		DA2965901C3DB2F900BC713E /* c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
 		DA2965911C3DB30600BC713E /* m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
 		DA2965921C3DB30D00BC713E /* v.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
@@ -782,6 +785,8 @@
 			children = (
 				DA462B001C4D86EC0060265A /* cgattaca.h */,
 				DA462B011C4D86EC0060265A /* cgattaca.m */,
+				DA0580531C4EA9B8007FF899 /* cgattacatester.h */,
+				DA0580541C4EA9B8007FF899 /* cgattacatester.m */,
 			);
 			path = gattaca;
 			sourceTree = "<group>";
@@ -1339,6 +1344,7 @@
 				DA4A744D1C3D9B240092A405 /* appdel.m in Sources */,
 				DA3097211C3EAB4700E8AFA2 /* mloginsecond.m in Sources */,
 				DA4A74501C3D9B240092A405 /* analytics.m in Sources */,
+				DA0580551C4EA9B8007FF899 /* cgattacatester.m in Sources */,
 				DA7AB98D1C44A8B00058756C /* vloading.m in Sources */,
 				DAAA3BBA1C49EFFE002FEE26 /* mconfigprofilename.m in Sources */,
 				DA7AB92F1C44615C0058756C /* vconfigprofile.m in Sources */,

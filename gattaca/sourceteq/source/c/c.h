@@ -12,4 +12,5 @@
 #import "ccontact.h"
 #import "clogin.h"
 #import "cgattaca.h"
+#import "cgattacatester.h"
 #import "calert.h"

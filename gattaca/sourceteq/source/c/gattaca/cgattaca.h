@@ -4,5 +4,6 @@
 
 +(void)test;
 -(void)cancel;
+-(void)starttest;
 
 @end

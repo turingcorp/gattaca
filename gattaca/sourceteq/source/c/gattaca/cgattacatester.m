@@ -1,13 +1,13 @@
-#import "cgattaca.h"
+#import "cgattacatester.h"
 
-@implementation cgattaca
+@implementation cgattacatester
 
-+(void)test
++(void)start
 {
     dispatch_async(dispatch_get_main_queue(),
                    ^(void)
                    {
-                       [[cmain singleton] presentViewController:[[cgattaca alloc] init] animated:YES completion:nil];
+                       [[cmain singleton] presentViewController:[[cgattacatester alloc] init] animated:YES completion:nil];
                    });
 }
 
@@ -25,8 +25,6 @@
     [super viewDidLoad];
     
     [self setTitle:NSLocalizedString(@"gattaca_main_title", nil)];
-    
-    [[analytics singleton] trackscreen:ga_screen_gattaca_main];
 }
 
 -(void)loadView
@@ -36,7 +34,7 @@
 
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
-    return UIStatusBarStyleDefault;
+    return UIStatusBarStyleLightContent;
 }
 
 -(BOOL)prefersStatusBarHidden
@@ -51,14 +49,6 @@
     [[cmain singleton] dismissViewControllerAnimated:YES completion:
      ^{
          [[NSNotificationCenter defaultCenter] postNotificationName:notprofileupdate object:nil];
-     }];
-}
-
--(void)starttest
-{
-    [[cmain singleton] dismissViewControllerAnimated:YES completion:
-     ^{
-         
      }];
 }
 
