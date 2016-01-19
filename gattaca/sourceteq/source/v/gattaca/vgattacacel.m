@@ -13,6 +13,7 @@
     [lbl setFont:[UIFont fontWithName:fontboldname size:20]];
     [lbl setUserInteractionEnabled:NO];
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [lbl setTextAlignment:NSTextAlignmentCenter];
     self.lbl = lbl;
     
     [self addSubview:lbl];
@@ -57,8 +58,8 @@
     }
     else
     {
-        [self.lbl setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
-        [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.4]];
+        [self.lbl setTextColor:[UIColor colorWithWhite:0 alpha:0.4]];
+        [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.2]];
     }
 }
 
