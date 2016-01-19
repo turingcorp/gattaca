@@ -29,16 +29,24 @@
     [bg setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.bg = bg;
     
+    UIView *bgline = [[UIView alloc] init];
+    [bgline setUserInteractionEnabled:NO];
+    [bgline setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.bgline = bgline;
+
+    [self addSubview:bgline];
     [self addSubview:bg];
     [self addSubview:image];
     
-    NSDictionary *views = @{@"image":image, @"bg":bg};
+    NSDictionary *views = @{@"image":image, @"bg":bg, @"line":bgline};
     NSDictionary *metrics = @{@"border":@(border), @"inborder":@(inborder), @"margin":@(margin)};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(border)-[bg]-(border)-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bg]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(inborder)-[image]-(inborder)-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(margin)-[image]-(margin)-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[line]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-61-[line(4)]-61-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -62,10 +70,12 @@
     if(self.isSelected || self.isHighlighted)
     {
         [self.bg setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.2]];
+        [self.bgline setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.2]];
     }
     else
     {
         [self.bg setBackgroundColor:[UIColor clearColor]];
+        [self.bgline setBackgroundColor:[UIColor clearColor]];
     }
 }
 
