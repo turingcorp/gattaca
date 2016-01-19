@@ -10,9 +10,13 @@
     {
         case test_step_like:
             
+            self.title = NSLocalizedString(@"gattaca_tester_title_like", nil);
+            
             break;
             
         case test_step_ground:
+            
+            self.title = NSLocalizedString(@"gattaca_tester_title_ground", nil);
             
             break;
     }
