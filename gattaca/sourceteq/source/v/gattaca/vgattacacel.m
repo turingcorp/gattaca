@@ -26,6 +26,18 @@
     return self;
 }
 
+-(void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    [self hover];
+}
+
+-(void)setHighlighted:(BOOL)highlighted
+{
+    [super setHighlighted:highlighted];
+    [self hover];
+}
+
 #pragma mark functionality
 
 -(void)hover
@@ -46,7 +58,7 @@
     else
     {
         [self.lbl setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
-        [self setBackgroundColor:[UIColor whiteColor]];
+        [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.4]];
     }
 }
 
