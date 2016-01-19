@@ -67,16 +67,19 @@
 
 -(void)hover
 {
+    UIColor *color;
+    
     if(self.isSelected || self.isHighlighted)
     {
-        [self.bg setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.2]];
-        [self.bgline setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.2]];
+        color = [UIColor colorWithWhite:1 alpha:0.8];
     }
     else
     {
-        [self.bg setBackgroundColor:[UIColor clearColor]];
-        [self.bgline setBackgroundColor:[UIColor clearColor]];
+        color = [UIColor clearColor];
     }
+    
+    [self.bg setBackgroundColor:color];
+    [self.bgline setBackgroundColor:color];
 }
 
 #pragma mark public
