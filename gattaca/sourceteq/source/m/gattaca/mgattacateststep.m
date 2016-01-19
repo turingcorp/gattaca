@@ -2,12 +2,14 @@
 
 @implementation mgattacateststep
 {
-    NSMutableArray *items;
+    NSMutableArray *array;
 }
 
 +(instancetype)parse:(NSDictionary*)dictionary
 {
     mgattacateststep *step = [[mgattacateststep alloc] init];
+    
+    
     
     return step;
 }
@@ -17,6 +19,18 @@
     self = [super init];
     
     return self;
+}
+
+#pragma mark public
+
+-(NSInteger)count
+{
+    return array.count;
+}
+
+-(mgattacateststepitem*)item:(NSInteger)item;
+{
+    return array[item];
 }
 
 @end
