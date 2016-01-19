@@ -10,6 +10,7 @@
     vblur *blur = [vblur light];
 
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    [flow setHeaderReferenceSize:CGSizeZero];
     
     UICollectionView *collection = [[UICollectionView alloc] init];
     [collection setClipsToBounds:YES];
