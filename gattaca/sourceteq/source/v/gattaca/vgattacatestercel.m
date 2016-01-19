@@ -11,7 +11,7 @@
     UIImageView *image = [[UIImageView alloc] init];
     [image setTranslatesAutoresizingMaskIntoConstraints:NO];
     [image setClipsToBounds:YES];
-    [image setContentMode:UIViewContentModeCenter];
+    [image setContentMode:UIViewContentModeScaleAspectFit];
     [image setUserInteractionEnabled:NO];
     [image.layer setCornerRadius:60];
     
