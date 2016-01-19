@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D2233BBF0363DC0A31972538 /* libPods-gattaca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 172D94B9242E43D73828A848 /* libPods-gattaca.a */; };
+		DA05801B1C4E8418007FF899 /* vgattacatester.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801A1C4E8418007FF899 /* vgattacatester.m */; };
 		DA2965961C3DB72C00BC713E /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2965951C3DB72C00BC713E /* analytics.plist */; };
 		DA29659D1C3DC3E300BC713E /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA29659C1C3DC3E300BC713E /* cmain.m */; };
 		DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A21C3DC72C00BC713E /* cbrowse.m */; };
@@ -137,6 +138,8 @@
 		172D94B9242E43D73828A848 /* libPods-gattaca.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gattaca.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4478D6F5F04BF335E780B7FA /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
 		CCA345502A1E697843858F3E /* Pods-gattaca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.release.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.release.xcconfig"; sourceTree = "<group>"; };
+		DA0580191C4E8418007FF899 /* vgattacatester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatester.h; sourceTree = "<group>"; };
+		DA05801A1C4E8418007FF899 /* vgattacatester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacatester.m; sourceTree = "<group>"; };
 		DA2965901C3DB2F900BC713E /* c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
 		DA2965911C3DB30600BC713E /* m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
 		DA2965921C3DB30D00BC713E /* v.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
@@ -678,6 +681,8 @@
 				DA462B071C4D8C450060265A /* vgattacaheader.m */,
 				DA462B091C4D8C530060265A /* vgattacacel.h */,
 				DA462B0A1C4D8C530060265A /* vgattacacel.m */,
+				DA0580191C4E8418007FF899 /* vgattacatester.h */,
+				DA05801A1C4E8418007FF899 /* vgattacatester.m */,
 			);
 			path = gattaca;
 			sourceTree = "<group>";
@@ -1276,6 +1281,7 @@
 				DA462B051C4D898A0060265A /* vgattaca.m in Sources */,
 				DA2965E71C3DF2FF00BC713E /* msection.m in Sources */,
 				DA322A2B1C40C004004C6958 /* mconfigsettingsdelete.m in Sources */,
+				DA05801B1C4E8418007FF899 /* vgattacatester.m in Sources */,
 				DA4C0EF71C459B8200203315 /* vprofileage.m in Sources */,
 				DA7AB9321C44668C0058756C /* vconfigprofileheader.m in Sources */,
 			);

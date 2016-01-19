@@ -36,3 +36,4 @@
 #import "vgattaca.h"
 #import "vgattacaheader.h"
 #import "vgattacacel.h"
+#import "vgattacatester.h"
