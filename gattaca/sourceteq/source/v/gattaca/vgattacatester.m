@@ -26,11 +26,16 @@
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.collection = collection;
     
+    vblur *blur = [vblur dark];
+    
+    [self addSubview:blur];
     [self addSubview:collection];
     
-    NSDictionary *views = @{@"col":collection};
+    NSDictionary *views = @{@"col":collection, @"blur":blur};
     NSDictionary *metrics = @{};
     
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
@@ -77,7 +82,7 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForFooterInSection:(NSInteger)section
 {
-    return CGSizeMake(self.bounds.size.width, 100);
+    return CGSizeMake(self.bounds.size.width, 50);
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
@@ -97,7 +102,7 @@
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.step count];
 }
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index

@@ -30,7 +30,7 @@
 
 -(void)loadView
 {
-    self.view = [[vgattaca alloc] init:self];
+    self.view = [[vgattacatester alloc] init:self];
     self.viewtester = (vgattacatester*)self.view;
     
     [self showcurrent];
