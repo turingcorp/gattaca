@@ -6,9 +6,14 @@
 {
     self = [super init:controller];
     
-    self.step = 
-    
     return self;
+}
+
+#pragma mark public
+
+-(void)load:(mgattacateststep*)step
+{
+    self.step = step;
 }
 
 #pragma mark -

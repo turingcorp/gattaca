@@ -6,5 +6,6 @@
 -(void)cancel;
 
 @property(strong, nonatomic)mgattacatest *test;
+@property(weak, nonatomic)vgattacatester *viewtester;
 
 @end

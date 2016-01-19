@@ -31,6 +31,9 @@
 -(void)loadView
 {
     self.view = [[vgattaca alloc] init:self];
+    self.viewtester = (vgattacatester*)self.view;
+    
+    [self.viewtester load:<#(mgattacateststep *)#>];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
