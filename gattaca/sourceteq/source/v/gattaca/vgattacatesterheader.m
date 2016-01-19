@@ -13,9 +13,8 @@
 
 #pragma mark public
 
--(void)config:(NSString*)title
+-(void)config:(mgattacateststeptitle*)title
 {
-    [self.lbl setText:title]
 }
 
 @end
