@@ -4,5 +4,6 @@
 
 +(instancetype)test;
 -(NSInteger)count;
+-(mgattacateststep*)step:(NSInteger)item;
 
 @end

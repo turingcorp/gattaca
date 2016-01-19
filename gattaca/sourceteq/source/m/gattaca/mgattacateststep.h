@@ -1,13 +1,7 @@
-//
-//  mgattacateststep.h
-//  gattaca
-//
-//  Created by zero on 1/19/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface mgattacateststep:NSObject
 
-@interface mgattacateststep : NSObject
++(instancetype)parse:(NSDictionary*)dictionary;
 
 @end

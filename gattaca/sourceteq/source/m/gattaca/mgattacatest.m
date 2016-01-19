@@ -14,6 +14,10 @@
     while(count)
     {
         NSInteger index = arc4random_uniform((CGFloat)count);
+        NSDictionary *rawitem = rawsteps[index];
+        [rawsteps removeObjectAtIndex:index];
+        
+        [test addstep:[mgattacateststep parse:rawitem]];
         
         count = rawsteps.count;
     }
@@ -42,6 +46,11 @@
 -(NSInteger)count
 {
     return array.count;
+}
+
+-(mgattacateststep*)step:(NSInteger)item
+{
+    return array[item];
 }
 
 @end
