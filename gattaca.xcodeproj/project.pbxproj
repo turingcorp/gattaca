@@ -16,6 +16,9 @@
 		DA0580331C4E8682007FF899 /* mgattacateststeptitle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580321C4E8682007FF899 /* mgattacateststeptitle.m */; };
 		DA0580361C4E868F007FF899 /* mgattacateststepitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580351C4E868F007FF899 /* mgattacateststepitem.m */; };
 		DA0580381C4E8859007FF899 /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA0580371C4E8859007FF899 /* test.plist */; };
+		DA05803E1C4E8B92007FF899 /* test_01_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA05803B1C4E8B92007FF899 /* test_01_1.jpg */; };
+		DA05803F1C4E8B92007FF899 /* test_01_1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA05803C1C4E8B92007FF899 /* test_01_1@2x.jpg */; };
+		DA0580401C4E8B92007FF899 /* test_01_1@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA05803D1C4E8B92007FF899 /* test_01_1@3x.jpg */; };
 		DA2965961C3DB72C00BC713E /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2965951C3DB72C00BC713E /* analytics.plist */; };
 		DA29659D1C3DC3E300BC713E /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA29659C1C3DC3E300BC713E /* cmain.m */; };
 		DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A21C3DC72C00BC713E /* cbrowse.m */; };
@@ -160,6 +163,9 @@
 		DA0580341C4E868F007FF899 /* mgattacateststepitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgattacateststepitem.h; sourceTree = "<group>"; };
 		DA0580351C4E868F007FF899 /* mgattacateststepitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacateststepitem.m; sourceTree = "<group>"; };
 		DA0580371C4E8859007FF899 /* test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = test.plist; sourceTree = "<group>"; };
+		DA05803B1C4E8B92007FF899 /* test_01_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_01_1.jpg; sourceTree = "<group>"; };
+		DA05803C1C4E8B92007FF899 /* test_01_1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test_01_1@2x.jpg"; sourceTree = "<group>"; };
+		DA05803D1C4E8B92007FF899 /* test_01_1@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test_01_1@3x.jpg"; sourceTree = "<group>"; };
 		DA2965901C3DB2F900BC713E /* c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
 		DA2965911C3DB30600BC713E /* m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
 		DA2965921C3DB30D00BC713E /* v.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
@@ -433,6 +439,24 @@
 				CCA345502A1E697843858F3E /* Pods-gattaca.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA0580391C4E8B92007FF899 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				DA05803A1C4E8B92007FF899 /* 01 */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		DA05803A1C4E8B92007FF899 /* 01 */ = {
+			isa = PBXGroup;
+			children = (
+				DA05803B1C4E8B92007FF899 /* test_01_1.jpg */,
+				DA05803C1C4E8B92007FF899 /* test_01_1@2x.jpg */,
+				DA05803D1C4E8B92007FF899 /* test_01_1@3x.jpg */,
+			);
+			path = 01;
 			sourceTree = "<group>";
 		};
 		DA29658D1C3DB2EC00BC713E /* c */ = {
@@ -833,6 +857,7 @@
 		DA4A74281C3D9B240092A405 /* imateq */ = {
 			isa = PBXGroup;
 			children = (
+				DA0580391C4E8B92007FF899 /* test */,
 				DA2965AE1C3DD89F00BC713E /* in */,
 				DA4A742A1C3D9B240092A405 /* ui */,
 			);
@@ -867,8 +892,8 @@
 				DA2965951C3DB72C00BC713E /* analytics.plist */,
 				DA4A742C1C3D9B240092A405 /* defs.plist */,
 				DA4C0F041C45A54C00203315 /* profile.plist */,
-				DA4A742D1C3D9B240092A405 /* Localizable.strings */,
 				DA0580371C4E8859007FF899 /* test.plist */,
+				DA4A742D1C3D9B240092A405 /* Localizable.strings */,
 			);
 			path = langteq;
 			sourceTree = "<group>";
@@ -1137,6 +1162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0580401C4E8B92007FF899 /* test_01_1@3x.jpg in Resources */,
 				DA4A744B1C3D9B240092A405 /* defs.plist in Resources */,
 				DA322A101C407265004C6958 /* loader@2x.png in Resources */,
 				DA462AE71C4D363A0060265A /* next@3x.png in Resources */,
@@ -1149,6 +1175,7 @@
 				DA2965961C3DB72C00BC713E /* analytics.plist in Resources */,
 				DA322A411C40C628004C6958 /* logo@3x.png in Resources */,
 				DA322A181C40875F004C6958 /* contact.png in Resources */,
+				DA05803E1C4E8B92007FF899 /* test_01_1.jpg in Resources */,
 				DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */,
 				DA322A021C4039C7004C6958 /* engine@2x.png in Resources */,
 				DA322A401C40C628004C6958 /* logo@2x.png in Resources */,
@@ -1156,6 +1183,7 @@
 				DA0580381C4E8859007FF899 /* test.plist in Resources */,
 				DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */,
 				DA322A3F1C40C628004C6958 /* logo.png in Resources */,
+				DA05803F1C4E8B92007FF899 /* test_01_1@2x.jpg in Resources */,
 				DA2965AF1C3DD89F00BC713E /* in in Resources */,
 				DA7AB97D1C4492B50058756C /* gattaca.db in Resources */,
 				DA322A1A1C40875F004C6958 /* contact@3x.png in Resources */,
