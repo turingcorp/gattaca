@@ -10,7 +10,7 @@
     
     UIButton *btn = [[UIButton alloc] init];
     [btn setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.2]];
-    [btn setTitleColor:[UIColor colorWithWhite:1 alpha:0.6] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor colorWithWhite:1 alpha:0.8] forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor colorWithWhite:1 alpha:0.1] forState:UIControlStateHighlighted];
     [btn setTitle:NSLocalizedString(@"gattaca_tester_btn_cancel", nil) forState:UIControlStateNormal];
     [btn.titleLabel setFont:[UIFont fontWithName:fontname size:16]];

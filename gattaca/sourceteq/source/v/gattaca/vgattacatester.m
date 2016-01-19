@@ -8,9 +8,9 @@
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:20];
+    [flow setMinimumLineSpacing:40];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(40, 0, 40, 0)];
+    [flow setSectionInset:UIEdgeInsetsMake(60, 0, 60, 0)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setBackgroundColor:[UIColor clearColor]];
@@ -82,7 +82,7 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForFooterInSection:(NSInteger)section
 {
-    return CGSizeMake(self.bounds.size.width, 60);
+    return CGSizeMake(self.bounds.size.width, 65);
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
@@ -92,7 +92,7 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    return CGSizeMake(self.bounds.size.width, 126);
+    return CGSizeMake(self.bounds.size.width, 166);
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col

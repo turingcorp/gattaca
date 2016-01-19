@@ -11,13 +11,13 @@
     UIImageView *image = [[UIImageView alloc] init];
     [image setTranslatesAutoresizingMaskIntoConstraints:NO];
     [image setClipsToBounds:YES];
-    [image setContentMode:UIViewContentModeScaleAspectFit];
+    [image setContentMode:UIViewContentModeCenter];
     [image setUserInteractionEnabled:NO];
-    [image.layer setCornerRadius:60];
+    [image.layer setCornerRadius:80];
     
     self.image = image;
     
-    CGFloat bgdia = 126;
+    CGFloat bgdia = 166;
     CGFloat border = (frame.size.width - bgdia) / 2;
     CGFloat margin = 3;
     CGFloat inborder = border + margin;
@@ -46,7 +46,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(inborder)-[image]-(inborder)-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(margin)-[image]-(margin)-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[line]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-61-[line(4)]-61-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-81-[line(4)]-81-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
