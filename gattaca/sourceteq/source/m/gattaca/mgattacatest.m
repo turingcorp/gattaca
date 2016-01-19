@@ -11,6 +11,13 @@
     NSMutableArray *rawsteps = [NSMutableArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"test" withExtension:@"plist"]];
     NSInteger count = rawsteps.count;
     
+    while(count)
+    {
+        NSInteger index = arc4random_uniform((CGFloat)count);
+        
+        count = rawsteps.count;
+    }
+    
     return test;
 }
 
