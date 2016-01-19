@@ -31,6 +31,7 @@
     
     array = [NSMutableArray array];
     self.currentitem = 0;
+    self.like = [[mprofilelike alloc] init];
     
     return self;
 }

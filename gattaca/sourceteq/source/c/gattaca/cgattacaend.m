@@ -7,7 +7,7 @@
     dispatch_async(dispatch_get_main_queue(),
                    ^(void)
                    {
-                       [[cmain singleton] presentViewController:[[cgattacatester alloc] init] animated:YES completion:nil];
+                       [[cmain singleton] presentViewController:[[cgattacaend alloc] init] animated:YES completion:nil];
                    });
 }
 
