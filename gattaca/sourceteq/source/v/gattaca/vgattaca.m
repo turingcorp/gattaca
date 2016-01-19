@@ -10,7 +10,11 @@
     vblur *blur = [vblur light];
 
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    [flow setHeaderReferenceSize:CGSizeZero];
+    [flow setFooterReferenceSize:CGSizeZero];
+    [flow setMinimumInteritemSpacing:0];
+    [flow setMinimumLineSpacing:10];
+    [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
+    [flow setSectionInset:UIEdgeInsetsMake(10, 0, 0, 40)];
     
     UICollectionView *collection = [[UICollectionView alloc] init];
     [collection setClipsToBounds:YES];
@@ -26,17 +30,29 @@
     [self addSubview:blur];
     [self addSubview:collection];
     
-    NSDictionary *views = @{@"blur":blur};
+    NSDictionary *views = @{@"blur":blur, @"col":collection};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
 
 #pragma mark -
 #pragma mark col del
+
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    return CGSizeMake(self.bounds.size.width, self.bounds.size.height / 2);
+}
+
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
+{
+    return CGSizeMake(self.bounds.size.width, 80);
+}
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
