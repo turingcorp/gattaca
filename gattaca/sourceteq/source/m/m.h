@@ -46,3 +46,7 @@
 #import "mconfigprofilename.h"
 #import "mconfigprofileage.h"
 #import "mconfigprofileedit.h"
+#import "mgattacatest.h"
+#import "mgattacateststep.h"
+#import "mgattacateststeptitle.h"
+#import "mgattacateststepitem.h"

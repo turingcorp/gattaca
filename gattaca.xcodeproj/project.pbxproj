@@ -11,6 +11,10 @@
 		DA05801B1C4E8418007FF899 /* vgattacatester.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801A1C4E8418007FF899 /* vgattacatester.m */; };
 		DA05801E1C4E8501007FF899 /* vgattacatesterheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801D1C4E8501007FF899 /* vgattacatesterheader.m */; };
 		DA0580211C4E850B007FF899 /* vgattacatestercel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580201C4E850B007FF899 /* vgattacatestercel.m */; };
+		DA0580241C4E85C6007FF899 /* mgattacatest.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580231C4E85C6007FF899 /* mgattacatest.m */; };
+		DA05802D1C4E8659007FF899 /* mgattacateststep.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05802C1C4E8659007FF899 /* mgattacateststep.m */; };
+		DA0580331C4E8682007FF899 /* mgattacateststeptitle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580321C4E8682007FF899 /* mgattacateststeptitle.m */; };
+		DA0580361C4E868F007FF899 /* mgattacateststepitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580351C4E868F007FF899 /* mgattacateststepitem.m */; };
 		DA2965961C3DB72C00BC713E /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2965951C3DB72C00BC713E /* analytics.plist */; };
 		DA29659D1C3DC3E300BC713E /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA29659C1C3DC3E300BC713E /* cmain.m */; };
 		DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A21C3DC72C00BC713E /* cbrowse.m */; };
@@ -146,6 +150,14 @@
 		DA05801D1C4E8501007FF899 /* vgattacatesterheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacatesterheader.m; sourceTree = "<group>"; };
 		DA05801F1C4E850B007FF899 /* vgattacatestercel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatestercel.h; sourceTree = "<group>"; };
 		DA0580201C4E850B007FF899 /* vgattacatestercel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacatestercel.m; sourceTree = "<group>"; };
+		DA0580221C4E85C6007FF899 /* mgattacatest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgattacatest.h; sourceTree = "<group>"; };
+		DA0580231C4E85C6007FF899 /* mgattacatest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacatest.m; sourceTree = "<group>"; };
+		DA05802B1C4E8659007FF899 /* mgattacateststep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgattacateststep.h; sourceTree = "<group>"; };
+		DA05802C1C4E8659007FF899 /* mgattacateststep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacateststep.m; sourceTree = "<group>"; };
+		DA0580311C4E8682007FF899 /* mgattacateststeptitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgattacateststeptitle.h; sourceTree = "<group>"; };
+		DA0580321C4E8682007FF899 /* mgattacateststeptitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacateststeptitle.m; sourceTree = "<group>"; };
+		DA0580341C4E868F007FF899 /* mgattacateststepitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgattacateststepitem.h; sourceTree = "<group>"; };
+		DA0580351C4E868F007FF899 /* mgattacateststepitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacateststepitem.m; sourceTree = "<group>"; };
 		DA2965901C3DB2F900BC713E /* c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
 		DA2965911C3DB30600BC713E /* m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
 		DA2965921C3DB30D00BC713E /* v.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
@@ -700,6 +712,14 @@
 		DA462AFE1C4D86880060265A /* gattaca */ = {
 			isa = PBXGroup;
 			children = (
+				DA0580221C4E85C6007FF899 /* mgattacatest.h */,
+				DA0580231C4E85C6007FF899 /* mgattacatest.m */,
+				DA05802B1C4E8659007FF899 /* mgattacateststep.h */,
+				DA05802C1C4E8659007FF899 /* mgattacateststep.m */,
+				DA0580311C4E8682007FF899 /* mgattacateststeptitle.h */,
+				DA0580321C4E8682007FF899 /* mgattacateststeptitle.m */,
+				DA0580341C4E868F007FF899 /* mgattacateststepitem.h */,
+				DA0580351C4E868F007FF899 /* mgattacateststepitem.m */,
 			);
 			path = gattaca;
 			sourceTree = "<group>";
@@ -1218,6 +1238,7 @@
 				DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */,
 				DA7AB91F1C43F17F0058756C /* cconfigsettingsdelete.m in Sources */,
 				DA7AB9591C447C830058756C /* mprofilelike.m in Sources */,
+				DA0580331C4E8682007FF899 /* mgattacateststeptitle.m in Sources */,
 				DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */,
 				DA7AB95C1C447C920058756C /* mprofileground.m in Sources */,
 				DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */,
@@ -1240,6 +1261,7 @@
 				DA7AB9671C447D660058756C /* mprofilelikesport.m in Sources */,
 				DA322A3B1C40C2AF004C6958 /* vconfigsettingsheader.m in Sources */,
 				DA3F6E0F1C46BBB8007E2888 /* vprofilecircleground.m in Sources */,
+				DA0580241C4E85C6007FF899 /* mgattacatest.m in Sources */,
 				DA7AB9221C43F29D0058756C /* cconfigsettingslogout.m in Sources */,
 				DA7AB9911C44ACB80058756C /* mdirs.m in Sources */,
 				DA4A744F1C3D9B240092A405 /* main.m in Sources */,
@@ -1256,10 +1278,12 @@
 				DA322A311C40C087004C6958 /* mconfigsettingsnotifications.m in Sources */,
 				DA2965A61C3DC73C00BC713E /* cconfig.m in Sources */,
 				DAAA3BBD1C49F009002FEE26 /* mconfigprofileage.m in Sources */,
+				DA0580361C4E868F007FF899 /* mgattacateststepitem.m in Sources */,
 				DA2965D51C3DEFFC00BC713E /* clogin.m in Sources */,
 				DA46BD171C3F1B2E00472BC9 /* vblur.m in Sources */,
 				DA0580211C4E850B007FF899 /* vgattacatestercel.m in Sources */,
 				DA462AE11C4AD4F20060265A /* mconfigprofileedit.m in Sources */,
+				DA05802D1C4E8659007FF899 /* mgattacateststep.m in Sources */,
 				DA462B0B1C4D8C530060265A /* vgattacacel.m in Sources */,
 				DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */,
 				DA3229F31C4018B0004C6958 /* mconfigbrowsing.m in Sources */,
