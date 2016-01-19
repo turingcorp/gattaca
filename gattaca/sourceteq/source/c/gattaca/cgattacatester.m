@@ -33,7 +33,7 @@
     self.view = [[vgattaca alloc] init:self];
     self.viewtester = (vgattacatester*)self.view;
     
-    [self.viewtester load:<#(mgattacateststep *)#>];
+    [self showcurrent];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
@@ -46,6 +46,13 @@
     return NO;
 }
 
+#pragma mark functionality
+
+-(void)showcurrent
+{
+    [self.viewtester load:[self.test current]];
+}
+
 #pragma mark public
 
 -(void)cancel
@@ -54,6 +61,18 @@
      ^{
          [[NSNotificationCenter defaultCenter] postNotificationName:notprofileupdate object:nil];
      }];
+}
+
+-(void)nextstep
+{
+    if([self.test next])
+    {
+        [self showcurrent];
+    }
+    else
+    {
+        // done
+    }
 }
 
 @end

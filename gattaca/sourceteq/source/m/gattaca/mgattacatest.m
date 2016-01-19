@@ -30,7 +30,7 @@
     self = [super init];
     
     array = [NSMutableArray array];
-    self.current = 0;
+    self.currentitem = 0;
     
     return self;
 }
@@ -52,6 +52,24 @@
 -(mgattacateststep*)step:(NSInteger)item
 {
     return array[item];
+}
+
+-(mgattacateststep*)current
+{
+    return array[self.currentitem];
+}
+
+-(BOOL)next
+{
+    BOOL hasnext = NO;
+    
+    if(self.currentitem < [self count] - 1)
+    {
+        hasnext = YES;
+        self.currentitem++;
+    }
+    
+    return hasnext;
 }
 
 @end

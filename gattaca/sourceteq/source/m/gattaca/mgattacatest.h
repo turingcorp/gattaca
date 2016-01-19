@@ -7,7 +7,9 @@
 +(instancetype)test;
 -(NSInteger)count;
 -(mgattacateststep*)step:(NSInteger)item;
+-(mgattacateststep*)current;
+-(BOOL)next;
 
-@property(nonatomic)NSInteger current;
+@property(nonatomic)NSInteger currentitem;
 
 @end

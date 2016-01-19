@@ -6,7 +6,60 @@
 {
     self = [super init:controller];
     
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    [flow setMinimumInteritemSpacing:0];
+    [flow setMinimumLineSpacing:10];
+    [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
+    [flow setSectionInset:UIEdgeInsetsMake(10, 0, 10, 0)];
+    
+    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [collection setBackgroundColor:[UIColor clearColor]];
+    [collection setClipsToBounds:YES];
+    [collection setDataSource:self];
+    [collection setDelegate:self];
+    [collection setShowsHorizontalScrollIndicator:NO];
+    [collection setShowsVerticalScrollIndicator:NO];
+    [collection setAlwaysBounceVertical:YES];
+    [collection registerClass:[vgattacatestercel class] forCellWithReuseIdentifier:celid];
+    [collection registerClass:[vgattacatesterheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
+    [collection registerClass:[vgattacatesterfooter class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerid];
+    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.collection = collection;
+    
+    [self addSubview:collection];
+    
+    NSDictionary *views = @{@"col":collection};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    
     return self;
+}
+
+#pragma mark animations
+
+-(void)animate:(BOOL)show asknext:(BOOL)asknext
+{
+    CGFloat alpha = 0;
+    
+    if(show)
+    {
+        alpha = 1;
+    }
+    
+    [UIView animateWithDuration:0.5 animations:
+     ^(void)
+     {
+         [self.collection setAlpha:alpha];
+     } completion:
+     ^(BOOL done)
+     {
+         if(asknext)
+         {
+             [(cgattacatester*)self.controller nextstep];
+         }
+     }];
 }
 
 #pragma mark public
@@ -14,6 +67,9 @@
 -(void)load:(mgattacateststep*)step
 {
     self.step = step;
+    [self.collection reloadData];
+    
+    [self animate:YES asknext:NO];
 }
 
 #pragma mark -
@@ -66,6 +122,11 @@
     vgattacacel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
     
     return cel;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    [self animate:NO asknext:YES];
 }
 
 @end

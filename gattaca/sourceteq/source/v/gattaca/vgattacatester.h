@@ -6,5 +6,6 @@
 -(void)load:(mgattacateststep*)step;
 
 @property(weak, nonatomic)mgattacateststep *step;
+@property(weak, nonatomic)UICollectionView *collection;
 
 @end
