@@ -1,13 +1,9 @@
-//
-//  vgattacatesterheader.h
-//  gattaca
-//
-//  Created by zero on 1/19/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface vgattacatesterheader:UICollectionReusableView
 
-@interface vgattacatesterheader : NSObject
+-(void)config:(NSString*)title;
+
+@property(weak, nonatomic)UILabel *lbl;
 
 @end

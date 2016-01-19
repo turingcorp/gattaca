@@ -1,13 +1,14 @@
-//
-//  vgattacatestercel.m
-//  gattaca
-//
-//  Created by zero on 1/19/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "vgattacatestercel.h"
 
 @implementation vgattacatestercel
+
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    [self setClipsToBounds:YES];
+    [self setBackgroundColor:[UIColor clearColor]];
+    
+    return self;
+}
 
 @end
