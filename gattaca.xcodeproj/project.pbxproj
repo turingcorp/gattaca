@@ -15,6 +15,7 @@
 		DA05802D1C4E8659007FF899 /* mgattacateststep.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05802C1C4E8659007FF899 /* mgattacateststep.m */; };
 		DA0580331C4E8682007FF899 /* mgattacateststeptitle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580321C4E8682007FF899 /* mgattacateststeptitle.m */; };
 		DA0580361C4E868F007FF899 /* mgattacateststepitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580351C4E868F007FF899 /* mgattacateststepitem.m */; };
+		DA0580381C4E8859007FF899 /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA0580371C4E8859007FF899 /* test.plist */; };
 		DA2965961C3DB72C00BC713E /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2965951C3DB72C00BC713E /* analytics.plist */; };
 		DA29659D1C3DC3E300BC713E /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA29659C1C3DC3E300BC713E /* cmain.m */; };
 		DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A21C3DC72C00BC713E /* cbrowse.m */; };
@@ -158,6 +159,7 @@
 		DA0580321C4E8682007FF899 /* mgattacateststeptitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacateststeptitle.m; sourceTree = "<group>"; };
 		DA0580341C4E868F007FF899 /* mgattacateststepitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgattacateststepitem.h; sourceTree = "<group>"; };
 		DA0580351C4E868F007FF899 /* mgattacateststepitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacateststepitem.m; sourceTree = "<group>"; };
+		DA0580371C4E8859007FF899 /* test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = test.plist; sourceTree = "<group>"; };
 		DA2965901C3DB2F900BC713E /* c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
 		DA2965911C3DB30600BC713E /* m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
 		DA2965921C3DB30D00BC713E /* v.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
@@ -866,6 +868,7 @@
 				DA4A742C1C3D9B240092A405 /* defs.plist */,
 				DA4C0F041C45A54C00203315 /* profile.plist */,
 				DA4A742D1C3D9B240092A405 /* Localizable.strings */,
+				DA0580371C4E8859007FF899 /* test.plist */,
 			);
 			path = langteq;
 			sourceTree = "<group>";
@@ -1150,6 +1153,7 @@
 				DA322A021C4039C7004C6958 /* engine@2x.png in Resources */,
 				DA322A401C40C628004C6958 /* logo@2x.png in Resources */,
 				DA322A111C407265004C6958 /* loader@3x.png in Resources */,
+				DA0580381C4E8859007FF899 /* test.plist in Resources */,
 				DA4A744C1C3D9B240092A405 /* Localizable.strings in Resources */,
 				DA322A3F1C40C628004C6958 /* logo.png in Resources */,
 				DA2965AF1C3DD89F00BC713E /* in in Resources */,
