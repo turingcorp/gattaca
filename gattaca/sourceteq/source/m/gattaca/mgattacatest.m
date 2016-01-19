@@ -7,7 +7,11 @@
 
 +(instancetype)test
 {
-    NSMutableArray *rawsteps = [NSMutableArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"" withExtension:@"plist"]];
+    mgattacatest *test = [[mgattacatest alloc] init];
+    NSMutableArray *rawsteps = [NSMutableArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"test" withExtension:@"plist"]];
+    NSInteger count = rawsteps.count;
+    
+    return test;
 }
 
 -(instancetype)init
