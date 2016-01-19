@@ -8,6 +8,7 @@
     
     self.type = type;
     self.index = index;
+    self.counter = 0;
     
     return self;
 }
