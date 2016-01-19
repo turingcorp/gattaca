@@ -33,7 +33,7 @@
 "gattaca_main_title"="Gattaca test";
 "gattaca_main_descr"="This psychometric test will define your profile and helps finding contacts alike";
 "gattaca_main_accept"="Start test";
-"gattaca_main_cancel"="Cancel test";
+"gattaca_main_cancel"="Cancel";
 
 "alert_accept"="Accept";
 
