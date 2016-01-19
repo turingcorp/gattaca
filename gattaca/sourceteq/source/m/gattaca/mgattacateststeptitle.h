@@ -1,13 +1,9 @@
-//
-//  mgattacateststeptitle.h
-//  gattaca
-//
-//  Created by zero on 1/19/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface mgattacateststeptitle:NSObject
 
-@interface mgattacateststeptitle : NSObject
+-(instancetype)init:(test_step)type;
+
+@property(copy, nonatomic)NSString *title;
 
 @end
