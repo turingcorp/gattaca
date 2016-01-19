@@ -81,3 +81,11 @@ typedef NS_ENUM(NSInteger, profile_ground)
     profile_ground_entertainment,
     profile_ground_partying
 };
+
+// test
+
+typedef NS_ENUM(NSInteger, test_step)
+{
+    test_step_like,
+    test_step_ground
+};

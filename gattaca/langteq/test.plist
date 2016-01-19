@@ -7,7 +7,10 @@
 		<integer>0</integer>
 		<key>items</key>
 		<array>
+			<string>test_01_2.jpg</string>
 			<string>test_01_1.jpg</string>
+			<string>test_01_3.jpg</string>
+			<string>test_01_4.jpg</string>
 		</array>
 	</dict>
 </array>
