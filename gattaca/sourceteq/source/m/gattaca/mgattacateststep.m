@@ -26,6 +26,8 @@
 {
     self = [super init];
     
+    array = [NSMutableArray array];
+    
     return self;
 }
 
