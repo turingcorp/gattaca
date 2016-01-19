@@ -13,5 +13,16 @@
 			<string>test_01_4.jpg</string>
 		</array>
 	</dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>items</key>
+        <array>
+            <string>test_02_2.jpg</string>
+            <string>test_02_4.jpg</string>
+            <string>test_02_3.jpg</string>
+            <string>test_02_1.jpg</string>
+        </array>
+    </dict>
 </array>
 </plist>
