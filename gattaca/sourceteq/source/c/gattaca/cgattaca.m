@@ -56,9 +56,9 @@
 
 -(void)starttest
 {
-    [[cmain singleton] dismissViewControllerAnimated:YES completion:
+    [[cmain singleton] dismissViewControllerAnimated:NO completion:
      ^{
-         
+         [cgattacatester start];
      }];
 }
 

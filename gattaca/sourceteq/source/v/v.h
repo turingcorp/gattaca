@@ -38,4 +38,5 @@
 #import "vgattacacel.h"
 #import "vgattacatester.h"
 #import "vgattacatesterheader.h"
+#import "vgattacatesterfooter.h"
 #import "vgattacatestercel.h"

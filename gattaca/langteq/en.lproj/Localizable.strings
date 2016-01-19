@@ -35,6 +35,8 @@
 "gattaca_main_accept"="Start test";
 "gattaca_main_cancel"="Cancel";
 
+"gattaca_tester_btn_cancel"="Stop test";
+
 "alert_accept"="Accept";
 
 "error_login_facebook"="There was an error login with Facebook, please try again later";

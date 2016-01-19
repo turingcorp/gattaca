@@ -8,4 +8,6 @@
 -(NSInteger)count;
 -(mgattacateststep*)step:(NSInteger)item;
 
+@property(nonatomic)NSInteger current;
+
 @end

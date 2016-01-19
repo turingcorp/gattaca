@@ -16,6 +16,7 @@
     self = [super init];
     
     [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    self.test = [mgattacatest test];
     
     return self;
 }

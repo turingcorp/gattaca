@@ -5,4 +5,6 @@
 +(void)start;
 -(void)cancel;
 
+@property(strong, nonatomic)mgattacatest *test;
+
 @end

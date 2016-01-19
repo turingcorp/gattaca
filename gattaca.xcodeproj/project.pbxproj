@@ -29,6 +29,7 @@
 		DA0580511C4E94E3007FF899 /* test_01_4@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA05804E1C4E94E3007FF899 /* test_01_4@2x.jpg */; };
 		DA0580521C4E94E3007FF899 /* test_01_4@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA05804F1C4E94E3007FF899 /* test_01_4@3x.jpg */; };
 		DA0580551C4EA9B8007FF899 /* cgattacatester.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580541C4EA9B8007FF899 /* cgattacatester.m */; };
+		DA0580581C4EAB6C007FF899 /* vgattacatesterfooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580571C4EAB6C007FF899 /* vgattacatesterfooter.m */; };
 		DA2965961C3DB72C00BC713E /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2965951C3DB72C00BC713E /* analytics.plist */; };
 		DA29659D1C3DC3E300BC713E /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA29659C1C3DC3E300BC713E /* cmain.m */; };
 		DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A21C3DC72C00BC713E /* cbrowse.m */; };
@@ -187,6 +188,8 @@
 		DA05804F1C4E94E3007FF899 /* test_01_4@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test_01_4@3x.jpg"; sourceTree = "<group>"; };
 		DA0580531C4EA9B8007FF899 /* cgattacatester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgattacatester.h; sourceTree = "<group>"; };
 		DA0580541C4EA9B8007FF899 /* cgattacatester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgattacatester.m; sourceTree = "<group>"; };
+		DA0580561C4EAB6C007FF899 /* vgattacatesterfooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatesterfooter.h; sourceTree = "<group>"; };
+		DA0580571C4EAB6C007FF899 /* vgattacatesterfooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacatesterfooter.m; sourceTree = "<group>"; };
 		DA2965901C3DB2F900BC713E /* c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
 		DA2965911C3DB30600BC713E /* m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
 		DA2965921C3DB30D00BC713E /* v.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
@@ -759,6 +762,8 @@
 				DA05801A1C4E8418007FF899 /* vgattacatester.m */,
 				DA05801C1C4E8501007FF899 /* vgattacatesterheader.h */,
 				DA05801D1C4E8501007FF899 /* vgattacatesterheader.m */,
+				DA0580561C4EAB6C007FF899 /* vgattacatesterfooter.h */,
+				DA0580571C4EAB6C007FF899 /* vgattacatesterfooter.m */,
 				DA05801F1C4E850B007FF899 /* vgattacatestercel.h */,
 				DA0580201C4E850B007FF899 /* vgattacatestercel.m */,
 			);
@@ -1357,6 +1362,7 @@
 				DA46BD171C3F1B2E00472BC9 /* vblur.m in Sources */,
 				DA0580211C4E850B007FF899 /* vgattacatestercel.m in Sources */,
 				DA462AE11C4AD4F20060265A /* mconfigprofileedit.m in Sources */,
+				DA0580581C4EAB6C007FF899 /* vgattacatesterfooter.m in Sources */,
 				DA05802D1C4E8659007FF899 /* mgattacateststep.m in Sources */,
 				DA462B0B1C4D8C530060265A /* vgattacacel.m in Sources */,
 				DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */,

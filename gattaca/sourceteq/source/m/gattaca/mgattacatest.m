@@ -30,6 +30,7 @@
     self = [super init];
     
     array = [NSMutableArray array];
+    self.current = 0;
     
     return self;
 }

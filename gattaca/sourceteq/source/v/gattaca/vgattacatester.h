@@ -1,5 +1,8 @@
 #import "appdel.h"
+#import "viewbase.h"
 
-@interface vgattacatester:UIView<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface vgattacatester:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property(weak, nonatomic)mgattacateststep *step;
 
 @end
