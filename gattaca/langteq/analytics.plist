@@ -15,6 +15,8 @@
 		<string>profile/name</string>
 		<string>contact</string>
 		<string>gattaca/main</string>
+		<string>gattaca/test</string>
+		<string>gattaca/congrats</string>
 	</array>
 	<key>events</key>
 	<array>

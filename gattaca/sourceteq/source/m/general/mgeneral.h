@@ -24,7 +24,9 @@ typedef NS_ENUM(NSInteger, ga_screen)
     ga_screen_profile_age,
     ga_screen_profile_name,
     ga_screen_contact,
-    ga_screen_gattaca_main
+    ga_screen_gattaca_main,
+    ga_screen_gattaca_test,
+    ga_screen_gattaca_congrats
 };
 
 typedef NS_ENUM(NSInteger, ga_event)

@@ -2,20 +2,10 @@
 
 @implementation cgattacaend
 
-+(void)finish:(mgattacatest*)test
-{
-    dispatch_async(dispatch_get_main_queue(),
-                   ^(void)
-                   {
-                       [[cmain singleton] presentViewController:[[cgattacaend alloc] init:test] animated:YES completion:nil];
-                   });
-}
-
 -(instancetype)init:(mgattacatest*)test
 {
     self = [super init];
-
-    self.test = test;
+    
     [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
     
     return self;
@@ -27,10 +17,7 @@
     
     [self setTitle:NSLocalizedString(@"gattaca_main_title", nil)];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
-                   ^{
-                       [self.test scoreall];
-                   });
+    [[analytics singleton] trackscreen:ga_screen_gattaca_congrats];
 }
 
 -(void)loadView
@@ -50,12 +37,10 @@
 
 #pragma mark public
 
--(void)cancel
+-(void)accept
 {
-    [[cmain singleton] dismissViewControllerAnimated:YES completion:
-     ^{
-         [[NSNotificationCenter defaultCenter] postNotificationName:notprofileupdate object:nil];
-     }];
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_done label:@""];
+    [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

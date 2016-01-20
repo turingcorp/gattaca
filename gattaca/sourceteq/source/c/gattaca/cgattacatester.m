@@ -17,6 +17,8 @@
     [super viewDidLoad];
     
     [self setTitle:NSLocalizedString(@"gattaca_main_title", nil)];
+    
+    [[analytics singleton] trackscreen:ga_screen_gattaca_test];
 }
 
 -(void)loadView
