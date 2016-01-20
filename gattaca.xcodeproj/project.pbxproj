@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D2233BBF0363DC0A31972538 /* libPods-gattaca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 172D94B9242E43D73828A848 /* libPods-gattaca.a */; };
 		DA021CCF1C4FCAAC00B70557 /* cgattacamain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CCE1C4FCAAC00B70557 /* cgattacamain.m */; };
+		DA021CD21C50002000B70557 /* vprofileqr.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CD11C50002000B70557 /* vprofileqr.m */; };
 		DA05801B1C4E8418007FF899 /* vgattacatester.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801A1C4E8418007FF899 /* vgattacatester.m */; };
 		DA05801E1C4E8501007FF899 /* vgattacatesterheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801D1C4E8501007FF899 /* vgattacatesterheader.m */; };
 		DA0580211C4E850B007FF899 /* vgattacatestercel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580201C4E850B007FF899 /* vgattacatestercel.m */; };
@@ -178,6 +179,8 @@
 		CCA345502A1E697843858F3E /* Pods-gattaca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.release.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.release.xcconfig"; sourceTree = "<group>"; };
 		DA021CCD1C4FCAAC00B70557 /* cgattacamain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgattacamain.h; sourceTree = "<group>"; };
 		DA021CCE1C4FCAAC00B70557 /* cgattacamain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgattacamain.m; sourceTree = "<group>"; };
+		DA021CD01C50002000B70557 /* vprofileqr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofileqr.h; sourceTree = "<group>"; };
+		DA021CD11C50002000B70557 /* vprofileqr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofileqr.m; sourceTree = "<group>"; };
 		DA0580191C4E8418007FF899 /* vgattacatester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatester.h; sourceTree = "<group>"; };
 		DA05801A1C4E8418007FF899 /* vgattacatester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacatester.m; sourceTree = "<group>"; };
 		DA05801C1C4E8501007FF899 /* vgattacatesterheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatesterheader.h; sourceTree = "<group>"; };
@@ -1111,6 +1114,8 @@
 			children = (
 				DA7AB93D1C446E620058756C /* vprofile.h */,
 				DA7AB93E1C446E620058756C /* vprofile.m */,
+				DA021CD01C50002000B70557 /* vprofileqr.h */,
+				DA021CD11C50002000B70557 /* vprofileqr.m */,
 				DA7AB9401C446E700058756C /* vprofilecircle.h */,
 				DA7AB9411C446E700058756C /* vprofilecircle.m */,
 				DA3F6E131C46E08B007E2888 /* vprofilecircleribbon.h */,
@@ -1436,6 +1441,7 @@
 				DA7AB98D1C44A8B00058756C /* vloading.m in Sources */,
 				DAAA3BBA1C49EFFE002FEE26 /* mconfigprofilename.m in Sources */,
 				DA7AB92F1C44615C0058756C /* vconfigprofile.m in Sources */,
+				DA021CD21C50002000B70557 /* vprofileqr.m in Sources */,
 				DA7AB96A1C447D750058756C /* mprofilelikesocial.m in Sources */,
 				DA322A311C40C087004C6958 /* mconfigsettingsnotifications.m in Sources */,
 				DA2965A61C3DC73C00BC713E /* cconfig.m in Sources */,

@@ -64,7 +64,7 @@
 {
     CGFloat width = self.bounds.size.width;
     
-    return CGSizeMake(width, 500);
+    return CGSizeMake(width, 600);
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
