@@ -15,7 +15,7 @@
     [lbl setBackgroundColor:[UIColor clearColor]];
     [lbl setUserInteractionEnabled:NO];
     [lbl setFont:[UIFont fontWithName:fontboldname size:18]];
-    [lbl setTextColor:[UIColor colorWithWhite:0 alpha:0.8]];
+    [lbl setTextColor:[UIColor whiteColor]];
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.lbl = lbl;
     
@@ -25,13 +25,14 @@
     [border setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.border = border;
     
-    [self addSubview:lbl];
     [self addSubview:border];
+    [self addSubview:lbl];
     
     NSDictionary *views = @{@"border":border, @"lbl":lbl};
     NSDictionary *metrics = @{};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border(4)]-5-[lbl]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-6-[lbl]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[lbl]-0-|" options:0 metrics:metrics views:views]];
     
@@ -43,6 +44,7 @@
 -(void)reload
 {
     [self.lbl setText:@"Shisus"];
+    [self.border setBackgroundColor:[self.profile.gender color]];
 }
 
 @end
