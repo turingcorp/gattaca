@@ -23,8 +23,8 @@
     NSDictionary *views = @{@"slash":slash};
     NSDictionary *metrics = @{};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-50-[slash]-50-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[slash]-50-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-25-[slash]-25-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-25-[slash]-25-|" options:0 metrics:metrics views:views]];
 }
 
 -(CGFloat)amounttopoint:(NSInteger)amount
@@ -34,7 +34,7 @@
 
 -(void)render
 {
-    CGFloat linewidth = 10;
+    CGFloat linewidth = 20;
     NSInteger added = 125;
     mprofileground *ground = self.circle.profile.ground;
     NSInteger count = [ground count];
