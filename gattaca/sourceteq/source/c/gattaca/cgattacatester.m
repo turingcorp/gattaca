@@ -56,7 +56,7 @@
 
 -(void)nextstep
 {
-    if([self.test next])
+    if(self.test.hasnext)
     {
         [self showcurrent];
     }
@@ -65,7 +65,7 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                        ^
                        {
-                           [self.test scoreall];
+                           [self.test renderscore];
                        });
         
         [self.navigationController pushViewController:[[cgattacaend alloc] init] animated:YES];

@@ -33,7 +33,7 @@
 }
 
 -(void)render
-{
+{/*
     CGFloat linewidth = 20;
     NSInteger added = 125;
     mprofileground *ground = self.circle.profile.ground;
@@ -54,7 +54,7 @@
             slash.tintColor = [item color];
             [self constraintsfor:slash];
         }
-    }
+    }*/
 }
 
 @end

@@ -16,8 +16,8 @@
     [lbl setTextColor:[UIColor whiteColor]];
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     [lbl setNumberOfLines:0];
+    [lbl setText:NSLocalizedString(@"gattaca_tester_title", nil)];
     
-    self.lbl = lbl;
     [self addSubview:lbl];
     
     NSDictionary *views = @{@"lbl":lbl};
@@ -27,13 +27,6 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-30-[lbl]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
-}
-
-#pragma mark public
-
--(void)config:(mgattacateststeptitle*)title
-{
-    [self.lbl setText:title.title];
 }
 
 @end

@@ -86,7 +86,7 @@
 
 -(void)config:(mgattacateststepitem*)item
 {
-    [self.image setImage:[UIImage imageNamed:item.url]];
+    [self.image setImage:[UIImage imageNamed:item.image]];
 }
 
 @end
