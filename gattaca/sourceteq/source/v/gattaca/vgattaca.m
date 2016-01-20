@@ -7,7 +7,7 @@
     self = [super init:controller];
     [self setClipsToBounds:YES];
     
-    vblur *blur = [vblur light];
+    vblur *blur = [vblur dark];
 
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];

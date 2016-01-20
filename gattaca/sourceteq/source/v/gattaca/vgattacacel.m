@@ -49,7 +49,7 @@
         
         if(self.accept)
         {
-            [self setBackgroundColor:colormain];
+            [self setBackgroundColor:[UIColor blackColor]];
         }
         else
         {
@@ -58,8 +58,8 @@
     }
     else
     {
-        [self.lbl setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
-        [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.2]];
+        [self.lbl setTextColor:[UIColor colorWithWhite:1 alpha:0.7]];
+        [self setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
     }
 }
 

@@ -47,10 +47,7 @@
 
 -(void)starttest
 {
-    [[cmain singleton] dismissViewControllerAnimated:NO completion:
-     ^{
-         [cgattacatester start];
-     }];
+    [self.navigationController pushViewController:[[cgattacatester alloc] init] animated:YES];
 }
 
 @end

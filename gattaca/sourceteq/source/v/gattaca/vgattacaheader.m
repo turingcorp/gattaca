@@ -9,8 +9,8 @@
     [self setBackgroundColor:[UIColor clearColor]];
     [self setUserInteractionEnabled:NO];
     
-    NSDictionary *attrtitle = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:24], NSForegroundColorAttributeName:colormain};
-    NSDictionary *attrdescr = @{NSFontAttributeName:[UIFont fontWithName:fontname size:20], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.7]};
+    NSDictionary *attrtitle = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:24], NSForegroundColorAttributeName:[UIColor whiteColor]};
+    NSDictionary *attrdescr = @{NSFontAttributeName:[UIFont fontWithName:fontname size:20], NSForegroundColorAttributeName:[UIColor colorWithWhite:1 alpha:0.7]};
     
     NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] init];
     [mut appendAttributedString:[[NSAttributedString alloc] initWithString:NSLocalizedString(@"gattaca_main_title", nil) attributes:attrtitle]];
