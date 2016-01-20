@@ -10,7 +10,6 @@
 -(NSInteger)count;
 -(mgattacateststep*)step:(NSInteger)item;
 -(mgattacateststep*)current;
--(void)chooseitem:(mgattacateststepitem*)item;
 -(void)next;
 -(void)renderscore;
 

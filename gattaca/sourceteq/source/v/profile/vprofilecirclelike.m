@@ -33,7 +33,7 @@
 }
 
 -(void)render
-{
+{/*
     CGFloat linewidth = 20;
     NSInteger added = 0;
     mprofilelike *like = self.circle.profile.like;
@@ -54,7 +54,7 @@
             slash.tintColor = [item color];
             [self constraintsfor:slash];
         }
-    }
+    }*/
 }
 
 @end

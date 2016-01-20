@@ -51,7 +51,7 @@
 
 -(void)deleteaccount
 {
-    [[analytics singleton] trackevent:ga_event_delete action:ga_action_start label:@""];
+    [[analytics singleton] trackevent:ga_event_delete action:ga_action_start label:nil];
 }
 
 @end

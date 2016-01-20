@@ -34,7 +34,7 @@
         action = ga_action_on;
     }
     
-    [[analytics singleton] trackevent:ga_event_config_noti action:action label:@""];
+    [[analytics singleton] trackevent:ga_event_config_noti action:action label:nil];
 }
 
 @end

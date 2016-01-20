@@ -39,13 +39,13 @@
 
 -(void)cancel
 {
-    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_cancelled label:@""];
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_cancelled label:nil];
     [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)starttest
 {
-    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_start label:@""];
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_start label:nil];
     [self.navigationController pushViewController:[[cgattacatester alloc] init] animated:YES];
 }
 

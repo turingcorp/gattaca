@@ -54,7 +54,7 @@
 
 -(BOOL)loginButtonWillLogin:(FBSDKLoginButton*)button
 {
-    [[analytics singleton] trackevent:ga_event_logout action:ga_action_start label:@""];
+    [[analytics singleton] trackevent:ga_event_logout action:ga_action_start label:nil];
     
     return YES;
 }
@@ -65,7 +65,7 @@
 
 -(void)loginButtonDidLogOut:(FBSDKLoginButton*)button
 {
-    [[analytics singleton] trackevent:ga_event_logout action:ga_action_done label:@""];
+    [[analytics singleton] trackevent:ga_event_logout action:ga_action_done label:nil];
     
     dispatch_async(dispatch_get_main_queue(),
                    ^(void)

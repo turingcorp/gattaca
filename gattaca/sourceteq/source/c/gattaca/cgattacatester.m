@@ -50,7 +50,7 @@
 
 -(void)stop
 {
-    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_stopped label:@""];
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_stopped label:nil];
     [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
 }
 

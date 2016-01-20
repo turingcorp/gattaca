@@ -39,7 +39,7 @@
 
 -(void)accept
 {
-    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_done label:@""];
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_done label:nil];
     [[cmain singleton] dismissViewControllerAnimated:YES completion:
      ^
      {

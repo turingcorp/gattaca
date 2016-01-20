@@ -52,7 +52,7 @@
 
 -(BOOL)loginButtonWillLogin:(FBSDKLoginButton*)button
 {
-    [[analytics singleton] trackevent:ga_event_login action:ga_action_start label:@""];
+    [[analytics singleton] trackevent:ga_event_login action:ga_action_start label:nil];
     
     return YES;
 }
@@ -71,11 +71,11 @@
     {
         if(result.isCancelled)
         {
-            [[analytics singleton] trackevent:ga_event_login action:ga_action_cancelled label:@""];
+            [[analytics singleton] trackevent:ga_event_login action:ga_action_cancelled label:nil];
         }
         else
         {
-            [[analytics singleton] trackevent:ga_event_login action:ga_action_done label:@""];
+            [[analytics singleton] trackevent:ga_event_login action:ga_action_done label:nil];
             [self logincomplete];
         }
     }

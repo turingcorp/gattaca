@@ -116,7 +116,6 @@
     if(kind == UICollectionElementKindSectionHeader)
     {
         reusable = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerid forIndexPath:index];
-        [(vgattacatesterheader*)reusable config:self.step.title];
     }
     else
     {
