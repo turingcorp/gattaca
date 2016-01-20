@@ -12,6 +12,7 @@
 #import "msectionlogin.h"
 #import "mprofile.h"
 #import "mprofilegender.h"
+#import "mprofilecircle.h"
 #import "mprofilelike.h"
 #import "mprofileground.h"
 #import "mprofilelikeprotocol.h"

@@ -19,6 +19,7 @@
 		DA021CE71C50120000B70557 /* mprofilegender.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CE61C50120000B70557 /* mprofilegender.m */; };
 		DA021CEA1C50124000B70557 /* mprofilegendermale.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CE91C50124000B70557 /* mprofilegendermale.m */; };
 		DA021CED1C50124C00B70557 /* mprofilegenderfemale.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CEC1C50124C00B70557 /* mprofilegenderfemale.m */; };
+		DA021CF01C501BBB00B70557 /* mprofilecircle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CEF1C501BBB00B70557 /* mprofilecircle.m */; };
 		DA05801B1C4E8418007FF899 /* vgattacatester.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801A1C4E8418007FF899 /* vgattacatester.m */; };
 		DA05801E1C4E8501007FF899 /* vgattacatesterheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801D1C4E8501007FF899 /* vgattacatesterheader.m */; };
 		DA0580211C4E850B007FF899 /* vgattacatestercel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580201C4E850B007FF899 /* vgattacatestercel.m */; };
@@ -203,6 +204,8 @@
 		DA021CE91C50124000B70557 /* mprofilegendermale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilegendermale.m; sourceTree = "<group>"; };
 		DA021CEB1C50124C00B70557 /* mprofilegenderfemale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilegenderfemale.h; sourceTree = "<group>"; };
 		DA021CEC1C50124C00B70557 /* mprofilegenderfemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilegenderfemale.m; sourceTree = "<group>"; };
+		DA021CEE1C501BBB00B70557 /* mprofilecircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilecircle.h; sourceTree = "<group>"; };
+		DA021CEF1C501BBB00B70557 /* mprofilecircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilecircle.m; sourceTree = "<group>"; };
 		DA0580191C4E8418007FF899 /* vgattacatester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatester.h; sourceTree = "<group>"; };
 		DA05801A1C4E8418007FF899 /* vgattacatester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacatester.m; sourceTree = "<group>"; };
 		DA05801C1C4E8501007FF899 /* vgattacatesterheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatesterheader.h; sourceTree = "<group>"; };
@@ -925,6 +928,8 @@
 				DA021CE91C50124000B70557 /* mprofilegendermale.m */,
 				DA021CEB1C50124C00B70557 /* mprofilegenderfemale.h */,
 				DA021CEC1C50124C00B70557 /* mprofilegenderfemale.m */,
+				DA021CEE1C501BBB00B70557 /* mprofilecircle.h */,
+				DA021CEF1C501BBB00B70557 /* mprofilecircle.m */,
 				DA7AB9571C447C830058756C /* mprofilelike.h */,
 				DA7AB9581C447C830058756C /* mprofilelike.m */,
 				DA7AB95A1C447C920058756C /* mprofileground.h */,
@@ -1504,6 +1509,7 @@
 				DA7AB9641C447D3D0058756C /* mprofilelikeart.m in Sources */,
 				DA2965B71C3DDDF100BC713E /* vcontact.m in Sources */,
 				DA3229FA1C40280B004C6958 /* vmenu.m in Sources */,
+				DA021CF01C501BBB00B70557 /* mprofilecircle.m in Sources */,
 				DA70A9BE1C42101D0015A865 /* vconfigsettingsbutton.m in Sources */,
 				DA30972A1C3EB81F00E8AFA2 /* vlogincel.m in Sources */,
 				DA4C0EF41C459B2F00203315 /* cprofileage.m in Sources */,

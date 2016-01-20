@@ -43,7 +43,7 @@
 
 -(void)reload
 {
-    [self.lbl setText:@"Shisus"];
+    [self.lbl setText:self.profile.name];
     [self.border setBackgroundColor:[self.profile.gender color]];
 }
 
