@@ -85,7 +85,7 @@
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
     vconfigprofileheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerid forIndexPath:index];
-    [header addcircle];
+    [header reload];
     
     return header;
 }

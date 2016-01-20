@@ -9,5 +9,6 @@
 -(void)reload;
 
 @property(weak, nonatomic)mprofile *profile;
+@property(weak, nonatomic)UIImageView *imageqrcode;
 
 @end

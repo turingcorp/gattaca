@@ -30,8 +30,22 @@
     self.profile = profile;
     
     vprofilecircle *circle = [[vprofilecircle alloc] init];
-    
     [self addSubview:circle];
+    
+    UIImageView *imageqrcode = [[UIImageView alloc] init];
+    [imageqrcode setClipsToBounds:YES];
+    [imageqrcode setContentMode:UIViewContentModeScaleAspectFit];
+    [imageqrcode setUserInteractionEnabled:NO];
+    [imageqrcode setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.imageqrcode = imageqrcode;
+    
+    [self addSubview:imageqrcode];
+    
+    NSDictionary *views = @{@"qrcode":imageqrcode,@"circle":circle};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[qrcode(30)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[qrcode(30)]" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -40,7 +54,7 @@
 
 -(void)reload
 {
-    
+    [self.imageqrcode setImage:[tools qrcode:@"hello world"]];
 }
 
 @end
