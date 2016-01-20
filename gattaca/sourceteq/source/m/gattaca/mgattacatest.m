@@ -17,7 +17,7 @@
         NSDictionary *rawitem = rawsteps[index];
         [rawsteps removeObjectAtIndex:index];
         
-        [test addstep:[mgattacateststep parse:rawitem]];
+        [test addstep:[mgattacateststep parse:rawitem test:test]];
         
         count = rawsteps.count;
     }
@@ -31,7 +31,8 @@
     
     array = [NSMutableArray array];
     self.currentitem = 0;
-    self.like = [[mprofilelike alloc] init];
+    self.like = [mgattacascore scorefor:test_step_like];
+    self.ground = [mgattacascore scorefor:test_step_ground];
     
     return self;
 }
@@ -71,6 +72,24 @@
     }
     
     return hasnext;
+}
+
+-(void)chooseitem:(mgattacateststepitem*)item
+{
+    switch(item.step.steptype)
+    {
+        case test_step_like:
+            
+            [self.like addtolike:(profile_like)item.index];
+            
+            break;
+            
+        case test_step_ground:
+            
+            [self.ground addtoground:(profile_ground)item.index];
+            
+            break;
+    }
 }
 
 @end

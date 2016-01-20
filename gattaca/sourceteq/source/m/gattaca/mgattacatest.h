@@ -1,8 +1,8 @@
 #import "appdel.h"
 
 @class mgattacateststep;
-@class mprofileground;
-@class mprofilelike;
+@class mgattacateststepitem;
+@class mgattacascore;
 
 @interface mgattacatest:NSObject
 
@@ -11,9 +11,10 @@
 -(mgattacateststep*)step:(NSInteger)item;
 -(mgattacateststep*)current;
 -(BOOL)next;
+-(void)chooseitem:(mgattacateststepitem*)item;
 
-@property(strong, nonatomic)mprofilelike *like;
-@property(strong, nonatomic)mprofileground *ground;
+@property(strong, nonatomic)mgattacascore *like;
+@property(strong, nonatomic)mgattacascore *ground;
 @property(nonatomic)NSInteger currentitem;
 
 @end

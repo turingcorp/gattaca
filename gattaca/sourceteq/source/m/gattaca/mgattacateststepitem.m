@@ -2,10 +2,11 @@
 
 @implementation mgattacateststepitem
 
--(instancetype)init:(NSString*)url index:(NSInteger)index
+-(instancetype)init:(mgattacateststep*)step url:(NSString*)url index:(NSInteger)index
 {
     self = [super init];
     
+    self.step = step;
     self.url = url;
     self.index = index;
     

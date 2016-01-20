@@ -5,9 +5,9 @@
     NSMutableArray *array;
 }
 
-+(instancetype)parse:(NSDictionary*)dictionary
++(instancetype)parse:(NSDictionary*)dictionary test:(mgattacatest*)test
 {
-    mgattacateststep *step = [[mgattacateststep alloc] init];
+    mgattacateststep *step = [[mgattacateststep alloc] init:test];
     step.steptype = (test_step)[dictionary[@"type"] integerValue];
     step.title = [[mgattacateststeptitle alloc] init:step.steptype];
     
@@ -17,7 +17,7 @@
     for(NSInteger i = 0; i < count; i++)
     {
         NSString *itemurl = rawitems[i];
-        mgattacateststepitem *item = [[mgattacateststepitem alloc] init:itemurl index:i];
+        mgattacateststepitem *item = [[mgattacateststepitem alloc] init:step url:itemurl index:i];
         
         if(arc4random_uniform(2))
         {
@@ -32,10 +32,11 @@
     return step;
 }
 
--(instancetype)init
+-(instancetype)init:(mgattacatest*)test
 {
     self = [super init];
     
+    self.test = test;
     array = [NSMutableArray array];
     
     return self;

@@ -83,4 +83,24 @@
 
 #pragma mark public
 
+-(mgattacascoreitem*)likeitem:(profile_like)type
+{
+    return dictionary[[self keyliketostring:type]];
+}
+
+-(mgattacascoreitem*)grounditem:(profile_ground)type
+{
+    return dictionary[[self keygroundtostring:type]];
+}
+
+-(void)addtolike:(profile_like)type
+{
+    [[self likeitem:type] add];
+}
+
+-(void)addtoground:(profile_ground)type
+{
+    [[self grounditem:type] add];
+}
+
 @end

@@ -13,4 +13,11 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)add
+{
+    self.counter++;
+}
+
 @end
