@@ -11,6 +11,7 @@
 #import "msectioncontact.h"
 #import "msectionlogin.h"
 #import "mprofile.h"
+#import "mprofilegender.h"
 #import "mprofilelike.h"
 #import "mprofileground.h"
 #import "mprofilelikeprotocol.h"
