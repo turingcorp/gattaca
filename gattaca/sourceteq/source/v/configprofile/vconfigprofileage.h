@@ -1,13 +1,12 @@
-//
-//  vconfigprofileage.h
-//  gattaca
-//
-//  Created by zero on 1/20/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "viewbase.h"
 
-#import <Foundation/Foundation.h>
+@class mmyprofileages;
 
-@interface vconfigprofileage : NSObject
+@interface vconfigprofileage:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property(strong, nonatomic)mmyprofileages *ages;
+@property(weak, nonatomic)mmyprofileage *current;
+@property(weak, nonatomic)UICollectionView *collection;
 
 @end

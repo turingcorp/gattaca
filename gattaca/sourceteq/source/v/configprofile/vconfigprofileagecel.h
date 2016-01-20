@@ -1,13 +1,11 @@
-//
-//  vconfigprofileagecel.h
-//  gattaca
-//
-//  Created by zero on 1/20/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@class mmyprofileage;
 
-@interface vconfigprofileagecel : NSObject
+@interface vconfigprofileagecel:UICollectionViewCell
+
+-(void)config:(mmyprofileage*)age;
+
+@property(weak, nonatomic)UILabel *lbl;
 
 @end
