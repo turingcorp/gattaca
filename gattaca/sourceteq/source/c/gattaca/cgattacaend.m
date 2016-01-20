@@ -2,19 +2,20 @@
 
 @implementation cgattacaend
 
-+(void)finish
++(void)finish:(mgattacatest*)test
 {
     dispatch_async(dispatch_get_main_queue(),
                    ^(void)
                    {
-                       [[cmain singleton] presentViewController:[[cgattacaend alloc] init] animated:YES completion:nil];
+                       [[cmain singleton] presentViewController:[[cgattacaend alloc] init:test] animated:YES completion:nil];
                    });
 }
 
--(instancetype)init
+-(instancetype)init:(mgattacatest*)test
 {
     self = [super init];
-    
+
+    self.test = test;
     [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
     
     return self;
@@ -25,6 +26,11 @@
     [super viewDidLoad];
     
     [self setTitle:NSLocalizedString(@"gattaca_main_title", nil)];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^{
+                       [self.test scoreall];
+                   });
 }
 
 -(void)loadView

@@ -101,7 +101,7 @@
     [db query:query];
 }
 
--(id<mprofilegroundprotocol>)like:(profile_ground)ground
+-(id<mprofilegroundprotocol>)ground:(profile_ground)ground
 {
     return dictionary[[self groundtokey:ground]];
 }

@@ -88,8 +88,9 @@
 
 -(void)measure
 {
-    for(mgattacascoreitem *item in dictionary)
+    for(mgattacascoreitem *item in dictionary.allValues)
     {
+        [item computefor:self.count];
     }
 }
 

@@ -7,6 +7,6 @@
 -(NSInteger)count;
 -(id<mprofilegroundprotocol>)item:(NSInteger)index;
 -(void)update:(id<mprofilegroundprotocol>)like amount:(NSInteger)newamount;
--(id<mprofilegroundprotocol>)like:(profile_ground)like;
+-(id<mprofilegroundprotocol>)ground:(profile_ground)like;
 
 @end

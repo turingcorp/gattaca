@@ -20,4 +20,25 @@
     self.counter++;
 }
 
+-(void)computefor:(NSInteger)total
+{
+    NSInteger multiplier = 1000;
+    NSInteger computed = (self.counter / (CGFloat)total) * multiplier;
+    
+    switch(self.type)
+    {
+        case test_step_like:
+     
+            [[[mmyprofile singleton].profile.like like:(profile_like)self.index] newamount:computed];
+            
+            break;
+            
+        case test_step_ground:
+            
+            [[[mmyprofile singleton].profile.ground ground:(profile_ground)self.index] newamount:computed];
+            
+            break;
+    }
+}
+
 @end

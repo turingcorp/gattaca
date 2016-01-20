@@ -12,6 +12,7 @@
 -(mgattacateststep*)current;
 -(BOOL)next;
 -(void)chooseitem:(mgattacateststepitem*)item;
+-(void)scoreall;
 
 @property(strong, nonatomic)mgattacascore *like;
 @property(strong, nonatomic)mgattacascore *ground;

@@ -92,4 +92,12 @@
     }
 }
 
+-(void)scoreall
+{
+    [self.like measure];
+    [self.ground measure];
+    
+    // save profile
+}
+
 @end

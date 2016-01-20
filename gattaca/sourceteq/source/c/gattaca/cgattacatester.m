@@ -73,7 +73,7 @@
     {
         [[cmain singleton] dismissViewControllerAnimated:NO completion:
          ^{
-             [cgattacaend finish];
+             [cgattacaend finish:self.test];
          }];
     }
 }
