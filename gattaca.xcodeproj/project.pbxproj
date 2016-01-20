@@ -109,9 +109,6 @@
 		DA462AE61C4D363A0060265A /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA462AE31C4D363A0060265A /* next@2x.png */; };
 		DA462AE71C4D363A0060265A /* next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA462AE41C4D363A0060265A /* next@3x.png */; };
 		DA462AEA1C4D39930060265A /* cprofilename.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AE91C4D39930060265A /* cprofilename.m */; };
-		DA462AED1C4D3A4D0060265A /* vprofilename.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AEC1C4D3A4D0060265A /* vprofilename.m */; };
-		DA462AF01C4D3A6B0060265A /* vprofilenamecel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AEF1C4D3A6B0060265A /* vprofilenamecel.m */; };
-		DA462AF31C4D3E0C0060265A /* vprofilenameheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AF21C4D3E0C0060265A /* vprofilenameheader.m */; };
 		DA462AF61C4D4B160060265A /* mmyprofilenames.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AF51C4D4B160060265A /* mmyprofilenames.m */; };
 		DA462AF91C4D4B210060265A /* mmyprofilename.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AF81C4D4B210060265A /* mmyprofilename.m */; };
 		DA462AFC1C4D6D810060265A /* vprofilecircleage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AFB1C4D6D810060265A /* vprofilecircleage.m */; };
@@ -347,12 +344,6 @@
 		DA462AE41C4D363A0060265A /* next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@3x.png"; sourceTree = "<group>"; };
 		DA462AE81C4D39930060265A /* cprofilename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cprofilename.h; sourceTree = "<group>"; };
 		DA462AE91C4D39930060265A /* cprofilename.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cprofilename.m; sourceTree = "<group>"; };
-		DA462AEB1C4D3A4D0060265A /* vprofilename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofilename.h; sourceTree = "<group>"; };
-		DA462AEC1C4D3A4D0060265A /* vprofilename.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilename.m; sourceTree = "<group>"; };
-		DA462AEE1C4D3A6B0060265A /* vprofilenamecel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofilenamecel.h; sourceTree = "<group>"; };
-		DA462AEF1C4D3A6B0060265A /* vprofilenamecel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilenamecel.m; sourceTree = "<group>"; };
-		DA462AF11C4D3E0C0060265A /* vprofilenameheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofilenameheader.h; sourceTree = "<group>"; };
-		DA462AF21C4D3E0C0060265A /* vprofilenameheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilenameheader.m; sourceTree = "<group>"; };
 		DA462AF41C4D4B160060265A /* mmyprofilenames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmyprofilenames.h; sourceTree = "<group>"; };
 		DA462AF51C4D4B160060265A /* mmyprofilenames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mmyprofilenames.m; sourceTree = "<group>"; };
 		DA462AF71C4D4B210060265A /* mmyprofilename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmyprofilename.h; sourceTree = "<group>"; };
@@ -1147,12 +1138,6 @@
 				DA4C0EF61C459B8200203315 /* vprofileage.m */,
 				DA4C0F061C45A88100203315 /* vprofileagecel.h */,
 				DA4C0F071C45A88100203315 /* vprofileagecel.m */,
-				DA462AEB1C4D3A4D0060265A /* vprofilename.h */,
-				DA462AEC1C4D3A4D0060265A /* vprofilename.m */,
-				DA462AF11C4D3E0C0060265A /* vprofilenameheader.h */,
-				DA462AF21C4D3E0C0060265A /* vprofilenameheader.m */,
-				DA462AEE1C4D3A6B0060265A /* vprofilenamecel.h */,
-				DA462AEF1C4D3A6B0060265A /* vprofilenamecel.m */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -1399,7 +1384,6 @@
 				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
 				DA462AF61C4D4B160060265A /* mmyprofilenames.m in Sources */,
 				DA30972D1C3EB8DB00E8AFA2 /* vloginindicatorcel.m in Sources */,
-				DA462AED1C4D3A4D0060265A /* vprofilename.m in Sources */,
 				DA05801E1C4E8501007FF899 /* vgattacatesterheader.m in Sources */,
 				DA46BD261C3F4DE600472BC9 /* mprofile.m in Sources */,
 				DA7AB9841C449AFD0058756C /* mdbcreate.m in Sources */,
@@ -1435,7 +1419,6 @@
 				DA7AB9811C449AF10058756C /* mdb.m in Sources */,
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
 				DA4C0F081C45A88100203315 /* vprofileagecel.m in Sources */,
-				DA462AF01C4D3A6B0060265A /* vprofilenamecel.m in Sources */,
 				DA4C0EF11C459A1600203315 /* cprofile.m in Sources */,
 				DA05807D1C4F00A4007FF899 /* mgattacascoreitem.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
@@ -1490,7 +1473,6 @@
 				DA3F6E121C46BC89007E2888 /* vprofilecircleslash.m in Sources */,
 				DA021CCF1C4FCAAC00B70557 /* cgattacamain.m in Sources */,
 				DA462B081C4D8C450060265A /* vgattacaheader.m in Sources */,
-				DA462AF31C4D3E0C0060265A /* vprofilenameheader.m in Sources */,
 				DA322A061C403A49004C6958 /* vmenucel.m in Sources */,
 				DA46BD221C3F4BA700472BC9 /* vconfigcel.m in Sources */,
 				DA322A2E1C40C038004C6958 /* mconfigsettingsreview.m in Sources */,
