@@ -1,6 +1,6 @@
 #import "appdel.h"
 
-@interface cgattaca:UIViewController
+@interface cgattaca:UINavigationController
 
 +(void)test;
 -(void)cancel;

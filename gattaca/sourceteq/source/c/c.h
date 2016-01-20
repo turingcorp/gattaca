@@ -12,6 +12,7 @@
 #import "ccontact.h"
 #import "clogin.h"
 #import "cgattaca.h"
+#import "cgattacamain.h"
 #import "cgattacatester.h"
 #import "cgattacaend.h"
 #import "calert.h"

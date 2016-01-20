@@ -15,8 +15,6 @@
 {
     self = [super init];
     
-#warning "should try a nav controller"
-    
     [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
     
     return self;
