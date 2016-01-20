@@ -40,7 +40,11 @@
 -(void)accept
 {
     [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_done label:@""];
-    [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
+    [[cmain singleton] dismissViewControllerAnimated:YES completion:
+     ^
+     {
+         [[NSNotificationCenter defaultCenter] postNotificationName:notprofileupdate object:nil];
+     }];
 }
 
 @end

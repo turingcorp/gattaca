@@ -27,7 +27,7 @@
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor colorWithWhite:1 alpha:0.1] forState:UIControlStateHighlighted];
     [btn setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [btn addTarget:controller action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(actionend) forControlEvents:UIControlEventTouchUpInside];
     [btn setTitle:NSLocalizedString(@"gattaca_tester_accept", nil) forState:UIControlStateNormal];
     
     [self addSubview:blur];
@@ -44,6 +44,13 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-250-[lbl]-20-[btn(44)]" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark actions
+
+-(void)actionend
+{
+    [(cgattacaend*)self.controller accept];
 }
 
 @end
