@@ -13,4 +13,11 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)selected
+{
+    [self.step.test chooseitem:self];
+}
+
 @end

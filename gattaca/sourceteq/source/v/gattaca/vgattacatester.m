@@ -133,6 +133,7 @@
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
+    [[[self step] item:index.item] selected];
     [self animate:NO asknext:YES];
 }
 

@@ -5,6 +5,7 @@
 @interface mgattacateststepitem:NSObject
 
 -(instancetype)init:(mgattacateststep*)step url:(NSString*)url index:(NSInteger)index;
+-(void)selected;
 
 @property(weak, nonatomic)mgattacateststep *step;
 @property(copy, nonatomic)NSString *url;
