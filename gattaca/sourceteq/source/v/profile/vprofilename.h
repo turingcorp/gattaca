@@ -1,13 +1,14 @@
-//
-//  vprofilename.h
-//  gattaca
-//
-//  Created by zero on 1/20/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@class mprofile;
 
-@interface vprofilename : NSObject
+@interface vprofilename:UIView
+
+-(instancetype)init:(mprofile*)profile;
+-(void)reload;
+
+@property(weak, nonatomic)mprofile *profile;
+@property(weak, nonatomic)UIView *border;
+@property(weak, nonatomic)UILabel *lbl;
 
 @end

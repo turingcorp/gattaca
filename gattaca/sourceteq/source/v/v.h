@@ -25,6 +25,7 @@
 #import "vcontact.h"
 #import "vprofile.h"
 #import "vprofileqr.h"
+#import "vprofilename.h"
 #import "vprofilecircle.h"
 #import "vprofilecircleribbon.h"
 #import "vprofilecirclelike.h"

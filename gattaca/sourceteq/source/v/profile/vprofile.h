@@ -2,6 +2,7 @@
 
 @class mprofile;
 @class vprofileqr;
+@class vprofilename;
 
 @interface vprofile:UIView
 
@@ -11,5 +12,6 @@
 
 @property(weak, nonatomic)mprofile *profile;
 @property(weak, nonatomic)vprofileqr *qr;
+@property(weak, nonatomic)vprofilename *name;
 
 @end
