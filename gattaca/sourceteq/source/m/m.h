@@ -13,6 +13,7 @@
 #import "mprofile.h"
 #import "mprofilegender.h"
 #import "mprofilecircle.h"
+#import "mprofilecircleprotocol.h"
 #import "mprofilelike.h"
 #import "mprofileground.h"
 #import "mprofilelikeprotocol.h"
