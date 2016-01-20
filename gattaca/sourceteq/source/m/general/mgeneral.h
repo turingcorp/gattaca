@@ -78,11 +78,3 @@ typedef NS_ENUM(NSInteger, profile_circle)
     profile_circle_politics,
     profile_circle_leisure
 };
-
-// test
-
-typedef NS_ENUM(NSInteger, test_step)
-{
-    test_step_like,
-    test_step_ground
-};

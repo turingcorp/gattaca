@@ -1,8 +1,7 @@
 #import "appdel.h"
 
 @class mprofilegender;
-@class mprofilelike;
-@class mprofileground;
+@class mprofilecircle;
 
 @interface mprofile:NSObject
 
@@ -11,8 +10,7 @@
 -(void)changegender:(profile_gender)gender;
 
 @property(strong, nonatomic)mprofilegender *gender;
-@property(strong, nonatomic)mprofilelike *like;
-@property(strong, nonatomic)mprofileground *ground;
+@property(strong, nonatomic)mprofilecircle *circle;
 @property(copy, nonatomic)NSString *name;
 @property(nonatomic)NSInteger latitude;
 @property(nonatomic)NSInteger longitude;

@@ -31,8 +31,7 @@
     
     array = [NSMutableArray array];
     self.currentitem = 0;
-    self.like = [mgattacascore scorefor:test_step_like];
-    self.ground = [mgattacascore scorefor:test_step_ground];
+    self.score = [[mgattacascore alloc] init];
     
     return self;
 }

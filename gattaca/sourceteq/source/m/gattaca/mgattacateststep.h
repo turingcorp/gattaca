@@ -1,7 +1,6 @@
 #import "appdel.h"
 
 @class mgattacatest;
-@class mgattacateststeptitle;
 @class mgattacateststepitem;
 
 @interface mgattacateststep:NSObject
@@ -11,7 +10,5 @@
 -(mgattacateststepitem*)item:(NSInteger)item;
 
 @property(weak, nonatomic)mgattacatest *test;
-@property(strong, nonatomic)mgattacateststeptitle *title;
-@property(nonatomic)test_step steptype;
 
 @end

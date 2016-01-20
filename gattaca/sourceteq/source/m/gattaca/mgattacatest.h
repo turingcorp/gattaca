@@ -12,10 +12,9 @@
 -(mgattacateststep*)current;
 -(BOOL)next;
 -(void)chooseitem:(mgattacateststepitem*)item;
--(void)scoreall;
+-(void)renderscore;
 
-@property(strong, nonatomic)mgattacascore *like;
-@property(strong, nonatomic)mgattacascore *ground;
+@property(strong, nonatomic)mgattacascore *score;
 @property(nonatomic)NSInteger currentitem;
 
 @end

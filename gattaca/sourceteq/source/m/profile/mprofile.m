@@ -13,8 +13,7 @@
 
 -(void)loadstats
 {
-    self.like = [[mprofilelike alloc] init];
-    self.ground = [[mprofileground alloc] init];
+    self.circle = [[mprofilecircle alloc] init];
 }
 
 -(void)loadstats:(NSDictionary*)json

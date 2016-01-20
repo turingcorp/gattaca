@@ -25,7 +25,6 @@
 		DA0580211C4E850B007FF899 /* vgattacatestercel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580201C4E850B007FF899 /* vgattacatestercel.m */; };
 		DA0580241C4E85C6007FF899 /* mgattacatest.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580231C4E85C6007FF899 /* mgattacatest.m */; };
 		DA05802D1C4E8659007FF899 /* mgattacateststep.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05802C1C4E8659007FF899 /* mgattacateststep.m */; };
-		DA0580331C4E8682007FF899 /* mgattacateststeptitle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580321C4E8682007FF899 /* mgattacateststeptitle.m */; };
 		DA0580361C4E868F007FF899 /* mgattacateststepitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580351C4E868F007FF899 /* mgattacateststepitem.m */; };
 		DA0580381C4E8859007FF899 /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA0580371C4E8859007FF899 /* test.plist */; };
 		DA05803E1C4E8B92007FF899 /* test_01_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA05803B1C4E8B92007FF899 /* test_01_1.jpg */; };
@@ -207,8 +206,6 @@
 		DA0580231C4E85C6007FF899 /* mgattacatest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacatest.m; sourceTree = "<group>"; };
 		DA05802B1C4E8659007FF899 /* mgattacateststep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgattacateststep.h; sourceTree = "<group>"; };
 		DA05802C1C4E8659007FF899 /* mgattacateststep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacateststep.m; sourceTree = "<group>"; };
-		DA0580311C4E8682007FF899 /* mgattacateststeptitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgattacateststeptitle.h; sourceTree = "<group>"; };
-		DA0580321C4E8682007FF899 /* mgattacateststeptitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacateststeptitle.m; sourceTree = "<group>"; };
 		DA0580341C4E868F007FF899 /* mgattacateststepitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgattacateststepitem.h; sourceTree = "<group>"; };
 		DA0580351C4E868F007FF899 /* mgattacateststepitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacateststepitem.m; sourceTree = "<group>"; };
 		DA0580371C4E8859007FF899 /* test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = test.plist; sourceTree = "<group>"; };
@@ -825,8 +822,6 @@
 				DA0580231C4E85C6007FF899 /* mgattacatest.m */,
 				DA05802B1C4E8659007FF899 /* mgattacateststep.h */,
 				DA05802C1C4E8659007FF899 /* mgattacateststep.m */,
-				DA0580311C4E8682007FF899 /* mgattacateststeptitle.h */,
-				DA0580321C4E8682007FF899 /* mgattacateststeptitle.m */,
 				DA0580341C4E868F007FF899 /* mgattacateststepitem.h */,
 				DA0580351C4E868F007FF899 /* mgattacateststepitem.m */,
 				DA0580781C4F003F007FF899 /* mgattacascore.h */,
@@ -1375,7 +1370,6 @@
 				DA2965A91C3DC74600BC713E /* ccontact.m in Sources */,
 				DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */,
 				DA7AB91F1C43F17F0058756C /* cconfigsettingsdelete.m in Sources */,
-				DA0580331C4E8682007FF899 /* mgattacateststeptitle.m in Sources */,
 				DA2965E91C3DF2FF00BC713E /* msectionconfig.m in Sources */,
 				DA46BD141C3F14B800472BC9 /* msectionlogin.m in Sources */,
 				DA2965EA1C3DF2FF00BC713E /* msectioncontact.m in Sources */,
