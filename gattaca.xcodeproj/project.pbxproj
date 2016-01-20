@@ -13,6 +13,8 @@
 		DA021CD51C5002E900B70557 /* vconfigprofilename.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CD41C5002E900B70557 /* vconfigprofilename.m */; };
 		DA021CD81C5002FA00B70557 /* vconfigprofilenamecel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CD71C5002FA00B70557 /* vconfigprofilenamecel.m */; };
 		DA021CDB1C50030700B70557 /* vconfigprofilenameheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CDA1C50030700B70557 /* vconfigprofilenameheader.m */; };
+		DA021CDE1C50042E00B70557 /* vconfigprofileage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CDD1C50042E00B70557 /* vconfigprofileage.m */; };
+		DA021CE11C50043900B70557 /* vconfigprofileagecel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CE01C50043900B70557 /* vconfigprofileagecel.m */; };
 		DA05801B1C4E8418007FF899 /* vgattacatester.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801A1C4E8418007FF899 /* vgattacatester.m */; };
 		DA05801E1C4E8501007FF899 /* vgattacatesterheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801D1C4E8501007FF899 /* vgattacatesterheader.m */; };
 		DA0580211C4E850B007FF899 /* vgattacatestercel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580201C4E850B007FF899 /* vgattacatestercel.m */; };
@@ -187,6 +189,10 @@
 		DA021CD71C5002FA00B70557 /* vconfigprofilenamecel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigprofilenamecel.m; sourceTree = "<group>"; };
 		DA021CD91C50030700B70557 /* vconfigprofilenameheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigprofilenameheader.h; sourceTree = "<group>"; };
 		DA021CDA1C50030700B70557 /* vconfigprofilenameheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigprofilenameheader.m; sourceTree = "<group>"; };
+		DA021CDC1C50042E00B70557 /* vconfigprofileage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigprofileage.h; sourceTree = "<group>"; };
+		DA021CDD1C50042E00B70557 /* vconfigprofileage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigprofileage.m; sourceTree = "<group>"; };
+		DA021CDF1C50043900B70557 /* vconfigprofileagecel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigprofileagecel.h; sourceTree = "<group>"; };
+		DA021CE01C50043900B70557 /* vconfigprofileagecel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigprofileagecel.m; sourceTree = "<group>"; };
 		DA0580191C4E8418007FF899 /* vgattacatester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatester.h; sourceTree = "<group>"; };
 		DA05801A1C4E8418007FF899 /* vgattacatester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacatester.m; sourceTree = "<group>"; };
 		DA05801C1C4E8501007FF899 /* vgattacatesterheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatesterheader.h; sourceTree = "<group>"; };
@@ -1111,6 +1117,10 @@
 				DA021CDA1C50030700B70557 /* vconfigprofilenameheader.m */,
 				DA021CD61C5002FA00B70557 /* vconfigprofilenamecel.h */,
 				DA021CD71C5002FA00B70557 /* vconfigprofilenamecel.m */,
+				DA021CDC1C50042E00B70557 /* vconfigprofileage.h */,
+				DA021CDD1C50042E00B70557 /* vconfigprofileage.m */,
+				DA021CDF1C50043900B70557 /* vconfigprofileagecel.h */,
+				DA021CE01C50043900B70557 /* vconfigprofileagecel.m */,
 			);
 			path = configprofile;
 			sourceTree = "<group>";
@@ -1383,6 +1393,7 @@
 				DA322A141C407683004C6958 /* vspinner.m in Sources */,
 				DA2965AD1C3DC95100BC713E /* vbrowse.m in Sources */,
 				DA462AF61C4D4B160060265A /* mmyprofilenames.m in Sources */,
+				DA021CDE1C50042E00B70557 /* vconfigprofileage.m in Sources */,
 				DA30972D1C3EB8DB00E8AFA2 /* vloginindicatorcel.m in Sources */,
 				DA05801E1C4E8501007FF899 /* vgattacatesterheader.m in Sources */,
 				DA46BD261C3F4DE600472BC9 /* mprofile.m in Sources */,
@@ -1484,6 +1495,7 @@
 				DA30972A1C3EB81F00E8AFA2 /* vlogincel.m in Sources */,
 				DA4C0EF41C459B2F00203315 /* cprofileage.m in Sources */,
 				DA462AF91C4D4B210060265A /* mmyprofilename.m in Sources */,
+				DA021CE11C50043900B70557 /* vconfigprofileagecel.m in Sources */,
 				DA0580771C4EF654007FF899 /* vgattacaend.m in Sources */,
 				DA30971E1C3EAB3C00E8AFA2 /* mloginfirst.m in Sources */,
 				DA462B051C4D898A0060265A /* vgattaca.m in Sources */,
