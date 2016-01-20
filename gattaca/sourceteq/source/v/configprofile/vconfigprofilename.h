@@ -1,13 +1,10 @@
-//
-//  vconfigprofilename.h
-//  gattaca
-//
-//  Created by zero on 1/20/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "viewbase.h"
 
-#import <Foundation/Foundation.h>
+@class mmyprofilenames;
 
-@interface vconfigprofilename : NSObject
+@interface vconfigprofilename:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property(strong, nonatomic)mmyprofilenames *model;
 
 @end
