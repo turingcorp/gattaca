@@ -1,13 +1,8 @@
-//
-//  cgattacamain.h
-//  gattaca
-//
-//  Created by zero on 1/20/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface cgattacamain:UIViewController
 
-@interface cgattacamain : NSObject
+-(void)cancel;
+-(void)starttest;
 
 @end
