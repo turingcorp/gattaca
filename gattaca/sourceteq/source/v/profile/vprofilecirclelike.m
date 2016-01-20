@@ -42,14 +42,18 @@
     for(NSInteger i = count - 1; i >= 0; i--)
     {
         id<mprofilelikeprotocol> item = [like item:i];
+        NSInteger amount = [item currentamount];
         
-        CGFloat start = [self amounttopoint:added];
-        added += [item currentamount];
-        CGFloat end = [self amounttopoint:added];
-        
-        vprofilecircleslash *slash = [[vprofilecircleslash alloc] init:linewidth start:start end:end];
-        slash.tintColor = [item color];
-        [self constraintsfor:slash];
+        if(amount)
+        {
+            CGFloat start = [self amounttopoint:added];
+            added += amount;
+            CGFloat end = [self amounttopoint:added];
+            
+            vprofilecircleslash *slash = [[vprofilecircleslash alloc] init:linewidth start:start end:end];
+            slash.tintColor = [item color];
+            [self constraintsfor:slash];
+        }
     }
 }
 
