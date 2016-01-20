@@ -13,7 +13,7 @@
 #import "mprofile.h"
 #import "mprofilegender.h"
 #import "mprofilecircle.h"
-#import "mprofilecircleprotocol.h"
+#import "mprofilecircleitem.h"
 #import "mmyprofile.h"
 #import "mmyprofileages.h"
 #import "mmyprofileage.h"

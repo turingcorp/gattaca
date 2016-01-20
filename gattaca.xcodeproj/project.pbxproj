@@ -20,6 +20,7 @@
 		DA021CEA1C50124000B70557 /* mprofilegendermale.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CE91C50124000B70557 /* mprofilegendermale.m */; };
 		DA021CED1C50124C00B70557 /* mprofilegenderfemale.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CEC1C50124C00B70557 /* mprofilegenderfemale.m */; };
 		DA021CF01C501BBB00B70557 /* mprofilecircle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CEF1C501BBB00B70557 /* mprofilecircle.m */; };
+		DA021CF41C50411000B70557 /* mprofilecircleitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CF31C50411000B70557 /* mprofilecircleitem.m */; };
 		DA05801B1C4E8418007FF899 /* vgattacatester.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801A1C4E8418007FF899 /* vgattacatester.m */; };
 		DA05801E1C4E8501007FF899 /* vgattacatesterheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801D1C4E8501007FF899 /* vgattacatesterheader.m */; };
 		DA0580211C4E850B007FF899 /* vgattacatestercel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580201C4E850B007FF899 /* vgattacatestercel.m */; };
@@ -193,7 +194,8 @@
 		DA021CEC1C50124C00B70557 /* mprofilegenderfemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilegenderfemale.m; sourceTree = "<group>"; };
 		DA021CEE1C501BBB00B70557 /* mprofilecircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilecircle.h; sourceTree = "<group>"; };
 		DA021CEF1C501BBB00B70557 /* mprofilecircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilecircle.m; sourceTree = "<group>"; };
-		DA021CF11C501CBB00B70557 /* mprofilecircleprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilecircleprotocol.h; sourceTree = "<group>"; };
+		DA021CF21C50411000B70557 /* mprofilecircleitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilecircleitem.h; sourceTree = "<group>"; };
+		DA021CF31C50411000B70557 /* mprofilecircleitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilecircleitem.m; sourceTree = "<group>"; };
 		DA0580191C4E8418007FF899 /* vgattacatester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatester.h; sourceTree = "<group>"; };
 		DA05801A1C4E8418007FF899 /* vgattacatester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacatester.m; sourceTree = "<group>"; };
 		DA05801C1C4E8501007FF899 /* vgattacatesterheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatesterheader.h; sourceTree = "<group>"; };
@@ -884,7 +886,8 @@
 				DA021CEC1C50124C00B70557 /* mprofilegenderfemale.m */,
 				DA021CEE1C501BBB00B70557 /* mprofilecircle.h */,
 				DA021CEF1C501BBB00B70557 /* mprofilecircle.m */,
-				DA021CF11C501CBB00B70557 /* mprofilecircleprotocol.h */,
+				DA021CF21C50411000B70557 /* mprofilecircleitem.h */,
+				DA021CF31C50411000B70557 /* mprofilecircleitem.m */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -1374,6 +1377,7 @@
 				DA7AB9811C449AF10058756C /* mdb.m in Sources */,
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
 				DA4C0EF11C459A1600203315 /* cprofile.m in Sources */,
+				DA021CF41C50411000B70557 /* mprofilecircleitem.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
 				DA7AB93F1C446E620058756C /* vprofile.m in Sources */,
 				DA021CED1C50124C00B70557 /* mprofilegenderfemale.m in Sources */,

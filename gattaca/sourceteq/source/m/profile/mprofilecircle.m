@@ -5,9 +5,9 @@
     NSMutableDictionary *dictionary;
 }
 
-+(id<mprofilecircleprotocol>)circle:(profile_circle)type amount:(NSInteger)amount
++(mprofilecircleitem*)circle:(profile_circle)type amount:(NSInteger)amount
 {
-    id<mprofilecircleprotocol> item;
+    mprofilecircleitem *item;
     
     switch(type)
     {
@@ -65,7 +65,7 @@
     }
 }
 
--(id<mprofilecircleprotocol>)item:(profile_circle)type
+-(mprofilecircleitem*)item:(profile_circle)type
 {
     return dictionary[[tools typetokey:type]];
 }
