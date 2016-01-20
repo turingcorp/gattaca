@@ -30,30 +30,31 @@
 
 +(instancetype)likes
 {
-    mgattacascore *score = [[mgattacascore alloc] init];
-    [score addkeylike:profile_like_science];
-    [score addkeylike:profile_like_art];
-    [score addkeylike:profile_like_social];
-    [score addkeylike:profile_like_sport];
+    mgattacascore *score = [[mgattacascore alloc] init:test_step_like];
+    [score addkey:profile_like_science];
+    [score addkey:profile_like_art];
+    [score addkey:profile_like_social];
+    [score addkey:profile_like_sport];
     
     return score;
 }
 
 +(instancetype)grounds
 {
-    mgattacascore *score = [[mgattacascore alloc] init];
-    [score addkeyground:profile_ground_cultural];
-    [score addkeyground:profile_ground_entertainment];
-    [score addkeyground:profile_ground_gaming];
-    [score addkeyground:profile_ground_partying];
+    mgattacascore *score = [[mgattacascore alloc] init:test_step_ground];
+    [score addkey:profile_ground_cultural];
+    [score addkey:profile_ground_entertainment];
+    [score addkey:profile_ground_gaming];
+    [score addkey:profile_ground_partying];
     
     return score;
 }
 
--(instancetype)init
+-(instancetype)init:(test_step)type
 {
     self = [super init];
     
+    self.type = type;
     self.count = 0;
     dictionary = [NSMutableDictionary dictionary];
     
@@ -62,73 +63,33 @@
 
 #pragma mark functionality
 
--(NSString*)keyliketostring:(profile_like)type
+-(NSString*)keytostring:(NSInteger)index
 {
-    return [NSString stringWithFormat:@"%@", @(type)];
+    return [NSString stringWithFormat:@"%@", @(index)];
 }
 
--(NSString*)keygroundtostring:(profile_ground)type
+-(void)addkey:(NSInteger)index
 {
-    return [NSString stringWithFormat:@"%@", @(type)];
+    dictionary[[self keytostring:index]] = [[mgattacascoreitem alloc] init:self.type index:index];
 }
 
--(void)addkeylike:(profile_like)type
+-(mgattacascoreitem*)item:(NSInteger)index
 {
-    dictionary[[self keyliketostring:type]] = [[mgattacascoreitem alloc] init:test_step_like index:type];
-}
-
--(void)addkeyground:(profile_ground)type
-{
-    dictionary[[self keygroundtostring:type]] = [[mgattacascoreitem alloc] init:test_step_ground index:type];
-}
-
--(mgattacascoreitem*)likeitem:(profile_like)type
-{
-    return dictionary[[self keyliketostring:type]];
-}
-
--(mgattacascoreitem*)grounditem:(profile_ground)type
-{
-    return dictionary[[self keygroundtostring:type]];
-}
-
--(void)addtolike:(profile_like)type
-{
-    [[self likeitem:type] add];
-}
-
--(void)addtoground:(profile_ground)type
-{
-    [[self grounditem:type] add];
+    return dictionary[[self keytostring:index]];
 }
 
 #pragma mark public
 
--(void)addto:(test_step)step type:(NSInteger)index
+-(void)addto:(NSInteger)index
 {
     self.count++;
-    
-    switch(step)
-    {
-        case test_step_like:
-            
-            [self addtolike:(profile_like)index];
-            
-            break;
-            
-        case test_step_ground:
-            
-            [self addtoground:(profile_ground)index];
-            
-            break;
-    }
+    [[self item:index] add];
 }
 
 -(void)measure
 {
     for(mgattacascoreitem *item in dictionary)
     {
-        here
     }
 }
 

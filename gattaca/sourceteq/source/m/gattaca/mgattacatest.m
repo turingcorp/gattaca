@@ -80,13 +80,13 @@
     {
         case test_step_like:
             
-            [self.like addtolike:(profile_like)item.index];
+            [self.like addto:item.index];
             
             break;
             
         case test_step_ground:
             
-            [self.ground addtoground:(profile_ground)item.index];
+            [self.ground addto:item.index];
             
             break;
     }
