@@ -2,7 +2,7 @@
 
 @implementation vgattaca
 
--(instancetype)init:(cgattaca*)controller
+-(instancetype)init:(cgattacamain*)controller
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];
@@ -89,11 +89,11 @@
 {
     if(index.item)
     {
-        [(cgattaca*)self.controller cancel];
+        [(cgattacamain*)self.controller cancel];
     }
     else
     {
-        [(cgattaca*)self.controller starttest];
+        [(cgattacamain*)self.controller starttest];
     }
 }
 

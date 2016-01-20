@@ -15,7 +15,15 @@
 {
     self = [super initWithRootViewController:[[cgattacamain alloc] init]];
     
+    [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    
     return self;
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self setNavigationBarHidden:YES animated:NO];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
