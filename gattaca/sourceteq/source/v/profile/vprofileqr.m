@@ -11,14 +11,13 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     self.profile = profile;
-    CGFloat borderwidth = 1;
+    CGFloat borderwidth = 2;
     
     UIImageView *image = [[UIImageView alloc] init];
     [image setClipsToBounds:YES];
     [image setContentMode:UIViewContentModeScaleAspectFit];
     [image setUserInteractionEnabled:NO];
     [image setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [image.layer setCornerRadius:3];
     [image.layer setBorderColor:colormain.CGColor];
     [image.layer setBorderWidth:borderwidth];
     self.image = image;

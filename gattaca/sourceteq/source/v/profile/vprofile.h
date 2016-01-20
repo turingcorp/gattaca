@@ -1,6 +1,7 @@
 #import "appdel.h"
 
 @class mprofile;
+@class vprofileqr;
 
 @interface vprofile:UIView
 
@@ -9,6 +10,6 @@
 -(void)reload;
 
 @property(weak, nonatomic)mprofile *profile;
-@property(weak, nonatomic)UIImageView *imageqrcode;
+@property(weak, nonatomic)vprofileqr *qr;
 
 @end

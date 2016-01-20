@@ -10,6 +10,9 @@
 		D2233BBF0363DC0A31972538 /* libPods-gattaca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 172D94B9242E43D73828A848 /* libPods-gattaca.a */; };
 		DA021CCF1C4FCAAC00B70557 /* cgattacamain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CCE1C4FCAAC00B70557 /* cgattacamain.m */; };
 		DA021CD21C50002000B70557 /* vprofileqr.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CD11C50002000B70557 /* vprofileqr.m */; };
+		DA021CD51C5002E900B70557 /* vconfigprofilename.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CD41C5002E900B70557 /* vconfigprofilename.m */; };
+		DA021CD81C5002FA00B70557 /* vconfigprofilenamecel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CD71C5002FA00B70557 /* vconfigprofilenamecel.m */; };
+		DA021CDB1C50030700B70557 /* vconfigprofilenameheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA021CDA1C50030700B70557 /* vconfigprofilenameheader.m */; };
 		DA05801B1C4E8418007FF899 /* vgattacatester.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801A1C4E8418007FF899 /* vgattacatester.m */; };
 		DA05801E1C4E8501007FF899 /* vgattacatesterheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05801D1C4E8501007FF899 /* vgattacatesterheader.m */; };
 		DA0580211C4E850B007FF899 /* vgattacatestercel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580201C4E850B007FF899 /* vgattacatestercel.m */; };
@@ -181,6 +184,12 @@
 		DA021CCE1C4FCAAC00B70557 /* cgattacamain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgattacamain.m; sourceTree = "<group>"; };
 		DA021CD01C50002000B70557 /* vprofileqr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofileqr.h; sourceTree = "<group>"; };
 		DA021CD11C50002000B70557 /* vprofileqr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofileqr.m; sourceTree = "<group>"; };
+		DA021CD31C5002E900B70557 /* vconfigprofilename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigprofilename.h; sourceTree = "<group>"; };
+		DA021CD41C5002E900B70557 /* vconfigprofilename.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigprofilename.m; sourceTree = "<group>"; };
+		DA021CD61C5002FA00B70557 /* vconfigprofilenamecel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigprofilenamecel.h; sourceTree = "<group>"; };
+		DA021CD71C5002FA00B70557 /* vconfigprofilenamecel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigprofilenamecel.m; sourceTree = "<group>"; };
+		DA021CD91C50030700B70557 /* vconfigprofilenameheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigprofilenameheader.h; sourceTree = "<group>"; };
+		DA021CDA1C50030700B70557 /* vconfigprofilenameheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigprofilenameheader.m; sourceTree = "<group>"; };
 		DA0580191C4E8418007FF899 /* vgattacatester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatester.h; sourceTree = "<group>"; };
 		DA05801A1C4E8418007FF899 /* vgattacatester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacatester.m; sourceTree = "<group>"; };
 		DA05801C1C4E8501007FF899 /* vgattacatesterheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatesterheader.h; sourceTree = "<group>"; };
@@ -1105,6 +1114,12 @@
 				DA7AB9311C44668C0058756C /* vconfigprofileheader.m */,
 				DA7AB9331C4466B20058756C /* vconfigprofilecel.h */,
 				DA7AB9341C4466B20058756C /* vconfigprofilecel.m */,
+				DA021CD31C5002E900B70557 /* vconfigprofilename.h */,
+				DA021CD41C5002E900B70557 /* vconfigprofilename.m */,
+				DA021CD91C50030700B70557 /* vconfigprofilenameheader.h */,
+				DA021CDA1C50030700B70557 /* vconfigprofilenameheader.m */,
+				DA021CD61C5002FA00B70557 /* vconfigprofilenamecel.h */,
+				DA021CD71C5002FA00B70557 /* vconfigprofilenamecel.m */,
 			);
 			path = configprofile;
 			sourceTree = "<group>";
@@ -1410,6 +1425,7 @@
 				DA7AB9731C447DB80058756C /* mprofilegroundgaming.m in Sources */,
 				DA2965EA1C3DF2FF00BC713E /* msectioncontact.m in Sources */,
 				DA322A201C40A348004C6958 /* cconfigsettings.m in Sources */,
+				DA021CD81C5002FA00B70557 /* vconfigprofilenamecel.m in Sources */,
 				DA462B021C4D86EC0060265A /* cgattaca.m in Sources */,
 				DA70A9BB1C42100D0015A865 /* vconfigsettingsswitch.m in Sources */,
 				DA7AB9351C4466B20058756C /* vconfigprofilecel.m in Sources */,
@@ -1452,7 +1468,9 @@
 				DA0580211C4E850B007FF899 /* vgattacatestercel.m in Sources */,
 				DA462AE11C4AD4F20060265A /* mconfigprofileedit.m in Sources */,
 				DA0580581C4EAB6C007FF899 /* vgattacatesterfooter.m in Sources */,
+				DA021CDB1C50030700B70557 /* vconfigprofilenameheader.m in Sources */,
 				DA05802D1C4E8659007FF899 /* mgattacateststep.m in Sources */,
+				DA021CD51C5002E900B70557 /* vconfigprofilename.m in Sources */,
 				DA462B0B1C4D8C530060265A /* vgattacacel.m in Sources */,
 				DA2965E81C3DF2FF00BC713E /* msectionbrowse.m in Sources */,
 				DA3229F31C4018B0004C6958 /* mconfigbrowsing.m in Sources */,
