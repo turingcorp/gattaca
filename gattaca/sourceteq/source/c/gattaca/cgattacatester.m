@@ -62,10 +62,13 @@
     }
     else
     {
-        [[cmain singleton] dismissViewControllerAnimated:NO completion:
-         ^{
-             [cgattacaend finish:self.test];
-         }];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                       ^
+                       {
+                           [self.test scoreall];
+                       });
+        
+        [self.navigationController pushViewController:[[cgattacaend alloc] init] animated:YES];
     }
 }
 

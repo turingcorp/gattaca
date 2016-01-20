@@ -76,28 +76,87 @@
 
 -(void)chooseitem:(mgattacateststepitem*)item
 {
+    NSInteger index = item.index;
+    NSMutableString *str = [NSMutableString string];
+    
     switch(item.step.steptype)
     {
         case test_step_like:
             
-            [self.like addto:item.index];
+            [str appendString:@"like:"];
+            [self.like addto:index];
+            
+            switch((profile_like)index)
+            {
+                case profile_like_science:
+                    
+                    [str appendString:@"science"];
+                    
+                    break;
+                    
+                case profile_like_art:
+                    
+                    [str appendString:@"art"];
+                    
+                    break;
+                    
+                case profile_like_social:
+                    
+                    [str appendString:@"social"];
+                    
+                    break;
+                    
+                case profile_like_sport:
+                    
+                    [str appendString:@"sport"];
+                    
+                    break;
+            }
             
             break;
             
         case test_step_ground:
             
-            [self.ground addto:item.index];
+            [str appendString:@"ground:"];
+            [self.ground addto:index];
+            
+            switch((profile_ground)index)
+            {
+                case profile_ground_cultural:
+                    
+                    [str appendString:@"cultural"];
+                    
+                    break;
+                    
+                case profile_ground_entertainment:
+                    
+                    [str appendString:@"entertainment"];
+                    
+                    break;
+                    
+                case profile_ground_gaming:
+                    
+                    [str appendString:@"gaming"];
+                    
+                    break;
+                    
+                case profile_ground_partying:
+                    
+                    [str appendString:@"partying"];
+                    
+                    break;
+            }
             
             break;
     }
+    
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_selected label:str];
 }
 
 -(void)scoreall
 {
     [self.like measure];
     [self.ground measure];
-    
-    // save profile
 }
 
 @end
