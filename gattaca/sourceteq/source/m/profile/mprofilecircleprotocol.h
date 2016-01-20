@@ -5,7 +5,9 @@
 -(instancetype)init:(NSInteger)amount;
 -(profile_circle)type;
 -(UIColor*)color;
--(NSInteger)currentamount;
--(void)newamount:(NSInteger)newamount;
+-(NSString*)trackname;
+
+@property(nonatomic)NSInteger amount;
+@property(nonatomic)NSInteger counter;
 
 @end

@@ -39,15 +39,6 @@
     return item;
 }
 
--(instancetype)init
-{
-    self = [super init];
-    
-    [self loadfromdb];
-    
-    return self;
-}
-
 -(instancetype)init:(NSDictionary*)json
 {
     self = [super init];
@@ -55,7 +46,7 @@
     return self;
 }
 
-#pragma mark functionality
+#pragma mark public
 
 -(void)loadfromdb
 {
@@ -73,8 +64,6 @@
         dictionary[[tools typetokey:type]] = [mprofilecircle circle:type amount:amount];
     }
 }
-
-#pragma mark public
 
 -(id<mprofilecircleprotocol>)item:(profile_circle)type
 {

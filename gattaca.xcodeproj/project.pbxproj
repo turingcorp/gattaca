@@ -55,8 +55,6 @@
 		DA0580711C4EF32F007FF899 /* test_02_4@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA0580651C4EF32F007FF899 /* test_02_4@3x.jpg */; };
 		DA0580741C4EF54A007FF899 /* cgattacaend.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580731C4EF54A007FF899 /* cgattacaend.m */; };
 		DA0580771C4EF654007FF899 /* vgattacaend.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580761C4EF654007FF899 /* vgattacaend.m */; };
-		DA05807A1C4F003F007FF899 /* mgattacascore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0580791C4F003F007FF899 /* mgattacascore.m */; };
-		DA05807D1C4F00A4007FF899 /* mgattacascoreitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05807C1C4F00A4007FF899 /* mgattacascoreitem.m */; };
 		DA2965961C3DB72C00BC713E /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2965951C3DB72C00BC713E /* analytics.plist */; };
 		DA29659D1C3DC3E300BC713E /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA29659C1C3DC3E300BC713E /* cmain.m */; };
 		DA2965A31C3DC72C00BC713E /* cbrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2965A21C3DC72C00BC713E /* cbrowse.m */; };
@@ -241,10 +239,6 @@
 		DA0580731C4EF54A007FF899 /* cgattacaend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgattacaend.m; sourceTree = "<group>"; };
 		DA0580751C4EF654007FF899 /* vgattacaend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacaend.h; sourceTree = "<group>"; };
 		DA0580761C4EF654007FF899 /* vgattacaend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacaend.m; sourceTree = "<group>"; };
-		DA0580781C4F003F007FF899 /* mgattacascore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgattacascore.h; sourceTree = "<group>"; };
-		DA0580791C4F003F007FF899 /* mgattacascore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacascore.m; sourceTree = "<group>"; };
-		DA05807B1C4F00A4007FF899 /* mgattacascoreitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgattacascoreitem.h; sourceTree = "<group>"; };
-		DA05807C1C4F00A4007FF899 /* mgattacascoreitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgattacascoreitem.m; sourceTree = "<group>"; };
 		DA2965901C3DB2F900BC713E /* c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
 		DA2965911C3DB30600BC713E /* m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
 		DA2965921C3DB30D00BC713E /* v.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
@@ -824,10 +818,6 @@
 				DA05802C1C4E8659007FF899 /* mgattacateststep.m */,
 				DA0580341C4E868F007FF899 /* mgattacateststepitem.h */,
 				DA0580351C4E868F007FF899 /* mgattacateststepitem.m */,
-				DA0580781C4F003F007FF899 /* mgattacascore.h */,
-				DA0580791C4F003F007FF899 /* mgattacascore.m */,
-				DA05807B1C4F00A4007FF899 /* mgattacascoreitem.h */,
-				DA05807C1C4F00A4007FF899 /* mgattacascoreitem.m */,
 			);
 			path = gattaca;
 			sourceTree = "<group>";
@@ -1384,7 +1374,6 @@
 				DA7AB9811C449AF10058756C /* mdb.m in Sources */,
 				DA2965D91C3DF0DF00BC713E /* vlogin.m in Sources */,
 				DA4C0EF11C459A1600203315 /* cprofile.m in Sources */,
-				DA05807D1C4F00A4007FF899 /* mgattacascoreitem.m in Sources */,
 				DA29659D1C3DC3E300BC713E /* cmain.m in Sources */,
 				DA7AB93F1C446E620058756C /* vprofile.m in Sources */,
 				DA021CED1C50124C00B70557 /* mprofilegenderfemale.m in Sources */,
@@ -1428,7 +1417,6 @@
 				DA4C0F001C45A34E00203315 /* mmyprofileages.m in Sources */,
 				DA322A381C40C285004C6958 /* vconfigsettings.m in Sources */,
 				DA7AB9251C43F3060058756C /* vconfigsettingsdelete.m in Sources */,
-				DA05807A1C4F003F007FF899 /* mgattacascore.m in Sources */,
 				DA3F6E0C1C46BBAB007E2888 /* vprofilecirclelike.m in Sources */,
 				DA46BD111C3F12C000472BC9 /* valert.m in Sources */,
 				DA4A74511C3D9B240092A405 /* tools.m in Sources */,

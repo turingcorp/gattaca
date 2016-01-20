@@ -40,5 +40,3 @@
 #import "mgattacatest.h"
 #import "mgattacateststep.h"
 #import "mgattacateststepitem.h"
-#import "mgattacascore.h"
-#import "mgattacascoreitem.h"

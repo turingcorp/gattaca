@@ -14,6 +14,7 @@
 -(void)loadstats
 {
     self.circle = [[mprofilecircle alloc] init];
+    [self.circle loadfromdb];
 }
 
 -(void)loadstats:(NSDictionary*)json
