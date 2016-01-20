@@ -32,7 +32,7 @@
 
 -(void)actioncancel
 {
-    [self.controller cancel];
+    [self.controller stop];
 }
 
 @end

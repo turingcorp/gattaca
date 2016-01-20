@@ -5,7 +5,7 @@
 
 @interface cgattacatester:UIViewController
 
--(void)cancel;
+-(void)stop;
 -(void)nextstep;
 
 @property(strong, nonatomic)mgattacatest *test;

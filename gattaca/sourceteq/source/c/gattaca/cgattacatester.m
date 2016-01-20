@@ -46,12 +46,10 @@
 
 #pragma mark public
 
--(void)cancel
+-(void)stop
 {
-    [[cmain singleton] dismissViewControllerAnimated:YES completion:
-     ^{
-         [[NSNotificationCenter defaultCenter] postNotificationName:notprofileupdate object:nil];
-     }];
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_stopped label:@""];
+    [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)nextstep

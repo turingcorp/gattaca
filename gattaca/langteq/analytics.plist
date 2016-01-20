@@ -26,6 +26,7 @@
 		<string>facebook/profile</string>
 		<string>profile/age</string>
 		<string>profile/name</string>
+		<string>gattaca/test</string>
 	</array>
 	<key>actions</key>
 	<array>
@@ -37,6 +38,8 @@
 		<string>error</string>
 		<string>done</string>
 		<string>changed</string>
+		<string>stopped</string>
+		<string>selected</string>
 	</array>
 </dict>
 </plist>

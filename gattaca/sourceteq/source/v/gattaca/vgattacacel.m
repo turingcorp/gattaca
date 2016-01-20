@@ -10,7 +10,7 @@
 
     UILabel *lbl = [[UILabel alloc] init];
     [lbl setBackgroundColor:[UIColor clearColor]];
-    [lbl setFont:[UIFont fontWithName:fontboldname size:18]];
+    [lbl setFont:[UIFont fontWithName:fontboldname size:16]];
     [lbl setUserInteractionEnabled:NO];
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     [lbl setTextAlignment:NSTextAlignmentCenter];

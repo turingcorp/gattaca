@@ -51,7 +51,7 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    return CGSizeMake(self.bounds.size.width, 80);
+    return CGSizeMake(self.bounds.size.width, 60);
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col

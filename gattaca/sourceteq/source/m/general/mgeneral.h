@@ -36,7 +36,8 @@ typedef NS_ENUM(NSInteger, ga_event)
     ga_event_config_noti,
     ga_event_facebook_profile,
     ga_event_profile_age,
-    ga_event_profile_name
+    ga_event_profile_name,
+    ga_event_gattaca_test
 };
 
 typedef NS_ENUM(NSInteger, ga_action)
@@ -48,7 +49,9 @@ typedef NS_ENUM(NSInteger, ga_action)
     ga_action_cancelled,
     ga_action_error,
     ga_action_done,
-    ga_action_changed
+    ga_action_changed,
+    ga_action_stopped,
+    ga_action_selected
 };
 
 // profile

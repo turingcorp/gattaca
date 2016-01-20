@@ -39,14 +39,13 @@
 
 -(void)cancel
 {
-    [[cmain singleton] dismissViewControllerAnimated:YES completion:
-     ^{
-         [[NSNotificationCenter defaultCenter] postNotificationName:notprofileupdate object:nil];
-     }];
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_cancelled label:@""];
+    [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)starttest
 {
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_start label:@""];
     [self.navigationController pushViewController:[[cgattacatester alloc] init] animated:YES];
 }
 
