@@ -1,13 +1,11 @@
-//
-//  mprofilegroundprotocol.h
-//  gattaca
-//
-//  Created by zero on 1/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol mprofilegroundprotocol <NSObject>
+
+-(instancetype)init:(NSInteger)amount;
+-(profile_ground)type;
+-(UIColor*)color;
+-(NSInteger)currentamount;
+-(void)newamount:(NSInteger)newamount;
 
 @end

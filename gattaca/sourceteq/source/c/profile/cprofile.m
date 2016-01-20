@@ -2,6 +2,15 @@
 
 @implementation cprofile
 
+-(instancetype)init:(mconfigprofile*)model
+{
+    self = [super init];
+    
+    self.model = model;
+    
+    return self;
+}
+
 -(void)viewDidLoad
 {
     [super viewDidLoad];

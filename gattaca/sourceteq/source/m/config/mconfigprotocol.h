@@ -7,5 +7,9 @@
 -(NSString*)descr;
 -(NSString*)image;
 -(UIColor*)color;
+-(NSInteger)count;
+-(id)item:(NSInteger)item;
+
+@property(strong, nonatomic)NSArray *array;
 
 @end

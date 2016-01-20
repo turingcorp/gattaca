@@ -6,14 +6,14 @@
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1]];
+    [self setBackgroundColor:[UIColor colorWithWhite:0.98 alpha:1]];
  
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:10];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(20, 0, menuheight + 20, 0)];
+    [flow setSectionInset:UIEdgeInsetsMake(10, 0, menuheight + 40, 0)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setBackgroundColor:[UIColor clearColor]];
@@ -36,7 +36,25 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedupdateprofile:) name:notprofileupdate object:nil];
+    
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedupdateprofile:(NSNotification*)notification
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^(void)
+                   {
+                       [self.collection reloadData];
+                   });
 }
 
 #pragma mark -
@@ -44,12 +62,14 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    return CGSizeMake(self.bounds.size.width, 320);
+    CGFloat width = self.bounds.size.width;
+    
+    return CGSizeMake(width, width);
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    return CGSizeMake(self.bounds.size.width, 50);
+    return CGSizeMake(self.bounds.size.width, 70);
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
@@ -59,17 +79,28 @@
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    return [[(cprofile*)self.controller model] count];
 }
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
-    return [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerid forIndexPath:index];
+    vconfigprofileheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerid forIndexPath:index];
+    [header addcircle];
+    
+    return header;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    return nil;
+    vconfigprofilecel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    [cel config:[[(cprofile*)self.controller model] item:index.item]];
+    
+    return cel;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    [[[(cprofile*)self.controller model] item:index.item] change];
 }
 
 @end

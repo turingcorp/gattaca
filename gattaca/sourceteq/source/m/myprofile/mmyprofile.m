@@ -16,7 +16,7 @@
     self = [super init];
     
     self.coordsactive = NO;
-    [self loaduser];
+    self.profile = [[mprofile alloc] init];
     
     return self;
 }
@@ -25,16 +25,16 @@
 
 -(void)firsttime
 {
-    self.age = 0;
-    self.gender = profile_gender_female;
+    self.profile.age = 0;
+    self.profile.gender = profile_gender_female;
     self.nametype = profile_name_firstname;
-    self.namestr = NSLocalizedString(@"profile_default_user", nil);
+    self.profile.name = NSLocalizedString(@"profile_default_user", nil);
     
     NSInteger now = [NSDate date].timeIntervalSince1970;
     NSString *query = [NSString stringWithFormat:
                        @"INSERT INTO profile (created, syncstamp, updated, name, namestr, age, gender) "
                        "VALUES(%@, 0, %@, %@, \"%@\", %@, %@);",
-                       @(now), @(now), @(self.nametype), self.namestr, @(self.age), @(self.gender)];
+                       @(now), @(now), @(self.nametype), self.profile.name, @(self.profile.age), @(self.profile.gender)];
     
     [db query:query];
 }
@@ -44,9 +44,18 @@
     NSInteger now = [NSDate date].timeIntervalSince1970;
     NSString *query = [NSString stringWithFormat:
                        @"UPDATE profile set updated=%@, name=%@, namestr=\"%@\", age=%@, gender=%@;",
-                       @(now), @(self.nametype), self.namestr, @(self.age), @(self.gender)];
+                       @(now), @(self.nametype), self.profile.name, @(self.profile.age), @(self.profile.gender)];
     
     [db query:query];
+}
+
+-(void)loadstats
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^(void)
+                   {
+                       [self.profile loadstats];
+                   });
 }
 
 #pragma mark public
@@ -59,41 +68,43 @@
     if(rawuser[@"id"])
     {
         self.nametype = (profile_name)[rawuser[@"name"] integerValue];
-        self.namestr = rawuser[@"namestr"];
-        self.age = [rawuser[@"age"] integerValue];
-        self.gender = (profile_gender)[rawuser[@"gender"] integerValue];
+        self.profile.name = rawuser[@"namestr"];
+        self.profile.age = [rawuser[@"age"] integerValue];
+        self.profile.gender = (profile_gender)[rawuser[@"gender"] integerValue];
     }
     else
     {
         [self firsttime];
     }
+    
+    [self loadstats];
 }
 
 -(void)updatename:(NSString*)newname
 {
-    self.namestr = newname;
+    self.profile.name = newname;
     
     [self saveuser];
 }
 
--(void)changenameto:(profile_name)nametype name:(NSString*)newname;
+-(void)changenameto:(mmyprofilename*)name
 {
-    self.nametype = nametype;
-    self.namestr = newname;
+    self.nametype = name.type;
+    self.profile.name = name.value;
     
     [self saveuser];
 }
 
 -(void)updategender:(profile_gender)newgender
 {
-    self.gender = newgender;
+    self.profile.gender = newgender;
     
     [self saveuser];
 }
 
 -(void)updateage:(NSInteger)newage
 {
-    self.age = newage;
+    self.profile.age = newage;
     
     [self saveuser];
 }

@@ -12,7 +12,11 @@
 		<string>config/settings</string>
 		<string>profile</string>
 		<string>profile/age</string>
+		<string>profile/name</string>
 		<string>contact</string>
+		<string>gattaca/main</string>
+		<string>gattaca/test</string>
+		<string>gattaca/congrats</string>
 	</array>
 	<key>events</key>
 	<array>
@@ -23,6 +27,8 @@
 		<string>config/notifications</string>
 		<string>facebook/profile</string>
 		<string>profile/age</string>
+		<string>profile/name</string>
+		<string>gattaca/test</string>
 	</array>
 	<key>actions</key>
 	<array>
@@ -34,6 +40,8 @@
 		<string>error</string>
 		<string>done</string>
 		<string>changed</string>
+		<string>stopped</string>
+		<string>selected</string>
 	</array>
 </dict>
 </plist>

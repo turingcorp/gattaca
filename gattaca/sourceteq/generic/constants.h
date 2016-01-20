@@ -21,6 +21,7 @@
 
 #define notloadfinish           @"loadfinish"
 #define notmenuchanged          @"menuchanged"
+#define notprofileupdate        @"profileupdate"
 
 // extra
 

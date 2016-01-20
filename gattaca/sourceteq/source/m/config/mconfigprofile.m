@@ -2,12 +2,14 @@
 
 @implementation mconfigprofile
 
+@synthesize array;
+
 #pragma mark -
 #pragma mark config protocol
 
 -(UIViewController*)controller
 {
-    return [[cprofile alloc] init];
+    return [[cprofile alloc] init:self];
 }
 
 -(NSString*)title
@@ -28,6 +30,30 @@
 -(UIColor*)color
 {
     return colormain;
+}
+
+-(void)lazyload
+{
+    array = [NSArray arrayWithObjects:
+             [[mconfigprofileedit alloc] init],
+             [[mconfigprofilename alloc] init],
+             [[mconfigprofileage alloc] init],
+             nil];
+}
+
+-(NSInteger)count
+{
+    if(!array)
+    {
+        [self lazyload];
+    }
+    
+    return array.count;
+}
+
+-(id<mconfigprofileprotocol>)item:(NSInteger)item
+{
+    return array[item];
 }
 
 @end
