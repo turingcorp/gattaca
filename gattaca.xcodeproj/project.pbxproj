@@ -206,6 +206,7 @@
 		DA021CEC1C50124C00B70557 /* mprofilegenderfemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilegenderfemale.m; sourceTree = "<group>"; };
 		DA021CEE1C501BBB00B70557 /* mprofilecircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilecircle.h; sourceTree = "<group>"; };
 		DA021CEF1C501BBB00B70557 /* mprofilecircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mprofilecircle.m; sourceTree = "<group>"; };
+		DA021CF11C501CBB00B70557 /* mprofilecircleprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprofilecircleprotocol.h; sourceTree = "<group>"; };
 		DA0580191C4E8418007FF899 /* vgattacatester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatester.h; sourceTree = "<group>"; };
 		DA05801A1C4E8418007FF899 /* vgattacatester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgattacatester.m; sourceTree = "<group>"; };
 		DA05801C1C4E8501007FF899 /* vgattacatesterheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattacatesterheader.h; sourceTree = "<group>"; };
@@ -930,6 +931,7 @@
 				DA021CEC1C50124C00B70557 /* mprofilegenderfemale.m */,
 				DA021CEE1C501BBB00B70557 /* mprofilecircle.h */,
 				DA021CEF1C501BBB00B70557 /* mprofilecircle.m */,
+				DA021CF11C501CBB00B70557 /* mprofilecircleprotocol.h */,
 				DA7AB9571C447C830058756C /* mprofilelike.h */,
 				DA7AB9581C447C830058756C /* mprofilelike.m */,
 				DA7AB95A1C447C920058756C /* mprofileground.h */,

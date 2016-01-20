@@ -71,20 +71,12 @@ typedef NS_ENUM(NSInteger, profile_name)
     profile_name_lastname
 };
 
-typedef NS_ENUM(NSInteger, profile_like)
+typedef NS_ENUM(NSInteger, profile_circle)
 {
-    profile_like_science,
-    profile_like_art,
-    profile_like_sport,
-    profile_like_social
-};
-
-typedef NS_ENUM(NSInteger, profile_ground)
-{
-    profile_ground_cultural,
-    profile_ground_gaming,
-    profile_ground_entertainment,
-    profile_ground_partying
+    profile_circle_math,
+    profile_circle_music,
+    profile_circle_politics,
+    profile_circle_leisure
 };
 
 // test

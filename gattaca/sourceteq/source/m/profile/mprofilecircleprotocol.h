@@ -1,9 +1,9 @@
 #import <UIKit/UIKit.h>
 
-@protocol mprofilelikeprotocol <NSObject>
+@protocol mprofilecircleprotocol <NSObject>
 
 -(instancetype)init:(NSInteger)amount;
-//-(profile_like)type;
+-(profile_circle)type;
 -(UIColor*)color;
 -(NSInteger)currentamount;
 -(void)newamount:(NSInteger)newamount;
