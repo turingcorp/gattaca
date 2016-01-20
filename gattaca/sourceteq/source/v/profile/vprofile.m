@@ -24,15 +24,23 @@
     return color;
 }
 
--(instancetype)init
+-(instancetype)init:(mprofile*)profile
 {
     self = [super init];
+    self.profile = profile;
     
     vprofilecircle *circle = [[vprofilecircle alloc] init];
     
     [self addSubview:circle];
     
     return self;
+}
+
+#pragma mark public
+
+-(void)reload
+{
+    
 }
 
 @end

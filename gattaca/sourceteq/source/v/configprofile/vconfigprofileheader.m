@@ -7,11 +7,21 @@
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
+ 
+    vprofile *profile = [[vprofile alloc] init:[mmyprofile singleton].profile];
+    self.profile = profile;
+    
+    [self addSubview:profile];
     
     return self;
 }
 
 #pragma mark public
+
+-(void)reload
+{
+    [self.profile reload];
+}
 
 -(void)addcircle
 {
@@ -41,9 +51,17 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
     
-    UIImage *qrcode = [tools qrcode:@"shisus chris"];
-    [image setImage:qrcode];
-    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^
+                   {
+                       UIImage *qrcode = [tools qrcode:@"shisus chris"];
+                       
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^
+                                      {
+                                          [image setImage:qrcode];
+                                      });
+                   });
 }
 
 @end
