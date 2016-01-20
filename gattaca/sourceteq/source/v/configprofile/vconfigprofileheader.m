@@ -15,6 +15,7 @@
 
 -(void)addcircle
 {
+    /*
     [self.circle removeFromSuperview];
     
     vprofilecircle *circle = [[vprofilecircle alloc] init:[mmyprofile singleton].profile];
@@ -25,7 +26,24 @@
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[circle(120)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[circle(120)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[circle(120)]" options:0 metrics:metrics views:views]];*/
+    
+    UIImageView *image = [[UIImageView alloc] init];
+    [image setClipsToBounds:YES];
+    [image setContentMode:UIViewContentModeCenter];
+    [image setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [self addSubview:image];
+    
+    NSDictionary *views = @{@"image":image};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
+    
+    UIImage *qrcode = [tools qrcode:@"shisus chris"];
+    [image setImage:qrcode];
+    
 }
 
 @end

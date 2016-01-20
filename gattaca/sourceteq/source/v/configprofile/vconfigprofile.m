@@ -13,7 +13,7 @@
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:2];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(10, 0, menuheight + 30, 0)];
+    [flow setSectionInset:UIEdgeInsetsMake(2, 0, menuheight + 10, 0)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setBackgroundColor:[UIColor clearColor]];
@@ -64,7 +64,7 @@
 {
     CGFloat width = self.bounds.size.width;
     
-    return CGSizeMake(width, width);
+    return CGSizeMake(width, 500);
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
