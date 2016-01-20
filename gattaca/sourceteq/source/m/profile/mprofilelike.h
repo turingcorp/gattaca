@@ -6,7 +6,7 @@
 -(instancetype)init:(NSDictionary*)json;
 -(NSInteger)count;
 -(id<mprofilelikeprotocol>)item:(NSInteger)index;
--(void)update:(id<mprofilelikeprotocol>)like amount:(NSInteger)newamount;
+-(void)updatetype:(profile_like)type amount:(NSInteger)amount;
 -(id<mprofilelikeprotocol>)like:(profile_like)like;
 
 @end

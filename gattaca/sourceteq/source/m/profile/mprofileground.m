@@ -79,6 +79,16 @@
     return [NSString stringWithFormat:@"%@", @(ground)];
 }
 
+-(void)update:(id<mprofilegroundprotocol>)ground amount:(NSInteger)newamount
+{
+    [ground newamount:newamount];
+    
+    NSString *query = [NSString stringWithFormat:
+                       @"UPDATE profileground set amount=%@ where groundtype=%@;",
+                       @(newamount), @([ground type])];
+    [db query:query];
+}
+
 #pragma mark public
 
 -(NSInteger)count
@@ -91,19 +101,14 @@
     return dictionary[[self groundtokey:(profile_ground)index]];
 }
 
--(void)update:(id<mprofilegroundprotocol>)ground amount:(NSInteger)newamount
-{
-    [ground newamount:newamount];
-    
-    NSString *query = [NSString stringWithFormat:
-                       @"UPDATE profileground set amount=%@ where groundtype=%@;",
-                       @([ground type]), @(newamount)];
-    [db query:query];
-}
-
 -(id<mprofilegroundprotocol>)ground:(profile_ground)ground
 {
     return dictionary[[self groundtokey:ground]];
+}
+
+-(void)updatetype:(profile_ground)type amount:(NSInteger)amount
+{
+    [self update:[self ground:type] amount:amount];
 }
 
 @end

@@ -17,7 +17,6 @@
     
     self.coordsactive = NO;
     self.profile = [[mprofile alloc] init];
-    [self loaduser];
     
     return self;
 }

@@ -29,13 +29,13 @@
     {
         case test_step_like:
      
-            [[[mmyprofile singleton].profile.like like:(profile_like)self.index] newamount:computed];
+            [[mmyprofile singleton].profile.like updatetype:(profile_like)self.index amount:computed];
             
             break;
             
         case test_step_ground:
             
-            [[[mmyprofile singleton].profile.ground ground:(profile_ground)self.index] newamount:computed];
+            [[mmyprofile singleton].profile.ground updatetype:(profile_ground)self.index amount:computed];
             
             break;
     }

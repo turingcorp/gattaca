@@ -79,6 +79,17 @@
     return [NSString stringWithFormat:@"%@", @(like)];
 }
 
+-(void)update:(id<mprofilelikeprotocol>)like amount:(NSInteger)newamount
+{
+    [like newamount:newamount];
+    
+    NSString *query = [NSString stringWithFormat:
+                       @"UPDATE profilelike set amount=%@ where liketype=%@;",
+                       @(newamount), @([like type])];
+    
+    [db query:query];
+}
+
 #pragma mark public
 
 -(NSInteger)count
@@ -91,19 +102,14 @@
     return dictionary[[self liketokey:(profile_like)index]];
 }
 
--(void)update:(id<mprofilelikeprotocol>)like amount:(NSInteger)newamount
-{
-    [like newamount:newamount];
-    
-    NSString *query = [NSString stringWithFormat:
-                       @"UPDATE profilelike set amount=%@ where liketype=%@;",
-                       @([like type]), @(newamount)];
-    [db query:query];
-}
-
 -(id<mprofilelikeprotocol>)like:(profile_like)like
 {
     return dictionary[[self liketokey:like]];
+}
+
+-(void)updatetype:(profile_like)type amount:(NSInteger)amount
+{
+    [self update:[self like:type] amount:amount];
 }
 
 @end
