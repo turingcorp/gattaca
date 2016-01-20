@@ -2,8 +2,9 @@
 
 @interface mprofilegender:NSObject
 
++(instancetype)gender:(profile_gender)gender;
 -(UIColor*)color;
 
-@property(nonatomic)profile_gender gender;
+@property(nonatomic)profile_gender type;
 
 @end

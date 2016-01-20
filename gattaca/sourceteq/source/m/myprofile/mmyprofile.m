@@ -26,7 +26,7 @@
 -(void)firsttime
 {
     self.profile.age = 0;
-    self.profile.gender = profile_gender_female;
+    [self.profile changegender:profile_gender_female];
     self.nametype = profile_name_firstname;
     self.profile.name = NSLocalizedString(@"profile_default_user", nil);
     
@@ -34,7 +34,7 @@
     NSString *query = [NSString stringWithFormat:
                        @"INSERT INTO profile (created, syncstamp, updated, name, namestr, age, gender) "
                        "VALUES(%@, 0, %@, %@, \"%@\", %@, %@);",
-                       @(now), @(now), @(self.nametype), self.profile.name, @(self.profile.age), @(self.profile.gender)];
+                       @(now), @(now), @(self.nametype), self.profile.name, @(self.profile.age), @(self.profile.gender.type)];
     
     [db query:query];
 }
@@ -44,7 +44,7 @@
     NSInteger now = [NSDate date].timeIntervalSince1970;
     NSString *query = [NSString stringWithFormat:
                        @"UPDATE profile set updated=%@, name=%@, namestr=\"%@\", age=%@, gender=%@;",
-                       @(now), @(self.nametype), self.profile.name, @(self.profile.age), @(self.profile.gender)];
+                       @(now), @(self.nametype), self.profile.name, @(self.profile.age), @(self.profile.gender.type)];
     
     [db query:query];
 }
@@ -70,7 +70,7 @@
         self.nametype = (profile_name)[rawuser[@"name"] integerValue];
         self.profile.name = rawuser[@"namestr"];
         self.profile.age = [rawuser[@"age"] integerValue];
-        self.profile.gender = (profile_gender)[rawuser[@"gender"] integerValue];
+        [self.profile changegender:(profile_gender)[rawuser[@"gender"] integerValue]];
     }
     else
     {
@@ -97,7 +97,7 @@
 
 -(void)updategender:(profile_gender)newgender
 {
-    self.profile.gender = newgender;
+    [self.profile changegender:newgender];
     
     [self saveuser];
 }

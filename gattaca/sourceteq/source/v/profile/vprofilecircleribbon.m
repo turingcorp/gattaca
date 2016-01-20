@@ -12,7 +12,6 @@
     
     UIView *ribbon = [[UIView alloc] init];
     [ribbon setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [ribbon setBackgroundColor:[vprofile colorforgender:circle.profile.gender]];
     
     UILabel *lbl = [[UILabel alloc] init];
     [lbl setBackgroundColor:[UIColor clearColor]];

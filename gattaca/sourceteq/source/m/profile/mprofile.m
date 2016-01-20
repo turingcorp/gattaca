@@ -22,4 +22,9 @@
     
 }
 
+-(void)changegender:(profile_gender)gender
+{
+    self.gender = [mprofilegender gender:gender];
+}
+
 @end
