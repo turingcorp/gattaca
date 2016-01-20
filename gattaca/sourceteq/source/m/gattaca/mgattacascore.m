@@ -54,6 +54,7 @@
 {
     self = [super init];
     
+    self.count = 0;
     dictionary = [NSMutableDictionary dictionary];
     
     return self;
@@ -81,8 +82,6 @@
     dictionary[[self keygroundtostring:type]] = [[mgattacascoreitem alloc] init:test_step_ground index:type];
 }
 
-#pragma mark public
-
 -(mgattacascoreitem*)likeitem:(profile_like)type
 {
     return dictionary[[self keyliketostring:type]];
@@ -101,6 +100,36 @@
 -(void)addtoground:(profile_ground)type
 {
     [[self grounditem:type] add];
+}
+
+#pragma mark public
+
+-(void)addto:(test_step)step type:(NSInteger)index
+{
+    self.count++;
+    
+    switch(step)
+    {
+        case test_step_like:
+            
+            [self addtolike:(profile_like)index];
+            
+            break;
+            
+        case test_step_ground:
+            
+            [self addtoground:(profile_ground)index];
+            
+            break;
+    }
+}
+
+-(void)measure
+{
+    for(mgattacascoreitem *item in dictionary)
+    {
+        here
+    }
 }
 
 @end
