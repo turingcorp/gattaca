@@ -2,46 +2,59 @@
 
 @implementation vprofilecircle
 
--(instancetype)init:(mprofile*)profile
+-(instancetype)init:(vprofilecircle*)circle
 {
     self = [super init];
-    [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
-    [self setUserInteractionEnabled:NO];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
-
-    self.profile = profile;
     
-    vprofilecirclelike *like = [[vprofilecirclelike alloc] init:self];
-    self.like = like;
-    
-    vprofilecircleground *ground = [[vprofilecircleground alloc] init:self];
-    self.ground = ground;
-    
-    vprofilecircleribbon *ribbon = [[vprofilecircleribbon alloc] init:self];
-    self.ribbon = ribbon;
-    
-    vprofilecircleage *age = [[vprofilecircleage alloc] init:self];
-    self.age = age;
-    
-    [self addSubview:age];
-    [self addSubview:ribbon];
-    [self addSubview:like];
-    [self addSubview:ground];
-    
-    NSDictionary *views = @{@"like":like, @"ground":ground, @"ribbon":ribbon, @"age":age};
-    NSDictionary *metrics = @{};
-    
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[like]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[like]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[ground]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[ground]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[ribbon]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[ribbon]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[age]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[age]-0-|" options:0 metrics:metrics views:views]];
+    self.circle = circle;
+    [self render];
     
     return self;
+}
+
+#pragma mark functionality
+
+-(void)constraintsfor:(vprofilecircleslash*)slash
+{
+    [self addSubview:slash];
+    
+    NSDictionary *views = @{@"slash":slash};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[slash]-5-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[slash]-5-|" options:0 metrics:metrics views:views]];
+}
+
+-(CGFloat)amounttopoint:(NSInteger)amount
+{
+    return ((amount * .36) * M_PI) / 180.0;
+}
+
+-(void)render
+{/*
+  CGFloat linewidth = 20;
+  NSInteger added = 0;
+  mprofilelike *like = self.circle.profile.like;
+  NSInteger count = [like count];
+  
+  for(NSInteger i = count - 1; i >= 0; i--)
+  {
+  id<mprofilelikeprotocol> item = [like item:i];
+  NSInteger amount = [item currentamount];
+  
+  if(amount)
+  {
+  CGFloat start = [self amounttopoint:added];
+  added += amount;
+  CGFloat end = [self amounttopoint:added];
+  
+  vprofilecircleslash *slash = [[vprofilecircleslash alloc] init:linewidth start:start end:end];
+  slash.tintColor = [item color];
+  [self constraintsfor:slash];
+  }
+  }*/
 }
 
 @end
