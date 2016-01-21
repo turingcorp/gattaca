@@ -115,7 +115,6 @@
 		DA462AEA1C4D39930060265A /* cprofilename.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AE91C4D39930060265A /* cprofilename.m */; };
 		DA462AF61C4D4B160060265A /* mmyprofilenames.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AF51C4D4B160060265A /* mmyprofilenames.m */; };
 		DA462AF91C4D4B210060265A /* mmyprofilename.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AF81C4D4B210060265A /* mmyprofilename.m */; };
-		DA462AFC1C4D6D810060265A /* vprofilecircleage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AFB1C4D6D810060265A /* vprofilecircleage.m */; };
 		DA462B021C4D86EC0060265A /* cgattaca.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462B011C4D86EC0060265A /* cgattaca.m */; };
 		DA462B051C4D898A0060265A /* vgattaca.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462B041C4D898A0060265A /* vgattaca.m */; };
 		DA462B081C4D8C450060265A /* vgattacaheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462B071C4D8C450060265A /* vgattacaheader.m */; };
@@ -348,8 +347,6 @@
 		DA462AF51C4D4B160060265A /* mmyprofilenames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mmyprofilenames.m; sourceTree = "<group>"; };
 		DA462AF71C4D4B210060265A /* mmyprofilename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmyprofilename.h; sourceTree = "<group>"; };
 		DA462AF81C4D4B210060265A /* mmyprofilename.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mmyprofilename.m; sourceTree = "<group>"; };
-		DA462AFA1C4D6D810060265A /* vprofilecircleage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofilecircleage.h; sourceTree = "<group>"; };
-		DA462AFB1C4D6D810060265A /* vprofilecircleage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilecircleage.m; sourceTree = "<group>"; };
 		DA462B001C4D86EC0060265A /* cgattaca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgattaca.h; sourceTree = "<group>"; };
 		DA462B011C4D86EC0060265A /* cgattaca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgattaca.m; sourceTree = "<group>"; };
 		DA462B031C4D898A0060265A /* vgattaca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgattaca.h; sourceTree = "<group>"; };
@@ -1092,8 +1089,6 @@
 				DA3F6E0E1C46BBB8007E2888 /* vprofilecircleground.m */,
 				DA3F6E101C46BC89007E2888 /* vprofilecircleslash.h */,
 				DA3F6E111C46BC89007E2888 /* vprofilecircleslash.m */,
-				DA462AFA1C4D6D810060265A /* vprofilecircleage.h */,
-				DA462AFB1C4D6D810060265A /* vprofilecircleage.m */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -1353,7 +1348,6 @@
 				DA2965B41C3DDDE800BC713E /* vconfig.m in Sources */,
 				DA30971A1C3EAAA800E8AFA2 /* mlogin.m in Sources */,
 				DA322A341C40C0C2004C6958 /* mconfigsettingslogout.m in Sources */,
-				DA462AFC1C4D6D810060265A /* vprofilecircleage.m in Sources */,
 				DA2965DC1C3DF1B900BC713E /* msession.m in Sources */,
 				DA2965A91C3DC74600BC713E /* ccontact.m in Sources */,
 				DA2965BB1C3DDF9300BC713E /* viewbase.m in Sources */,
