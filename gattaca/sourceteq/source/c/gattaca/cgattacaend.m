@@ -2,10 +2,11 @@
 
 @implementation cgattacaend
 
--(instancetype)init:(mgattacatest*)test
+-(instancetype)init:(cgattaca*)parent
 {
     self = [super init];
     
+    self.parent = parent;
     [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
     
     return self;

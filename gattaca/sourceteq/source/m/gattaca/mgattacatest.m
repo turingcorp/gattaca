@@ -48,7 +48,7 @@
 -(void)next
 {
     self.currentitem++;
-    self.hasnext = self.currentitem < [self count] - 1;
+    self.hasnext = self.currentitem < [self count];
 }
 
 -(NSInteger)count

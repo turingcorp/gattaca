@@ -2,10 +2,11 @@
 
 @implementation cgattacatester
 
--(instancetype)init
+-(instancetype)init:(cgattaca*)parent
 {
     self = [super init];
-    
+
+    self.parent = parent;
     [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
     self.test = [mgattacatest test];
     
@@ -68,7 +69,7 @@
                            [self.test renderscore];
                        });
         
-        [self.navigationController pushViewController:[[cgattacaend alloc] init] animated:YES];
+        [self.parent setViewControllers:@[[[cgattacaend alloc] init:self.parent]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     }
 }
 
