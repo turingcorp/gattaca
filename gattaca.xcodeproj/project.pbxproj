@@ -105,7 +105,6 @@
 		DA322A401C40C628004C6958 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA322A3D1C40C628004C6958 /* logo@2x.png */; };
 		DA322A411C40C628004C6958 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA322A3E1C40C628004C6958 /* logo@3x.png */; };
 		DA388D791C3DA8A600672F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA388D781C3DA8A600672F8D /* Images.xcassets */; };
-		DA3F6E0C1C46BBAB007E2888 /* vprofilecirclelike.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F6E0B1C46BBAB007E2888 /* vprofilecirclelike.m */; };
 		DA3F6E121C46BC89007E2888 /* vprofilecircleslash.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3F6E111C46BC89007E2888 /* vprofilecircleslash.m */; };
 		DA462AE11C4AD4F20060265A /* mconfigprofileedit.m in Sources */ = {isa = PBXBuildFile; fileRef = DA462AE01C4AD4F20060265A /* mconfigprofileedit.m */; };
 		DA462AE51C4D363A0060265A /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = DA462AE21C4D363A0060265A /* next.png */; };
@@ -329,8 +328,6 @@
 		DA322A3E1C40C628004C6958 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
 		DA388D781C3DA8A600672F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA388D7A1C3DA92600672F8D /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
-		DA3F6E0A1C46BBAB007E2888 /* vprofilecirclelike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofilecirclelike.h; sourceTree = "<group>"; };
-		DA3F6E0B1C46BBAB007E2888 /* vprofilecirclelike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilecirclelike.m; sourceTree = "<group>"; };
 		DA3F6E101C46BC89007E2888 /* vprofilecircleslash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vprofilecircleslash.h; sourceTree = "<group>"; };
 		DA3F6E111C46BC89007E2888 /* vprofilecircleslash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vprofilecircleslash.m; sourceTree = "<group>"; };
 		DA462ADF1C4AD4F20060265A /* mconfigprofileedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfigprofileedit.h; sourceTree = "<group>"; };
@@ -1080,8 +1077,6 @@
 				DA021CE31C5004D600B70557 /* vprofilename.m */,
 				DA7AB9401C446E700058756C /* vprofilecircle.h */,
 				DA7AB9411C446E700058756C /* vprofilecircle.m */,
-				DA3F6E0A1C46BBAB007E2888 /* vprofilecirclelike.h */,
-				DA3F6E0B1C46BBAB007E2888 /* vprofilecirclelike.m */,
 				DA3F6E101C46BC89007E2888 /* vprofilecircleslash.h */,
 				DA3F6E111C46BC89007E2888 /* vprofilecircleslash.m */,
 			);
@@ -1403,7 +1398,6 @@
 				DA4C0F001C45A34E00203315 /* mmyprofileages.m in Sources */,
 				DA322A381C40C285004C6958 /* vconfigsettings.m in Sources */,
 				DA7AB9251C43F3060058756C /* vconfigsettingsdelete.m in Sources */,
-				DA3F6E0C1C46BBAB007E2888 /* vprofilecirclelike.m in Sources */,
 				DA46BD111C3F12C000472BC9 /* valert.m in Sources */,
 				DA4A74511C3D9B240092A405 /* tools.m in Sources */,
 				DA3F6E121C46BC89007E2888 /* vprofilecircleslash.m in Sources */,
