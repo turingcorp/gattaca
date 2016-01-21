@@ -2,14 +2,15 @@
 
 @implementation vprofilecircle
 
--(instancetype)init:(vprofilecircle*)circle
+-(instancetype)init:(mprofile*)profile
 {
     self = [super init];
     [self setBackgroundColor:[UIColor clearColor]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self setClipsToBounds:YES];
+    [self setUserInteractionEnabled:NO];
     
-    self.circle = circle;
-    [self render];
+    self.profile = profile;
     
     return self;
 }
@@ -32,8 +33,10 @@
     return ((amount * .36) * M_PI) / 180.0;
 }
 
--(void)render
-{/*
+#pragma mark public
+
+-(void)reload
+{
   CGFloat linewidth = 20;
   NSInteger added = 0;
   mprofilelike *like = self.circle.profile.like;
@@ -54,7 +57,7 @@
   slash.tintColor = [item color];
   [self constraintsfor:slash];
   }
-  }*/
+  }
 }
 
 @end
