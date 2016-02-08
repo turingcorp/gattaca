@@ -2,11 +2,12 @@
 
 @class mprofile;
 
-@interface vprofilecircle:UIView
+@interface vprofileqr:UIView
 
 -(instancetype)init:(mprofile*)profile;
 -(void)reload;
 
 @property(weak, nonatomic)mprofile *profile;
+@property(weak, nonatomic)UIImageView *image;
 
 @end

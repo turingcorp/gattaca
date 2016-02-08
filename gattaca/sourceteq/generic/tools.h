@@ -6,6 +6,8 @@
 +(void)rateapp;
 +(NSDictionary*)defaultdict;
 +(NSInteger)timestamp;
--(NSString*)urlencode:(NSString*)_string;
++(UIImage*)qrcode:(NSString*)string;
++(NSString*)typetokey:(NSInteger)type;
+-(NSString*)urlencode:(NSString*)string;
 
 @end

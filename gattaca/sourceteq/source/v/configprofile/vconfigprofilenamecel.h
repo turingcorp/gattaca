@@ -2,7 +2,7 @@
 
 @class mmyprofilename;
 
-@interface vprofilenamecel:UICollectionViewCell
+@interface vconfigprofilenamecel:UICollectionViewCell
 
 -(void)config:(mmyprofilename*)name;
 

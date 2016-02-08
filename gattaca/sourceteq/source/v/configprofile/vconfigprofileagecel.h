@@ -2,7 +2,7 @@
 
 @class mmyprofileage;
 
-@interface vprofileagecel:UICollectionViewCell
+@interface vconfigprofileagecel:UICollectionViewCell
 
 -(void)config:(mmyprofileage*)age;
 

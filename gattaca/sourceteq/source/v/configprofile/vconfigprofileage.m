@@ -1,6 +1,6 @@
-#import "vprofileage.h"
+#import "vconfigprofileage.h"
 
-@implementation vprofileage
+@implementation vconfigprofileage
 {
     NSInteger celwidth;
     BOOL trackscroll;
@@ -53,7 +53,7 @@
     [collection setAlwaysBounceHorizontal:YES];
     [collection setDataSource:self];
     [collection setDelegate:self];
-    [collection registerClass:[vprofileagecel class] forCellWithReuseIdentifier:celid];
+    [collection registerClass:[vconfigprofileagecel class] forCellWithReuseIdentifier:celid];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.collection = collection;
     
@@ -149,7 +149,7 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    vprofileagecel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    vconfigprofileagecel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
     [cel config:[self.ages item:index.item]];
     
     return cel;

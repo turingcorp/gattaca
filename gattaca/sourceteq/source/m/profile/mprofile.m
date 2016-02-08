@@ -13,13 +13,18 @@
 
 -(void)loadstats
 {
-    self.like = [[mprofilelike alloc] init];
-    self.ground = [[mprofileground alloc] init];
+    self.circle = [[mprofilecircle alloc] init];
+    [self.circle loadfromdb];
 }
 
 -(void)loadstats:(NSDictionary*)json
 {
     
+}
+
+-(void)changegender:(profile_gender)gender
+{
+    self.gender = [mprofilegender gender:gender];
 }
 
 @end

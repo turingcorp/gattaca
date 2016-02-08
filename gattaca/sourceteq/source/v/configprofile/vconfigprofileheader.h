@@ -1,11 +1,11 @@
 #import "appdel.h"
 
-@class vprofilecircle;
+@class vprofile;
 
 @interface vconfigprofileheader:UICollectionReusableView
 
--(void)addcircle;
+-(void)reload;
 
-@property(weak, nonatomic)vprofilecircle *circle;
+@property(weak, nonatomic)vprofile *profile;
 
 @end

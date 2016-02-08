@@ -22,7 +22,7 @@
 
 -(void)activate
 {
-    [[analytics singleton] trackevent:ga_event_apprate action:ga_action_start label:@""];
+    [[analytics singleton] trackevent:ga_event_apprate action:ga_action_start label:nil];
     [tools rateapp];
 }
 

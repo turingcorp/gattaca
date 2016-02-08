@@ -1,6 +1,6 @@
-#import "vprofilenameheader.h"
+#import "vconfigprofilenameheader.h"
 
-@implementation vprofilenameheader
+@implementation vconfigprofilenameheader
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
@@ -28,5 +28,6 @@
     
     return self;
 }
+
 
 @end

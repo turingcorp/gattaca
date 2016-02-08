@@ -2,10 +2,11 @@
 
 @implementation cgattacatester
 
--(instancetype)init
+-(instancetype)init:(cgattaca*)parent
 {
     self = [super init];
-    
+
+    self.parent = parent;
     [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
     self.test = [mgattacatest test];
     
@@ -50,13 +51,13 @@
 
 -(void)stop
 {
-    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_stopped label:@""];
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_stopped label:nil];
     [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)nextstep
 {
-    if([self.test next])
+    if(self.test.hasnext)
     {
         [self showcurrent];
     }
@@ -65,10 +66,10 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                        ^
                        {
-                           [self.test scoreall];
+                           [self.test renderscore];
                        });
         
-        [self.navigationController pushViewController:[[cgattacaend alloc] init] animated:YES];
+        [self.parent setViewControllers:@[[[cgattacaend alloc] init:self.parent]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     }
 }
 

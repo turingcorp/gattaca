@@ -2,84 +2,49 @@
 
 @implementation vprofilename
 
--(instancetype)init:(cprofilename*)controller
+-(instancetype)init:(mprofile*)profile
 {
-    self = [super init:controller];
+    self = [super init];
+    [self setClipsToBounds:YES];
+    [self setBackgroundColor:[UIColor clearColor]];
+    [self setUserInteractionEnabled:NO];
+    [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+    self.profile = profile;
+    UILabel *lbl = [[UILabel alloc] init];
+    [lbl setBackgroundColor:[UIColor clearColor]];
+    [lbl setUserInteractionEnabled:NO];
+    [lbl setFont:[UIFont fontWithName:fontboldname size:18]];
+    [lbl setTextColor:[UIColor whiteColor]];
+    [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.lbl = lbl;
     
-    self.model = [[mmyprofilenames alloc] init];
-    vblur *blur = [vblur light];
+    UIView *border = [[UIView alloc] init];
+    [border setUserInteractionEnabled:NO];
+    [border setClipsToBounds:YES];
+    [border setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.border = border;
     
-    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    [flow setFooterReferenceSize:CGSizeZero];
-    [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:10];
-    [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(20, 0, 0, 0)];
+    [self addSubview:border];
+    [self addSubview:lbl];
     
-    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
-    [collection setBackgroundColor:[UIColor clearColor]];
-    [collection setClipsToBounds:YES];
-    [collection setScrollEnabled:NO];
-    [collection setBounces:NO];
-    [collection setDelegate:self];
-    [collection setDataSource:self];
-    [collection registerClass:[vprofilenameheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
-    [collection registerClass:[vprofilenamecel class] forCellWithReuseIdentifier:celid];
-    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-    [self addSubview:blur];
-    [self addSubview:collection];
-    
-    NSDictionary *views = @{@"blur":blur, @"col":collection};
+    NSDictionary *views = @{@"border":border, @"lbl":lbl};
     NSDictionary *metrics = @{};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-8-[lbl]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[lbl]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
 
-#pragma mark -
-#pragma mark col del
+#pragma mark public
 
--(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
+-(void)reload
 {
-    return CGSizeMake(self.bounds.size.width, 240);
-}
-
--(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
-{
-    return CGSizeMake(self.bounds.size.width, 70);
-}
-
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
-{
-    return 1;
-}
-
--(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
-{
-    return [self.model count];
-}
-
--(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
-{
-    return [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerid forIndexPath:index];
-}
-
--(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
-{
-    vprofilenamecel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
-    [cel config:[self.model name:index.item]];
-    
-    return cel;
-}
-
--(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
-{
-    [(cprofilename*)self.controller selectname:[self.model name:index.item].type];
+    [self.lbl setText:self.profile.name];
+    [self.border setBackgroundColor:[self.profile.gender color]];
 }
 
 @end

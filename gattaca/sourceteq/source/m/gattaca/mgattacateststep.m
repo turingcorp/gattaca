@@ -8,16 +8,15 @@
 +(instancetype)parse:(NSDictionary*)dictionary test:(mgattacatest*)test
 {
     mgattacateststep *step = [[mgattacateststep alloc] init:test];
-    step.steptype = (test_step)[dictionary[@"type"] integerValue];
-    step.title = [[mgattacateststeptitle alloc] init:step.steptype];
     
     NSArray *rawitems = dictionary[@"items"];
     NSInteger count = rawitems.count;
     
     for(NSInteger i = 0; i < count; i++)
     {
-        NSString *itemurl = rawitems[i];
-        mgattacateststepitem *item = [[mgattacateststepitem alloc] init:step url:itemurl index:i];
+        mprofilecircleitem *circleitem = [test.circle item:(profile_circle)i];
+        NSString *itemimage = rawitems[i];
+        mgattacateststepitem *item = [[mgattacateststepitem alloc] init:step item:circleitem image:itemimage];
         
         if(arc4random_uniform(2))
         {

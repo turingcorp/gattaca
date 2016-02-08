@@ -13,17 +13,12 @@
 
 -(instancetype)init
 {
-    self = [super initWithRootViewController:[[cgattacamain alloc] init]];
+    self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    [self setViewControllers:@[[[cgattacamain alloc] init:self]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
     
     return self;
-}
-
--(void)viewDidLoad
-{
-    [super viewDidLoad];
-    [self setNavigationBarHidden:YES animated:NO];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle

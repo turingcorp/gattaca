@@ -32,6 +32,28 @@
     return [NSDate date].timeIntervalSince1970;
 }
 
++(UIImage*)qrcode:(NSString*)string
+{
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    [filter setValue:@"H" forKey:@"inputCorrectionLevel"];
+    [filter setValue:data forKey:@"inputMessage"];
+    CIImage *ciimage = filter.outputImage;
+    CIImage *scaleimage = [ciimage imageByApplyingTransform:CGAffineTransformMakeScale(10, 10)];
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CGImageRef cgimage = [context createCGImage:scaleimage fromRect:scaleimage.extent];
+    UIImage *uiimage = [UIImage imageWithCGImage:cgimage scale:1 orientation:UIImageOrientationUp];
+    CFRelease(cgimage);
+    
+    return uiimage;
+}
+
++(NSString*)typetokey:(NSInteger)type
+{
+    return [NSString stringWithFormat:@"%@", @(type)];
+}
+
 #pragma mark -
 
 -(instancetype)init
@@ -45,9 +67,9 @@
 
 #pragma mark public
 
--(NSString*)urlencode:(NSString*)_string
+-(NSString*)urlencode:(NSString*)string
 {
-    return (__bridge_transfer NSString*)CFURLCreateStringByAddingPercentEscapes(nil, (__bridge CFStringRef)_string, nil, stringref, kCFStringEncodingUTF8);
+    return (__bridge_transfer NSString*)CFURLCreateStringByAddingPercentEscapes(nil, (__bridge CFStringRef)string, nil, stringref, kCFStringEncodingUTF8);
 }
 
 @end

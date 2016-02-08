@@ -3,7 +3,7 @@
 
 @class mmyprofileages;
 
-@interface vprofileage:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface vconfigprofileage:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property(strong, nonatomic)mmyprofileages *ages;
 @property(weak, nonatomic)mmyprofileage *current;

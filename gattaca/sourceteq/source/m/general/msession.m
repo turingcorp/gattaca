@@ -61,7 +61,7 @@
 
 -(void)retrievefromfacebook
 {
-    [[analytics singleton] trackevent:ga_event_facebook_profile action:ga_action_start label:@""];
+    [[analytics singleton] trackevent:ga_event_facebook_profile action:ga_action_start label:nil];
     
     dispatch_async(dispatch_get_main_queue(),
                    ^(void)

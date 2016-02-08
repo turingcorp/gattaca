@@ -1,60 +1,44 @@
-#import "vconfigprofile.h"
+#import "vconfigprofilename.h"
 
-@implementation vconfigprofile
+@implementation vconfigprofilename
 
--(instancetype)init:(cprofile*)controller
+-(instancetype)init:(cprofilename*)controller
 {
     self = [super init:controller];
-    [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor colorWithWhite:0.98 alpha:1]];
- 
+    
+    self.model = [[mmyprofilenames alloc] init];
+    vblur *blur = [vblur light];
+    
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:2];
+    [flow setMinimumLineSpacing:10];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(2, 0, menuheight + 10, 0)];
+    [flow setSectionInset:UIEdgeInsetsMake(20, 0, 0, 0)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setBackgroundColor:[UIColor clearColor]];
     [collection setClipsToBounds:YES];
-    [collection setShowsHorizontalScrollIndicator:NO];
-    [collection setShowsVerticalScrollIndicator:NO];
-    [collection setAlwaysBounceVertical:YES];
+    [collection setScrollEnabled:NO];
+    [collection setBounces:NO];
     [collection setDelegate:self];
     [collection setDataSource:self];
-    [collection registerClass:[vconfigprofilecel class] forCellWithReuseIdentifier:celid];
-    [collection registerClass:[vconfigprofileheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
+    [collection registerClass:[vconfigprofilenameheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
+    [collection registerClass:[vconfigprofilenamecel class] forCellWithReuseIdentifier:celid];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    self.collection = collection;
+    [self addSubview:blur];
     [self addSubview:collection];
     
-    NSDictionary *views = @{@"col":collection};
+    NSDictionary *views = @{@"blur":blur, @"col":collection};
     NSDictionary *metrics = @{};
     
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedupdateprofile:) name:notprofileupdate object:nil];
-    
     return self;
-}
-
--(void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-#pragma mark notified
-
--(void)notifiedupdateprofile:(NSNotification*)notification
-{
-    dispatch_async(dispatch_get_main_queue(),
-                   ^(void)
-                   {
-                       [self.collection reloadData];
-                   });
 }
 
 #pragma mark -
@@ -62,9 +46,7 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    CGFloat width = self.bounds.size.width;
-    
-    return CGSizeMake(width, 600);
+    return CGSizeMake(self.bounds.size.width, 240);
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
@@ -79,28 +61,25 @@
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    return [[(cprofile*)self.controller model] count];
+    return [self.model count];
 }
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
-    vconfigprofileheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerid forIndexPath:index];
-    [header reload];
-    
-    return header;
+    return [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerid forIndexPath:index];
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    vconfigprofilecel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
-    [cel config:[[(cprofile*)self.controller model] item:index.item]];
+    vconfigprofilenamecel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    [cel config:[self.model name:index.item]];
     
     return cel;
 }
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    [[[(cprofile*)self.controller model] item:index.item] change];
+    [(cprofilename*)self.controller selectname:[self.model name:index.item].type];
 }
 
 @end

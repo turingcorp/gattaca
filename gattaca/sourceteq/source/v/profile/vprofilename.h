@@ -1,10 +1,14 @@
 #import "appdel.h"
-#import "viewbase.h"
 
-@class mmyprofilenames;
+@class mprofile;
 
-@interface vprofilename:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface vprofilename:UIView
 
-@property(strong, nonatomic)mmyprofilenames *model;
+-(instancetype)init:(mprofile*)profile;
+-(void)reload;
+
+@property(weak, nonatomic)mprofile *profile;
+@property(weak, nonatomic)UIView *border;
+@property(weak, nonatomic)UILabel *lbl;
 
 @end

@@ -11,11 +11,7 @@
     
     [dbcon query:query];
     
-    query = @"CREATE TABLE profilelike (id INTEGER PRIMARY KEY, liketype INTEGER, amount INTEGER, CONSTRAINT profilelike_unique unique(liketype));";
-    
-    [dbcon query:query];
-    
-    query = @"CREATE TABLE profileground (id INTEGER PRIMARY KEY, groundtype INTEGER, amount INTEGER, CONSTRAINT profileground_unique unique(groundtype));";
+    query = @"CREATE TABLE profilecircle (id INTEGER PRIMARY KEY, circletype INTEGER, amount INTEGER, CONSTRAINT profilelike_unique unique(circletype));";
     
     [dbcon query:query];
     
@@ -26,25 +22,20 @@
 
 +(void)firstvalues:(db*)dbcon
 {
-    NSString *query;
     NSInteger amount = 250;
     
-    query = [NSString stringWithFormat:@"INSERT INTO profilelike (liketype, amount) values(%@, %@);", @(profile_like_science), @(amount)];
-    [dbcon query:query];
-    query = [NSString stringWithFormat:@"INSERT INTO profilelike (liketype, amount) values(%@, %@);", @(profile_like_art), @(amount)];
-    [dbcon query:query];
-    query = [NSString stringWithFormat:@"INSERT INTO profilelike (liketype, amount) values(%@, %@);", @(profile_like_sport), @(amount)];
-    [dbcon query:query];
-    query = [NSString stringWithFormat:@"INSERT INTO profilelike (liketype, amount) values(%@, %@);", @(profile_like_social), @(amount)];
-    [dbcon query:query];
+    [mdbcreate circle:dbcon type:profile_circle_math amount:amount];
+    [mdbcreate circle:dbcon type:profile_circle_music amount:amount];
+    [mdbcreate circle:dbcon type:profile_circle_politics amount:amount];
+    [mdbcreate circle:dbcon type:profile_circle_leisure amount:amount];
+}
+
++(void)circle:(db*)dbcon type:(profile_circle)type amount:(NSInteger)amount
+{
+    NSString *query = [NSString stringWithFormat:
+                       @"INSERT INTO profilecircle (circletype, amount) values(%@, %@);",
+                       @(type), @(amount)];
     
-    query = [NSString stringWithFormat:@"INSERT INTO profileground (groundtype, amount) values(%@, %@);", @(profile_ground_cultural), @(amount)];
-    [dbcon query:query];
-    query = [NSString stringWithFormat:@"INSERT INTO profileground (groundtype, amount) values(%@, %@);", @(profile_ground_gaming), @(amount)];
-    [dbcon query:query];
-    query = [NSString stringWithFormat:@"INSERT INTO profileground (groundtype, amount) values(%@, %@);", @(profile_ground_entertainment), @(amount)];
-    [dbcon query:query];
-    query = [NSString stringWithFormat:@"INSERT INTO profileground (groundtype, amount) values(%@, %@);", @(profile_ground_partying), @(amount)];
     [dbcon query:query];
 }
 

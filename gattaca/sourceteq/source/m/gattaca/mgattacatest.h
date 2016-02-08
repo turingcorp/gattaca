@@ -10,12 +10,11 @@
 -(NSInteger)count;
 -(mgattacateststep*)step:(NSInteger)item;
 -(mgattacateststep*)current;
--(BOOL)next;
--(void)chooseitem:(mgattacateststepitem*)item;
--(void)scoreall;
+-(void)next;
+-(void)renderscore;
 
-@property(strong, nonatomic)mgattacascore *like;
-@property(strong, nonatomic)mgattacascore *ground;
+@property(strong, nonatomic)mprofilecircle *circle;
 @property(nonatomic)NSInteger currentitem;
+@property(nonatomic)BOOL hasnext;
 
 @end

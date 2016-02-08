@@ -2,13 +2,13 @@
 
 @implementation mgattacateststepitem
 
--(instancetype)init:(mgattacateststep*)step url:(NSString*)url index:(NSInteger)index
+-(instancetype)init:(mgattacateststep*)step item:(mprofilecircleitem*)item image:(NSString*)image
 {
     self = [super init];
     
     self.step = step;
-    self.url = url;
-    self.index = index;
+    self.item = item;
+    self.image = image;
     
     return self;
 }
@@ -17,7 +17,10 @@
 
 -(void)selected
 {
-    [self.step.test chooseitem:self];
+    self.item.counter++;
+    [self.step.test next];
+    
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_selected label:self.item.trackname];
 }
 
 @end

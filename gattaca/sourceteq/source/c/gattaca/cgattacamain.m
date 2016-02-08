@@ -2,10 +2,11 @@
 
 @implementation cgattacamain
 
--(instancetype)init
+-(instancetype)init:(cgattaca*)parent
 {
     self = [super init];
     
+    self.parent = parent;
     [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
     
     return self;
@@ -39,14 +40,14 @@
 
 -(void)cancel
 {
-    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_cancelled label:@""];
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_cancelled label:nil];
     [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)starttest
 {
-    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_start label:@""];
-    [self.navigationController pushViewController:[[cgattacatester alloc] init] animated:YES];
+    [[analytics singleton] trackevent:ga_event_gattaca_test action:ga_action_start label:nil];
+    [self.parent setViewControllers:@[[[cgattacatester alloc] init:self.parent]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }
 
 @end

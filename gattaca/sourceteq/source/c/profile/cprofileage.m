@@ -22,7 +22,7 @@
 
 -(void)loadView
 {
-    self.view = [[vprofileage alloc] init:self];
+    self.view = [[vconfigprofileage alloc] init:self];
 }
 
 -(void)viewDidLoad

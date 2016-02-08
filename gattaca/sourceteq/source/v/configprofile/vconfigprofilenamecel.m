@@ -1,6 +1,6 @@
-#import "vprofileagecel.h"
+#import "vconfigprofilenamecel.h"
 
-@implementation vprofileagecel
+@implementation vconfigprofilenamecel
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
@@ -10,17 +10,18 @@
     UILabel *lbl = [[UILabel alloc] init];
     [lbl setBackgroundColor:[UIColor clearColor]];
     [lbl setUserInteractionEnabled:NO];
-    [lbl setTextAlignment:NSTextAlignmentCenter];
-    [lbl setFont:[UIFont fontWithName:fontboldname size:19]];
-    [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [lbl setFont:[UIFont fontWithName:fontboldname size:18]];
+    [lbl setTextAlignment:NSTextAlignmentRight];
     
+    [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.lbl = lbl;
+    
     [self addSubview:lbl];
     
     NSDictionary *views = @{@"lbl":lbl};
     NSDictionary *metrics = @{};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[lbl]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[lbl]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[lbl]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
@@ -44,21 +45,21 @@
 {
     if(self.isSelected || self.isHighlighted)
     {
-        [self setBackgroundColor:colormain];
         [self.lbl setTextColor:[UIColor whiteColor]];
+        [self setBackgroundColor:colormain];
     }
     else
     {
-        [self setBackgroundColor:[UIColor clearColor]];
-        [self.lbl setTextColor:[UIColor colorWithWhite:0.8 alpha:1]];
+        [self.lbl setTextColor:colormain];
+        [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.3]];
     }
 }
 
 #pragma mark public
 
--(void)config:(mmyprofileage*)age
+-(void)config:(mmyprofilename*)name
 {
-    [self.lbl setText:age.valuestr];
+    [self.lbl setText:name.value];
     [self hover];
 }
 
