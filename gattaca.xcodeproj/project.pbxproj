@@ -64,6 +64,7 @@
 		DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */; };
 		DAF045901F391AC30003C2EF /* MHomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458F1F391AC30003C2EF /* MHomeFactory.swift */; };
 		DAF045921F391C0D0003C2EF /* MHomeGiphyUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045911F391C0D0003C2EF /* MHomeGiphyUrl.swift */; };
+		DAF045941F392C520003C2EF /* ExtensionURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045931F392C520003C2EF /* ExtensionURLResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphy.swift; sourceTree = "<group>"; };
 		DAF0458F1F391AC30003C2EF /* MHomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeFactory.swift; sourceTree = "<group>"; };
 		DAF045911F391C0D0003C2EF /* MHomeGiphyUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphyUrl.swift; sourceTree = "<group>"; };
+		DAF045931F392C520003C2EF /* ExtensionURLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionURLResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 				DA68F1751F38E5D500C13634 /* ExtensionUIColor.swift */,
 				DA68F1761F38E5D500C13634 /* ExtensionUIFont.swift */,
 				DA68F1771F38E5D500C13634 /* ExtensionURL.swift */,
+				DAF045931F392C520003C2EF /* ExtensionURLResponse.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				DA68F19D1F38E5D500C13634 /* MHome.swift in Sources */,
 				DA68F1C51F38E5D500C13634 /* VSpinner.swift in Sources */,
 				DA68F1B81F38E5D500C13634 /* ViewMain.swift in Sources */,
+				DAF045941F392C520003C2EF /* ExtensionURLResponse.swift in Sources */,
 				DA68F1BE1F38E5D500C13634 /* VBorder.swift in Sources */,
 				DA68F1971F38E5D500C13634 /* Controller.swift in Sources */,
 				DA68F1AE1F38E5D500C13634 /* ExtensionString.swift in Sources */,
