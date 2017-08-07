@@ -17,7 +17,7 @@ extension MHome
     {
         guard
         
-            let url:URL = MHomeGiphyUrl.factoryRandom()
+            let request:URLRequest = MHomeGiphyUrl.factoryRandom()
         
         else
         {
