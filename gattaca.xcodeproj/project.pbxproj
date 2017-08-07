@@ -63,6 +63,7 @@
 		DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */; };
 		DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */; };
 		DAF045901F391AC30003C2EF /* MHomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458F1F391AC30003C2EF /* MHomeFactory.swift */; };
+		DAF045921F391C0D0003C2EF /* MHomeGiphyUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045911F391C0D0003C2EF /* MHomeGiphyUrl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,7 @@
 		DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeDisplay.swift; sourceTree = "<group>"; };
 		DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphy.swift; sourceTree = "<group>"; };
 		DAF0458F1F391AC30003C2EF /* MHomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeFactory.swift; sourceTree = "<group>"; };
+		DAF045911F391C0D0003C2EF /* MHomeGiphyUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphyUrl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			children = (
 				DA68F15A1F38E5D500C13634 /* MHome.swift */,
 				DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */,
+				DAF045911F391C0D0003C2EF /* MHomeGiphyUrl.swift */,
 				DAF0458F1F391AC30003C2EF /* MHomeFactory.swift */,
 			);
 			path = Home;
@@ -451,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF045921F391C0D0003C2EF /* MHomeGiphyUrl.swift in Sources */,
 				DA68F19E1F38E5D500C13634 /* MPerkDomainProtocol.swift in Sources */,
 				DA68F1991F38E5D500C13634 /* ControllerParentTransitions.swift in Sources */,
 				DA68F1C11F38E5D500C13634 /* VGradient.swift in Sources */,
