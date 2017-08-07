@@ -273,8 +273,8 @@
 		DA68F16A1F38E5D500C13634 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DA68F16B1F38E5D500C13634 /* DManager.swift */,
 				DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */,
+				DA68F16B1F38E5D500C13634 /* DManager.swift */,
 				DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */,
 			);
 			path = Data;

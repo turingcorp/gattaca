@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DPerk" representedClassName="DPerk" isAbstract="YES" syncable="YES" codeGenerationType="class">
-        <attribute name="domainName" attributeType="String" syncable="YES"/>
+        <attribute name="domainIdentifier" attributeType="String" syncable="YES"/>
         <attribute name="identifier" attributeType="String" syncable="YES"/>
         <relationship name="settings" maxCount="1" deletionRule="Nullify" destinationEntity="DSettings" inverseName="perks" inverseEntity="DSettings" syncable="YES"/>
     </entity>

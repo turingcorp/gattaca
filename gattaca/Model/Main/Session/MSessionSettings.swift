@@ -42,7 +42,7 @@ extension MSession
             }
             
             
-            self.factoryTutorials(settings:settings)
+            self.settingsLoaded(settings:settings)
         }
     }
 }
