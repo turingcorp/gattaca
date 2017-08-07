@@ -62,6 +62,7 @@
 		DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045891F3903780003C2EF /* VHomeBar.swift */; };
 		DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */; };
 		DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */; };
+		DAF045901F391AC30003C2EF /* MHomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458F1F391AC30003C2EF /* MHomeFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		DAF045891F3903780003C2EF /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
 		DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeDisplay.swift; sourceTree = "<group>"; };
 		DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphy.swift; sourceTree = "<group>"; };
+		DAF0458F1F391AC30003C2EF /* MHomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			children = (
 				DA68F15A1F38E5D500C13634 /* MHome.swift */,
 				DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */,
+				DAF0458F1F391AC30003C2EF /* MHomeFactory.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */,
 				DA68F1AC1F38E5D500C13634 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA68F1A91F38E5D500C13634 /* ExtensionDictionary.swift in Sources */,
+				DAF045901F391AC30003C2EF /* MHomeFactory.swift in Sources */,
 				DA68F1BF1F38E5D500C13634 /* VCollection.swift in Sources */,
 				DA68F1BD1F38E5D500C13634 /* VBlur.swift in Sources */,
 				DA68F1AA1F38E5D500C13634 /* ExtensionFileManager.swift in Sources */,
