@@ -103,6 +103,11 @@ extension MHome
             return
         }
         
-        print(json)
+        requestSuccess(json:json)
+    }
+    
+    private func requestSuccess(json:Any)
+    {
+        
     }
 }

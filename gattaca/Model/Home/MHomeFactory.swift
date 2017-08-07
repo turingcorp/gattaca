@@ -4,7 +4,7 @@ extension MHome
 {
     private static let kResourceName:String = "ResourceURL"
     private static let kResourceExtension:String = "plist"
-    private static let kTimeout:TimeInterval = 15
+    private static let kTimeout:TimeInterval = 30
     
     class func factorySession() -> URLSession
     {
