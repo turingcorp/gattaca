@@ -2,7 +2,7 @@ import Foundation
 
 extension URLResponse
 {
-    var statusCode:Int?
+    var httpStatusCode:Int?
     {
         get
         {
