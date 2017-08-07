@@ -57,6 +57,7 @@
 		DA68F1C51F38E5D500C13634 /* VSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1921F38E5D500C13634 /* VSpinner.swift */; };
 		DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1931F38E5D500C13634 /* VToast.swift */; };
 		DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1951F38E5D500C13634 /* VHome.swift */; };
+		DA68F1CA1F38F80800C13634 /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		DA68F1921F38E5D500C13634 /* VSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSpinner.swift; sourceTree = "<group>"; };
 		DA68F1931F38E5D500C13634 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
 		DA68F1951F38E5D500C13634 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
+		DA68F1C91F38F80800C13634 /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				DA68F16B1F38E5D500C13634 /* DManager.swift */,
+				DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				DA68F19F1F38E5D500C13634 /* MPerkThumbnailFreeProtocol.swift in Sources */,
 				DA68F1C21F38E5D500C13634 /* VPushBackground.swift in Sources */,
 				DA68F1A51F38E5D500C13634 /* MSessionSettings.swift in Sources */,
+				DA68F1CA1F38F80800C13634 /* DGattaca.xcdatamodeld in Sources */,
 				DA68F1C31F38E5D500C13634 /* VSlider.swift in Sources */,
 				DA68F1AD1F38E5D500C13634 /* ExtensionNSManagedObject.swift in Sources */,
 				DA68F1AC1F38E5D500C13634 /* ExtensionNSLayoutConstraint.swift in Sources */,
@@ -656,6 +660,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DA68F1C91F38F80800C13634 /* DGattaca.xcdatamodel */,
+			);
+			currentVersion = DA68F1C91F38F80800C13634 /* DGattaca.xcdatamodel */;
+			path = DGattaca.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DA39E7721F38E3F90001CA28 /* Project object */;
 }
