@@ -2,6 +2,8 @@ import UIKit
 
 class VHome:ViewMain
 {
+    private weak var viewDisplay:VHomeDisplay!
+    private weak var layoutDisplayHeight:NSLayoutConstraint!
     private let kBarHeight:CGFloat = 70
     
     required init(controller:UIViewController)
@@ -25,13 +27,27 @@ class VHome:ViewMain
         return nil
     }
     
+    override func layoutSubviews()
+    {
+        let width:CGFloat = bounds.width
+        layoutDisplayHeight.constant = width
+        
+        super.layoutSubviews()
+    }
+    
     //MARK: private
     
     private func factoryViews(controller:CHome)
     {
-        let viewBar:VHomeBar = VHomeBar(controller:controller)
+        let viewDisplay:VHomeDisplay = VHomeDisplay(
+            controller:controller)
+        self.viewDisplay = viewDisplay
+        
+        let viewBar:VHomeBar = VHomeBar(
+            controller:controller)
         
         addSubview(viewBar)
+        addSubview(viewDisplay)
         
         NSLayoutConstraint.bottomToBottom(
             view:viewBar,
@@ -41,6 +57,15 @@ class VHome:ViewMain
             constant:kBarHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
+            toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewDisplay,
+            toView:self)
+        layoutDisplayHeight = NSLayoutConstraint.height(
+            view:viewDisplay)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewDisplay,
             toView:self)
     }
 }
