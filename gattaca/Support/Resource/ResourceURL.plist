@@ -10,6 +10,10 @@
 		<string>https://api.giphy.com</string>
 		<key>random</key>
 		<string>/v1/gifs/random</string>
+		<key>var_api_key</key>
+		<string>api_key</string>
+		<key>api_key</key>
+		<string>028183773f20455685444fa490ae3734</string>
 	</dict>
 </dict>
 </plist>
