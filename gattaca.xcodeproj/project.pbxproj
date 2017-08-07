@@ -58,6 +58,7 @@
 		DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1931F38E5D500C13634 /* VToast.swift */; };
 		DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1951F38E5D500C13634 /* VHome.swift */; };
 		DA68F1CA1F38F80800C13634 /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */; };
+		DA68F1CC1F38F9C000C13634 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		DA68F1931F38E5D500C13634 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
 		DA68F1951F38E5D500C13634 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DA68F1C91F38F80800C13634 /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
+		DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 			children = (
 				DA68F16B1F38E5D500C13634 /* DManager.swift */,
 				DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */,
+				DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				DA68F1971F38E5D500C13634 /* Controller.swift in Sources */,
 				DA68F1AE1F38E5D500C13634 /* ExtensionString.swift in Sources */,
 				DA68F1BA1F38E5D500C13634 /* ViewParentTransitions.swift in Sources */,
+				DA68F1CC1F38F9C000C13634 /* DSettingsExtension.swift in Sources */,
 				DA68F1B71F38E5D500C13634 /* View.swift in Sources */,
 				DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */,
 				DA68F19A1F38E5D500C13634 /* CHome.swift in Sources */,
