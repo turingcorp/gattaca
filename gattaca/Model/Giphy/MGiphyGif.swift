@@ -3,7 +3,6 @@ import Foundation
 extension MGiphy
 {
     private static let kKeyData:String = "data"
-    private static let kKeyOriginalUrl:String = "image_original_url"
     private static let kKeyMp4Url:String = "image_mp4_url"
     
     class func factoryGif(json:Any) -> URLRequest?
