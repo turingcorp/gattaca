@@ -2,6 +2,14 @@ import UIKit
 
 class CHome:Controller<VHome, MHome>
 {
+    override var preferredStatusBarStyle:UIStatusBarStyle
+    {
+        get
+        {
+            return UIStatusBarStyle.lightContent
+        }
+    }
+    
     override func modelRefresh()
     {
         DispatchQueue.main.async
