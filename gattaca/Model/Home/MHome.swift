@@ -7,7 +7,7 @@ class MHome:Model
     
     required init()
     {
-        session = MHome.factorySession()
+        session = MRequest.factorySession()
         
         super.init()
     }

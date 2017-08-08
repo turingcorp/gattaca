@@ -6,6 +6,6 @@ class CHome:Controller<VHome, MHome>
     {
         super.viewDidLoad()
         
-        model.requestGif()
+        model.requestRandomGif()
     }
 }

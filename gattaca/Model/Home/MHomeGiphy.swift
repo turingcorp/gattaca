@@ -4,22 +4,22 @@ extension MHome
 {
     private static let kStatusCodeSuccess:Int = 200
     
-    func requestGif()
+    func requestRandomGif()
     {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.dispatchRequestGif()
+            self?.dispatchRequestRandomGif()
         }
     }
     
     //MARK: private
     
-    private func dispatchRequestGif()
+    private func dispatchRequestRandomGif()
     {
         guard
         
-            let request:URLRequest = MHomeGiphyUrl.factoryRandom()
+            let request:URLRequest = MGiphy.factoryRandom()
         
         else
         {
