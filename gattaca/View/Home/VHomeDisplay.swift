@@ -24,6 +24,12 @@ class VHomeDisplay:View<VHome, MHome, CHome>
         self.avPlayer = avPlayer
         
         layer.player = avPlayer
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(notifiedPlayedToEnd(sender:)),
+            name:Notification.Name.AVPlayerItemDidPlayToEndTime,
+            object:nil)
     }
     
     required init?(coder:NSCoder)
@@ -36,7 +42,24 @@ class VHomeDisplay:View<VHome, MHome, CHome>
         return AVPlayerLayer.self
     }
     
+    //MARK: notifications
+    
+    func notifiedPlayedToEnd(sender notification:Notification)
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.restartPlayer()
+        }
+    }
+    
     //MARK: private
+    
+    private func restartPlayer()
+    {
+        avPlayer.seek(to:kCMTimeZero)
+        avPlayer.play()
+    }
     
     private func updatePlayer()
     {
