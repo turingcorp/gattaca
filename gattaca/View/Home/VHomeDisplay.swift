@@ -3,6 +3,8 @@ import AVFoundation
 
 class VHomeDisplay:View<VHome, MHome, CHome>
 {
+    private var avPlayer:AVPlayer?
+    
     required init(controller:CHome)
     {
         super.init(controller:controller)
@@ -22,10 +24,31 @@ class VHomeDisplay:View<VHome, MHome, CHome>
     
     //MARK: private
     
+    private func factoryPlayer()
+    {
+        guard
+            
+            let layer:AVPlayerLayer = self.layer as? AVPlayerLayer,
+            let item:MHomeItem = controller.model.items.first
+            
+        else
+        {
+            return
+        }
+        
+        let avPlayer:AVPlayer = AVPlayer(url:item.url)
+        self.avPlayer = avPlayer
+        
+        layer.player = avPlayer
+        avPlayer.play()
+        
+        print(avPlayer.currentItem)
+    }
+    
     //MARK: public
     
     func refresh()
     {
-        
+        factoryPlayer()
     }
 }
