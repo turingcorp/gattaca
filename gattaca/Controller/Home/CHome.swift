@@ -10,6 +10,14 @@ class CHome:Controller<VHome, MHome>
         }
     }
     
+    override var prefersStatusBarHidden:Bool
+    {
+        get
+        {
+            return true
+        }
+    }
+    
     override func modelRefresh()
     {
         DispatchQueue.main.async
