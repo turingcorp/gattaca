@@ -2,13 +2,11 @@ import Foundation
 
 extension MGiphy
 {
-    private static let kGet:String = "GET"
     private static let kKeyRoot:String = "giphy"
     private static let kKeyHost:String = "host"
     private static let kKeyRandom:String = "random"
     private static let kKeyVarApiKey:String = "var_api_key"
     private static let kKeyApiKey:String = "api_key"
-    private static let kTimeout:TimeInterval = 12
     
     class func factoryRandom() -> URLRequest?
     {
@@ -21,7 +19,7 @@ extension MGiphy
             return nil
         }
         
-        let request:URLRequest? = factoryRequest(url:url)
+        let request:URLRequest = MRequest.factoryGetRequest(url:url)
         
         return request
     }
@@ -52,18 +50,5 @@ extension MGiphy
         let url:URL? =  URL(string:path)
         
         return url
-    }
-    
-    private class func factoryRequest(url:URL) -> URLRequest
-    {
-        var request:URLRequest = URLRequest(
-            url:url,
-            cachePolicy:
-            URLRequest.CachePolicy.reloadIgnoringLocalCacheData,
-            timeoutInterval:kTimeout)
-        request.httpMethod = kGet
-        request.allowsCellularAccess = true
-        
-        return request
     }
 }

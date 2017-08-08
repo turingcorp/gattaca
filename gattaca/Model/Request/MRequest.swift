@@ -2,6 +2,7 @@ import Foundation
 
 class MRequest
 {
+    private static let kGet:String = "GET"
     private static let kResourceName:String = "ResourceURL"
     private static let kResourceExtension:String = "plist"
     private static let kTimeout:TimeInterval = 30
@@ -39,5 +40,18 @@ class MRequest
         let urlMap:[String:AnyObject]? = urlDictionary as? [String:AnyObject]
         
         return urlMap
+    }
+    
+    class func factoryGetRequest(url:URL) -> URLRequest
+    {
+        var request:URLRequest = URLRequest(
+            url:url,
+            cachePolicy:
+            URLRequest.CachePolicy.reloadIgnoringLocalCacheData,
+            timeoutInterval:kTimeout)
+        request.httpMethod = kGet
+        request.allowsCellularAccess = true
+        
+        return request
     }
 }

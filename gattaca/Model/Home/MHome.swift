@@ -2,7 +2,7 @@ import Foundation
 
 class MHome:Model
 {
-    weak var task:URLSessionTask?
+    weak var sessionTask:URLSessionTask?
     let session:URLSession
     
     required init()
@@ -14,6 +14,6 @@ class MHome:Model
     
     deinit
     {
-        task?.cancel()
+        sessionTask?.cancel()
     }
 }

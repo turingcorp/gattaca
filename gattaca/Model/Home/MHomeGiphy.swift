@@ -26,7 +26,7 @@ extension MHome
             return
         }
         
-        let task:URLSessionDataTask = session.dataTask(with:request)
+        let sessionTask:URLSessionDataTask = session.dataTask(with:request)
         { [weak self] (data:Data?, urlResponse:URLResponse?, error:Error?) in
             
             guard
@@ -61,8 +61,8 @@ extension MHome
             }
         }
         
-        self.task = task
-        task.resume()
+        self.sessionTask = sessionTask
+        sessionTask.resume()
     }
     
     private func requestError(error:Error?)
@@ -108,6 +108,41 @@ extension MHome
     
     private func requestDataSuccess(json:Any)
     {
+        guard
         
+            let gifRequest:URLRequest = MGiphy.factoryGif(json:json)
+        
+        else
+        {
+            requestError(error:nil)
+            
+            return
+        }
+        
+        let sessionTask:URLSessionDownloadTask = session.downloadTask(
+            with:gifRequest)
+        { [weak self] (url:URL?, urlResponse:URLResponse?, error:Error?) in
+            
+            if let error:Error = error
+            {
+                self?.requestError(error:error)
+                
+                return
+            }
+            
+            guard
+            
+                let url:URL = url
+            
+            else
+            {
+                return
+            }
+            
+            
+        }
+        
+        self.sessionTask = sessionTask
+        sessionTask.resume()
     }
 }
