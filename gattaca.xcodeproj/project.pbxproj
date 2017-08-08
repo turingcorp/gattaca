@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FEFAB51E60F2A75275A558B /* Pods_gattaca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EB7DE9DB31C7535E0A58A4 /* Pods_gattaca.framework */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
 		DA68F1971F38E5D500C13634 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1501F38E5D500C13634 /* Controller.swift */; };
 		DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1511F38E5D500C13634 /* ControllerParent.swift */; };
@@ -71,6 +72,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9FB0C4F89BF859D73B9AE9D3 /* Pods-gattaca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.release.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.release.xcconfig"; sourceTree = "<group>"; };
+		A4EB7DE9DB31C7535E0A58A4 /* Pods_gattaca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gattaca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
 		DA39E77A1F38E3F90001CA28 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA39E7891F38E3F90001CA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,17 +145,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FEFAB51E60F2A75275A558B /* Pods_gattaca.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25A226865CD26CE574FD985D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */,
+				9FB0C4F89BF859D73B9AE9D3 /* Pods-gattaca.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4138065C43E7C9ECF6B995E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4EB7DE9DB31C7535E0A58A4 /* Pods_gattaca.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA39E7711F38E3F90001CA28 = {
 			isa = PBXGroup;
 			children = (
 				DA39E77C1F38E3F90001CA28 /* gattaca */,
 				DA39E77B1F38E3F90001CA28 /* Products */,
+				25A226865CD26CE574FD985D /* Pods */,
+				4138065C43E7C9ECF6B995E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -415,9 +439,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA39E78C1F38E3F90001CA28 /* Build configuration list for PBXNativeTarget "gattaca" */;
 			buildPhases = (
+				C47AB6F31807763C172F0223 /* [CP] Check Pods Manifest.lock */,
 				DA39E7761F38E3F90001CA28 /* Sources */,
 				DA39E7771F38E3F90001CA28 /* Frameworks */,
 				DA39E7781F38E3F90001CA28 /* Resources */,
+				12C75E1ECF48EEE289CA5D56 /* [CP] Embed Pods Frameworks */,
+				304BC94C8BB67E48074177C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -476,6 +503,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12C75E1ECF48EEE289CA5D56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-gattaca/Pods-gattaca-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GifHero/GifHero.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GifHero.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gattaca/Pods-gattaca-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		304BC94C8BB67E48074177C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gattaca/Pods-gattaca-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C47AB6F31807763C172F0223 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gattaca-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA39E7761F38E3F90001CA28 /* Sources */ = {
@@ -670,6 +751,7 @@
 		};
 		DA39E78D1F38E3F90001CA28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = gattaca/Info.plist;
@@ -683,6 +765,7 @@
 		};
 		DA39E78E1F38E3F90001CA28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FB0C4F89BF859D73B9AE9D3 /* Pods-gattaca.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = gattaca/Info.plist;
