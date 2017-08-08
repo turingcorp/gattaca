@@ -3,6 +3,7 @@ import Foundation
 extension MHome
 {
     private static let kStatusCodeSuccess:Int = 200
+    private static let kFileExtension:String = "mp4"
     
     func requestRandomGif()
     {
@@ -172,7 +173,8 @@ extension MHome
     {
         guard
             
-            let temporalUrl:URL = data.writeToTemporal()
+            let temporalUrl:URL = data.writeToTemporal(
+                withExtension:MHome.kFileExtension)
         
         else
         {
