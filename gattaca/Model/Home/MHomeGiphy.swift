@@ -150,7 +150,36 @@ extension MHome
             return
         }
         
-        let item:MHomeItem = MHomeItem(url:url)
+        let data:Data
+        
+        do
+        {
+            try data = Data(
+                contentsOf:url,
+                options:Data.ReadingOptions.uncached)
+        }
+        catch let error
+        {
+            requestError(error:error)
+            
+            return
+        }
+        
+        requestDownloadSuccess(data:data)
+    }
+    
+    private func requestDownloadSuccess(data:Data)
+    {
+        guard
+            
+            let temporalUrl:URL = data.writeToTemporal()
+        
+        else
+        {
+            return
+        }
+        
+        let item:MHomeItem = MHomeItem(url:temporalUrl)
         addItem(item:item)
     }
 }
