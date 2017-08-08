@@ -27,6 +27,13 @@ class CHome:Controller<VHome, MHome>
         }
     }
     
+    override func viewDidAppear(_ animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        view().viewDidAppear()
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -38,15 +45,6 @@ class CHome:Controller<VHome, MHome>
     
     private func dispatchRefresh()
     {
-        guard
-        
-            let view:VHome = self.view as? VHome
-        
-        else
-        {
-            return
-        }
-        
-        view.refresh()
+        view().refresh()
     }
 }

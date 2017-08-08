@@ -71,6 +71,11 @@ class VHome:ViewMain
     
     //MARK: internal
     
+    func viewDidAppear()
+    {
+        viewDisplay.viewDidAppear()
+    }
+    
     func refresh()
     {
         viewDisplay.refresh()

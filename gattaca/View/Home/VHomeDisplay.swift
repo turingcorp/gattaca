@@ -80,6 +80,11 @@ class VHomeDisplay:View<VHome, MHome, CHome>
     
     //MARK: public
     
+    func viewDidAppear()
+    {
+        restartPlayer()
+    }
+    
     func refresh()
     {
         updatePlayer()
