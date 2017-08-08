@@ -2,9 +2,16 @@ import Foundation
 
 extension Data
 {
-    func writeToTemporal() -> URL?
+    func writeToTemporal(withExtension:String?) -> URL?
     {
-        let randomName:String = UUID().uuidString
+        var randomName:String = UUID().uuidString
+        
+        if let withExtension:String = withExtension
+        {
+            randomName.append(".")
+            randomName.append(withExtension)
+        }
+        
         let directoryUrl:URL = URL(fileURLWithPath:NSTemporaryDirectory())
         let fileUrl:URL = directoryUrl.appendingPathComponent(randomName)
         
