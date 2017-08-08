@@ -33,6 +33,7 @@ class VHomeDisplay:View<VHome, MHome, CHome>
         let url:URL = item.url
         
         let viewGif:GifView = GifView()
+        viewGif.contentMode = UIViewContentMode.scaleAspectFit
         viewGif.url = url
         viewGif.animating = true
         self.viewGif = viewGif
