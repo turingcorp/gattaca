@@ -65,6 +65,20 @@ class Controller<T:ViewMain, S:Model>:UIViewController, ModelDelegate
         return view
     }
     
+    func parent() -> ControllerParent?
+    {
+        guard
+        
+            let parent:ControllerParent = self.parent as? ControllerParent
+        
+        else
+        {
+            return nil
+        }
+        
+        return parent
+    }
+    
     //MARK: model delegate
     
     func modelRefresh()
