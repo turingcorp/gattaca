@@ -36,7 +36,8 @@ extension MGiphy
             return nil
         }
         
-        let url:URL? = URL(string:originalUrl)
+        let forcingSsl:String = MRequest.forceSsl(path:originalUrl)
+        let url:URL? = URL(string:forcingSsl)
         
         return url
     }
