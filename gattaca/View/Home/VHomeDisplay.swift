@@ -3,13 +3,27 @@ import AVFoundation
 
 class VHomeDisplay:View<VHome, MHome, CHome>
 {
-    private var avPlayer:AVPlayer?
+    private weak var avPlayer:AVPlayer!
     
     required init(controller:CHome)
     {
         super.init(controller:controller)
         isUserInteractionEnabled = false
         backgroundColor = UIColor.black
+        
+        guard
+            
+            let layer:AVPlayerLayer = self.layer as? AVPlayerLayer
+            
+        else
+        {
+            return
+        }
+        
+        let avPlayer:AVPlayer = AVPlayer(playerItem:nil)
+        self.avPlayer = avPlayer
+        
+        layer.player = avPlayer
     }
     
     required init?(coder:NSCoder)
@@ -24,11 +38,10 @@ class VHomeDisplay:View<VHome, MHome, CHome>
     
     //MARK: private
     
-    private func factoryPlayer()
+    private func updatePlayer()
     {
         guard
             
-            let layer:AVPlayerLayer = self.layer as? AVPlayerLayer,
             let item:MHomeItem = controller.model.items.first
             
         else
@@ -36,19 +49,16 @@ class VHomeDisplay:View<VHome, MHome, CHome>
             return
         }
         
-        let avPlayer:AVPlayer = AVPlayer(url:item.url)
-        self.avPlayer = avPlayer
+        let avPlayerItem:AVPlayerItem = AVPlayerItem(url:item.url)
         
-        layer.player = avPlayer
+        avPlayer.replaceCurrentItem(with:avPlayerItem)
         avPlayer.play()
-        
-        print(avPlayer.currentItem)
     }
     
     //MARK: public
     
     func refresh()
     {
-        factoryPlayer()
+        updatePlayer()
     }
 }
