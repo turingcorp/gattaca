@@ -61,6 +61,7 @@
 		DA68F1CC1F38F9C000C13634 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */; };
 		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
 		DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215811F39372D00E281DB /* MGiphyRandom.swift */; };
+		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
 		DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045891F3903780003C2EF /* VHomeBar.swift */; };
 		DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */; };
 		DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */; };
@@ -126,6 +127,7 @@
 		DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DAC2157F1F3936FA00E281DB /* MGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphy.swift; sourceTree = "<group>"; };
 		DAC215811F39372D00E281DB /* MGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyRandom.swift; sourceTree = "<group>"; };
+		DAC215841F39378800E281DB /* MRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRequest.swift; sourceTree = "<group>"; };
 		DAF045891F3903780003C2EF /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
 		DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeDisplay.swift; sourceTree = "<group>"; };
 		DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphy.swift; sourceTree = "<group>"; };
@@ -205,9 +207,10 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1561F38E5D500C13634 /* Abstract */,
+				DA68F15B1F38E5D500C13634 /* Main */,
+				DAC215831F39377500E281DB /* Request */,
 				DAC2157E1F3936EE00E281DB /* Giphy */,
 				DA68F1591F38E5D500C13634 /* Home */,
-				DA68F15B1F38E5D500C13634 /* Main */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,6 +400,14 @@
 			path = Giphy;
 			sourceTree = "<group>";
 		};
+		DAC215831F39377500E281DB /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DAC215841F39378800E281DB /* MRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -526,6 +537,7 @@
 				DA68F1A01F38E5D500C13634 /* MPerkThumbnailProtocol.swift in Sources */,
 				DA68F1BB1F38E5D500C13634 /* ViewProtocol.swift in Sources */,
 				DA68F1B01F38E5D500C13634 /* ExtensionUIColor.swift in Sources */,
+				DAC215851F39378800E281DB /* MRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
