@@ -4,7 +4,7 @@ extension MGiphy
 {
     private static let kKeyData:String = "data"
     private static let kKeyOriginalUrl:String = "image_original_url"
-    private static let kKeyFixedHeight:String = "fixed_height"
+    private static let kKeyMp4Url:String = "image_mp4_url"
     
     class func factoryGif(json:Any) -> URLRequest?
     {
@@ -34,14 +34,14 @@ extension MGiphy
         
             let jsonMap:[String:AnyObject] = json as? [String:AnyObject],
             let data:[String:AnyObject] = jsonMap[kKeyData] as? [String:AnyObject],
-            let fixedHeight:String = data[kKeyFixedHeight] as? String
+            let urlMp4:String = data[kKeyMp4Url] as? String
         
         else
         {
             return nil
         }
         
-        let forcingSsl:String = MRequest.forceSsl(path:fixedHeight)
+        let forcingSsl:String = MRequest.forceSsl(path:urlMp4)
         let url:URL? = URL(string:forcingSsl)
         
         return url
