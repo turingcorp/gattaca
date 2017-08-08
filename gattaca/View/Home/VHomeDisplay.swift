@@ -1,5 +1,5 @@
 import UIKit
-import GifHero
+import AVFoundation
 
 class VHomeDisplay:View<VHome, MHome, CHome>
 {
@@ -13,6 +13,11 @@ class VHomeDisplay:View<VHome, MHome, CHome>
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override static var layerClass:AnyClass
+    {
+        return AVPlayerLayer.self
     }
     
     //MARK: private
