@@ -2,6 +2,11 @@ import UIKit
 
 class CHome:Controller<VHome, MHome>
 {
+    deinit
+    {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override var preferredStatusBarStyle:UIStatusBarStyle
     {
         get
@@ -27,6 +32,18 @@ class CHome:Controller<VHome, MHome>
         }
     }
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        model.requestRandomGif()
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(notifiedBecameActive(sender:)),
+            name:NSNotification.Name.UIApplicationDidBecomeActive,
+            object:nil)
+    }
+    
     override func viewDidAppear(_ animated:Bool)
     {
         super.viewDidAppear(animated)
@@ -34,11 +51,15 @@ class CHome:Controller<VHome, MHome>
         view().viewDidAppear()
     }
     
-    override func viewDidLoad()
+    //MARK: notified
+    
+    func notifiedBecameActive(sender notification:Notification)
     {
-        super.viewDidLoad()
-        
-        model.requestRandomGif()
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.dispatchBecameActive()
+        }
     }
     
     //MARK: private
@@ -46,5 +67,10 @@ class CHome:Controller<VHome, MHome>
     private func dispatchRefresh()
     {
         view().refresh()
+    }
+    
+    private func dispatchBecameActive()
+    {
+        view().viewDidAppear()
     }
 }
