@@ -68,4 +68,11 @@ class VHome:ViewMain
             view:viewDisplay,
             toView:self)
     }
+    
+    //MARK: internal
+    
+    func refresh()
+    {
+        viewDisplay.refresh()
+    }
 }
