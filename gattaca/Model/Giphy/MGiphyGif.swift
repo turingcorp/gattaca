@@ -16,8 +16,6 @@ extension MGiphy
             return nil
         }
         
-        print(url)
-        
         let request:URLRequest = MRequest.factoryGetRequest(url:url)
         
         return request
@@ -27,8 +25,6 @@ extension MGiphy
     
     private class func factoryUrl(json:Any) -> URL?
     {
-        print(json)
-        
         guard
         
             let jsonMap:[String:AnyObject] = json as? [String:AnyObject],

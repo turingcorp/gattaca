@@ -39,13 +39,8 @@ class DManager
                 at:storeCoordinatorURL,
                 options:nil)
         }
-        catch let error
+        catch
         {
-            #if DEBUG
-                
-                print("CoreData: \(error.localizedDescription)")
-                
-            #endif
         }
         
         managedObjectContext = NSManagedObjectContext(
@@ -68,13 +63,8 @@ class DManager
                     {
                         try self.managedObjectContext.save()
                     }
-                    catch let error
+                    catch
                     {
-                        #if DEBUG
-                            
-                            print("CoreData: \(error.localizedDescription)")
-                            
-                        #endif
                     }
                     
                     completion?()

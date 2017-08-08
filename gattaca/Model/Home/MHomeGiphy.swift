@@ -68,12 +68,10 @@ extension MHome
     
     private func requestError(error:Error?)
     {
-        print("error: \(error)")
     }
     
     private func requestError(statusCode:Int)
     {
-        print("error \(statusCode)")
     }
     
     private func requestDataSuccess(data:Data?)
