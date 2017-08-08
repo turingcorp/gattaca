@@ -26,7 +26,7 @@ extension MHome
             return
         }
         
-        let task:URLSessionTask = session.dataTask(with:request)
+        let task:URLSessionDataTask = session.dataTask(with:request)
         { [weak self] (data:Data?, urlResponse:URLResponse?, error:Error?) in
             
             guard
@@ -42,7 +42,7 @@ extension MHome
             
             if statusCode == MHome.kStatusCodeSuccess
             {
-                self?.requestSuccess(data:data)
+                self?.requestDataSuccess(data:data)
             }
             else
             {
@@ -75,7 +75,7 @@ extension MHome
         print("error \(statusCode)")
     }
     
-    private func requestSuccess(data:Data?)
+    private func requestDataSuccess(data:Data?)
     {
         guard
             
@@ -103,10 +103,10 @@ extension MHome
             return
         }
         
-        requestSuccess(json:json)
+        requestDataSuccess(json:json)
     }
     
-    private func requestSuccess(json:Any)
+    private func requestDataSuccess(json:Any)
     {
         
     }
