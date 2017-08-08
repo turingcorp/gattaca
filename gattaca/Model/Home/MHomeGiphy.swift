@@ -130,19 +130,27 @@ extension MHome
                 return
             }
             
-            guard
-            
-                let url:URL = url
-            
-            else
-            {
-                return
-            }
-            
-            
+            self?.requestDownloadSuccess(url:url)
         }
         
         self.sessionTask = sessionTask
         sessionTask.resume()
+    }
+    
+    private func requestDownloadSuccess(url:URL?)
+    {
+        guard
+            
+            let url:URL = url
+            
+        else
+        {
+            requestError(error:nil)
+            
+            return
+        }
+        
+        let item:MHomeItem = MHomeItem(url:url)
+        addItem(item:item)
     }
 }
