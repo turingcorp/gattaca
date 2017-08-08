@@ -37,6 +37,11 @@ class VHomeDisplay:View<VHome, MHome, CHome>
         return nil
     }
     
+    deinit
+    {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override static var layerClass:AnyClass
     {
         return AVPlayerLayer.self
