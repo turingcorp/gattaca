@@ -56,6 +56,15 @@ class Controller<T:ViewMain, S:Model>:UIViewController, ModelDelegate
         return false
     }
     
+    //MARK: internal
+    
+    func view() -> T
+    {
+        let view:T = self.view as! T
+        
+        return view
+    }
+    
     //MARK: model delegate
     
     func modelRefresh()
