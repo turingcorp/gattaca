@@ -59,6 +59,7 @@
 		DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1951F38E5D500C13634 /* VHome.swift */; };
 		DA68F1CA1F38F80800C13634 /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */; };
 		DA68F1CC1F38F9C000C13634 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */; };
+		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
 		DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045891F3903780003C2EF /* VHomeBar.swift */; };
 		DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */; };
 		DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */; };
@@ -122,6 +123,7 @@
 		DA68F1951F38E5D500C13634 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DA68F1C91F38F80800C13634 /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
+		DAC2157F1F3936FA00E281DB /* MGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphy.swift; sourceTree = "<group>"; };
 		DAF045891F3903780003C2EF /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
 		DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeDisplay.swift; sourceTree = "<group>"; };
 		DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphy.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1561F38E5D500C13634 /* Abstract */,
+				DAC2157E1F3936EE00E281DB /* Giphy */,
 				DA68F1591F38E5D500C13634 /* Home */,
 				DA68F15B1F38E5D500C13634 /* Main */,
 			);
@@ -383,6 +386,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		DAC2157E1F3936EE00E281DB /* Giphy */ = {
+			isa = PBXGroup;
+			children = (
+				DAC2157F1F3936FA00E281DB /* MGiphy.swift */,
+			);
+			path = Giphy;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -504,6 +515,7 @@
 				DA68F1CC1F38F9C000C13634 /* DSettingsExtension.swift in Sources */,
 				DA68F1B71F38E5D500C13634 /* View.swift in Sources */,
 				DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */,
+				DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */,
 				DA68F19A1F38E5D500C13634 /* CHome.swift in Sources */,
 				DA68F1BC1F38E5D500C13634 /* VAlert.swift in Sources */,
 				DA68F1B11F38E5D500C13634 /* ExtensionUIFont.swift in Sources */,
