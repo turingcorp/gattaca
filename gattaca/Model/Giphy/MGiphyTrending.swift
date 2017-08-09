@@ -4,7 +4,7 @@ extension MGiphy
 {
     private static let kKeyRoot:String = "giphy"
     private static let kKeyHost:String = "host"
-    private static let kKeyTrending:String = "random"
+    private static let kKeyTrending:String = "trending"
     private static let kKeyVarLimit:String = "var_limit"
     private static let kKeyVarApiKey:String = "var_api_key"
     private static let kKeyApiKey:String = "api_key"

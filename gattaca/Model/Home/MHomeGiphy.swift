@@ -20,7 +20,7 @@ extension MHome
     {
         guard
         
-            let request:URLRequest = MGiphy.factoryRandom()
+            let request:URLRequest = MGiphy.factoryTrendingRequest()
         
         else
         {
@@ -102,7 +102,8 @@ extension MHome
             return
         }
         
-        requestDataSuccess(json:json)
+        print(json)
+//        requestDataSuccess(json:json)
     }
     
     private func requestDataSuccess(json:Any)
