@@ -23,9 +23,9 @@ class MHome:Model
     
     //MARK: internal
     
-    func addItem(item:MHomeItem)
+    func addItem(items:[MHomeItem])
     {
-        items.append(item)
+        self.items.append(contentsOf:items)
         delegate?.modelRefresh()
     }
 }

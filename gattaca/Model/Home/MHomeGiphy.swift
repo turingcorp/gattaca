@@ -181,6 +181,6 @@ extension MHome
         }
         
         let item:MHomeItem = MHomeItem(url:temporalUrl)
-        addItem(item:item)
+//        addItem(item:item)
     }
 }

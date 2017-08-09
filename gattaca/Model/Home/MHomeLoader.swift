@@ -15,6 +15,19 @@ extension MHome
     
     private func dispatchLoadItems()
     {
+        let gifItems:[DGif] = MSession.sharedInstance.gif.itemsWaiting()
+        let countItems:Int = items.count
         
+        if countItems > 0
+        {
+            let items:[MHomeItem] = MHome.factoryItems(
+                gifItems:gifItems)
+            
+            
+        }
+        else
+        {
+            requestGiphyTrending()
+        }
     }
 }

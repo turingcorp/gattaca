@@ -15,4 +15,9 @@ extension MHome
         
         return items
     }
+    
+    class func factoryItems(gifItems:[DGif]) -> [MHomeItem]
+    {
+        
+    }
 }

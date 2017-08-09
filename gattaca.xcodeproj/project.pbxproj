@@ -79,6 +79,7 @@
 		DAE0AFAA1F3B6605006449D0 /* MSessionGifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFA91F3B6605006449D0 /* MSessionGifLoader.swift */; };
 		DAE0AFAC1F3B67FC006449D0 /* DGifExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFAB1F3B67FC006449D0 /* DGifExtension.swift */; };
 		DAE0AFAE1F3B907D006449D0 /* MHomeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFAD1F3B907D006449D0 /* MHomeLoader.swift */; };
+		DAE0AFB01F3B9BB4006449D0 /* DGifExtensionDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFAF1F3B9BB4006449D0 /* DGifExtensionDirectory.swift */; };
 		DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045891F3903780003C2EF /* VHomeBar.swift */; };
 		DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */; };
 		DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */; };
@@ -163,6 +164,7 @@
 		DAE0AFA91F3B6605006449D0 /* MSessionGifLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionGifLoader.swift; sourceTree = "<group>"; };
 		DAE0AFAB1F3B67FC006449D0 /* DGifExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtension.swift; sourceTree = "<group>"; };
 		DAE0AFAD1F3B907D006449D0 /* MHomeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeLoader.swift; sourceTree = "<group>"; };
+		DAE0AFAF1F3B9BB4006449D0 /* DGifExtensionDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtensionDirectory.swift; sourceTree = "<group>"; };
 		DAF045891F3903780003C2EF /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
 		DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeDisplay.swift; sourceTree = "<group>"; };
 		DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphy.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 				DA68F16B1F38E5D500C13634 /* DManager.swift */,
 				DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */,
 				DAE0AFAB1F3B67FC006449D0 /* DGifExtension.swift */,
+				DAE0AFAF1F3B9BB4006449D0 /* DGifExtensionDirectory.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				DA68F19F1F38E5D500C13634 /* MPerkThumbnailFreeProtocol.swift in Sources */,
 				DA68F1C21F38E5D500C13634 /* VPushBackground.swift in Sources */,
 				DA68F1A51F38E5D500C13634 /* MSessionSettings.swift in Sources */,
+				DAE0AFB01F3B9BB4006449D0 /* DGifExtensionDirectory.swift in Sources */,
 				DA68F1CA1F38F80800C13634 /* DGattaca.xcdatamodeld in Sources */,
 				DA68F1C31F38E5D500C13634 /* VSlider.swift in Sources */,
 				DA68F1AD1F38E5D500C13634 /* ExtensionNSManagedObject.swift in Sources */,
