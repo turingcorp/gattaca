@@ -5,6 +5,7 @@ class VHome:ViewMain
     private weak var viewDisplay:VHomeDisplay!
     private let kBarHeight:CGFloat = 70
     private let kDisplayBottom:CGFloat = -140
+    private let kActionsHeight:CGFloat = 70
     
     required init(controller:UIViewController)
     {
