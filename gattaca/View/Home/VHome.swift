@@ -99,6 +99,20 @@ class VHome:ViewMain
             toView:self)
     }
     
+    private func firstRefresh()
+    {
+        viewDisplay.isHidden = false
+        viewActions.isHidden = false
+        viewBar.isHidden = false
+        
+        update()
+    }
+    
+    private func update()
+    {
+        viewDisplay.refresh()
+    }
+    
     //MARK: internal
     
     func viewDidAppear()
@@ -108,8 +122,20 @@ class VHome:ViewMain
     
     func refresh()
     {
-        viewSpinner?.stopAnimating()
-        viewSpinner?.removeFromSuperview()
-        viewDisplay.refresh()
+        guard
+            
+            let viewSpinner:VSpinner = self.viewSpinner
+        
+        else
+        {
+            update()
+            
+            return
+        }
+        
+        viewSpinner.stopAnimating()
+        viewSpinner.removeFromSuperview()
+        
+        firstRefresh()
     }
 }

@@ -12,6 +12,7 @@ class VHomeActions:VCollection<
     required init(controller:CHome)
     {
         super.init(controller:controller)
+        isHidden = true
         collectionView.bounces = false
         collectionView.isScrollEnabled = false
         
