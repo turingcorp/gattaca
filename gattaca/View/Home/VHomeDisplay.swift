@@ -10,7 +10,6 @@ class VHomeDisplay:View<VHome, MHome, CHome>
     {
         super.init(controller:controller)
         isUserInteractionEnabled = false
-        backgroundColor = UIColor.clear
         
         let border:VBorder = VBorder(
             colour:UIColor.colourBackgroundDark.withAlphaComponent(0.2))
