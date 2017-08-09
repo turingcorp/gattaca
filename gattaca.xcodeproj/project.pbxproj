@@ -83,6 +83,7 @@
 		DAE0AFB91F3BA3C6006449D0 /* MGifStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFB81F3BA3C6006449D0 /* MGifStrategy.swift */; };
 		DAE0AFBB1F3BA594006449D0 /* MGifStrategyStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */; };
 		DAE0AFBD1F3BA692006449D0 /* MGifStrategyDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFBC1F3BA692006449D0 /* MGifStrategyDownload.swift */; };
+		DAE0AFBF1F3BAA88006449D0 /* MGiphyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFBE1F3BAA88006449D0 /* MGiphyItem.swift */; };
 		DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045891F3903780003C2EF /* VHomeBar.swift */; };
 		DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */; };
 		DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */; };
@@ -171,6 +172,7 @@
 		DAE0AFB81F3BA3C6006449D0 /* MGifStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategy.swift; sourceTree = "<group>"; };
 		DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyStand.swift; sourceTree = "<group>"; };
 		DAE0AFBC1F3BA692006449D0 /* MGifStrategyDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownload.swift; sourceTree = "<group>"; };
+		DAE0AFBE1F3BAA88006449D0 /* MGiphyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyItem.swift; sourceTree = "<group>"; };
 		DAF045891F3903780003C2EF /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
 		DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeDisplay.swift; sourceTree = "<group>"; };
 		DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphy.swift; sourceTree = "<group>"; };
@@ -474,6 +476,7 @@
 				DAC215811F39372D00E281DB /* MGiphyRandom.swift */,
 				DAE0AFA51F3AD96B006449D0 /* MGiphyTrending.swift */,
 				DAC215861F3938F400E281DB /* MGiphyGif.swift */,
+				DAE0AFBE1F3BAA88006449D0 /* MGiphyItem.swift */,
 			);
 			path = Giphy;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				DA68F1A41F38E5D500C13634 /* MSessionPerks.swift in Sources */,
 				DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */,
 				DA68F1C41F38E5D500C13634 /* VSliderBar.swift in Sources */,
+				DAE0AFBF1F3BAA88006449D0 /* MGiphyItem.swift in Sources */,
 				DAE0AFA61F3AD96B006449D0 /* MGiphyTrending.swift in Sources */,
 				DA68F1AF1F38E5D500C13634 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA68F1A81F38E5D500C13634 /* ExtensionCGImage.swift in Sources */,

@@ -42,7 +42,7 @@ extension MHome
             
             if statusCode == MHome.kStatusCodeSuccess
             {
-                self?.requestDataSuccess(data:data)
+                self?.requestSuccess(data:data)
             }
             else
             {
@@ -89,7 +89,7 @@ extension MHome
         VAlert.messageFail(message:message)
     }
     
-    private func requestDataSuccess(data:Data?)
+    private func requestSuccess(data:Data?)
     {
         guard
             
@@ -108,7 +108,8 @@ extension MHome
         {
             try json = JSONSerialization.jsonObject(
                 with:data,
-                options:JSONSerialization.ReadingOptions.allowFragments)
+                options:
+                JSONSerialization.ReadingOptions.allowFragments)
         }
         catch let error
         {
