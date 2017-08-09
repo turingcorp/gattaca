@@ -324,8 +324,8 @@
 				DA68F1641F38E5D500C13634 /* MSession.swift */,
 				DA68F1651F38E5D500C13634 /* MSessionPerks.swift */,
 				DA68F1661F38E5D500C13634 /* MSessionSettings.swift */,
-				DAE0AFA71F3B61AB006449D0 /* MSessionGif.swift */,
 				DAE0AFA91F3B6605006449D0 /* MSessionGifLoader.swift */,
+				DAE0AFA71F3B61AB006449D0 /* MSessionGif.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";

@@ -3,10 +3,13 @@ import Foundation
 class MSession
 {
     static let sharedInstance:MSession = MSession()
+    
+    let gif:MSessionGif
     private(set) var settings:DSettings?
     
     private init()
     {
+        gif = MSessionGif()
     }
     
     //MARK: internal
