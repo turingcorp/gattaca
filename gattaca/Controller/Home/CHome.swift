@@ -58,8 +58,6 @@ class CHome:Controller<VHome, MHome>
     
     private func dispatchSessionLoaded()
     {
-        view().refresh()
-        
         model.requestGiphyTrending()
         NotificationCenter.default.addObserver(
             self,
