@@ -63,6 +63,7 @@
 		DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215811F39372D00E281DB /* MGiphyRandom.swift */; };
 		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
 		DACECC481F3A23C30009D933 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACECC471F3A23C30009D933 /* spinner.xcassets */; };
+		DACF0F5C1F3BB3AF00C716A9 /* MGifStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */; };
 		DAE0AF961F3AB432006449D0 /* VHomeActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF951F3AB432006449D0 /* VHomeActionsCell.swift */; };
 		DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */; };
 		DAE0AF9A1F3AB6CB006449D0 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE0AF991F3AB6CB006449D0 /* generic.xcassets */; };
@@ -152,6 +153,7 @@
 		DAC215811F39372D00E281DB /* MGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyRandom.swift; sourceTree = "<group>"; };
 		DAC215841F39378800E281DB /* MRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRequest.swift; sourceTree = "<group>"; };
 		DACECC471F3A23C30009D933 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
+		DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStorer.swift; sourceTree = "<group>"; };
 		DAE0AF951F3AB432006449D0 /* VHomeActionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsCell.swift; sourceTree = "<group>"; };
 		DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActions.swift; sourceTree = "<group>"; };
 		DAE0AF991F3AB6CB006449D0 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -486,6 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE0AFB41F3BA311006449D0 /* MGif.swift */,
+				DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */,
 				DAE0AFB81F3BA3C6006449D0 /* MGifStrategy.swift */,
 				DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */,
 				DAE0AFBC1F3BA692006449D0 /* MGifStrategyDownload.swift */,
@@ -703,6 +706,7 @@
 				DAF045941F392C520003C2EF /* ExtensionURLResponse.swift in Sources */,
 				DAE0AFD71F3BAF20006449D0 /* MHomeRequest.swift in Sources */,
 				DA68F1BE1F38E5D500C13634 /* VBorder.swift in Sources */,
+				DACF0F5C1F3BB3AF00C716A9 /* MGifStorer.swift in Sources */,
 				DA68F1971F38E5D500C13634 /* Controller.swift in Sources */,
 				DAE0AFCE1F3BAEF9006449D0 /* MHomeFactory.swift in Sources */,
 				DA68F1AE1F38E5D500C13634 /* ExtensionString.swift in Sources */,
