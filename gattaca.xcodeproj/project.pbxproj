@@ -76,6 +76,7 @@
 		DAE0AFA41F3AD527006449D0 /* MHomeActionLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFA31F3AD527006449D0 /* MHomeActionLike.swift */; };
 		DAE0AFA61F3AD96B006449D0 /* MGiphyTrending.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFA51F3AD96B006449D0 /* MGiphyTrending.swift */; };
 		DAE0AFA81F3B61AB006449D0 /* MSessionGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFA71F3B61AB006449D0 /* MSessionGif.swift */; };
+		DAE0AFAA1F3B6605006449D0 /* MSessionGifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFA91F3B6605006449D0 /* MSessionGifLoader.swift */; };
 		DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045891F3903780003C2EF /* VHomeBar.swift */; };
 		DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */; };
 		DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */; };
@@ -157,6 +158,7 @@
 		DAE0AFA31F3AD527006449D0 /* MHomeActionLike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeActionLike.swift; sourceTree = "<group>"; };
 		DAE0AFA51F3AD96B006449D0 /* MGiphyTrending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyTrending.swift; sourceTree = "<group>"; };
 		DAE0AFA71F3B61AB006449D0 /* MSessionGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionGif.swift; sourceTree = "<group>"; };
+		DAE0AFA91F3B6605006449D0 /* MSessionGifLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionGifLoader.swift; sourceTree = "<group>"; };
 		DAF045891F3903780003C2EF /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
 		DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeDisplay.swift; sourceTree = "<group>"; };
 		DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphy.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				DA68F1651F38E5D500C13634 /* MSessionPerks.swift */,
 				DA68F1661F38E5D500C13634 /* MSessionSettings.swift */,
 				DAE0AFA71F3B61AB006449D0 /* MSessionGif.swift */,
+				DAE0AFA91F3B6605006449D0 /* MSessionGifLoader.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 				DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */,
 				DA68F1B21F38E5D500C13634 /* ExtensionURL.swift in Sources */,
 				DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */,
+				DAE0AFAA1F3B6605006449D0 /* MSessionGifLoader.swift in Sources */,
 				DA68F1A41F38E5D500C13634 /* MSessionPerks.swift in Sources */,
 				DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */,
 				DA68F1C41F38E5D500C13634 /* VSliderBar.swift in Sources */,

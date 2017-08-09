@@ -57,7 +57,7 @@ extension MSession
                 qos:DispatchQoS.QoSClass.background))
         { [weak self] in
             
-            self?.finishedLoadingSession()
+            self?.loadGifs()
         }
     }
     
