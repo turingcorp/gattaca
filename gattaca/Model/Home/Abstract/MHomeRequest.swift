@@ -2,25 +2,28 @@ import Foundation
 
 extension MHome
 {
+    private static let kLimit:Int = 3
     private static let kStatusCodeSuccess:Int = 200
     
-    func requestGiphyTrending()
+    func requestGif()
     {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.dispatchRequestGiphyTrending()
+            self?.dispatchRequestGif()
         }
     }
     
     //MARK: private
     
-    private func dispatchRequestGiphyTrending()
+    private func dispatchRequestGif()
     {
         guard
-        
-            let request:URLRequest = MGiphy.factoryTrendingRequest()
-        
+            
+            let request:URLRequest = MGiphy.factoryTrendingRequest(
+                offset:requestOffset,
+                limit:MHome.kLimit)
+            
         else
         {
             return
@@ -30,9 +33,9 @@ extension MHome
         { [weak self] (data:Data?, urlResponse:URLResponse?, error:Error?) in
             
             guard
-            
+                
                 let statusCode:Int = urlResponse?.httpStatusCode
-            
+                
             else
             {
                 self?.requestError(error:error)
@@ -47,9 +50,9 @@ extension MHome
             else
             {
                 guard
-                
+                    
                     let error:Error = error
-                
+                    
                 else
                 {
                     self?.requestError(statusCode:statusCode)
@@ -94,7 +97,7 @@ extension MHome
         guard
             
             let data:Data = data
-        
+            
         else
         {
             requestError(error:nil)
@@ -119,44 +122,59 @@ extension MHome
         }
         
         print(json)
-//        requestDataSuccess(json:json)
+        requestSuccess(json:json)
     }
     
     private func requestSuccess(json:Any)
     {
-        let items:[MGiphyItem] = MGiphy.factoryItems(json:json)
+        requestOffset += MHome.kLimit
+        
+        let items:[MGiphyItem] = MGiphy.factoryItems(
+            json:json)
+        let purged:[MGiphyItem] = MSession.sharedInstance.gif.purgeItems(
+            items:items)
+        let countPurged:Int = purged.count
+        
+        if countPurged > 0
+        {
+            
+        }
+        else
+        {
+            requestGif()
+        }
     }
     
     private func requestDataSuccess(json:Any)
     {
         /*
-        guard
-        
-            let gifRequest:URLRequest = MGiphy.factoryGif(json:json)
-        
-        else
-        {
-            requestError(error:nil)
-            
-            return
-        }
-        
-        let sessionTask:URLSessionDownloadTask = session.downloadTask(
-            with:gifRequest)
-        { [weak self] (url:URL?, urlResponse:URLResponse?, error:Error?) in
-            
-            if let error:Error = error
-            {
-                self?.requestError(error:error)
-                
-                return
-            }
-            
-            self?.requestDownloadSuccess(url:url)
-        }
-        
-        self.sessionTask = sessionTask
-        sessionTask.resume()*/
+         guard
+         
+         let gifRequest:URLRequest = MGiphy.factoryGif(json:json)
+         
+         else
+         {
+         requestError(error:nil)
+         
+         return
+         }
+         
+         let sessionTask:URLSessionDownloadTask = session.downloadTask(
+         with:gifRequest)
+         { [weak self] (url:URL?, urlResponse:URLResponse?, error:Error?) in
+         
+         if let error:Error = error
+         {
+         self?.requestError(error:error)
+         
+         return
+         }
+         
+         self?.requestDownloadSuccess(url:url)
+         }
+         
+         self.sessionTask = sessionTask
+         sessionTask.resume()*/
     }
     
     private func requestDownloadSuccess(url:URL?)
@@ -165,7 +183,7 @@ extension MHome
             
             let url:URL = url
             
-        else
+            else
         {
             requestError(error:nil)
             
@@ -192,17 +210,17 @@ extension MHome
     
     private func requestDownloadSuccess(data:Data)
     {
-//        guard
-//            
-//            let temporalUrl:URL = data.writeToTemporal(
-//                withExtension:MHome.kFileExtension)
-//        
-//        else
-//        {
-//            return
-//        }
+        //        guard
+        //
+        //            let temporalUrl:URL = data.writeToTemporal(
+        //                withExtension:MHome.kFileExtension)
+        //
+        //        else
+        //        {
+        //            return
+        //        }
         
-//        let item:MHomeItem = MHomeItem(url:temporalUrl)
-//        addItem(item:item)
+        //        let item:MHomeItem = MHomeItem(url:temporalUrl)
+        //        addItem(item:item)
     }
 }

@@ -5,6 +5,7 @@ class MHome:Model
     weak var sessionTask:URLSessionTask?
     let session:URLSession
     let actions:[MHomeActionProtocol]
+    var requestOffset:Int
     private(set) var items:[MHomeItem]
     
     required init()
@@ -12,6 +13,7 @@ class MHome:Model
         actions = MHome.factoryActions()
         session = MRequest.factorySession()
         items = []
+        requestOffset = 0
         
         super.init()
     }

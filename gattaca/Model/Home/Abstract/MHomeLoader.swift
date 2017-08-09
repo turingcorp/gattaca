@@ -36,11 +36,11 @@ extension MHome
         }
         else
         {
-            loadFromGiphy()
+            loadMoreGif()
         }
     }
     
-    private func loadFromGiphy()
+    private func loadMoreGif()
     {
         NotificationCenter.default.addObserver(
             self,
@@ -48,6 +48,6 @@ extension MHome
             name:Notification.gifDownloaded,
             object:nil)
         
-        requestGiphyTrending()
+        requestGif()
     }
 }

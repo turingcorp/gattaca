@@ -71,4 +71,21 @@ class MGif
         
         return items
     }
+    
+    func purgeItems(items:[MGiphyItem]) -> [MGiphyItem]
+    {
+        var purged:[MGiphyItem] = []
+        
+        for item in items
+        {
+            let identifier:String = item.identifier
+            
+            if map[identifier] == nil
+            {
+                purged.append(item)
+            }
+        }
+        
+        return purged
+    }
 }
