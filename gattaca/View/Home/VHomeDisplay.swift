@@ -4,12 +4,27 @@ import AVFoundation
 class VHomeDisplay:View<VHome, MHome, CHome>
 {
     private weak var avPlayer:AVPlayer!
+    private let kBorderHeight:CGFloat = 1
     
     required init(controller:CHome)
     {
         super.init(controller:controller)
         isUserInteractionEnabled = false
         backgroundColor = UIColor.clear
+        
+        let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
+        
+        addSubview(border)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:border,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:border,
+            constant:kBorderHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:border,
+            toView:self)
         
         guard
             
