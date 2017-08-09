@@ -18,4 +18,24 @@ extension DGif
         case marked
         case cleaned
     }
+    
+    var mark:Mark
+    {
+        get
+        {
+            let mark:Mark = Mark(rawValue:markRaw)!
+            
+            return mark
+        }
+    }
+    
+    var status:Status
+    {
+        get
+        {
+            let status:Status = Status(rawValue:statusRaw)!
+            
+            return status
+        }
+    }
 }
