@@ -1,6 +1,6 @@
 import Foundation
 
-class MSessionGif
+class MGif
 {
     private(set) var items:[DGif]
     private var map:[String:DGif]
@@ -20,9 +20,9 @@ class MSessionGif
         for item:DGif in items
         {
             guard
-            
+                
                 let identifier:String = item.identifier
-            
+                
             else
             {
                 continue
@@ -45,7 +45,7 @@ class MSessionGif
     func itemsWaiting() -> [DGif]
     {
         var items:[DGif] = []
-
+        
         for item:DGif in self.items
         {
             let status:DGif.Status = item.status
