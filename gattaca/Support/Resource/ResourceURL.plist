@@ -4,6 +4,11 @@
 <dict>
 	<key>app</key>
 	<dict/>
+	<key>gif</key>
+	<dict>
+		<key>directory</key>
+		<string>storage</string>
+	</dict>
 	<key>giphy</key>
 	<dict>
 		<key>host</key>
