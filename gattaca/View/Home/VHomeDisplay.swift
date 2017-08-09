@@ -9,7 +9,7 @@ class VHomeDisplay:View<VHome, MHome, CHome>
     {
         super.init(controller:controller)
         isUserInteractionEnabled = false
-        backgroundColor = UIColor.black
+        backgroundColor = UIColor.clear
         
         guard
             
