@@ -70,6 +70,7 @@
 		DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */; };
 		DAE0AF9A1F3AB6CB006449D0 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE0AF991F3AB6CB006449D0 /* generic.xcassets */; };
 		DAE0AF9C1F3AB8E9006449D0 /* MHomeActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF9B1F3AB8E9006449D0 /* MHomeActionProtocol.swift */; };
+		DAE0AF9E1F3AB918006449D0 /* MHomeActionMeh.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF9D1F3AB918006449D0 /* MHomeActionMeh.swift */; };
 		DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045891F3903780003C2EF /* VHomeBar.swift */; };
 		DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */; };
 		DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */; };
@@ -145,6 +146,7 @@
 		DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActions.swift; sourceTree = "<group>"; };
 		DAE0AF991F3AB6CB006449D0 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
 		DAE0AF9B1F3AB8E9006449D0 /* MHomeActionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeActionProtocol.swift; sourceTree = "<group>"; };
+		DAE0AF9D1F3AB918006449D0 /* MHomeActionMeh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeActionMeh.swift; sourceTree = "<group>"; };
 		DAF045891F3903780003C2EF /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
 		DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeDisplay.swift; sourceTree = "<group>"; };
 		DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphy.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */,
 				DAC215881F393CE900E281DB /* MHomeItem.swift */,
 				DAE0AF9B1F3AB8E9006449D0 /* MHomeActionProtocol.swift */,
+				DAE0AF9D1F3AB918006449D0 /* MHomeActionMeh.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				DAC215891F393CE900E281DB /* MHomeItem.swift in Sources */,
 				DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */,
 				DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */,
+				DAE0AF9E1F3AB918006449D0 /* MHomeActionMeh.swift in Sources */,
 				DA68F19A1F38E5D500C13634 /* CHome.swift in Sources */,
 				DA68F1BC1F38E5D500C13634 /* VAlert.swift in Sources */,
 				DA68F1B11F38E5D500C13634 /* ExtensionUIFont.swift in Sources */,
