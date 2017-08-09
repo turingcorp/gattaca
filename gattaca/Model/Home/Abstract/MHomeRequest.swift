@@ -137,7 +137,7 @@ extension MHome
         
         if countPurged > 0
         {
-            
+            MSession.sharedInstance.gif.storeItems(items:purged)
         }
         else
         {
