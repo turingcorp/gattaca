@@ -6,7 +6,7 @@ class MHomeActionMeh:MHomeActionProtocol
     {
         get
         {
-            return
+            return #imageLiteral(resourceName: "assetGenericActionMeh")
         }
     }
 }
