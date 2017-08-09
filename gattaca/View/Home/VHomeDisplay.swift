@@ -12,7 +12,8 @@ class VHomeDisplay:View<VHome, MHome, CHome>
         isUserInteractionEnabled = false
         backgroundColor = UIColor.clear
         
-        let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
+        let border:VBorder = VBorder(
+            colour:UIColor.colourBackgroundDark.withAlphaComponent(0.2))
         
         addSubview(border)
         
