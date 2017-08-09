@@ -95,4 +95,18 @@ class VHomeActions:VCollection<
         
         return item
     }
+    
+    //MARK: internal
+    
+    func refresh()
+    {
+        if let _:MHomeItem = controller.model.items.first
+        {
+            isHidden = false
+        }
+        else
+        {
+            isHidden = true
+        }
+    }
 }

@@ -102,7 +102,6 @@ class VHome:ViewMain
     private func firstRefresh()
     {
         viewDisplay.isHidden = false
-        viewActions.isHidden = false
         viewBar.isHidden = false
         
         update()
@@ -110,6 +109,7 @@ class VHome:ViewMain
     
     private func update()
     {
+        viewActions.refresh()
         viewDisplay.refresh()
     }
     
