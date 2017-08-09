@@ -28,10 +28,59 @@ class VHomeActions:VCollection<
     
     override func collectionView(
         _ collectionView:UICollectionView,
+        layout collectionViewLayout:UICollectionViewLayout,
+        insetForSectionAt section:Int) -> UIEdgeInsets
+    {
+        let width:CGFloat = collectionView.bounds.width
+        let count:CGFloat = CGFloat(controller.model.actions.count)
+        let cellsWidth:CGFloat = width * count
+        let remainWidth:CGFloat = width - cellsWidth
+        let margin:CGFloat = remainWidth / 2.0
+        let insets:UIEdgeInsets = UIEdgeInsets(
+            top:0,
+            left:margin,
+            bottom:0,
+            right:margin)
+        
+        return insets
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        layout collectionViewLayout:UICollectionViewLayout,
+        sizeForItemAt indexPath:IndexPath) -> CGSize
+    {
+        guard
+        
+            let cellSize:CGSize = self.cellSize
+        
+        else
+        {
+            let height:CGFloat = collectionView.bounds.height
+            let cellSize:CGSize = CGSize(width:kCellWidth, height:height)
+            self.cellSize = cellSize
+            
+            return cellSize
+        }
+        
+        return cellSize
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
         numberOfItemsInSection section:Int) -> Int
     {
         let count:Int = controller.model.actions.count
         
-        return count count
+        return count
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let cell:VHomeActionsCell = cellAtIndex(indexPath:indexPath)
+        
+        return cell
     }
 }
