@@ -10,6 +10,8 @@ class MGif
     {
         items = []
         map = [:]
+        
+        strategyStand()
     }
     
     //MARK: private
@@ -36,6 +38,16 @@ class MGif
     }
     
     //MARK: internal
+    
+    func strategyStand()
+    {
+        strategy = MGifStrategyStand(model:self)
+    }
+    
+    func strategyDownload()
+    {
+        strategy = MGifStrategyDownload(model:self)
+    }
     
     func itemsLoaded(items:[DGif])
     {

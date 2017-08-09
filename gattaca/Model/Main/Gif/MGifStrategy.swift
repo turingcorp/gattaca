@@ -2,10 +2,16 @@ import Foundation
 
 class MGifStrategy
 {
-    private weak var model:MGif!
+    private(set) weak var model:MGif!
     
     init(model:MGif)
     {
         self.model = model
+    }
+    
+    //MARK: internal
+    
+    func startBackgroundDownload()
+    {
     }
 }

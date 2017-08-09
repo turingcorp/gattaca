@@ -82,6 +82,7 @@
 		DAE0AFB71F3BA352006449D0 /* MSessionGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFB61F3BA352006449D0 /* MSessionGif.swift */; };
 		DAE0AFB91F3BA3C6006449D0 /* MGifStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFB81F3BA3C6006449D0 /* MGifStrategy.swift */; };
 		DAE0AFBB1F3BA594006449D0 /* MGifStrategyStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */; };
+		DAE0AFBD1F3BA692006449D0 /* MGifStrategyDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFBC1F3BA692006449D0 /* MGifStrategyDownload.swift */; };
 		DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045891F3903780003C2EF /* VHomeBar.swift */; };
 		DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */; };
 		DAF0458E1F3910DF0003C2EF /* MHomeGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */; };
@@ -169,6 +170,7 @@
 		DAE0AFB61F3BA352006449D0 /* MSessionGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionGif.swift; sourceTree = "<group>"; };
 		DAE0AFB81F3BA3C6006449D0 /* MGifStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategy.swift; sourceTree = "<group>"; };
 		DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyStand.swift; sourceTree = "<group>"; };
+		DAE0AFBC1F3BA692006449D0 /* MGifStrategyDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownload.swift; sourceTree = "<group>"; };
 		DAF045891F3903780003C2EF /* VHomeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeBar.swift; sourceTree = "<group>"; };
 		DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeDisplay.swift; sourceTree = "<group>"; };
 		DAF0458D1F3910DF0003C2EF /* MHomeGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeGiphy.swift; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 				DAE0AFB41F3BA311006449D0 /* MGif.swift */,
 				DAE0AFB81F3BA3C6006449D0 /* MGifStrategy.swift */,
 				DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */,
+				DAE0AFBC1F3BA692006449D0 /* MGifStrategyDownload.swift */,
 			);
 			path = Gif;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				DA68F1AB1F38E5D500C13634 /* ExtensionNotification.swift in Sources */,
 				DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */,
 				DAE0AFB91F3BA3C6006449D0 /* MGifStrategy.swift in Sources */,
+				DAE0AFBD1F3BA692006449D0 /* MGifStrategyDownload.swift in Sources */,
 				DA68F1B91F38E5D500C13634 /* ViewParent.swift in Sources */,
 				DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */,
 				DA68F19F1F38E5D500C13634 /* MPerkThumbnailFreeProtocol.swift in Sources */,
