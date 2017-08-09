@@ -17,6 +17,12 @@ class MSessionGif
     
     //MARK: internal
     
+    func itemsLoaded(items:[DGif])
+    {
+        self.items = items
+        
+    }
+    
     func currentItem() -> DGif?
     {
         if indexWaiting < items.count
