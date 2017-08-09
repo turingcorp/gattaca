@@ -24,4 +24,41 @@ class VHomeActionsCell:UICollectionViewCell
     {
         return nil
     }
+    
+    override var isSelected:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    override var isHighlighted:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    //MARK: private
+    
+    func hover()
+    {
+        if isSelected || isHighlighted
+        {
+            background.image = #imageLiteral(resourceName: "assetGenericActionOn")
+        }
+        else
+        {
+            background.image = #imageLiteral(resourceName: "assetGenericActionOff")
+        }
+    }
+    
+    //MARK: internal
+    
+    func config(model:MHomeActionProtocol)
+    {
+        hover()
+    }
 }

@@ -79,8 +79,19 @@ class VHomeActions:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
+        let item:MHomeActionProtocol = modelAtIndex(index:indexPath)
         let cell:VHomeActionsCell = cellAtIndex(indexPath:indexPath)
+        cell.config(model:item)
         
         return cell
+    }
+    
+    //MARK: private
+    
+    private func modelAtIndex(index:IndexPath) -> MHomeActionProtocol
+    {
+        let item:MHomeActionProtocol = controller.model.actions[index.item]
+        
+        return item
     }
 }
