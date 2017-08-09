@@ -3,7 +3,6 @@ import Foundation
 extension MHome
 {
     private static let kStatusCodeSuccess:Int = 200
-    private static let kFileExtension:String = "mp4"
     
     func requestGiphyTrending()
     {
@@ -170,15 +169,15 @@ extension MHome
     
     private func requestDownloadSuccess(data:Data)
     {
-        guard
-            
-            let temporalUrl:URL = data.writeToTemporal(
-                withExtension:MHome.kFileExtension)
-        
-        else
-        {
-            return
-        }
+//        guard
+//            
+//            let temporalUrl:URL = data.writeToTemporal(
+//                withExtension:MHome.kFileExtension)
+//        
+//        else
+//        {
+//            return
+//        }
         
         let item:MHomeItem = MHomeItem(url:temporalUrl)
 //        addItem(item:item)

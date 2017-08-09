@@ -33,7 +33,18 @@ extension MHome
         {
             guard
             
-                let identifier:String = gifItem.identifier
+                let path:URL = gifItem.factoryPath(
+                    directory:directory)
+            
+            else
+            {
+                continue
+            }
+            
+            let item:MHomeItem = MHomeItem(url:path)
+            items.append(item)
         }
+        
+        return items
     }
 }

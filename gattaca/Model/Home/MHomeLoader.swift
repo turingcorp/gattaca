@@ -23,7 +23,7 @@ extension MHome
             let items:[MHomeItem] = MHome.factoryItems(
                 gifItems:gifItems)
             
-            
+            updateItems(items:items)
         }
         else
         {
