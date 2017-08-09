@@ -2,25 +2,14 @@ import UIKit
 
 class VSpinner:UIImageView
 {
-    private let kAnimationDuration:TimeInterval = 0.5
+    private let kAnimationDuration:TimeInterval = 1
     
     init()
     {
         super.init(frame:CGRect.zero)
         
         let images:[UIImage] = [
-            #imageLiteral(resourceName: "assetSpinner00"),
-            #imageLiteral(resourceName: "assetSpinner01"),
-            #imageLiteral(resourceName: "assetSpinner02"),
-            #imageLiteral(resourceName: "assetSpinner03"),
-            #imageLiteral(resourceName: "assetSpinner04"),
-            #imageLiteral(resourceName: "assetSpinner05"),
-            #imageLiteral(resourceName: "assetSpinner06"),
-            #imageLiteral(resourceName: "assetSpinner07"),
-            #imageLiteral(resourceName: "assetSpinner08"),
-            #imageLiteral(resourceName: "assetSpinner09"),
-            #imageLiteral(resourceName: "assetSpinner10"),
-            #imageLiteral(resourceName: "assetSpinner11")]
+            #imageLiteral(resourceName: "assetSpinner0")]
         
         isUserInteractionEnabled = false
         translatesAutoresizingMaskIntoConstraints = false
