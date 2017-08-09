@@ -2,6 +2,7 @@ import Foundation
 
 class MGif
 {
+    private(set) var strategy:MGifStrategy?
     private(set) var items:[DGif]
     private var map:[String:DGif]
     
