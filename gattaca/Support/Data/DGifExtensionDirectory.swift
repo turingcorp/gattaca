@@ -4,15 +4,17 @@ extension DGif
 {
     private static let kResourceName:String = "ResourceURL"
     private static let kResourceExtension:String = "plist"
-    private static let kDirectoryKey:String = "directory"
+    private static let kKeyGif:String = "gif"
+    private static let kKeyDirectory:String = "directory"
+    static let kExtension:String = ".mp4"
     
-    class func projectsDirectory() -> URL?
+    class func gifDirectory() -> URL?
     {
         guard
             
             let directory:String = directoryName()
             
-            else
+        else
         {
             return nil
         }
@@ -24,7 +26,36 @@ extension DGif
         return projects
     }
     
-    //MAKR: private
+    class func createDirectory() -> URL?
+    {
+        guard
+            
+            let gifPath:URL = gifDirectory()
+            
+        else
+        {
+            return nil
+        }
+        
+        do
+        {
+            try FileManager.default.createDirectory(
+                at:gifPath,
+                withIntermediateDirectories:true,
+                attributes:nil)
+        }
+        catch
+        {
+            return nil
+        }
+        
+        let excludedPath:URL = URL.excludeFromBackup(
+            original:gifPath)
+        
+        return excludedPath
+    }
+    
+    //MARK: private
     
     private class func directoryName() -> String?
     {
@@ -35,10 +66,11 @@ extension DGif
                 withExtension:kResourceExtension),
             let urlDictionary:NSDictionary = NSDictionary(
                 contentsOf:resourceUrl),
-            let urlMap:[String:String] = urlDictionary as? [String:String],
-            let directory:String = urlMap[kDirectoryKey]
+            let urlMap:[String:AnyObject] = urlDictionary as? [String:AnyObject],
+            let gifMap:[String:String] = urlMap[kKeyGif] as? [String:String],
+            let directory:String = gifMap[kKeyDirectory]
             
-            else
+        else
         {
             return nil
         }

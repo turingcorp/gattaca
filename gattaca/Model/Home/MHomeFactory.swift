@@ -18,6 +18,22 @@ extension MHome
     
     class func factoryItems(gifItems:[DGif]) -> [MHomeItem]
     {
+        var items:[MHomeItem] = []
         
+        guard
+        
+            let directory:URL = DGif.gifDirectory()
+        
+        else
+        {
+            return items
+        }
+        
+        for gifItem:DGif in gifItems
+        {
+            guard
+            
+                let identifier:String = gifItem.identifier
+        }
     }
 }
