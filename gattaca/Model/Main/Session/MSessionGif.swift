@@ -9,9 +9,9 @@ extension MSession
         { [weak self] (data:[NSManagedObject]?) in
             
             guard
-            
+                
                 let gifs:[DGif] = data as? [DGif]
-            
+                
             else
             {
                 return
