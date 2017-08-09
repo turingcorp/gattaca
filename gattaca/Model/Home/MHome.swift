@@ -19,6 +19,7 @@ class MHome:Model
     deinit
     {
         sessionTask?.cancel()
+        NotificationCenter.default.removeObserver(self)
     }
     
     //MARK: internal
@@ -27,5 +28,7 @@ class MHome:Model
     {
         self.items.append(contentsOf:items)
         delegate?.modelRefresh()
+        
+        MSession.sharedInstance.gif.strategy?.startBackgroundDownload()
     }
 }

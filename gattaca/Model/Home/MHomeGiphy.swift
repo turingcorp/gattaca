@@ -67,10 +67,26 @@ extension MHome
     
     private func requestError(error:Error?)
     {
+        let message:String
+        
+        if let error:Error = error
+        {
+            message = error.localizedDescription
+        }
+        else
+        {
+            message = String.localizedModel(
+                key:"MHome_unknownError")
+        }
+        
+        VAlert.messageFail(message:message)
     }
     
     private func requestError(statusCode:Int)
     {
+        let message:String = String.localizedModel(
+            key:"MHome_errorCode")
+        VAlert.messageFail(message:message)
     }
     
     private func requestDataSuccess(data:Data?)
@@ -179,7 +195,7 @@ extension MHome
 //            return
 //        }
         
-        let item:MHomeItem = MHomeItem(url:temporalUrl)
+//        let item:MHomeItem = MHomeItem(url:temporalUrl)
 //        addItem(item:item)
     }
 }

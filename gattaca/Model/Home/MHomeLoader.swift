@@ -11,6 +11,15 @@ extension MHome
         }
     }
     
+    //MARK: notified
+    
+    @objc
+    func notifiedGifDownloaded(sender notification:Notification)
+    {
+        NotificationCenter.default.removeObserver(self)
+        loadItems()
+    }
+    
     //MARK: private
     
     private func dispatchLoadItems()
@@ -27,7 +36,18 @@ extension MHome
         }
         else
         {
-            requestGiphyTrending()
+            loadFromGiphy()
         }
+    }
+    
+    private func loadFromGiphy()
+    {
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(notifiedGifDownloaded(sender:)),
+            name:Notification.gifDownloaded,
+            object:nil)
+        
+        requestGiphyTrending()
     }
 }
