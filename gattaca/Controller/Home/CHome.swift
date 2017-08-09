@@ -20,11 +20,10 @@ class CHome:Controller<VHome, MHome>
     {
         super.viewDidLoad()
         
-        model.requestGiphyTrending()
         NotificationCenter.default.addObserver(
             self,
-            selector:#selector(notifiedBecameActive(sender:)),
-            name:NSNotification.Name.UIApplicationDidBecomeActive,
+            selector:#selector(notifiedSessionLoaded(sender:)),
+            name:Notification.sessionLoaded,
             object:nil)
     }
     
@@ -37,6 +36,15 @@ class CHome:Controller<VHome, MHome>
     
     //MARK: notified
     
+    func notifiedSessionLoaded(sender notification:Notification)
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.dispatchSessionLoaded()
+        }
+    }
+    
     func notifiedBecameActive(sender notification:Notification)
     {
         DispatchQueue.main.async
@@ -47,6 +55,18 @@ class CHome:Controller<VHome, MHome>
     }
     
     //MARK: private
+    
+    private func dispatchSessionLoaded()
+    {
+        view().refresh()
+        
+        model.requestGiphyTrending()
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(notifiedBecameActive(sender:)),
+            name:NSNotification.Name.UIApplicationDidBecomeActive,
+            object:nil)
+    }
     
     private func dispatchRefresh()
     {
