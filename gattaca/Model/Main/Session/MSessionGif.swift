@@ -2,24 +2,26 @@ import Foundation
 
 class MSessionGif
 {
-    var index:Int
     private(set) var items:[DGif]
     private var map:[String:DGif]
+    private var indexWaiting:Int
+    private var indexLoading:Int
     
     init()
     {
         items = []
         map = [:]
-        index = 0
+        indexLoading = 0
+        indexWaiting = 0
     }
     
     //MARK: internal
     
     func currentItem() -> DGif?
     {
-        if index < items.count
+        if indexWaiting < items.count
         {
-            let item:DGif = items[index]
+            let item:DGif = items[indexWaiting]
             
             return item
         }
