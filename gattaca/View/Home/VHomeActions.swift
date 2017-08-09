@@ -7,7 +7,7 @@ class VHomeActions:VCollection<
     VHomeActionsCell>
 {
     private var cellSize:CGSize?
-    private let kCellWidth:CGFloat = 80
+    private let kCellWidth:CGFloat = 85
     
     required init(controller:CHome)
     {

@@ -3,6 +3,7 @@ import UIKit
 class VHomeActionsCell:UICollectionViewCell
 {
     private weak var background:UIImageView!
+    private weak var icon:UIImageView!
     
     override init(frame:CGRect)
     {
@@ -17,10 +18,22 @@ class VHomeActionsCell:UICollectionViewCell
         background.isUserInteractionEnabled = false
         self.background = background
         
+        let icon:UIImageView = UIImageView()
+        icon.isUserInteractionEnabled = false
+        icon.clipsToBounds = true
+        icon.contentMode = UIViewContentMode.center
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        self.icon = icon
+        
         addSubview(background)
+        addSubview(icon)
         
         NSLayoutConstraint.equals(
             view:background,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:icon,
             toView:self)
     }
     
@@ -52,10 +65,12 @@ class VHomeActionsCell:UICollectionViewCell
         if isSelected || isHighlighted
         {
             background.image = #imageLiteral(resourceName: "assetGenericActionOn")
+            icon.tintColor = UIColor.colourBackgroundDark
         }
         else
         {
             background.image = #imageLiteral(resourceName: "assetGenericActionOff")
+            icon.tintColor = UIColor.white
         }
     }
     
@@ -63,6 +78,9 @@ class VHomeActionsCell:UICollectionViewCell
     
     func config(model:MHomeActionProtocol)
     {
+        icon.image = model.icon.withRenderingMode(
+            UIImageRenderingMode.alwaysTemplate)
+        
         hover()
     }
 }
