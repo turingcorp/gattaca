@@ -4,12 +4,12 @@ class MSession
 {
     static let sharedInstance:MSession = MSession()
     
-    let gif:MSessionGif
+    let gif:MGif
     private(set) var settings:DSettings?
     
     private init()
     {
-        gif = MSessionGif()
+        gif = MGif()
     }
     
     //MARK: internal
