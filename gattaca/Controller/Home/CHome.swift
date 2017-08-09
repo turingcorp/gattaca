@@ -20,7 +20,7 @@ class CHome:Controller<VHome, MHome>
     {
         super.viewDidLoad()
         
-        model.requestRandomGif()
+        model.requestGiphyTrending()
         NotificationCenter.default.addObserver(
             self,
             selector:#selector(notifiedBecameActive(sender:)),

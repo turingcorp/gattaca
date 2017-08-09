@@ -5,18 +5,18 @@ extension MHome
     private static let kStatusCodeSuccess:Int = 200
     private static let kFileExtension:String = "mp4"
     
-    func requestRandomGif()
+    func requestGiphyTrending()
     {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.dispatchRequestRandomGif()
+            self?.dispatchRequestGiphyTrending()
         }
     }
     
     //MARK: private
     
-    private func dispatchRequestRandomGif()
+    private func dispatchRequestGiphyTrending()
     {
         guard
         

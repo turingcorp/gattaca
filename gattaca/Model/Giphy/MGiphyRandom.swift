@@ -8,7 +8,7 @@ extension MGiphy
     private static let kKeyVarApiKey:String = "var_api_key"
     private static let kKeyApiKey:String = "api_key"
     
-    class func factoryRandom() -> URLRequest?
+    class func factoryRandomRequest() -> URLRequest?
     {
         guard
             
