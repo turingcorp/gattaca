@@ -18,6 +18,10 @@ class VHomeActionsCell:UICollectionViewCell
         self.background = background
         
         addSubview(background)
+        
+        NSLayoutConstraint.equals(
+            view:background,
+            toView:self)
     }
     
     required init?(coder:NSCoder)

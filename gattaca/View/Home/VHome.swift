@@ -71,7 +71,7 @@ class VHome:ViewMain
             view:viewDisplay,
             toView:self)
         
-        NSLayoutConstraint.bottomToTop(
+        NSLayoutConstraint.topToBottom(
             view:viewActions,
             toView:viewDisplay,
             constant:-actionsHeight_2)

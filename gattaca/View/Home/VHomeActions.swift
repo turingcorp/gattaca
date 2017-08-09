@@ -33,7 +33,7 @@ class VHomeActions:VCollection<
     {
         let width:CGFloat = collectionView.bounds.width
         let count:CGFloat = CGFloat(controller.model.actions.count)
-        let cellsWidth:CGFloat = width * count
+        let cellsWidth:CGFloat = kCellWidth * count
         let remainWidth:CGFloat = width - cellsWidth
         let margin:CGFloat = remainWidth / 2.0
         let insets:UIEdgeInsets = UIEdgeInsets(
