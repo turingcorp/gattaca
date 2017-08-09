@@ -122,8 +122,14 @@ extension MHome
 //        requestDataSuccess(json:json)
     }
     
+    private func requestSuccess(json:Any)
+    {
+        let items:[MGiphyItem] = MGiphy.factoryItems(json:json)
+    }
+    
     private func requestDataSuccess(json:Any)
     {
+        /*
         guard
         
             let gifRequest:URLRequest = MGiphy.factoryGif(json:json)
@@ -150,7 +156,7 @@ extension MHome
         }
         
         self.sessionTask = sessionTask
-        sessionTask.resume()
+        sessionTask.resume()*/
     }
     
     private func requestDownloadSuccess(url:URL?)

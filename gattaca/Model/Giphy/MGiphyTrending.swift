@@ -6,15 +6,19 @@ extension MGiphy
     private static let kKeyHost:String = "host"
     private static let kKeyTrending:String = "trending"
     private static let kKeyVarLimit:String = "var_limit"
+    private static let kKeyVarOffset:String = "var_offset"
     private static let kKeyVarApiKey:String = "var_api_key"
     private static let kKeyApiKey:String = "api_key"
-    private static let kLimit:Int = 3
     
-    class func factoryTrendingRequest() -> URLRequest?
+    class func factoryTrendingRequest(
+        offset:Int,
+        limit:Int) -> URLRequest?
     {
         guard
             
-            let url:URL = factoryUrl()
+            let url:URL = factoryUrl(
+                offset:offset,
+                limit:limit)
             
         else
         {
@@ -28,7 +32,9 @@ extension MGiphy
     
     //MARK: private
     
-    private class func factoryUrl() -> URL?
+    private class func factoryUrl(
+        offset:Int,
+        limit:Int) -> URL?
     {
         guard
             
@@ -37,6 +43,7 @@ extension MGiphy
             let host:String = giphyRoot[kKeyHost] as? String,
             let trending:String = giphyRoot[kKeyTrending] as? String,
             let varLimit:String = giphyRoot[kKeyVarLimit] as? String,
+            let varOffset:String = giphyRoot[kKeyVarOffset] as? String,
             let varApiKey:String = giphyRoot[kKeyVarApiKey] as? String,
             let apiKey:String = giphyRoot[kKeyApiKey] as? String
             
@@ -45,12 +52,15 @@ extension MGiphy
             return nil
         }
         
-        let limitString:String = "\(kLimit)"
+        let limitString:String = "\(limit)"
+        let offsetString:String = "\(offset)"
         
         var path:String = host
         path.append(trending)
         path.append(varLimit)
         path.append(limitString)
+        path.append(varOffset)
+        path.append(offsetString)
         path.append(varApiKey)
         path.append(apiKey)
         

@@ -19,6 +19,8 @@
 		<string>/v1/gifs/trending?</string>
 		<key>var_limit</key>
 		<string>&amp;limit=</string>
+		<key>var_offset</key>
+		<string>&amp;offset=</string>
 		<key>var_api_key</key>
 		<string>&amp;api_key=</string>
 		<key>api_key</key>
