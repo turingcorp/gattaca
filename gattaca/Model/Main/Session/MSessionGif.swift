@@ -11,11 +11,35 @@ class MSessionGif
         map = [:]
     }
     
+    //MARK: private
+    
+    private func mapItems(items:[DGif])
+    {
+        var map:[String:DGif] = [:]
+        
+        for item:DGif in items
+        {
+            guard
+            
+                let identifier:String = item.identifier
+            
+            else
+            {
+                continue
+            }
+            
+            map[identifier] = item
+        }
+        
+        self.map = map
+    }
+    
     //MARK: internal
     
     func itemsLoaded(items:[DGif])
     {
         self.items = items
+        mapItems(items:items)
     }
     
     func itemsWaiting() -> [DGif]
