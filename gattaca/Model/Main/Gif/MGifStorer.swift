@@ -3,7 +3,9 @@ import CoreData
 
 extension MGif
 {
-    func storeItems(items:[MGiphyItem])
+    func storeItems(
+        items:[MGiphyItem],
+        completion:@escaping(() -> ()))
     {
         
     }

@@ -29,6 +29,8 @@ extension MHome
             return
         }
         
+        print(request.url!)
+        
         let sessionTask:URLSessionDataTask = session.dataTask(with:request)
         { [weak self] (data:Data?, urlResponse:URLResponse?, error:Error?) in
             
@@ -121,7 +123,6 @@ extension MHome
             return
         }
         
-        print(json)
         requestSuccess(json:json)
     }
     
@@ -138,6 +139,10 @@ extension MHome
         if countPurged > 0
         {
             MSession.sharedInstance.gif.storeItems(items:purged)
+            { [weak self] in
+                
+                self?.loadItems()
+            }
         }
         else
         {
