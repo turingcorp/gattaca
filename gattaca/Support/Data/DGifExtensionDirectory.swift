@@ -24,7 +24,7 @@ extension DGif
         return projects
     }
     
-    class func createDirectory() -> URL?
+    @discardableResult class func createDirectory() -> URL?
     {
         guard
             

@@ -32,6 +32,8 @@ extension MSession
         }
         
         gif.itemsLoaded(items:sorted)
+        
+        DGif.createDirectory()
         finishedLoadingSession()
     }
 }

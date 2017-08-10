@@ -10,12 +10,13 @@ extension MGifStrategyDownload
             
         else
         {
-            downloadFailed(gif:nil)
+            model.strategyStand()
             
             return
         }
         
         gif.statusLoading()
+        requestGif(gif:gif)
     }
     
     func downloadWithDelay()
@@ -58,6 +59,7 @@ extension MGifStrategyDownload
             return
         }
         
+        print(urlString)
         requestGif(gif:gif, url:url)
     }
     

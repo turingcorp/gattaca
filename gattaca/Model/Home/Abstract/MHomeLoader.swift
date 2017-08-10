@@ -25,7 +25,7 @@ extension MHome
     private func dispatchLoadItems()
     {
         let gifItems:[DGif] = MSession.sharedInstance.gif.itemsWaiting()
-        let countItems:Int = items.count
+        let countItems:Int = gifItems.count
         
         if countItems > 0
         {

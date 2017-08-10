@@ -127,7 +127,6 @@ extension MHome
     
     private func requestSuccess(json:Any)
     {
-        print(json)
         requestOffset += MHome.kLimit
         
         let items:[MGiphyItem] = MGiphy.factoryItems(
