@@ -39,6 +39,12 @@ extension DGif
         }
     }
     
+    func newGif(identifier:String)
+    {
+        self.identifier = identifier
+        self.created = Date().timeIntervalSince1970
+    }
+    
     func factoryPath(directory:URL) -> URL?
     {
         guard

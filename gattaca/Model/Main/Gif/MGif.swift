@@ -18,23 +18,24 @@ class MGif
     
     private func mapItems(items:[DGif])
     {
-        var map:[String:DGif] = [:]
-        
         for item:DGif in items
         {
-            guard
-                
-                let identifier:String = item.identifier
-                
-            else
-            {
-                continue
-            }
+            mapItem(item:item)
+        }
+    }
+    
+    private func mapItem(item:DGif)
+    {
+        guard
             
-            map[identifier] = item
+            let identifier:String = item.identifier
+            
+        else
+        {
+            return
         }
         
-        self.map = map
+        map[identifier] = item
     }
     
     //MARK: internal
@@ -53,6 +54,12 @@ class MGif
     {
         self.items = items
         mapItems(items:items)
+    }
+    
+    func addItem(item:DGif)
+    {
+        items.append(item)
+        mapItem(item:item)
     }
     
     func itemsWaiting() -> [DGif]
