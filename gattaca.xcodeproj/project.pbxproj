@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0FEFAB51E60F2A75275A558B /* Pods_gattaca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EB7DE9DB31C7535E0A58A4 /* Pods_gattaca.framework */; };
 		DA42A7B11F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42A7B01F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift */; };
+		DA42A7B31F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42A7B21F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
 		DA68F1971F38E5D500C13634 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1501F38E5D500C13634 /* Controller.swift */; };
 		DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1511F38E5D500C13634 /* ControllerParent.swift */; };
@@ -100,6 +101,7 @@
 		DA39E77A1F38E3F90001CA28 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA39E7891F38E3F90001CA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA42A7B01F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownloadRequest.swift; sourceTree = "<group>"; };
+		DA42A7B21F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownloadFile.swift; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA68F1501F38E5D500C13634 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA68F1511F38E5D500C13634 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -495,6 +497,7 @@
 				DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */,
 				DAE0AFBC1F3BA692006449D0 /* MGifStrategyDownload.swift */,
 				DA42A7B01F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift */,
+				DA42A7B21F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift */,
 			);
 			path = Gif;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				DA68F1A21F38E5D500C13634 /* MPerkThumbnailPurchaseProtocol.swift in Sources */,
 				DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */,
 				DAE0AFB51F3BA311006449D0 /* MGif.swift in Sources */,
+				DA42A7B31F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift in Sources */,
 				DAE0AFD31F3BAEF9006449D0 /* MHomeActionLike.swift in Sources */,
 				DA68F1B21F38E5D500C13634 /* ExtensionURL.swift in Sources */,
 				DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */,
