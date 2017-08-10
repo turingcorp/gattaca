@@ -5,14 +5,13 @@ class MRequest
     private static let kGet:String = "GET"
     private static let kResourceName:String = "ResourceURL"
     private static let kResourceExtension:String = "plist"
-    private static let kTimeout:TimeInterval = 30
     
-    class func factorySession() -> URLSession
+    class func factorySession(timeout:TimeInterval) -> URLSession
     {
         let configuration:URLSessionConfiguration = URLSessionConfiguration.ephemeral
         configuration.allowsCellularAccess = true
-        configuration.timeoutIntervalForRequest = kTimeout
-        configuration.timeoutIntervalForResource = kTimeout
+        configuration.timeoutIntervalForRequest = timeout
+        configuration.timeoutIntervalForResource = timeout
         configuration.isDiscretionary = true
         configuration.networkServiceType = URLRequest.NetworkServiceType.default
         configuration.requestCachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
