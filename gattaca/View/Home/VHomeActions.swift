@@ -9,7 +9,7 @@ class VHomeActions:VCollection<
     private weak var buttonShare:UIButton!
     private var cellSize:CGSize?
     private let kCellWidth:CGFloat = 85
-    private let kShareWidth:CGFloat = 80
+    private let kShareWidth:CGFloat = 55
     
     required init(controller:CHome)
     {
