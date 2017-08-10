@@ -5,8 +5,6 @@ class MRequest
     private static let kGet:String = "GET"
     private static let kResourceName:String = "ResourceURL"
     private static let kResourceExtension:String = "plist"
-    private static let kNoUseSsl:String = "http:"
-    private static let kUseSsl:String = "https:"
     private static let kTimeout:TimeInterval = 30
     
     class func factorySession() -> URLSession
@@ -55,14 +53,5 @@ class MRequest
         request.allowsCellularAccess = true
         
         return request
-    }
-    
-    class func forceSsl(path:String) -> String
-    {
-        let forcingPath:String = path.replacingOccurrences(
-            of:kNoUseSsl,
-            with:kUseSsl)
-        
-        return forcingPath
     }
 }
