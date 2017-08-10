@@ -10,12 +10,22 @@ extension MGifStrategyDownload
             
         else
         {
-            model.strategyStand()
+            downloadFailed(gif:nil)
             
             return
         }
         
         gif.statusLoading()
+    }
+    
+    func downloadWithDelay()
+    {
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
+            deadline:DispatchTime.now() + kDelayDownloadNext)
+        { [weak self] in
+            
+            self?.dispatchDownload()
+        }
     }
     
     //MARK: private
@@ -28,7 +38,7 @@ extension MGifStrategyDownload
             
         else
         {
-            downloadNext()
+            downloadWithDelay()
             
             return
         }
@@ -43,7 +53,7 @@ extension MGifStrategyDownload
             
         else
         {
-            downloadNext()
+            downloadWithDelay()
             
             return
         }
@@ -64,6 +74,7 @@ extension MGifStrategyDownload
             if let error:Error = error
             {
                 self?.downloadError(message:error.localizedDescription)
+                self?.downloadFailed(gif:gif)
             }
             else
             {
@@ -87,6 +98,7 @@ extension MGifStrategyDownload
             let message:String = String.localizedModel(
                 key:"MGifStrategyDownload_unknownError")
             downloadError(message:message)
+            downloadFailed(gif:gif)
             
             return
         }
@@ -101,6 +113,7 @@ extension MGifStrategyDownload
         }
         catch let error
         {
+            downloadFailed(gif:gif)
             downloadError(message:error.localizedDescription)
             
             return
@@ -109,58 +122,8 @@ extension MGifStrategyDownload
         requestSuccess(gif:gif, data:data)
     }
     
-    private func requestSuccess(gif:DGif, data:Data)
-    {
-        var randomName:String = UUID().uuidString
-        
-        if let withExtension:String = withExtension
-        {
-            randomName.append(".")
-            randomName.append(withExtension)
-        }
-        
-        let directoryUrl:URL = URL(fileURLWithPath:NSTemporaryDirectory())
-        let fileUrl:URL = directoryUrl.appendingPathComponent(randomName)
-        
-        do
-        {
-            try write(to:fileUrl, options:Data.WritingOptions.atomicWrite)
-        }
-        catch
-        {
-            return nil
-        }
-        
-        return fileUrl
-        
-        //        guard
-        //
-        //            let temporalUrl:URL = data.writeToTemporal(
-        //                withExtension:MHome.kFileExtension)
-        //
-        //        else
-        //        {
-        //            return
-        //        }
-        
-        //        let item:MHomeItem = MHomeItem(url:temporalUrl)
-        //        addItem(item:item)
-    }
-    
     private func downloadError(message:String)
     {
         VAlert.messageFail(message:message)
-        
-        model.strategyStand()
-    }
-    
-    private func downloadNext()
-    {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
-            deadline:DispatchTime.now() + kDelayDownloadNext)
-        { [weak self] in
-            
-            self?.dispatchDownload()
-        }
     }
 }

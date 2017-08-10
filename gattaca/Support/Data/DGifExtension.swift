@@ -68,4 +68,16 @@ extension DGif
         statusRaw = Status.loading.rawValue
         DManager.sharedInstance?.save()
     }
+    
+    func statusNew()
+    {
+        statusRaw = Status.new.rawValue
+        DManager.sharedInstance?.save()
+    }
+    
+    func statusWaiting()
+    {
+        statusRaw = Status.waiting.rawValue
+        DManager.sharedInstance?.save()
+    }
 }

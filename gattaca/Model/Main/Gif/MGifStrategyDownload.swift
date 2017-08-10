@@ -54,4 +54,12 @@ class MGifStrategyDownload:MGifStrategy
         
         dispatchDownload()
     }
+    
+    //MARK: internal
+    
+    func downloadFailed(gif:DGif?)
+    {
+        gif?.statusNew()
+        model.strategyStand()
+    }
 }

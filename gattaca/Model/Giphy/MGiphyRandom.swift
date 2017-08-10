@@ -7,6 +7,7 @@ extension MGiphy
     private static let kKeyRandom:String = "random"
     private static let kKeyVarApiKey:String = "var_api_key"
     private static let kKeyApiKey:String = "api_key"
+    private static let kTimeout:TimeInterval = 12
     
     class func factoryRandomRequest() -> URLRequest?
     {
@@ -19,7 +20,9 @@ extension MGiphy
             return nil
         }
         
-        let request:URLRequest = MRequest.factoryGetRequest(url:url)
+        let request:URLRequest = MRequest.factoryGetRequest(
+            url:url,
+            timeout:kTimeout)
         
         return request
     }

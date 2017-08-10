@@ -66,7 +66,6 @@ extension MHome
             }
         }
         
-        self.sessionTask = sessionTask
         sessionTask.resume()
     }
     
