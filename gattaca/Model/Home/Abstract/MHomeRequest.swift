@@ -128,6 +128,7 @@ extension MHome
     
     private func requestSuccess(json:Any)
     {
+        print(json)
         requestOffset += MHome.kLimit
         
         let items:[MGiphyItem] = MGiphy.factoryItems(
@@ -139,93 +140,13 @@ extension MHome
         if countPurged > 0
         {
             MSession.sharedInstance.gif.storeItems(items:purged)
-            { [weak self] in
-                
-                self?.loadItems()
+            {
+                MSession.sharedInstance.gif.strategy?.startBackgroundDownload()
             }
         }
         else
         {
             requestGif()
         }
-    }
-    
-    private func requestDataSuccess(json:Any)
-    {
-        /*
-         guard
-         
-         let gifRequest:URLRequest = MGiphy.factoryGif(json:json)
-         
-         else
-         {
-         requestError(error:nil)
-         
-         return
-         }
-         
-         let sessionTask:URLSessionDownloadTask = session.downloadTask(
-         with:gifRequest)
-         { [weak self] (url:URL?, urlResponse:URLResponse?, error:Error?) in
-         
-         if let error:Error = error
-         {
-         self?.requestError(error:error)
-         
-         return
-         }
-         
-         self?.requestDownloadSuccess(url:url)
-         }
-         
-         self.sessionTask = sessionTask
-         sessionTask.resume()*/
-    }
-    
-    private func requestDownloadSuccess(url:URL?)
-    {
-        guard
-            
-            let url:URL = url
-            
-            else
-        {
-            requestError(error:nil)
-            
-            return
-        }
-        
-        let data:Data
-        
-        do
-        {
-            try data = Data(
-                contentsOf:url,
-                options:Data.ReadingOptions.uncached)
-        }
-        catch let error
-        {
-            requestError(error:error)
-            
-            return
-        }
-        
-        requestDownloadSuccess(data:data)
-    }
-    
-    private func requestDownloadSuccess(data:Data)
-    {
-        //        guard
-        //
-        //            let temporalUrl:URL = data.writeToTemporal(
-        //                withExtension:MHome.kFileExtension)
-        //
-        //        else
-        //        {
-        //            return
-        //        }
-        
-        //        let item:MHomeItem = MHomeItem(url:temporalUrl)
-        //        addItem(item:item)
     }
 }

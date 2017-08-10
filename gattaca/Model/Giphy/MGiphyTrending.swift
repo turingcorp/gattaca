@@ -2,7 +2,7 @@ import Foundation
 
 extension MGiphy
 {
-    private static let kKeyRoot:String = "giphy"
+    private static let kKeyGiphy:String = "giphy"
     private static let kKeyHost:String = "host"
     private static let kKeyTrending:String = "trending"
     private static let kKeyVarLimit:String = "var_limit"
@@ -39,7 +39,7 @@ extension MGiphy
         guard
             
             let urlMap:[String:AnyObject] = MRequest.factoryUrlMap(),
-            let giphyRoot:[String:AnyObject] = urlMap[kKeyRoot] as? [String:AnyObject],
+            let giphyRoot:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
             let host:String = giphyRoot[kKeyHost] as? String,
             let trending:String = giphyRoot[kKeyTrending] as? String,
             let varLimit:String = giphyRoot[kKeyVarLimit] as? String,

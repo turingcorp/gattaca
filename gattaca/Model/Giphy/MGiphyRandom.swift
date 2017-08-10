@@ -2,7 +2,7 @@ import Foundation
 
 extension MGiphy
 {
-    private static let kKeyRoot:String = "giphy"
+    private static let kKeyGiphy:String = "giphy"
     private static let kKeyHost:String = "host"
     private static let kKeyRandom:String = "random"
     private static let kKeyVarApiKey:String = "var_api_key"
@@ -31,7 +31,7 @@ extension MGiphy
         guard
             
             let urlMap:[String:AnyObject] = MRequest.factoryUrlMap(),
-            let giphyRoot:[String:AnyObject] = urlMap[kKeyRoot] as? [String:AnyObject],
+            let giphyRoot:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
             let host:String = giphyRoot[kKeyHost] as? String,
             let random:String = giphyRoot[kKeyRandom] as? String,
             let varApiKey:String = giphyRoot[kKeyVarApiKey] as? String,

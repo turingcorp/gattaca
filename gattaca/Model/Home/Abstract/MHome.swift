@@ -7,11 +7,12 @@ class MHome:Model
     let actions:[MHomeActionProtocol]
     var requestOffset:Int
     private(set) var items:[MHomeItem]
+    private let kTimeout:TimeInterval = 12
     
     required init()
     {
         actions = MHome.factoryActions()
-        session = MRequest.factorySession()
+        session = MRequest.factorySession(timeout:kTimeout)
         items = []
         requestOffset = 0
         

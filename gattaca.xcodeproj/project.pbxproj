@@ -501,8 +501,8 @@
 			children = (
 				DAE0AFC31F3BAEF9006449D0 /* MHome.swift */,
 				DAE0AFC41F3BAEF9006449D0 /* MHomeFactory.swift */,
-				DAE0AFD61F3BAF20006449D0 /* MHomeRequest.swift */,
 				DAE0AFC71F3BAEF9006449D0 /* MHomeLoader.swift */,
+				DAE0AFD61F3BAF20006449D0 /* MHomeRequest.swift */,
 				DAE0AFC61F3BAEF9006449D0 /* MHomeItem.swift */,
 			);
 			path = Abstract;

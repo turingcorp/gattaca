@@ -2,8 +2,6 @@ import Foundation
 
 extension DGif
 {
-    private static let kResourceName:String = "ResourceURL"
-    private static let kResourceExtension:String = "plist"
     private static let kKeyGif:String = "gif"
     private static let kKeyDirectory:String = "directory"
     static let kExtension:String = ".mp4"
@@ -61,12 +59,7 @@ extension DGif
     {
         guard
             
-            let resourceUrl:URL = Bundle.main.url(
-                forResource:kResourceName,
-                withExtension:kResourceExtension),
-            let urlDictionary:NSDictionary = NSDictionary(
-                contentsOf:resourceUrl),
-            let urlMap:[String:AnyObject] = urlDictionary as? [String:AnyObject],
+            let urlMap:[String:AnyObject] = MRequest.factoryUrlMap(),
             let gifMap:[String:String] = urlMap[kKeyGif] as? [String:String],
             let directory:String = gifMap[kKeyDirectory]
             

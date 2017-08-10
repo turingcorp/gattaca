@@ -62,4 +62,10 @@ extension DGif
         
         return path
     }
+    
+    func statusLoading()
+    {
+        statusRaw = Status.loading.rawValue
+        DManager.sharedInstance?.save()
+    }
 }
