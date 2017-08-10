@@ -2,17 +2,15 @@ import Foundation
 
 class MHome:Model
 {
-    weak var sessionTask:URLSessionTask?
     let session:URLSession
     let actions:[MHomeActionProtocol]
     var requestOffset:Int
     private(set) var items:[MHomeItem]
-    private let kTimeout:TimeInterval = 12
     
     required init()
     {
         actions = MHome.factoryActions()
-        session = MRequest.factorySession(timeout:kTimeout)
+        session = MRequest.factorySession()
         items = []
         requestOffset = 0
         
@@ -21,7 +19,7 @@ class MHome:Model
     
     deinit
     {
-        sessionTask?.cancel()
+        session.invalidateAndCancel()
         NotificationCenter.default.removeObserver(self)
     }
     

@@ -4,15 +4,18 @@ class MGifStrategyDownload:MGifStrategy
 {
     private var downloadPrefix:String
     private var downloadSuffix:String
+    private let session:URLSession
     private let kKeyGiphy:String = "giphy"
     private let kKeyDownloadPrefix:String = "download_prefix"
     private let kKeyDownloadSuffix:String = "download_suffix"
     private let kDelayDownloadNext:TimeInterval = 1
+    private let kTimeout:TimeInterval = 45
     
     override init(model:MGif)
     {
         downloadPrefix = ""
         downloadSuffix = ""
+        session = MRequest.factorySession()
         
         super.init(model:model)
         
@@ -21,6 +24,11 @@ class MGifStrategyDownload:MGifStrategy
             
             self?.dispatchDownload()
         }
+    }
+    
+    deinit
+    {
+        session.invalidateAndCancel()
     }
     
     //MARK: private
@@ -96,50 +104,39 @@ class MGifStrategyDownload:MGifStrategy
     
     private func requestGif(gif:DGif, url:URL)
     {
-        let request:URLRequest = MRequest.factoryGetRequest(url:url)
+        let request:URLRequest = MRequest.factoryGetRequest(
+            url:url,
+            timeout:kTimeout)
         
-        guard
+        let downloadTask:URLSessionDownloadTask = session.downloadTask(
+            with:request)
+        { [weak self] (fileUrl:URL?, urlResponse:URLResponse?, error:Error?) in
+            
+            if let error:Error = error
+            {
+                self?.downloadError(message:error.localizedDescription)
+            }
+            else
+            {
+                self?.requestSuccess(gif:gif, fileUrl:fileUrl)
+            }
+        }
         
-        
-        
-        /*
-         guard
-         
-         let gifRequest:URLRequest = MGiphy.factoryGif(json:json)
-         
-         else
-         {
-         requestError(error:nil)
-         
-         return
-         }
-         
-         let sessionTask:URLSessionDownloadTask = session.downloadTask(
-         with:gifRequest)
-         { [weak self] (url:URL?, urlResponse:URLResponse?, error:Error?) in
-         
-         if let error:Error = error
-         {
-         self?.requestError(error:error)
-         
-         return
-         }
-         
-         self?.requestDownloadSuccess(url:url)
-         }
-         
-         self.sessionTask = sessionTask
-         sessionTask.resume()*/
+        downloadTask.resume()
     }
     
-    private func requestDownloadSuccess(url:URL?)
+    private func requestSuccess(
+        gif:DGif,
+        fileUrl:URL?)
     {
         guard
             
-            let url:URL = url
+            let fileUrl:URL = fileUrl
             
-            else
+        else
         {
+            let message:String = String.localizedModel(
+                key:"MGifStrategyDownload_unknownError")
             requestError(error:nil)
             
             return
@@ -177,6 +174,13 @@ class MGifStrategyDownload:MGifStrategy
         
         //        let item:MHomeItem = MHomeItem(url:temporalUrl)
         //        addItem(item:item)
+    }
+    
+    private func downloadError(message:String)
+    {
+        VAlert.messageFail(message:message)
+        
+        model.strategyStand()
     }
     
     private func downloadNext()
