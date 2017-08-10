@@ -6,12 +6,10 @@ class MRequest
     private static let kResourceName:String = "ResourceURL"
     private static let kResourceExtension:String = "plist"
     
-    class func factorySession(timeout:TimeInterval) -> URLSession
+    class func factorySession() -> URLSession
     {
         let configuration:URLSessionConfiguration = URLSessionConfiguration.ephemeral
         configuration.allowsCellularAccess = true
-        configuration.timeoutIntervalForRequest = timeout
-        configuration.timeoutIntervalForResource = timeout
         configuration.isDiscretionary = true
         configuration.networkServiceType = URLRequest.NetworkServiceType.default
         configuration.requestCachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
@@ -41,13 +39,15 @@ class MRequest
         return urlMap
     }
     
-    class func factoryGetRequest(url:URL) -> URLRequest
+    class func factoryGetRequest(
+        url:URL,
+        timeout:TimeInterval) -> URLRequest
     {
         var request:URLRequest = URLRequest(
             url:url,
             cachePolicy:
             URLRequest.CachePolicy.reloadIgnoringLocalCacheData,
-            timeoutInterval:kTimeout)
+            timeoutInterval:timeout)
         request.httpMethod = kGet
         request.allowsCellularAccess = true
         
