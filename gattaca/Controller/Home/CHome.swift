@@ -75,4 +75,32 @@ class CHome:Controller<VHome, MHome>
     {
         view().viewDidAppear()
     }
+    
+    //MARK: internal
+    
+    func share()
+    {
+        guard
+            
+            let item:MHomeItem = model.items.first
+            
+        else
+        {
+            return
+        }
+        
+        let url:URL = item.url
+        let activity:UIActivityViewController = UIActivityViewController(
+            activityItems:[url],
+            applicationActivities:nil)
+        
+        if let popover:UIPopoverPresentationController = activity.popoverPresentationController
+        {
+            popover.sourceView = view
+            popover.sourceRect = CGRect.zero
+            popover.permittedArrowDirections = UIPopoverArrowDirection.any
+        }
+        
+        present(activity, animated:true, completion:nil)
+    }
 }

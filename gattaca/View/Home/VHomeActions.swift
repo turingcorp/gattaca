@@ -119,7 +119,7 @@ class VHomeActions:VCollection<
     
     func selectorShare(sender button:UIButton)
     {
-        
+        controller.share()
     }
     
     //MARK: private
