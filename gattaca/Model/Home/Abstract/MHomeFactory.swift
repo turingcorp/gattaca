@@ -41,7 +41,9 @@ extension MHome
                 continue
             }
             
-            let item:MHomeItem = MHomeItem(url:path)
+            let item:MHomeItem = MHomeItem(
+                url:path,
+                gif:gifItem)
             items.append(item)
         }
         
