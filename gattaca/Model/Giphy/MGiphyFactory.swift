@@ -4,6 +4,9 @@ extension MGiphy
 {
     private static let kKeyData:String = "data"
     private static let kKeyIdentifier:String = "id"
+    private static let kKeyGiphy:String = "giphy"
+    private static let kKeyDownloadPrefix:String = "download_prefix"
+    private static let kKeyShareSuffix:String = "share_suffix"
     
     class func factoryItems(json:Any) -> [MGiphyItem]
     {
@@ -34,6 +37,30 @@ extension MGiphy
         }
         
         return items
+    }
+    
+    class func factoryShareGifUrl(model:MHomeItem) -> URL?
+    {
+        guard
+            
+            let urlMap:[String:AnyObject] = MRequest.factoryUrlMap(),
+            let giphy:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
+            let downloadPrefix:String = giphy[kKeyDownloadPrefix] as? String,
+            let shareSuffix:String = giphy[kKeyShareSuffix] as? String,
+            let itemId:String = model.gif?.identifier
+            
+        else
+        {
+            return nil
+        }
+        
+        var gifString:String = downloadPrefix
+        gifString.append(itemId)
+        gifString.append(shareSuffix)
+        
+        let url:URL? = URL(string:gifString)
+        
+        return url
     }
     
     //MARK: private

@@ -34,11 +34,11 @@ extension MGiphy
         guard
             
             let urlMap:[String:AnyObject] = MRequest.factoryUrlMap(),
-            let giphyRoot:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
-            let host:String = giphyRoot[kKeyHost] as? String,
-            let random:String = giphyRoot[kKeyRandom] as? String,
-            let varApiKey:String = giphyRoot[kKeyVarApiKey] as? String,
-            let apiKey:String = giphyRoot[kKeyApiKey] as? String
+            let giphy:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
+            let host:String = giphy[kKeyHost] as? String,
+            let random:String = giphy[kKeyRandom] as? String,
+            let varApiKey:String = giphy[kKeyVarApiKey] as? String,
+            let apiKey:String = giphy[kKeyApiKey] as? String
             
         else
         {

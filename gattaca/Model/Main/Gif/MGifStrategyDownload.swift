@@ -38,9 +38,9 @@ class MGifStrategyDownload:MGifStrategy
         guard
             
             let urlMap:[String:AnyObject] = MRequest.factoryUrlMap(),
-            let giphyRoot:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
-            let downloadPrefix:String = giphyRoot[kKeyDownloadPrefix] as? String,
-            let downloadSuffix:String = giphyRoot[kKeyDownloadSuffix] as? String
+            let giphy:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
+            let downloadPrefix:String = giphy[kKeyDownloadPrefix] as? String,
+            let downloadSuffix:String = giphy[kKeyDownloadSuffix] as? String
             
         else
         {

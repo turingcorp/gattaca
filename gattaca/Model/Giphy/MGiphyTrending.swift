@@ -42,13 +42,13 @@ extension MGiphy
         guard
             
             let urlMap:[String:AnyObject] = MRequest.factoryUrlMap(),
-            let giphyRoot:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
-            let host:String = giphyRoot[kKeyHost] as? String,
-            let trending:String = giphyRoot[kKeyTrending] as? String,
-            let varLimit:String = giphyRoot[kKeyVarLimit] as? String,
-            let varOffset:String = giphyRoot[kKeyVarOffset] as? String,
-            let varApiKey:String = giphyRoot[kKeyVarApiKey] as? String,
-            let apiKey:String = giphyRoot[kKeyApiKey] as? String
+            let giphy:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
+            let host:String = giphy[kKeyHost] as? String,
+            let trending:String = giphy[kKeyTrending] as? String,
+            let varLimit:String = giphy[kKeyVarLimit] as? String,
+            let varOffset:String = giphy[kKeyVarOffset] as? String,
+            let varApiKey:String = giphy[kKeyVarApiKey] as? String,
+            let apiKey:String = giphy[kKeyApiKey] as? String
             
         else
         {

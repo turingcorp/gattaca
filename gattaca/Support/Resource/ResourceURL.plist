@@ -29,6 +29,8 @@
 		<string>https://media.giphy.com/media/</string>
 		<key>download_suffix</key>
 		<string>/giphy.mp4</string>
+		<key>share_suffix</key>
+		<string>/giphy.gif</string>
 	</dict>
 </dict>
 </plist>

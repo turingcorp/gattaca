@@ -78,7 +78,18 @@ class CHome:Controller<VHome, MHome>
     
     private func shareGif()
     {
+        guard
         
+            let item:MHomeItem = model.items.first,
+            let url:URL = MGiphy.factoryShareGifUrl(
+                model:item)
+        
+        else
+        {
+            return
+        }
+        
+        share(url:url)
     }
     
     private func shareMp4()
