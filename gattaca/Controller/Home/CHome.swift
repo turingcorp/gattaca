@@ -76,20 +76,18 @@ class CHome:Controller<VHome, MHome>
         view().viewDidAppear()
     }
     
-    //MARK: internal
-    
-    func share()
+    private func shareGif()
     {
-        guard
-            
-            let item:MHomeItem = model.items.first
-            
-        else
-        {
-            return
-        }
         
-        let url:URL = item.url
+    }
+    
+    private func shareMp4()
+    {
+        
+    }
+    
+    private func share(url:URL)
+    {
         let activity:UIActivityViewController = UIActivityViewController(
             activityItems:[url],
             applicationActivities:nil)
@@ -102,5 +100,49 @@ class CHome:Controller<VHome, MHome>
         }
         
         present(activity, animated:true, completion:nil)
+    }
+    
+    //MARK: internal
+    
+    func share()
+    {
+        let alert:UIAlertController = UIAlertController(
+            title:String.localizedController(key:"CHome_alertShareTitle"),
+            message:nil,
+            preferredStyle:UIAlertControllerStyle.actionSheet)
+        
+        let actionCancel:UIAlertAction = UIAlertAction(
+            title:String.localizedController(key:"CHome_alertShareCancel"),
+            style:
+            UIAlertActionStyle.cancel)
+        
+        let actionGif:UIAlertAction = UIAlertAction(
+            title:String.localizedController(key:"CHome_alertShareGif"),
+            style:UIAlertActionStyle.default)
+        { [weak self] (action:UIAlertAction) in
+            
+            self?.shareGif()
+        }
+        
+        let actionMp4:UIAlertAction = UIAlertAction(
+            title:String.localizedController(key:"CHome_alertShareMp4"),
+            style:UIAlertActionStyle.default)
+        { [weak self] (action:UIAlertAction) in
+            
+            self?.shareMp4()
+        }
+        
+        alert.addAction(actionGif)
+        alert.addAction(actionMp4)
+        alert.addAction(actionCancel)
+        
+        if let popover:UIPopoverPresentationController = alert.popoverPresentationController
+        {
+            popover.sourceView = view
+            popover.sourceRect = CGRect.zero
+            popover.permittedArrowDirections = UIPopoverArrowDirection.up
+        }
+        
+        present(alert, animated:true, completion:nil)
     }
 }
