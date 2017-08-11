@@ -76,6 +76,22 @@ class CHome:Controller<VHome, MHome>
         view().viewDidAppear()
     }
     
+    private func shareLink()
+    {
+        guard
+            
+            let item:MHomeItem = model.items.first,
+            let url:URL = MGiphy.factoryShareGifUrl(
+                model:item)
+            
+        else
+        {
+            return
+        }
+        
+        share(url:url)
+    }
+    
     private func shareGif()
     {
         guard
@@ -153,8 +169,17 @@ class CHome:Controller<VHome, MHome>
             self?.shareMp4()
         }
         
+        let actionLink:UIAlertAction = UIAlertAction(
+            title:String.localizedController(key:"CHome_alertShareLink"),
+            style:UIAlertActionStyle.default)
+        { [weak self] (action:UIAlertAction) in
+            
+            self?.shareLink()
+        }
+        
         alert.addAction(actionGif)
         alert.addAction(actionMp4)
+        alert.addAction(actionLink)
         alert.addAction(actionCancel)
         
         if let popover:UIPopoverPresentationController = alert.popoverPresentationController
