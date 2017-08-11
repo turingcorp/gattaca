@@ -3,3 +3,4 @@
 "CHome_alertShareGif"="Gif";
 "CHome_alertShareMp4"="Mp4";
 "CHome_alertShareLink"="Link";
+"CHome_errorShareGif"="Error loading GIF, try again";

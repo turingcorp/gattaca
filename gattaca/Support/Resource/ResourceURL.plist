@@ -8,6 +8,8 @@
 	<dict>
 		<key>directory</key>
 		<string>storage</string>
+		<key>sharing_name</key>
+		<string>gattaca.gif</string>
 	</dict>
 	<key>giphy</key>
 	<dict>

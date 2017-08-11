@@ -94,14 +94,29 @@ class CHome:Controller<VHome, MHome>
     
     private func shareGif()
     {
+        model.downloadGif
+        { (url:URL?) in
+            
+            DispatchQueue.main.async
+            { [weak self] in
+                
+                self?.asyncShareGif(url:url)
+            }
+        }
+    }
+    
+    private func asyncShareGif(url:URL?)
+    {
         guard
-        
-            let item:MHomeItem = model.items.first,
-            let url:URL = MGiphy.factoryShareGifUrl(
-                model:item)
-        
+            
+            let url:URL = url
+            
         else
         {
+            let message:String = String.localizedController(
+                key:"CHome_errorShareGif")
+            VAlert.messageFail(message:message)
+            
             return
         }
         
