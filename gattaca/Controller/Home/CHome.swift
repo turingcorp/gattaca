@@ -83,7 +83,17 @@ class CHome:Controller<VHome, MHome>
     
     private func shareMp4()
     {
+        guard
+            
+            let item:MHomeItem = model.items.first
+            
+        else
+        {
+            return
+        }
         
+        let url:URL = item.url
+        share(url:url)
     }
     
     private func share(url:URL)
