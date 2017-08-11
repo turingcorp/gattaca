@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0FEFAB51E60F2A75275A558B /* Pods_gattaca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EB7DE9DB31C7535E0A58A4 /* Pods_gattaca.framework */; };
+		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA42A7B11F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42A7B01F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift */; };
 		DA42A7B31F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42A7B21F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
@@ -98,6 +99,7 @@
 		9FB0C4F89BF859D73B9AE9D3 /* Pods-gattaca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.release.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.release.xcconfig"; sourceTree = "<group>"; };
 		A4EB7DE9DB31C7535E0A58A4 /* Pods_gattaca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gattaca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
+		DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDownloadGif.swift; sourceTree = "<group>"; };
 		DA39E77A1F38E3F90001CA28 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA39E7891F38E3F90001CA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA42A7B01F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownloadRequest.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 				DAE0AFC41F3BAEF9006449D0 /* MHomeFactory.swift */,
 				DAE0AFC71F3BAEF9006449D0 /* MHomeLoader.swift */,
 				DAE0AFD61F3BAF20006449D0 /* MHomeRequest.swift */,
+				DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */,
 				DAE0AFC61F3BAEF9006449D0 /* MHomeItem.swift */,
 			);
 			path = Abstract;
@@ -715,6 +718,7 @@
 				DA68F1BE1F38E5D500C13634 /* VBorder.swift in Sources */,
 				DACF0F5C1F3BB3AF00C716A9 /* MGifStorer.swift in Sources */,
 				DA68F1971F38E5D500C13634 /* Controller.swift in Sources */,
+				DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */,
 				DAE0AFCE1F3BAEF9006449D0 /* MHomeFactory.swift in Sources */,
 				DA42A7B11F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift in Sources */,
 				DA68F1AE1F38E5D500C13634 /* ExtensionString.swift in Sources */,
