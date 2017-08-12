@@ -8,4 +8,19 @@ class TVHomeActionsShare:XCTestCase
         continueAfterFailure = false
         XCUIApplication().launch()
     }
+    
+    func testShareSheetAppears()
+    {
+        let app:XCUIApplication = XCUIApplication()
+        
+        XCTAssertFalse(
+            app.sheets["Share"].exists,
+            "sheet should be nil")
+        
+        app.buttons["VHomeActionsShare_button"].tap()
+        
+        XCTAssertTrue(
+            app.sheets["Share"].exists,
+            "sheet should appear")
+    }
 }
