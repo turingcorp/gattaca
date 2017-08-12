@@ -3,31 +3,9 @@ import CoreData
 
 extension MSession
 {
-    func asyncLoadSession()
-    {
-        DManager.sharedInstance?.fetch(entity:DSettings.self)
-        { (data:[NSManagedObject]?) in
-            
-            guard
-            
-                let settings:DSettings = data?.first as? DSettings
-            
-            else
-            {
-                self.createSession()
-                
-                return
-            }
-            
-            settings.addTtl()
-            
-            self.settingsLoaded(settings:settings)
-        }
-    }
-    
     //MARK: private
     
-    private func createSession()
+    private func createSession(completion:@escaping((DSettings?) -> ()))
     {
         DManager.sharedInstance?.create(entity:DSettings.self)
         { (data:NSManagedObject?) in
@@ -38,10 +16,35 @@ extension MSession
             
             else
             {
+                completion(nil)
+                
                 return
             }
             
-            self.settingsLoaded(settings:settings)
+            completion(settings)
+        }
+    }
+    
+    //MARK: internal
+    
+    func loadSettings(completion:@escaping((DSettings?) -> ()))
+    {
+        DManager.sharedInstance?.fetch(entity:DSettings.self)
+        { (data:[NSManagedObject]?) in
+            
+            guard
+                
+                let settings:DSettings = data?.first as? DSettings
+                
+            else
+            {
+                self.createSession(completion:completion)
+                
+                return
+            }
+            
+            settings.addTtl()
+            completion(settings)
         }
     }
 }

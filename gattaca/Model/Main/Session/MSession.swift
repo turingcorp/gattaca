@@ -14,28 +14,47 @@ class MSession
         status = MSession.Status.new
     }
     
-    //MARK: internal
+    //MARK: private
     
-    func loadSession()
+    private func asyncLoadSession(completion:@escaping(() -> ()))
     {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        {
-            self.asyncLoadSession()
+        loadSettings
+        { (settings:DSettings?) in
+            
+            self.settings = settings
+            self.asyncLoadPerks(completion:completion)
         }
     }
     
-    func settingsLoaded(settings:DSettings)
+    private func asyncLoadPerks(completion:@escaping(() -> ()))
     {
-        self.settings = settings
-        loadPerks(settings:settings)
+        loadPerks
+        {
+            self.asyncLoadGifs(completion:completion)
+        }
     }
     
-    func finishedLoadingSession()
+    private func asyncLoadGifs(completion:@escaping(() -> ()))
+    {
+        loadGifs
+        {
+            self.asyncLoadComplete(completion:completion)
+        }
+    }
+    
+    private func asyncLoadComplete(completion:@escaping(() -> ()))
     {
         DManager.sharedInstance?.save()
-        
-        NotificationCenter.default.post(
-            name:Notification.sessionLoaded,
-            object:nil)
+        completion()
+    }
+    
+    //MARK: internal
+    
+    func loadSession(completion:@escaping(() -> ()))
+    {
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        {
+            self.asyncLoadSession(completion:completion)
+        }
     }
 }

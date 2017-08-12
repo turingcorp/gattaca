@@ -27,8 +27,6 @@ class ControllerParent:UIViewController
 
         let controller:CHome = CHome()
         mainController(controller:controller)
-        
-        MSession.sharedInstance.loadSession()
     }
     
     override func loadView()

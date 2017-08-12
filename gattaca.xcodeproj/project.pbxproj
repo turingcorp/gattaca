@@ -74,7 +74,6 @@
 		DAD67F191F3F56FE006E9699 /* TVHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F181F3F56FE006E9699 /* TVHome.swift */; };
 		DAD67F1B1F3F5A08006E9699 /* CHomeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F1A1F3F5A08006E9699 /* CHomeShare.swift */; };
 		DAD67F1F1F3F5BC4006E9699 /* TVHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F1E1F3F5BC4006E9699 /* TVHomeActionsShare.swift */; };
-		DAD67F211F3F5F4A006E9699 /* MSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F201F3F5F4A006E9699 /* MSessionLoader.swift */; };
 		DAE0AF961F3AB432006449D0 /* VHomeActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF951F3AB432006449D0 /* VHomeActionsCell.swift */; };
 		DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */; };
 		DAE0AF9A1F3AB6CB006449D0 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE0AF991F3AB6CB006449D0 /* generic.xcassets */; };
@@ -196,7 +195,6 @@
 		DAD67F181F3F56FE006E9699 /* TVHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVHome.swift; sourceTree = "<group>"; };
 		DAD67F1A1F3F5A08006E9699 /* CHomeShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeShare.swift; sourceTree = "<group>"; };
 		DAD67F1E1F3F5BC4006E9699 /* TVHomeActionsShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVHomeActionsShare.swift; sourceTree = "<group>"; };
-		DAD67F201F3F5F4A006E9699 /* MSessionLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionLoader.swift; sourceTree = "<group>"; };
 		DAE0AF951F3AB432006449D0 /* VHomeActionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsCell.swift; sourceTree = "<group>"; };
 		DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActions.swift; sourceTree = "<group>"; };
 		DAE0AF991F3AB6CB006449D0 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -384,9 +382,9 @@
 			isa = PBXGroup;
 			children = (
 				DA68F15E1F38E5D500C13634 /* MPerkDomainProtocol.swift */,
-				DA68F15F1F38E5D500C13634 /* MPerkThumbnailFreeProtocol.swift */,
 				DA68F1601F38E5D500C13634 /* MPerkThumbnailProtocol.swift */,
 				DA68F1611F38E5D500C13634 /* MPerkThumbnailProtocolExtension.swift */,
+				DA68F15F1F38E5D500C13634 /* MPerkThumbnailFreeProtocol.swift */,
 				DA68F1621F38E5D500C13634 /* MPerkThumbnailPurchaseProtocol.swift */,
 			);
 			path = Abstract;
@@ -396,10 +394,9 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1641F38E5D500C13634 /* MSession.swift */,
-				DAD67F201F3F5F4A006E9699 /* MSessionLoader.swift */,
 				DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */,
-				DA68F1651F38E5D500C13634 /* MSessionPerks.swift */,
 				DA68F1661F38E5D500C13634 /* MSessionSettings.swift */,
+				DA68F1651F38E5D500C13634 /* MSessionPerks.swift */,
 				DAE0AFB61F3BA352006449D0 /* MSessionGif.swift */,
 			);
 			path = Session;
@@ -860,7 +857,6 @@
 				DA68F1A71F38E5D500C13634 /* DManager.swift in Sources */,
 				DAE0AF961F3AB432006449D0 /* VHomeActionsCell.swift in Sources */,
 				DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */,
-				DAD67F211F3F5F4A006E9699 /* MSessionLoader.swift in Sources */,
 				DAE0AFB71F3BA352006449D0 /* MSessionGif.swift in Sources */,
 				DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */,
 				DAE0AFD41F3BAEF9006449D0 /* MHomeActionMeh.swift in Sources */,
