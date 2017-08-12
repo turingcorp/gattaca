@@ -71,6 +71,7 @@
 		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
 		DACECC481F3A23C30009D933 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACECC471F3A23C30009D933 /* spinner.xcassets */; };
 		DACF0F5C1F3BB3AF00C716A9 /* MGifStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */; };
+		DAD67F191F3F56FE006E9699 /* TVHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F181F3F56FE006E9699 /* TVHome.swift */; };
 		DAE0AF961F3AB432006449D0 /* VHomeActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF951F3AB432006449D0 /* VHomeActionsCell.swift */; };
 		DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */; };
 		DAE0AF9A1F3AB6CB006449D0 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE0AF991F3AB6CB006449D0 /* generic.xcassets */; };
@@ -189,6 +190,7 @@
 		DAC215841F39378800E281DB /* MRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRequest.swift; sourceTree = "<group>"; };
 		DACECC471F3A23C30009D933 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
 		DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStorer.swift; sourceTree = "<group>"; };
+		DAD67F181F3F56FE006E9699 /* TVHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVHome.swift; sourceTree = "<group>"; };
 		DAE0AF951F3AB432006449D0 /* VHomeActionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsCell.swift; sourceTree = "<group>"; };
 		DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActions.swift; sourceTree = "<group>"; };
 		DAE0AF991F3AB6CB006449D0 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -540,6 +542,7 @@
 		DA7CE8501F3F544C0078A26B /* UITests */ = {
 			isa = PBXGroup;
 			children = (
+				DAD67F161F3F56D1006E9699 /* View */,
 				DA7CE8531F3F544C0078A26B /* Info.plist */,
 			);
 			path = UITests;
@@ -563,6 +566,22 @@
 				DAC215841F39378800E281DB /* MRequest.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		DAD67F161F3F56D1006E9699 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAD67F171F3F56D1006E9699 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAD67F171F3F56D1006E9699 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DAD67F181F3F56FE006E9699 /* TVHome.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		DAE0AFB31F3BA2F4006449D0 /* Gif */ = {
@@ -686,6 +705,7 @@
 					DA7CE84E1F3F544C0078A26B = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7AMWG3RLHN;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DA39E7791F38E3F90001CA28;
 					};
@@ -896,6 +916,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD67F191F3F56FE006E9699 /* TVHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1109,6 +1130,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.gattaca.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = gattaca;
 			};
