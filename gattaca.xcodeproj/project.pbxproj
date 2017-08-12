@@ -65,7 +65,6 @@
 		DA7CE8231F3F433C0078A26B /* MSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */; };
 		DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */; };
 		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
-		DA7CE83A1F3F50310078A26B /* TVHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8391F3F50310078A26B /* TVHome.swift */; };
 		DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */; };
 		DA7CE8441F3F53DB0078A26B /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8431F3F53DB0078A26B /* UnitTests.swift */; };
 		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
@@ -102,13 +101,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DA7CE8321F3F4D060078A26B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DA39E7721F38E3F90001CA28 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DA39E7791F38E3F90001CA28;
-			remoteInfo = gattaca;
-		};
 		DA7CE8461F3F53DB0078A26B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DA39E7721F38E3F90001CA28 /* Project object */;
@@ -181,9 +173,6 @@
 		DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionStatus.swift; sourceTree = "<group>"; };
 		DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategy.swift; sourceTree = "<group>"; };
 		DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyFactory.swift; sourceTree = "<group>"; };
-		DA7CE82D1F3F4D060078A26B /* uitests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uitests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA7CE8311F3F4D060078A26B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA7CE8391F3F50310078A26B /* TVHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVHome.swift; sourceTree = "<group>"; };
 		DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsShare.swift; sourceTree = "<group>"; };
 		DA7CE8411F3F53DB0078A26B /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7CE8431F3F53DB0078A26B /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
@@ -230,13 +219,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA7CE82A1F3F4D060078A26B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DA7CE83E1F3F53DB0078A26B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				DA39E77C1F38E3F90001CA28 /* gattaca */,
-				DA7CE82E1F3F4D060078A26B /* uitests */,
 				DA7CE8421F3F53DB0078A26B /* UnitTests */,
 				DA39E77B1F38E3F90001CA28 /* Products */,
 				25A226865CD26CE574FD985D /* Pods */,
@@ -280,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				DA39E77A1F38E3F90001CA28 /* gattaca.app */,
-				DA7CE82D1F3F4D060078A26B /* uitests.xctest */,
 				DA7CE8411F3F53DB0078A26B /* UnitTests.xctest */,
 			);
 			name = Products;
@@ -533,31 +513,6 @@
 			path = Strategy;
 			sourceTree = "<group>";
 		};
-		DA7CE82E1F3F4D060078A26B /* uitests */ = {
-			isa = PBXGroup;
-			children = (
-				DA7CE8371F3F501E0078A26B /* View */,
-				DA7CE8311F3F4D060078A26B /* Info.plist */,
-			);
-			path = uitests;
-			sourceTree = "<group>";
-		};
-		DA7CE8371F3F501E0078A26B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DA7CE8381F3F501E0078A26B /* Home */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DA7CE8381F3F501E0078A26B /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				DA7CE8391F3F50310078A26B /* TVHome.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		DA7CE8421F3F53DB0078A26B /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,24 +603,6 @@
 			productReference = DA39E77A1F38E3F90001CA28 /* gattaca.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DA7CE82C1F3F4D060078A26B /* uitests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DA7CE8341F3F4D060078A26B /* Build configuration list for PBXNativeTarget "uitests" */;
-			buildPhases = (
-				DA7CE8291F3F4D060078A26B /* Sources */,
-				DA7CE82A1F3F4D060078A26B /* Frameworks */,
-				DA7CE82B1F3F4D060078A26B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DA7CE8331F3F4D060078A26B /* PBXTargetDependency */,
-			);
-			name = uitests;
-			productName = uitests;
-			productReference = DA7CE82D1F3F4D060078A26B /* uitests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		DA7CE8401F3F53DB0078A26B /* UnitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA7CE8481F3F53DB0078A26B /* Build configuration list for PBXNativeTarget "UnitTests" */;
@@ -699,13 +636,6 @@
 						DevelopmentTeam = 7AMWG3RLHN;
 						ProvisioningStyle = Automatic;
 					};
-					DA7CE82C1F3F4D060078A26B = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7AMWG3RLHN;
-						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
-						TestTargetID = DA39E7791F38E3F90001CA28;
-					};
 					DA7CE8401F3F53DB0078A26B = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7AMWG3RLHN;
@@ -727,7 +657,6 @@
 			projectRoot = "";
 			targets = (
 				DA39E7791F38E3F90001CA28 /* gattaca */,
-				DA7CE82C1F3F4D060078A26B /* uitests */,
 				DA7CE8401F3F53DB0078A26B /* UnitTests */,
 			);
 		};
@@ -745,13 +674,6 @@
 				DA68F1B61F38E5D500C13634 /* ResourceURL.plist in Resources */,
 				DAE0AF9A1F3AB6CB006449D0 /* generic.xcassets in Resources */,
 				DA68F1B41F38E5D500C13634 /* LocalizableModel.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA7CE82B1F3F4D060078A26B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,14 +830,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA7CE8291F3F4D060078A26B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DA7CE83A1F3F50310078A26B /* TVHome.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DA7CE83D1F3F53DB0078A26B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -927,11 +841,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DA7CE8331F3F4D060078A26B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DA39E7791F38E3F90001CA28 /* gattaca */;
-			targetProxy = DA7CE8321F3F4D060078A26B /* PBXContainerItemProxy */;
-		};
 		DA7CE8471F3F53DB0078A26B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DA39E7791F38E3F90001CA28 /* gattaca */;
@@ -1092,37 +1001,6 @@
 			};
 			name = Release;
 		};
-		DA7CE8351F3F4D060078A26B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				INFOPLIST_FILE = uitests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iturbide.uitests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = gattaca;
-			};
-			name = Debug;
-		};
-		DA7CE8361F3F4D060078A26B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				INFOPLIST_FILE = uitests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iturbide.uitests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = gattaca;
-			};
-			name = Release;
-		};
 		DA7CE8491F3F53DB0078A26B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1175,14 +1053,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		DA7CE8341F3F4D060078A26B /* Build configuration list for PBXNativeTarget "uitests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DA7CE8351F3F4D060078A26B /* Debug */,
-				DA7CE8361F3F4D060078A26B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 		DA7CE8481F3F53DB0078A26B /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
 			isa = XCConfigurationList;
