@@ -13,6 +13,13 @@
 		DA42A7B31F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42A7B21F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift */; };
 		DA68A2661F3F6DE70094BC9B /* TCHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2651F3F6DE70094BC9B /* TCHome.swift */; };
 		DA68A2681F3F75320094BC9B /* MGifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2671F3F75320094BC9B /* MGifLoader.swift */; };
+		DA68A2701F3F77310094BC9B /* MPerkDomainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26B1F3F77310094BC9B /* MPerkDomainProtocol.swift */; };
+		DA68A2711F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26C1F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift */; };
+		DA68A2721F3F77310094BC9B /* MPerkThumbnailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26D1F3F77310094BC9B /* MPerkThumbnailProtocol.swift */; };
+		DA68A2731F3F77310094BC9B /* MPerkThumbnailProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26E1F3F77310094BC9B /* MPerkThumbnailProtocolExtension.swift */; };
+		DA68A2741F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26F1F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift */; };
+		DA68A2761F3F77400094BC9B /* MPerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2751F3F77400094BC9B /* MPerk.swift */; };
+		DA68A2781F3F774C0094BC9B /* MPerkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
 		DA68F1971F38E5D500C13634 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1501F38E5D500C13634 /* Controller.swift */; };
 		DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1511F38E5D500C13634 /* ControllerParent.swift */; };
@@ -20,11 +27,6 @@
 		DA68F19A1F38E5D500C13634 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1541F38E5D500C13634 /* CHome.swift */; };
 		DA68F19B1F38E5D500C13634 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1571F38E5D500C13634 /* Model.swift */; };
 		DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1581F38E5D500C13634 /* ModelDelegate.swift */; };
-		DA68F19E1F38E5D500C13634 /* MPerkDomainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F15E1F38E5D500C13634 /* MPerkDomainProtocol.swift */; };
-		DA68F19F1F38E5D500C13634 /* MPerkThumbnailFreeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F15F1F38E5D500C13634 /* MPerkThumbnailFreeProtocol.swift */; };
-		DA68F1A01F38E5D500C13634 /* MPerkThumbnailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1601F38E5D500C13634 /* MPerkThumbnailProtocol.swift */; };
-		DA68F1A11F38E5D500C13634 /* MPerkThumbnailProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1611F38E5D500C13634 /* MPerkThumbnailProtocolExtension.swift */; };
-		DA68F1A21F38E5D500C13634 /* MPerkThumbnailPurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1621F38E5D500C13634 /* MPerkThumbnailPurchaseProtocol.swift */; };
 		DA68F1A31F38E5D500C13634 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1641F38E5D500C13634 /* MSession.swift */; };
 		DA68F1A41F38E5D500C13634 /* MSessionPerks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1651F38E5D500C13634 /* MSessionPerks.swift */; };
 		DA68F1A51F38E5D500C13634 /* MSessionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1661F38E5D500C13634 /* MSessionSettings.swift */; };
@@ -131,6 +133,13 @@
 		DA42A7B21F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownloadFile.swift; sourceTree = "<group>"; };
 		DA68A2651F3F6DE70094BC9B /* TCHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCHome.swift; sourceTree = "<group>"; };
 		DA68A2671F3F75320094BC9B /* MGifLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifLoader.swift; sourceTree = "<group>"; };
+		DA68A26B1F3F77310094BC9B /* MPerkDomainProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkDomainProtocol.swift; sourceTree = "<group>"; };
+		DA68A26C1F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailFreeProtocol.swift; sourceTree = "<group>"; };
+		DA68A26D1F3F77310094BC9B /* MPerkThumbnailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailProtocol.swift; sourceTree = "<group>"; };
+		DA68A26E1F3F77310094BC9B /* MPerkThumbnailProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailProtocolExtension.swift; sourceTree = "<group>"; };
+		DA68A26F1F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailPurchaseProtocol.swift; sourceTree = "<group>"; };
+		DA68A2751F3F77400094BC9B /* MPerk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerk.swift; sourceTree = "<group>"; };
+		DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkLoader.swift; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA68F1501F38E5D500C13634 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA68F1511F38E5D500C13634 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -138,11 +147,6 @@
 		DA68F1541F38E5D500C13634 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
 		DA68F1571F38E5D500C13634 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DA68F1581F38E5D500C13634 /* ModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDelegate.swift; sourceTree = "<group>"; };
-		DA68F15E1F38E5D500C13634 /* MPerkDomainProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkDomainProtocol.swift; sourceTree = "<group>"; };
-		DA68F15F1F38E5D500C13634 /* MPerkThumbnailFreeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailFreeProtocol.swift; sourceTree = "<group>"; };
-		DA68F1601F38E5D500C13634 /* MPerkThumbnailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailProtocol.swift; sourceTree = "<group>"; };
-		DA68F1611F38E5D500C13634 /* MPerkThumbnailProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailProtocolExtension.swift; sourceTree = "<group>"; };
-		DA68F1621F38E5D500C13634 /* MPerkThumbnailPurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailPurchaseProtocol.swift; sourceTree = "<group>"; };
 		DA68F1641F38E5D500C13634 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
 		DA68F1651F38E5D500C13634 /* MSessionPerks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionPerks.swift; sourceTree = "<group>"; };
 		DA68F1661F38E5D500C13634 /* MSessionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionSettings.swift; sourceTree = "<group>"; };
@@ -318,6 +322,27 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		DA68A2691F3F77310094BC9B /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				DA68A2751F3F77400094BC9B /* MPerk.swift */,
+				DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		DA68A26A1F3F77310094BC9B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DA68A26B1F3F77310094BC9B /* MPerkDomainProtocol.swift */,
+				DA68A26C1F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift */,
+				DA68A26D1F3F77310094BC9B /* MPerkThumbnailProtocol.swift */,
+				DA68A26E1F3F77310094BC9B /* MPerkThumbnailProtocolExtension.swift */,
+				DA68A26F1F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		DA68F14D1F38E5D500C13634 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,21 +416,10 @@
 		DA68F15C1F38E5D500C13634 /* Perk */ = {
 			isa = PBXGroup;
 			children = (
-				DA68F15D1F38E5D500C13634 /* Abstract */,
+				DA68A2691F3F77310094BC9B /* Abstract */,
+				DA68A26A1F3F77310094BC9B /* Protocols */,
 			);
 			path = Perk;
-			sourceTree = "<group>";
-		};
-		DA68F15D1F38E5D500C13634 /* Abstract */ = {
-			isa = PBXGroup;
-			children = (
-				DA68F15E1F38E5D500C13634 /* MPerkDomainProtocol.swift */,
-				DA68F1601F38E5D500C13634 /* MPerkThumbnailProtocol.swift */,
-				DA68F1611F38E5D500C13634 /* MPerkThumbnailProtocolExtension.swift */,
-				DA68F15F1F38E5D500C13634 /* MPerkThumbnailFreeProtocol.swift */,
-				DA68F1621F38E5D500C13634 /* MPerkThumbnailPurchaseProtocol.swift */,
-			);
-			path = Abstract;
 			sourceTree = "<group>";
 		};
 		DA68F1631F38E5D500C13634 /* Session */ = {
@@ -845,17 +859,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA68F19E1F38E5D500C13634 /* MPerkDomainProtocol.swift in Sources */,
 				DA68F1991F38E5D500C13634 /* ControllerParentTransitions.swift in Sources */,
 				DA68F1C11F38E5D500C13634 /* VGradient.swift in Sources */,
 				DAD67F1B1F3F5A08006E9699 /* CHomeShare.swift in Sources */,
 				DA68F1AB1F38E5D500C13634 /* ExtensionNotification.swift in Sources */,
 				DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */,
+				DA68A2721F3F77310094BC9B /* MPerkThumbnailProtocol.swift in Sources */,
 				DAE0AFB91F3BA3C6006449D0 /* MGifStrategy.swift in Sources */,
 				DAE0AFBD1F3BA692006449D0 /* MGifStrategyDownload.swift in Sources */,
 				DA68F1B91F38E5D500C13634 /* ViewParent.swift in Sources */,
 				DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */,
-				DA68F19F1F38E5D500C13634 /* MPerkThumbnailFreeProtocol.swift in Sources */,
 				DA68F1C21F38E5D500C13634 /* VPushBackground.swift in Sources */,
 				DA68F1A51F38E5D500C13634 /* MSessionSettings.swift in Sources */,
 				DAE0AFB01F3B9BB4006449D0 /* DGifExtensionDirectory.swift in Sources */,
@@ -864,8 +877,10 @@
 				DA68F1AD1F38E5D500C13634 /* ExtensionNSManagedObject.swift in Sources */,
 				DAE0AFBB1F3BA594006449D0 /* MGifStrategyStand.swift in Sources */,
 				DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */,
+				DA68A2731F3F77310094BC9B /* MPerkThumbnailProtocolExtension.swift in Sources */,
 				DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */,
 				DA68F1AC1F38E5D500C13634 /* ExtensionNSLayoutConstraint.swift in Sources */,
+				DA68A2761F3F77400094BC9B /* MPerk.swift in Sources */,
 				DA68F1A91F38E5D500C13634 /* ExtensionDictionary.swift in Sources */,
 				DA68F1BF1F38E5D500C13634 /* VCollection.swift in Sources */,
 				DAE0AFD11F3BAEF9006449D0 /* MHomeLoader.swift in Sources */,
@@ -878,9 +893,10 @@
 				DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */,
 				DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */,
 				DAE0AFD41F3BAEF9006449D0 /* MHomeActionMeh.swift in Sources */,
-				DA68F1A21F38E5D500C13634 /* MPerkThumbnailPurchaseProtocol.swift in Sources */,
 				DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */,
+				DA68A2701F3F77310094BC9B /* MPerkDomainProtocol.swift in Sources */,
 				DAE0AFB51F3BA311006449D0 /* MGif.swift in Sources */,
+				DA68A2781F3F774C0094BC9B /* MPerkLoader.swift in Sources */,
 				DA42A7B31F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift in Sources */,
 				DAE0AFD31F3BAEF9006449D0 /* MHomeActionLike.swift in Sources */,
 				DA68F1B21F38E5D500C13634 /* ExtensionURL.swift in Sources */,
@@ -894,12 +910,12 @@
 				DA68F1AF1F38E5D500C13634 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA68F1A81F38E5D500C13634 /* ExtensionCGImage.swift in Sources */,
 				DA68F19B1F38E5D500C13634 /* Model.swift in Sources */,
-				DA68F1A11F38E5D500C13634 /* MPerkThumbnailProtocolExtension.swift in Sources */,
 				DA68F1C01F38E5D500C13634 /* VCollectionFlow.swift in Sources */,
 				DA7CE8231F3F433C0078A26B /* MSessionStatus.swift in Sources */,
 				DA68F1A31F38E5D500C13634 /* MSession.swift in Sources */,
 				DA68F1C51F38E5D500C13634 /* VSpinner.swift in Sources */,
 				DA68F1B81F38E5D500C13634 /* ViewMain.swift in Sources */,
+				DA68A2711F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift in Sources */,
 				DAF1C1141F3947A300820417 /* ExtensionData.swift in Sources */,
 				DAF045941F392C520003C2EF /* ExtensionURLResponse.swift in Sources */,
 				DAE0AFD71F3BAF20006449D0 /* MHomeRequest.swift in Sources */,
@@ -922,10 +938,10 @@
 				DA68F19A1F38E5D500C13634 /* CHome.swift in Sources */,
 				DA68F1BC1F38E5D500C13634 /* VAlert.swift in Sources */,
 				DA68F1B11F38E5D500C13634 /* ExtensionUIFont.swift in Sources */,
-				DA68F1A01F38E5D500C13634 /* MPerkThumbnailProtocol.swift in Sources */,
 				DAE0AFD01F3BAEF9006449D0 /* MHomeItem.swift in Sources */,
 				DAE0AFCD1F3BAEF9006449D0 /* MHome.swift in Sources */,
 				DA68F1BB1F38E5D500C13634 /* ViewProtocol.swift in Sources */,
+				DA68A2741F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift in Sources */,
 				DA68F1B01F38E5D500C13634 /* ExtensionUIColor.swift in Sources */,
 				DAC215851F39378800E281DB /* MRequest.swift in Sources */,
 			);
