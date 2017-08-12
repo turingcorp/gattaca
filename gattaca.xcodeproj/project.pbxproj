@@ -65,6 +65,7 @@
 		DA7CE8211F3F3EF90078A26B /* TMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8201F3F3EF90078A26B /* TMSession.swift */; };
 		DA7CE8231F3F433C0078A26B /* MSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */; };
 		DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */; };
+		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
 		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
 		DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215811F39372D00E281DB /* MGiphyRandom.swift */; };
 		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
@@ -173,6 +174,7 @@
 		DA7CE8201F3F3EF90078A26B /* TMSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSession.swift; sourceTree = "<group>"; };
 		DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionStatus.swift; sourceTree = "<group>"; };
 		DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategy.swift; sourceTree = "<group>"; };
+		DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyFactory.swift; sourceTree = "<group>"; };
 		DAC2157F1F3936FA00E281DB /* MGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphy.swift; sourceTree = "<group>"; };
 		DAC215811F39372D00E281DB /* MGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyRandom.swift; sourceTree = "<group>"; };
 		DAC215841F39378800E281DB /* MRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRequest.swift; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */,
+				DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */,
 			);
 			path = Strategy;
 			sourceTree = "<group>";
@@ -829,6 +832,7 @@
 				DA68F1AE1F38E5D500C13634 /* ExtensionString.swift in Sources */,
 				DAE0AFD21F3BAEF9006449D0 /* MHomeActionHate.swift in Sources */,
 				DAE0AFD51F3BAEF9006449D0 /* MHomeActionProtocol.swift in Sources */,
+				DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */,
 				DA68F1BA1F38E5D500C13634 /* ViewParentTransitions.swift in Sources */,
 				DA68F1CC1F38F9C000C13634 /* DSettingsExtension.swift in Sources */,
 				DA68F1B71F38E5D500C13634 /* View.swift in Sources */,
