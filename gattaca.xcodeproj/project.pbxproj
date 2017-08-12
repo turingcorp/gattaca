@@ -72,6 +72,7 @@
 		DACECC481F3A23C30009D933 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACECC471F3A23C30009D933 /* spinner.xcassets */; };
 		DACF0F5C1F3BB3AF00C716A9 /* MGifStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */; };
 		DAD67F191F3F56FE006E9699 /* TVHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F181F3F56FE006E9699 /* TVHome.swift */; };
+		DAD67F1B1F3F5A08006E9699 /* CHomeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F1A1F3F5A08006E9699 /* CHomeShare.swift */; };
 		DAE0AF961F3AB432006449D0 /* VHomeActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF951F3AB432006449D0 /* VHomeActionsCell.swift */; };
 		DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */; };
 		DAE0AF9A1F3AB6CB006449D0 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE0AF991F3AB6CB006449D0 /* generic.xcassets */; };
@@ -191,6 +192,7 @@
 		DACECC471F3A23C30009D933 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
 		DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStorer.swift; sourceTree = "<group>"; };
 		DAD67F181F3F56FE006E9699 /* TVHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVHome.swift; sourceTree = "<group>"; };
+		DAD67F1A1F3F5A08006E9699 /* CHomeShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeShare.swift; sourceTree = "<group>"; };
 		DAE0AF951F3AB432006449D0 /* VHomeActionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsCell.swift; sourceTree = "<group>"; };
 		DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActions.swift; sourceTree = "<group>"; };
 		DAE0AF991F3AB6CB006449D0 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1541F38E5D500C13634 /* CHome.swift */,
+				DAD67F1A1F3F5A08006E9699 /* CHomeShare.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -823,6 +826,7 @@
 				DA68F19E1F38E5D500C13634 /* MPerkDomainProtocol.swift in Sources */,
 				DA68F1991F38E5D500C13634 /* ControllerParentTransitions.swift in Sources */,
 				DA68F1C11F38E5D500C13634 /* VGradient.swift in Sources */,
+				DAD67F1B1F3F5A08006E9699 /* CHomeShare.swift in Sources */,
 				DA68F1AB1F38E5D500C13634 /* ExtensionNotification.swift in Sources */,
 				DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */,
 				DAE0AFB91F3BA3C6006449D0 /* MGifStrategy.swift in Sources */,
