@@ -63,6 +63,7 @@
 		DA68F1CA1F38F80800C13634 /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */; };
 		DA68F1CC1F38F9C000C13634 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */; };
 		DA7CE8211F3F3EF90078A26B /* TMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8201F3F3EF90078A26B /* TMSession.swift */; };
+		DA7CE8231F3F433C0078A26B /* MSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */; };
 		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
 		DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215811F39372D00E281DB /* MGiphyRandom.swift */; };
 		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
@@ -169,6 +170,7 @@
 		DA7CE8131F3F3A510078A26B /* tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7CE8171F3F3A510078A26B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA7CE8201F3F3EF90078A26B /* TMSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSession.swift; sourceTree = "<group>"; };
+		DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionStatus.swift; sourceTree = "<group>"; };
 		DAC2157F1F3936FA00E281DB /* MGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphy.swift; sourceTree = "<group>"; };
 		DAC215811F39372D00E281DB /* MGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyRandom.swift; sourceTree = "<group>"; };
 		DAC215841F39378800E281DB /* MRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRequest.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1641F38E5D500C13634 /* MSession.swift */,
+				DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */,
 				DA68F1651F38E5D500C13634 /* MSessionPerks.swift */,
 				DA68F1661F38E5D500C13634 /* MSessionSettings.swift */,
 				DAE0AFB61F3BA352006449D0 /* MSessionGif.swift */,
@@ -798,6 +801,7 @@
 				DA68F19B1F38E5D500C13634 /* Model.swift in Sources */,
 				DA68F1A11F38E5D500C13634 /* MPerkThumbnailProtocolExtension.swift in Sources */,
 				DA68F1C01F38E5D500C13634 /* VCollectionFlow.swift in Sources */,
+				DA7CE8231F3F433C0078A26B /* MSessionStatus.swift in Sources */,
 				DA68F1A31F38E5D500C13634 /* MSession.swift in Sources */,
 				DA68F1C51F38E5D500C13634 /* VSpinner.swift in Sources */,
 				DA68F1B81F38E5D500C13634 /* ViewMain.swift in Sources */,
