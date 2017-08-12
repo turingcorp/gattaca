@@ -62,6 +62,7 @@
 		DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1951F38E5D500C13634 /* VHome.swift */; };
 		DA68F1CA1F38F80800C13634 /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */; };
 		DA68F1CC1F38F9C000C13634 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */; };
+		DA7CE8161F3F3A510078A26B /* tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8151F3F3A510078A26B /* tests.swift */; };
 		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
 		DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215811F39372D00E281DB /* MGiphyRandom.swift */; };
 		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
@@ -94,6 +95,16 @@
 		DAF045941F392C520003C2EF /* ExtensionURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045931F392C520003C2EF /* ExtensionURLResponse.swift */; };
 		DAF1C1141F3947A300820417 /* ExtensionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1C1131F3947A300820417 /* ExtensionData.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA7CE8181F3F3A510078A26B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA39E7721F38E3F90001CA28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA39E7791F38E3F90001CA28;
+			remoteInfo = gattaca;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9FB0C4F89BF859D73B9AE9D3 /* Pods-gattaca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.release.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +166,9 @@
 		DA68F1951F38E5D500C13634 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DA68F1C91F38F80800C13634 /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
+		DA7CE8131F3F3A510078A26B /* tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA7CE8151F3F3A510078A26B /* tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tests.swift; sourceTree = "<group>"; };
+		DA7CE8171F3F3A510078A26B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAC2157F1F3936FA00E281DB /* MGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphy.swift; sourceTree = "<group>"; };
 		DAC215811F39372D00E281DB /* MGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyRandom.swift; sourceTree = "<group>"; };
 		DAC215841F39378800E281DB /* MRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRequest.swift; sourceTree = "<group>"; };
@@ -197,6 +211,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA7CE8101F3F3A510078A26B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -221,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				DA39E77C1F38E3F90001CA28 /* gattaca */,
+				DA7CE8141F3F3A510078A26B /* tests */,
 				DA39E77B1F38E3F90001CA28 /* Products */,
 				25A226865CD26CE574FD985D /* Pods */,
 				4138065C43E7C9ECF6B995E7 /* Frameworks */,
@@ -231,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				DA39E77A1F38E3F90001CA28 /* gattaca.app */,
+				DA7CE8131F3F3A510078A26B /* tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -470,6 +493,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		DA7CE8141F3F3A510078A26B /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				DA7CE8151F3F3A510078A26B /* tests.swift */,
+				DA7CE8171F3F3A510078A26B /* Info.plist */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
 		DAC2157E1F3936EE00E281DB /* Giphy */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +583,24 @@
 			productReference = DA39E77A1F38E3F90001CA28 /* gattaca.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DA7CE8121F3F3A510078A26B /* tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA7CE81C1F3F3A510078A26B /* Build configuration list for PBXNativeTarget "tests" */;
+			buildPhases = (
+				DA7CE80F1F3F3A510078A26B /* Sources */,
+				DA7CE8101F3F3A510078A26B /* Frameworks */,
+				DA7CE8111F3F3A510078A26B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA7CE8191F3F3A510078A26B /* PBXTargetDependency */,
+			);
+			name = tests;
+			productName = tests;
+			productReference = DA7CE8131F3F3A510078A26B /* tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -565,6 +615,12 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7AMWG3RLHN;
 						ProvisioningStyle = Automatic;
+					};
+					DA7CE8121F3F3A510078A26B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7AMWG3RLHN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DA39E7791F38E3F90001CA28;
 					};
 				};
 			};
@@ -581,6 +637,7 @@
 			projectRoot = "";
 			targets = (
 				DA39E7791F38E3F90001CA28 /* gattaca */,
+				DA7CE8121F3F3A510078A26B /* tests */,
 			);
 		};
 /* End PBXProject section */
@@ -597,6 +654,13 @@
 				DA68F1B61F38E5D500C13634 /* ResourceURL.plist in Resources */,
 				DAE0AF9A1F3AB6CB006449D0 /* generic.xcassets in Resources */,
 				DA68F1B41F38E5D500C13634 /* LocalizableModel.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA7CE8111F3F3A510078A26B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +806,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA7CE80F1F3F3A510078A26B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA7CE8161F3F3A510078A26B /* tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA7CE8191F3F3A510078A26B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA39E7791F38E3F90001CA28 /* gattaca */;
+			targetProxy = DA7CE8181F3F3A510078A26B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DA68F1791F38E5D500C13634 /* LocalizableController.strings */ = {
@@ -897,6 +977,38 @@
 			};
 			name = Release;
 		};
+		DA7CE81A1F3F3A510078A26B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				INFOPLIST_FILE = tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gattaca.app/gattaca";
+			};
+			name = Debug;
+		};
+		DA7CE81B1F3F3A510078A26B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				INFOPLIST_FILE = tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gattaca.app/gattaca";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -917,6 +1029,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DA7CE81C1F3F3A510078A26B /* Build configuration list for PBXNativeTarget "tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA7CE81A1F3F3A510078A26B /* Debug */,
+				DA7CE81B1F3F3A510078A26B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
