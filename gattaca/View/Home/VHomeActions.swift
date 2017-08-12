@@ -24,6 +24,7 @@ class VHomeActions:VCollection<
         }
         
         let buttonShare:UIButton = UIButton()
+        buttonShare.accessibilityIdentifier = "asd"
         buttonShare.setImage(
             #imageLiteral(resourceName: "assetGenericShareOff"),
             for:UIControlState.normal)
