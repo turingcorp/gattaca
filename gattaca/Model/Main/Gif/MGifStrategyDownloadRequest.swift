@@ -2,33 +2,6 @@ import Foundation
 
 extension MGifStrategyDownload
 {
-    func dispatchDownload()
-    {
-        guard
-            
-            let gif:DGif = MSession.sharedInstance.gif.firstItemNew()
-            
-        else
-        {
-            model.strategyStand()
-            
-            return
-        }
-        
-        gif.statusLoading()
-        requestGif(gif:gif)
-    }
-    
-    func downloadWithDelay()
-    {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
-            deadline:DispatchTime.now() + kDelayDownloadNext)
-        { [weak self] in
-            
-            self?.dispatchDownload()
-        }
-    }
-    
     //MARK: private
     
     private func requestGif(gif:DGif)
@@ -127,5 +100,34 @@ extension MGifStrategyDownload
     private func downloadError(message:String)
     {
         VAlert.messageFail(message:message)
+    }
+    
+    //MARK: internal
+    
+    func dispatchDownload()
+    {
+        guard
+            
+            let gif:DGif = MSession.sharedInstance.gif.firstItemNew()
+            
+        else
+        {
+            model.strategyStand()
+            
+            return
+        }
+        
+        gif.statusLoading()
+        requestGif(gif:gif)
+    }
+    
+    func downloadWithDelay()
+    {
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
+            deadline:DispatchTime.now() + kDelayDownloadNext)
+        { [weak self] in
+            
+            self?.dispatchDownload()
+        }
     }
 }

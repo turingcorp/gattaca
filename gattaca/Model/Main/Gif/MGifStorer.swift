@@ -3,33 +3,6 @@ import CoreData
 
 extension MGif
 {
-    func storeItems(
-        items:[MGiphyItem],
-        completion:@escaping(() -> ()))
-    {
-        let countItems:Int = items.count
-        
-        if countItems > 0
-        {
-            let dispatchGroup:DispatchGroup = MGif.factoryDispatchGroup()
-            dispatchGroup.notify(
-                queue:
-                DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
-            { [weak self] in
-                
-                self?.storeFinished(completion:completion)
-            }
-            
-            storeItems(
-                dispatchGroup:dispatchGroup,
-                items:items)
-        }
-        else
-        {
-            completion()
-        }
-    }
-    
     //MARK: private
     
     private class func factoryDispatchGroup() -> DispatchGroup
@@ -84,6 +57,35 @@ extension MGif
             MSession.sharedInstance.gif.addItem(item:gif)
             
             dispatchGroup.leave()
+        }
+    }
+    
+    //MARK: internal
+    
+    func storeItems(
+        items:[MGiphyItem],
+        completion:@escaping(() -> ()))
+    {
+        let countItems:Int = items.count
+        
+        if countItems > 0
+        {
+            let dispatchGroup:DispatchGroup = MGif.factoryDispatchGroup()
+            dispatchGroup.notify(
+                queue:
+                DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
+            { [weak self] in
+                
+                self?.storeFinished(completion:completion)
+            }
+            
+            storeItems(
+                dispatchGroup:dispatchGroup,
+                items:items)
+        }
+        else
+        {
+            completion()
         }
     }
 }

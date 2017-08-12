@@ -2,6 +2,20 @@ import Foundation
 
 extension MGifStrategyDownload
 {
+    //MARK: private
+    
+    private func downloadSuccess(gif:DGif)
+    {
+        gif.statusWaiting()
+        downloadWithDelay()
+        
+        NotificationCenter.default.post(
+            name:Notification.gifDownloaded,
+            object:nil)
+    }
+    
+    //MARK: internal
+    
     func requestSuccess(gif:DGif, data:Data)
     {
         guard
@@ -9,7 +23,7 @@ extension MGifStrategyDownload
             let directory:URL = DGif.gifDirectory(),
             let gifPath:URL = gif.factoryPath(
                 directory:directory)
-        
+            
         else
         {
             downloadFailed(gif:gif)
@@ -31,17 +45,5 @@ extension MGifStrategyDownload
         }
         
         downloadSuccess(gif:gif)
-    }
-    
-    //MARK: private
-    
-    private func downloadSuccess(gif:DGif)
-    {
-        gif.statusWaiting()
-        downloadWithDelay()
-        
-        NotificationCenter.default.post(
-            name:Notification.gifDownloaded,
-            object:nil)
     }
 }
