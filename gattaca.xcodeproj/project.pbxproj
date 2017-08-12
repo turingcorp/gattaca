@@ -73,6 +73,7 @@
 		DACF0F5C1F3BB3AF00C716A9 /* MGifStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */; };
 		DAD67F191F3F56FE006E9699 /* TVHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F181F3F56FE006E9699 /* TVHome.swift */; };
 		DAD67F1B1F3F5A08006E9699 /* CHomeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F1A1F3F5A08006E9699 /* CHomeShare.swift */; };
+		DAD67F1F1F3F5BC4006E9699 /* TVHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F1E1F3F5BC4006E9699 /* TVHomeActionsShare.swift */; };
 		DAE0AF961F3AB432006449D0 /* VHomeActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF951F3AB432006449D0 /* VHomeActionsCell.swift */; };
 		DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */; };
 		DAE0AF9A1F3AB6CB006449D0 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE0AF991F3AB6CB006449D0 /* generic.xcassets */; };
@@ -193,6 +194,7 @@
 		DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStorer.swift; sourceTree = "<group>"; };
 		DAD67F181F3F56FE006E9699 /* TVHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVHome.swift; sourceTree = "<group>"; };
 		DAD67F1A1F3F5A08006E9699 /* CHomeShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeShare.swift; sourceTree = "<group>"; };
+		DAD67F1E1F3F5BC4006E9699 /* TVHomeActionsShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVHomeActionsShare.swift; sourceTree = "<group>"; };
 		DAE0AF951F3AB432006449D0 /* VHomeActionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsCell.swift; sourceTree = "<group>"; };
 		DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActions.swift; sourceTree = "<group>"; };
 		DAE0AF991F3AB6CB006449D0 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -583,6 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD67F181F3F56FE006E9699 /* TVHome.swift */,
+				DAD67F1E1F3F5BC4006E9699 /* TVHomeActionsShare.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -920,6 +923,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD67F1F1F3F5BC4006E9699 /* TVHomeActionsShare.swift in Sources */,
 				DAD67F191F3F56FE006E9699 /* TVHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
