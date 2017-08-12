@@ -12,11 +12,18 @@ class MGif
         map = [:]
         
         strategyStand()
+        
+        loadGifs
+        { [weak self] (items:[DGif]) in
+            
+            self?.items = items
+            self?.mapItems()
+        }
     }
     
     //MARK: private
     
-    private func mapItems(items:[DGif])
+    private func mapItems()
     {
         for item:DGif in items
         {
@@ -48,12 +55,6 @@ class MGif
     func strategyDownload()
     {
         strategy = MGifStrategyDownload(model:self)
-    }
-    
-    func itemsLoaded(items:[DGif])
-    {
-        self.items = items
-        mapItems(items:items)
     }
     
     func addItem(item:DGif)

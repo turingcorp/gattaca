@@ -4,7 +4,6 @@ class MSession
 {
     static let sharedInstance:MSession = MSession()
     
-    let gif:MGif
     private(set) var status:MSession.Status
     private(set) var settings:DSettings?
     
