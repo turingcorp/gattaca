@@ -41,7 +41,6 @@ extension MSession
                 return
             }
             
-            
             self.settingsLoaded(settings:settings)
         }
     }

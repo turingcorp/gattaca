@@ -17,9 +17,8 @@ class MSession
     func loadSession()
     {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        { [weak self] in
-            
-            self?.asyncLoadSession()
+        {
+            self.asyncLoadSession()
         }
     }
     
