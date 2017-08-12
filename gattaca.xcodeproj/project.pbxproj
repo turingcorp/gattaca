@@ -62,7 +62,6 @@
 		DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1951F38E5D500C13634 /* VHome.swift */; };
 		DA68F1CA1F38F80800C13634 /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */; };
 		DA68F1CC1F38F9C000C13634 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */; };
-		DA7CE8211F3F3EF90078A26B /* TMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8201F3F3EF90078A26B /* TMSession.swift */; };
 		DA7CE8231F3F433C0078A26B /* MSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */; };
 		DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */; };
 		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
@@ -102,13 +101,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DA7CE8181F3F3A510078A26B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DA39E7721F38E3F90001CA28 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DA39E7791F38E3F90001CA28;
-			remoteInfo = gattaca;
-		};
 		DA7CE8321F3F4D060078A26B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DA39E7721F38E3F90001CA28 /* Project object */;
@@ -178,9 +170,6 @@
 		DA68F1951F38E5D500C13634 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DA68F1C91F38F80800C13634 /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
-		DA7CE8131F3F3A510078A26B /* tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA7CE8171F3F3A510078A26B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA7CE8201F3F3EF90078A26B /* TMSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSession.swift; sourceTree = "<group>"; };
 		DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionStatus.swift; sourceTree = "<group>"; };
 		DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategy.swift; sourceTree = "<group>"; };
 		DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyFactory.swift; sourceTree = "<group>"; };
@@ -230,13 +219,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA7CE8101F3F3A510078A26B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DA7CE82A1F3F4D060078A26B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				DA39E77C1F38E3F90001CA28 /* gattaca */,
-				DA7CE8141F3F3A510078A26B /* tests */,
 				DA7CE82E1F3F4D060078A26B /* uitests */,
 				DA39E77B1F38E3F90001CA28 /* Products */,
 				25A226865CD26CE574FD985D /* Pods */,
@@ -280,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				DA39E77A1F38E3F90001CA28 /* gattaca.app */,
-				DA7CE8131F3F3A510078A26B /* tests.xctest */,
 				DA7CE82D1F3F4D060078A26B /* uitests.xctest */,
 			);
 			name = Products;
@@ -524,39 +504,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		DA7CE8141F3F3A510078A26B /* tests */ = {
-			isa = PBXGroup;
-			children = (
-				DA7CE81D1F3F3EE30078A26B /* Model */,
-				DA7CE8171F3F3A510078A26B /* Info.plist */,
-			);
-			path = tests;
-			sourceTree = "<group>";
-		};
-		DA7CE81D1F3F3EE30078A26B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DA7CE81E1F3F3EE30078A26B /* Main */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		DA7CE81E1F3F3EE30078A26B /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				DA7CE81F1F3F3EE30078A26B /* Session */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		DA7CE81F1F3F3EE30078A26B /* Session */ = {
-			isa = PBXGroup;
-			children = (
-				DA7CE8201F3F3EF90078A26B /* TMSession.swift */,
-			);
-			path = Session;
-			sourceTree = "<group>";
-		};
 		DA7CE8241F3F43ED0078A26B /* Strategy */ = {
 			isa = PBXGroup;
 			children = (
@@ -672,24 +619,6 @@
 			productReference = DA39E77A1F38E3F90001CA28 /* gattaca.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DA7CE8121F3F3A510078A26B /* tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DA7CE81C1F3F3A510078A26B /* Build configuration list for PBXNativeTarget "tests" */;
-			buildPhases = (
-				DA7CE80F1F3F3A510078A26B /* Sources */,
-				DA7CE8101F3F3A510078A26B /* Frameworks */,
-				DA7CE8111F3F3A510078A26B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DA7CE8191F3F3A510078A26B /* PBXTargetDependency */,
-			);
-			name = tests;
-			productName = tests;
-			productReference = DA7CE8131F3F3A510078A26B /* tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		DA7CE82C1F3F4D060078A26B /* uitests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA7CE8341F3F4D060078A26B /* Build configuration list for PBXNativeTarget "uitests" */;
@@ -723,13 +652,6 @@
 						DevelopmentTeam = 7AMWG3RLHN;
 						ProvisioningStyle = Automatic;
 					};
-					DA7CE8121F3F3A510078A26B = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7AMWG3RLHN;
-						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
-						TestTargetID = DA39E7791F38E3F90001CA28;
-					};
 					DA7CE82C1F3F4D060078A26B = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7AMWG3RLHN;
@@ -752,7 +674,6 @@
 			projectRoot = "";
 			targets = (
 				DA39E7791F38E3F90001CA28 /* gattaca */,
-				DA7CE8121F3F3A510078A26B /* tests */,
 				DA7CE82C1F3F4D060078A26B /* uitests */,
 			);
 		};
@@ -770,13 +691,6 @@
 				DA68F1B61F38E5D500C13634 /* ResourceURL.plist in Resources */,
 				DAE0AF9A1F3AB6CB006449D0 /* generic.xcassets in Resources */,
 				DA68F1B41F38E5D500C13634 /* LocalizableModel.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA7CE8111F3F3A510078A26B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,14 +847,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA7CE80F1F3F3A510078A26B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DA7CE8211F3F3EF90078A26B /* TMSession.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DA7CE8291F3F4D060078A26B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -952,11 +858,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DA7CE8191F3F3A510078A26B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DA39E7791F38E3F90001CA28 /* gattaca */;
-			targetProxy = DA7CE8181F3F3A510078A26B /* PBXContainerItemProxy */;
-		};
 		DA7CE8331F3F4D060078A26B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DA39E7791F38E3F90001CA28 /* gattaca */;
@@ -1117,39 +1018,6 @@
 			};
 			name = Release;
 		};
-		DA7CE81A1F3F3A510078A26B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				INFOPLIST_FILE = tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iturbide.tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gattaca.app/gattaca";
-			};
-			name = Debug;
-		};
-		DA7CE81B1F3F3A510078A26B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 7AMWG3RLHN;
-				INFOPLIST_FILE = tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iturbide.tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gattaca.app/gattaca";
-			};
-			name = Release;
-		};
 		DA7CE8351F3F4D060078A26B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1201,14 +1069,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		DA7CE81C1F3F3A510078A26B /* Build configuration list for PBXNativeTarget "tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DA7CE81A1F3F3A510078A26B /* Debug */,
-				DA7CE81B1F3F3A510078A26B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 		DA7CE8341F3F4D060078A26B /* Build configuration list for PBXNativeTarget "uitests" */ = {
 			isa = XCConfigurationList;
