@@ -6,7 +6,6 @@ class VHomeActions:VCollection<
     CHome,
     VHomeActionsCell>
 {
-    private weak var buttonShare:UIButton!
     private var cellSize:CGSize?
     private let kCellWidth:CGFloat = 85
     private let kShareWidth:CGFloat = 55
@@ -23,31 +22,19 @@ class VHomeActions:VCollection<
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
         }
         
-        let buttonShare:UIButton = UIButton()
-        buttonShare.accessibilityIdentifier = "asd"
-        buttonShare.setImage(
-            #imageLiteral(resourceName: "assetGenericShareOff"),
-            for:UIControlState.normal)
-        buttonShare.setImage(
-            #imageLiteral(resourceName: "assetGenericShareOn"),
-            for:UIControlState.highlighted)
-        buttonShare.translatesAutoresizingMaskIntoConstraints = false
-        buttonShare.addTarget(
-            self,
-            action:#selector(selectorShare(sender:)),
-            for:UIControlEvents.touchUpInside)
-        self.buttonShare = buttonShare
+        let viewShare:VHomeActionsShare = VHomeActionsShare(
+            controller:controller)
         
-        addSubview(buttonShare)
+        addSubview(viewShare)
         
         NSLayoutConstraint.equalsVertical(
-            view:buttonShare,
+            view:viewShare,
             toView:self)
         NSLayoutConstraint.rightToRight(
-            view:buttonShare,
+            view:viewShare,
             toView:self)
         NSLayoutConstraint.width(
-            view:buttonShare,
+            view:viewShare,
             constant:kShareWidth)
     }
     
@@ -114,13 +101,6 @@ class VHomeActions:VCollection<
         cell.config(model:item)
         
         return cell
-    }
-    
-    //MARK: selectors
-    
-    func selectorShare(sender button:UIButton)
-    {
-        controller.share()
     }
     
     //MARK: private
