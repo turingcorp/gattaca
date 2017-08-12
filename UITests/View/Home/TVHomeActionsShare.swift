@@ -15,12 +15,12 @@ class TVHomeActionsShare:XCTestCase
         
         XCTAssertFalse(
             app.sheets["Share"].exists,
-            "sheet should be nil")
+            "share sheet should not be visible")
         
         app.buttons["VHomeActionsShare_button"].tap()
         
         XCTAssertTrue(
             app.sheets["Share"].exists,
-            "sheet should appear")
+            "share sheet should appear")
     }
 }
