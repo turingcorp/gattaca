@@ -66,7 +66,6 @@
 		DA7CE8231F3F433C0078A26B /* MSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */; };
 		DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */; };
 		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
-		DA7CE8301F3F4D060078A26B /* uitests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE82F1F3F4D060078A26B /* uitests.swift */; };
 		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
 		DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215811F39372D00E281DB /* MGiphyRandom.swift */; };
 		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
@@ -184,7 +183,6 @@
 		DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategy.swift; sourceTree = "<group>"; };
 		DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyFactory.swift; sourceTree = "<group>"; };
 		DA7CE82D1F3F4D060078A26B /* uitests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uitests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA7CE82F1F3F4D060078A26B /* uitests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uitests.swift; sourceTree = "<group>"; };
 		DA7CE8311F3F4D060078A26B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAC2157F1F3936FA00E281DB /* MGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphy.swift; sourceTree = "<group>"; };
 		DAC215811F39372D00E281DB /* MGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyRandom.swift; sourceTree = "<group>"; };
@@ -566,7 +564,6 @@
 		DA7CE82E1F3F4D060078A26B /* uitests */ = {
 			isa = PBXGroup;
 			children = (
-				DA7CE82F1F3F4D060078A26B /* uitests.swift */,
 				DA7CE8311F3F4D060078A26B /* Info.plist */,
 			);
 			path = uitests;
@@ -924,7 +921,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA7CE8301F3F4D060078A26B /* uitests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
