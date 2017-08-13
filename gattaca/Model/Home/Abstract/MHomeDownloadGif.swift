@@ -60,7 +60,7 @@ extension MHome
             url:url,
             timeout:MHome.kTimeout)
         
-        let downloadTask:URLSessionDownloadTask = session.downloadTask(
+        let downloadTask:URLSessionDownloadTask = urlSession.downloadTask(
             with:request)
         { [weak self] (fileUrl:URL?, urlResponse:URLResponse?, error:Error?) in
             

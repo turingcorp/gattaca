@@ -2,24 +2,24 @@ import Foundation
 
 class MHome:Model
 {
-    let session:URLSession
+    let urlSession:URLSession
     let actions:[MHomeActionProtocol]
     var requestOffset:Int
     private(set) var items:[MHomeItem]
     
-    required init()
+    required init(session:MSession)
     {
         actions = MHome.factoryActions()
-        session = MRequest.factorySession()
+        urlSession = MRequest.factorySession()
         items = []
         requestOffset = 0
         
-        super.init()
+        super.init(session:session)
     }
     
     deinit
     {
-        session.invalidateAndCancel()
+        urlSession.invalidateAndCancel()
         NotificationCenter.default.removeObserver(self)
     }
     
