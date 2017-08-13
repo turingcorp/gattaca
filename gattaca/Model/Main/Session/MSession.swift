@@ -14,11 +14,20 @@ class MSession
     
     private func asyncLoad(completion:@escaping(() -> ()))
     {
-        load
-        { [weak self] (session:DSession?) in
+        guard
+            
+            let manager:DManager = DManager()
+            
+        else
+        {
+            return
+        }
         
+        load(manager:manager)
+        { [weak self] (session:DSession) in
+            
             self?.session = session
-//            DManager.sharedInstance?.save()
+            manager.save()
             
             completion()
         }
@@ -29,8 +38,9 @@ class MSession
     func load(completion:@escaping(() -> ()))
     {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        {
-            self.asyncLoad(completion:completion)
+        { [weak self] in
+            
+            self?.asyncLoad(completion:completion)
         }
     }
 }
