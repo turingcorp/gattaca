@@ -12,7 +12,7 @@ class CHome:Controller<VHome, MHome>
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.dispatchRefresh()
+            self?.asyncRefresh()
         }
     }
     
@@ -31,27 +31,21 @@ class CHome:Controller<VHome, MHome>
     
     //MARK: notified
     
-    func notifiedSessionLoaded(sender notification:Notification)
-    {
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            self?.dispatchSessionLoaded()
-        }
-    }
-    
     func notifiedBecameActive(sender notification:Notification)
     {
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            self?.dispatchBecameActive()
-        }
+        view().viewDidAppear()
     }
     
     //MARK: private
     
-    private func dispatchSessionLoaded()
+    private func asyncRefresh()
+    {
+        view().refresh()
+    }
+    
+    //MARK: internal
+    
+    func sessionLoaded()
     {
         model.loadItems()
         NotificationCenter.default.addObserver(
@@ -59,15 +53,5 @@ class CHome:Controller<VHome, MHome>
             selector:#selector(notifiedBecameActive(sender:)),
             name:NSNotification.Name.UIApplicationDidBecomeActive,
             object:nil)
-    }
-    
-    private func dispatchRefresh()
-    {
-        view().refresh()
-    }
-    
-    private func dispatchBecameActive()
-    {
-        view().viewDidAppear()
     }
 }
