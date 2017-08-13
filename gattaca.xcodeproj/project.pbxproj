@@ -29,7 +29,6 @@
 		DA68F19B1F38E5D500C13634 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1571F38E5D500C13634 /* Model.swift */; };
 		DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1581F38E5D500C13634 /* ModelDelegate.swift */; };
 		DA68F1A31F38E5D500C13634 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1641F38E5D500C13634 /* MSession.swift */; };
-		DA68F1A41F38E5D500C13634 /* MSessionPerks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1651F38E5D500C13634 /* MSessionPerks.swift */; };
 		DA68F1A51F38E5D500C13634 /* MSessionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1661F38E5D500C13634 /* MSessionSettings.swift */; };
 		DA68F1A61F38E5D500C13634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA68F1691F38E5D500C13634 /* LaunchScreen.storyboard */; };
 		DA68F1A71F38E5D500C13634 /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F16B1F38E5D500C13634 /* DManager.swift */; };
@@ -150,7 +149,6 @@
 		DA68F1571F38E5D500C13634 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DA68F1581F38E5D500C13634 /* ModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDelegate.swift; sourceTree = "<group>"; };
 		DA68F1641F38E5D500C13634 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
-		DA68F1651F38E5D500C13634 /* MSessionPerks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionPerks.swift; sourceTree = "<group>"; };
 		DA68F1661F38E5D500C13634 /* MSessionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionSettings.swift; sourceTree = "<group>"; };
 		DA68F1691F38E5D500C13634 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA68F16B1F38E5D500C13634 /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
@@ -431,7 +429,6 @@
 				DA68F1641F38E5D500C13634 /* MSession.swift */,
 				DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */,
 				DA68F1661F38E5D500C13634 /* MSessionSettings.swift */,
-				DA68F1651F38E5D500C13634 /* MSessionPerks.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -906,7 +903,6 @@
 				DA68F1B21F38E5D500C13634 /* ExtensionURL.swift in Sources */,
 				DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */,
 				DA68A2681F3F75320094BC9B /* MGifLoader.swift in Sources */,
-				DA68F1A41F38E5D500C13634 /* MSessionPerks.swift in Sources */,
 				DAE0AFC11F3BAB16006449D0 /* MGiphyFactory.swift in Sources */,
 				DA68F1C41F38E5D500C13634 /* VSliderBar.swift in Sources */,
 				DAE0AFBF1F3BAA88006449D0 /* MGiphyItem.swift in Sources */,
