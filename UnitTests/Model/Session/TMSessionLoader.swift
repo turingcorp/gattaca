@@ -10,14 +10,21 @@ class TMSessionLoader:XCTestCase
         let sessionExpectation:XCTestExpectation = expectation(
             description:"session created")
         
-        let manager:DManager? = DManager()
+        guard
+            
+            let manager:DManager = DManager()
+        
+        else
+        {
+            return
+        }
         
         XCTAssertNotNil(
             manager,
             "failed creating manager")
         
         let session:MSession = MSession()
-        session.create(manager:manager!)
+        session.create(manager:manager)
         { (session:DSession) in
             
             sessionExpectation.fulfill()
@@ -26,6 +33,11 @@ class TMSessionLoader:XCTestCase
         waitForExpectations(timeout:kWaitExpectation)
         { (error:Error?) in
             
+            let hasChanges:Bool = manager.managedObjectContext.hasChanges
+            
+            XCTAssertFalse(
+                hasChanges,
+                "failed to save changes")
         }
     }
 }
