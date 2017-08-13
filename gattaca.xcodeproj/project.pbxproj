@@ -22,6 +22,11 @@
 		DA68A2781F3F774C0094BC9B /* MPerkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */; };
 		DA68A27A1F407F530094BC9B /* MPerkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2791F407F530094BC9B /* MPerkFactory.swift */; };
 		DA68A27C1F4085C00094BC9B /* MSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27B1F4085C00094BC9B /* MSessionLoader.swift */; };
+		DA68A2861F408A350094BC9B /* DGifExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27E1F408A350094BC9B /* DGifExtension.swift */; };
+		DA68A2871F408A350094BC9B /* DGifExtensionDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */; };
+		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
+		DA68A2891F408A350094BC9B /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2821F408A350094BC9B /* DManager.swift */; };
+		DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
 		DA68F1971F38E5D500C13634 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1501F38E5D500C13634 /* Controller.swift */; };
 		DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1511F38E5D500C13634 /* ControllerParent.swift */; };
@@ -31,7 +36,6 @@
 		DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1581F38E5D500C13634 /* ModelDelegate.swift */; };
 		DA68F1A31F38E5D500C13634 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1641F38E5D500C13634 /* MSession.swift */; };
 		DA68F1A61F38E5D500C13634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA68F1691F38E5D500C13634 /* LaunchScreen.storyboard */; };
-		DA68F1A71F38E5D500C13634 /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F16B1F38E5D500C13634 /* DManager.swift */; };
 		DA68F1A81F38E5D500C13634 /* ExtensionCGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F16D1F38E5D500C13634 /* ExtensionCGImage.swift */; };
 		DA68F1A91F38E5D500C13634 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F16E1F38E5D500C13634 /* ExtensionDictionary.swift */; };
 		DA68F1AA1F38E5D500C13634 /* ExtensionFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F16F1F38E5D500C13634 /* ExtensionFileManager.swift */; };
@@ -64,8 +68,6 @@
 		DA68F1C51F38E5D500C13634 /* VSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1921F38E5D500C13634 /* VSpinner.swift */; };
 		DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1931F38E5D500C13634 /* VToast.swift */; };
 		DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1951F38E5D500C13634 /* VHome.swift */; };
-		DA68F1CA1F38F80800C13634 /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */; };
-		DA68F1CC1F38F9C000C13634 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */; };
 		DA7CE8231F3F433C0078A26B /* MSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */; };
 		DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */; };
 		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
@@ -82,8 +84,6 @@
 		DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */; };
 		DAE0AF9A1F3AB6CB006449D0 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE0AF991F3AB6CB006449D0 /* generic.xcassets */; };
 		DAE0AFA61F3AD96B006449D0 /* MGiphyTrending.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFA51F3AD96B006449D0 /* MGiphyTrending.swift */; };
-		DAE0AFAC1F3B67FC006449D0 /* DGifExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFAB1F3B67FC006449D0 /* DGifExtension.swift */; };
-		DAE0AFB01F3B9BB4006449D0 /* DGifExtensionDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFAF1F3B9BB4006449D0 /* DGifExtensionDirectory.swift */; };
 		DAE0AFB51F3BA311006449D0 /* MGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFB41F3BA311006449D0 /* MGif.swift */; };
 		DAE0AFB91F3BA3C6006449D0 /* MGifStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFB81F3BA3C6006449D0 /* MGifStrategy.swift */; };
 		DAE0AFBB1F3BA594006449D0 /* MGifStrategyStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */; };
@@ -142,6 +142,11 @@
 		DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkLoader.swift; sourceTree = "<group>"; };
 		DA68A2791F407F530094BC9B /* MPerkFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkFactory.swift; sourceTree = "<group>"; };
 		DA68A27B1F4085C00094BC9B /* MSessionLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionLoader.swift; sourceTree = "<group>"; };
+		DA68A27E1F408A350094BC9B /* DGifExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtension.swift; sourceTree = "<group>"; };
+		DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtensionDirectory.swift; sourceTree = "<group>"; };
+		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
+		DA68A2821F408A350094BC9B /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
+		DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA68F1501F38E5D500C13634 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA68F1511F38E5D500C13634 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -151,7 +156,6 @@
 		DA68F1581F38E5D500C13634 /* ModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDelegate.swift; sourceTree = "<group>"; };
 		DA68F1641F38E5D500C13634 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
 		DA68F1691F38E5D500C13634 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DA68F16B1F38E5D500C13634 /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
 		DA68F16D1F38E5D500C13634 /* ExtensionCGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCGImage.swift; sourceTree = "<group>"; };
 		DA68F16E1F38E5D500C13634 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
 		DA68F16F1F38E5D500C13634 /* ExtensionFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFileManager.swift; sourceTree = "<group>"; };
@@ -184,8 +188,6 @@
 		DA68F1921F38E5D500C13634 /* VSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSpinner.swift; sourceTree = "<group>"; };
 		DA68F1931F38E5D500C13634 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
 		DA68F1951F38E5D500C13634 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
-		DA68F1C91F38F80800C13634 /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
-		DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionStatus.swift; sourceTree = "<group>"; };
 		DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategy.swift; sourceTree = "<group>"; };
 		DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyFactory.swift; sourceTree = "<group>"; };
@@ -206,8 +208,6 @@
 		DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActions.swift; sourceTree = "<group>"; };
 		DAE0AF991F3AB6CB006449D0 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
 		DAE0AFA51F3AD96B006449D0 /* MGiphyTrending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyTrending.swift; sourceTree = "<group>"; };
-		DAE0AFAB1F3B67FC006449D0 /* DGifExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtension.swift; sourceTree = "<group>"; };
-		DAE0AFAF1F3B9BB4006449D0 /* DGifExtensionDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtensionDirectory.swift; sourceTree = "<group>"; };
 		DAE0AFB41F3BA311006449D0 /* MGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGif.swift; sourceTree = "<group>"; };
 		DAE0AFB81F3BA3C6006449D0 /* MGifStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategy.swift; sourceTree = "<group>"; };
 		DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyStand.swift; sourceTree = "<group>"; };
@@ -344,6 +344,32 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		DA68A27D1F408A350094BC9B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DA68A27E1F408A350094BC9B /* DGifExtension.swift */,
+				DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */,
+				DA68A2801F408A350094BC9B /* DSettingsExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DA68A2811F408A350094BC9B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DA68A2821F408A350094BC9B /* DManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		DA68A2831F408A350094BC9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DA68F14D1F38E5D500C13634 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,11 +483,9 @@
 		DA68F16A1F38E5D500C13634 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */,
-				DA68F16B1F38E5D500C13634 /* DManager.swift */,
-				DA68F1CB1F38F9C000C13634 /* DSettingsExtension.swift */,
-				DAE0AFAB1F3B67FC006449D0 /* DGifExtension.swift */,
-				DAE0AFAF1F3B9BB4006449D0 /* DGifExtensionDirectory.swift */,
+				DA68A27D1F408A350094BC9B /* Extension */,
+				DA68A2811F408A350094BC9B /* Manager */,
+				DA68A2831F408A350094BC9B /* Model */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -864,14 +888,14 @@
 				DAD67F1B1F3F5A08006E9699 /* CHomeShare.swift in Sources */,
 				DA68F1AB1F38E5D500C13634 /* ExtensionNotification.swift in Sources */,
 				DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */,
+				DA68A2871F408A350094BC9B /* DGifExtensionDirectory.swift in Sources */,
 				DA68A2721F3F77310094BC9B /* MPerkThumbnailProtocol.swift in Sources */,
+				DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */,
 				DAE0AFB91F3BA3C6006449D0 /* MGifStrategy.swift in Sources */,
 				DAE0AFBD1F3BA692006449D0 /* MGifStrategyDownload.swift in Sources */,
 				DA68F1B91F38E5D500C13634 /* ViewParent.swift in Sources */,
 				DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */,
 				DA68F1C21F38E5D500C13634 /* VPushBackground.swift in Sources */,
-				DAE0AFB01F3B9BB4006449D0 /* DGifExtensionDirectory.swift in Sources */,
-				DA68F1CA1F38F80800C13634 /* DGattaca.xcdatamodeld in Sources */,
 				DA68F1C31F38E5D500C13634 /* VSlider.swift in Sources */,
 				DA68F1AD1F38E5D500C13634 /* ExtensionNSManagedObject.swift in Sources */,
 				DAE0AFBB1F3BA594006449D0 /* MGifStrategyStand.swift in Sources */,
@@ -885,11 +909,10 @@
 				DAE0AFD11F3BAEF9006449D0 /* MHomeLoader.swift in Sources */,
 				DA68F1BD1F38E5D500C13634 /* VBlur.swift in Sources */,
 				DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */,
-				DAE0AFAC1F3B67FC006449D0 /* DGifExtension.swift in Sources */,
 				DA68F1AA1F38E5D500C13634 /* ExtensionFileManager.swift in Sources */,
-				DA68F1A71F38E5D500C13634 /* DManager.swift in Sources */,
 				DA68A27A1F407F530094BC9B /* MPerkFactory.swift in Sources */,
 				DAE0AF961F3AB432006449D0 /* VHomeActionsCell.swift in Sources */,
+				DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */,
 				DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */,
 				DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */,
 				DAE0AFD41F3BAEF9006449D0 /* MHomeActionMeh.swift in Sources */,
@@ -925,12 +948,13 @@
 				DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */,
 				DAE0AFCE1F3BAEF9006449D0 /* MHomeFactory.swift in Sources */,
 				DA42A7B11F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift in Sources */,
+				DA68A2891F408A350094BC9B /* DManager.swift in Sources */,
 				DA68F1AE1F38E5D500C13634 /* ExtensionString.swift in Sources */,
 				DAE0AFD21F3BAEF9006449D0 /* MHomeActionHate.swift in Sources */,
 				DAE0AFD51F3BAEF9006449D0 /* MHomeActionProtocol.swift in Sources */,
+				DA68A2861F408A350094BC9B /* DGifExtension.swift in Sources */,
 				DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */,
 				DA68F1BA1F38E5D500C13634 /* ViewParentTransitions.swift in Sources */,
-				DA68F1CC1F38F9C000C13634 /* DSettingsExtension.swift in Sources */,
 				DA68F1B71F38E5D500C13634 /* View.swift in Sources */,
 				DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */,
 				DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */,
@@ -1237,12 +1261,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DA68F1C81F38F80800C13634 /* DGattaca.xcdatamodeld */ = {
+		DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				DA68F1C91F38F80800C13634 /* DGattaca.xcdatamodel */,
+				DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */,
 			);
-			currentVersion = DA68F1C91F38F80800C13634 /* DGattaca.xcdatamodel */;
+			currentVersion = DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */;
 			path = DGattaca.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
