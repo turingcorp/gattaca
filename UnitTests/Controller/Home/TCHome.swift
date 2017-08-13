@@ -5,7 +5,7 @@ class TCHome:XCTestCase
 {
     private var session:MSession?
     private var controller:CHome?
-    private let kWaitSession:UInt32 = 3
+    private let kWaitSession:UInt32 = 2
     
     override func setUp()
     {
@@ -37,5 +37,16 @@ class TCHome:XCTestCase
             status,
             MSession.Status.loaded,
             "session is not being loaded")
+    }
+    
+    func testSessionModel()
+    {
+        sleep(kWaitSession)
+        
+        let session:DSession? = self.session?.session
+        
+        XCTAssertNotNil(
+            session,
+            "failed loading session from core data")
     }
 }
