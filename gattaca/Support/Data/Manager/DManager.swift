@@ -26,20 +26,10 @@ class DManager
         if managedObjectContext.hasChanges
         {
             managedObjectContext.perform
-            { [weak self] in
-                
-                guard
-                
-                    let managedObjectContext:NSManagedObjectContext = self?.managedObjectContext
-                
-                else
-                {
-                    return
-                }
-                
+            {
                 do
                 {
-                    try managedObjectContext.save()
+                    try self.managedObjectContext.save()
                 }
                 catch
                 {
@@ -60,14 +50,12 @@ class DManager
         completion:@escaping((NSManagedObject) -> ()))
     {
         managedObjectContext.perform
-        { [weak self] in
-            
+        {
             guard
                 
-                let managedObjectContext:NSManagedObjectContext = self?.managedObjectContext,
                 let entityDescription:NSEntityDescription = NSEntityDescription.entity(
                     forEntityName:entity.entityName,
-                    in:managedObjectContext)
+                    in:self.managedObjectContext)
                 
             else
             {
@@ -76,7 +64,7 @@ class DManager
             
             let managedObject:NSManagedObject = NSManagedObject(
                 entity:entityDescription,
-                insertInto:managedObjectContext)
+                insertInto:self.managedObjectContext)
             
             completion(managedObject)
         }
@@ -99,22 +87,12 @@ class DManager
         fetchRequest.includesSubentities = true
         
         managedObjectContext.perform
-        { [weak self] in
-            
-            guard
-                
-                let managedObjectContext:NSManagedObjectContext = self?.managedObjectContext
-                
-            else
-            {
-                return
-            }
-            
+        {
             let results:[NSManagedObject]
             
             do
             {
-                results = try managedObjectContext.fetch(fetchRequest)
+                results = try self.managedObjectContext.fetch(fetchRequest)
             }
             catch
             {
@@ -128,18 +106,8 @@ class DManager
     func delete(data:NSManagedObject, completion:@escaping(() -> ()))
     {
         managedObjectContext.perform
-        { [weak self] in
-            
-            guard
-                
-                let managedObjectContext:NSManagedObjectContext = self?.managedObjectContext
-                
-            else
-            {
-                return
-            }
-            
-            managedObjectContext.delete(data)
+        {
+            self.managedObjectContext.delete(data)
             completion()
         }
     }

@@ -10,11 +10,11 @@ extension MSession
         completion:@escaping((DSession) -> ()))
     {
         manager.fetch(entity:DSession.self)
-        { [weak self] (data:[NSManagedObject]?) in
+        { [weak self] (data:[NSManagedObject]) in
             
             guard
                 
-                let session:DSession = data?.first as? DSession
+                let session:DSession = data.first as? DSession
                 
             else
             {
@@ -34,7 +34,7 @@ extension MSession
         completion:@escaping((DSession) -> ()))
     {
         manager.create(entity:DSession.self)
-        { (data:NSManagedObject?) in
+        { (data:NSManagedObject) in
             
             guard
             
