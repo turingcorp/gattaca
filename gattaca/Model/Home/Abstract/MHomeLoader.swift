@@ -23,7 +23,7 @@ extension MHome
     //MARK: private
     
     private func dispatchLoadItems()
-    {
+    {/*
         let gifItems:[DGif] = MSession.sharedInstance.gif.itemsWaiting()
         let countItems:Int = gifItems.count
         
@@ -37,7 +37,7 @@ extension MHome
         else
         {
             loadMoreGif()
-        }
+        }*/
     }
     
     private func loadMoreGif()

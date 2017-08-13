@@ -126,7 +126,7 @@ extension MHome
     }
     
     private func requestSuccess(json:Any)
-    {
+    {/*
         requestOffset += MHome.kLimit
         
         let items:[MGiphyItem] = MGiphy.factoryItems(
@@ -145,6 +145,6 @@ extension MHome
         else
         {
             requestGif()
-        }
+        }*/
     }
 }

@@ -105,7 +105,7 @@ extension MGifStrategyDownload
     //MARK: internal
     
     func dispatchDownload()
-    {
+    {/*
         guard
             
             let gif:DGif = MSession.sharedInstance.gif.firstItemNew()
@@ -118,7 +118,7 @@ extension MGifStrategyDownload
         }
         
         gif.statusLoading()
-        requestGif(gif:gif)
+        requestGif(gif:gif)*/
     }
     
     func downloadWithDelay()

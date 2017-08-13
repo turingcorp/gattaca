@@ -4,6 +4,8 @@ extension MHomeStrategy
 {
     class func factoryStrategy(controller:CHome) -> MHomeStrategy?
     {
+        return nil
+        /*
         let map:[MSession.Status:MHomeStrategy.Type] = strategyMap()
         let currentStatus:MSession.Status = MSession.sharedInstance.status
         
@@ -19,7 +21,7 @@ extension MHomeStrategy
         let strategy:MHomeStrategy = strategyType.init(
             controller:controller)
         
-        return strategy
+        return strategy*/
     }
     
     //MARK: private

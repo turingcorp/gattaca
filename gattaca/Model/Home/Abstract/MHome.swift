@@ -26,10 +26,10 @@ class MHome:Model
     //MARK: internal
     
     func updateItems(items:[MHomeItem])
-    {
+    {/*
         self.items.append(contentsOf:items)
         delegate?.modelRefresh()
         
-        MSession.sharedInstance.gif.strategy?.startBackgroundDownload()
+        MSession.sharedInstance.gif.strategy?.startBackgroundDownload()*/
     }
 }

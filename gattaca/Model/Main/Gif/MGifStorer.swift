@@ -40,7 +40,7 @@ extension MGif
     private func storeItem(
         dispatchGroup:DispatchGroup,
         item:MGiphyItem)
-    {
+    {/*
         DManager.sharedInstance?.create(entity:DGif.self)
         { (data:NSManagedObject?) in
             
@@ -57,7 +57,7 @@ extension MGif
             MSession.sharedInstance.gif.addItem(item:gif)
             
             dispatchGroup.leave()
-        }
+        }*/
     }
     
     //MARK: internal
