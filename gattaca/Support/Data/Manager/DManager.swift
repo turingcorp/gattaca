@@ -8,7 +8,7 @@ class DManager
     private let kModelExtension:String = "momd"
     private let kSQLiteExtension:String = ".sqlite"
     
-    private init?()
+    init?()
     {
         let sqliteFile:String = kModelName.appending(kSQLiteExtension)
         let storeCoordinatorURL:URL = FileManager.appDirectory.appendingPathComponent(
