@@ -9,18 +9,6 @@
 /* Begin PBXBuildFile section */
 		0FEFAB51E60F2A75275A558B /* Pods_gattaca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EB7DE9DB31C7535E0A58A4 /* Pods_gattaca.framework */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
-		DA42A7B11F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42A7B01F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift */; };
-		DA42A7B31F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42A7B21F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift */; };
-		DA68A2681F3F75320094BC9B /* MGifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2671F3F75320094BC9B /* MGifLoader.swift */; };
-		DA68A2701F3F77310094BC9B /* MPerkDomainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26B1F3F77310094BC9B /* MPerkDomainProtocol.swift */; };
-		DA68A2711F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26C1F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift */; };
-		DA68A2721F3F77310094BC9B /* MPerkThumbnailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26D1F3F77310094BC9B /* MPerkThumbnailProtocol.swift */; };
-		DA68A2731F3F77310094BC9B /* MPerkThumbnailProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26E1F3F77310094BC9B /* MPerkThumbnailProtocolExtension.swift */; };
-		DA68A2741F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26F1F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift */; };
-		DA68A2761F3F77400094BC9B /* MPerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2751F3F77400094BC9B /* MPerk.swift */; };
-		DA68A2781F3F774C0094BC9B /* MPerkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */; };
-		DA68A27A1F407F530094BC9B /* MPerkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2791F407F530094BC9B /* MPerkFactory.swift */; };
-		DA68A27C1F4085C00094BC9B /* MSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27B1F4085C00094BC9B /* MSessionLoader.swift */; };
 		DA68A2861F408A350094BC9B /* DGifExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27E1F408A350094BC9B /* DGifExtension.swift */; };
 		DA68A2871F408A350094BC9B /* DGifExtensionDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
@@ -34,7 +22,6 @@
 		DA68F19A1F38E5D500C13634 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1541F38E5D500C13634 /* CHome.swift */; };
 		DA68F19B1F38E5D500C13634 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1571F38E5D500C13634 /* Model.swift */; };
 		DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1581F38E5D500C13634 /* ModelDelegate.swift */; };
-		DA68F1A31F38E5D500C13634 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1641F38E5D500C13634 /* MSession.swift */; };
 		DA68F1A61F38E5D500C13634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA68F1691F38E5D500C13634 /* LaunchScreen.storyboard */; };
 		DA68F1A81F38E5D500C13634 /* ExtensionCGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F16D1F38E5D500C13634 /* ExtensionCGImage.swift */; };
 		DA68F1A91F38E5D500C13634 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F16E1F38E5D500C13634 /* ExtensionDictionary.swift */; };
@@ -68,7 +55,6 @@
 		DA68F1C51F38E5D500C13634 /* VSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1921F38E5D500C13634 /* VSpinner.swift */; };
 		DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1931F38E5D500C13634 /* VToast.swift */; };
 		DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1951F38E5D500C13634 /* VHome.swift */; };
-		DA7CE8231F3F433C0078A26B /* MSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */; };
 		DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */; };
 		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
 		DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */; };
@@ -77,11 +63,29 @@
 		DA90E0C21F40AE4A00A37538 /* MHomeStrategyNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0C11F40AE4A00A37538 /* MHomeStrategyNew.swift */; };
 		DA90E0C41F40AE8C00A37538 /* MHomeStrategyLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0C31F40AE8C00A37538 /* MHomeStrategyLoading.swift */; };
 		DA90E0C61F40AEAC00A37538 /* MHomeStrategyLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0C51F40AEAC00A37538 /* MHomeStrategyLoaded.swift */; };
+		DA90E0DF1F40B75800A37538 /* MGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0C81F40B75800A37538 /* MGif.swift */; };
+		DA90E0E01F40B75800A37538 /* MGifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0C91F40B75800A37538 /* MGifLoader.swift */; };
+		DA90E0E11F40B75800A37538 /* MGifStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0CA1F40B75800A37538 /* MGifStorer.swift */; };
+		DA90E0E21F40B75800A37538 /* MGifStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0CB1F40B75800A37538 /* MGifStrategy.swift */; };
+		DA90E0E31F40B75800A37538 /* MGifStrategyDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0CC1F40B75800A37538 /* MGifStrategyDownload.swift */; };
+		DA90E0E41F40B75800A37538 /* MGifStrategyDownloadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0CD1F40B75800A37538 /* MGifStrategyDownloadFile.swift */; };
+		DA90E0E51F40B75800A37538 /* MGifStrategyDownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0CE1F40B75800A37538 /* MGifStrategyDownloadRequest.swift */; };
+		DA90E0E61F40B75800A37538 /* MGifStrategyStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0CF1F40B75800A37538 /* MGifStrategyStand.swift */; };
+		DA90E0E71F40B75800A37538 /* MPerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0D21F40B75800A37538 /* MPerk.swift */; };
+		DA90E0E81F40B75800A37538 /* MPerkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0D31F40B75800A37538 /* MPerkFactory.swift */; };
+		DA90E0E91F40B75800A37538 /* MPerkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0D41F40B75800A37538 /* MPerkLoader.swift */; };
+		DA90E0EA1F40B75800A37538 /* MPerkDomainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0D61F40B75800A37538 /* MPerkDomainProtocol.swift */; };
+		DA90E0EB1F40B75800A37538 /* MPerkThumbnailFreeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0D71F40B75800A37538 /* MPerkThumbnailFreeProtocol.swift */; };
+		DA90E0EC1F40B75800A37538 /* MPerkThumbnailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0D81F40B75800A37538 /* MPerkThumbnailProtocol.swift */; };
+		DA90E0ED1F40B75800A37538 /* MPerkThumbnailProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0D91F40B75800A37538 /* MPerkThumbnailProtocolExtension.swift */; };
+		DA90E0EE1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0DA1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift */; };
+		DA90E0EF1F40B75800A37538 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0DC1F40B75800A37538 /* MSession.swift */; };
+		DA90E0F01F40B75800A37538 /* MSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0DD1F40B75800A37538 /* MSessionLoader.swift */; };
+		DA90E0F11F40B75800A37538 /* MSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0DE1F40B75800A37538 /* MSessionStatus.swift */; };
 		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
 		DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215811F39372D00E281DB /* MGiphyRandom.swift */; };
 		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
 		DACECC481F3A23C30009D933 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACECC471F3A23C30009D933 /* spinner.xcassets */; };
-		DACF0F5C1F3BB3AF00C716A9 /* MGifStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */; };
 		DAD67F191F3F56FE006E9699 /* TVHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F181F3F56FE006E9699 /* TVHome.swift */; };
 		DAD67F1B1F3F5A08006E9699 /* CHomeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F1A1F3F5A08006E9699 /* CHomeShare.swift */; };
 		DAD67F1F1F3F5BC4006E9699 /* TVHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F1E1F3F5BC4006E9699 /* TVHomeActionsShare.swift */; };
@@ -89,10 +93,6 @@
 		DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */; };
 		DAE0AF9A1F3AB6CB006449D0 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE0AF991F3AB6CB006449D0 /* generic.xcassets */; };
 		DAE0AFA61F3AD96B006449D0 /* MGiphyTrending.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFA51F3AD96B006449D0 /* MGiphyTrending.swift */; };
-		DAE0AFB51F3BA311006449D0 /* MGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFB41F3BA311006449D0 /* MGif.swift */; };
-		DAE0AFB91F3BA3C6006449D0 /* MGifStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFB81F3BA3C6006449D0 /* MGifStrategy.swift */; };
-		DAE0AFBB1F3BA594006449D0 /* MGifStrategyStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */; };
-		DAE0AFBD1F3BA692006449D0 /* MGifStrategyDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFBC1F3BA692006449D0 /* MGifStrategyDownload.swift */; };
 		DAE0AFBF1F3BAA88006449D0 /* MGiphyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFBE1F3BAA88006449D0 /* MGiphyItem.swift */; };
 		DAE0AFC11F3BAB16006449D0 /* MGiphyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFC01F3BAB16006449D0 /* MGiphyFactory.swift */; };
 		DAE0AFCD1F3BAEF9006449D0 /* MHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0AFC31F3BAEF9006449D0 /* MHome.swift */; };
@@ -134,18 +134,6 @@
 		DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDownloadGif.swift; sourceTree = "<group>"; };
 		DA39E77A1F38E3F90001CA28 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA39E7891F38E3F90001CA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA42A7B01F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownloadRequest.swift; sourceTree = "<group>"; };
-		DA42A7B21F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownloadFile.swift; sourceTree = "<group>"; };
-		DA68A2671F3F75320094BC9B /* MGifLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifLoader.swift; sourceTree = "<group>"; };
-		DA68A26B1F3F77310094BC9B /* MPerkDomainProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkDomainProtocol.swift; sourceTree = "<group>"; };
-		DA68A26C1F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailFreeProtocol.swift; sourceTree = "<group>"; };
-		DA68A26D1F3F77310094BC9B /* MPerkThumbnailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailProtocol.swift; sourceTree = "<group>"; };
-		DA68A26E1F3F77310094BC9B /* MPerkThumbnailProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailProtocolExtension.swift; sourceTree = "<group>"; };
-		DA68A26F1F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailPurchaseProtocol.swift; sourceTree = "<group>"; };
-		DA68A2751F3F77400094BC9B /* MPerk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerk.swift; sourceTree = "<group>"; };
-		DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkLoader.swift; sourceTree = "<group>"; };
-		DA68A2791F407F530094BC9B /* MPerkFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkFactory.swift; sourceTree = "<group>"; };
-		DA68A27B1F4085C00094BC9B /* MSessionLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionLoader.swift; sourceTree = "<group>"; };
 		DA68A27E1F408A350094BC9B /* DGifExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtension.swift; sourceTree = "<group>"; };
 		DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtensionDirectory.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
@@ -159,7 +147,6 @@
 		DA68F1541F38E5D500C13634 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
 		DA68F1571F38E5D500C13634 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DA68F1581F38E5D500C13634 /* ModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDelegate.swift; sourceTree = "<group>"; };
-		DA68F1641F38E5D500C13634 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
 		DA68F1691F38E5D500C13634 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA68F16D1F38E5D500C13634 /* ExtensionCGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCGImage.swift; sourceTree = "<group>"; };
 		DA68F16E1F38E5D500C13634 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
@@ -193,7 +180,6 @@
 		DA68F1921F38E5D500C13634 /* VSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSpinner.swift; sourceTree = "<group>"; };
 		DA68F1931F38E5D500C13634 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
 		DA68F1951F38E5D500C13634 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
-		DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionStatus.swift; sourceTree = "<group>"; };
 		DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategy.swift; sourceTree = "<group>"; };
 		DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyFactory.swift; sourceTree = "<group>"; };
 		DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsShare.swift; sourceTree = "<group>"; };
@@ -206,11 +192,29 @@
 		DA90E0C11F40AE4A00A37538 /* MHomeStrategyNew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyNew.swift; sourceTree = "<group>"; };
 		DA90E0C31F40AE8C00A37538 /* MHomeStrategyLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyLoading.swift; sourceTree = "<group>"; };
 		DA90E0C51F40AEAC00A37538 /* MHomeStrategyLoaded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyLoaded.swift; sourceTree = "<group>"; };
+		DA90E0C81F40B75800A37538 /* MGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGif.swift; sourceTree = "<group>"; };
+		DA90E0C91F40B75800A37538 /* MGifLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifLoader.swift; sourceTree = "<group>"; };
+		DA90E0CA1F40B75800A37538 /* MGifStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStorer.swift; sourceTree = "<group>"; };
+		DA90E0CB1F40B75800A37538 /* MGifStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategy.swift; sourceTree = "<group>"; };
+		DA90E0CC1F40B75800A37538 /* MGifStrategyDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownload.swift; sourceTree = "<group>"; };
+		DA90E0CD1F40B75800A37538 /* MGifStrategyDownloadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownloadFile.swift; sourceTree = "<group>"; };
+		DA90E0CE1F40B75800A37538 /* MGifStrategyDownloadRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownloadRequest.swift; sourceTree = "<group>"; };
+		DA90E0CF1F40B75800A37538 /* MGifStrategyStand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyStand.swift; sourceTree = "<group>"; };
+		DA90E0D21F40B75800A37538 /* MPerk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerk.swift; sourceTree = "<group>"; };
+		DA90E0D31F40B75800A37538 /* MPerkFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkFactory.swift; sourceTree = "<group>"; };
+		DA90E0D41F40B75800A37538 /* MPerkLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkLoader.swift; sourceTree = "<group>"; };
+		DA90E0D61F40B75800A37538 /* MPerkDomainProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkDomainProtocol.swift; sourceTree = "<group>"; };
+		DA90E0D71F40B75800A37538 /* MPerkThumbnailFreeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailFreeProtocol.swift; sourceTree = "<group>"; };
+		DA90E0D81F40B75800A37538 /* MPerkThumbnailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailProtocol.swift; sourceTree = "<group>"; };
+		DA90E0D91F40B75800A37538 /* MPerkThumbnailProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailProtocolExtension.swift; sourceTree = "<group>"; };
+		DA90E0DA1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailPurchaseProtocol.swift; sourceTree = "<group>"; };
+		DA90E0DC1F40B75800A37538 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
+		DA90E0DD1F40B75800A37538 /* MSessionLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionLoader.swift; sourceTree = "<group>"; };
+		DA90E0DE1F40B75800A37538 /* MSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionStatus.swift; sourceTree = "<group>"; };
 		DAC2157F1F3936FA00E281DB /* MGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphy.swift; sourceTree = "<group>"; };
 		DAC215811F39372D00E281DB /* MGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyRandom.swift; sourceTree = "<group>"; };
 		DAC215841F39378800E281DB /* MRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRequest.swift; sourceTree = "<group>"; };
 		DACECC471F3A23C30009D933 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
-		DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStorer.swift; sourceTree = "<group>"; };
 		DAD67F181F3F56FE006E9699 /* TVHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVHome.swift; sourceTree = "<group>"; };
 		DAD67F1A1F3F5A08006E9699 /* CHomeShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeShare.swift; sourceTree = "<group>"; };
 		DAD67F1E1F3F5BC4006E9699 /* TVHomeActionsShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVHomeActionsShare.swift; sourceTree = "<group>"; };
@@ -218,10 +222,6 @@
 		DAE0AF971F3AB49B006449D0 /* VHomeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActions.swift; sourceTree = "<group>"; };
 		DAE0AF991F3AB6CB006449D0 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
 		DAE0AFA51F3AD96B006449D0 /* MGiphyTrending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyTrending.swift; sourceTree = "<group>"; };
-		DAE0AFB41F3BA311006449D0 /* MGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGif.swift; sourceTree = "<group>"; };
-		DAE0AFB81F3BA3C6006449D0 /* MGifStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategy.swift; sourceTree = "<group>"; };
-		DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyStand.swift; sourceTree = "<group>"; };
-		DAE0AFBC1F3BA692006449D0 /* MGifStrategyDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownload.swift; sourceTree = "<group>"; };
 		DAE0AFBE1F3BAA88006449D0 /* MGiphyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyItem.swift; sourceTree = "<group>"; };
 		DAE0AFC01F3BAB16006449D0 /* MGiphyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyFactory.swift; sourceTree = "<group>"; };
 		DAE0AFC31F3BAEF9006449D0 /* MHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHome.swift; sourceTree = "<group>"; };
@@ -316,28 +316,6 @@
 			path = gattaca;
 			sourceTree = "<group>";
 		};
-		DA68A2691F3F77310094BC9B /* Abstract */ = {
-			isa = PBXGroup;
-			children = (
-				DA68A2751F3F77400094BC9B /* MPerk.swift */,
-				DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */,
-				DA68A2791F407F530094BC9B /* MPerkFactory.swift */,
-			);
-			path = Abstract;
-			sourceTree = "<group>";
-		};
-		DA68A26A1F3F77310094BC9B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				DA68A26B1F3F77310094BC9B /* MPerkDomainProtocol.swift */,
-				DA68A26C1F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift */,
-				DA68A26D1F3F77310094BC9B /* MPerkThumbnailProtocol.swift */,
-				DA68A26E1F3F77310094BC9B /* MPerkThumbnailProtocolExtension.swift */,
-				DA68A26F1F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		DA68A27D1F408A350094BC9B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,7 +376,9 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1561F38E5D500C13634 /* Abstract */,
-				DA68F15B1F38E5D500C13634 /* Main */,
+				DA90E0DB1F40B75800A37538 /* Session */,
+				DA90E0C71F40B75800A37538 /* Gif */,
+				DA90E0D01F40B75800A37538 /* Perk */,
 				DAC215831F39377500E281DB /* Request */,
 				DAC2157E1F3936EE00E281DB /* Giphy */,
 				DA68F1591F38E5D500C13634 /* Home */,
@@ -423,35 +403,6 @@
 				DA7CE8241F3F43ED0078A26B /* Strategy */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		DA68F15B1F38E5D500C13634 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				DAE0AFB31F3BA2F4006449D0 /* Gif */,
-				DA68F15C1F38E5D500C13634 /* Perk */,
-				DA68F1631F38E5D500C13634 /* Session */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		DA68F15C1F38E5D500C13634 /* Perk */ = {
-			isa = PBXGroup;
-			children = (
-				DA68A2691F3F77310094BC9B /* Abstract */,
-				DA68A26A1F3F77310094BC9B /* Protocols */,
-			);
-			path = Perk;
-			sourceTree = "<group>";
-		};
-		DA68F1631F38E5D500C13634 /* Session */ = {
-			isa = PBXGroup;
-			children = (
-				DA68F1641F38E5D500C13634 /* MSession.swift */,
-				DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */,
-				DA68A27B1F4085C00094BC9B /* MSessionLoader.swift */,
-			);
-			path = Session;
 			sourceTree = "<group>";
 		};
 		DA68F1671F38E5D500C13634 /* Support */ = {
@@ -631,6 +582,62 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DA90E0C71F40B75800A37538 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				DA90E0C81F40B75800A37538 /* MGif.swift */,
+				DA90E0C91F40B75800A37538 /* MGifLoader.swift */,
+				DA90E0CA1F40B75800A37538 /* MGifStorer.swift */,
+				DA90E0CB1F40B75800A37538 /* MGifStrategy.swift */,
+				DA90E0CC1F40B75800A37538 /* MGifStrategyDownload.swift */,
+				DA90E0CD1F40B75800A37538 /* MGifStrategyDownloadFile.swift */,
+				DA90E0CE1F40B75800A37538 /* MGifStrategyDownloadRequest.swift */,
+				DA90E0CF1F40B75800A37538 /* MGifStrategyStand.swift */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
+		DA90E0D01F40B75800A37538 /* Perk */ = {
+			isa = PBXGroup;
+			children = (
+				DA90E0D11F40B75800A37538 /* Abstract */,
+				DA90E0D51F40B75800A37538 /* Protocols */,
+			);
+			path = Perk;
+			sourceTree = "<group>";
+		};
+		DA90E0D11F40B75800A37538 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				DA90E0D21F40B75800A37538 /* MPerk.swift */,
+				DA90E0D31F40B75800A37538 /* MPerkFactory.swift */,
+				DA90E0D41F40B75800A37538 /* MPerkLoader.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		DA90E0D51F40B75800A37538 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DA90E0D61F40B75800A37538 /* MPerkDomainProtocol.swift */,
+				DA90E0D71F40B75800A37538 /* MPerkThumbnailFreeProtocol.swift */,
+				DA90E0D81F40B75800A37538 /* MPerkThumbnailProtocol.swift */,
+				DA90E0D91F40B75800A37538 /* MPerkThumbnailProtocolExtension.swift */,
+				DA90E0DA1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DA90E0DB1F40B75800A37538 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				DA90E0DC1F40B75800A37538 /* MSession.swift */,
+				DA90E0DD1F40B75800A37538 /* MSessionLoader.swift */,
+				DA90E0DE1F40B75800A37538 /* MSessionStatus.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		DAC2157E1F3936EE00E281DB /* Giphy */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,21 +673,6 @@
 				DAD67F1E1F3F5BC4006E9699 /* TVHomeActionsShare.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		DAE0AFB31F3BA2F4006449D0 /* Gif */ = {
-			isa = PBXGroup;
-			children = (
-				DAE0AFB41F3BA311006449D0 /* MGif.swift */,
-				DA68A2671F3F75320094BC9B /* MGifLoader.swift */,
-				DACF0F5B1F3BB3AF00C716A9 /* MGifStorer.swift */,
-				DAE0AFB81F3BA3C6006449D0 /* MGifStrategy.swift */,
-				DAE0AFBA1F3BA594006449D0 /* MGifStrategyStand.swift */,
-				DAE0AFBC1F3BA692006449D0 /* MGifStrategyDownload.swift */,
-				DA42A7B01F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift */,
-				DA42A7B21F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift */,
-			);
-			path = Gif;
 			sourceTree = "<group>";
 		};
 		DAE0AFC21F3BAEF9006449D0 /* Abstract */ = {
@@ -909,84 +901,85 @@
 			files = (
 				DA68F1991F38E5D500C13634 /* ControllerParentTransitions.swift in Sources */,
 				DA68F1C11F38E5D500C13634 /* VGradient.swift in Sources */,
+				DA90E0EF1F40B75800A37538 /* MSession.swift in Sources */,
 				DAD67F1B1F3F5A08006E9699 /* CHomeShare.swift in Sources */,
 				DA68F1AB1F38E5D500C13634 /* ExtensionNotification.swift in Sources */,
 				DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */,
+				DA90E0EE1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift in Sources */,
 				DA68A2871F408A350094BC9B /* DGifExtensionDirectory.swift in Sources */,
 				DA90E0C61F40AEAC00A37538 /* MHomeStrategyLoaded.swift in Sources */,
-				DA68A2721F3F77310094BC9B /* MPerkThumbnailProtocol.swift in Sources */,
+				DA90E0E31F40B75800A37538 /* MGifStrategyDownload.swift in Sources */,
 				DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */,
-				DAE0AFB91F3BA3C6006449D0 /* MGifStrategy.swift in Sources */,
-				DAE0AFBD1F3BA692006449D0 /* MGifStrategyDownload.swift in Sources */,
 				DA68F1B91F38E5D500C13634 /* ViewParent.swift in Sources */,
 				DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */,
 				DA90E0C21F40AE4A00A37538 /* MHomeStrategyNew.swift in Sources */,
 				DA68F1C21F38E5D500C13634 /* VPushBackground.swift in Sources */,
 				DA68F1C31F38E5D500C13634 /* VSlider.swift in Sources */,
 				DA68F1AD1F38E5D500C13634 /* ExtensionNSManagedObject.swift in Sources */,
-				DAE0AFBB1F3BA594006449D0 /* MGifStrategyStand.swift in Sources */,
 				DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */,
-				DA68A2731F3F77310094BC9B /* MPerkThumbnailProtocolExtension.swift in Sources */,
 				DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */,
 				DA68F1AC1F38E5D500C13634 /* ExtensionNSLayoutConstraint.swift in Sources */,
-				DA68A2761F3F77400094BC9B /* MPerk.swift in Sources */,
 				DA68F1A91F38E5D500C13634 /* ExtensionDictionary.swift in Sources */,
 				DA68F1BF1F38E5D500C13634 /* VCollection.swift in Sources */,
+				DA90E0E11F40B75800A37538 /* MGifStorer.swift in Sources */,
 				DAE0AFD11F3BAEF9006449D0 /* MHomeLoader.swift in Sources */,
 				DA68F1BD1F38E5D500C13634 /* VBlur.swift in Sources */,
 				DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */,
 				DA68F1AA1F38E5D500C13634 /* ExtensionFileManager.swift in Sources */,
-				DA68A27A1F407F530094BC9B /* MPerkFactory.swift in Sources */,
 				DAE0AF961F3AB432006449D0 /* VHomeActionsCell.swift in Sources */,
 				DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */,
 				DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */,
+				DA90E0ED1F40B75800A37538 /* MPerkThumbnailProtocolExtension.swift in Sources */,
+				DA90E0E61F40B75800A37538 /* MGifStrategyStand.swift in Sources */,
 				DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */,
 				DAE0AFD41F3BAEF9006449D0 /* MHomeActionMeh.swift in Sources */,
 				DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */,
-				DA68A2701F3F77310094BC9B /* MPerkDomainProtocol.swift in Sources */,
-				DAE0AFB51F3BA311006449D0 /* MGif.swift in Sources */,
-				DA68A2781F3F774C0094BC9B /* MPerkLoader.swift in Sources */,
-				DA42A7B31F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift in Sources */,
 				DAE0AFD31F3BAEF9006449D0 /* MHomeActionLike.swift in Sources */,
+				DA90E0E01F40B75800A37538 /* MGifLoader.swift in Sources */,
 				DA68F1B21F38E5D500C13634 /* ExtensionURL.swift in Sources */,
+				DA90E0E41F40B75800A37538 /* MGifStrategyDownloadFile.swift in Sources */,
+				DA90E0E91F40B75800A37538 /* MPerkLoader.swift in Sources */,
 				DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */,
-				DA68A2681F3F75320094BC9B /* MGifLoader.swift in Sources */,
-				DA68A27C1F4085C00094BC9B /* MSessionLoader.swift in Sources */,
+				DA90E0EC1F40B75800A37538 /* MPerkThumbnailProtocol.swift in Sources */,
+				DA90E0DF1F40B75800A37538 /* MGif.swift in Sources */,
+				DA90E0E51F40B75800A37538 /* MGifStrategyDownloadRequest.swift in Sources */,
 				DAE0AFC11F3BAB16006449D0 /* MGiphyFactory.swift in Sources */,
 				DA68F1C41F38E5D500C13634 /* VSliderBar.swift in Sources */,
+				DA90E0F01F40B75800A37538 /* MSessionLoader.swift in Sources */,
 				DA90E0C01F40AD3E00A37538 /* MHomeSession.swift in Sources */,
+				DA90E0F11F40B75800A37538 /* MSessionStatus.swift in Sources */,
 				DAE0AFBF1F3BAA88006449D0 /* MGiphyItem.swift in Sources */,
 				DAE0AFA61F3AD96B006449D0 /* MGiphyTrending.swift in Sources */,
 				DA68F1AF1F38E5D500C13634 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA68F1A81F38E5D500C13634 /* ExtensionCGImage.swift in Sources */,
 				DA68F19B1F38E5D500C13634 /* Model.swift in Sources */,
 				DA68F1C01F38E5D500C13634 /* VCollectionFlow.swift in Sources */,
-				DA7CE8231F3F433C0078A26B /* MSessionStatus.swift in Sources */,
-				DA68F1A31F38E5D500C13634 /* MSession.swift in Sources */,
 				DA68F1C51F38E5D500C13634 /* VSpinner.swift in Sources */,
 				DA68F1B81F38E5D500C13634 /* ViewMain.swift in Sources */,
-				DA68A2711F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift in Sources */,
 				DAF1C1141F3947A300820417 /* ExtensionData.swift in Sources */,
 				DAF045941F392C520003C2EF /* ExtensionURLResponse.swift in Sources */,
 				DAE0AFD71F3BAF20006449D0 /* MHomeRequest.swift in Sources */,
 				DA68F1BE1F38E5D500C13634 /* VBorder.swift in Sources */,
-				DACF0F5C1F3BB3AF00C716A9 /* MGifStorer.swift in Sources */,
 				DA68F1971F38E5D500C13634 /* Controller.swift in Sources */,
 				DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */,
 				DAE0AFCE1F3BAEF9006449D0 /* MHomeFactory.swift in Sources */,
-				DA42A7B11F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift in Sources */,
 				DA68A2891F408A350094BC9B /* DManager.swift in Sources */,
 				DA68F1AE1F38E5D500C13634 /* ExtensionString.swift in Sources */,
 				DA90E0C41F40AE8C00A37538 /* MHomeStrategyLoading.swift in Sources */,
 				DAE0AFD21F3BAEF9006449D0 /* MHomeActionHate.swift in Sources */,
 				DAE0AFD51F3BAEF9006449D0 /* MHomeActionProtocol.swift in Sources */,
 				DA68A2861F408A350094BC9B /* DGifExtension.swift in Sources */,
+				DA90E0EB1F40B75800A37538 /* MPerkThumbnailFreeProtocol.swift in Sources */,
+				DA90E0E21F40B75800A37538 /* MGifStrategy.swift in Sources */,
+				DA90E0EA1F40B75800A37538 /* MPerkDomainProtocol.swift in Sources */,
 				DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */,
 				DA68F1BA1F38E5D500C13634 /* ViewParentTransitions.swift in Sources */,
 				DA68F1B71F38E5D500C13634 /* View.swift in Sources */,
 				DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */,
 				DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */,
+				DA90E0E71F40B75800A37538 /* MPerk.swift in Sources */,
 				DA68A28C1F408B230094BC9B /* DManagerFactory.swift in Sources */,
+				DA90E0E81F40B75800A37538 /* MPerkFactory.swift in Sources */,
 				DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */,
 				DA68F19A1F38E5D500C13634 /* CHome.swift in Sources */,
 				DA68F1BC1F38E5D500C13634 /* VAlert.swift in Sources */,
@@ -994,7 +987,6 @@
 				DAE0AFD01F3BAEF9006449D0 /* MHomeItem.swift in Sources */,
 				DAE0AFCD1F3BAEF9006449D0 /* MHome.swift in Sources */,
 				DA68F1BB1F38E5D500C13634 /* ViewProtocol.swift in Sources */,
-				DA68A2741F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift in Sources */,
 				DA68F1B01F38E5D500C13634 /* ExtensionUIColor.swift in Sources */,
 				DAC215851F39378800E281DB /* MRequest.swift in Sources */,
 			);
