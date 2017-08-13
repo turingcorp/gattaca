@@ -14,15 +14,23 @@
     <entity name="DPerkPurchase" representedClassName="DPerkPurchase" parentEntity="DPerk" syncable="YES" codeGenerationType="class">
         <attribute name="purchased" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="DSettings" representedClassName="DSettings" syncable="YES" codeGenerationType="class">
-        <attribute name="review" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+    <entity name="DSession" representedClassName="DSession" syncable="YES" codeGenerationType="class">
         <attribute name="userId" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DSettings" representedClassName="DSettings" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute" optional="YES" syncable="YES"/>
+        <attribute name="attribute1" optional="YES" syncable="YES"/>
+        <attribute name="attribute2" optional="YES" syncable="YES"/>
+        <attribute name="attribute3" optional="YES" syncable="YES"/>
+        <attribute name="attribute4" optional="YES" syncable="YES"/>
+        <attribute name="review" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="DGif" positionX="-45" positionY="18" width="128" height="105"/>
         <element name="DPerk" positionX="-54" positionY="-9" width="128" height="75"/>
         <element name="DPerkFree" positionX="-36" positionY="9" width="128" height="45"/>
         <element name="DPerkPurchase" positionX="-18" positionY="27" width="128" height="60"/>
-        <element name="DSettings" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="DSettings" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="DSession" positionX="-36" positionY="27" width="128" height="60"/>
     </elements>
 </model>
