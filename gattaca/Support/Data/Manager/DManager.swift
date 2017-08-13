@@ -87,7 +87,7 @@ class DManager
         limit:Int = 0,
         predicate:NSPredicate? = nil,
         sorters:[NSSortDescriptor]? = nil,
-        completion:@escaping(([NSManagedObject]?) -> ()))
+        completion:@escaping(([NSManagedObject]) -> ()))
     {
         let fetchRequest:NSFetchRequest<NSManagedObject> = NSFetchRequest(
             entityName:entity.entityName)
@@ -110,7 +110,7 @@ class DManager
                 return
             }
             
-            let results:[NSManagedObject]?
+            let results:[NSManagedObject]
             
             do
             {
@@ -118,7 +118,7 @@ class DManager
             }
             catch
             {
-                results = nil
+                return
             }
             
             completion(results)
