@@ -21,52 +21,64 @@ class DManager
     
     //MARK: internal
     
-    func save(completion:(() -> ())? = nil)
+    func save(completion:@escaping(() -> ()))
     {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        if managedObjectContext.hasChanges
         {
-            if self.managedObjectContext.hasChanges
-            {
-                self.managedObjectContext.perform
+            managedObjectContext.perform
+            { [weak self] in
+                
+                guard
+                
+                    let managedObjectContext:NSManagedObjectContext = self?.managedObjectContext
+                
+                else
                 {
-                    do
-                    {
-                        try self.managedObjectContext.save()
-                    }
-                    catch
-                    {
-                    }
-                    
-                    completion?()
+                    return
                 }
+                
+                do
+                {
+                    try managedObjectContext.save()
+                }
+                catch
+                {
+                    return
+                }
+                
+                completion()
             }
-            else
-            {
-                completion?()
-            }
+        }
+        else
+        {
+            completion()
         }
     }
     
     func create(
         entity:NSManagedObject.Type,
-        completion:@escaping((NSManagedObject?) -> ()))
+        completion:@escaping((NSManagedObject) -> ()))
     {
         managedObjectContext.perform
-        {
-            if let entityDescription:NSEntityDescription = NSEntityDescription.entity(
-                forEntityName:entity.entityName,
-                in:self.managedObjectContext)
-            {
-                let managedObject:NSManagedObject = NSManagedObject(
-                    entity:entityDescription,
-                    insertInto:self.managedObjectContext)
+        { [weak self] in
+            
+            guard
                 
-                completion(managedObject)
-            }
+                let managedObjectContext:NSManagedObjectContext = self?.managedObjectContext,
+                let entityDescription:NSEntityDescription = NSEntityDescription.entity(
+                    forEntityName:entity.entityName,
+                    in:managedObjectContext)
+                
             else
             {
-                completion(nil)
+                return
             }
+            
+            let managedObject:NSManagedObject = NSManagedObject(
+                entity:entityDescription,
+                insertInto:managedObjectContext)
+            
+            completion(managedObject)
         }
     }
     
@@ -77,41 +89,58 @@ class DManager
         sorters:[NSSortDescriptor]? = nil,
         completion:@escaping(([NSManagedObject]?) -> ()))
     {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        {
-            let fetchRequest:NSFetchRequest<NSManagedObject> = NSFetchRequest(
-                entityName:entity.entityName)
-            fetchRequest.predicate = predicate
-            fetchRequest.sortDescriptors = sorters
-            fetchRequest.fetchLimit = limit
-            fetchRequest.returnsObjectsAsFaults = false
-            fetchRequest.includesPropertyValues = true
-            fetchRequest.includesSubentities = true
+        let fetchRequest:NSFetchRequest<NSManagedObject> = NSFetchRequest(
+            entityName:entity.entityName)
+        fetchRequest.predicate = predicate
+        fetchRequest.sortDescriptors = sorters
+        fetchRequest.fetchLimit = limit
+        fetchRequest.returnsObjectsAsFaults = false
+        fetchRequest.includesPropertyValues = true
+        fetchRequest.includesSubentities = true
+        
+        managedObjectContext.perform
+        { [weak self] in
             
-            self.managedObjectContext.perform
+            guard
+                
+                let managedObjectContext:NSManagedObjectContext = self?.managedObjectContext
+                
+            else
             {
-                let results:[NSManagedObject]?
-                
-                do
-                {
-                    results = try self.managedObjectContext.fetch(fetchRequest)
-                }
-                catch
-                {
-                    results = nil
-                }
-                
-                completion(results)
+                return
             }
+            
+            let results:[NSManagedObject]?
+            
+            do
+            {
+                results = try managedObjectContext.fetch(fetchRequest)
+            }
+            catch
+            {
+                results = nil
+            }
+            
+            completion(results)
         }
     }
     
-    func delete(data:NSManagedObject, completion:(() -> ())? = nil)
+    func delete(data:NSManagedObject, completion:@escaping(() -> ()))
     {
         managedObjectContext.perform
-        {
-            self.managedObjectContext.delete(data)
-            completion?()
+        { [weak self] in
+            
+            guard
+                
+                let managedObjectContext:NSManagedObjectContext = self?.managedObjectContext
+                
+            else
+            {
+                return
+            }
+            
+            managedObjectContext.delete(data)
+            completion()
         }
     }
 }
