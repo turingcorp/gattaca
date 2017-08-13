@@ -9,7 +9,6 @@ class VHomeDisplay:View<VHome, MHome, CHome>
     required init(controller:CHome)
     {
         super.init(controller:controller)
-        isHidden = true
         isUserInteractionEnabled = false
         
         let border:VBorder = VBorder(

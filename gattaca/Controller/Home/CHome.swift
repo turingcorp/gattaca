@@ -20,11 +20,6 @@ class CHome:Controller<VHome, MHome>
     {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(
-            self,
-            selector:#selector(notifiedSessionLoaded(sender:)),
-            name:Notification.sessionLoaded,
-            object:nil)
     }
     
     override func viewDidAppear(_ animated:Bool)

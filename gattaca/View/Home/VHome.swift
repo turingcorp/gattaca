@@ -2,7 +2,6 @@ import UIKit
 
 class VHome:ViewMain
 {
-    private weak var viewSpinner:VSpinner?
     private weak var viewBar:VHomeBar!
     private weak var viewDisplay:VHomeDisplay!
     private weak var viewActions:VHomeActions!
@@ -31,19 +30,11 @@ class VHome:ViewMain
         return nil
     }
     
-    deinit
-    {
-        viewSpinner?.stopAnimating()
-    }
-    
     //MARK: private
     
     private func factoryViews(controller:CHome)
     {
         let actionsHeight_2:CGFloat = kActionsHeight / 2.0
-        
-        let viewSpinner:VSpinner = VSpinner()
-        self.viewSpinner = viewSpinner
         
         let viewDisplay:VHomeDisplay = VHomeDisplay(
             controller:controller)
@@ -56,15 +47,10 @@ class VHome:ViewMain
         let viewActions:VHomeActions = VHomeActions(
             controller:controller)
         self.viewActions = viewActions
-        
-        addSubview(viewSpinner)
+
         addSubview(viewBar)
         addSubview(viewDisplay)
         addSubview(viewActions)
-        
-        NSLayoutConstraint.equals(
-            view:viewSpinner,
-            toView:self)
         
         NSLayoutConstraint.bottomToBottom(
             view:viewBar,
@@ -122,20 +108,6 @@ class VHome:ViewMain
     
     func refresh()
     {
-        guard
-            
-            let viewSpinner:VSpinner = self.viewSpinner
         
-        else
-        {
-            update()
-            
-            return
-        }
-        
-        viewSpinner.stopAnimating()
-        viewSpinner.removeFromSuperview()
-        
-        firstRefresh()
     }
 }
