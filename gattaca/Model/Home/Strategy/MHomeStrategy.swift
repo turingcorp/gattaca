@@ -14,4 +14,10 @@ class MHomeStrategy
     func nextStep()
     {
     }
+    
+    final func lastStep()
+    {
+        controller.sessionLoaded()
+        controller.model.clearStrategy()
+    }
 }
