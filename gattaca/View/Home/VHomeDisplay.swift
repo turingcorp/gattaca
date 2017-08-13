@@ -4,6 +4,7 @@ import AVFoundation
 class VHomeDisplay:View<VHome, MHome, CHome>
 {
     private weak var avPlayer:AVPlayer!
+    private weak var spinner:VSpinner!
     private let kBorderHeight:CGFloat = 1
     
     required init(controller:CHome)
@@ -14,7 +15,11 @@ class VHomeDisplay:View<VHome, MHome, CHome>
         let border:VBorder = VBorder(
             colour:UIColor.colourBackgroundDark.withAlphaComponent(0.2))
         
+        let spinner:VSpinner = VSpinner()
+        self.spinner = spinner
+        
         addSubview(border)
+        addSubview(spinner)
         
         NSLayoutConstraint.bottomToBottom(
             view:border,
@@ -24,6 +29,10 @@ class VHomeDisplay:View<VHome, MHome, CHome>
             constant:kBorderHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:spinner,
             toView:self)
         
         guard
@@ -54,6 +63,7 @@ class VHomeDisplay:View<VHome, MHome, CHome>
     
     deinit
     {
+        spinner.stopAnimating()
         NotificationCenter.default.removeObserver(self)
     }
     
@@ -89,8 +99,12 @@ class VHomeDisplay:View<VHome, MHome, CHome>
             
         else
         {
+            spinner.startAnimating()
+            
             return
         }
+        
+        spinner.stopAnimating()
         
         let avPlayerItem:AVPlayerItem = AVPlayerItem(url:item.url)
         
