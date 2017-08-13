@@ -26,7 +26,6 @@ class MSession
         load(manager:manager)
         { [weak self] (session:DSession) in
 
-            manager.save()
             self?.sessionLoaded(
                 session:session,
                 completion:completion)

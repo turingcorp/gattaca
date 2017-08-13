@@ -45,7 +45,10 @@ extension MSession
                 return
             }
             
-            completion(session)
+            manager.save
+            {
+                completion(session)
+            }
         }
     }
 }
