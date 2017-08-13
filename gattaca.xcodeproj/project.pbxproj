@@ -29,7 +29,6 @@
 		DA68F19B1F38E5D500C13634 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1571F38E5D500C13634 /* Model.swift */; };
 		DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1581F38E5D500C13634 /* ModelDelegate.swift */; };
 		DA68F1A31F38E5D500C13634 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1641F38E5D500C13634 /* MSession.swift */; };
-		DA68F1A51F38E5D500C13634 /* MSessionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1661F38E5D500C13634 /* MSessionSettings.swift */; };
 		DA68F1A61F38E5D500C13634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA68F1691F38E5D500C13634 /* LaunchScreen.storyboard */; };
 		DA68F1A71F38E5D500C13634 /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F16B1F38E5D500C13634 /* DManager.swift */; };
 		DA68F1A81F38E5D500C13634 /* ExtensionCGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F16D1F38E5D500C13634 /* ExtensionCGImage.swift */; };
@@ -149,7 +148,6 @@
 		DA68F1571F38E5D500C13634 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DA68F1581F38E5D500C13634 /* ModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDelegate.swift; sourceTree = "<group>"; };
 		DA68F1641F38E5D500C13634 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
-		DA68F1661F38E5D500C13634 /* MSessionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionSettings.swift; sourceTree = "<group>"; };
 		DA68F1691F38E5D500C13634 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA68F16B1F38E5D500C13634 /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
 		DA68F16D1F38E5D500C13634 /* ExtensionCGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCGImage.swift; sourceTree = "<group>"; };
@@ -428,7 +426,6 @@
 			children = (
 				DA68F1641F38E5D500C13634 /* MSession.swift */,
 				DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */,
-				DA68F1661F38E5D500C13634 /* MSessionSettings.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -870,7 +867,6 @@
 				DA68F1B91F38E5D500C13634 /* ViewParent.swift in Sources */,
 				DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */,
 				DA68F1C21F38E5D500C13634 /* VPushBackground.swift in Sources */,
-				DA68F1A51F38E5D500C13634 /* MSessionSettings.swift in Sources */,
 				DAE0AFB01F3B9BB4006449D0 /* DGifExtensionDirectory.swift in Sources */,
 				DA68F1CA1F38F80800C13634 /* DGattaca.xcdatamodeld in Sources */,
 				DA68F1C31F38E5D500C13634 /* VSlider.swift in Sources */,
