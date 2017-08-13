@@ -5,7 +5,7 @@ extension MPerk
     //MARK: private
     
     private func asyncLoadPerks(
-        completion:@escaping(([DPerk]) -> ()))
+        completion:@escaping(() -> ()))
     {
         factoryStoredPerks
         { [weak self] (perks:[DPerk]?) in
@@ -16,7 +16,8 @@ extension MPerk
             
             else
             {
-                completion(nil)
+                completion()
+                return
             }
             
             self?.asyncLoadPerks(
@@ -27,16 +28,14 @@ extension MPerk
     
     private func asyncLoadPerks(
         storedPerks:[DPerk],
-        completion:@escaping(([DPerk]) -> ()))
+        completion:@escaping(() -> ()))
     {
-        var perks:[DPerk] = []
         let perksMap:[String:DPerk] = factoryPerksMap(
             perks:storedPerks)
         let thumbnails:[MPerkThumbnailProtocol] = factoryThumbnails()
         let dispatchGroup:DispatchGroup = factoryDispatchGroup()
         
         loadPerks(
-            perks:&perks,
             perksMap:perksMap,
             thumbnails:thumbnails,
             dispatchGroup:dispatchGroup)
@@ -45,12 +44,11 @@ extension MPerk
             queue:DispatchQueue.global(
                 qos:DispatchQoS.QoSClass.background))
         {
-            completion(perks)
+            completion()
         }
     }
     
     private func loadPerks(
-        perks:inout[DPerk],
         perksMap:[String:DPerk],
         thumbnails:[MPerkThumbnailProtocol],
         dispatchGroup:DispatchGroup)
@@ -64,7 +62,6 @@ extension MPerk
             if perksMap[identifier] == nil
             {
                 addThumbnail(
-                    perks:&perks,
                     thumbnail:thumbnail,
                     dispatchGroup:dispatchGroup)
             }
@@ -72,16 +69,15 @@ extension MPerk
     }
     
     private func addThumbnail(
-        perks:inout[DPerk],
         thumbnail:MPerkThumbnailProtocol,
         dispatchGroup:DispatchGroup)
     {
         thumbnail.createPerk
-        { (perk:DPerk?) in
+        { [weak self] (perk:DPerk?) in
             
             if let perk:DPerk = perk
             {
-                perks.append(perk)
+                self?.items.append(perk)
             }
             
             dispatchGroup.leave()
@@ -90,8 +86,10 @@ extension MPerk
     
     //MARK: internal
     
-    func loadPerks(completion:@escaping(([DPerk]) -> ()))
+    func loadPerks(completion:@escaping(() -> ()))
     {
+        items = []
+        
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             

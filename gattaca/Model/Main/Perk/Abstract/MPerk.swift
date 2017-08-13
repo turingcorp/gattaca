@@ -2,7 +2,7 @@ import Foundation
 
 class MPerk
 {
-    private(set) var items:[DPerk]
+    var items:[DPerk]
     
     init()
     {
