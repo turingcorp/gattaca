@@ -1,61 +1,42 @@
 import Foundation
-import CoreData
 
 extension MPerk
 {
     //MARK: private
     
-    private func factoryThumbnails() -> [MPerkThumbnailProtocol]
+    private func asyncLoadPerks(
+        completion:@escaping(([DPerk]) -> ()))
     {
-        let perks:[MPerkThumbnailProtocol] = []
-        
-        return perks
-    }
-    
-    private func factoryDispatchGroup() -> DispatchGroup
-    {
-        let dispatchGroup:DispatchGroup = DispatchGroup()
-        dispatchGroup.setTarget(
-            queue:DispatchQueue.global(
-                qos:DispatchQoS.QoSClass.background))
-        
-        return dispatchGroup
-    }
-    
-    private func loadSavedPerks(
-        completion:@escaping(([DPerk]?) -> ()))
-    {
-        DManager.sharedInstance?.fetch(entity:DPerk.self)
-        { (data:[NSManagedObject]?) in
-            
-            let perks:[DPerk]? = data as? [DPerk]
-            completion(perks)
-        }
-    }
-    
-    private func asyncLoadPerks(completion:@escaping(() -> ()))
-    {
-        MPerk.loadSavedPerks
+        factoryStoredPerks
         { [weak self] (perks:[DPerk]?) in
             
-            <#code#>
-        }
-        
-        
-        guard
+            guard
             
-            let perksMap:[String:DPerk] = settings?.perksMap()
+                let storedPerks:[DPerk] = perks
             
-        else
-        {
-            completion()
-            return
+            else
+            {
+                completion(nil)
+            }
+            
+            self?.asyncLoadPerks(
+                storedPerks:storedPerks,
+                completion:completion)
         }
-        
-        let thumbnails:[MPerkThumbnailProtocol] = MPerk.factoryThumbnails()
-        let dispatchGroup:DispatchGroup = MPerk.factoryDispatchGroup()
+    }
+    
+    private func asyncLoadPerks(
+        storedPerks:[DPerk],
+        completion:@escaping(([DPerk]) -> ()))
+    {
+        var perks:[DPerk] = []
+        let perksMap:[String:DPerk] = factoryPerksMap(
+            perks:storedPerks)
+        let thumbnails:[MPerkThumbnailProtocol] = factoryThumbnails()
+        let dispatchGroup:DispatchGroup = factoryDispatchGroup()
         
         loadPerks(
+            perks:&perks,
             perksMap:perksMap,
             thumbnails:thumbnails,
             dispatchGroup:dispatchGroup)
@@ -64,11 +45,12 @@ extension MPerk
             queue:DispatchQueue.global(
                 qos:DispatchQoS.QoSClass.background))
         {
-            completion()
+            completion(perks)
         }
     }
     
     private func loadPerks(
+        perks:inout[DPerk],
         perksMap:[String:DPerk],
         thumbnails:[MPerkThumbnailProtocol],
         dispatchGroup:DispatchGroup)
@@ -82,6 +64,7 @@ extension MPerk
             if perksMap[identifier] == nil
             {
                 addThumbnail(
+                    perks:&perks,
                     thumbnail:thumbnail,
                     dispatchGroup:dispatchGroup)
             }
@@ -89,13 +72,18 @@ extension MPerk
     }
     
     private func addThumbnail(
+        perks:inout[DPerk],
         thumbnail:MPerkThumbnailProtocol,
         dispatchGroup:DispatchGroup)
     {
         thumbnail.createPerk
         { (perk:DPerk?) in
             
-            perk?.settings = self.settings
+            if let perk:DPerk = perk
+            {
+                perks.append(perk)
+            }
+            
             dispatchGroup.leave()
         }
     }
@@ -107,7 +95,7 @@ extension MPerk
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.asynLoadPerks(completion:completion)
+            self?.asyncLoadPerks(completion:completion)
         }
     }
 }
