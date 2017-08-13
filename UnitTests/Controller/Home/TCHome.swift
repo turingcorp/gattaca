@@ -13,7 +13,11 @@ class TCHome:XCTestCase
         
         let session:MSession = MSession()
         self.session = session
-        controller = CHome(session:session)
+        
+        let controller:CHome = CHome(session:session)
+        controller.beginAppearanceTransition(true, animated:false)
+        controller.endAppearanceTransition()
+        self.controller = controller
     }
     
     func testSessionLoads()
