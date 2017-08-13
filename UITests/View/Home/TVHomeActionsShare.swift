@@ -17,10 +17,13 @@ class TVHomeActionsShare:XCTestCase
             app.sheets["Share"].exists,
             "share sheet should not be visible")
         
-        app.buttons["VHomeActionsShare_button"].tap()
-        
-        XCTAssertTrue(
-            app.sheets["Share"].exists,
-            "share sheet should appear")
+        if app.buttons["VHomeActionsShare_button"].exists
+        {
+            app.buttons["VHomeActionsShare_button"].tap()
+            
+            XCTAssertTrue(
+                app.sheets["Share"].exists,
+                "share sheet should appear")
+        }
     }
 }
