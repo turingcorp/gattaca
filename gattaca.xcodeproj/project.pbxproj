@@ -11,7 +11,6 @@
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA42A7B11F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42A7B01F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift */; };
 		DA42A7B31F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42A7B21F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift */; };
-		DA68A2661F3F6DE70094BC9B /* TCHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2651F3F6DE70094BC9B /* TCHome.swift */; };
 		DA68A2681F3F75320094BC9B /* MGifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2671F3F75320094BC9B /* MGifLoader.swift */; };
 		DA68A2701F3F77310094BC9B /* MPerkDomainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26B1F3F77310094BC9B /* MPerkDomainProtocol.swift */; };
 		DA68A2711F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26C1F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift */; };
@@ -133,7 +132,6 @@
 		DA39E7891F38E3F90001CA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA42A7B01F3C243D00B7A677 /* MGifStrategyDownloadRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownloadRequest.swift; sourceTree = "<group>"; };
 		DA42A7B21F3C32DF00B7A677 /* MGifStrategyDownloadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyDownloadFile.swift; sourceTree = "<group>"; };
-		DA68A2651F3F6DE70094BC9B /* TCHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCHome.swift; sourceTree = "<group>"; };
 		DA68A2671F3F75320094BC9B /* MGifLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifLoader.swift; sourceTree = "<group>"; };
 		DA68A26B1F3F77310094BC9B /* MPerkDomainProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkDomainProtocol.swift; sourceTree = "<group>"; };
 		DA68A26C1F3F77310094BC9B /* MPerkThumbnailFreeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailFreeProtocol.swift; sourceTree = "<group>"; };
@@ -308,22 +306,6 @@
 				DA39E7891F38E3F90001CA28 /* Info.plist */,
 			);
 			path = gattaca;
-			sourceTree = "<group>";
-		};
-		DA68A2631F3F6DD60094BC9B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				DA68A2641F3F6DD60094BC9B /* Home */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		DA68A2641F3F6DD60094BC9B /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				DA68A2651F3F6DE70094BC9B /* TCHome.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		DA68A2691F3F77310094BC9B /* Abstract */ = {
@@ -609,7 +591,6 @@
 		DA7CE8501F3F544C0078A26B /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				DA68A2631F3F6DD60094BC9B /* Controller */,
 				DAD67F161F3F56D1006E9699 /* View */,
 				DA7CE8531F3F544C0078A26B /* Info.plist */,
 			);
@@ -1015,7 +996,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA68A2661F3F6DE70094BC9B /* TCHome.swift in Sources */,
 				DAD67F1F1F3F5BC4006E9699 /* TVHomeActionsShare.swift in Sources */,
 				DAD67F191F3F56FE006E9699 /* TVHome.swift in Sources */,
 			);
