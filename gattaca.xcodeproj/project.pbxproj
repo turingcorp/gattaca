@@ -20,6 +20,7 @@
 		DA68A2741F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A26F1F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift */; };
 		DA68A2761F3F77400094BC9B /* MPerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2751F3F77400094BC9B /* MPerk.swift */; };
 		DA68A2781F3F774C0094BC9B /* MPerkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */; };
+		DA68A27A1F407F530094BC9B /* MPerkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2791F407F530094BC9B /* MPerkFactory.swift */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
 		DA68F1971F38E5D500C13634 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1501F38E5D500C13634 /* Controller.swift */; };
 		DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1511F38E5D500C13634 /* ControllerParent.swift */; };
@@ -140,6 +141,7 @@
 		DA68A26F1F3F77310094BC9B /* MPerkThumbnailPurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailPurchaseProtocol.swift; sourceTree = "<group>"; };
 		DA68A2751F3F77400094BC9B /* MPerk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerk.swift; sourceTree = "<group>"; };
 		DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkLoader.swift; sourceTree = "<group>"; };
+		DA68A2791F407F530094BC9B /* MPerkFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkFactory.swift; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA68F1501F38E5D500C13634 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA68F1511F38E5D500C13634 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 			children = (
 				DA68A2751F3F77400094BC9B /* MPerk.swift */,
 				DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */,
+				DA68A2791F407F530094BC9B /* MPerkFactory.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -889,6 +892,7 @@
 				DAE0AFAC1F3B67FC006449D0 /* DGifExtension.swift in Sources */,
 				DA68F1AA1F38E5D500C13634 /* ExtensionFileManager.swift in Sources */,
 				DA68F1A71F38E5D500C13634 /* DManager.swift in Sources */,
+				DA68A27A1F407F530094BC9B /* MPerkFactory.swift in Sources */,
 				DAE0AF961F3AB432006449D0 /* VHomeActionsCell.swift in Sources */,
 				DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */,
 				DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */,

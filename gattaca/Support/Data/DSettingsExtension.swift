@@ -4,7 +4,6 @@ extension DSettings
 {
     func addTtl()
     {
-        ttl += 1
         DManager.sharedInstance?.save()
     }
     

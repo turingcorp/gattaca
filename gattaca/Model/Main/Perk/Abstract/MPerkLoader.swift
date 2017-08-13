@@ -1,17 +1,18 @@
 import Foundation
+import CoreData
 
 extension MPerk
 {
-    class func factoryPerks() -> [MPerkThumbnailProtocol]
+    //MARK: private
+    
+    private func factoryThumbnails() -> [MPerkThumbnailProtocol]
     {
         let perks:[MPerkThumbnailProtocol] = []
         
         return perks
     }
     
-    //MARK: private
-    
-    private class func factoryDispatchGroup() -> DispatchGroup
+    private func factoryDispatchGroup() -> DispatchGroup
     {
         let dispatchGroup:DispatchGroup = DispatchGroup()
         dispatchGroup.setTarget(
@@ -19,6 +20,52 @@ extension MPerk
                 qos:DispatchQoS.QoSClass.background))
         
         return dispatchGroup
+    }
+    
+    private func loadSavedPerks(
+        completion:@escaping(([DPerk]?) -> ()))
+    {
+        DManager.sharedInstance?.fetch(entity:DPerk.self)
+        { (data:[NSManagedObject]?) in
+            
+            let perks:[DPerk]? = data as? [DPerk]
+            completion(perks)
+        }
+    }
+    
+    private func asyncLoadPerks(completion:@escaping(() -> ()))
+    {
+        MPerk.loadSavedPerks
+        { [weak self] (perks:[DPerk]?) in
+            
+            <#code#>
+        }
+        
+        
+        guard
+            
+            let perksMap:[String:DPerk] = settings?.perksMap()
+            
+        else
+        {
+            completion()
+            return
+        }
+        
+        let thumbnails:[MPerkThumbnailProtocol] = MPerk.factoryThumbnails()
+        let dispatchGroup:DispatchGroup = MPerk.factoryDispatchGroup()
+        
+        loadPerks(
+            perksMap:perksMap,
+            thumbnails:thumbnails,
+            dispatchGroup:dispatchGroup)
+        
+        dispatchGroup.notify(
+            queue:DispatchQueue.global(
+                qos:DispatchQoS.QoSClass.background))
+        {
+            completion()
+        }
     }
     
     private func loadPerks(
@@ -53,42 +100,14 @@ extension MPerk
         }
     }
     
-    func loadPerks(completion:@escaping(() -> ()))
-    {
-        guard
-            
-            let perksMap:[String:DPerk] = settings?.perksMap()
-            
-            else
-        {
-            completion()
-            return
-        }
-        
-        let thumbnails:[MPerkThumbnailProtocol] = MSession.factoryPerks()
-        let dispatchGroup:DispatchGroup = MSession.factoryDispatchGroup()
-        
-        loadPerks(
-            perksMap:perksMap,
-            thumbnails:thumbnails,
-            dispatchGroup:dispatchGroup)
-        
-        dispatchGroup.notify(
-            queue:DispatchQueue.global(
-                qos:DispatchQoS.QoSClass.background))
-        {
-            completion()
-        }
-    }
-    
     //MARK: internal
     
-    func loadPerks(completion:@escaping(() -> ()))
+    func loadPerks(completion:@escaping(([DPerk]) -> ()))
     {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.loadPerks(completion:completion)
+            self?.asynLoadPerks(completion:completion)
         }
     }
 }
