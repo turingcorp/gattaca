@@ -25,18 +25,30 @@ class MSession
         
         load(manager:manager)
         { [weak self] (session:DSession) in
-            
-            self?.session = session
+
             manager.save()
-            
-            completion()
+            self?.sessionLoaded(
+                session:session,
+                completion:completion)
         }
+    }
+    
+    private func sessionLoaded(
+        session:DSession,
+        completion:@escaping(() -> ()))
+    {
+        self.session = session
+        status = MSession.Status.loaded
+        
+        completion()
     }
     
     //MARK: internal
     
     func load(completion:@escaping(() -> ()))
     {
+        status = MSession.Status.loading
+        
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
