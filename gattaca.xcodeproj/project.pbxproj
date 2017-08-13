@@ -73,6 +73,7 @@
 		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
 		DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */; };
 		DA90E0BE1F40991D00A37538 /* TCHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0BD1F40991D00A37538 /* TCHome.swift */; };
+		DA90E0C01F40AD3E00A37538 /* MHomeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0BF1F40AD3E00A37538 /* MHomeSession.swift */; };
 		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
 		DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215811F39372D00E281DB /* MGiphyRandom.swift */; };
 		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
@@ -198,6 +199,7 @@
 		DA7CE84F1F3F544C0078A26B /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7CE8531F3F544C0078A26B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA90E0BD1F40991D00A37538 /* TCHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCHome.swift; sourceTree = "<group>"; };
+		DA90E0BF1F40AD3E00A37538 /* MHomeSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSession.swift; sourceTree = "<group>"; };
 		DAC2157F1F3936FA00E281DB /* MGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphy.swift; sourceTree = "<group>"; };
 		DAC215811F39372D00E281DB /* MGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyRandom.swift; sourceTree = "<group>"; };
 		DAC215841F39378800E281DB /* MRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRequest.swift; sourceTree = "<group>"; };
@@ -677,6 +679,7 @@
 			children = (
 				DAE0AFC31F3BAEF9006449D0 /* MHome.swift */,
 				DAE0AFC41F3BAEF9006449D0 /* MHomeFactory.swift */,
+				DA90E0BF1F40AD3E00A37538 /* MHomeSession.swift */,
 				DAE0AFC71F3BAEF9006449D0 /* MHomeLoader.swift */,
 				DAE0AFD61F3BAF20006449D0 /* MHomeRequest.swift */,
 				DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */,
@@ -940,6 +943,7 @@
 				DA68A27C1F4085C00094BC9B /* MSessionLoader.swift in Sources */,
 				DAE0AFC11F3BAB16006449D0 /* MGiphyFactory.swift in Sources */,
 				DA68F1C41F38E5D500C13634 /* VSliderBar.swift in Sources */,
+				DA90E0C01F40AD3E00A37538 /* MHomeSession.swift in Sources */,
 				DAE0AFBF1F3BAA88006449D0 /* MGiphyItem.swift in Sources */,
 				DAE0AFA61F3AD96B006449D0 /* MGiphyTrending.swift in Sources */,
 				DA68F1AF1F38E5D500C13634 /* ExtensionUICollectionReusableView.swift in Sources */,
