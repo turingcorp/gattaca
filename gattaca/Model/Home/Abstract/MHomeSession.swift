@@ -9,4 +9,9 @@ extension MHome
         strategy = MHomeStrategy.factoryStrategy(
             controller:controller)
     }
+    
+    func clearStrategy()
+    {
+        strategy = nil
+    }
 }
