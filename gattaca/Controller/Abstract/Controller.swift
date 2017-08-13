@@ -4,7 +4,7 @@ class Controller<T:ViewMain, S:Model>:UIViewController, ModelDelegate
 {
     let model:S
     
-    init()
+    init(session:MSession)
     {
         model = S()
         
