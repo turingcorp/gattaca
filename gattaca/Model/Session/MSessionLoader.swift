@@ -5,7 +5,31 @@ extension MSession
 {
     //MARK: internal
     
-    func createSession(
+    func load(
+        manager:DManager,
+        completion:@escaping((DSession) -> ()))
+    {
+        manager.fetch(entity:DSession.self)
+        { [weak self] (data:[NSManagedObject]?) in
+            
+            guard
+                
+                let session:DSession = data?.first as? DSession
+                
+            else
+            {
+                self?.create(
+                    manager:manager,
+                    completion:completion)
+                
+                return
+            }
+            
+            completion(session)
+        }
+    }
+    
+    func create(
         manager:DManager,
         completion:@escaping((DSession) -> ()))
     {
@@ -18,30 +42,6 @@ extension MSession
             
             else
             {
-                return
-            }
-            
-            completion(session)
-        }
-    }
-    
-    func load(
-        manager:DManager,
-        completion:@escaping((DSession) -> ()))
-    {
-        manager.fetch(entity:DSession.self)
-        { [weak self] (data:[NSManagedObject]?) in
-            
-            guard
-            
-                let session:DSession = data?.first as? DSession
-            
-            else
-            {
-                self?.createSession(
-                    manager:manager,
-                    completion:completion)
-                
                 return
             }
             

@@ -3,7 +3,7 @@ import CoreData
 
 class DManager
 {
-    private let managedObjectContext:NSManagedObjectContext
+    let managedObjectContext:NSManagedObjectContext
     
     init?()
     {
