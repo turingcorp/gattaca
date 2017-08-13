@@ -8,6 +8,7 @@ extension MHome
     {
         strategy = MHomeStrategy.factoryStrategy(
             controller:controller)
+        strategy?.nextStep()
     }
     
     func clearStrategy()
