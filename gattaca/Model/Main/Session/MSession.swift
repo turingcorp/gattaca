@@ -18,7 +18,7 @@ class MSession
         { [weak self] (session:DSession?) in
         
             self?.session = session
-            DManager.sharedInstance?.save()
+//            DManager.sharedInstance?.save()
             
             completion()
         }

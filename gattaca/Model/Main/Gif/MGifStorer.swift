@@ -17,10 +17,10 @@ extension MGif
     
     private func storeFinished(completion:@escaping(() -> ()))
     {
-        DManager.sharedInstance?.save
-        {
-            completion()
-        }
+//        DManager.sharedInstance?.save
+//        {
+//            completion()
+//        }
     }
     
     private func storeItems(

@@ -4,48 +4,19 @@ import CoreData
 class DManager
 {
     private let managedObjectContext:NSManagedObjectContext
-    private let kModelName:String = "DGattaca"
-    private let kModelExtension:String = "momd"
-    private let kSQLiteExtension:String = ".sqlite"
     
     init?()
     {
-        let sqliteFile:String = kModelName.appending(kSQLiteExtension)
-        let storeCoordinatorURL:URL = FileManager.appDirectory.appendingPathComponent(
-            sqliteFile)
-        
         guard
-            
-            let modelURL:URL = Bundle.main.url(
-                forResource:kModelName,
-                withExtension:kModelExtension),
-            let managedObjectModel:NSManagedObjectModel = NSManagedObjectModel(
-                contentsOf:modelURL)
-            
+        
+            let managedObjectContext:NSManagedObjectContext = DManager.factoryManagedObjectContext()
+        
         else
         {
             return nil
         }
         
-        let persistentStoreCoordinator:NSPersistentStoreCoordinator = NSPersistentStoreCoordinator(
-            managedObjectModel:managedObjectModel)
-        
-        do
-        {
-            try persistentStoreCoordinator.addPersistentStore(
-                ofType:NSSQLiteStoreType,
-                configurationName:nil,
-                at:storeCoordinatorURL,
-                options:nil)
-        }
-        catch
-        {
-        }
-        
-        managedObjectContext = NSManagedObjectContext(
-            concurrencyType:
-            NSManagedObjectContextConcurrencyType.privateQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
+        self.managedObjectContext = managedObjectContext
     }
     
     //MARK: internal
@@ -99,25 +70,6 @@ class DManager
         }
     }
     
-    func createAndWait(entity:NSManagedObject.Type) -> NSManagedObject?
-    {
-        var managedObject:NSManagedObject?
-        
-        managedObjectContext.performAndWait
-        {
-            if let entityDescription:NSEntityDescription = NSEntityDescription.entity(
-                forEntityName:entity.entityName,
-                in:self.managedObjectContext)
-            {
-                managedObject = NSManagedObject(
-                    entity:entityDescription,
-                    insertInto:self.managedObjectContext)
-            }
-        }
-        
-        return managedObject
-    }
-    
     func fetch(
         entity:NSManagedObject.Type,
         limit:Int = 0,
@@ -160,14 +112,6 @@ class DManager
         {
             self.managedObjectContext.delete(data)
             completion?()
-        }
-    }
-    
-    func deleteAndWait(data:NSManagedObject)
-    {
-        managedObjectContext.performAndWait
-        {
-            self.managedObjectContext.delete(data)
         }
     }
 }

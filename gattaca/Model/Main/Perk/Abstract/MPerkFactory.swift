@@ -23,12 +23,12 @@ extension MPerk
     func factoryStoredPerks(
         completion:@escaping(([DPerk]?) -> ()))
     {
-        DManager.sharedInstance?.fetch(entity:DPerk.self)
-        { (data:[NSManagedObject]?) in
-            
-            let perks:[DPerk]? = data as? [DPerk]
-            completion(perks)
-        }
+//        DManager.sharedInstance?.fetch(entity:DPerk.self)
+//        { (data:[NSManagedObject]?) in
+//            
+//            let perks:[DPerk]? = data as? [DPerk]
+//            completion(perks)
+//        }
     }
     
     func factoryPerksMap(perks:[DPerk]) -> [String:DPerk]

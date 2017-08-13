@@ -26,23 +26,23 @@ extension MGif
     
     private func asyncLoadGifs(completion:@escaping(([DGif]) -> ()))
     {
-        DManager.sharedInstance?.fetch(entity:DGif.self)
-        { [weak self] (data:[NSManagedObject]?) in
-            
-            guard
-                
-                let gifs:[DGif] = data as? [DGif]
-                
-            else
-            {
-                completion([])
-                return
-            }
-            
-            self?.gifsLoaded(
-                gifs:gifs,
-                completion:completion)
-        }
+//        DManager.sharedInstance?.fetch(entity:DGif.self)
+//        { [weak self] (data:[NSManagedObject]?) in
+//            
+//            guard
+//                
+//                let gifs:[DGif] = data as? [DGif]
+//                
+//            else
+//            {
+//                completion([])
+//                return
+//            }
+//            
+//            self?.gifsLoaded(
+//                gifs:gifs,
+//                completion:completion)
+//        }
     }
     
     //MARK: internal

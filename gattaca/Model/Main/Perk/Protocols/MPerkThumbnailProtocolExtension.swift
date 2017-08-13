@@ -23,7 +23,7 @@ extension MPerkThumbnailProtocol
     {
         let identifierString:String = identifier()
         let domainIdentifierString:String = domainIdentifier()
-        
+        /*
         DManager.sharedInstance?.create(entity:dPerkType)
         { (data:NSManagedObject?) in
             
@@ -41,6 +41,6 @@ extension MPerkThumbnailProtocol
             perk.domainIdentifier = domainIdentifierString
             
             completion(perk)
-        }
+        }*/
     }
 }

@@ -7,7 +7,7 @@ extension MSession
     
     private func createSession(
         completion:@escaping((DSession?) -> ()))
-    {
+    {/*
         DManager.sharedInstance?.create(entity:DSession.self)
         { (data:NSManagedObject?) in
             
@@ -23,13 +23,14 @@ extension MSession
             }
             
             completion(session)
-        }
+        }*/
     }
     
     //MARK: internal
     
     func load(completion:@escaping((DSession?) -> ()))
     {
+        /*
         DManager.sharedInstance?.fetch(entity:DSession.self)
         { [weak self] (data:[NSManagedObject]?) in
             
@@ -45,6 +46,6 @@ extension MSession
             }
             
             completion(session)
-        }
+        }*/
     }
 }
