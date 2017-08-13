@@ -19,7 +19,21 @@ class CHome:Controller<VHome, MHome>
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+     
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            guard
+                
+                let strongSelf:CHome = self
+            
+            else
+            {
+                return
+            }
+            
+            strongSelf.model.loadStrategy(controller:strongSelf)
+        }
     }
     
     override func viewDidAppear(_ animated:Bool)
