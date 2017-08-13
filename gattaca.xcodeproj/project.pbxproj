@@ -21,6 +21,7 @@
 		DA68A2761F3F77400094BC9B /* MPerk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2751F3F77400094BC9B /* MPerk.swift */; };
 		DA68A2781F3F774C0094BC9B /* MPerkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */; };
 		DA68A27A1F407F530094BC9B /* MPerkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2791F407F530094BC9B /* MPerkFactory.swift */; };
+		DA68A27C1F4085C00094BC9B /* MSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27B1F4085C00094BC9B /* MSessionLoader.swift */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
 		DA68F1971F38E5D500C13634 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1501F38E5D500C13634 /* Controller.swift */; };
 		DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1511F38E5D500C13634 /* ControllerParent.swift */; };
@@ -140,6 +141,7 @@
 		DA68A2751F3F77400094BC9B /* MPerk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerk.swift; sourceTree = "<group>"; };
 		DA68A2771F3F774C0094BC9B /* MPerkLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkLoader.swift; sourceTree = "<group>"; };
 		DA68A2791F407F530094BC9B /* MPerkFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkFactory.swift; sourceTree = "<group>"; };
+		DA68A27B1F4085C00094BC9B /* MSessionLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionLoader.swift; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA68F1501F38E5D500C13634 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA68F1511F38E5D500C13634 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 			children = (
 				DA68F1641F38E5D500C13634 /* MSession.swift */,
 				DA7CE8221F3F433C0078A26B /* MSessionStatus.swift */,
+				DA68A27B1F4085C00094BC9B /* MSessionLoader.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -899,6 +902,7 @@
 				DA68F1B21F38E5D500C13634 /* ExtensionURL.swift in Sources */,
 				DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */,
 				DA68A2681F3F75320094BC9B /* MGifLoader.swift in Sources */,
+				DA68A27C1F4085C00094BC9B /* MSessionLoader.swift in Sources */,
 				DAE0AFC11F3BAB16006449D0 /* MGiphyFactory.swift in Sources */,
 				DA68F1C41F38E5D500C13634 /* VSliderBar.swift in Sources */,
 				DAE0AFBF1F3BAA88006449D0 /* MGiphyItem.swift in Sources */,

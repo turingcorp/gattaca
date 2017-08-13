@@ -3,7 +3,7 @@ import Foundation
 class MSession
 {
     private(set) var status:MSession.Status
-    private(set) var settings:DSettings?
+    private(set) var session:DSession?
     
     private init()
     {
@@ -12,28 +12,25 @@ class MSession
     
     //MARK: private
     
-    private func asyncLoadSession(completion:@escaping(() -> ()))
+    private func asyncLoad(completion:@escaping(() -> ()))
     {
-        loadSettings
-        { (settings:DSettings?) in
+        load
+        { [weak self] (session:DSession?) in
+        
+            self?.session = session
+            DManager.sharedInstance?.save()
             
-            self.settings = settings
+            completion()
         }
-    }
-    
-    private func asyncLoadComplete(completion:@escaping(() -> ()))
-    {
-        DManager.sharedInstance?.save()
-        completion()
     }
     
     //MARK: internal
     
-    func loadSession(completion:@escaping(() -> ()))
+    func load(completion:@escaping(() -> ()))
     {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         {
-            self.asyncLoadSession(completion:completion)
+            self.asyncLoad(completion:completion)
         }
     }
 }
