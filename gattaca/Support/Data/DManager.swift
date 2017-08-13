@@ -3,7 +3,6 @@ import CoreData
 
 class DManager
 {
-    static let sharedInstance:DManager? = DManager()
     private let managedObjectContext:NSManagedObjectContext
     private let kModelName:String = "DGattaca"
     private let kModelExtension:String = "momd"
