@@ -2,9 +2,10 @@ import Foundation
 
 class MHome:Model
 {
+    var strategy:MHomeStrategy?
+    var requestOffset:Int
     let urlSession:URLSession
     let actions:[MHomeActionProtocol]
-    var requestOffset:Int
     private(set) var items:[MHomeItem]
     
     required init(session:MSession)
