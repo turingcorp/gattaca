@@ -3,7 +3,7 @@ import CoreData
 
 extension NSManagedObject
 {
-    class var entityName:String
+    open class var entityName:String
     {
         get
         {
