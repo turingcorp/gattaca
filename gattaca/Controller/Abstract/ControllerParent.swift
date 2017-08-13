@@ -3,10 +3,12 @@ import UIKit
 class ControllerParent:UIViewController
 {
     private var orientation:UIInterfaceOrientationMask
+    private let session:MSession
     private let kOrientationKey:String = "orientation"
     
     init()
     {
+        session = MSession()
         orientation = UIInterfaceOrientationMask.portrait
         super.init(nibName:nil, bundle:nil)
     }
@@ -25,7 +27,7 @@ class ControllerParent:UIViewController
     {
         super.viewDidLoad()
 
-        let controller:CHome = CHome()
+        let controller:CHome = CHome(session:session)
         mainController(controller:controller)
     }
     

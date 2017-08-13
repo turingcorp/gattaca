@@ -5,7 +5,7 @@ class MSession
     private(set) var status:MSession.Status
     private(set) var session:DSession?
     
-    private init()
+    init()
     {
         status = MSession.Status.new
     }

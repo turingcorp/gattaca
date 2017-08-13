@@ -6,7 +6,7 @@ class Controller<T:ViewMain, S:Model>:UIViewController, ModelDelegate
     
     init(session:MSession)
     {
-        model = S()
+        model = S(session:session)
         
         super.init(nibName:nil, bundle:nil)
         model.delegate = self
