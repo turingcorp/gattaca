@@ -97,4 +97,20 @@ class TDManager:XCTestCase
                 "failed to save core data")
         }
     }
+    
+    func testFetch()
+    {
+        let fetchExpectation:XCTestExpectation = expectation(
+            description:"core data fetch model")
+        
+        manager?.fetch(entity:DSession.self)
+        { (data:[NSManagedObject]) in
+            
+            fetchExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+        }
+    }
 }
