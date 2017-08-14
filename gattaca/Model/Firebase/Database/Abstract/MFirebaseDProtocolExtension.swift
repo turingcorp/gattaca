@@ -8,6 +8,11 @@ extension MFirebaseDProtocol
         {
             return nil
         }
+        
+        set
+        {
+            parent = newValue
+        }
     }
     
     var path:String

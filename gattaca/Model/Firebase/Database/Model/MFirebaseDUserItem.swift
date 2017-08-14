@@ -14,6 +14,10 @@ class MFirebaseDUserItem:MFirebaseDProtocol
             
             return userList
         }
+        
+        set
+        {
+        }
     }
     
     required init?(snapshot:Any?, identifier:String?)
