@@ -46,26 +46,24 @@ class DManager
         }
     }
     
-    func create(
-        entity:NSManagedObject.Type,
-        completion:@escaping((NSManagedObject) -> ()))
+    func create<T:NSManagedObject>(
+        completion:@escaping((T) -> ()))
     {
         managedObjectContext.perform
         {
             guard
                 
                 let entityDescription:NSEntityDescription = NSEntityDescription.entity(
-                    forEntityName:entity.entityName,
-                    in:self.managedObjectContext)
+                    forEntityName:T.entityName,
+                    in:self.managedObjectContext),
+                let managedObject:T = NSManagedObject(
+                    entity:entityDescription,
+                    insertInto:self.managedObjectContext) as? T
                 
             else
             {
                 return
             }
-            
-            let managedObject:NSManagedObject = NSManagedObject(
-                entity:entityDescription,
-                insertInto:self.managedObjectContext)
             
             completion(managedObject)
         }
