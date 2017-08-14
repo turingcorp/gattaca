@@ -51,4 +51,12 @@ extension MSession
             }
         }
     }
+    
+    func sync(
+        manager:DManager,
+        session:DSession,
+        completion:@escaping(() -> ()))
+    {
+        
+    }
 }
