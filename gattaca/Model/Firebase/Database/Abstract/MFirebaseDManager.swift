@@ -21,4 +21,20 @@ class MFirebaseDManager
         
         return path
     }
+    
+    //MARK: internal
+    
+    func create(
+        parent:MFirebaseDProtocol,
+        data:Any) -> String
+    {
+        let path:String = modelPath(model:parent)
+        let childReference:DatabaseReference = reference.child(
+            path).childByAutoId()
+        childReference.setValue(data)
+        
+        let childId:String = childReference.key
+        
+        return childId
+    }
 }
