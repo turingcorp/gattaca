@@ -4,6 +4,18 @@ class MFirebaseDUserItem:MFirebaseDProtocol
 {
     let identifier:String?
     
+    var parent:MFirebaseDProtocol?
+    {
+        get
+        {
+            let userList:MFirebaseDUser? = MFirebaseDUser(
+                snapshot:nil,
+                identifier:nil)
+            
+            return userList
+        }
+    }
+    
     required init?(snapshot:Any?, identifier:String?)
     {
         self.identifier = identifier
