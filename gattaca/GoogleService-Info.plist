@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>626062061494-8hv7umnajrr5t6hohf2biqu3656cgk1j.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.626062061494-8hv7umnajrr5t6hohf2biqu3656cgk1j</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBXZERKXzVdViSZoYTETgfcl6ND5QVGDiE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>626062061494</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>iturbide.gattaca</string>
+	<key>PROJECT_ID</key>
+	<string>gattaca-8e2de</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gattaca-8e2de.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:626062061494:ios:045669789cb3110c</string>
+	<key>DATABASE_URL</key>
+	<string>https://gattaca-8e2de.firebaseio.com</string>
+</dict>
+</plist>
