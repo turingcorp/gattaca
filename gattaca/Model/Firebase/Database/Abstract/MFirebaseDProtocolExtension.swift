@@ -20,10 +20,18 @@ extension MFirebaseDProtocol
             {
                 let parentPath:String = parent.path
                 modelPath.append(parentPath)
-                modelPath.append("/")
+                
             }
             
-            modelPath.append(identifier)
+            if let identifier:String = self.identifier
+            {
+                if modelPath.characters.count > 0
+                {
+                    modelPath.append("/")
+                }
+                
+                modelPath.append(identifier)
+            }
             
             return modelPath
         }
