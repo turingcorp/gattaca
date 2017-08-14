@@ -39,4 +39,38 @@ class TDManager:XCTestCase
         { (error:Error?) in
         }
     }
+    
+    func testSave()
+    {
+        guard
+            
+            let manager:DManager = DManager()
+            
+        else
+        {
+            return
+        }
+        
+        let saveExpectation:XCTestExpectation = expectation(
+            description:"core data save")
+        
+        manager.create(entity:DSession.self)
+        { (data:NSManagedObject) in
+            
+            manager.save
+            {
+                saveExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            let hasChanges:Bool = manager.managedObjectContext.hasChanges
+            
+            XCTAssertFalse(
+                hasChanges,
+                "failed to save core data")
+        }
+    }
 }
