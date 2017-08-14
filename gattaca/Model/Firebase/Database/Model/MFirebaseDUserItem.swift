@@ -3,6 +3,9 @@ import Foundation
 class MFirebaseDUserItem:MFirebaseDProtocol
 {
     let identifier:String?
+    let created:TimeInterval
+    let syncstamp:TimeInterval
+    let status:Int16
     
     var parent:MFirebaseDProtocol?
     {
@@ -22,6 +25,16 @@ class MFirebaseDUserItem:MFirebaseDProtocol
     
     required init?(snapshot:Any?, identifier:String?)
     {
-        self.identifier = identifier
+        return nil
+    }
+    
+    init(session:DSession)
+    {
+        identifier = nil
+        status = session.rawStatus
+        
+        let currentDate:TimeInterval = Date().timeIntervalSince1970
+        created = currentDate
+        syncstamp = currentDate
     }
 }
