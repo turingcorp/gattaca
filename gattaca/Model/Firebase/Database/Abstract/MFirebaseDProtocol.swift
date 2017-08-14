@@ -7,6 +7,5 @@ protocol MFirebaseDProtocol
     var path:String { get }
     var json:Any? { get }
     
-    init?(snapshot:Any, identifier:String?)
+    init?(snapshot:Any?, identifier:String?)
 }
-
