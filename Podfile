@@ -11,3 +11,10 @@ target 'gattaca' do
   podlist
 end
 
+target 'UnitTests' do
+  podlist
+end
+
+target 'UITests' do
+  podlist
+end
