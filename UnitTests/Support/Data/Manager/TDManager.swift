@@ -4,16 +4,29 @@ import CoreData
 
 class TDManager:XCTestCase
 {
+    private var manager:DManager?
     private let kWaitExpectation:TimeInterval = 2
+    
+    override func setUp()
+    {
+        super.setUp()
+        
+        let currentBundle:Bundle = Bundle(for:TDManager.self)
+        manager = DManager(bundle:currentBundle)
+    }
+    
+    func testInit()
+    {
+        XCTAssertNotNil(
+            manager,
+            "failed to instance data manager")
+    }
     
     func testDifferentCoordinators()
     {
-        let currentBundle:Bundle = Bundle(for:TDManager.self)
-        
         guard
         
-            let managerProduction:DManager = DManager(bundle:nil),
-            let managerTests:DManager = DManager(bundle:currentBundle)
+            let managerProduction:DManager = DManager(bundle:nil)
         
         else
         {
@@ -21,7 +34,7 @@ class TDManager:XCTestCase
         }
         
         let pathProduction:String? = managerProduction.managedObjectContext.persistentStoreCoordinator?.persistentStores.first?.url?.path
-        let pathTests:String? = managerTests.managedObjectContext.persistentStoreCoordinator?.persistentStores.first?.url?.path
+        let pathTests:String? = manager?.managedObjectContext.persistentStoreCoordinator?.persistentStores.first?.url?.path
         
         XCTAssertNotNil(
             pathProduction,
@@ -37,34 +50,12 @@ class TDManager:XCTestCase
             "store coordinators for production and test should be different")
     }
     
-    func testInit()
-    {
-        let currentBundle:Bundle = Bundle(for:TDManager.self)
-        
-        let manager:DManager? = DManager(bundle:currentBundle)
-        
-        XCTAssertNotNil(
-            manager,
-            "failed to instance data manager")
-    }
-    
     func testCreate()
     {
-        let currentBundle:Bundle = Bundle(for:TDManager.self)
-        
-        guard
-        
-            let manager:DManager = DManager(bundle:currentBundle)
-        
-        else
-        {
-            return
-        }
-        
         let createExpectation:XCTestExpectation = expectation(
             description:"core data create model")
         
-        manager.create(entity:DSession.self)
+        manager?.create(entity:DSession.self)
         { (data:NSManagedObject) in
             
             createExpectation.fulfill()
@@ -77,33 +68,29 @@ class TDManager:XCTestCase
     
     func testSave()
     {
-        let currentBundle:Bundle = Bundle(for:TDManager.self)
-        
-        guard
-            
-            let manager:DManager = DManager(bundle:currentBundle)
-            
-        else
-        {
-            return
-        }
-        
         let saveExpectation:XCTestExpectation = expectation(
             description:"core data save")
         
-        manager.create(entity:DSession.self)
-        { (data:NSManagedObject) in
+        manager?.create(entity:DSession.self)
+        { [weak self] (data:NSManagedObject) in
             
-            manager.save
+            self?.manager?.save
             {
                 saveExpectation.fulfill()
             }
         }
         
         waitForExpectations(timeout:kWaitExpectation)
-        { (error:Error?) in
+        { [weak self] (error:Error?) in
             
-            let hasChanges:Bool = manager.managedObjectContext.hasChanges
+            guard
+                
+                let hasChanges:Bool = self?.manager?.managedObjectContext.hasChanges
+            
+            else
+            {
+                return
+            }
             
             XCTAssertFalse(
                 hasChanges,
