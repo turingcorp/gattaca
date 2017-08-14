@@ -2,6 +2,10 @@ import Foundation
 
 class MFirebaseDUserItem:MFirebaseDProtocol
 {
+    static let kKeyCreated:String = "created"
+    static let kKeySyncstamp:String = "syncstamp"
+    static let kKeyStatus:String = "status"
+    
     let identifier:String?
     let created:TimeInterval
     let syncstamp:TimeInterval
@@ -20,6 +24,19 @@ class MFirebaseDUserItem:MFirebaseDProtocol
         
         set
         {
+        }
+    }
+    
+    var json:Any?
+    {
+        get
+        {
+            let json:[String:Any] = [
+                MFirebaseDUserItem.kKeyCreated:created,
+                MFirebaseDUserItem.kKeySyncstamp:created,
+                MFirebaseDUserItem.kKeyStatus:status,]
+            
+            return json
         }
     }
     
