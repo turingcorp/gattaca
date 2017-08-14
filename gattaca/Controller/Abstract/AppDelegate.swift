@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate:UIResponder, UIApplicationDelegate
@@ -10,6 +11,8 @@ class AppDelegate:UIResponder, UIApplicationDelegate
         didFinishLaunchingWithOptions launchOptions:
         [UIApplicationLaunchOptionsKey:Any]?) -> Bool
     {
+        FirebaseApp.configure()
+        
         let window:UIWindow = UIWindow(frame:UIScreen.main.bounds)
         window.backgroundColor = UIColor.white
         window.makeKeyAndVisible()
