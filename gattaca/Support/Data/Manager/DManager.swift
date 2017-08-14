@@ -104,12 +104,12 @@ class DManager
         }
     }
     
-    func delete(data:NSManagedObject, completion:@escaping(() -> ()))
+    func delete(data:NSManagedObject, completion:(() -> ())?)
     {
         managedObjectContext.perform
         {
             self.managedObjectContext.delete(data)
-            completion()
+            completion?()
         }
     }
 }
