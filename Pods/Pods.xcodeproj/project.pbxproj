@@ -7,34 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A0A2C71015861358F65D454154C8E99 /* GifViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68BAE1C2BC70E31824793DC15D3A757 /* GifViewFactory.swift */; };
-		1C34C31A8BF0650242512A81E951E4F9 /* Pods-gattaca-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DB76F512F1FFA530832E0C2869BA94 /* Pods-gattaca-dummy.m */; };
-		26BBB4A36847D2902C30FE045DDC0AC2 /* GifViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D26AB20C3305098E5F61CF7C98F2A4 /* GifViewUpdater.swift */; };
-		26E80F00BAF3AB4582CAECABA2C47C42 /* GifStrategyStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1677614D0DB5114367C9C47DD88B8A /* GifStrategyStand.swift */; };
-		2B644999CA9D06267AE49DD0EBB57C36 /* GifViewStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2844B1CD6C3D0289627116A4146163C /* GifViewStrategy.swift */; };
-		33267387D14E86F3D142E9EB955B8619 /* Pods-gattaca-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B367171D88D5F6D59CDA9FCC2D55B86 /* Pods-gattaca-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		424FCF7AD47F2A1D5549FCAFF583D9FD /* GifModelFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4EA95D8CAF127B8DF433C0EFBF070 /* GifModelFrame.swift */; };
-		42EAE89545420BFD906428B3A11C333D /* GifHero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FA76F81347A3E5F3A0AE9584084F3C /* GifHero-dummy.m */; };
-		4CF8927FC9EFABD3B68F3EC43A86A325 /* GifModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A682C78673875A9DF3E28C2216EC981 /* GifModelLoader.swift */; };
-		72013A770578D4BB7CC22A7EFD7B2653 /* GifModelLoaderResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06F702FC03EFB5F8C3DD8FFCE7C8AB /* GifModelLoaderResizer.swift */; };
-		7627A5AD852A2A479588B1D578050A33 /* GifStrategyLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C08D22B37F39DB34BF556AF6BE5C /* GifStrategyLoaded.swift */; };
-		8ADF065E3585E9A3798F4F7990FCBC59 /* GifStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE6F27F832B778541F47BCA3AB6F196 /* GifStrategy.swift */; };
-		9ADCAC754D477525CEF5F92B3CFC8169 /* CGImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E7F7402EBF05D4FC3871510D49849 /* CGImageExtension.swift */; };
+		05B1F02560378D28FEBD4E8F6D293216 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1A0A2C71015861358F65D454154C8E99 /* GifViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0B9C4803E21A9AADA59FC0A98C98E /* GifViewFactory.swift */; };
+		26BBB4A36847D2902C30FE045DDC0AC2 /* GifViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ACAEE9AA413AB94FB84A92537ABB89 /* GifViewUpdater.swift */; };
+		26E80F00BAF3AB4582CAECABA2C47C42 /* GifStrategyStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC4A309725FF11A1752DEFFC530514B /* GifStrategyStand.swift */; };
+		29FEADDF2086FDEA7D5BA87DD23B08C6 /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = 1149312E08DB39CCFD461B448DD9976B /* pb_decode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B644999CA9D06267AE49DD0EBB57C36 /* GifViewStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927BDA6A89E4F7434E9BFC36C92F160 /* GifViewStrategy.swift */; };
+		392F2CF142BAA751AC1BB61D8B757D98 /* pb.h in Headers */ = {isa = PBXBuildFile; fileRef = D52C3C1735584E4505D98F0A71A3CE84 /* pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A50F5C8ECED9627F2EBD97F61BD376D /* pb_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 7BB79F504844CB893A3F4D739F176B7B /* pb_common.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc -fno-objc-arc"; }; };
+		424FCF7AD47F2A1D5549FCAFF583D9FD /* GifModelFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6188501F67CE458FF3641274BE120 /* GifModelFrame.swift */; };
+		42EAE89545420BFD906428B3A11C333D /* GifHero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A008CC795AC8EA9ADD39708935BBC3FC /* GifHero-dummy.m */; };
+		468DFD90B6C4DA2F7CFA0C1C89F1B615 /* nanopb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8446EB055E9EDDE36FE77C2BBAC4180 /* nanopb-dummy.m */; };
+		4CF8927FC9EFABD3B68F3EC43A86A325 /* GifModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2A98D8CF99A7858FC02735699C0630 /* GifModelLoader.swift */; };
+		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C7F17DAF2D2AAF4DE3DCA9D8B3A3C3 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54F580BF4588159D6A61F21D15591805 /* pb_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D60E925E0A3448EBB3443D0905C3794 /* pb_decode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
+		55D8D5D912CFD2F3584E4553C2EAD734 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = B53D1C15AF34D1240B43F709E8CDFD09 /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
+		651949EAE8F56C187B0D1BF3C550ED5A /* Pods-gattaca-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B367171D88D5F6D59CDA9FCC2D55B86 /* Pods-gattaca-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72013A770578D4BB7CC22A7EFD7B2653 /* GifModelLoaderResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559804C463034B367C4B73F70DFB5FE3 /* GifModelLoaderResizer.swift */; };
+		7627A5AD852A2A479588B1D578050A33 /* GifStrategyLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67842AF06EEEBF49DD2B3E8BCC46ECF /* GifStrategyLoaded.swift */; };
+		806BAA4E00218D70995697C4400BE7A0 /* pb_common.h in Headers */ = {isa = PBXBuildFile; fileRef = E94BF3BB2EC521322FE9196E50CF7B62 /* pb_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80D7DC7E164ED084A1FB5BE968E4B422 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8ADF065E3585E9A3798F4F7990FCBC59 /* GifStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E9915753984161183461FE021F9F5 /* GifStrategy.swift */; };
+		93D51748565CFEB9490FBA7DA993C5C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9ADCAC754D477525CEF5F92B3CFC8169 /* CGImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADC1D3DFCB3F59B8BFEFB773067E28 /* CGImageExtension.swift */; };
 		A10A4FE6F35DB13C86EB1C0813263BB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		A17FF501631B8CEA2C63CEA96913A3C6 /* GifModelResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D5CBD3F20576FF4E73F08F8205284 /* GifModelResize.swift */; };
-		B62316F3F91FDEF99EABA0BA35AB63CB /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6BDF663AD87D8DA72F8A187548B69 /* GifView.swift */; };
-		D0A6383A65A1091A20B597940C8E104C /* GifStrategyLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25560F0399D56DEC6084A16E81297733 /* GifStrategyLoad.swift */; };
-		D0AB8DB869CAC5C915D7DBAB6EBF7596 /* GifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64889972EE1D155BEF7195FBD5537B /* GifModel.swift */; };
-		D32AC928F83D023EFF92A88BE86967B3 /* GifHero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF3B600C096613C953045B0659A26F06 /* GifHero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D8294D55DD473E600E258546EDB596D6 /* GifViewOverrides.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C11117814698559138B34DDADB8BB2 /* GifViewOverrides.swift */; };
-		EB093E49D02E9ECF137F2D0217AE7195 /* GifModelLoaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627630DE5512CB5D0E448B16B5342E4 /* GifModelLoaderFactory.swift */; };
-		EE8CA4EEB44F51BFC89D55AB835420DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		F35191A88BD2D2431C63960FA7B7415D /* CGImageSourceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612026DE7C96BF469891A0A30E065704 /* CGImageSourceExtension.swift */; };
-		F819A2193B15E436B9162CC6CBB54440 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8DCE7781730D753919D26B7F9DD131 /* CGSizeExtension.swift */; };
+		A17FF501631B8CEA2C63CEA96913A3C6 /* GifModelResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE34160C9CADED247497B9085FEB6EA0 /* GifModelResize.swift */; };
+		B62316F3F91FDEF99EABA0BA35AB63CB /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108399947C5DAAB77BDF567FD7F3D492 /* GifView.swift */; };
+		C891E068EE17DB15367C5FC17B1EF837 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D0A6383A65A1091A20B597940C8E104C /* GifStrategyLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65E47A8BE0AEEBDFB3E217BDCE519FF /* GifStrategyLoad.swift */; };
+		D0AB8DB869CAC5C915D7DBAB6EBF7596 /* GifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D749A91EF7ADC8F1B7A3B10DEC81735 /* GifModel.swift */; };
+		D163623D89E2E3C242025FD7076FD88F /* Pods-gattaca-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DB76F512F1FFA530832E0C2869BA94 /* Pods-gattaca-dummy.m */; };
+		D32AC928F83D023EFF92A88BE86967B3 /* GifHero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8ACF0B6ECC79453EA8BFDD1D36D09AE /* GifHero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8294D55DD473E600E258546EDB596D6 /* GifViewOverrides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296C51A7BEF42F148CBC1E1E1A3E08C3 /* GifViewOverrides.swift */; };
+		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D07E68820CF2350C56AF5C3F97DEF80 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E181395E73163EB702FCE9A21403D67B /* pb_encode.h in Headers */ = {isa = PBXBuildFile; fileRef = F81EB8069CC366938E9AEA503661707B /* pb_encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB093E49D02E9ECF137F2D0217AE7195 /* GifModelLoaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671BF39FF6997C88DEDAD616A752E055 /* GifModelLoaderFactory.swift */; };
+		F35191A88BD2D2431C63960FA7B7415D /* CGImageSourceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED194A314D311F5AF9E376D1A59DA0B /* CGImageSourceExtension.swift */; };
+		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = D050A17DE164BF4B56BB9344AA2E4D6D /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F819A2193B15E436B9162CC6CBB54440 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDCEF8786DB64B0A9009987FD7058 /* CGSizeExtension.swift */; };
+		F9D92BA503505CB48EF4ECF0DDF57686 /* nanopb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1946E5F80A6B00C23DFB8500AA62D896 /* nanopb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB20A705C277367F2F82C956EA390BF /* GoogleToolboxForMac-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4BC3A69F0E7076965DF798C07D87B6BD /* PBXContainerItemProxy */ = {
+		32BAEC203BA1B9CA727D1E3A584C9661 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		80F5905AA36FB1E64B80767DA08CFA97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4DD95323C54A78F879DAB0F1508B8E7;
+			remoteInfo = nanopb;
+		};
+		A593D35D822CBFAFB28AF89082F9764B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -44,52 +74,83 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		044E7F7402EBF05D4FC3871510D49849 /* CGImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGImageExtension.swift; path = gifhero/Source/Extensions/CGImageExtension.swift; sourceTree = "<group>"; };
-		0A682C78673875A9DF3E28C2216EC981 /* GifModelLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelLoader.swift; path = gifhero/Source/Model/GifModelLoader.swift; sourceTree = "<group>"; };
-		0AE6F27F832B778541F47BCA3AB6F196 /* GifStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategy.swift; path = gifhero/Source/Strategy/GifStrategy.swift; sourceTree = "<group>"; };
-		0AF4EA95D8CAF127B8DF433C0EFBF070 /* GifModelFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelFrame.swift; path = gifhero/Source/Model/GifModelFrame.swift; sourceTree = "<group>"; };
-		1A8DCE7781730D753919D26B7F9DD131 /* CGSizeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSizeExtension.swift; path = gifhero/Source/Extensions/CGSizeExtension.swift; sourceTree = "<group>"; };
+		0347B7F7492AE350AF6AD517C24BEDCC /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		0ACC5F55CC417C75B98014A5930822B5 /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = nanopb.modulemap; sourceTree = "<group>"; };
+		0D07E68820CF2350C56AF5C3F97DEF80 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		108399947C5DAAB77BDF567FD7F3D492 /* GifView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifView.swift; path = gifhero/Source/View/GifView.swift; sourceTree = "<group>"; };
+		1149312E08DB39CCFD461B448DD9976B /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
+		16ACA0C8D990772AB222B12B9A432BF5 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1946E5F80A6B00C23DFB8500AA62D896 /* nanopb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-umbrella.h"; sourceTree = "<group>"; };
 		1B976215CB8FCB3501592B5A53C57DF6 /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
-		1C03E360357AD653E7A36D6FA463FCC1 /* Pods_gattaca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_gattaca.framework; path = "Pods-gattaca.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D1677614D0DB5114367C9C47DD88B8A /* GifStrategyStand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategyStand.swift; path = gifhero/Source/Strategy/GifStrategyStand.swift; sourceTree = "<group>"; };
-		25560F0399D56DEC6084A16E81297733 /* GifStrategyLoad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategyLoad.swift; path = gifhero/Source/Strategy/GifStrategyLoad.swift; sourceTree = "<group>"; };
-		2F4A3C3FA17486EBC3A627BEBB498224 /* GifHero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GifHero.modulemap; sourceTree = "<group>"; };
+		25098BD277E8D0BD778A6ED61961517D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		296C51A7BEF42F148CBC1E1E1A3E08C3 /* GifViewOverrides.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewOverrides.swift; path = gifhero/Source/View/GifViewOverrides.swift; sourceTree = "<group>"; };
+		3A80C9666BBFBF98ECBEF10FEF42EA81 /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
+		3AAF6DB70126F7991159EE65E645F8D0 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		3C6E9915753984161183461FE021F9F5 /* GifStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategy.swift; path = gifhero/Source/Strategy/GifStrategy.swift; sourceTree = "<group>"; };
+		3F2A98D8CF99A7858FC02735699C0630 /* GifModelLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelLoader.swift; path = gifhero/Source/Model/GifModelLoader.swift; sourceTree = "<group>"; };
 		4392B8C28AA763014E63FEFE1A77FCD5 /* Pods-gattaca-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-gattaca-acknowledgements.markdown"; sourceTree = "<group>"; };
+		448CA5666783379C24E8B8B10E458CA2 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		4CD88BF2FD005A68A4075B69CC86C034 /* GifHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GifHero.framework; path = GifHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5180D44462410F7EDF1ACB5916688EE2 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F8F9024F47ACD742B966FB3AD6F64F /* Pods-gattaca-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-gattaca-resources.sh"; sourceTree = "<group>"; };
+		559804C463034B367C4B73F70DFB5FE3 /* GifModelLoaderResizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelLoaderResizer.swift; path = gifhero/Source/Model/GifModelLoaderResizer.swift; sourceTree = "<group>"; };
 		55DB76F512F1FFA530832E0C2869BA94 /* Pods-gattaca-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-gattaca-dummy.m"; sourceTree = "<group>"; };
-		5C64889972EE1D155BEF7195FBD5537B /* GifModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModel.swift; path = gifhero/Source/Model/GifModel.swift; sourceTree = "<group>"; };
-		612026DE7C96BF469891A0A30E065704 /* CGImageSourceExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGImageSourceExtension.swift; path = gifhero/Source/Extensions/CGImageSourceExtension.swift; sourceTree = "<group>"; };
+		59ACA408B07B3DECC690D78568D7F4F5 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		5C8BAD4D0F064698904D7BED7E6FA4FB /* nanopb-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-prefix.pch"; sourceTree = "<group>"; };
+		5D726F49CB3E3CFA4E037696555AB028 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		5EB20A705C277367F2F82C956EA390BF /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		65A998490C3AC7F73458B5FA82353FBA /* GifHero-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GifHero-prefix.pch"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		671BF39FF6997C88DEDAD616A752E055 /* GifModelLoaderFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelLoaderFactory.swift; path = gifhero/Source/Model/GifModelLoaderFactory.swift; sourceTree = "<group>"; };
+		6863FF8AD63F88507737F071BF288006 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		6D60E925E0A3448EBB3443D0905C3794 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
+		6FC4A309725FF11A1752DEFFC530514B /* GifStrategyStand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategyStand.swift; path = gifhero/Source/Strategy/GifStrategyStand.swift; sourceTree = "<group>"; };
+		74C560F1D5D9C8FBA499498F051E69ED /* GifHero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GifHero.xcconfig; sourceTree = "<group>"; };
 		761DA12710ED2937E4EE46F43C8CCEDD /* Pods-gattaca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-gattaca.release.xcconfig"; sourceTree = "<group>"; };
 		7B367171D88D5F6D59CDA9FCC2D55B86 /* Pods-gattaca-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-gattaca-umbrella.h"; sourceTree = "<group>"; };
-		9238C08D22B37F39DB34BF556AF6BE5C /* GifStrategyLoaded.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategyLoaded.swift; path = gifhero/Source/Strategy/GifStrategyLoaded.swift; sourceTree = "<group>"; };
+		7BB79F504844CB893A3F4D739F176B7B /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
+		7DBDDCEF8786DB64B0A9009987FD7058 /* CGSizeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSizeExtension.swift; path = gifhero/Source/Extensions/CGSizeExtension.swift; sourceTree = "<group>"; };
+		80D7DC7E164ED084A1FB5BE968E4B422 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		84181B15ACA64282EAEB61EFCB63E5C9 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		8927BDA6A89E4F7434E9BFC36C92F160 /* GifViewStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewStrategy.swift; path = gifhero/Source/View/GifViewStrategy.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		99FA76F81347A3E5F3A0AE9584084F3C /* GifHero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GifHero-dummy.m"; sourceTree = "<group>"; };
 		9C606FF30C8092F1854EF5DD37D1F65F /* Pods-gattaca-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-gattaca-acknowledgements.plist"; sourceTree = "<group>"; };
-		A2844B1CD6C3D0289627116A4146163C /* GifViewStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewStrategy.swift; path = gifhero/Source/View/GifViewStrategy.swift; sourceTree = "<group>"; };
-		A54E9198C2C7C9C98B3D099CBABB3A21 /* GifHero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GifHero.xcconfig; sourceTree = "<group>"; };
-		AF3B600C096613C953045B0659A26F06 /* GifHero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GifHero-umbrella.h"; sourceTree = "<group>"; };
-		B2C3D710517CAB0675427AE8829AE548 /* GifHero-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GifHero-prefix.pch"; sourceTree = "<group>"; };
-		B3AB4C3372E2D639DDC4C27FA4AD2F4B /* GifHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GifHero.framework; path = GifHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4B43E12B89337F50E48AB3F47260C08 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D749A91EF7ADC8F1B7A3B10DEC81735 /* GifModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModel.swift; path = gifhero/Source/Model/GifModel.swift; sourceTree = "<group>"; };
+		A008CC795AC8EA9ADD39708935BBC3FC /* GifHero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GifHero-dummy.m"; sourceTree = "<group>"; };
+		A018B8E34AFB02CBB530FAF38DCFB9C4 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		A0E4D43BD103BEC39B583834382E5207 /* Pods_gattaca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_gattaca.framework; path = "Pods-gattaca.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE34160C9CADED247497B9085FEB6EA0 /* GifModelResize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelResize.swift; path = gifhero/Source/Model/GifModelResize.swift; sourceTree = "<group>"; };
+		B1438CB6074D77E4F21D7B45946B935B /* GifHero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GifHero.modulemap; sourceTree = "<group>"; };
+		B53D1C15AF34D1240B43F709E8CDFD09 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
+		B67842AF06EEEBF49DD2B3E8BCC46ECF /* GifStrategyLoaded.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategyLoaded.swift; path = gifhero/Source/Strategy/GifStrategyLoaded.swift; sourceTree = "<group>"; };
+		B8ACF0B6ECC79453EA8BFDD1D36D09AE /* GifHero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GifHero-umbrella.h"; sourceTree = "<group>"; };
+		B9C7F17DAF2D2AAF4DE3DCA9D8B3A3C3 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		C31B540BB50807782E6B24B8D3D9AB32 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3ACAEE9AA413AB94FB84A92537ABB89 /* GifViewUpdater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewUpdater.swift; path = gifhero/Source/View/GifViewUpdater.swift; sourceTree = "<group>"; };
 		C67225B7B808A5FF738A8CABE87A8484 /* Pods-gattaca.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-gattaca.modulemap"; sourceTree = "<group>"; };
+		CD6B70A42E8B5FED13434FFA42ECAB3A /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		D050A17DE164BF4B56BB9344AA2E4D6D /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
 		D3A7733349498A0E0CF7A9438CD61C63 /* Pods-gattaca-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-gattaca-frameworks.sh"; sourceTree = "<group>"; };
-		D5E6BDF663AD87D8DA72F8A187548B69 /* GifView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifView.swift; path = gifhero/Source/View/GifView.swift; sourceTree = "<group>"; };
-		DB06F702FC03EFB5F8C3DD8FFCE7C8AB /* GifModelLoaderResizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelLoaderResizer.swift; path = gifhero/Source/Model/GifModelLoaderResizer.swift; sourceTree = "<group>"; };
-		E59D5CBD3F20576FF4E73F08F8205284 /* GifModelResize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelResize.swift; path = gifhero/Source/Model/GifModelResize.swift; sourceTree = "<group>"; };
-		E627630DE5512CB5D0E448B16B5342E4 /* GifModelLoaderFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelLoaderFactory.swift; path = gifhero/Source/Model/GifModelLoaderFactory.swift; sourceTree = "<group>"; };
+		D52C3C1735584E4505D98F0A71A3CE84 /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
+		D8446EB055E9EDDE36FE77C2BBAC4180 /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
+		D8ADC1D3DFCB3F59B8BFEFB773067E28 /* CGImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGImageExtension.swift; path = gifhero/Source/Extensions/CGImageExtension.swift; sourceTree = "<group>"; };
+		DED194A314D311F5AF9E376D1A59DA0B /* CGImageSourceExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGImageSourceExtension.swift; path = gifhero/Source/Extensions/CGImageSourceExtension.swift; sourceTree = "<group>"; };
+		DFE0B9C4803E21A9AADA59FC0A98C98E /* GifViewFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewFactory.swift; path = gifhero/Source/View/GifViewFactory.swift; sourceTree = "<group>"; };
+		E2CFDA55C2159E1A151C2C083F6A4CAB /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
+		E8B6188501F67CE458FF3641274BE120 /* GifModelFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelFrame.swift; path = gifhero/Source/Model/GifModelFrame.swift; sourceTree = "<group>"; };
+		E94BF3BB2EC521322FE9196E50CF7B62 /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
 		F29EDBC001DB0886FD02EAA740C08DC1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F68BAE1C2BC70E31824793DC15D3A757 /* GifViewFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewFactory.swift; path = gifhero/Source/View/GifViewFactory.swift; sourceTree = "<group>"; };
-		F8D26AB20C3305098E5F61CF7C98F2A4 /* GifViewUpdater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewUpdater.swift; path = gifhero/Source/View/GifViewUpdater.swift; sourceTree = "<group>"; };
-		F9C11117814698559138B34DDADB8BB2 /* GifViewOverrides.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewOverrides.swift; path = gifhero/Source/View/GifViewOverrides.swift; sourceTree = "<group>"; };
+		F65E47A8BE0AEEBDFB3E217BDCE519FF /* GifStrategyLoad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategyLoad.swift; path = gifhero/Source/Strategy/GifStrategyLoad.swift; sourceTree = "<group>"; };
+		F81EB8069CC366938E9AEA503661707B /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
+		FCE2FC11016DCEFDBAED078A790DCC91 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		55FE5AE969109AF76FAEE2FAEC358D6F /* Frameworks */ = {
+		3E3EF1E07856667F95FF4E781B906135 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE8CA4EEB44F51BFC89D55AB835420DC /* Foundation.framework in Frameworks */,
+				C891E068EE17DB15367C5FC17B1EF837 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,43 +162,78 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		971041836592E28ADEEDA495A96A62A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05B1F02560378D28FEBD4E8F6D293216 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93D51748565CFEB9490FBA7DA993C5C0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11EAFC4EA0E8DBEE25781D3AAF0065F2 /* GifHero */ = {
+		035E8DA5A8B526375B4BA2A5EB3C569B /* decode */ = {
 			isa = PBXGroup;
 			children = (
-				044E7F7402EBF05D4FC3871510D49849 /* CGImageExtension.swift */,
-				612026DE7C96BF469891A0A30E065704 /* CGImageSourceExtension.swift */,
-				1A8DCE7781730D753919D26B7F9DD131 /* CGSizeExtension.swift */,
-				5C64889972EE1D155BEF7195FBD5537B /* GifModel.swift */,
-				0AF4EA95D8CAF127B8DF433C0EFBF070 /* GifModelFrame.swift */,
-				0A682C78673875A9DF3E28C2216EC981 /* GifModelLoader.swift */,
-				E627630DE5512CB5D0E448B16B5342E4 /* GifModelLoaderFactory.swift */,
-				DB06F702FC03EFB5F8C3DD8FFCE7C8AB /* GifModelLoaderResizer.swift */,
-				E59D5CBD3F20576FF4E73F08F8205284 /* GifModelResize.swift */,
-				0AE6F27F832B778541F47BCA3AB6F196 /* GifStrategy.swift */,
-				25560F0399D56DEC6084A16E81297733 /* GifStrategyLoad.swift */,
-				9238C08D22B37F39DB34BF556AF6BE5C /* GifStrategyLoaded.swift */,
-				1D1677614D0DB5114367C9C47DD88B8A /* GifStrategyStand.swift */,
-				D5E6BDF663AD87D8DA72F8A187548B69 /* GifView.swift */,
-				F68BAE1C2BC70E31824793DC15D3A757 /* GifViewFactory.swift */,
-				F9C11117814698559138B34DDADB8BB2 /* GifViewOverrides.swift */,
-				A2844B1CD6C3D0289627116A4146163C /* GifViewStrategy.swift */,
-				F8D26AB20C3305098E5F61CF7C98F2A4 /* GifViewUpdater.swift */,
-				A60DBDA7D2DE52A70693465E434E3A9E /* Support Files */,
 			);
-			name = GifHero;
-			path = GifHero;
+			name = decode;
 			sourceTree = "<group>";
 		};
-		35AFEA05A81B45F492A59172A9CF5A0B /* Products */ = {
+		0794D68AD57BB0C57A3A86A12C437421 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B3AB4C3372E2D639DDC4C27FA4AD2F4B /* GifHero.framework */,
-				1C03E360357AD653E7A36D6FA463FCC1 /* Pods_gattaca.framework */,
+				0347B7F7492AE350AF6AD517C24BEDCC /* Firebase.h */,
 			);
-			name = Products;
+			name = Core;
+			sourceTree = "<group>";
+		};
+		13D39B936DA7620025B04CBF966D3BF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AAF6DB70126F7991159EE65E645F8D0 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17CC658AE417310E469E4EB2A3821392 /* GoogleToolboxForMac */ = {
+			isa = PBXGroup;
+			children = (
+				CFF038310D41E9FEC178D32819C0B633 /* Defines */,
+				E6B16DBA00B92BFFCBCDA1174F00AB3D /* NSData+zlib */,
+				898414482F8F33F13B7BA999DA39BC4A /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		3FD30779FFA7BA5E1CC7123166B446A6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				25098BD277E8D0BD778A6ED61961517D /* Info.plist */,
+				0ACC5F55CC417C75B98014A5930822B5 /* nanopb.modulemap */,
+				3A80C9666BBFBF98ECBEF10FEF42EA81 /* nanopb.xcconfig */,
+				D8446EB055E9EDDE36FE77C2BBAC4180 /* nanopb-dummy.m */,
+				5C8BAD4D0F064698904D7BED7E6FA4FB /* nanopb-prefix.pch */,
+				1946E5F80A6B00C23DFB8500AA62D896 /* nanopb-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/nanopb";
+			sourceTree = "<group>";
+		};
+		45C77F31344644E5F92337A28FC288DA /* encode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = encode;
 			sourceTree = "<group>";
 		};
 		467D7115C17C4F6FCA8E07AA3F9496EF /* Targets Support Files */ = {
@@ -148,12 +244,52 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		70886AF241D1CEA642CE4BF4F1034A4F /* Pods */ = {
+		481A6BC16A47259373BE3E79FF150750 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11EAFC4EA0E8DBEE25781D3AAF0065F2 /* GifHero */,
+				4CD88BF2FD005A68A4075B69CC86C034 /* GifHero.framework */,
+				5180D44462410F7EDF1ACB5916688EE2 /* GoogleToolboxForMac.framework */,
+				16ACA0C8D990772AB222B12B9A432BF5 /* nanopb.framework */,
+				A0E4D43BD103BEC39B583834382E5207 /* Pods_gattaca.framework */,
 			);
-			name = Pods;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4967D875F2DD4CA8950669A6DDE77D92 /* nanopb */ = {
+			isa = PBXGroup;
+			children = (
+				D52C3C1735584E4505D98F0A71A3CE84 /* pb.h */,
+				7BB79F504844CB893A3F4D739F176B7B /* pb_common.c */,
+				E94BF3BB2EC521322FE9196E50CF7B62 /* pb_common.h */,
+				6D60E925E0A3448EBB3443D0905C3794 /* pb_decode.c */,
+				1149312E08DB39CCFD461B448DD9976B /* pb_decode.h */,
+				B53D1C15AF34D1240B43F709E8CDFD09 /* pb_encode.c */,
+				F81EB8069CC366938E9AEA503661707B /* pb_encode.h */,
+				035E8DA5A8B526375B4BA2A5EB3C569B /* decode */,
+				45C77F31344644E5F92337A28FC288DA /* encode */,
+				3FD30779FFA7BA5E1CC7123166B446A6 /* Support Files */,
+			);
+			name = nanopb;
+			path = nanopb;
+			sourceTree = "<group>";
+		};
+		650DF02D3AEB46D35B6D345D1FD7507C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D726F49CB3E3CFA4E037696555AB028 /* FirebaseCore.framework */,
+				448CA5666783379C24E8B8B10E458CA2 /* FirebaseCoreDiagnostics.framework */,
+				E2CFDA55C2159E1A151C2C083F6A4CAB /* FirebaseNanoPB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71B1C68C28E3AAEC4C7B13248C0CF2EA /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				F6022CF38C5B09C3769E64FEC384B368 /* Frameworks */,
+			);
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -161,21 +297,44 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				70886AF241D1CEA642CE4BF4F1034A4F /* Pods */,
-				35AFEA05A81B45F492A59172A9CF5A0B /* Products */,
+				F8F7B9238769261030413317B0B971C2 /* Pods */,
+				481A6BC16A47259373BE3E79FF150750 /* Products */,
 				467D7115C17C4F6FCA8E07AA3F9496EF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A60DBDA7D2DE52A70693465E434E3A9E /* Support Files */ = {
+		898414482F8F33F13B7BA999DA39BC4A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2F4A3C3FA17486EBC3A627BEBB498224 /* GifHero.modulemap */,
-				A54E9198C2C7C9C98B3D099CBABB3A21 /* GifHero.xcconfig */,
-				99FA76F81347A3E5F3A0AE9584084F3C /* GifHero-dummy.m */,
-				B2C3D710517CAB0675427AE8829AE548 /* GifHero-prefix.pch */,
-				AF3B600C096613C953045B0659A26F06 /* GifHero-umbrella.h */,
-				C4B43E12B89337F50E48AB3F47260C08 /* Info.plist */,
+				59ACA408B07B3DECC690D78568D7F4F5 /* GoogleToolboxForMac.modulemap */,
+				6863FF8AD63F88507737F071BF288006 /* GoogleToolboxForMac.xcconfig */,
+				5EB20A705C277367F2F82C956EA390BF /* GoogleToolboxForMac-dummy.m */,
+				CD6B70A42E8B5FED13434FFA42ECAB3A /* GoogleToolboxForMac-prefix.pch */,
+				80D7DC7E164ED084A1FB5BE968E4B422 /* GoogleToolboxForMac-umbrella.h */,
+				C31B540BB50807782E6B24B8D3D9AB32 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
+			sourceTree = "<group>";
+		};
+		9C4E0CBD774F1142763C8058E2167B84 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				0794D68AD57BB0C57A3A86A12C437421 /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		A4A7C460A605FED154A2B82FA6C0696C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1438CB6074D77E4F21D7B45946B935B /* GifHero.modulemap */,
+				74C560F1D5D9C8FBA499498F051E69ED /* GifHero.xcconfig */,
+				A008CC795AC8EA9ADD39708935BBC3FC /* GifHero-dummy.m */,
+				65A998490C3AC7F73458B5FA82353FBA /* GifHero-prefix.pch */,
+				B8ACF0B6ECC79453EA8BFDD1D36D09AE /* GifHero-umbrella.h */,
+				FCE2FC11016DCEFDBAED078A790DCC91 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/GifHero";
@@ -187,6 +346,68 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1565239361DF8A1010E80CD421F5283 /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				F4387DBA9107D2E60D46768354158EBF /* Frameworks */,
+			);
+			name = FirebaseDatabase;
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		C72522095E5501AABAA7B46CFE0AADCF /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				650DF02D3AEB46D35B6D345D1FD7507C /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		C8D964ECF81799BFCEB5FD366E63B105 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				13D39B936DA7620025B04CBF966D3BF8 /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		CFF038310D41E9FEC178D32819C0B633 /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				B9C7F17DAF2D2AAF4DE3DCA9D8B3A3C3 /* GTMDefines.h */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		D0A277FBFCC87D254FA32EA6575823A6 /* GifHero */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADC1D3DFCB3F59B8BFEFB773067E28 /* CGImageExtension.swift */,
+				DED194A314D311F5AF9E376D1A59DA0B /* CGImageSourceExtension.swift */,
+				7DBDDCEF8786DB64B0A9009987FD7058 /* CGSizeExtension.swift */,
+				9D749A91EF7ADC8F1B7A3B10DEC81735 /* GifModel.swift */,
+				E8B6188501F67CE458FF3641274BE120 /* GifModelFrame.swift */,
+				3F2A98D8CF99A7858FC02735699C0630 /* GifModelLoader.swift */,
+				671BF39FF6997C88DEDAD616A752E055 /* GifModelLoaderFactory.swift */,
+				559804C463034B367C4B73F70DFB5FE3 /* GifModelLoaderResizer.swift */,
+				AE34160C9CADED247497B9085FEB6EA0 /* GifModelResize.swift */,
+				3C6E9915753984161183461FE021F9F5 /* GifStrategy.swift */,
+				F65E47A8BE0AEEBDFB3E217BDCE519FF /* GifStrategyLoad.swift */,
+				B67842AF06EEEBF49DD2B3E8BCC46ECF /* GifStrategyLoaded.swift */,
+				6FC4A309725FF11A1752DEFFC530514B /* GifStrategyStand.swift */,
+				108399947C5DAAB77BDF567FD7F3D492 /* GifView.swift */,
+				DFE0B9C4803E21A9AADA59FC0A98C98E /* GifViewFactory.swift */,
+				296C51A7BEF42F148CBC1E1E1A3E08C3 /* GifViewOverrides.swift */,
+				8927BDA6A89E4F7434E9BFC36C92F160 /* GifViewStrategy.swift */,
+				C3ACAEE9AA413AB94FB84A92537ABB89 /* GifViewUpdater.swift */,
+				A4A7C460A605FED154A2B82FA6C0696C /* Support Files */,
+			);
+			name = GifHero;
+			path = GifHero;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -215,14 +436,66 @@
 			path = "Target Support Files/Pods-gattaca";
 			sourceTree = "<group>";
 		};
+		E6B16DBA00B92BFFCBCDA1174F00AB3D /* NSData+zlib */ = {
+			isa = PBXGroup;
+			children = (
+				0D07E68820CF2350C56AF5C3F97DEF80 /* GTMNSData+zlib.h */,
+				D050A17DE164BF4B56BB9344AA2E4D6D /* GTMNSData+zlib.m */,
+			);
+			name = "NSData+zlib";
+			sourceTree = "<group>";
+		};
+		F4387DBA9107D2E60D46768354158EBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84181B15ACA64282EAEB61EFCB63E5C9 /* FirebaseDatabase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6022CF38C5B09C3769E64FEC384B368 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A018B8E34AFB02CBB530FAF38DCFB9C4 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8F7B9238769261030413317B0B971C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C4E0CBD774F1142763C8058E2167B84 /* Firebase */,
+				C8D964ECF81799BFCEB5FD366E63B105 /* FirebaseAnalytics */,
+				C72522095E5501AABAA7B46CFE0AADCF /* FirebaseCore */,
+				C1565239361DF8A1010E80CD421F5283 /* FirebaseDatabase */,
+				71B1C68C28E3AAEC4C7B13248C0CF2EA /* FirebaseInstanceID */,
+				D0A277FBFCC87D254FA32EA6575823A6 /* GifHero */,
+				17CC658AE417310E469E4EB2A3821392 /* GoogleToolboxForMac */,
+				4967D875F2DD4CA8950669A6DDE77D92 /* nanopb */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9761CD62F940BED47A6C1F5E4AB8D952 /* Headers */ = {
+		3DDEA6B3E7BCBFFCD64601B1756ED03B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33267387D14E86F3D142E9EB955B8619 /* Pods-gattaca-umbrella.h in Headers */,
+				651949EAE8F56C187B0D1BF3C550ED5A /* Pods-gattaca-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4547B9AF8085A499AA35614798F8F9E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D92BA503505CB48EF4ECF0DDF57686 /* nanopb-umbrella.h in Headers */,
+				392F2CF142BAA751AC1BB61D8B757D98 /* pb.h in Headers */,
+				806BAA4E00218D70995697C4400BE7A0 /* pb_common.h in Headers */,
+				29FEADDF2086FDEA7D5BA87DD23B08C6 /* pb_decode.h in Headers */,
+				E181395E73163EB702FCE9A21403D67B /* pb_encode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,25 +507,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */,
+				541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */,
+				DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BA71614BC5D10C5CDF3974CC8822F947 /* Pods-gattaca */ = {
+		00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B94D967EC00EF010A6C035C817BEDDC5 /* Build configuration list for PBXNativeTarget "Pods-gattaca" */;
+			buildConfigurationList = C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */;
 			buildPhases = (
-				3E61BBDCD8677E94AFDA0C5168AB97A7 /* Sources */,
-				55FE5AE969109AF76FAEE2FAEC358D6F /* Frameworks */,
-				9761CD62F940BED47A6C1F5E4AB8D952 /* Headers */,
+				63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */,
+				F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */,
+				FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7E50DAB79E38BBB48FDC5243B111B714 /* PBXTargetDependency */,
+			);
+			name = GoogleToolboxForMac;
+			productName = GoogleToolboxForMac;
+			productReference = 5180D44462410F7EDF1ACB5916688EE2 /* GoogleToolboxForMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3F5B4A864B4EF8A5E7AD8C6E7D3E3A21 /* Pods-gattaca */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC22FEFD697D0C72BE66E076A51E5EA6 /* Build configuration list for PBXNativeTarget "Pods-gattaca" */;
+			buildPhases = (
+				E061B96BEEFBF2AFEBC696DB24B5A95E /* Sources */,
+				3E3EF1E07856667F95FF4E781B906135 /* Frameworks */,
+				3DDEA6B3E7BCBFFCD64601B1756ED03B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF196591B2DF9C0FDC24B262D8C8C1FD /* PBXTargetDependency */,
+				FF433F85A3C1EDF6FC2237F6EDD92E56 /* PBXTargetDependency */,
+				EC02E41AE8233DBE2575C6CF35A7CDFA /* PBXTargetDependency */,
 			);
 			name = "Pods-gattaca";
 			productName = "Pods-gattaca";
-			productReference = 1C03E360357AD653E7A36D6FA463FCC1 /* Pods_gattaca.framework */;
+			productReference = A0E4D43BD103BEC39B583834382E5207 /* Pods_gattaca.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F118B0FA84AC9116AB2E480C302C3999 /* Build configuration list for PBXNativeTarget "nanopb" */;
+			buildPhases = (
+				238527BE8D494586023F2A2B8A60D242 /* Sources */,
+				971041836592E28ADEEDA495A96A62A2 /* Frameworks */,
+				4547B9AF8085A499AA35614798F8F9E4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nanopb;
+			productName = nanopb;
+			productReference = 16ACA0C8D990772AB222B12B9A432BF5 /* nanopb.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F44F5C7AC1FA7BEA4BCA0613EF000697 /* GifHero */ = {
@@ -269,7 +588,7 @@
 			);
 			name = GifHero;
 			productName = GifHero;
-			productReference = B3AB4C3372E2D639DDC4C27FA4AD2F4B /* GifHero.framework */;
+			productReference = 4CD88BF2FD005A68A4075B69CC86C034 /* GifHero.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -289,22 +608,27 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 35AFEA05A81B45F492A59172A9CF5A0B /* Products */;
+			productRefGroup = 481A6BC16A47259373BE3E79FF150750 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F44F5C7AC1FA7BEA4BCA0613EF000697 /* GifHero */,
-				BA71614BC5D10C5CDF3974CC8822F947 /* Pods-gattaca */,
+				00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */,
+				E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */,
+				3F5B4A864B4EF8A5E7AD8C6E7D3E3A21 /* Pods-gattaca */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3E61BBDCD8677E94AFDA0C5168AB97A7 /* Sources */ = {
+		238527BE8D494586023F2A2B8A60D242 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C34C31A8BF0650242512A81E951E4F9 /* Pods-gattaca-dummy.m in Sources */,
+				468DFD90B6C4DA2F7CFA0C1C89F1B615 /* nanopb-dummy.m in Sources */,
+				3A50F5C8ECED9627F2EBD97F61BD376D /* pb_common.c in Sources */,
+				54F580BF4588159D6A61F21D15591805 /* pb_decode.c in Sources */,
+				55D8D5D912CFD2F3584E4553C2EAD734 /* pb_encode.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,21 +658,84 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */,
+				F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E061B96BEEFBF2AFEBC696DB24B5A95E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D163623D89E2E3C242025FD7076FD88F /* Pods-gattaca-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7E50DAB79E38BBB48FDC5243B111B714 /* PBXTargetDependency */ = {
+		EC02E41AE8233DBE2575C6CF35A7CDFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nanopb;
+			target = E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */;
+			targetProxy = 80F5905AA36FB1E64B80767DA08CFA97 /* PBXContainerItemProxy */;
+		};
+		EF196591B2DF9C0FDC24B262D8C8C1FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GifHero;
 			target = F44F5C7AC1FA7BEA4BCA0613EF000697 /* GifHero */;
-			targetProxy = 4BC3A69F0E7076965DF798C07D87B6BD /* PBXContainerItemProxy */;
+			targetProxy = A593D35D822CBFAFB28AF89082F9764B /* PBXContainerItemProxy */;
+		};
+		FF433F85A3C1EDF6FC2237F6EDD92E56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
+			targetProxy = 32BAEC203BA1B9CA727D1E3A584C9661 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		319EFDA581D17E312B29D85515846653 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6863FF8AD63F88507737F071BF288006 /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		552336507A27AB3D5BF5E1F08D934577 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A54E9198C2C7C9C98B3D099CBABB3A21 /* GifHero.xcconfig */;
+			baseConfigurationReference = 74C560F1D5D9C8FBA499498F051E69ED /* GifHero.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -380,6 +767,112 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		6B1D8016538E37E0292A8FD57ECB2F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6863FF8AD63F88507737F071BF288006 /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6FF1286C5C6238BA4D96BF6E25B6093E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A80C9666BBFBF98ECBEF10FEF42EA81 /* nanopb.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/nanopb/nanopb-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/nanopb/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/nanopb/nanopb.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = nanopb;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		831EF1FF36865F7E52EB241D5340A8A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 761DA12710ED2937E4EE46F43C8CCEDD /* Pods-gattaca.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-gattaca/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-gattaca/Pods-gattaca.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_gattaca;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		97803B46811A9BDB5E70FA1303AFBFFE /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -430,7 +923,7 @@
 			};
 			name = Debug;
 		};
-		A4F0E28F1990D41E910772E8893EC6A4 /* Debug */ = {
+		A7A4B42E6A9A325A9D7B43A75A8D6FDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B976215CB8FCB3501592B5A53C57DF6 /* Pods-gattaca.debug.xcconfig */;
 			buildSettings = {
@@ -462,6 +955,40 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AD19D2D7DBE90801322BE1AADDFB213E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A80C9666BBFBF98ECBEF10FEF42EA81 /* nanopb.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/nanopb/nanopb-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/nanopb/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/nanopb/nanopb.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = nanopb;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -515,7 +1042,7 @@
 		};
 		CAA7D8F04FE5FC7D919CF6838517FB6A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A54E9198C2C7C9C98B3D099CBABB3A21 /* GifHero.xcconfig */;
+			baseConfigurationReference = 74C560F1D5D9C8FBA499498F051E69ED /* GifHero.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -548,44 +1075,6 @@
 			};
 			name = Release;
 		};
-		D977DE6740825DDF77AC42F7206AE777 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 761DA12710ED2937E4EE46F43C8CCEDD /* Pods-gattaca.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-gattaca/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-gattaca/Pods-gattaca.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_gattaca;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -598,11 +1087,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B94D967EC00EF010A6C035C817BEDDC5 /* Build configuration list for PBXNativeTarget "Pods-gattaca" */ = {
+		BC22FEFD697D0C72BE66E076A51E5EA6 /* Build configuration list for PBXNativeTarget "Pods-gattaca" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A4F0E28F1990D41E910772E8893EC6A4 /* Debug */,
-				D977DE6740825DDF77AC42F7206AE777 /* Release */,
+				A7A4B42E6A9A325A9D7B43A75A8D6FDA /* Debug */,
+				831EF1FF36865F7E52EB241D5340A8A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				319EFDA581D17E312B29D85515846653 /* Debug */,
+				6B1D8016538E37E0292A8FD57ECB2F81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F118B0FA84AC9116AB2E480C302C3999 /* Build configuration list for PBXNativeTarget "nanopb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD19D2D7DBE90801322BE1AADDFB213E /* Debug */,
+				6FF1286C5C6238BA4D96BF6E25B6093E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
