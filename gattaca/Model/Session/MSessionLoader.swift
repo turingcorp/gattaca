@@ -84,7 +84,15 @@ extension MSession
         session:DSession,
         completion:@escaping(() -> ()))
     {
+        let database:MFirebaseDManager = MFirebaseDManager(bundle:nil)
+        let userList:MFirebaseDUser = MFirebaseDUser()
         
+        database.load(
+            parent:userList,
+            identifier:nil)
+        { (model:MFirebaseDUserItem?) in
+            
+        }
     }
     
     func createInFirebase(
