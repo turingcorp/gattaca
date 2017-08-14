@@ -3,6 +3,8 @@ use_frameworks!
 
 def podlist
   pod 'GifHero'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
 end
 
 target 'gattaca' do
