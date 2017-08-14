@@ -23,15 +23,15 @@
 	<key>STORAGE_BUCKET</key>
 	<string>gattaca-8e2de.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<false/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<false/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:626062061494:ios:045669789cb3110c</string>
 	<key>DATABASE_URL</key>
