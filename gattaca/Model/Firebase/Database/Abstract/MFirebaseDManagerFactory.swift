@@ -3,6 +3,7 @@ import Foundation
 extension MFirebaseDManager
 {
     private static let kSlash:String = "/"
+    private static let kDot:String = "."
     private static let kEmptyString:String = ""
     
     class func factoryRoot(bundle:Bundle?) -> String
@@ -20,16 +21,27 @@ extension MFirebaseDManager
         
         guard
         
-            let path:String = useBundle.bundleIdentifier
+            let rawPath:String = useBundle.bundleIdentifier
         
         else
         {
             return kEmptyString
         }
         
-        var fullPath:String = path
-        fullPath.append(kSlash)
+        let pathComponents:[String] = rawPath.components(
+            separatedBy:kDot)
         
-        return fullPath
+        guard
+            
+            var path:String = pathComponents.last
+        
+        else
+        {
+            return kEmptyString
+        }
+        
+        path.append(kSlash)
+        
+        return path
     }
 }
