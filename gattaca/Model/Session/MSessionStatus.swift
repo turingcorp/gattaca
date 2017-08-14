@@ -6,6 +6,7 @@ extension MSession
     {
         case new
         case loading
+        case sync
         case loaded
     }
 }
