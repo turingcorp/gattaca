@@ -16,7 +16,7 @@ class MSession
     {
         guard
             
-            let manager:DManager = DManager()
+            let manager:DManager = DManager(bundle:nil)
             
         else
         {
