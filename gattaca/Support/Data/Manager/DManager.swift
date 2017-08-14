@@ -5,11 +5,12 @@ class DManager
 {
     let managedObjectContext:NSManagedObjectContext
     
-    init?()
+    init?(bundle:Bundle?)
     {
         guard
         
-            let managedObjectContext:NSManagedObjectContext = DManager.factoryManagedObjectContext()
+            let managedObjectContext:NSManagedObjectContext = DManager.factoryManagedObjectContext(
+                bundle:bundle)
         
         else
         {
