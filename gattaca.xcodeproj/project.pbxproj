@@ -13,6 +13,7 @@
 		DA4DA3781F41E90A0047D5D7 /* MFirebaseDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA3771F41E90A0047D5D7 /* MFirebaseDManager.swift */; };
 		DA4DA37A1F41EAA90047D5D7 /* MFirebaseDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA3791F41EAA90047D5D7 /* MFirebaseDProtocol.swift */; };
 		DA4DA37C1F41ED720047D5D7 /* MFirebaseDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA37B1F41ED720047D5D7 /* MFirebaseDUser.swift */; };
+		DA4DA37E1F41EF8C0047D5D7 /* MFirebaseDProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA37D1F41EF8C0047D5D7 /* MFirebaseDProtocolExtension.swift */; };
 		DA68A2861F408A350094BC9B /* DGifExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27E1F408A350094BC9B /* DGifExtension.swift */; };
 		DA68A2871F408A350094BC9B /* DGifExtensionDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
@@ -145,6 +146,7 @@
 		DA4DA3771F41E90A0047D5D7 /* MFirebaseDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFirebaseDManager.swift; sourceTree = "<group>"; };
 		DA4DA3791F41EAA90047D5D7 /* MFirebaseDProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFirebaseDProtocol.swift; sourceTree = "<group>"; };
 		DA4DA37B1F41ED720047D5D7 /* MFirebaseDUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFirebaseDUser.swift; sourceTree = "<group>"; };
+		DA4DA37D1F41EF8C0047D5D7 /* MFirebaseDProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFirebaseDProtocolExtension.swift; sourceTree = "<group>"; };
 		DA68A27E1F408A350094BC9B /* DGifExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtension.swift; sourceTree = "<group>"; };
 		DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtensionDirectory.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 			children = (
 				DA4DA3771F41E90A0047D5D7 /* MFirebaseDManager.swift */,
 				DA4DA3791F41EAA90047D5D7 /* MFirebaseDProtocol.swift */,
+				DA4DA37D1F41EF8C0047D5D7 /* MFirebaseDProtocolExtension.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1006,6 +1009,7 @@
 				DA90E0C21F40AE4A00A37538 /* MHomeStrategyNew.swift in Sources */,
 				DA68F1C21F38E5D500C13634 /* VPushBackground.swift in Sources */,
 				DA68F1C31F38E5D500C13634 /* VSlider.swift in Sources */,
+				DA4DA37E1F41EF8C0047D5D7 /* MFirebaseDProtocolExtension.swift in Sources */,
 				DA68F1AD1F38E5D500C13634 /* ExtensionNSManagedObject.swift in Sources */,
 				DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */,
 				DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */,
