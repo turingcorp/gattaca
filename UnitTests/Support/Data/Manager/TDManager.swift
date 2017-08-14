@@ -6,6 +6,35 @@ class TDManager:XCTestCase
 {
     private let kWaitExpectation:TimeInterval = 2
     
+    func testDifferentCoordinators()
+    {
+        guard
+        
+            let managerProduction:DManager = DManager(),
+            let managerTests:DManager = DManager()
+        
+        else
+        {
+            return
+        }
+        
+        let pathProduction:String? = managerProduction.managedObjectContext.persistentStoreCoordinator?.persistentStores.first?.url?.path
+        let pathTests:String? = managerTests.managedObjectContext.persistentStoreCoordinator?.persistentStores.first?.url?.path
+        
+        XCTAssertNotNil(
+            pathProduction,
+            "failed loading production store path")
+        
+        XCTAssertNotNil(
+            pathTests,
+            "failed loading tests store path")
+        
+        XCTAssertNotEqual(
+            pathProduction,
+            pathTests,
+            "store coordinators for production and test should be different")
+    }
+    
     func testInit()
     {
         let manager:DManager? = DManager()
