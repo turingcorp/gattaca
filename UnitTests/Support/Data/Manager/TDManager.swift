@@ -5,7 +5,7 @@ import CoreData
 class TDManager:XCTestCase
 {
     private var manager:DManager?
-    private let kWaitExpectation:TimeInterval = 2
+    private let kWaitExpectation:TimeInterval = 3
     
     override func setUp()
     {
@@ -111,6 +111,62 @@ class TDManager:XCTestCase
         
         waitForExpectations(timeout:kWaitExpectation)
         { (error:Error?) in
+        }
+    }
+    
+    func testCreateThenFetch()
+    {
+        let fetchExpectation:XCTestExpectation = expectation(
+            description:"core data fetch model")
+        var dataFetched:[NSManagedObject] = []
+        
+        deleteAllModels
+        { [weak self] in
+            
+            self?.manager?.create(entity:DSession.self)
+            { [weak self] (data:NSManagedObject) in
+                
+                self?.manager?.save
+                { [weak self] in
+                    
+                    self?.manager?.fetch(entity:DSession.self)
+                    { (data:[NSManagedObject]) in
+                        
+                        dataFetched = data
+                        fetchExpectation.fulfill()
+                    }
+                }
+            }
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            let countDataFetched:Int = dataFetched.count
+            
+            XCTAssertEqual(
+                countDataFetched,
+                1,
+                "fetch should return 1 element")
+        }
+    }
+    
+    //MARK: private
+    
+    private func deleteAllModels(completion:@escaping(() -> ()))
+    {
+        manager?.fetch(entity:DSession.self)
+        { [weak self] (data:[NSManagedObject]) in
+            
+            for dataItem:NSManagedObject in data
+            {
+                self?.manager?.delete(data:dataItem, completion:nil)
+            }
+            
+            self?.manager?.save
+            {
+                completion()
+            }
         }
     }
 }
