@@ -6,6 +6,8 @@ extension MFirebaseDManager
     private static let kDot:String = "."
     private static let kEmptyString:String = ""
     
+    //MARK: internal
+    
     class func factoryRoot(bundle:Bundle?) -> String
     {
         let useBundle:Bundle
@@ -33,14 +35,42 @@ extension MFirebaseDManager
         
         guard
             
-            var path:String = pathComponents.last
+            let path:String = pathComponents.last
         
         else
         {
             return kEmptyString
         }
         
-        path.append(kSlash)
+        return path
+    }
+    
+    func modelPath(model:MFirebaseDProtocol) -> String
+    {
+        var path:String = root
+        path.append(MFirebaseDManager.kSlash)
+        path.append(model.path)
+        
+        return path
+    }
+    
+    func modelPath(
+        parent:MFirebaseDProtocol?,
+        identifier:String?) -> String
+    {
+        var path:String = root
+        
+        if let parent:MFirebaseDProtocol = parent
+        {
+            path.append(MFirebaseDManager.kSlash)
+            path.append(parent.path)
+        }
+        
+        if let identifier:String = identifier
+        {
+            path.append(MFirebaseDManager.kSlash)
+            path.append(identifier)
+        }
         
         return path
     }

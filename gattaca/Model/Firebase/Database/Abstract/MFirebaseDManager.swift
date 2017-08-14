@@ -12,16 +12,6 @@ class MFirebaseDManager
         root = MFirebaseDManager.factoryRoot(bundle:bundle)
     }
     
-    //MARK: private
-    
-    private func modelPath(model:MFirebaseDProtocol) -> String
-    {
-        var path:String = root
-        path.append(model.path)
-        
-        return path
-    }
-    
     //MARK: internal
     
     func create(
@@ -29,12 +19,49 @@ class MFirebaseDManager
         data:Any) -> String
     {
         let path:String = modelPath(model:parent)
-        let childReference:DatabaseReference = reference.child(
+        let reference:DatabaseReference = self.reference.child(
             path).childByAutoId()
-        childReference.setValue(data)
+        reference.setValue(data)
         
-        let childId:String = childReference.key
+        let childId:String = reference.key
         
         return childId
+    }
+    
+    func load<T:MFirebaseDProtocol>(
+        parent:MFirebaseDProtocol?,
+        identifier:String?,
+        completion:@escaping((T?) -> ()))
+    {
+        let path:String = modelPath(
+            parent:parent,
+            identifier:identifier)
+        
+        let reference:DatabaseReference = self.reference.child(path)
+        reference.observeSingleEvent(of:DataEventType.value)
+        { (snapshot:DataSnapshot) in
+            
+            guard
+                
+                let json:Any = snapshot.value
+                
+            else
+            {
+                completion(nil)
+                
+                return
+            }
+            
+            if let _:NSNull = json as? NSNull
+            {
+                completion(nil)
+            }
+            
+            let model:T? = T(
+                json:json,
+                identifier:identifier)
+            
+            completion(model)
+        }
     }
 }
