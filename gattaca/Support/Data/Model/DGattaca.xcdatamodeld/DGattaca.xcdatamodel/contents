@@ -15,7 +15,7 @@
         <attribute name="purchased" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="DSession" representedClassName="DSession" syncable="YES" codeGenerationType="class">
-        <attribute name="status" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rawStatus" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="DSettings" representedClassName="DSettings" syncable="YES" codeGenerationType="class">
