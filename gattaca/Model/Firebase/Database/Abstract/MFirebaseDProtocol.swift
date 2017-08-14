@@ -2,7 +2,10 @@ import Foundation
 
 protocol MFirebaseDProtocol
 {
-    init?(snapshot:Any)
+    static var parent:MFirebaseDProtocol.Type? { get }
+    var identifier:String { get }
+    var path:String { get }
+    var json:Any? { get }
     
-    func json() -> Any?
+    init?(snapshot:Any)
 }
