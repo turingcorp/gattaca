@@ -57,6 +57,65 @@ extension MSession
         session:DSession,
         completion:@escaping(() -> ()))
     {
+        guard
         
+            let userId:String = session.userId
+        
+        else
+        {
+            createInFirebase(
+                manager:manager,
+                session:session,
+                completion:completion)
+            
+            return
+        }
+        
+        loadFromFirebase(
+            userId:userId,
+            manager:manager,
+            session:session,
+            completion:completion)
+    }
+    
+    func loadFromFirebase(
+        userId:String,
+        manager:DManager,
+        session:DSession,
+        completion:@escaping(() -> ()))
+    {
+        
+    }
+    
+    func createInFirebase(
+        manager:DManager,
+        session:DSession,
+        completion:@escaping(() -> ()))
+    {
+        let database:MFirebaseDManager = MFirebaseDManager(bundle:nil)
+        let user:MFirebaseDUserItem = MFirebaseDUserItem(
+            session:session)
+        
+        guard
+            
+            let userList:MFirebaseDUser = MFirebaseDUser(
+                snapshot:nil,
+                identifier:nil),
+            let userJson:Any = user.json
+        
+        else
+        {
+            return
+        }
+        
+        let userId:String = database.create(
+            parent:userList,
+            data:userJson)
+        session.userId = userId
+        
+        manager.save
+        {
+            completion()
+        }
     }
 }

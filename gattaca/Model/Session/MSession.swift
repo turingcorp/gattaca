@@ -27,18 +27,32 @@ class MSession
         { [weak self] (session:DSession) in
 
             self?.sessionLoaded(
+                manager:manager,
                 session:session,
                 completion:completion)
         }
     }
     
     private func sessionLoaded(
+        manager:DManager,
         session:DSession,
         completion:@escaping(() -> ()))
     {
         self.session = session
-        status = MSession.Status.loaded
+        status = MSession.Status.sync
         
+        sync(manager:manager,
+             session:session)
+        { [weak self] in
+            
+            self?.sessionSynched(completion:completion)
+        }
+    }
+    
+    private func sessionSynched(
+        completion:@escaping(() -> ()))
+    {
+        status = MSession.Status.sync
         completion()
     }
     
