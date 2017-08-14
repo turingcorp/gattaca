@@ -38,7 +38,7 @@ class MFirebaseDUserItem:MFirebaseDProtocol
         }
     }
     
-    required init?(snapshot:Any, identifier:String?)
+    required init?(json:Any, identifier:String?)
     {
         return nil
     }
