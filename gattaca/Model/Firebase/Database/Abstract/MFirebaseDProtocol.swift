@@ -2,8 +2,8 @@ import Foundation
 
 protocol MFirebaseDProtocol
 {
-    static var parent:MFirebaseDProtocol.Type? { get }
     var identifier:String { get }
+    var parent:MFirebaseDProtocol? { get }
     var path:String { get }
     var json:Any? { get }
     
