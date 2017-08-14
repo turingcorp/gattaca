@@ -93,14 +93,12 @@ extension MSession
         completion:@escaping(() -> ()))
     {
         let database:MFirebaseDManager = MFirebaseDManager(bundle:nil)
+        let userList:MFirebaseDUser = MFirebaseDUser()
         let user:MFirebaseDUserItem = MFirebaseDUserItem(
             session:session)
         
         guard
             
-            let userList:MFirebaseDUser = MFirebaseDUser(
-                snapshot:nil,
-                identifier:nil),
             let userJson:Any = user.json
         
         else

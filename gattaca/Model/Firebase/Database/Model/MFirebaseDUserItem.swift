@@ -15,9 +15,7 @@ class MFirebaseDUserItem:MFirebaseDProtocol
     {
         get
         {
-            let userList:MFirebaseDUser? = MFirebaseDUser(
-                snapshot:nil,
-                identifier:nil)
+            let userList:MFirebaseDUser? = MFirebaseDUser()
             
             return userList
         }
@@ -40,7 +38,7 @@ class MFirebaseDUserItem:MFirebaseDProtocol
         }
     }
     
-    required init?(snapshot:Any?, identifier:String?)
+    required init?(snapshot:Any, identifier:String?)
     {
         return nil
     }
