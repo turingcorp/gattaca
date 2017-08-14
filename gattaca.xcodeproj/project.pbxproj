@@ -10,6 +10,7 @@
 		0FEFAB51E60F2A75275A558B /* Pods_gattaca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EB7DE9DB31C7535E0A58A4 /* Pods_gattaca.framework */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA4DA3701F41E5510047D5D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4DA36F1F41E5510047D5D7 /* GoogleService-Info.plist */; };
+		DA4DA3781F41E90A0047D5D7 /* MFirebaseDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA3771F41E90A0047D5D7 /* MFirebaseDManager.swift */; };
 		DA68A2861F408A350094BC9B /* DGifExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27E1F408A350094BC9B /* DGifExtension.swift */; };
 		DA68A2871F408A350094BC9B /* DGifExtensionDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
@@ -139,6 +140,7 @@
 		DA39E77A1F38E3F90001CA28 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA39E7891F38E3F90001CA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA4DA36F1F41E5510047D5D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DA4DA3771F41E90A0047D5D7 /* MFirebaseDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFirebaseDManager.swift; sourceTree = "<group>"; };
 		DA68A27E1F408A350094BC9B /* DGifExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtension.swift; sourceTree = "<group>"; };
 		DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtensionDirectory.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
@@ -325,6 +327,38 @@
 			path = gattaca;
 			sourceTree = "<group>";
 		};
+		DA4DA3711F41E87B0047D5D7 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				DA4DA3721F41E87B0047D5D7 /* Database */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		DA4DA3721F41E87B0047D5D7 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DA4DA3731F41E87B0047D5D7 /* Abstract */,
+				DA4DA3741F41E87B0047D5D7 /* Model */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		DA4DA3731F41E87B0047D5D7 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				DA4DA3771F41E90A0047D5D7 /* MFirebaseDManager.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		DA4DA3741F41E87B0047D5D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DA68A27D1F408A350094BC9B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1561F38E5D500C13634 /* Abstract */,
+				DA4DA3711F41E87B0047D5D7 /* Firebase */,
 				DA90E0DB1F40B75800A37538 /* Session */,
 				DA90E0C71F40B75800A37538 /* Gif */,
 				DA90E0D01F40B75800A37538 /* Perk */,
@@ -993,6 +1028,7 @@
 				DA90E0DF1F40B75800A37538 /* MGif.swift in Sources */,
 				DA90E0E51F40B75800A37538 /* MGifStrategyDownloadRequest.swift in Sources */,
 				DAE0AFC11F3BAB16006449D0 /* MGiphyFactory.swift in Sources */,
+				DA4DA3781F41E90A0047D5D7 /* MFirebaseDManager.swift in Sources */,
 				DA68F1C41F38E5D500C13634 /* VSliderBar.swift in Sources */,
 				DA90E0F01F40B75800A37538 /* MSessionLoader.swift in Sources */,
 				DA90E0C01F40AD3E00A37538 /* MHomeSession.swift in Sources */,
