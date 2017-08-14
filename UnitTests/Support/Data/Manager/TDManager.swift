@@ -8,10 +8,12 @@ class TDManager:XCTestCase
     
     func testDifferentCoordinators()
     {
+        let currentBundle:Bundle = Bundle(for:TDManager.self)
+        
         guard
         
-            let managerProduction:DManager = DManager(),
-            let managerTests:DManager = DManager()
+            let managerProduction:DManager = DManager(bundle:nil),
+            let managerTests:DManager = DManager(bundle:currentBundle)
         
         else
         {
@@ -37,7 +39,9 @@ class TDManager:XCTestCase
     
     func testInit()
     {
-        let manager:DManager? = DManager()
+        let currentBundle:Bundle = Bundle(for:TDManager.self)
+        
+        let manager:DManager? = DManager(bundle:currentBundle)
         
         XCTAssertNotNil(
             manager,
@@ -46,9 +50,11 @@ class TDManager:XCTestCase
     
     func testCreate()
     {
+        let currentBundle:Bundle = Bundle(for:TDManager.self)
+        
         guard
         
-            let manager:DManager = DManager()
+            let manager:DManager = DManager(bundle:currentBundle)
         
         else
         {
@@ -71,9 +77,11 @@ class TDManager:XCTestCase
     
     func testSave()
     {
+        let currentBundle:Bundle = Bundle(for:TDManager.self)
+        
         guard
             
-            let manager:DManager = DManager()
+            let manager:DManager = DManager(bundle:currentBundle)
             
         else
         {

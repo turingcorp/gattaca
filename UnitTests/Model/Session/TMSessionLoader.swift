@@ -7,12 +7,13 @@ class TMSessionLoader:XCTestCase
     
     func testCreate()
     {
+        let currentBundle:Bundle = Bundle(for:TDManager.self)
         let sessionExpectation:XCTestExpectation = expectation(
             description:"session created")
         
         guard
             
-            let manager:DManager = DManager()
+            let manager:DManager = DManager(bundle:currentBundle)
         
         else
         {
