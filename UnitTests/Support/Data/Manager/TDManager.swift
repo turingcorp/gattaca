@@ -114,6 +114,40 @@ class TDManager:XCTestCase
         }
     }
     
+    func testDelete()
+    {
+        let deleteExpectation:XCTestExpectation = expectation(
+            description:"core data delete model")
+        
+        manager?.fetch(entity:DSession.self)
+        { [weak self] (data:[NSManagedObject]) in
+            
+            guard
+                
+                let session:DSession = data.first as? DSession
+            
+            else
+            {
+                deleteExpectation.fulfill()
+                
+                return
+            }
+            
+            self?.manager?.delete(data:session)
+            { [weak self] in
+                
+                self?.manager?.save
+                {
+                    deleteExpectation.fulfill()
+                }
+            }
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+        }
+    }
+    
     func testCreateThenFetch()
     {
         let fetchExpectation:XCTestExpectation = expectation(
