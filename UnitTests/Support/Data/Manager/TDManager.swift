@@ -151,6 +151,64 @@ class TDManager:XCTestCase
         }
     }
     
+    func testCreateThenDelete()
+    {
+        let fetchExpectation:XCTestExpectation = expectation(
+            description:"core data fetch model")
+        var dataFetched:[NSManagedObject] = []
+        
+        deleteAllModels
+        { [weak self] in
+            
+            self?.manager?.create(entity:DSession.self)
+            { [weak self] (data:NSManagedObject) in
+                
+                self?.manager?.save
+                { [weak self] in
+                    
+                    self?.manager?.fetch(entity:DSession.self)
+                    { [weak self] (data:[NSManagedObject]) in
+                        
+                        guard
+                            
+                            let created:DSession = data.first as? DSession
+                        
+                        else
+                        {
+                            return
+                        }
+                        
+                        self?.manager?.delete(data:created)
+                        { [weak self] in
+                            
+                            self?.manager?.save
+                            { [weak self] in
+                                
+                                self?.manager?.fetch(entity:DSession.self)
+                                { (data:[NSManagedObject]) in
+                                    
+                                    dataFetched = data
+                                    fetchExpectation.fulfill()
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            let countDataFetched:Int = dataFetched.count
+            
+            XCTAssertEqual(
+                countDataFetched,
+                0,
+                "fetch should return NO elements")
+        }
+    }
+    
     //MARK: private
     
     private func deleteAllModels(completion:@escaping(() -> ()))
