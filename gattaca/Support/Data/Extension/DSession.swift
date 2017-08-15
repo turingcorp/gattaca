@@ -2,6 +2,8 @@ import Foundation
 
 extension DSession
 {
+    //MARK: internal
+    
     var status:DSession.Status
     {
         get
@@ -15,5 +17,11 @@ extension DSession
         {
             rawStatus = newValue.rawValue
         }
+    }
+    
+    func initialValues()
+    {
+        let timestamp:TimeInterval = Date().timeIntervalSince1970
+        created = timestamp
     }
 }
