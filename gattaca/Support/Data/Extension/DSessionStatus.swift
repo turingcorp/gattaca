@@ -6,5 +6,6 @@ extension DSession
     {
         case active
         case banned
+        case unknown
     }
 }
