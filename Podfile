@@ -12,9 +12,6 @@ target 'gattaca' do
 end
 
 target 'UnitTests' do
-  podlist
-end
-
-target 'UITests' do
-  podlist
+  inherit! :search_paths
+  pod 'Firebase'
 end
