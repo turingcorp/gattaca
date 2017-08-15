@@ -97,4 +97,52 @@ class TMSessionFirebase:XCTestCase
                 "user has no identifier")
         }
     }
+    
+    func testLoadFromFirebase()
+    {
+        var firebaseUser:FDatabaseUsersItem?
+        let users:FDatabaseUsers = FDatabaseUsers()
+        let user:FDatabaseUsersItem = FDatabaseUsersItem(
+            users:users)
+        
+        guard
+            
+            let database:FDatabase = self.database,
+            let modelSession:MSession = self.modelSession,
+            let userJson:Any = user.json
+            
+        else
+        {
+            return
+        }
+        
+        let loadExpectation:XCTestExpectation = expectation(
+            description:"load from firebase")
+        
+        let userId:String = database.create(
+            parent:users,
+            data:userJson)
+        
+        modelSession.loadFromFirebase(
+            userId:userId,
+            database:database,
+            users:users)
+        { (userLoaded:FDatabaseUsersItem) in
+            
+            firebaseUser = userLoaded
+            loadExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            XCTAssertNotNil(
+                firebaseUser,
+                "failed loading user")
+            
+            XCTAssertNotNil(
+                firebaseUser?.identifier,
+                "user has no identifier")
+        }
+    }
 }
