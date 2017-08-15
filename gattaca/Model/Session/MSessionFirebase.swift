@@ -79,6 +79,7 @@ extension MSession
         completion:@escaping(() -> ()))
     {
         let user:MFirebaseDUserItem = MFirebaseDUserItem(
+            parent:userList,
             session:session)
         
         guard

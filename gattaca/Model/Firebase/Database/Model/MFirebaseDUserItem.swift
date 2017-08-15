@@ -6,20 +6,11 @@ class MFirebaseDUserItem:MFirebaseDProtocol
     static let kKeySyncstamp:String = "syncstamp"
     static let kKeyStatus:String = "status"
     
-    let identifier:String?
+    var identifier:String?
     let created:TimeInterval
     let syncstamp:TimeInterval
     let status:Int16
-    
-    var parent:MFirebaseDProtocol?
-    {
-        get
-        {
-            let userList:MFirebaseDUser? = MFirebaseDUser()
-            
-            return userList
-        }
-    }
+    private(set) weak var parent:MFirebaseDUser?
     
     var json:Any?
     {
@@ -34,9 +25,9 @@ class MFirebaseDUserItem:MFirebaseDProtocol
         }
     }
     
-    init(session:DSession)
+    init(parent:MFirebaseDUser, session:DSession)
     {
-        identifier = nil
+        self.parent = parent
         status = session.rawStatus
         
         let currentDate:TimeInterval = Date().timeIntervalSince1970
@@ -44,7 +35,7 @@ class MFirebaseDUserItem:MFirebaseDProtocol
         syncstamp = currentDate
     }
     
-    required init?(json:Any, identifier:String?)
+    required init?(json:Any)
     {
         return nil
     }

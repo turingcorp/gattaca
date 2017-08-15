@@ -57,9 +57,13 @@ class MFirebaseDManager
                 completion(nil)
             }
             
-            let model:T? = T(
-                json:json,
-                identifier:identifier)
+            var model:T? = T(
+                json:json)
+            
+            if let identifier:String = identifier
+            {
+                model?.identifier = identifier
+            }
             
             completion(model)
         }

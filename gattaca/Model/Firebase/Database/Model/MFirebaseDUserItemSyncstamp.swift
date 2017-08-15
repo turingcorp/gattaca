@@ -2,15 +2,25 @@ import Foundation
 
 class MFirebaseDUserItemSyncstamp:MFirebaseDProtocol
 {
-    let identifier:String? = MFirebaseDUserItem.kKeySyncstamp
-    private(set) var parent:MFirebaseDProtocol?
+    var identifier:String? = MFirebaseDUserItem.kKeySyncstamp
+    private(set) weak var parent:MFirebaseDUserItem?
+    private let syncstamp:TimeInterval
     
-    init(userItem:MFirebaseDUserItem)
+    var json:Any?
     {
-        parent = userItem
+        get
+        {
+            return syncstamp
+        }
     }
     
-    required init?(json:Any, identifier:String?)
+    init(parent:MFirebaseDUserItem)
+    {
+        self.parent = parent
+        syncstamp = Date().timeIntervalSince1970
+    }
+    
+    required init?(json:Any)
     {
         return nil
     }
