@@ -103,4 +103,30 @@ class TFDatabaseUsersItem:XCTestCase
             status,
             "invalid status")
     }
+    
+    func testJson()
+    {
+        let json:Any? = user?.json
+        let jsonMap:[String:Any]? = json as? [String:Any]
+        
+        XCTAssertNotNil(
+            json,
+            "failed creating json")
+        
+        XCTAssertNotNil(
+            jsonMap,
+            "json is not a map")
+        
+        XCTAssertNotNil(
+            jsonMap?[FDatabaseUsersItem.kKeyCreated],
+            "json doesn't contain created")
+        
+        XCTAssertNotNil(
+            jsonMap?[FDatabaseUsersItem.kKeySyncstamp],
+            "json doesn't contain syncstamp")
+        
+        XCTAssertNotNil(
+            jsonMap?[FDatabaseUsersItem.kKeyStatus],
+            "json doesn't contain status")
+    }
 }
