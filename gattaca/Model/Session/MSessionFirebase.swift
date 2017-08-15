@@ -2,6 +2,31 @@ import Foundation
 
 extension MSession
 {
+    //MARK: private
+    
+    private func sync(
+        userId:String?,
+        database:FDatabase,
+        users:FDatabaseUsers,
+        completion:@escaping((FDatabaseUsersItem) -> ()))
+    {
+        if let userId:String = userId
+        {
+            loadFromFirebase(
+                userId:userId,
+                database:database,
+                users:users,
+                completion:completion)
+        }
+        else
+        {
+            createInFirebase(
+                database:database,
+                users:users,
+                completion:completion)
+        }
+    }
+    
     //MARK: internal
     
     func sync(
@@ -26,29 +51,6 @@ extension MSession
             {
                 completion()
             }
-        }
-    }
-    
-    func sync(
-        userId:String?,
-        database:FDatabase,
-        users:FDatabaseUsers,
-        completion:@escaping((FDatabaseUsersItem) -> ()))
-    {
-        if let userId:String = userId
-        {
-            loadFromFirebase(
-                userId:userId,
-                database:database,
-                users:users,
-                completion:completion)
-        }
-        else
-        {
-            createInFirebase(
-                database:database,
-                users:users,
-                completion:completion)
         }
     }
     
