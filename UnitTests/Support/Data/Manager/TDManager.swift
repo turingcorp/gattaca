@@ -71,7 +71,9 @@ class TDManager:XCTestCase
             description:"core data save")
         
         manager?.create
-        { [weak self] (data:DSession) in
+        { [weak self] (session:DSession) in
+            
+            session.initialValues()
             
             self?.manager?.save
             {
@@ -103,7 +105,7 @@ class TDManager:XCTestCase
             description:"core data fetch model")
         
         manager?.fetch
-        { (data:[DSession]) in
+        { (session:[DSession]) in
             
             fetchExpectation.fulfill()
         }
@@ -157,7 +159,9 @@ class TDManager:XCTestCase
         { [weak self] in
             
             self?.manager?.create
-            { [weak self] (data:DSession) in
+            { [weak self] (session:DSession) in
+                
+                session.initialValues()
                 
                 self?.manager?.save
                 { [weak self] in
@@ -194,7 +198,9 @@ class TDManager:XCTestCase
         { [weak self] in
             
             self?.manager?.create
-            { [weak self] (data:DSession) in
+            { [weak self] (session:DSession) in
+                
+                session.initialValues()
                 
                 self?.manager?.save
                 { [weak self] in
