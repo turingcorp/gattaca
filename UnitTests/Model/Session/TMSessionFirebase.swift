@@ -14,7 +14,7 @@ class TMSessionFirebase:XCTestCase
     {
         super.setUp()
         
-        let currentBundle:Bundle = Bundle(for:TDManager.self)
+        let currentBundle:Bundle = Bundle(for:TMSessionFirebase.self)
         
         modelSession = MSession()
         firebase = FDatabase()

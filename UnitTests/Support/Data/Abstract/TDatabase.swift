@@ -257,7 +257,7 @@ class TDatabase:XCTestCase
             
             for dataItem:DSession in data
             {
-                self?.manager?.delete(data:dataItem, completion:nil)
+                self?.coreData?.delete(data:dataItem, completion:nil)
             }
             
             self?.coreData?.save

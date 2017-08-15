@@ -7,7 +7,7 @@ class TMSessionLoader:XCTestCase
     
     func testCreate()
     {
-        let currentBundle:Bundle = Bundle(for:TDManager.self)
+        let currentBundle:Bundle = Bundle(for:TMSessionLoader.self)
         let sessionExpectation:XCTestExpectation = expectation(
             description:"session created")
         
@@ -44,7 +44,7 @@ class TMSessionLoader:XCTestCase
     
     func testLoad()
     {
-        let currentBundle:Bundle = Bundle(for:TDManager.self)
+        let currentBundle:Bundle = Bundle(for:TMSessionLoader.self)
         let sessionExpectation:XCTestExpectation = expectation(
             description:"session loaded")
         
