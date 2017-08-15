@@ -5,7 +5,7 @@ class TCHome:XCTestCase
 {
     private var session:MSession?
     private var controller:CHome?
-    private let kWaitSession:UInt32 = 10
+    private let kWaitSession:UInt32 = 15
     
     override func setUp()
     {
