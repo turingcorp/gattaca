@@ -10,7 +10,7 @@ extension MSession
         completion:@escaping(() -> ()))
     {
         let userId:String? = session.userId
-        let database:FDatabase = FDatabase(bundle:nil)
+        let database:FDatabase = FDatabase()
         let users:FDatabaseUsers = FDatabaseUsers()
         
         sync(

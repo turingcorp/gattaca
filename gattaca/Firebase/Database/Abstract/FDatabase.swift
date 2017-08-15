@@ -4,12 +4,10 @@ import FirebaseDatabase
 class FDatabase
 {
     let reference:DatabaseReference
-    let root:String
     
-    init(bundle:Bundle?)
+    init()
     {
         reference = Database.database().reference()
-        root = FDatabase.factoryRoot(bundle:bundle)
     }
     
     //MARK: internal
@@ -18,7 +16,7 @@ class FDatabase
         parent:FDatabaseProtocol,
         data:Any) -> String
     {
-        let path:String = modelPath(model:parent)
+        let path:String = parent.path
         let reference:DatabaseReference = self.reference.child(
             path).childByAutoId()
         reference.setValue(data)
@@ -61,7 +59,7 @@ class FDatabase
             return
         }
         
-        let path:String = modelPath(model:model)
+        let path:String = model.path
         let reference:DatabaseReference = self.reference.child(path)
         reference.setValue(json)
     }
