@@ -6,24 +6,13 @@ extension MFirebaseDatabase
     private static let kDot:String = "."
     private static let kEmptyString:String = ""
     
-    //MARK: internal
+    //MARK: private
     
-    class func factoryRoot(bundle:Bundle?) -> String
+    private class func pathFromBundle(bundle:Bundle) -> String
     {
-        let useBundle:Bundle
-        
-        if let bundle:Bundle = bundle
-        {
-            useBundle = bundle
-        }
-        else
-        {
-            useBundle = Bundle.main
-        }
-        
         guard
             
-            let rawPath:String = useBundle.bundleIdentifier
+            let rawPath:String = bundle.bundleIdentifier
             
         else
         {
@@ -45,10 +34,30 @@ extension MFirebaseDatabase
         return path
     }
     
+    //MARK: internal
+    
+    class func factoryRoot(bundle:Bundle?) -> String
+    {
+        let useBundle:Bundle
+        
+        if let bundle:Bundle = bundle
+        {
+            useBundle = bundle
+        }
+        else
+        {
+            useBundle = Bundle.main
+        }
+        
+        let path:String = pathFromBundle(bundle:useBundle)
+        
+        return path
+    }
+    
     func modelPath(model:MFirebaseDProtocol) -> String
     {
         var path:String = root
-        path.append(MFirebaseDManager.kSlash)
+        path.append(MFirebaseDatabase.kSlash)
         path.append(model.path)
         
         return path
@@ -62,13 +71,13 @@ extension MFirebaseDatabase
         
         if let parent:MFirebaseDProtocol = parent
         {
-            path.append(MFirebaseDManager.kSlash)
+            path.append(MFirebaseDatabase.kSlash)
             path.append(parent.path)
         }
         
         if let identifier:String = identifier
         {
-            path.append(MFirebaseDManager.kSlash)
+            path.append(MFirebaseDatabase.kSlash)
             path.append(identifier)
         }
         
