@@ -6,6 +6,8 @@ class TFDatabaseUsersItem:XCTestCase
     private var user:FDatabaseUsersItem?
     private var timestamp:TimeInterval?
     private let kIdentifier:String = "lorem ipsum"
+    private let kCreated:TimeInterval = 123
+    private let kSyncstamp:TimeInterval = 456
     
     override func setUp()
     {
@@ -128,5 +130,36 @@ class TFDatabaseUsersItem:XCTestCase
         XCTAssertNotNil(
             jsonMap?[FDatabaseUsersItem.kKeyStatus],
             "json doesn't contain status")
+    }
+    
+    func testInitJson()
+    {
+        let status:DSession.Status = DSession.Status.banned
+        let json:[String:Any] = [
+            FDatabaseUsersItem.kKeyCreated:kCreated,
+            FDatabaseUsersItem.kKeySyncstamp:kSyncstamp,
+            FDatabaseUsersItem.kKeyStatus:status.rawValue]
+        
+        let user:FDatabaseUsersItem? = FDatabaseUsersItem(
+            json:json)
+        
+        XCTAssertNotNil(
+            user,
+            "failed creating user from json")
+        
+        XCTAssertEqual(
+            user?.created,
+            kCreated,
+            "failed parsing created")
+        
+        XCTAssertEqual(
+            user?.syncstamp,
+            kSyncstamp,
+            "failed parsing syncstamp")
+        
+        XCTAssertEqual(
+            user?.status,
+            status.rawValue,
+            "failed parsing status")
     }
 }
