@@ -32,8 +32,10 @@ class DManager
                 {
                     try self.managedObjectContext.save()
                 }
-                catch
+                catch let error
                 {
+                    assertionFailure(error.localizedDescription)
+                    
                     return
                 }
                 
