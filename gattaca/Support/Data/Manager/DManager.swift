@@ -69,15 +69,14 @@ class DManager
         }
     }
     
-    func fetch(
-        entity:NSManagedObject.Type,
+    func fetch<T:NSManagedObject>(
         limit:Int = 0,
         predicate:NSPredicate? = nil,
         sorters:[NSSortDescriptor]? = nil,
-        completion:@escaping(([NSManagedObject]) -> ()))
+        completion:@escaping(([T]) -> ()))
     {
         let fetchRequest:NSFetchRequest<NSManagedObject> = NSFetchRequest(
-            entityName:entity.entityName)
+            entityName:T.entityName)
         fetchRequest.predicate = predicate
         fetchRequest.sortDescriptors = sorters
         fetchRequest.fetchLimit = limit
@@ -87,13 +86,22 @@ class DManager
         
         managedObjectContext.perform
         {
-            let results:[NSManagedObject]
+            let data:[NSManagedObject]
             
             do
             {
-                results = try self.managedObjectContext.fetch(fetchRequest)
+                data = try self.managedObjectContext.fetch(fetchRequest)
             }
             catch
+            {
+                return
+            }
+            
+            guard
+                
+                let results:[T] = data as? [T]
+            
+            else
             {
                 return
             }
