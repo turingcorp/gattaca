@@ -9,6 +9,8 @@ class TVHomeActionsShare:XCTestCase
         XCUIApplication().launch()
     }
     
+    //MARK: internal
+    
     func testShareSheetAppears()
     {
         let app:XCUIApplication = XCUIApplication()

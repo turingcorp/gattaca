@@ -11,6 +11,8 @@ class TFDatabaseUsers:XCTestCase
         users = FDatabaseUsers()
     }
     
+    //MARK: internal
+    
     func testIdentifier()
     {
         XCTAssertNotNil(

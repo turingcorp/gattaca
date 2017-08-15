@@ -5,6 +5,8 @@ class TMSession:XCTestCase
 {
     private let kWaitExpectation:TimeInterval = 15
     
+    //MARK: internal
+    
     func testLoad()
     {
         let sessionExpectation:XCTestExpectation = expectation(

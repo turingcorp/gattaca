@@ -14,6 +14,8 @@ class TFDatabase:XCTestCase
         firebase = FDatabase()
     }
     
+    //MARK: internal
+    
     func testCreate()
     {
         let users:FDatabaseUsers = FDatabaseUsers()

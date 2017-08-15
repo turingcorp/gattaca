@@ -20,6 +20,8 @@ class TFDatabaseUsersItem:XCTestCase
             users:users)
     }
     
+    //MARK: internal
+    
     func testInit()
     {
         XCTAssertNotNil(

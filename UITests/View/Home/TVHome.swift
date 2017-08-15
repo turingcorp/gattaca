@@ -11,6 +11,20 @@ class TVHome:XCTestCase
         XCUIApplication().launch()
     }
     
+    //MARK: private
+    
+    private func validateOrientation()
+    {
+        let currentOrientation:UIInterfaceOrientation = UIApplication.shared.statusBarOrientation
+        
+        XCTAssertEqual(
+            currentOrientation,
+            kValidOrientation,
+            "error maintaining valid orientation")
+    }
+    
+    //MARK: internal
+    
     func testNoOrientationChange()
     {
         XCUIDevice.shared().orientation = UIDeviceOrientation.portrait
@@ -30,17 +44,5 @@ class TVHome:XCTestCase
         
         XCUIDevice.shared().orientation = UIDeviceOrientation.faceDown
         validateOrientation()
-    }
-    
-    //MARK: private
-    
-    private func validateOrientation()
-    {
-        let currentOrientation:UIInterfaceOrientation = UIApplication.shared.statusBarOrientation
-        
-        XCTAssertEqual(
-            currentOrientation,
-            kValidOrientation,
-            "error maintaining valid orientation")
     }
 }

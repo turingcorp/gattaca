@@ -28,6 +28,8 @@ class TMSessionFirebase:XCTestCase
         }
     }
     
+    //MARK: internal
+    
     func testSync()
     {
         guard

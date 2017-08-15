@@ -6,6 +6,8 @@ class TFDatabaseProtocolExtension:XCTestCase
     private let kUserId:String = "lorem ipsum"
     private let kSlash:String = "/"
     
+    //MARK: internal
+    
     func testPath()
     {
         let users:FDatabaseUsers = FDatabaseUsers()

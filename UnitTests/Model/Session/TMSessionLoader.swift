@@ -5,6 +5,8 @@ class TMSessionLoader:XCTestCase
 {
     private let kWaitExpectation:TimeInterval = 3
     
+    //MARK: internal
+    
     func testCreate()
     {
         let currentBundle:Bundle = Bundle(for:TMSessionLoader.self)

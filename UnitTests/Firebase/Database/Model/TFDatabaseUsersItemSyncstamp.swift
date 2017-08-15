@@ -15,6 +15,8 @@ class TFDatabaseUsersItemSyncstamp:XCTestCase
             users:users)
     }
     
+    //MARK: internal
+    
     func testUserIsCreated()
     {
         XCTAssertNotNil(

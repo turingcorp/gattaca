@@ -21,6 +21,8 @@ class TCHome:XCTestCase
         self.controller = controller
     }
     
+    //MARK: internal
+    
     func testSessionLoads()
     {
         let sessionExpectation:XCTestExpectation = expectation(

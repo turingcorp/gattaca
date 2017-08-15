@@ -14,6 +14,27 @@ class TDatabase:XCTestCase
         coreData = Database(bundle:currentBundle)
     }
     
+    //MARK: private
+    
+    private func deleteAllModels(completion:@escaping(() -> ()))
+    {
+        coreData?.fetch
+        { [weak self] (data:[DSession]) in
+            
+            for dataItem:DSession in data
+            {
+                self?.coreData?.delete(data:dataItem, completion:nil)
+            }
+            
+            self?.coreData?.save
+            {
+                completion()
+            }
+        }
+    }
+    
+    //MARK: internal
+    
     func testInit()
     {
         XCTAssertNotNil(
@@ -245,25 +266,6 @@ class TDatabase:XCTestCase
                 countDataFetched,
                 0,
                 "fetch should return NO elements")
-        }
-    }
-    
-    //MARK: private
-    
-    private func deleteAllModels(completion:@escaping(() -> ()))
-    {
-        coreData?.fetch
-        { [weak self] (data:[DSession]) in
-            
-            for dataItem:DSession in data
-            {
-                self?.coreData?.delete(data:dataItem, completion:nil)
-            }
-            
-            self?.coreData?.save
-            {
-                completion()
-            }
         }
     }
 }
