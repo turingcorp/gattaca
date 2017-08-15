@@ -77,6 +77,7 @@
 		DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1951F38E5D500C13634 /* VHome.swift */; };
 		DA6F65171F438B13005EA020 /* TMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F65161F438B13005EA020 /* TMRequest.swift */; };
 		DA6F651B1F438E3E005EA020 /* THomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F651A1F438E3E005EA020 /* THomeFactory.swift */; };
+		DA6F651E1F439187005EA020 /* TMHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F651D1F439187005EA020 /* TMHomeStrategyFactory.swift */; };
 		DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */; };
 		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
 		DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */; };
@@ -233,6 +234,7 @@
 		DA68F1951F38E5D500C13634 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DA6F65161F438B13005EA020 /* TMRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMRequest.swift; sourceTree = "<group>"; };
 		DA6F651A1F438E3E005EA020 /* THomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THomeFactory.swift; sourceTree = "<group>"; };
+		DA6F651D1F439187005EA020 /* TMHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeStrategyFactory.swift; sourceTree = "<group>"; };
 		DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategy.swift; sourceTree = "<group>"; };
 		DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyFactory.swift; sourceTree = "<group>"; };
 		DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsShare.swift; sourceTree = "<group>"; };
@@ -667,6 +669,7 @@
 		DA6F65181F438E31005EA020 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DA6F651C1F43916C005EA020 /* Strategy */,
 				DA6F65191F438E31005EA020 /* Abstract */,
 			);
 			path = Home;
@@ -678,6 +681,14 @@
 				DA6F651A1F438E3E005EA020 /* THomeFactory.swift */,
 			);
 			path = Abstract;
+			sourceTree = "<group>";
+		};
+		DA6F651C1F43916C005EA020 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				DA6F651D1F439187005EA020 /* TMHomeStrategyFactory.swift */,
+			);
+			path = Strategy;
 			sourceTree = "<group>";
 		};
 		DA746A321F41AED1000473A1 /* Support */ = {
@@ -1361,6 +1372,7 @@
 				DABEF93D1F43447800420DF0 /* TFDatabaseUsers.swift in Sources */,
 				DA25DF601F43879300765DCA /* TDatabase.swift in Sources */,
 				DA6F65171F438B13005EA020 /* TMRequest.swift in Sources */,
+				DA6F651E1F439187005EA020 /* TMHomeStrategyFactory.swift in Sources */,
 				DA25DF541F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift in Sources */,
 				DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */,
 				DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */,
