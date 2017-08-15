@@ -364,37 +364,6 @@
 			path = gattaca;
 			sourceTree = "<group>";
 		};
-		DA4DA3711F41E87B0047D5D7 /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				DA4DA3721F41E87B0047D5D7 /* Database */,
-			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
-		DA4DA3721F41E87B0047D5D7 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				DA4DA3731F41E87B0047D5D7 /* Abstract */,
-				DA4DA3741F41E87B0047D5D7 /* Model */,
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
-		DA4DA3731F41E87B0047D5D7 /* Abstract */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Abstract;
-			sourceTree = "<group>";
-		};
-		DA4DA3741F41E87B0047D5D7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		DA5F44A21F42C97D00334605 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,7 +473,6 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1561F38E5D500C13634 /* Abstract */,
-				DA4DA3711F41E87B0047D5D7 /* Firebase */,
 				DA90E0DB1F40B75800A37538 /* Session */,
 				DA90E0C71F40B75800A37538 /* Gif */,
 				DA90E0D01F40B75800A37538 /* Perk */,
