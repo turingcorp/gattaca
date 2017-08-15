@@ -1,5 +1,4 @@
 import XCTest
-import CoreData
 @testable import gattaca
 
 class TDManager:XCTestCase
@@ -55,8 +54,8 @@ class TDManager:XCTestCase
         let createExpectation:XCTestExpectation = expectation(
             description:"core data create model")
         
-        manager?.create(entity:DSession.self)
-        { (data:NSManagedObject) in
+        manager?.create
+        { (data:DSession) in
             
             createExpectation.fulfill()
         }
@@ -71,8 +70,8 @@ class TDManager:XCTestCase
         let saveExpectation:XCTestExpectation = expectation(
             description:"core data save")
         
-        manager?.create(entity:DSession.self)
-        { [weak self] (data:NSManagedObject) in
+        manager?.create
+        { [weak self] (data:DSession) in
             
             self?.manager?.save
             {
@@ -103,8 +102,8 @@ class TDManager:XCTestCase
         let fetchExpectation:XCTestExpectation = expectation(
             description:"core data fetch model")
         
-        manager?.fetch(entity:DSession.self)
-        { (data:[NSManagedObject]) in
+        manager?.fetch
+        { (data:[DSession]) in
             
             fetchExpectation.fulfill()
         }
@@ -119,12 +118,12 @@ class TDManager:XCTestCase
         let deleteExpectation:XCTestExpectation = expectation(
             description:"core data delete model")
         
-        manager?.fetch(entity:DSession.self)
-        { [weak self] (data:[NSManagedObject]) in
+        manager?.fetch
+        { [weak self] (data:[DSession]) in
             
             guard
                 
-                let session:DSession = data.first as? DSession
+                let session:DSession = data.first
             
             else
             {
@@ -152,19 +151,19 @@ class TDManager:XCTestCase
     {
         let fetchExpectation:XCTestExpectation = expectation(
             description:"core data fetch model")
-        var dataFetched:[NSManagedObject] = []
+        var dataFetched:[DSession] = []
         
         deleteAllModels
         { [weak self] in
             
-            self?.manager?.create(entity:DSession.self)
-            { [weak self] (data:NSManagedObject) in
+            self?.manager?.create
+            { [weak self] (data:DSession) in
                 
                 self?.manager?.save
                 { [weak self] in
                     
-                    self?.manager?.fetch(entity:DSession.self)
-                    { (data:[NSManagedObject]) in
+                    self?.manager?.fetch
+                    { (data:[DSession]) in
                         
                         dataFetched = data
                         fetchExpectation.fulfill()
@@ -189,23 +188,23 @@ class TDManager:XCTestCase
     {
         let fetchExpectation:XCTestExpectation = expectation(
             description:"core data fetch model")
-        var dataFetched:[NSManagedObject] = []
+        var dataFetched:[DSession] = []
         
         deleteAllModels
         { [weak self] in
             
-            self?.manager?.create(entity:DSession.self)
-            { [weak self] (data:NSManagedObject) in
+            self?.manager?.create
+            { [weak self] (data:DSession) in
                 
                 self?.manager?.save
                 { [weak self] in
                     
-                    self?.manager?.fetch(entity:DSession.self)
-                    { [weak self] (data:[NSManagedObject]) in
+                    self?.manager?.fetch
+                    { [weak self] (data:[DSession]) in
                         
                         guard
                             
-                            let created:DSession = data.first as? DSession
+                            let created:DSession = data.first
                         
                         else
                         {
@@ -218,8 +217,8 @@ class TDManager:XCTestCase
                             self?.manager?.save
                             { [weak self] in
                                 
-                                self?.manager?.fetch(entity:DSession.self)
-                                { (data:[NSManagedObject]) in
+                                self?.manager?.fetch
+                                { (data:[DSession]) in
                                     
                                     dataFetched = data
                                     fetchExpectation.fulfill()
@@ -247,10 +246,10 @@ class TDManager:XCTestCase
     
     private func deleteAllModels(completion:@escaping(() -> ()))
     {
-        manager?.fetch(entity:DSession.self)
-        { [weak self] (data:[NSManagedObject]) in
+        manager?.fetch
+        { [weak self] (data:[DSession]) in
             
-            for dataItem:NSManagedObject in data
+            for dataItem:DSession in data
             {
                 self?.manager?.delete(data:dataItem, completion:nil)
             }
