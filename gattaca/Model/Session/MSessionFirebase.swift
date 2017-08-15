@@ -27,9 +27,7 @@ extension MSession
         }
     }
     
-    //MARK: internal
-    
-    func updateSyncstamp(
+    private func updateSyncstamp(
         database:FDatabase,
         user:FDatabaseUsersItem,
         completion:@escaping((FDatabaseUsersItem) -> ()))
@@ -40,6 +38,8 @@ extension MSession
         
         completion(user)
     }
+    
+    //MARK: internal
     
     func sync(
         manager:DManager,
