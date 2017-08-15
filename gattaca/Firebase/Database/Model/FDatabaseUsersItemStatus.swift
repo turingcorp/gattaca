@@ -17,7 +17,7 @@ class FDatabaseUsersItemStatus:FDatabaseProtocol
             
             else
             {
-                return DSession.Status.banned
+                return DSession.Status.unknown
             }
             
             return status
