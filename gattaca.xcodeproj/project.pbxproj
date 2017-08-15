@@ -101,6 +101,7 @@
 		DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */; };
 		DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF9381F430B7B00420DF0 /* TFDatabase.swift */; };
 		DABEF93B1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */; };
+		DABEF93D1F43447800420DF0 /* TFDatabaseUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF93C1F43447800420DF0 /* TFDatabaseUsers.swift */; };
 		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
 		DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215811F39372D00E281DB /* MGiphyRandom.swift */; };
 		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
@@ -251,6 +252,7 @@
 		DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionFirebase.swift; sourceTree = "<group>"; };
 		DABEF9381F430B7B00420DF0 /* TFDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabase.swift; sourceTree = "<group>"; };
 		DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseProtocolExtension.swift; sourceTree = "<group>"; };
+		DABEF93C1F43447800420DF0 /* TFDatabaseUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseUsers.swift; sourceTree = "<group>"; };
 		DAC2157F1F3936FA00E281DB /* MGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphy.swift; sourceTree = "<group>"; };
 		DAC215811F39372D00E281DB /* MGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyRandom.swift; sourceTree = "<group>"; };
 		DAC215841F39378800E281DB /* MRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRequest.swift; sourceTree = "<group>"; };
@@ -802,6 +804,7 @@
 		DABEF9361F430B5D00420DF0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DABEF93C1F43447800420DF0 /* TFDatabaseUsers.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1245,6 +1248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DABEF93B1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift in Sources */,
+				DABEF93D1F43447800420DF0 /* TFDatabaseUsers.swift in Sources */,
 				DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */,
 				DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */,
 				DA90E0F61F40BA7500A37538 /* TMSessionLoader.swift in Sources */,
