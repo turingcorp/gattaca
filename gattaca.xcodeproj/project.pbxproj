@@ -76,6 +76,7 @@
 		DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1931F38E5D500C13634 /* VToast.swift */; };
 		DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1951F38E5D500C13634 /* VHome.swift */; };
 		DA6F65171F438B13005EA020 /* TMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F65161F438B13005EA020 /* TMRequest.swift */; };
+		DA6F651B1F438E3E005EA020 /* THomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F651A1F438E3E005EA020 /* THomeFactory.swift */; };
 		DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */; };
 		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
 		DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */; };
@@ -231,6 +232,7 @@
 		DA68F1931F38E5D500C13634 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
 		DA68F1951F38E5D500C13634 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DA6F65161F438B13005EA020 /* TMRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMRequest.swift; sourceTree = "<group>"; };
+		DA6F651A1F438E3E005EA020 /* THomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THomeFactory.swift; sourceTree = "<group>"; };
 		DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategy.swift; sourceTree = "<group>"; };
 		DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyFactory.swift; sourceTree = "<group>"; };
 		DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsShare.swift; sourceTree = "<group>"; };
@@ -662,6 +664,22 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		DA6F65181F438E31005EA020 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DA6F65191F438E31005EA020 /* Abstract */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DA6F65191F438E31005EA020 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				DA6F651A1F438E3E005EA020 /* THomeFactory.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
 		DA746A321F41AED1000473A1 /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,6 +749,7 @@
 		DA90E0BC1F40990B00A37538 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA6F65181F438E31005EA020 /* Home */,
 				DA6F65151F438B07005EA020 /* Request */,
 				DA90E0F21F40B78E00A37538 /* Session */,
 			);
@@ -1348,6 +1367,7 @@
 				DA90E0F61F40BA7500A37538 /* TMSessionLoader.swift in Sources */,
 				DA90E0BE1F40991D00A37538 /* TCHome.swift in Sources */,
 				DA90E0F41F40B79E00A37538 /* TMSession.swift in Sources */,
+				DA6F651B1F438E3E005EA020 /* THomeFactory.swift in Sources */,
 				DA25DF521F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
