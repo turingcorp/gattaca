@@ -1,5 +1,4 @@
 import Foundation
-import CoreData
 
 extension MSession
 {
@@ -9,12 +8,12 @@ extension MSession
         manager:DManager,
         completion:@escaping((DSession) -> ()))
     {
-        manager.fetch(entity:DSession.self)
-        { [weak self] (data:[NSManagedObject]) in
+        manager.fetch
+        { [weak self] (data:[DSession]) in
             
             guard
                 
-                let session:DSession = data.first as? DSession
+                let session:DSession = data.first
                 
             else
             {
@@ -33,17 +32,8 @@ extension MSession
         manager:DManager,
         completion:@escaping((DSession) -> ()))
     {
-        manager.create(entity:DSession.self)
-        { (data:NSManagedObject) in
-            
-            guard
-            
-                let session:DSession = data as? DSession
-            
-            else
-            {
-                return
-            }
+        manager.create
+        { (session:DSession) in
             
             manager.save
             {
