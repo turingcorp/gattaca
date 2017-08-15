@@ -41,11 +41,8 @@ class TCHome:XCTestCase
                 
             else
             {
-                print("f")
                 return
             }
-            
-            print("g")
             
             XCTAssertEqual(
                 status,

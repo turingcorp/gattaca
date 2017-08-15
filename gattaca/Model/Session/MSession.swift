@@ -23,13 +23,9 @@ class MSession
             return
         }
         
-        print("a")
-        
         load(manager:manager)
         { [weak self] (session:DSession) in
 
-            print("b")
-            
             self?.sessionLoaded(
                 manager:manager,
                 session:session,
@@ -42,7 +38,6 @@ class MSession
         session:DSession,
         completion:@escaping(() -> ()))
     {
-        print("c")
         self.session = session
         status = MSession.Status.sync
         
@@ -50,7 +45,6 @@ class MSession
              session:session)
         { [weak self] in
             
-            print("d")
             self?.sessionSynched(completion:completion)
         }
     }
@@ -58,8 +52,6 @@ class MSession
     private func sessionSynched(
         completion:@escaping(() -> ()))
     {
-        print("e")
-        
         status = MSession.Status.loaded
         completion()
     }
