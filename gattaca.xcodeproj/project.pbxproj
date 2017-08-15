@@ -12,6 +12,7 @@
 		3EFCCCBADECF0E13DF5648A7 /* Pods_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4604CAED66BF3D4B1BB9803B /* Pods_UnitTests.framework */; };
 		DA32444D1F42B50A00D40F6E /* MSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
+		DA393A331F434CCF005BB484 /* MHomeStrategySync.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA393A321F434CCF005BB484 /* MHomeStrategySync.swift */; };
 		DA4DA3701F41E5510047D5D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4DA36F1F41E5510047D5D7 /* GoogleService-Info.plist */; };
 		DA4DA38A1F420B070047D5D7 /* DSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA3891F420B070047D5D7 /* DSession.swift */; };
 		DA4DA38C1F420B3F0047D5D7 /* DSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA38B1F420B3F0047D5D7 /* DSessionStatus.swift */; };
@@ -159,6 +160,7 @@
 		DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionFirebase.swift; sourceTree = "<group>"; };
 		DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
 		DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDownloadGif.swift; sourceTree = "<group>"; };
+		DA393A321F434CCF005BB484 /* MHomeStrategySync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategySync.swift; sourceTree = "<group>"; };
 		DA39E77A1F38E3F90001CA28 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA39E7891F38E3F90001CA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA4DA36F1F41E5510047D5D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -664,6 +666,7 @@
 				DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */,
 				DA90E0C11F40AE4A00A37538 /* MHomeStrategyNew.swift */,
 				DA90E0C31F40AE8C00A37538 /* MHomeStrategyLoading.swift */,
+				DA393A321F434CCF005BB484 /* MHomeStrategySync.swift */,
 				DA90E0C51F40AEAC00A37538 /* MHomeStrategyLoaded.swift */,
 			);
 			path = Strategy;
@@ -1205,6 +1208,7 @@
 				DA68F1C11F38E5D500C13634 /* VGradient.swift in Sources */,
 				DA90E0EF1F40B75800A37538 /* MSession.swift in Sources */,
 				DAD67F1B1F3F5A08006E9699 /* CHomeShare.swift in Sources */,
+				DA393A331F434CCF005BB484 /* MHomeStrategySync.swift in Sources */,
 				DA68F1AB1F38E5D500C13634 /* ExtensionNotification.swift in Sources */,
 				DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */,
 				DA90E0EE1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift in Sources */,
