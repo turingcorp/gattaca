@@ -24,24 +24,22 @@ class TFDatabaseUsersItem:XCTestCase
     
     func testIdentifier()
     {
-        guard
-        
-            let user:FDatabaseUsersItem = self.user
-        
-        else
-        {
-            return
-        }
-        
         XCTAssertNil(
-            user.identifier,
+            user?.identifier,
             "identifier should not be set")
         
-        user.identifier = kIdentifier
+        user?.identifier = kIdentifier
         
         XCTAssertEqual(
-            user.identifier,
+            user?.identifier,
             kIdentifier,
             "failed setting identifier")
+    }
+    
+    func testParent()
+    {
+        XCTAssertNotNil(
+            user?.parent,
+            "user should reference users as parent")
     }
 }
