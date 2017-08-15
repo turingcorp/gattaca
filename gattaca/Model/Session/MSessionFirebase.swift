@@ -6,7 +6,7 @@ extension MSession
     
     private func sync(
         userId:String?,
-        database:FDatabase,
+        fireBase:FDatabase,
         users:FDatabaseUsers,
         completion:@escaping((FDatabaseUsersItem) -> ()))
     {
@@ -14,21 +14,21 @@ extension MSession
         {
             loadFromFirebase(
                 userId:userId,
-                database:database,
+                fireBase:fireBase,
                 users:users,
                 completion:completion)
         }
         else
         {
             createInFirebase(
-                database:database,
+                fireBase:fireBase,
                 users:users,
                 completion:completion)
         }
     }
     
     private func updateSyncstamp(
-        database:FDatabase,
+        fireBase:FDatabase,
         user:FDatabaseUsersItem,
         completion:@escaping((FDatabaseUsersItem) -> ()))
     {
@@ -42,7 +42,7 @@ extension MSession
             return
         }
         
-        database.update(model:syncstamp)
+        fireBase.update(model:syncstamp)
         
         completion(user)
     }
@@ -55,12 +55,12 @@ extension MSession
         completion:@escaping(() -> ()))
     {
         let userId:String? = session.userId
-        let database:FDatabase = FDatabase()
+        let fireBase:FDatabase = FDatabase()
         let users:FDatabaseUsers = FDatabaseUsers()
         
         sync(
             userId:userId,
-            database:database,
+            fireBase:fireBase,
             users:users)
         { (user:FDatabaseUsersItem) in
             
@@ -76,11 +76,11 @@ extension MSession
     
     func loadFromFirebase(
         userId:String,
-        database:FDatabase,
+        fireBase:FDatabase,
         users:FDatabaseUsers,
         completion:@escaping((FDatabaseUsersItem) -> ()))
     {
-        database.load(
+        fireBase.load(
             parent:users,
             identifier:userId)
         { [weak self] (user:FDatabaseUsersItem?) in
@@ -92,7 +92,7 @@ extension MSession
             else
             {
                 self?.createInFirebase(
-                    database:database,
+                    fireBase:fireBase,
                     users:users,
                     completion:completion)
                 
@@ -100,14 +100,14 @@ extension MSession
             }
             
             self?.updateSyncstamp(
-                database:database,
+                fireBase:fireBase,
                 user:user,
                 completion:completion)
         }
     }
     
     func createInFirebase(
-        database:FDatabase,
+        fireBase:FDatabase,
         users:FDatabaseUsers,
         completion:@escaping((FDatabaseUsersItem) -> ()))
     {
@@ -123,7 +123,7 @@ extension MSession
             return
         }
         
-        let userId:String = database.create(
+        let userId:String = fireBase.create(
             parent:users,
             data:userJson)
         user.identifier = userId
