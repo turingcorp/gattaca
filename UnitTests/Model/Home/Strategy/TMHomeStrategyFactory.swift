@@ -50,4 +50,26 @@ class TMHomeStrategyFactory:XCTestCase
             strategyNew,
             "failed loading strategy for status new")
     }
+    
+    func testFactoryStrategyLoading()
+    {
+        guard
+            
+            let controller:CHome = self.controller
+            
+        else
+        {
+            return
+        }
+        
+        session?.status = MSession.Status.loading
+        
+        let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
+            controller:controller)
+        let strategyLoading:MHomeStrategyLoading? = strategy as? MHomeStrategyLoading
+        
+        XCTAssertNotNil(
+            strategyLoading,
+            "failed loading strategy for status loading")
+    }
 }
