@@ -72,4 +72,48 @@ class TMHomeStrategyFactory:XCTestCase
             strategyLoading,
             "failed loading strategy for status loading")
     }
+    
+    func testFactoryStrategySync()
+    {
+        guard
+            
+            let controller:CHome = self.controller
+            
+        else
+        {
+            return
+        }
+        
+        session?.status = MSession.Status.sync
+        
+        let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
+            controller:controller)
+        let strategySync:MHomeStrategySync? = strategy as? MHomeStrategySync
+        
+        XCTAssertNotNil(
+            strategySync,
+            "failed loading strategy for status sync")
+    }
+    
+    func testFactoryStrategyLoaded()
+    {
+        guard
+            
+            let controller:CHome = self.controller
+            
+        else
+        {
+            return
+        }
+        
+        session?.status = MSession.Status.loaded
+        
+        let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
+            controller:controller)
+        let strategyLoaded:MHomeStrategyLoaded? = strategy as? MHomeStrategyLoaded
+        
+        XCTAssertNotNil(
+            strategyLoaded,
+            "failed loading strategy for status loaded")
+    }
 }
