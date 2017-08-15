@@ -37,8 +37,13 @@ class FDatabaseUsersItemStatus:FDatabaseProtocol
         }
     }
     
-    init(user:FDatabaseUsersItem)
+    init?(user:FDatabaseUsersItem)
     {
+        if user.identifier == nil
+        {
+            return nil
+        }
+        
         parent = user
         rawStatus = user.status
     }
