@@ -68,4 +68,20 @@ class MFirebaseDManager
             completion(model)
         }
     }
+    
+    func update(model:MFirebaseDProtocol)
+    {
+        guard
+            
+            let json:Any = model.json
+        
+        else
+        {
+            return
+        }
+        
+        let path:String = model.path
+        let reference:DatabaseReference = self.reference.child(path)
+        reference.setValue(json)
+    }
 }
