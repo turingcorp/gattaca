@@ -1,9 +1,9 @@
 import Foundation
 
-class MFirebaseDUserItemSyncstamp:MFirebaseDProtocol
+class FDatabaseUsersItemSyncstamp:FDatabaseProtocol
 {
-    var parent:MFirebaseDProtocol?
-    var identifier:String? = MFirebaseDUserItem.kKeySyncstamp
+    var parent:FDatabaseProtocol?
+    var identifier:String? = FDatabaseUsersItem.kKeySyncstamp
     private let syncstamp:TimeInterval
     
     var json:Any?
@@ -14,7 +14,7 @@ class MFirebaseDUserItemSyncstamp:MFirebaseDProtocol
         }
     }
     
-    init(parent:MFirebaseDUserItem)
+    init(parent:FDatabaseUsersItem)
     {
         self.parent = parent
         syncstamp = Date().timeIntervalSince1970

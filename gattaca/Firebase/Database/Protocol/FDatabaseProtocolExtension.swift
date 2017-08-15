@@ -2,18 +2,6 @@ import Foundation
 
 extension FDatabaseProtocol
 {
-    var parent:MFirebaseDProtocol?
-    {
-        get
-        {
-            return nil
-        }
-        
-        set
-        {
-        }
-    }
-    
     var path:String
     {
         get
