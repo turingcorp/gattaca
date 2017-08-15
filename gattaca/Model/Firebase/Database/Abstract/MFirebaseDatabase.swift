@@ -39,9 +39,14 @@ class MFirebaseDatabase
         
         let reference:DatabaseReference = self.reference.child(path)
         reference.observeSingleEvent(of:DataEventType.value)
-        { (snapshot:DataSnapshot) in
+        { [weak self] (snapshot:DataSnapshot) in
             
+            let model:T? = self?.modelFromSnapshot(
+                snapshot:snapshot,
+                parent:parent,
+                identifier:identifier)
             
+            completion(model)
         }
     }
     
