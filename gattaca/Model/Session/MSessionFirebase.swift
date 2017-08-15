@@ -83,6 +83,11 @@ extension MSession
                 
             else
             {
+                self?.createInFirebase(
+                    database:database,
+                    users:users,
+                    completion:completion)
+                
                 return
             }
             
