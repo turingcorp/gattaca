@@ -1,7 +1,7 @@
 import Foundation
 import FirebaseDatabase
 
-class MFirebaseDManager
+class MFirebaseDatabase
 {
     let reference:DatabaseReference
     let root:String
@@ -9,7 +9,7 @@ class MFirebaseDManager
     init(bundle:Bundle?)
     {
         reference = Database.database().reference()
-        root = MFirebaseDManager.factoryRoot(bundle:bundle)
+        root = MFirebaseDatabase.factoryRoot(bundle:bundle)
     }
     
     //MARK: internal
@@ -79,7 +79,7 @@ class MFirebaseDManager
         guard
             
             let json:Any = model.json
-        
+            
         else
         {
             return

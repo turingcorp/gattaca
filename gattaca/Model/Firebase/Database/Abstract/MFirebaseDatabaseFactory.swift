@@ -1,6 +1,6 @@
 import Foundation
 
-extension MFirebaseDManager
+extension MFirebaseDatabase
 {
     private static let kSlash:String = "/"
     private static let kDot:String = "."
@@ -22,9 +22,9 @@ extension MFirebaseDManager
         }
         
         guard
-        
+            
             let rawPath:String = useBundle.bundleIdentifier
-        
+            
         else
         {
             return kEmptyString
@@ -36,7 +36,7 @@ extension MFirebaseDManager
         guard
             
             let path:String = pathComponents.last
-        
+            
         else
         {
             return kEmptyString
