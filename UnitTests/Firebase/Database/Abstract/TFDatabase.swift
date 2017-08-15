@@ -5,6 +5,7 @@ class TFDatabase:XCTestCase
 {
     private var database:FDatabase?
     private let kWaitExpectation:TimeInterval = 15
+    private let kUserSyncstamp:TimeInterval = 9999
     
     override func setUp()
     {
@@ -79,6 +80,58 @@ class TFDatabase:XCTestCase
             XCTAssertNotNil(
                 firebaseUser?.identifier,
                 "user model has no id")
+        }
+    }
+    
+    func testUpdate()
+    {
+        var firebaseUser:FDatabaseUsersItem?
+        let users:FDatabaseUsers = FDatabaseUsers()
+        let user:FDatabaseUsersItem = FDatabaseUsersItem(
+            users:users)
+        
+        guard
+            
+            let data:Any = user.json
+            
+        else
+        {
+            return
+        }
+        
+        let userId:String? = database?.create(
+            parent:users,
+            data:data)
+        user.identifier = userId
+        let syncstamp:FDatabaseUsersItemSyncstamp = FDatabaseUsersItemSyncstamp(
+            user:user)
+        syncstamp.syncstamp = kUserSyncstamp
+        
+        database?.update(model:syncstamp)
+        
+        let loadExpectation:XCTestExpectation = expectation(
+            description:"load model after update")
+        
+        database?.load(
+            parent:users,
+            identifier:userId)
+        { (loadedUser:FDatabaseUsersItem?) in
+            
+            firebaseUser = loadedUser
+            loadExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { [weak self] (error:Error?) in
+            
+            XCTAssertNotNil(
+                firebaseUser,
+                "failed loading user")
+            
+            XCTAssertEqual(
+                firebaseUser?.syncstamp,
+                self?.kUserSyncstamp,
+                "failed updating syncstamp")
         }
     }
 }
