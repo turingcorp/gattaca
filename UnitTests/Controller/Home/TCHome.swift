@@ -37,7 +37,7 @@ class TCHome:XCTestCase
             
             guard
                 
-                let status:MSession.Status = self?.controller?.model.session?.status
+                let status:MSession.Status = self?.session?.status
                 
             else
             {
@@ -48,6 +48,10 @@ class TCHome:XCTestCase
                 status,
                 MSession.Status.loaded,
                 "session is not being loaded")
+            
+            XCTAssertNil(
+                self?.controller?.model.strategy,
+                "failed clearing strategy")
         }
     }
     
