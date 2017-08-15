@@ -85,7 +85,7 @@ class MFirebaseDManager
             return
         }
         
-        let path:String = model.path
+        let path:String = modelPath(model:model)
         let reference:DatabaseReference = self.reference.child(path)
         reference.setValue(json)
     }
