@@ -15,7 +15,7 @@ class FDatabase
     //MARK: internal
     
     func create(
-        parent:MFirebaseDProtocol,
+        parent:FDatabaseProtocol,
         data:Any) -> String
     {
         let path:String = modelPath(model:parent)
@@ -28,8 +28,8 @@ class FDatabase
         return childId
     }
     
-    func load<T:MFirebaseDProtocol>(
-        parent:MFirebaseDProtocol?,
+    func load<T:FDatabaseProtocol>(
+        parent:FDatabaseProtocol?,
         identifier:String?,
         completion:@escaping((T?) -> ()))
     {
@@ -50,7 +50,7 @@ class FDatabase
         }
     }
     
-    func update(model:MFirebaseDProtocol)
+    func update(model:FDatabaseProtocol)
     {
         guard
             

@@ -8,7 +8,7 @@ extension FDatabaseProtocol
         {
             var modelPath:String = ""
             
-            if let parent:MFirebaseDProtocol = self.parent
+            if let parent:FDatabaseProtocol = self.parent
             {
                 let parentPath:String = parent.path
                 modelPath.append(parentPath)

@@ -9,8 +9,8 @@ extension MSession
         session:DSession,
         completion:@escaping(() -> ()))
     {
-        let database:MFirebaseDManager = MFirebaseDManager(bundle:nil)
-        let userList:MFirebaseDUser = MFirebaseDUser()
+        let database:FDatabase = FDatabase(bundle:nil)
+        let users:FDatabaseUsers = FDatabaseUsers()
         
         guard
             
@@ -20,7 +20,7 @@ extension MSession
         {
             createInFirebase(
                 database:database,
-                userList:userList,
+                users:users,
                 manager:manager,
                 session:session,
                 completion:completion)
@@ -31,7 +31,7 @@ extension MSession
         loadFromFirebase(
             userId:userId,
             database:database,
-            userList:userList,
+            users:users,
             manager:manager,
             session:session,
             completion:completion)
@@ -39,20 +39,20 @@ extension MSession
     
     func loadFromFirebase(
         userId:String,
-        database:MFirebaseDManager,
-        userList:MFirebaseDUser,
+        database:FDatabase,
+        users:FDatabaseUsers,
         manager:DManager,
         session:DSession,
         completion:@escaping(() -> ()))
     {
         database.load(
-            parent:userList,
+            parent:users,
             identifier:userId)
-        { (user:MFirebaseDUserItem?) in
+        { (user:FDatabaseUsersItem?) in
             
             guard
                 
-                let user:MFirebaseDUserItem = user
+                let user:FDatabaseUsersItem = user
                 
             else
             {
@@ -73,26 +73,26 @@ extension MSession
     }
     
     func updateFirebase(
-        database:MFirebaseDManager,
-        user:MFirebaseDUserItem,
+        database:FDatabase,
+        user:FDatabaseUsersItem,
         completion:@escaping(() -> ()))
     {
-        let syncstamp:MFirebaseDUserItemSyncstamp = MFirebaseDUserItemSyncstamp(
-            parent:user)
+        let syncstamp:FDatabaseUsersItemSyncstamp = FDatabaseUsersItemSyncstamp(
+            user:user)
         database.update(model:syncstamp)
         
         completion()
     }
     
     func createInFirebase(
-        database:MFirebaseDManager,
-        userList:MFirebaseDUser,
+        database:FDatabase,
+        users:FDatabaseUsers,
         manager:DManager,
         session:DSession,
         completion:@escaping(() -> ()))
     {
-        let user:MFirebaseDUserItem = MFirebaseDUserItem(
-            parent:userList,
+        let user:FDatabaseUsersItem = FDatabaseUsersItem(
+            users:users,
             session:session)
         
         guard
@@ -105,7 +105,7 @@ extension MSession
         }
         
         let userId:String = database.create(
-            parent:userList,
+            parent:users,
             data:userJson)
         session.userId = userId
         

@@ -17,17 +17,17 @@ class FDatabaseUsersItem:FDatabaseProtocol
         get
         {
             let json:[String:Any] = [
-                MFirebaseDUserItem.kKeyCreated:created,
-                MFirebaseDUserItem.kKeySyncstamp:created,
-                MFirebaseDUserItem.kKeyStatus:status,]
+                FDatabaseUsersItem.kKeyCreated:created,
+                FDatabaseUsersItem.kKeySyncstamp:created,
+                FDatabaseUsersItem.kKeyStatus:status,]
             
             return json
         }
     }
     
-    init(parent:FDatabaseUsers, session:DSession)
+    init(users:FDatabaseUsers, session:DSession)
     {
-        self.parent = parent
+        parent = users
         status = session.rawStatus
         
         let currentDate:TimeInterval = Date().timeIntervalSince1970
@@ -41,11 +41,11 @@ class FDatabaseUsersItem:FDatabaseProtocol
             
             let jsonMap:[String:Any] = json as? [String:Any],
             let created:TimeInterval = jsonMap[
-                MFirebaseDUserItem.kKeyCreated] as? TimeInterval,
+                FDatabaseUsersItem.kKeyCreated] as? TimeInterval,
             let syncstamp:TimeInterval = jsonMap[
-                MFirebaseDUserItem.kKeySyncstamp] as? TimeInterval,
+                FDatabaseUsersItem.kKeySyncstamp] as? TimeInterval,
             let status:Int16 = jsonMap[
-                MFirebaseDUserItem.kKeyStatus] as? Int16
+                FDatabaseUsersItem.kKeyStatus] as? Int16
             
         else
         {

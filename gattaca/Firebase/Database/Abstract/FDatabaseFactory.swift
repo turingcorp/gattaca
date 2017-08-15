@@ -54,30 +54,30 @@ extension FDatabase
         return path
     }
     
-    func modelPath(model:MFirebaseDProtocol) -> String
+    func modelPath(model:FDatabaseProtocol) -> String
     {
         var path:String = root
-        path.append(MFirebaseDatabase.kSlash)
+        path.append(FDatabase.kSlash)
         path.append(model.path)
         
         return path
     }
     
     func modelPath(
-        parent:MFirebaseDProtocol?,
+        parent:FDatabaseProtocol?,
         identifier:String?) -> String
     {
         var path:String = root
         
-        if let parent:MFirebaseDProtocol = parent
+        if let parent:FDatabaseProtocol = parent
         {
-            path.append(MFirebaseDatabase.kSlash)
+            path.append(FDatabase.kSlash)
             path.append(parent.path)
         }
         
         if let identifier:String = identifier
         {
-            path.append(MFirebaseDatabase.kSlash)
+            path.append(FDatabase.kSlash)
             path.append(identifier)
         }
         

@@ -3,7 +3,7 @@ import Foundation
 protocol FDatabaseProtocol
 {
     var identifier:String? { get set }
-    var parent:MFirebaseDProtocol? { get set }
+    var parent:FDatabaseProtocol? { get set }
     var path:String { get }
     var json:Any? { get }
     

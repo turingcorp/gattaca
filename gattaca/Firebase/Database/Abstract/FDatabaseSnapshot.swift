@@ -3,9 +3,9 @@ import FirebaseDatabase
 
 extension FDatabase
 {
-    func modelFromSnapshot<T:MFirebaseDProtocol>(
+    func modelFromSnapshot<T:FDatabaseProtocol>(
         snapshot:DataSnapshot,
-        parent:MFirebaseDProtocol?,
+        parent:FDatabaseProtocol?,
         identifier:String?) -> T?
     {
         guard
@@ -25,7 +25,7 @@ extension FDatabase
         var model:T? = T(
             json:json)
         
-        if let parent:MFirebaseDProtocol = parent
+        if let parent:FDatabaseProtocol = parent
         {
             model?.parent = parent
         }

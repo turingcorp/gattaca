@@ -14,9 +14,9 @@ class FDatabaseUsersItemSyncstamp:FDatabaseProtocol
         }
     }
     
-    init(parent:FDatabaseUsersItem)
+    init(user:FDatabaseUsersItem)
     {
-        self.parent = parent
+        parent = user
         syncstamp = Date().timeIntervalSince1970
     }
     
