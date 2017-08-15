@@ -22,6 +22,7 @@
 		DA4DA38C1F420B3F0047D5D7 /* DSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA38B1F420B3F0047D5D7 /* DSessionStatus.swift */; };
 		DA5F449D1F42C6C400334605 /* MFirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F449C1F42C6C400334605 /* MFirebaseDatabase.swift */; };
 		DA5F449F1F42C6E500334605 /* MFirebaseDatabaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F449E1F42C6E500334605 /* MFirebaseDatabaseFactory.swift */; };
+		DA5F44A11F42C81300334605 /* MFirebaseDatabaseSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44A01F42C81300334605 /* MFirebaseDatabaseSnapshot.swift */; };
 		DA68A2861F408A350094BC9B /* DGifExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27E1F408A350094BC9B /* DGifExtension.swift */; };
 		DA68A2871F408A350094BC9B /* DGifExtensionDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
@@ -166,6 +167,7 @@
 		DA4DA38B1F420B3F0047D5D7 /* DSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSessionStatus.swift; sourceTree = "<group>"; };
 		DA5F449C1F42C6C400334605 /* MFirebaseDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFirebaseDatabase.swift; sourceTree = "<group>"; };
 		DA5F449E1F42C6E500334605 /* MFirebaseDatabaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFirebaseDatabaseFactory.swift; sourceTree = "<group>"; };
+		DA5F44A01F42C81300334605 /* MFirebaseDatabaseSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFirebaseDatabaseSnapshot.swift; sourceTree = "<group>"; };
 		DA68A27E1F408A350094BC9B /* DGifExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtension.swift; sourceTree = "<group>"; };
 		DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtensionDirectory.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				DA4DA37D1F41EF8C0047D5D7 /* MFirebaseDProtocolExtension.swift */,
 				DA5F449C1F42C6C400334605 /* MFirebaseDatabase.swift */,
 				DA5F449E1F42C6E500334605 /* MFirebaseDatabaseFactory.swift */,
+				DA5F44A01F42C81300334605 /* MFirebaseDatabaseSnapshot.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1218,6 +1221,7 @@
 				DA90E0C41F40AE8C00A37538 /* MHomeStrategyLoading.swift in Sources */,
 				DAE0AFD21F3BAEF9006449D0 /* MHomeActionHate.swift in Sources */,
 				DAE0AFD51F3BAEF9006449D0 /* MHomeActionProtocol.swift in Sources */,
+				DA5F44A11F42C81300334605 /* MFirebaseDatabaseSnapshot.swift in Sources */,
 				DA68A2861F408A350094BC9B /* DGifExtension.swift in Sources */,
 				DA90E0EB1F40B75800A37538 /* MPerkThumbnailFreeProtocol.swift in Sources */,
 				DA90E0E21F40B75800A37538 /* MGifStrategy.swift in Sources */,

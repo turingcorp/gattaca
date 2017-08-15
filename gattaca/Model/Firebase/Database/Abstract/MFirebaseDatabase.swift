@@ -41,36 +41,7 @@ class MFirebaseDatabase
         reference.observeSingleEvent(of:DataEventType.value)
         { (snapshot:DataSnapshot) in
             
-            guard
-                
-                let json:Any = snapshot.value
-                
-            else
-            {
-                completion(nil)
-                
-                return
-            }
             
-            if let _:NSNull = json as? NSNull
-            {
-                completion(nil)
-            }
-            
-            var model:T? = T(
-                json:json)
-            
-            if let parent:MFirebaseDProtocol = parent
-            {
-                model?.parent = parent
-            }
-            
-            if let identifier:String = identifier
-            {
-                model?.identifier = identifier
-            }
-            
-            completion(model)
         }
     }
     
