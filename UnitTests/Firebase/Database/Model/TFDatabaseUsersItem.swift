@@ -4,11 +4,14 @@ import XCTest
 class TFDatabaseUsersItem:XCTestCase
 {
     private var user:FDatabaseUsersItem?
+    private var timestamp:TimeInterval?
     private let kIdentifier:String = "lorem ipsum"
     
     override func setUp()
     {
         super.setUp()
+        
+        timestamp = Date().timeIntervalSince1970
         
         let users:FDatabaseUsers = FDatabaseUsers()
         user = FDatabaseUsersItem(
@@ -41,5 +44,27 @@ class TFDatabaseUsersItem:XCTestCase
         XCTAssertNotNil(
             user?.parent,
             "user should reference users as parent")
+    }
+    
+    func testCreated()
+    {
+        guard
+            
+            let created:TimeInterval = user?.created,
+            let timestamp:TimeInterval = self.timestamp
+        
+        else
+        {
+            XCTAssertNotNil(
+                self.timestamp,
+                "timestamp wasn't created")
+            
+            return
+        }
+        
+        XCTAssertGreaterThanOrEqual(
+            created,
+            timestamp,
+            "user created not being set properly")
     }
 }
