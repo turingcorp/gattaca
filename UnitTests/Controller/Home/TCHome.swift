@@ -3,6 +3,7 @@ import XCTest
 
 class TCHome:XCTestCase
 {
+    private weak var view:UIView?
     private var session:MSession?
     private var controller:CHome?
     private let kWait:TimeInterval = 13
@@ -16,6 +17,7 @@ class TCHome:XCTestCase
         self.session = session
         
         let controller:CHome = CHome(session:session)
+        view = controller.view
         self.controller = controller
     }
     
@@ -24,7 +26,7 @@ class TCHome:XCTestCase
         let sessionExpectation:XCTestExpectation = expectation(
             description:"loaded session")
         
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
+        DispatchQueue.main.asyncAfter(
             deadline:DispatchTime.now() + kWait)
         {
             sessionExpectation.fulfill()
@@ -35,7 +37,7 @@ class TCHome:XCTestCase
             
             guard
                 
-                let status:MSession.Status = self?.session?.status
+                let status:MSession.Status = self?.controller?.model.session?.status
                 
             else
             {

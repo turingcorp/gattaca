@@ -9,6 +9,7 @@ extension MHomeStrategy
         let map:[MSession.Status:MHomeStrategy.Type] = [
             MSession.Status.new:MHomeStrategyNew.self,
             MSession.Status.loading:MHomeStrategyLoading.self,
+            MSession.Status.sync:MHomeStrategySync.self,
             MSession.Status.loaded:MHomeStrategyLoaded.self]
         
         return map
