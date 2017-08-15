@@ -13,7 +13,7 @@ class TMSessionLoader:XCTestCase
         
         guard
             
-            let manager:DManager = DManager(bundle:currentBundle)
+            let coreData:Database = Database(bundle:currentBundle)
         
         else
         {
@@ -21,11 +21,11 @@ class TMSessionLoader:XCTestCase
         }
         
         XCTAssertNotNil(
-            manager,
-            "failed creating manager")
+            coreData,
+            "failed creating core data")
         
         let session:MSession = MSession()
-        session.create(manager:manager)
+        session.create(coreData:coreData)
         { (session:DSession) in
             
             sessionExpectation.fulfill()
@@ -34,7 +34,7 @@ class TMSessionLoader:XCTestCase
         waitForExpectations(timeout:kWaitExpectation)
         { (error:Error?) in
             
-            let hasChanges:Bool = manager.managedObjectContext.hasChanges
+            let hasChanges:Bool = coreData.managedObjectContext.hasChanges
             
             XCTAssertFalse(
                 hasChanges,
@@ -50,7 +50,7 @@ class TMSessionLoader:XCTestCase
         
         guard
             
-            let manager:DManager = DManager(bundle:currentBundle)
+            let coreData:Database = Database(bundle:currentBundle)
             
         else
         {
@@ -58,11 +58,11 @@ class TMSessionLoader:XCTestCase
         }
         
         XCTAssertNotNil(
-            manager,
-            "failed creating manager")
+            coreData,
+            "failed creating coreData")
         
         let session:MSession = MSession()
-        session.load(manager:manager)
+        session.load(coreData:coreData)
         { (session:DSession) in
             
             sessionExpectation.fulfill()

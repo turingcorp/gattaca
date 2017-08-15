@@ -3,8 +3,8 @@ import XCTest
 
 class TMSessionFirebase:XCTestCase
 {
-    private var database:FDatabase?
-    private var manager:DManager?
+    private var firebase:FDatabase?
+    private var coreData:Database?
     private var session:DSession?
     private var modelSession:MSession?
     private let kUnknownId:String = "unknown_id"
@@ -17,9 +17,10 @@ class TMSessionFirebase:XCTestCase
         let currentBundle:Bundle = Bundle(for:TDManager.self)
         
         modelSession = MSession()
-        database = FDatabase()
-        manager = DManager(bundle:currentBundle)
-        manager?.create
+        firebase = FDatabase()
+        coreData = Database(bundle:currentBundle)
+        
+        coreData?.create
         { [weak self] (session:DSession) in
             
             session.initialValues()
@@ -31,7 +32,7 @@ class TMSessionFirebase:XCTestCase
     {
         guard
             
-            let manager:DManager = self.manager,
+            let coreData:Database = self.coreData,
             let session:DSession = self.session,
             let modelSession:MSession = self.modelSession
         
@@ -44,7 +45,7 @@ class TMSessionFirebase:XCTestCase
             description:"sync firebase")
         
         modelSession.sync(
-            manager:manager,
+            coreData:coreData,
             session:session)
         {
             syncExpectation.fulfill()
@@ -63,7 +64,7 @@ class TMSessionFirebase:XCTestCase
     {
         guard
             
-            let database:FDatabase = self.database,
+            let firebase:FDatabase = self.firebase,
             let modelSession:MSession = self.modelSession
             
         else
@@ -78,7 +79,7 @@ class TMSessionFirebase:XCTestCase
         var firebaseUser:FDatabaseUsersItem?
         
         modelSession.createInFirebase(
-            database:database,
+            firebase:firebase,
             users:users)
         { (user:FDatabaseUsersItem) in
             
@@ -108,7 +109,7 @@ class TMSessionFirebase:XCTestCase
         
         guard
             
-            let database:FDatabase = self.database,
+            let firebase:FDatabase = self.firebase,
             let modelSession:MSession = self.modelSession,
             let userJson:Any = user.json
             
@@ -120,17 +121,17 @@ class TMSessionFirebase:XCTestCase
         let loadExpectation:XCTestExpectation = expectation(
             description:"load from firebase")
         
-        let userId:String = database.create(
+        let userId:String = firebase.create(
             parent:users,
             data:userJson)
         
         modelSession.loadFromFirebase(
             userId:userId,
-            database:database,
+            firebase:firebase,
             users:users)
         { (userLoaded:FDatabaseUsersItem) in
             
-            database.load(
+            firebase.load(
                 parent:users,
                 identifier:userId)
             { (retrieved:FDatabaseUsersItem?) in
@@ -174,7 +175,7 @@ class TMSessionFirebase:XCTestCase
         
         guard
             
-            let database:FDatabase = self.database,
+            let firebase:FDatabase = self.firebase,
             let modelSession:MSession = self.modelSession
             
         else
@@ -187,7 +188,7 @@ class TMSessionFirebase:XCTestCase
         
         modelSession.loadFromFirebase(
             userId:kUnknownId,
-            database:database,
+            firebase:firebase,
             users:users)
         { (userLoaded:FDatabaseUsersItem) in
             
@@ -216,8 +217,8 @@ class TMSessionFirebase:XCTestCase
         
         guard
             
-            let database:FDatabase = self.database,
-            let manager:DManager = self.manager,
+            let firebase:FDatabase = self.firebase,
+            let coreData:Database = self.coreData,
             let session:DSession = self.session,
             let modelSession:MSession = self.modelSession,
             let userJson:Any = user.json
@@ -227,7 +228,7 @@ class TMSessionFirebase:XCTestCase
             return
         }
         
-        let userId:String = database.create(
+        let userId:String = firebase.create(
             parent:users,
             data:userJson)
         user.identifier = userId
@@ -247,13 +248,13 @@ class TMSessionFirebase:XCTestCase
         
         userStatus.status = status
         
-        database.update(model:userStatus)
+        firebase.update(model:userStatus)
         
         let syncExpectation:XCTestExpectation = expectation(
             description:"sync firebase")
         
         modelSession.sync(
-            manager:manager,
+            coreData:coreData,
             session:session)
         {
             syncExpectation.fulfill()
