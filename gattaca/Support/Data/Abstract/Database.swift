@@ -1,17 +1,17 @@
 import Foundation
 import CoreData
 
-class DManager
+class Database
 {
     let managedObjectContext:NSManagedObjectContext
     
     init?(bundle:Bundle?)
     {
         guard
-        
-            let managedObjectContext:NSManagedObjectContext = DManager.factoryManagedObjectContext(
+            
+            let managedObjectContext:NSManagedObjectContext = Database.factoryManagedObjectContext(
                 bundle:bundle)
-        
+            
         else
         {
             return nil
@@ -102,7 +102,7 @@ class DManager
             guard
                 
                 let results:[T] = data as? [T]
-            
+                
             else
             {
                 return

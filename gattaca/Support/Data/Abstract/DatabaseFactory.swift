@@ -1,7 +1,7 @@
 import Foundation
 import CoreData
 
-extension DManager
+extension Database
 {
     private static let kModelName:String = "DGattaca"
     private static let kModelExtension:String = "momd"
@@ -17,7 +17,7 @@ extension DManager
             let persistentStoreCoordinator:NSPersistentStoreCoordinator = factoryPersistentStoreCoordinator(
                 bundle:bundle,
                 managedObjectModel:managedObjectModel)
-        
+            
         else
         {
             return nil

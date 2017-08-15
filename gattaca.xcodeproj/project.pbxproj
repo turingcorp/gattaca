@@ -14,6 +14,8 @@
 		DA25DF501F435EB200765DCA /* FDatabaseUsersItemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF4F1F435EB200765DCA /* FDatabaseUsersItemStatus.swift */; };
 		DA25DF521F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF511F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift */; };
 		DA25DF541F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF531F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift */; };
+		DA25DF5C1F43836800765DCA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF5A1F43836700765DCA /* Database.swift */; };
+		DA25DF5D1F43836800765DCA /* DatabaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF5B1F43836700765DCA /* DatabaseFactory.swift */; };
 		DA32444D1F42B50A00D40F6E /* MSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA393A331F434CCF005BB484 /* MHomeStrategySync.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA393A321F434CCF005BB484 /* MHomeStrategySync.swift */; };
@@ -31,9 +33,7 @@
 		DA68A2861F408A350094BC9B /* DGifExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27E1F408A350094BC9B /* DGifExtension.swift */; };
 		DA68A2871F408A350094BC9B /* DGifExtensionDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
-		DA68A2891F408A350094BC9B /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2821F408A350094BC9B /* DManager.swift */; };
 		DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */; };
-		DA68A28C1F408B230094BC9B /* DManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A28B1F408B230094BC9B /* DManagerFactory.swift */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
 		DA68F1971F38E5D500C13634 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1501F38E5D500C13634 /* Controller.swift */; };
 		DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1511F38E5D500C13634 /* ControllerParent.swift */; };
@@ -165,6 +165,8 @@
 		DA25DF4F1F435EB200765DCA /* FDatabaseUsersItemStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseUsersItemStatus.swift; sourceTree = "<group>"; };
 		DA25DF511F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseUsersItemSyncstamp.swift; sourceTree = "<group>"; };
 		DA25DF531F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseUsersItemStatus.swift; sourceTree = "<group>"; };
+		DA25DF5A1F43836700765DCA /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		DA25DF5B1F43836700765DCA /* DatabaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseFactory.swift; sourceTree = "<group>"; };
 		DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionFirebase.swift; sourceTree = "<group>"; };
 		DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
 		DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDownloadGif.swift; sourceTree = "<group>"; };
@@ -185,9 +187,7 @@
 		DA68A27E1F408A350094BC9B /* DGifExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtension.swift; sourceTree = "<group>"; };
 		DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtensionDirectory.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
-		DA68A2821F408A350094BC9B /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
 		DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
-		DA68A28B1F408B230094BC9B /* DManagerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManagerFactory.swift; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA68F1501F38E5D500C13634 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA68F1511F38E5D500C13634 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -346,6 +346,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA25DF591F43836700765DCA /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				DA25DF5A1F43836700765DCA /* Database.swift */,
+				DA25DF5B1F43836700765DCA /* DatabaseFactory.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
 		DA39E7711F38E3F90001CA28 = {
 			isa = PBXGroup;
 			children = (
@@ -442,15 +451,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		DA68A2811F408A350094BC9B /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				DA68A2821F408A350094BC9B /* DManager.swift */,
-				DA68A28B1F408B230094BC9B /* DManagerFactory.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
 		DA68A2831F408A350094BC9B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,8 +545,8 @@
 		DA68F16A1F38E5D500C13634 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DA25DF591F43836700765DCA /* Abstract */,
 				DA68A27D1F408A350094BC9B /* Extension */,
-				DA68A2811F408A350094BC9B /* Manager */,
 				DA68A2831F408A350094BC9B /* Model */,
 			);
 			path = Data;
@@ -1246,6 +1246,7 @@
 				DA68F1BD1F38E5D500C13634 /* VBlur.swift in Sources */,
 				DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */,
 				DA68F1AA1F38E5D500C13634 /* ExtensionFileManager.swift in Sources */,
+				DA25DF5C1F43836800765DCA /* Database.swift in Sources */,
 				DAE0AF961F3AB432006449D0 /* VHomeActionsCell.swift in Sources */,
 				DA4DA38A1F420B070047D5D7 /* DSession.swift in Sources */,
 				DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */,
@@ -1291,7 +1292,6 @@
 				DA25DF501F435EB200765DCA /* FDatabaseUsersItemStatus.swift in Sources */,
 				DA5F44B61F42CAB300334605 /* FDatabaseUsersItemSyncstamp.swift in Sources */,
 				DAE0AFCE1F3BAEF9006449D0 /* MHomeFactory.swift in Sources */,
-				DA68A2891F408A350094BC9B /* DManager.swift in Sources */,
 				DA68F1AE1F38E5D500C13634 /* ExtensionString.swift in Sources */,
 				DA90E0C41F40AE8C00A37538 /* MHomeStrategyLoading.swift in Sources */,
 				DAE0AFD21F3BAEF9006449D0 /* MHomeActionHate.swift in Sources */,
@@ -1300,6 +1300,7 @@
 				DA90E0EB1F40B75800A37538 /* MPerkThumbnailFreeProtocol.swift in Sources */,
 				DA90E0E21F40B75800A37538 /* MGifStrategy.swift in Sources */,
 				DA90E0EA1F40B75800A37538 /* MPerkDomainProtocol.swift in Sources */,
+				DA25DF5D1F43836800765DCA /* DatabaseFactory.swift in Sources */,
 				DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */,
 				DA68F1BA1F38E5D500C13634 /* ViewParentTransitions.swift in Sources */,
 				DA68F1B71F38E5D500C13634 /* View.swift in Sources */,
@@ -1307,7 +1308,6 @@
 				DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */,
 				DA5F44B21F42CA5C00334605 /* FDatabaseUsers.swift in Sources */,
 				DA90E0E71F40B75800A37538 /* MPerk.swift in Sources */,
-				DA68A28C1F408B230094BC9B /* DManagerFactory.swift in Sources */,
 				DA90E0E81F40B75800A37538 /* MPerkFactory.swift in Sources */,
 				DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */,
 				DA68F19A1F38E5D500C13634 /* CHome.swift in Sources */,
