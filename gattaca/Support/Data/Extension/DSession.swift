@@ -8,7 +8,14 @@ extension DSession
     {
         get
         {
-            let status:DSession.Status = DSession.Status(rawValue:rawStatus)!
+            guard
+            
+                let status:DSession.Status = DSession.Status(rawValue:rawStatus)
+            
+            else
+            {
+                return DSession.Status.banned
+            }
             
             return status
         }
