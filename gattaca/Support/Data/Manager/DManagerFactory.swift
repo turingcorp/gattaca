@@ -27,6 +27,8 @@ extension DManager
             concurrencyType:
             NSManagedObjectContextConcurrencyType.privateQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
+        managedObjectContext.mergePolicy = NSMergePolicy(
+            merge:NSMergePolicyType.mergeByPropertyStoreTrumpMergePolicyType)
         
         return managedObjectContext
     }
