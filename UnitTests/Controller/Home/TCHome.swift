@@ -5,7 +5,8 @@ class TCHome:XCTestCase
 {
     private var session:MSession?
     private var controller:CHome?
-    private let kWaitSession:UInt32 = 15
+    private let kWait:TimeInterval = 12
+    private let kExpectation:TimeInterval = 15
     
     override func setUp()
     {
@@ -22,26 +23,37 @@ class TCHome:XCTestCase
     
     func testSessionLoads()
     {
-        sleep(kWaitSession)
+        let sessionExpectation:XCTestExpectation = expectation(
+            description:"loaded session")
         
-        guard
-            
-            let status:MSession.Status = session?.status
-            
-        else
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
+            deadline:DispatchTime.now() + kWait)
         {
-            return
+            sessionExpectation.fulfill()
         }
         
-        XCTAssertEqual(
-            status,
-            MSession.Status.loaded,
-            "session is not being loaded")
+        waitForExpectations(timeout:kExpectation)
+        { [weak self] (error:Error?) in
+            
+            guard
+                
+                let status:MSession.Status = self?.session?.status
+                
+            else
+            {
+                return
+            }
+            
+            XCTAssertEqual(
+                status,
+                MSession.Status.loaded,
+                "session is not being loaded")
+        }
     }
     
     func testSessionModel()
     {
-        sleep(kWaitSession)
+//        sleep(kWaitSession)
         
         let session:DSession? = self.session?.session
         
