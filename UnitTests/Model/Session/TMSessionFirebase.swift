@@ -129,8 +129,14 @@ class TMSessionFirebase:XCTestCase
             users:users)
         { (userLoaded:FDatabaseUsersItem) in
             
-            firebaseUser = userLoaded
-            loadExpectation.fulfill()
+            database.load(
+                parent:users,
+                identifier:userId)
+            { (retrieved:FDatabaseUsersItem?) in
+                
+                firebaseUser = retrieved
+                loadExpectation.fulfill()
+            }
         }
         
         waitForExpectations(timeout:kWaitExpectation)
@@ -143,6 +149,20 @@ class TMSessionFirebase:XCTestCase
             XCTAssertNotNil(
                 firebaseUser?.identifier,
                 "user has no identifier")
+            
+            guard
+                
+                let firebaseUser:FDatabaseUsersItem = firebaseUser
+            
+            else
+            {
+                return
+            }
+            
+            XCTAssertGreaterThan(
+                firebaseUser.syncstamp,
+                user.syncstamp,
+                "user syncstamp not updated")
         }
     }
 }
