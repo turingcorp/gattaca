@@ -207,4 +207,58 @@ class TMSessionFirebase:XCTestCase
                 "user has no identifier")
         }
     }
+    
+    func testStatusUpdates()
+    {
+        let users:FDatabaseUsers = FDatabaseUsers()
+        let user:FDatabaseUsersItem = FDatabaseUsersItem(
+            users:users)
+        
+        guard
+            
+            let database:FDatabase = self.database,
+            let manager:DManager = self.manager,
+            let session:DSession = self.session,
+            let modelSession:MSession = self.modelSession,
+            let userJson:Any = user.json
+        
+        else
+        {
+            return
+        }
+        
+        let userId:String = database.create(
+            parent:users,
+            data:userJson)
+        user.identifier = userId
+        session.userId = userId
+        
+        let status:DSession.Status = DSession.Status.banned
+        let userStatus:FDatabaseUsersItemStatus = FDatabaseUsersItemStatus(
+            user:user)
+        userStatus.status = status
+        
+        database.update(model:userStatus)
+        
+        let syncExpectation:XCTestExpectation = expectation(
+            description:"sync firebase")
+        
+        modelSession.sync(
+            manager:manager,
+            session:session)
+        {
+            syncExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            let sessionStatus:DSession.Status = session.status
+            
+            XCTAssertEqual(
+                sessionStatus,
+                status,
+                "sync not updating stauts")
+        }
+    }
 }

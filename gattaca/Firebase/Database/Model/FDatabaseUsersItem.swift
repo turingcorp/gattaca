@@ -18,8 +18,8 @@ class FDatabaseUsersItem:FDatabaseProtocol
         {
             let json:[String:Any] = [
                 FDatabaseUsersItem.kKeyCreated:created,
-                FDatabaseUsersItem.kKeySyncstamp:created,
-                FDatabaseUsersItem.kKeyStatus:status,]
+                FDatabaseUsersItem.kKeySyncstamp:syncstamp,
+                FDatabaseUsersItem.kKeyStatus:status]
             
             return json
         }
