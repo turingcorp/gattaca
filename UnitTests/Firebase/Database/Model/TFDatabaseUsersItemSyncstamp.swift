@@ -31,4 +31,19 @@ class TFDatabaseUsersItemSyncstamp:XCTestCase
             syncstamp,
             "failed creating syncstamp")
     }
+    
+    func testIdentifier()
+    {
+        let users:FDatabaseUsers = FDatabaseUsers()
+        let user:FDatabaseUsersItem = FDatabaseUsersItem(
+            users:users)
+        user.identifier = kUserId
+        let syncstamp:FDatabaseUsersItemSyncstamp? = FDatabaseUsersItemSyncstamp(
+            user:user)
+        
+        XCTAssertEqual(
+            syncstamp?.identifier,
+            FDatabaseUsersItem.kKeySyncstamp,
+            "identifier doesn't match user property")
+    }
 }
