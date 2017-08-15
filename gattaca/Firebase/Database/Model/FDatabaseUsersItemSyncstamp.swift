@@ -4,7 +4,7 @@ class FDatabaseUsersItemSyncstamp:FDatabaseProtocol
 {
     var parent:FDatabaseProtocol?
     var identifier:String? = FDatabaseUsersItem.kKeySyncstamp
-    private let syncstamp:TimeInterval
+    var syncstamp:TimeInterval
     
     var json:Any?
     {
