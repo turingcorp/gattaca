@@ -52,7 +52,7 @@ class MSession
     private func sessionSynched(
         completion:@escaping(() -> ()))
     {
-        status = MSession.Status.sync
+        status = MSession.Status.loaded
         completion()
     }
     
