@@ -35,8 +35,7 @@ extension MSession
         manager.create
         { (session:DSession) in
             
-            let timestamp:TimeInterval = Date().timeIntervalSince1970
-            session.created = timestamp
+            session.initialValues()
             
             manager.save
             {
