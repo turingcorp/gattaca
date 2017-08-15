@@ -53,6 +53,7 @@ class TFDatabaseUsersItemSyncstamp:XCTestCase
         }
         
         user.identifier = kUserId
+        
         let syncstamp:FDatabaseUsersItemSyncstamp? = FDatabaseUsersItemSyncstamp(
             user:user)
         
@@ -73,6 +74,7 @@ class TFDatabaseUsersItemSyncstamp:XCTestCase
         }
         
         user.identifier = kUserId
+        
         let syncstamp:FDatabaseUsersItemSyncstamp? = FDatabaseUsersItemSyncstamp(
             user:user)
         
@@ -80,5 +82,50 @@ class TFDatabaseUsersItemSyncstamp:XCTestCase
             syncstamp?.identifier,
             FDatabaseUsersItem.kKeySyncstamp,
             "identifier doesn't match user property")
+    }
+    
+    func testJson()
+    {
+        guard
+            
+            let user:FDatabaseUsersItem = self.user
+            
+        else
+        {
+            return
+        }
+        
+        user.identifier = kUserId
+        
+        let timestamp:TimeInterval = Date().timeIntervalSince1970
+        
+        let syncstamp:FDatabaseUsersItemSyncstamp? = FDatabaseUsersItemSyncstamp(
+            user:user)
+        
+        let json:Any? = syncstamp?.json
+        
+        XCTAssertNotNil(
+            json,
+            "failed creating json")
+        
+        let time:TimeInterval? = json as? TimeInterval
+        
+        XCTAssertNotNil(
+            time,
+            "json is not a time interval")
+        
+        guard
+        
+            let syncTime:TimeInterval = time
+        
+        else
+        {
+            return
+        }
+        
+        XCTAssertGreaterThanOrEqual(
+            syncTime,
+            timestamp,
+            "syncstamp is not current date/time")
     }
 }
