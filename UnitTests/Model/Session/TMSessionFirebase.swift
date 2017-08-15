@@ -7,6 +7,7 @@ class TMSessionFirebase:XCTestCase
     private var manager:DManager?
     private var session:DSession?
     private var modelSession:MSession?
+    private let kUnknownId:String = "unknown_id"
     private let kWaitExpectation:TimeInterval = 15
     
     override func setUp()
@@ -163,6 +164,47 @@ class TMSessionFirebase:XCTestCase
                 firebaseUser.syncstamp,
                 user.syncstamp,
                 "user syncstamp not updated")
+        }
+    }
+    
+    func testLoadUnknownId()
+    {
+        var firebaseUser:FDatabaseUsersItem?
+        let users:FDatabaseUsers = FDatabaseUsers()
+        
+        guard
+            
+            let database:FDatabase = self.database,
+            let modelSession:MSession = self.modelSession
+            
+        else
+        {
+            return
+        }
+        
+        let loadExpectation:XCTestExpectation = expectation(
+            description:"load from firebase")
+        
+        modelSession.loadFromFirebase(
+            userId:kUnknownId,
+            database:database,
+            users:users)
+        { (userLoaded:FDatabaseUsersItem) in
+            
+            firebaseUser = userLoaded
+            loadExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            XCTAssertNotNil(
+                firebaseUser,
+                "failed loading unknown id")
+            
+            XCTAssertNotNil(
+                firebaseUser?.identifier,
+                "user has no identifier")
         }
     }
 }
