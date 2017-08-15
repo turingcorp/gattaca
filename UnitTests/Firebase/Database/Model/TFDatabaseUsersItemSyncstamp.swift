@@ -3,13 +3,36 @@ import XCTest
 
 class TFDatabaseUsersItemSyncstamp:XCTestCase
 {
+    private var user:FDatabaseUsersItem?
     private let kUserId:String = "lorem ipsum"
+    
+    override func setUp()
+    {
+        super.setUp()
+        
+        let users:FDatabaseUsers = FDatabaseUsers()
+        user = FDatabaseUsersItem(
+            users:users)
+    }
+    
+    func testUserIsCreated()
+    {
+        XCTAssertNotNil(
+            user,
+            "failed creating user")
+    }
     
     func testInitNoIdentifier()
     {
-        let users:FDatabaseUsers = FDatabaseUsers()
-        let user:FDatabaseUsersItem = FDatabaseUsersItem(
-            users:users)
+        guard
+            
+            let user:FDatabaseUsersItem = self.user
+        
+        else
+        {
+            return
+        }
+        
         let syncstamp:FDatabaseUsersItemSyncstamp? = FDatabaseUsersItemSyncstamp(
             user:user)
         
@@ -20,9 +43,15 @@ class TFDatabaseUsersItemSyncstamp:XCTestCase
     
     func testInitIdentifier()
     {
-        let users:FDatabaseUsers = FDatabaseUsers()
-        let user:FDatabaseUsersItem = FDatabaseUsersItem(
-            users:users)
+        guard
+            
+            let user:FDatabaseUsersItem = self.user
+            
+        else
+        {
+            return
+        }
+        
         user.identifier = kUserId
         let syncstamp:FDatabaseUsersItemSyncstamp? = FDatabaseUsersItemSyncstamp(
             user:user)
@@ -34,9 +63,15 @@ class TFDatabaseUsersItemSyncstamp:XCTestCase
     
     func testIdentifier()
     {
-        let users:FDatabaseUsers = FDatabaseUsers()
-        let user:FDatabaseUsersItem = FDatabaseUsersItem(
-            users:users)
+        guard
+            
+            let user:FDatabaseUsersItem = self.user
+            
+        else
+        {
+            return
+        }
+        
         user.identifier = kUserId
         let syncstamp:FDatabaseUsersItemSyncstamp? = FDatabaseUsersItemSyncstamp(
             user:user)
