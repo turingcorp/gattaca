@@ -13,6 +13,7 @@
 		DA25DF4E1F4359DA00765DCA /* TFDatabaseUsersItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF4D1F4359DA00765DCA /* TFDatabaseUsersItem.swift */; };
 		DA25DF501F435EB200765DCA /* FDatabaseUsersItemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF4F1F435EB200765DCA /* FDatabaseUsersItemStatus.swift */; };
 		DA25DF521F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF511F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift */; };
+		DA25DF541F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF531F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift */; };
 		DA32444D1F42B50A00D40F6E /* MSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA393A331F434CCF005BB484 /* MHomeStrategySync.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA393A321F434CCF005BB484 /* MHomeStrategySync.swift */; };
@@ -163,6 +164,7 @@
 		DA25DF4D1F4359DA00765DCA /* TFDatabaseUsersItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseUsersItem.swift; sourceTree = "<group>"; };
 		DA25DF4F1F435EB200765DCA /* FDatabaseUsersItemStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseUsersItemStatus.swift; sourceTree = "<group>"; };
 		DA25DF511F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseUsersItemSyncstamp.swift; sourceTree = "<group>"; };
+		DA25DF531F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseUsersItemStatus.swift; sourceTree = "<group>"; };
 		DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionFirebase.swift; sourceTree = "<group>"; };
 		DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
 		DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDownloadGif.swift; sourceTree = "<group>"; };
@@ -823,6 +825,7 @@
 				DABEF93C1F43447800420DF0 /* TFDatabaseUsers.swift */,
 				DA25DF4D1F4359DA00765DCA /* TFDatabaseUsersItem.swift */,
 				DA25DF511F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift */,
+				DA25DF531F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1326,6 +1329,7 @@
 				DABEF93B1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift in Sources */,
 				DA25DF4E1F4359DA00765DCA /* TFDatabaseUsersItem.swift in Sources */,
 				DABEF93D1F43447800420DF0 /* TFDatabaseUsers.swift in Sources */,
+				DA25DF541F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift in Sources */,
 				DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */,
 				DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */,
 				DA90E0F61F40BA7500A37538 /* TMSessionLoader.swift in Sources */,
