@@ -25,14 +25,13 @@ class FDatabaseUsersItem:FDatabaseProtocol
         }
     }
     
-    init(users:FDatabaseUsers, session:DSession)
+    init(users:FDatabaseUsers)
     {
-        parent = users
-        status = session.rawStatus
-        
         let currentDate:TimeInterval = Date().timeIntervalSince1970
         created = currentDate
         syncstamp = currentDate
+        status = DSession.Status.active.rawValue
+        parent = users
     }
     
     required init?(json:Any)

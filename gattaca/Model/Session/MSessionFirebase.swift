@@ -9,46 +9,59 @@ extension MSession
         session:DSession,
         completion:@escaping(() -> ()))
     {
+        let userId:String? = session.userId
         let database:FDatabase = FDatabase(bundle:nil)
         let users:FDatabaseUsers = FDatabaseUsers()
         
-        guard
+        sync(
+            userId:userId,
+            database:database,
+            users:users)
+        { (user:FDatabaseUsersItem) in
             
-            let userId:String = session.userId
+            session.userId = user.identifier
+            session.rawStatus = user.status
             
+            manager.save
+            {
+                completion()
+            }
+        }
+    }
+    
+    func sync(
+        userId:String?,
+        database:FDatabase,
+        users:FDatabaseUsers,
+        completion:@escaping((FDatabaseUsersItem) -> ()))
+    {
+        if let userId:String = userId
+        {
+            loadFromFirebase(
+                userId:userId,
+                database:database,
+                users:users,
+                completion:completion)
+        }
         else
         {
             createInFirebase(
                 database:database,
                 users:users,
-                manager:manager,
-                session:session,
                 completion:completion)
-            
-            return
         }
-        
-        loadFromFirebase(
-            userId:userId,
-            database:database,
-            users:users,
-            manager:manager,
-            session:session,
-            completion:completion)
     }
     
     func loadFromFirebase(
         userId:String,
         database:FDatabase,
         users:FDatabaseUsers,
-        manager:DManager,
-        session:DSession,
-        completion:@escaping(() -> ()))
+        completion:@escaping((FDatabaseUsersItem) -> ()))
     {
         database.load(
             parent:users,
             identifier:userId)
-        { (user:FDatabaseUsersItem?) in
+        { [weak self] (user:FDatabaseUsersItem?) in
             
             guard
                 
@@ -59,41 +72,32 @@ extension MSession
                 return
             }
             
-            session.rawStatus = user.status
-            
-            manager.save
-            { [weak self] in
-                
-                self?.updateFirebase(
-                    database:database,
-                    user:user,
-                    completion:completion)
-            }
+            self?.updateFirebase(
+                database:database,
+                user:user,
+                completion:completion)
         }
     }
     
     func updateFirebase(
         database:FDatabase,
         user:FDatabaseUsersItem,
-        completion:@escaping(() -> ()))
+        completion:@escaping((FDatabaseUsersItem) -> ()))
     {
         let syncstamp:FDatabaseUsersItemSyncstamp = FDatabaseUsersItemSyncstamp(
             user:user)
         database.update(model:syncstamp)
         
-        completion()
+        completion(user)
     }
     
     func createInFirebase(
         database:FDatabase,
         users:FDatabaseUsers,
-        manager:DManager,
-        session:DSession,
-        completion:@escaping(() -> ()))
+        completion:@escaping((FDatabaseUsersItem) -> ()))
     {
         let user:FDatabaseUsersItem = FDatabaseUsersItem(
-            users:users,
-            session:session)
+            users:users)
         
         guard
             
@@ -107,11 +111,8 @@ extension MSession
         let userId:String = database.create(
             parent:users,
             data:userJson)
-        session.userId = userId
+        user.identifier = userId
         
-        manager.save
-        {
-            completion()
-        }
+        completion(user)
     }
 }
