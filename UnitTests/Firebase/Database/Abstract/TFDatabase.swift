@@ -3,7 +3,7 @@ import XCTest
 
 class TFDatabase:XCTestCase
 {
-    private var database:FDatabase?
+    private var firebase:FDatabase?
     private let kWaitExpectation:TimeInterval = 15
     private let kUserSyncstamp:TimeInterval = 9999
     
@@ -11,7 +11,7 @@ class TFDatabase:XCTestCase
     {
         super.setUp()
         
-        database = FDatabase()
+        firebase = FDatabase()
     }
     
     func testCreate()
@@ -29,7 +29,7 @@ class TFDatabase:XCTestCase
             return
         }
         
-        let userId:String? = database?.create(
+        let userId:String? = firebase?.create(
             parent:users,
             data:data)
         
@@ -54,14 +54,14 @@ class TFDatabase:XCTestCase
             return
         }
         
-        let userId:String? = database?.create(
+        let userId:String? = firebase?.create(
             parent:users,
             data:data)
         
         let loadExpectation:XCTestExpectation = expectation(
             description:"load model")
         
-        database?.load(
+        firebase?.load(
             parent:users,
             identifier:userId)
         { (loadedUser:FDatabaseUsersItem?) in
@@ -99,7 +99,7 @@ class TFDatabase:XCTestCase
             return
         }
         
-        let userId:String? = database?.create(
+        let userId:String? = firebase?.create(
             parent:users,
             data:data)
         user.identifier = userId
@@ -116,12 +116,12 @@ class TFDatabase:XCTestCase
         
         syncstamp.syncstamp = kUserSyncstamp
         
-        database?.update(model:syncstamp)
+        firebase?.update(model:syncstamp)
         
         let loadExpectation:XCTestExpectation = expectation(
             description:"load model after update")
         
-        database?.load(
+        firebase?.load(
             parent:users,
             identifier:userId)
         { (loadedUser:FDatabaseUsersItem?) in
