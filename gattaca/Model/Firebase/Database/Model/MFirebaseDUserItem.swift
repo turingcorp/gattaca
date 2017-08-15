@@ -37,6 +37,23 @@ class MFirebaseDUserItem:MFirebaseDProtocol
     
     required init?(json:Any)
     {
-        return nil
+        guard
+        
+            let jsonMap:[String:Any] = json as? [String:Any],
+            let created:TimeInterval = jsonMap[
+                MFirebaseDUserItem.kKeyCreated] as? TimeInterval,
+            let syncstamp:TimeInterval = jsonMap[
+                MFirebaseDUserItem.kKeySyncstamp] as? TimeInterval,
+            let status:Int16 = jsonMap[
+                MFirebaseDUserItem.kKeyStatus] as? Int16
+        
+        else
+        {
+            return nil
+        }
+        
+        self.created = created
+        self.syncstamp = syncstamp
+        self.status = status
     }
 }

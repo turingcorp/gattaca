@@ -48,28 +48,41 @@ extension MSession
         database.load(
             parent:userList,
             identifier:userId)
-        { (model:MFirebaseDUserItem?) in
+        { (user:MFirebaseDUserItem?) in
             
             guard
                 
-                let model:MFirebaseDUserItem = model
+                let user:MFirebaseDUserItem = user
                 
             else
             {
                 return
             }
             
-            session.rawStatus = model.status
+            session.rawStatus = user.status
             
             manager.save
-            {
-                    
+            { [weak self] in
+                
+                self?.updateFirebase(
+                    database:database,
+                    user:user,
+                    completion:completion)
             }
         }
     }
     
-//    func updateFirebase(
-//        userId:String,)
+    func updateFirebase(
+        database:MFirebaseDManager,
+        user:MFirebaseDUserItem,
+        completion:@escaping(() -> ()))
+    {
+        let syncstamp:MFirebaseDUserItemSyncstamp = MFirebaseDUserItemSyncstamp(
+            parent:user)
+        database.update(model:syncstamp)
+        
+        completion()
+    }
     
     func createInFirebase(
         database:MFirebaseDManager,

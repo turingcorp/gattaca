@@ -54,6 +54,8 @@ class MSession
     {
         status = MSession.Status.loaded
         completion()
+        
+        print("done")
     }
     
     //MARK: internal
