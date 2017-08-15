@@ -1,8 +1,8 @@
 import Foundation
 
-class MFirebaseDUser:MFirebaseDProtocol
+class FDatabaseUsers:FDatabaseProtocol
 {
-    var identifier:String? = "user"
+    var identifier:String? = "users"
     
     init()
     {
