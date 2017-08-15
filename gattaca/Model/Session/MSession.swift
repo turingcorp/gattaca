@@ -2,7 +2,7 @@ import Foundation
 
 class MSession
 {
-    private(set) var status:MSession.Status
+    var status:MSession.Status
     private(set) var session:DSession?
     
     init()
