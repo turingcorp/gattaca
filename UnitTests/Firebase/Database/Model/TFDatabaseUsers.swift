@@ -21,4 +21,15 @@ class TFDatabaseUsers:XCTestCase
             users?.identifier,
             "identifier is not set")
     }
+    
+    func testParent()
+    {
+        XCTAssertNotNil(
+            users,
+            "failed to create users")
+        
+        XCTAssertNil(
+            users?.parent,
+            "users should not have a parent")
+    }
 }
