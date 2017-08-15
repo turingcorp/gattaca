@@ -85,4 +85,22 @@ class TFDatabaseUsersItem:XCTestCase
             syncstamp,
             "error setting syncstamp")
     }
+    
+    func testStatus()
+    {
+        guard
+        
+            let rawStatus:Int16 = user?.status
+        
+        else
+        {
+            return
+        }
+        
+        let status:DSession.Status? = DSession.Status(rawValue:rawStatus)
+        
+        XCTAssertNotNil(
+            status,
+            "invalid status")
+    }
 }
