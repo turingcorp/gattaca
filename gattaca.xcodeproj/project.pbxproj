@@ -16,6 +16,7 @@
 		DA25DF541F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF531F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift */; };
 		DA25DF5C1F43836800765DCA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF5A1F43836700765DCA /* Database.swift */; };
 		DA25DF5D1F43836800765DCA /* DatabaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF5B1F43836700765DCA /* DatabaseFactory.swift */; };
+		DA25DF601F43879300765DCA /* TDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF5F1F43879300765DCA /* TDatabase.swift */; };
 		DA32444D1F42B50A00D40F6E /* MSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA393A331F434CCF005BB484 /* MHomeStrategySync.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA393A321F434CCF005BB484 /* MHomeStrategySync.swift */; };
@@ -74,7 +75,6 @@
 		DA68F1C51F38E5D500C13634 /* VSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1921F38E5D500C13634 /* VSpinner.swift */; };
 		DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1931F38E5D500C13634 /* VToast.swift */; };
 		DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1951F38E5D500C13634 /* VHome.swift */; };
-		DA746A361F41AEDF000473A1 /* TDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA746A351F41AEDF000473A1 /* TDManager.swift */; };
 		DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */; };
 		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
 		DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */; };
@@ -167,6 +167,7 @@
 		DA25DF531F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseUsersItemStatus.swift; sourceTree = "<group>"; };
 		DA25DF5A1F43836700765DCA /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		DA25DF5B1F43836700765DCA /* DatabaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseFactory.swift; sourceTree = "<group>"; };
+		DA25DF5F1F43879300765DCA /* TDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDatabase.swift; sourceTree = "<group>"; };
 		DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionFirebase.swift; sourceTree = "<group>"; };
 		DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
 		DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDownloadGif.swift; sourceTree = "<group>"; };
@@ -228,7 +229,6 @@
 		DA68F1921F38E5D500C13634 /* VSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSpinner.swift; sourceTree = "<group>"; };
 		DA68F1931F38E5D500C13634 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
 		DA68F1951F38E5D500C13634 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
-		DA746A351F41AEDF000473A1 /* TDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDManager.swift; sourceTree = "<group>"; };
 		DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategy.swift; sourceTree = "<group>"; };
 		DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyFactory.swift; sourceTree = "<group>"; };
 		DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsShare.swift; sourceTree = "<group>"; };
@@ -351,6 +351,14 @@
 			children = (
 				DA25DF5A1F43836700765DCA /* Database.swift */,
 				DA25DF5B1F43836700765DCA /* DatabaseFactory.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		DA25DF5E1F43878800765DCA /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				DA25DF5F1F43879300765DCA /* TDatabase.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -655,17 +663,9 @@
 		DA746A331F41AED1000473A1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DA746A341F41AED1000473A1 /* Manager */,
+				DA25DF5E1F43878800765DCA /* Abstract */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		DA746A341F41AED1000473A1 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				DA746A351F41AEDF000473A1 /* TDManager.swift */,
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		DA7CE8241F3F43ED0078A26B /* Strategy */ = {
@@ -1329,11 +1329,11 @@
 				DABEF93B1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift in Sources */,
 				DA25DF4E1F4359DA00765DCA /* TFDatabaseUsersItem.swift in Sources */,
 				DABEF93D1F43447800420DF0 /* TFDatabaseUsers.swift in Sources */,
+				DA25DF601F43879300765DCA /* TDatabase.swift in Sources */,
 				DA25DF541F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift in Sources */,
 				DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */,
 				DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */,
 				DA90E0F61F40BA7500A37538 /* TMSessionLoader.swift in Sources */,
-				DA746A361F41AEDF000473A1 /* TDManager.swift in Sources */,
 				DA90E0BE1F40991D00A37538 /* TCHome.swift in Sources */,
 				DA90E0F41F40B79E00A37538 /* TMSession.swift in Sources */,
 				DA25DF521F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift in Sources */,

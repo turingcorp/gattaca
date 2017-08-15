@@ -1,39 +1,39 @@
 import XCTest
 @testable import gattaca
 
-class TDManager:XCTestCase
+class TDatabase:XCTestCase
 {
-    private var manager:DManager?
+    private var coreData:Database?
     private let kWaitExpectation:TimeInterval = 3
     
     override func setUp()
     {
         super.setUp()
         
-        let currentBundle:Bundle = Bundle(for:TDManager.self)
-        manager = DManager(bundle:currentBundle)
+        let currentBundle:Bundle = Bundle(for:TDatabase.self)
+        coreData = Database(bundle:currentBundle)
     }
     
     func testInit()
     {
         XCTAssertNotNil(
-            manager,
+            coreData,
             "failed to instance data manager")
     }
     
     func testDifferentCoordinators()
     {
         guard
-        
-            let managerProduction:DManager = DManager(bundle:nil)
-        
+            
+            let coreDataProduction:Database = Database(bundle:nil)
+            
         else
         {
             return
         }
         
-        let pathProduction:String? = managerProduction.managedObjectContext.persistentStoreCoordinator?.persistentStores.first?.url?.path
-        let pathTests:String? = manager?.managedObjectContext.persistentStoreCoordinator?.persistentStores.first?.url?.path
+        let pathProduction:String? = coreDataProduction.managedObjectContext.persistentStoreCoordinator?.persistentStores.first?.url?.path
+        let pathTests:String? = coreData?.managedObjectContext.persistentStoreCoordinator?.persistentStores.first?.url?.path
         
         XCTAssertNotNil(
             pathProduction,
@@ -54,7 +54,7 @@ class TDManager:XCTestCase
         let createExpectation:XCTestExpectation = expectation(
             description:"core data create model")
         
-        manager?.create
+        coreData?.create
         { (data:DSession) in
             
             createExpectation.fulfill()
@@ -70,12 +70,12 @@ class TDManager:XCTestCase
         let saveExpectation:XCTestExpectation = expectation(
             description:"core data save")
         
-        manager?.create
+        coreData?.create
         { [weak self] (session:DSession) in
             
             session.initialValues()
             
-            self?.manager?.save
+            self?.coreData?.save
             {
                 saveExpectation.fulfill()
             }
@@ -86,8 +86,8 @@ class TDManager:XCTestCase
             
             guard
                 
-                let hasChanges:Bool = self?.manager?.managedObjectContext.hasChanges
-            
+                let hasChanges:Bool = self?.coreData?.managedObjectContext.hasChanges
+                
             else
             {
                 return
@@ -104,7 +104,7 @@ class TDManager:XCTestCase
         let fetchExpectation:XCTestExpectation = expectation(
             description:"core data fetch model")
         
-        manager?.fetch
+        coreData?.fetch
         { (session:[DSession]) in
             
             fetchExpectation.fulfill()
@@ -120,13 +120,13 @@ class TDManager:XCTestCase
         let deleteExpectation:XCTestExpectation = expectation(
             description:"core data delete model")
         
-        manager?.fetch
+        coreData?.fetch
         { [weak self] (data:[DSession]) in
             
             guard
                 
                 let session:DSession = data.first
-            
+                
             else
             {
                 deleteExpectation.fulfill()
@@ -134,10 +134,10 @@ class TDManager:XCTestCase
                 return
             }
             
-            self?.manager?.delete(data:session)
+            self?.coreData?.delete(data:session)
             { [weak self] in
                 
-                self?.manager?.save
+                self?.coreData?.save
                 {
                     deleteExpectation.fulfill()
                 }
@@ -158,15 +158,15 @@ class TDManager:XCTestCase
         deleteAllModels
         { [weak self] in
             
-            self?.manager?.create
+            self?.coreData?.create
             { [weak self] (session:DSession) in
                 
                 session.initialValues()
                 
-                self?.manager?.save
+                self?.coreData?.save
                 { [weak self] in
                     
-                    self?.manager?.fetch
+                    self?.coreData?.fetch
                     { (data:[DSession]) in
                         
                         dataFetched = data
@@ -197,33 +197,33 @@ class TDManager:XCTestCase
         deleteAllModels
         { [weak self] in
             
-            self?.manager?.create
+            self?.coreData?.create
             { [weak self] (session:DSession) in
                 
                 session.initialValues()
                 
-                self?.manager?.save
+                self?.coreData?.save
                 { [weak self] in
                     
-                    self?.manager?.fetch
+                    self?.coreData?.fetch
                     { [weak self] (data:[DSession]) in
                         
                         guard
                             
                             let created:DSession = data.first
-                        
+                            
                         else
                         {
                             return
                         }
                         
-                        self?.manager?.delete(data:created)
+                        self?.coreData?.delete(data:created)
                         { [weak self] in
                             
-                            self?.manager?.save
+                            self?.coreData?.save
                             { [weak self] in
                                 
-                                self?.manager?.fetch
+                                self?.coreData?.fetch
                                 { (data:[DSession]) in
                                     
                                     dataFetched = data
@@ -252,7 +252,7 @@ class TDManager:XCTestCase
     
     private func deleteAllModels(completion:@escaping(() -> ()))
     {
-        manager?.fetch
+        coreData?.fetch
         { [weak self] (data:[DSession]) in
             
             for dataItem:DSession in data
@@ -260,7 +260,7 @@ class TDManager:XCTestCase
                 self?.manager?.delete(data:dataItem, completion:nil)
             }
             
-            self?.manager?.save
+            self?.coreData?.save
             {
                 completion()
             }
