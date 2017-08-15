@@ -29,6 +29,18 @@ extension MSession
     
     //MARK: internal
     
+    func updateSyncstamp(
+        database:FDatabase,
+        user:FDatabaseUsersItem,
+        completion:@escaping((FDatabaseUsersItem) -> ()))
+    {
+        let syncstamp:FDatabaseUsersItemSyncstamp = FDatabaseUsersItemSyncstamp(
+            user:user)
+        database.update(model:syncstamp)
+        
+        completion(user)
+    }
+    
     func sync(
         manager:DManager,
         session:DSession,
@@ -74,23 +86,11 @@ extension MSession
                 return
             }
             
-            self?.updateFirebase(
+            self?.updateSyncstamp(
                 database:database,
                 user:user,
                 completion:completion)
         }
-    }
-    
-    func updateFirebase(
-        database:FDatabase,
-        user:FDatabaseUsersItem,
-        completion:@escaping((FDatabaseUsersItem) -> ()))
-    {
-        let syncstamp:FDatabaseUsersItemSyncstamp = FDatabaseUsersItemSyncstamp(
-            user:user)
-        database.update(model:syncstamp)
-        
-        completion(user)
     }
     
     func createInFirebase(
