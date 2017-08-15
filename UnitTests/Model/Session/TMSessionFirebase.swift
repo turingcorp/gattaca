@@ -16,7 +16,7 @@ class TMSessionFirebase:XCTestCase
         let currentBundle:Bundle = Bundle(for:TDManager.self)
         
         modelSession = MSession()
-        database = FDatabase(bundle:nil)
+        database = FDatabase()
         manager = DManager(bundle:currentBundle)
         manager?.create
         { [weak self] (session:DSession) in
