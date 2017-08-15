@@ -1,7 +1,7 @@
 import Foundation
 import FirebaseDatabase
 
-extension MFirebaseDatabase
+extension FDatabase
 {
     func modelFromSnapshot<T:MFirebaseDProtocol>(
         snapshot:DataSnapshot,

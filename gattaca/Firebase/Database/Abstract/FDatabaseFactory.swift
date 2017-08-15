@@ -1,6 +1,6 @@
 import Foundation
 
-extension MFirebaseDatabase
+extension FDatabase
 {
     private static let kSlash:String = "/"
     private static let kDot:String = "."
