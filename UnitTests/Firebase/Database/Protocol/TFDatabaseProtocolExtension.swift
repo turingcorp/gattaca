@@ -12,11 +12,11 @@ class TFDatabaseProtocolExtension:XCTestCase
         let user:FDatabaseUsersItem = FDatabaseUsersItem(
             users:users)
         user.identifier = kUserId
-        let syncstamp:FDatabaseUsersItemSyncstamp = FDatabaseUsersItemSyncstamp(
-            user:user)
         
         guard
             
+            let syncstamp:FDatabaseUsersItemSyncstamp = FDatabaseUsersItemSyncstamp(
+                user:user),
             let usersIdentifier:String = users.identifier,
             let syncstampIdentifier:String = syncstamp.identifier
         

@@ -32,8 +32,16 @@ extension MSession
         user:FDatabaseUsersItem,
         completion:@escaping((FDatabaseUsersItem) -> ()))
     {
-        let syncstamp:FDatabaseUsersItemSyncstamp = FDatabaseUsersItemSyncstamp(
-            user:user)
+        guard
+            
+            let syncstamp:FDatabaseUsersItemSyncstamp = FDatabaseUsersItemSyncstamp(
+                user:user)
+        
+        else
+        {
+            return
+        }
+        
         database.update(model:syncstamp)
         
         completion(user)

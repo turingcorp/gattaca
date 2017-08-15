@@ -234,8 +234,17 @@ class TMSessionFirebase:XCTestCase
         session.userId = userId
         
         let status:DSession.Status = DSession.Status.banned
-        let userStatus:FDatabaseUsersItemStatus = FDatabaseUsersItemStatus(
-            user:user)
+        
+        guard
+            
+            let userStatus:FDatabaseUsersItemStatus = FDatabaseUsersItemStatus(
+                user:user)
+        
+        else
+        {
+            return
+        }
+        
         userStatus.status = status
         
         database.update(model:userStatus)

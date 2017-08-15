@@ -103,8 +103,17 @@ class TFDatabase:XCTestCase
             parent:users,
             data:data)
         user.identifier = userId
-        let syncstamp:FDatabaseUsersItemSyncstamp = FDatabaseUsersItemSyncstamp(
-            user:user)
+        
+        guard
+            
+            let syncstamp:FDatabaseUsersItemSyncstamp = FDatabaseUsersItemSyncstamp(
+                user:user)
+        
+        else
+        {
+            return
+        }
+        
         syncstamp.syncstamp = kUserSyncstamp
         
         database?.update(model:syncstamp)
