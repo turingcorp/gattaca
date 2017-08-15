@@ -10,6 +10,7 @@
 		0FEFAB51E60F2A75275A558B /* Pods_gattaca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EB7DE9DB31C7535E0A58A4 /* Pods_gattaca.framework */; };
 		2C548B756EEBFFB28D4F0DBC /* Pods_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4604CAED66BF3D4B1BB9803B /* Pods_UnitTests.framework */; };
 		6DF3BEAD35C92AE40704A8EC /* Pods_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE6B168EBA58734F1065B66 /* Pods_UITests.framework */; };
+		DA32444D1F42B50A00D40F6E /* MSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA4DA3701F41E5510047D5D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4DA36F1F41E5510047D5D7 /* GoogleService-Info.plist */; };
 		DA4DA3781F41E90A0047D5D7 /* MFirebaseDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA3771F41E90A0047D5D7 /* MFirebaseDManager.swift */; };
@@ -149,6 +150,7 @@
 		A4EB7DE9DB31C7535E0A58A4 /* Pods_gattaca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gattaca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52F5DCDBF5A906BE506F3DB /* Pods-UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITests/Pods-UITests.release.xcconfig"; sourceTree = "<group>"; };
 		A57B77703F4EED7FCACC9E7F /* Pods-UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITests/Pods-UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionFirebase.swift; sourceTree = "<group>"; };
 		DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
 		DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDownloadGif.swift; sourceTree = "<group>"; };
 		DA39E77A1F38E3F90001CA28 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -741,6 +743,7 @@
 				DA90E0DC1F40B75800A37538 /* MSession.swift */,
 				DA90E0DD1F40B75800A37538 /* MSessionLoader.swift */,
 				DA90E0DE1F40B75800A37538 /* MSessionStatus.swift */,
+				DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -1149,6 +1152,7 @@
 				DA90E0E31F40B75800A37538 /* MGifStrategyDownload.swift in Sources */,
 				DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */,
 				DA68F1B91F38E5D500C13634 /* ViewParent.swift in Sources */,
+				DA32444D1F42B50A00D40F6E /* MSessionFirebase.swift in Sources */,
 				DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */,
 				DA90E0C21F40AE4A00A37538 /* MHomeStrategyNew.swift in Sources */,
 				DA68F1C21F38E5D500C13634 /* VPushBackground.swift in Sources */,
