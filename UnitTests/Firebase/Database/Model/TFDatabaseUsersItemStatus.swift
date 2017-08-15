@@ -119,4 +119,33 @@ class TFDatabaseUsersItemStatus:XCTestCase
             statusBanned.rawValue,
             "status doesn't match set value")
     }
+    
+    func testValueChange()
+    {
+        guard
+            
+            let user:FDatabaseUsersItem = self.user
+            
+        else
+        {
+            return
+        }
+        
+        user.identifier = kUserId
+        
+        let testStatus:DSession.Status = DSession.Status.banned
+        let status:FDatabaseUsersItemStatus? = FDatabaseUsersItemStatus(
+            user:user)
+        status?.status = testStatus
+        
+        XCTAssertEqual(
+            status?.status,
+            testStatus,
+            "failed assigning status")
+        
+        XCTAssertEqual(
+            status?.rawStatus,
+            testStatus.rawValue,
+            "failed assigning status raw value")
+    }
 }
