@@ -60,6 +60,11 @@ class MFirebaseDManager
             var model:T? = T(
                 json:json)
             
+            if let parent:MFirebaseDProtocol = parent
+            {
+                model?.parent = parent
+            }
+            
             if let identifier:String = identifier
             {
                 model?.identifier = identifier

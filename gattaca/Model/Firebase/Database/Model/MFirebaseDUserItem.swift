@@ -7,10 +7,10 @@ class MFirebaseDUserItem:MFirebaseDProtocol
     static let kKeyStatus:String = "status"
     
     var identifier:String?
+    var parent:MFirebaseDProtocol?
     let created:TimeInterval
     let syncstamp:TimeInterval
     let status:Int16
-    private(set) weak var parent:MFirebaseDUser?
     
     var json:Any?
     {

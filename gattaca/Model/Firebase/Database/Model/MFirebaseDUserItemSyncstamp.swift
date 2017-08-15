@@ -2,8 +2,8 @@ import Foundation
 
 class MFirebaseDUserItemSyncstamp:MFirebaseDProtocol
 {
+    var parent:MFirebaseDProtocol?
     var identifier:String? = MFirebaseDUserItem.kKeySyncstamp
-    private(set) weak var parent:MFirebaseDUserItem?
     private let syncstamp:TimeInterval
     
     var json:Any?

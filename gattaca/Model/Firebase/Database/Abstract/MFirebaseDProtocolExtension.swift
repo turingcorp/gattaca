@@ -8,6 +8,10 @@ extension MFirebaseDProtocol
         {
             return nil
         }
+        
+        set
+        {
+        }
     }
     
     var path:String
@@ -20,7 +24,6 @@ extension MFirebaseDProtocol
             {
                 let parentPath:String = parent.path
                 modelPath.append(parentPath)
-                
             }
             
             if let identifier:String = self.identifier
