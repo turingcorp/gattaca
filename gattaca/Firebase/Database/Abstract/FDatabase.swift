@@ -7,7 +7,7 @@ class FDatabase
     
     init()
     {
-        reference = Database.database().reference()
+        reference = FirebaseDatabase.Database.database().reference()
     }
     
     //MARK: internal

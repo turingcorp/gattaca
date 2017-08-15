@@ -16,32 +16,32 @@ class MSession
     {
         guard
             
-            let manager:DManager = DManager(bundle:nil)
+            let coreData:Database = Database(bundle:nil)
             
         else
         {
             return
         }
         
-        load(manager:manager)
+        load(coreData:coreData)
         { [weak self] (session:DSession) in
 
             self?.sessionLoaded(
-                manager:manager,
+                coreData:coreData,
                 session:session,
                 completion:completion)
         }
     }
     
     private func sessionLoaded(
-        manager:DManager,
+        coreData:Database,
         session:DSession,
         completion:@escaping(() -> ()))
     {
         self.session = session
         status = MSession.Status.sync
         
-        sync(manager:manager,
+        sync(coreData:coreData,
              session:session)
         { [weak self] in
             

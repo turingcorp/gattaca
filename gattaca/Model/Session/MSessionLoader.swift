@@ -5,10 +5,10 @@ extension MSession
     //MARK: internal
     
     func load(
-        manager:DManager,
+        coreData:Database,
         completion:@escaping((DSession) -> ()))
     {
-        manager.fetch
+        coreData.fetch
         { [weak self] (data:[DSession]) in
             
             guard
@@ -18,7 +18,7 @@ extension MSession
             else
             {
                 self?.create(
-                    manager:manager,
+                    coreData:coreData,
                     completion:completion)
                 
                 return
@@ -29,15 +29,15 @@ extension MSession
     }
     
     func create(
-        manager:DManager,
+        coreData:Database,
         completion:@escaping((DSession) -> ()))
     {
-        manager.create
+        coreData.create
         { (session:DSession) in
             
             session.initialValues()
             
-            manager.save
+            coreData.save
             {
                 completion(session)
             }

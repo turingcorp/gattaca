@@ -50,7 +50,7 @@ extension MSession
     //MARK: internal
     
     func sync(
-        manager:DManager,
+        coreData:Database,
         session:DSession,
         completion:@escaping(() -> ()))
     {
@@ -67,7 +67,7 @@ extension MSession
             session.userId = user.identifier
             session.rawStatus = user.status
             
-            manager.save
+            coreData.save
             {
                 completion()
             }
