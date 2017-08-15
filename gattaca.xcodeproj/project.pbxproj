@@ -99,6 +99,7 @@
 		DA90E0F41F40B79E00A37538 /* TMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0F31F40B79E00A37538 /* TMSession.swift */; };
 		DA90E0F61F40BA7500A37538 /* TMSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0F51F40BA7500A37538 /* TMSessionLoader.swift */; };
 		DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */; };
+		DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF9381F430B7B00420DF0 /* TFDatabase.swift */; };
 		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
 		DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215811F39372D00E281DB /* MGiphyRandom.swift */; };
 		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
@@ -247,6 +248,7 @@
 		DA90E0F31F40B79E00A37538 /* TMSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSession.swift; sourceTree = "<group>"; };
 		DA90E0F51F40BA7500A37538 /* TMSessionLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionLoader.swift; sourceTree = "<group>"; };
 		DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionFirebase.swift; sourceTree = "<group>"; };
+		DABEF9381F430B7B00420DF0 /* TFDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabase.swift; sourceTree = "<group>"; };
 		DAC2157F1F3936FA00E281DB /* MGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphy.swift; sourceTree = "<group>"; };
 		DAC215811F39372D00E281DB /* MGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyRandom.swift; sourceTree = "<group>"; };
 		DAC215841F39378800E281DB /* MRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRequest.swift; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 		DA7CE8421F3F53DB0078A26B /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				DABEF9331F430B5D00420DF0 /* Firebase */,
 				DA746A321F41AED1000473A1 /* Support */,
 				DA90E0BA1F40990B00A37538 /* Controller */,
 				DA90E0BC1F40990B00A37538 /* Model */,
@@ -766,6 +769,46 @@
 				DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		DABEF9331F430B5D00420DF0 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				DABEF9341F430B5D00420DF0 /* Database */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		DABEF9341F430B5D00420DF0 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DABEF9351F430B5D00420DF0 /* Abstract */,
+				DABEF9361F430B5D00420DF0 /* Model */,
+				DABEF9371F430B5D00420DF0 /* Protocol */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		DABEF9351F430B5D00420DF0 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				DABEF9381F430B7B00420DF0 /* TFDatabase.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		DABEF9361F430B5D00420DF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DABEF9371F430B5D00420DF0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		DAC2157E1F3936EE00E281DB /* Giphy */ = {
@@ -1198,6 +1241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */,
 				DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */,
 				DA90E0F61F40BA7500A37538 /* TMSessionLoader.swift in Sources */,
 				DA746A361F41AEDF000473A1 /* TDManager.swift in Sources */,
