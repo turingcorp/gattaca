@@ -14,7 +14,6 @@
 		DA32444F1F42B56700D40F6E /* MFirebaseDUserItemSyncstamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32444E1F42B56700D40F6E /* MFirebaseDUserItemSyncstamp.swift */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA4DA3701F41E5510047D5D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4DA36F1F41E5510047D5D7 /* GoogleService-Info.plist */; };
-		DA4DA3801F41F7590047D5D7 /* MFirebaseDUserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA37F1F41F7590047D5D7 /* MFirebaseDUserItem.swift */; };
 		DA4DA38A1F420B070047D5D7 /* DSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA3891F420B070047D5D7 /* DSession.swift */; };
 		DA4DA38C1F420B3F0047D5D7 /* DSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA38B1F420B3F0047D5D7 /* DSessionStatus.swift */; };
 		DA5F44A71F42C98800334605 /* FDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44A61F42C98800334605 /* FDatabase.swift */; };
@@ -23,6 +22,7 @@
 		DA5F44AE1F42CA0500334605 /* FDatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44AD1F42CA0500334605 /* FDatabaseProtocol.swift */; };
 		DA5F44B01F42CA1C00334605 /* FDatabaseProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44AF1F42CA1C00334605 /* FDatabaseProtocolExtension.swift */; };
 		DA5F44B21F42CA5C00334605 /* FDatabaseUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44B11F42CA5C00334605 /* FDatabaseUsers.swift */; };
+		DA5F44B41F42CA8300334605 /* FDatabaseUsersItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44B31F42CA8300334605 /* FDatabaseUsersItem.swift */; };
 		DA68A2861F408A350094BC9B /* DGifExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27E1F408A350094BC9B /* DGifExtension.swift */; };
 		DA68A2871F408A350094BC9B /* DGifExtensionDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
@@ -159,7 +159,6 @@
 		DA39E77A1F38E3F90001CA28 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA39E7891F38E3F90001CA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA4DA36F1F41E5510047D5D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DA4DA37F1F41F7590047D5D7 /* MFirebaseDUserItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFirebaseDUserItem.swift; sourceTree = "<group>"; };
 		DA4DA3891F420B070047D5D7 /* DSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSession.swift; sourceTree = "<group>"; };
 		DA4DA38B1F420B3F0047D5D7 /* DSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSessionStatus.swift; sourceTree = "<group>"; };
 		DA5F44A61F42C98800334605 /* FDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabase.swift; sourceTree = "<group>"; };
@@ -168,6 +167,7 @@
 		DA5F44AD1F42CA0500334605 /* FDatabaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseProtocol.swift; sourceTree = "<group>"; };
 		DA5F44AF1F42CA1C00334605 /* FDatabaseProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseProtocolExtension.swift; sourceTree = "<group>"; };
 		DA5F44B11F42CA5C00334605 /* FDatabaseUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseUsers.swift; sourceTree = "<group>"; };
+		DA5F44B31F42CA8300334605 /* FDatabaseUsersItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseUsersItem.swift; sourceTree = "<group>"; };
 		DA68A27E1F408A350094BC9B /* DGifExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtension.swift; sourceTree = "<group>"; };
 		DA68A27F1F408A350094BC9B /* DGifExtensionDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifExtensionDirectory.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
@@ -391,7 +391,6 @@
 		DA4DA3741F41E87B0047D5D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DA4DA37F1F41F7590047D5D7 /* MFirebaseDUserItem.swift */,
 				DA32444E1F42B56700D40F6E /* MFirebaseDUserItemSyncstamp.swift */,
 			);
 			path = Model;
@@ -429,6 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5F44B11F42CA5C00334605 /* FDatabaseUsers.swift */,
+				DA5F44B31F42CA8300334605 /* FDatabaseUsersItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1224,6 +1224,7 @@
 				DAE0AFD41F3BAEF9006449D0 /* MHomeActionMeh.swift in Sources */,
 				DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */,
 				DAE0AFD31F3BAEF9006449D0 /* MHomeActionLike.swift in Sources */,
+				DA5F44B41F42CA8300334605 /* FDatabaseUsersItem.swift in Sources */,
 				DA90E0E01F40B75800A37538 /* MGifLoader.swift in Sources */,
 				DA4DA38C1F420B3F0047D5D7 /* DSessionStatus.swift in Sources */,
 				DA68F1B21F38E5D500C13634 /* ExtensionURL.swift in Sources */,
@@ -1268,7 +1269,6 @@
 				DA90E0EA1F40B75800A37538 /* MPerkDomainProtocol.swift in Sources */,
 				DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */,
 				DA68F1BA1F38E5D500C13634 /* ViewParentTransitions.swift in Sources */,
-				DA4DA3801F41F7590047D5D7 /* MFirebaseDUserItem.swift in Sources */,
 				DA68F1B71F38E5D500C13634 /* View.swift in Sources */,
 				DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */,
 				DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */,

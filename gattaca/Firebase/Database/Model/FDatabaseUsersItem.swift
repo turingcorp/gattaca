@@ -1,13 +1,13 @@
 import Foundation
 
-class MFirebaseDUserItem:MFirebaseDProtocol
+class FDatabaseUsersItem:FDatabaseProtocol
 {
     static let kKeyCreated:String = "created"
     static let kKeySyncstamp:String = "syncstamp"
     static let kKeyStatus:String = "status"
     
     var identifier:String?
-    var parent:MFirebaseDProtocol?
+    var parent:FDatabaseProtocol?
     let created:TimeInterval
     let syncstamp:TimeInterval
     let status:Int16
@@ -25,7 +25,7 @@ class MFirebaseDUserItem:MFirebaseDProtocol
         }
     }
     
-    init(parent:MFirebaseDUser, session:DSession)
+    init(parent:FDatabaseUsers, session:DSession)
     {
         self.parent = parent
         status = session.rawStatus
@@ -38,7 +38,7 @@ class MFirebaseDUserItem:MFirebaseDProtocol
     required init?(json:Any)
     {
         guard
-        
+            
             let jsonMap:[String:Any] = json as? [String:Any],
             let created:TimeInterval = jsonMap[
                 MFirebaseDUserItem.kKeyCreated] as? TimeInterval,
@@ -46,7 +46,7 @@ class MFirebaseDUserItem:MFirebaseDProtocol
                 MFirebaseDUserItem.kKeySyncstamp] as? TimeInterval,
             let status:Int16 = jsonMap[
                 MFirebaseDUserItem.kKeyStatus] as? Int16
-        
+            
         else
         {
             return nil
