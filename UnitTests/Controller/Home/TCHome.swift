@@ -16,8 +16,6 @@ class TCHome:XCTestCase
         self.session = session
         
         let controller:CHome = CHome(session:session)
-        controller.beginAppearanceTransition(true, animated:false)
-        controller.endAppearanceTransition()
         self.controller = controller
     }
     
@@ -41,8 +39,11 @@ class TCHome:XCTestCase
                 
             else
             {
+                print("f")
                 return
             }
+            
+            print("g")
             
             XCTAssertEqual(
                 status,
