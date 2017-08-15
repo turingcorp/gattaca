@@ -1,6 +1,6 @@
 import Foundation
 
-extension MFirebaseDProtocol
+extension FDatabaseProtocol
 {
     var parent:MFirebaseDProtocol?
     {

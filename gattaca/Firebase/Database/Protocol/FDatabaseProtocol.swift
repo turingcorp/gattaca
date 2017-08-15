@@ -1,6 +1,6 @@
 import Foundation
 
-protocol MFirebaseDProtocol
+protocol FDatabaseProtocol
 {
     var identifier:String? { get set }
     var parent:MFirebaseDProtocol? { get set }
