@@ -67,4 +67,22 @@ class TFDatabaseUsersItem:XCTestCase
             timestamp,
             "user created not being set properly")
     }
+    
+    func testSyncstamp()
+    {
+        guard
+        
+            let created:TimeInterval = user?.created,
+            let syncstamp:TimeInterval = user?.syncstamp
+        
+        else
+        {
+            return
+        }
+        
+        XCTAssertLessThanOrEqual(
+            created,
+            syncstamp,
+            "error setting syncstamp")
+    }
 }
