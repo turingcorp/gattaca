@@ -19,10 +19,6 @@ class MFirebaseDUserItem:MFirebaseDProtocol
             
             return userList
         }
-        
-        set
-        {
-        }
     }
     
     var json:Any?
@@ -38,11 +34,6 @@ class MFirebaseDUserItem:MFirebaseDProtocol
         }
     }
     
-    required init?(json:Any, identifier:String?)
-    {
-        return nil
-    }
-    
     init(session:DSession)
     {
         identifier = nil
@@ -51,5 +42,10 @@ class MFirebaseDUserItem:MFirebaseDProtocol
         let currentDate:TimeInterval = Date().timeIntervalSince1970
         created = currentDate
         syncstamp = currentDate
+    }
+    
+    required init?(json:Any, identifier:String?)
+    {
+        return nil
     }
 }

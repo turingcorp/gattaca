@@ -6,12 +6,7 @@ extension MFirebaseDProtocol
     {
         get
         {
-            return parent
-        }
-        
-        set
-        {
-            parent = newValue
+            return nil
         }
     }
     

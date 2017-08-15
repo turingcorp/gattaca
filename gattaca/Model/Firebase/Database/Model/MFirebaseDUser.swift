@@ -4,11 +4,11 @@ class MFirebaseDUser:MFirebaseDProtocol
 {
     let identifier:String? = "user"
     
-    required init?(json:Any, identifier:String?)
+    init()
     {
     }
     
-    init()
+    required init?(json:Any, identifier:String?)
     {
     }
 }
