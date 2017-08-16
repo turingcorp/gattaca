@@ -7,7 +7,17 @@ class MHomeStrategyNew:MHomeStrategy
         controller.model.session.load
         { [weak self] in
             
-            self?.lastStep()
+            guard
+                
+                let controller:CHome = self?.controller
+                
+            else
+            {
+                return
+            }
+            
+            self?.controller.model.loadStrategy(
+                controller:controller)
         }
     }
 }
