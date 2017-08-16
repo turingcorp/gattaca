@@ -50,10 +50,6 @@ class TCHome:XCTestCase
                 status,
                 MSession.Status.loaded,
                 "session is not being loaded")
-            
-            XCTAssertNil(
-                self?.controller?.model.strategy,
-                "failed clearing strategy")
         }
     }
     
