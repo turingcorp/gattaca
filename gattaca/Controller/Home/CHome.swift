@@ -61,11 +61,16 @@ class CHome:Controller<VHome, MHome>
     
     func sessionLoaded()
     {
-        model.loadItems()
+        
         NotificationCenter.default.addObserver(
             self,
             selector:#selector(notifiedBecameActive(sender:)),
             name:NSNotification.Name.UIApplicationDidBecomeActive,
             object:nil)
+    }
+    
+    func sessionReady()
+    {
+        model.loadItems()
     }
 }
