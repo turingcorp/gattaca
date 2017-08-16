@@ -272,6 +272,10 @@
 		DA90E0DE1F40B75800A37538 /* MSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionStatus.swift; sourceTree = "<group>"; };
 		DA90E0F31F40B79E00A37538 /* TMSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSession.swift; sourceTree = "<group>"; };
 		DA90E0F51F40BA7500A37538 /* TMSessionLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionLoader.swift; sourceTree = "<group>"; };
+		DAB3A3151F4433E6001981F4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DAB3A3161F4433E6001981F4 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		DAB3A3171F4433E6001981F4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		DAB3A3181F4433E6001981F4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionFirebase.swift; sourceTree = "<group>"; };
 		DABEF9381F430B7B00420DF0 /* TFDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabase.swift; sourceTree = "<group>"; };
 		DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseProtocolExtension.swift; sourceTree = "<group>"; };
@@ -382,6 +386,10 @@
 				DA39E77B1F38E3F90001CA28 /* Products */,
 				25A226865CD26CE574FD985D /* Pods */,
 				4138065C43E7C9ECF6B995E7 /* Frameworks */,
+				DAB3A3151F4433E6001981F4 /* .gitignore */,
+				DAB3A3161F4433E6001981F4 /* .travis.yml */,
+				DAB3A3171F4433E6001981F4 /* Podfile */,
+				DAB3A3181F4433E6001981F4 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
