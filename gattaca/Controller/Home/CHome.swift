@@ -31,7 +31,7 @@ class CHome:Controller<VHome, MHome>
     
     func notifiedBecameActive(sender notification:Notification)
     {
-        model.loadLocation(controller:self)
+        model.authLocation(controller:self)
     }
     
     //MARK: private
