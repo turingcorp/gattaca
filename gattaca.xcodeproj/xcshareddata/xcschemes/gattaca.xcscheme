@@ -33,26 +33,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DA7CE8121F3F3A510078A26B"
-               BuildableName = "tests.xctest"
-               BlueprintName = "tests"
-               ReferencedContainer = "container:gattaca.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DA7CE82C1F3F4D060078A26B"
-               BuildableName = "uitests.xctest"
-               BlueprintName = "uitests"
-               ReferencedContainer = "container:gattaca.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "DA7CE8401F3F53DB0078A26B"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
