@@ -11,7 +11,6 @@ extension MHomeStrategy
             MSession.Status.loading:MHomeStrategyLoading.self,
             MSession.Status.sync:MHomeStrategySync.self,
             MSession.Status.authLocation:MHomeStrategyAuthLocation.self,
-            MSession.Status.askAuthLocation:MHomeStrategyAskAuthLocation.self,
             MSession.Status.loaded:MHomeStrategyLoaded.self]
         
         return map
