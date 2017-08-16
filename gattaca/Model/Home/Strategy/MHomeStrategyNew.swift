@@ -4,7 +4,7 @@ class MHomeStrategyNew:MHomeStrategy
 {
     override func nextStep()
     {
-        controller.model.session.load
+        controller?.model.session.load
         { [weak self] in
             
             guard
@@ -16,7 +16,7 @@ class MHomeStrategyNew:MHomeStrategy
                 return
             }
             
-            self?.controller.model.loadStrategy(
+            controller.model.loadStrategy(
                 controller:controller)
         }
     }

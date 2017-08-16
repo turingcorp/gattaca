@@ -2,7 +2,7 @@ import Foundation
 
 class MHomeStrategy
 {
-    private(set) weak var controller:CHome!
+    private(set) weak var controller:CHome?
     
     required init(controller:CHome)
     {
@@ -17,6 +17,6 @@ class MHomeStrategy
     
     final func lastStep()
     {
-        controller.sessionLoaded()
+        controller?.sessionLoaded()
     }
 }

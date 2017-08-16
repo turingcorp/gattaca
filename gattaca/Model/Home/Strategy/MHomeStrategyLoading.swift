@@ -19,7 +19,7 @@ class MHomeStrategyLoading:MHomeStrategy
                 return
             }
             
-            self?.controller.model.loadStrategy(controller:controller)
+            controller.model.loadStrategy(controller:controller)
         }
     }
 }
