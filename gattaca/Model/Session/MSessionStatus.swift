@@ -10,6 +10,7 @@ extension MSession
         case loaded
         case authLocation
         case waitingLocation
+        case syncLocation
         case ready
     }
 }
