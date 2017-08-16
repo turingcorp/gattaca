@@ -503,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				DA68F14E1F38E5D500C13634 /* Abstract */,
+				DAB3A32A1F4458A6001981F4 /* LocationAsk */,
 				DA68F1531F38E5D500C13634 /* Home */,
 			);
 			path = Controller;
@@ -867,6 +868,13 @@
 				DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		DAB3A32A1F4458A6001981F4 /* LocationAsk */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationAsk;
 			sourceTree = "<group>";
 		};
 		DABEF9331F430B5D00420DF0 /* Firebase */ = {
