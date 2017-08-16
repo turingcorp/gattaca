@@ -4,6 +4,10 @@ class MHomeStrategyAuthLocationStrategyUnknown:MHomeStrategyAuthLocationStrategy
 {
     override func nextStep()
     {
-        controller?.openAskAuthLocation()
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.controller?.openAskAuthLocation()
+        }
     }
 }

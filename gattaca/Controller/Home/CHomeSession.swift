@@ -17,7 +17,7 @@ extension CHome
             name:NSNotification.Name.UIApplicationDidBecomeActive,
             object:nil)
         
-        model.loadLocation(controller:self)
+        model.authLocation(controller:self)
     }
     
     func sessionReady()
