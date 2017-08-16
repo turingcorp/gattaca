@@ -31,7 +31,10 @@ class CHome:Controller<VHome, MHome>
     
     func notifiedBecameActive(sender notification:Notification)
     {
-        model.authLocation(controller:self)
+        if parent?.childViewControllers.last === self
+        {
+            model.authLocation(controller:self)
+        }
     }
     
     //MARK: private
