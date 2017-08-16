@@ -4,6 +4,6 @@ class MHomeStrategyLoaded:MHomeStrategy
 {
     override func nextStep()
     {
-        lastStep()
+        controller?.sessionLoaded()
     }
 }
