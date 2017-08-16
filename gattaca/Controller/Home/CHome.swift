@@ -23,16 +23,7 @@ class CHome:Controller<VHome, MHome>
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            guard
-                
-                let strongSelf:CHome = self
-            
-            else
-            {
-                return
-            }
-            
-            strongSelf.model.loadStrategy(controller:strongSelf)
+            self?.loadSessionStrategy()
         }
     }
     
@@ -55,22 +46,5 @@ class CHome:Controller<VHome, MHome>
     private func asyncRefresh()
     {
         view().refresh()
-    }
-    
-    //MARK: internal
-    
-    func sessionLoaded()
-    {
-        
-        NotificationCenter.default.addObserver(
-            self,
-            selector:#selector(notifiedBecameActive(sender:)),
-            name:NSNotification.Name.UIApplicationDidBecomeActive,
-            object:nil)
-    }
-    
-    func sessionReady()
-    {
-        model.loadItems()
     }
 }
