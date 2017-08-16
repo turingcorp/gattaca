@@ -2,12 +2,12 @@ import Foundation
 
 class MSession
 {
-    var status:MSession.Status
+    private(set) var status:MSession.Status
     private(set) var session:DSession?
     
-    init()
+    init(status:MSession.Status)
     {
-        status = MSession.Status.new
+        self.status = status
     }
     
     //MARK: private
@@ -67,5 +67,10 @@ class MSession
             
             self?.asyncLoad(completion:completion)
         }
+    }
+    
+    func authLocation()
+    {
+        status = MSession.Status.authLocation
     }
 }
