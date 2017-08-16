@@ -117,6 +117,7 @@
 		DAB3A3271F444B14001981F4 /* MHomeStrategyAuthLocationStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A3261F444B14001981F4 /* MHomeStrategyAuthLocationStrategyFactory.swift */; };
 		DAB3A3291F445707001981F4 /* MHomeStrategyAskAuthLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A3281F445707001981F4 /* MHomeStrategyAskAuthLocation.swift */; };
 		DAB3A32E1F445951001981F4 /* MLocationAsk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A32D1F445951001981F4 /* MLocationAsk.swift */; };
+		DAB3A3321F445BCB001981F4 /* VLocationAsk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A3311F445BCB001981F4 /* VLocationAsk.swift */; };
 		DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */; };
 		DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF9381F430B7B00420DF0 /* TFDatabase.swift */; };
 		DABEF93B1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */; };
@@ -292,6 +293,7 @@
 		DAB3A3261F444B14001981F4 /* MHomeStrategyAuthLocationStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyAuthLocationStrategyFactory.swift; sourceTree = "<group>"; };
 		DAB3A3281F445707001981F4 /* MHomeStrategyAskAuthLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyAskAuthLocation.swift; sourceTree = "<group>"; };
 		DAB3A32D1F445951001981F4 /* MLocationAsk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLocationAsk.swift; sourceTree = "<group>"; };
+		DAB3A3311F445BCB001981F4 /* VLocationAsk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLocationAsk.swift; sourceTree = "<group>"; };
 		DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionFirebase.swift; sourceTree = "<group>"; };
 		DABEF9381F430B7B00420DF0 /* TFDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabase.swift; sourceTree = "<group>"; };
 		DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseProtocolExtension.swift; sourceTree = "<group>"; };
@@ -634,6 +636,8 @@
 			children = (
 				DA68F1811F38E5D500C13634 /* Abstract */,
 				DA68F1881F38E5D500C13634 /* Basic */,
+				DAB3A32F1F445BBE001981F4 /* LocationAsk */,
+				DAB3A3301F445BBE001981F4 /* LocationDenied */,
 				DA68F1941F38E5D500C13634 /* Home */,
 			);
 			path = View;
@@ -890,6 +894,21 @@
 			sourceTree = "<group>";
 		};
 		DAB3A32C1F445922001981F4 /* LocationDenied */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationDenied;
+			sourceTree = "<group>";
+		};
+		DAB3A32F1F445BBE001981F4 /* LocationAsk */ = {
+			isa = PBXGroup;
+			children = (
+				DAB3A3311F445BCB001981F4 /* VLocationAsk.swift */,
+			);
+			path = LocationAsk;
+			sourceTree = "<group>";
+		};
+		DAB3A3301F445BBE001981F4 /* LocationDenied */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -1418,6 +1437,7 @@
 				DA68F1BA1F38E5D500C13634 /* ViewParentTransitions.swift in Sources */,
 				DA68F1B71F38E5D500C13634 /* View.swift in Sources */,
 				DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */,
+				DAB3A3321F445BCB001981F4 /* VLocationAsk.swift in Sources */,
 				DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */,
 				DA5F44B21F42CA5C00334605 /* FDatabaseUsers.swift in Sources */,
 				DA90E0E71F40B75800A37538 /* MPerk.swift in Sources */,
