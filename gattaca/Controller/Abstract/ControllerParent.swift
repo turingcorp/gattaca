@@ -8,7 +8,7 @@ class ControllerParent:UIViewController
     
     init()
     {
-        session = MSession()
+        session = MSession(status:MSession.Status.new)
         orientation = UIInterfaceOrientationMask.portrait
         super.init(nibName:nil, bundle:nil)
     }
