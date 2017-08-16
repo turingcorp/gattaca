@@ -17,6 +17,12 @@ extension MHome
         loadStrategy(controller:controller)
     }
     
+    func askAuthLocation(controller:CHome)
+    {
+        session.statusAskAuthLocation()
+        loadStrategy(controller:controller)
+    }
+    
     func loadLocation(controller:CHome)
     {
         

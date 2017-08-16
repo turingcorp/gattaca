@@ -74,6 +74,11 @@ class MSession
         status = MSession.Status.authLocation
     }
     
+    func statusAskAuthLocation()
+    {
+        status = MSession.Status.askAuthLocation
+    }
+    
     func statusWaitingLocation()
     {
         status = MSession.Status.waitingLocation

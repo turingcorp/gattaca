@@ -9,6 +9,7 @@ extension MSession
         case sync
         case loaded
         case authLocation
+        case askAuthLocation
         case waitingLocation
         case syncLocation
         case locationDenied
