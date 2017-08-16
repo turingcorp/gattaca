@@ -60,4 +60,18 @@ class TMHomeStrategyFactory:XCTestCase
             strategyLoaded,
             "failed loading strategy for status loaded")
     }
+    
+    func testFactoryStrategyAuthLocation()
+    {
+        let session:MSession = MSession(status:MSession.Status.authLocation)
+        let controller:CHome = CHome(session:session)
+        
+        let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
+            controller:controller)
+        let strategyLoaded:MHomeStrategyAuthLocation? = strategy as? MHomeStrategyAuthLocation
+        
+        XCTAssertNotNil(
+            strategyLoaded,
+            "failed loading strategy for auth location")
+    }
 }
