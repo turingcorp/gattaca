@@ -7,7 +7,12 @@ extension MHomeStrategyAuthLocationStrategy
     
     private class func factoryMap() -> [CLAuthorizationStatus:MHomeStrategyAuthLocationStrategy.Type]
     {
-        let map:[CLAuthorizationStatus:MHomeStrategyAuthLocationStrategy.Type] = [:]
+        let map:[CLAuthorizationStatus:MHomeStrategyAuthLocationStrategy.Type] = [
+            CLAuthorizationStatus.authorizedAlways:MHomeStrategyAuthLocationStrategyGranted.self,
+            CLAuthorizationStatus.authorizedWhenInUse:MHomeStrategyAuthLocationStrategyGranted.self,
+            CLAuthorizationStatus.notDetermined:MHomeStrategyAuthLocationStrategyUnknown.self,
+            CLAuthorizationStatus.restricted:MHomeStrategyAuthLocationStrategyDenied.self,
+            CLAuthorizationStatus.denied:MHomeStrategyAuthLocationStrategyDenied.self]
         
         return map
     }
