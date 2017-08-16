@@ -11,9 +11,14 @@ extension MHome
         strategy?.nextStep()
     }
     
-    func loadLocation(controller:CHome)
+    func authLocation(controller:CHome)
     {
         session.statusAuthLocation()
         loadStrategy(controller:controller)
+    }
+    
+    func loadLocation(controller:CHome)
+    {
+        
     }
 }
