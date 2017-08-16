@@ -8,7 +8,8 @@ extension MSession
         case loading
         case sync
         case loaded
-        case expectingLocation
+        case authLocation
+        case waitingLocation
         case ready
     }
 }
