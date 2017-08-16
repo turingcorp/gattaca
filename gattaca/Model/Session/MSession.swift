@@ -4,7 +4,6 @@ class MSession
 {
     private(set) var status:MSession.Status
     private(set) var session:DSession?
-    private var locationHandler:(() -> ())?
     
     init(status:MSession.Status)
     {
@@ -70,9 +69,8 @@ class MSession
         }
     }
     
-    func authLocation(completion:@escaping(() -> ()))
+    func statusAuthLocation()
     {
-        locationHandler = completion
         status = MSession.Status.authLocation
     }
 }

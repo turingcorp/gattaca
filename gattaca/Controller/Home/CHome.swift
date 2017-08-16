@@ -27,24 +27,16 @@ class CHome:Controller<VHome, MHome>
         }
     }
     
-    override func viewDidAppear(_ animated:Bool)
-    {
-        super.viewDidAppear(animated)
-        
-        view().viewDidAppear()
-    }
-    
     //MARK: notified
     
     func notifiedBecameActive(sender notification:Notification)
     {
-        view().viewDidAppear()
+        model.loadLocation(controller:self)
     }
     
     //MARK: private
     
     private func asyncRefresh()
     {
-        view().refresh()
     }
 }

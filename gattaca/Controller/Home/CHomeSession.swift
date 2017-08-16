@@ -11,12 +11,13 @@ extension CHome
     
     func sessionLoaded()
     {
-        
         NotificationCenter.default.addObserver(
             self,
             selector:#selector(notifiedBecameActive(sender:)),
             name:NSNotification.Name.UIApplicationDidBecomeActive,
             object:nil)
+        
+        model.loadLocation(controller:self)
     }
     
     func sessionReady()
