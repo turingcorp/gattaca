@@ -69,7 +69,7 @@ class MSession
         }
     }
     
-    func authLocation()
+    func authLocation(completion:@escaping(() -> ()))
     {
         status = MSession.Status.authLocation
     }
