@@ -10,9 +10,4 @@ extension MHome
             controller:controller)
         strategy?.nextStep()
     }
-    
-    func clearStrategy()
-    {
-        strategy = nil
-    }
 }
