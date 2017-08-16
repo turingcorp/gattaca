@@ -4,9 +4,9 @@ branches:
   only:
     - master
 script:
-  - if [ $MODE == 'Tests' ]; then set -o pipefail && xcodebuild -workspace gattaca.xcworkspace -scheme gattaca -sdk "iphonesimulator" -destination "platform=iOS Simulator,OS=10.0,name=iPhone 6s" clean build test; fi
+  - if [ $MODE == 'Tests' ]; then set -o pipefail && xcodebuild -workspace gattaca.xcworkspace -scheme gattaca -sdk "iphonesimulator" -destination "platform=iOS Simulator,OS=10.0,name=iPhone 6s" clean build test | xcpretty; fi
   - if [ $MODE == 'Build' ]; then set -o pipefail && xcodebuild -workspace gattaca.xcworkspace -scheme gattaca -sdk "iphonesimulator" -destination "platform=iOS Simulator,OS=10.0,name=iPhone 6s" clean build | xcpretty; fi
-after_success:
+after_script:
   - bash <(curl -s https://codecov.io/bash) -J 'gattaca'
 notifications:
   email:
