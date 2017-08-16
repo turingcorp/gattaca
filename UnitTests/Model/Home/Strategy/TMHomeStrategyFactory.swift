@@ -3,44 +3,12 @@ import XCTest
 
 class TMHomeStrategyFactory:XCTestCase
 {
-    private var controller:CHome?
-    private var session:MSession?
-    
-    override func setUp()
-    {
-        super.setUp()
-        
-        let session:MSession = MSession()
-        self.session = session
-        
-        controller = CHome(session:session)
-    }
-    
     //MARK: internal
-    
-    func testInit()
-    {
-        XCTAssertNotNil(
-            session,
-            "failed to create session")
-        
-        XCTAssertNotNil(
-            controller,
-            "failed to create controller")
-    }
     
     func testFactoryStrategyNew()
     {
-        guard
-            
-            let controller:CHome = self.controller
-        
-        else
-        {
-            return
-        }
-        
-        session?.status = MSession.Status.new
+        let session:MSession = MSession(status:MSession.Status.new)
+        let controller:CHome = CHome(session:session)
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
             controller:controller)
@@ -53,16 +21,8 @@ class TMHomeStrategyFactory:XCTestCase
     
     func testFactoryStrategyLoading()
     {
-        guard
-            
-            let controller:CHome = self.controller
-            
-        else
-        {
-            return
-        }
-        
-        session?.status = MSession.Status.loading
+        let session:MSession = MSession(status:MSession.Status.loading)
+        let controller:CHome = CHome(session:session)
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
             controller:controller)
@@ -75,16 +35,8 @@ class TMHomeStrategyFactory:XCTestCase
     
     func testFactoryStrategySync()
     {
-        guard
-            
-            let controller:CHome = self.controller
-            
-        else
-        {
-            return
-        }
-        
-        session?.status = MSession.Status.sync
+        let session:MSession = MSession(status:MSession.Status.sync)
+        let controller:CHome = CHome(session:session)
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
             controller:controller)
@@ -97,16 +49,8 @@ class TMHomeStrategyFactory:XCTestCase
     
     func testFactoryStrategyLoaded()
     {
-        guard
-            
-            let controller:CHome = self.controller
-            
-        else
-        {
-            return
-        }
-        
-        session?.status = MSession.Status.loaded
+        let session:MSession = MSession(status:MSession.Status.loaded)
+        let controller:CHome = CHome(session:session)
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
             controller:controller)

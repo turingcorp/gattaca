@@ -13,7 +13,7 @@ class TCHome:XCTestCase
     {
         super.setUp()
         
-        let session:MSession = MSession()
+        let session:MSession = MSession(status:MSession.Status.new)
         self.session = session
         
         let controller:CHome = CHome(session:session)

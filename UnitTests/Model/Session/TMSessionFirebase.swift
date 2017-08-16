@@ -16,7 +16,7 @@ class TMSessionFirebase:XCTestCase
         
         let currentBundle:Bundle = Bundle(for:TMSessionFirebase.self)
         
-        modelSession = MSession()
+        modelSession = MSession(status:MSession.Status.new)
         firebase = FDatabase()
         coreData = Database(bundle:currentBundle)
         
