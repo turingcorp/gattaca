@@ -3,8 +3,8 @@ import UIKit
 class VLocationAskInfo:
     View<VLocationAsk, MLocationAsk, CLocationAsk>
 {
-    private let kTitleHeight:CGFloat = 25
-    private let kSubtitleHeight:CGFloat = 30
+    private let kTitleHeight:CGFloat = 30
+    private let kSubtitleHeight:CGFloat = 55
     
     required init(controller:CLocationAsk)
     {
@@ -15,7 +15,7 @@ class VLocationAskInfo:
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
-        labelTitle.font = UIFont.medium(size:17)
+        labelTitle.font = UIFont.medium(size:19)
         labelTitle.textAlignment = NSTextAlignment.center
         labelTitle.textColor = UIColor.white
         labelTitle.text = String.localizedView(
@@ -26,6 +26,7 @@ class VLocationAskInfo:
         labelSubtitle.translatesAutoresizingMaskIntoConstraints = false
         labelSubtitle.backgroundColor = UIColor.clear
         labelSubtitle.font = UIFont.regular(size:14)
+        labelSubtitle.numberOfLines = 0
         labelSubtitle.textAlignment = NSTextAlignment.center
         labelSubtitle.textColor = UIColor(white:1, alpha:0.8)
         labelSubtitle.text = String.localizedView(
