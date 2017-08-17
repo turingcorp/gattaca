@@ -76,20 +76,14 @@ class MSession
         completion:@escaping(() -> ()))
     {
         status = MSession.Status.syncLocation
-        
         clearDifferentLocations(country:country)
         
-        saveNewLocation(
+        syncNewLocation(
+            latitude:latitude,
+            longitude:longitude,
             country:country)
-        { [weak self] in
-            
-            self?.syncNewLocation(
-                latitude:latitude,
-                longitude:longitude,
-                country:country)
-            {
-                completion()
-            }
+        {
+            completion()
         }
     }
     
