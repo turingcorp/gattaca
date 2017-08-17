@@ -10,4 +10,9 @@ class MLocationAsk:Model
         
         super.init(session:session)
     }
+    
+    deinit
+    {
+        locationDelegate.locationManager?.delegate = nil
+    }
 }

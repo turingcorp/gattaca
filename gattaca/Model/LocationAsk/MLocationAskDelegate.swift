@@ -3,8 +3,8 @@ import CoreLocation
 
 class MLocationAskDelegate:NSObject, CLLocationManagerDelegate
 {
+    var locationManager:CLLocationManager?
     private weak var controller:CLocationAsk?
-    private var locationManager:CLLocationManager?
     private let kDistanceFilter:CLLocationDistance = 1000
     
     //MARK: internal
