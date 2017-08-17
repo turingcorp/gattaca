@@ -6,4 +6,11 @@ class CLocationAsk:Controller<VLocationAsk, MLocationAsk>
     {
         return UIStatusBarStyle.lightContent
     }
+    
+    //MARK: internal
+    
+    func askLocation()
+    {
+        
+    }
 }
