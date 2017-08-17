@@ -63,4 +63,11 @@ class FDatabase
         let reference:DatabaseReference = self.reference.child(path)
         reference.setValue(json)
     }
+    
+    func remove(model:FDatabaseProtocol)
+    {
+        let path:String = model.path
+        let reference:DatabaseReference = self.reference.child(path)
+        reference.removeValue()
+    }
 }
