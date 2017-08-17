@@ -15,6 +15,8 @@
         <attribute name="purchased" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="DSession" representedClassName="DSession" syncable="YES" codeGenerationType="class">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="created" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rawStatus" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
@@ -27,7 +29,7 @@
         <element name="DPerk" positionX="-54" positionY="-9" width="128" height="75"/>
         <element name="DPerkFree" positionX="-36" positionY="9" width="128" height="45"/>
         <element name="DPerkPurchase" positionX="-18" positionY="27" width="128" height="60"/>
-        <element name="DSession" positionX="-36" positionY="27" width="128" height="90"/>
+        <element name="DSession" positionX="-36" positionY="27" width="128" height="120"/>
         <element name="DSettings" positionX="-63" positionY="-18" width="128" height="60"/>
     </elements>
 </model>
