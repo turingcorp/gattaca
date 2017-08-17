@@ -9,9 +9,6 @@ class FDatabaseUsersItem:FDatabaseProtocol
     
     var identifier:String?
     var parent:FDatabaseProtocol?
-    var country:String?
-    var latitude:Double?
-    var longitude:Double?
     let created:TimeInterval
     let syncstamp:TimeInterval
     let status:Int16
