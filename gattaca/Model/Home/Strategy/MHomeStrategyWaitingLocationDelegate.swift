@@ -5,6 +5,7 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
 {
     let locationManager:CLLocationManager
     private weak var controller:CHome?
+    private weak var geocoder:CLGeocoder?
     private let kDistanceFilter:CLLocationDistance = 10
     private let kDistanceAccuracy:CLLocationDistance = 100
     
@@ -23,13 +24,53 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
     
     deinit
     {
+        geocoder?.cancelGeocode()
         locationManager.stopUpdatingLocation()
     }
     
-    private func syncLocation(
-        latitude:Double,
-        longitude:Double)
+    //MARK: private
+    
+    private func showError(message:String)
     {
+        locationManager.stopUpdatingLocation()
+        locationManager.delegate = nil
+        
+        VAlert.messageFail(message:message)
+    }
+    
+    private func reverseGeocode(location:CLLocation)
+    {
+        let geocoder:CLGeocoder = CLGeocoder()
+        self.geocoder = geocoder
+        
+        geocoder.reverseGeocodeLocation(location)
+        { [weak self] (placemarks:[CLPlacemark]?, error:Error?) in
+            
+            if let error:Error = error
+            {
+                self?.showError(message:error.localizedDescription)
+            }
+            
+            guard
+            
+                let placemark:CLPlacemark = placemarks?.last,
+                let country:String = placemark.isoCountryCode?.lowercased()
+            
+            else
+            {
+                return
+            }
+            
+            print(country)
+        }
+    }
+    
+    private func syncLocation(
+        location:CLLocation)
+    {
+        let latitude:Double = location.coordinate.latitude
+        let longitude:Double = location.coordinate.longitude
+        
         controller?.model.session.syncLocation(
             latitude:latitude,
             longitude:longitude)
@@ -56,9 +97,7 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
         _ manager:CLLocationManager,
         didFailWithError error:Error)
     {
-        locationManager.stopUpdatingLocation()
-        
-        VAlert.messageFail(message:error.localizedDescription)
+        showError(message:error.localizedDescription)
     }
     
     func locationManager(
@@ -67,29 +106,24 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
     {
         guard
             
-            let currentLocation:CLLocation = locations.last
+            let location:CLLocation = locations.last
             
         else
         {
             return
         }
         
-        let horizontalAccuracy:CLLocationAccuracy = currentLocation.horizontalAccuracy
+        let horizontalAccuracy:CLLocationAccuracy = location.horizontalAccuracy
         
         if horizontalAccuracy <= kDistanceAccuracy
         {
             locationManager.stopUpdatingLocation()
             locationManager.delegate = nil
             
-            let latitude:Double = currentLocation.coordinate.latitude
-            let longitude:Double = currentLocation.coordinate.longitude
-            
             DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
             { [weak self] in
                 
-                self?.syncLocation(
-                    latitude:latitude,
-                    longitude:longitude)
+                self?.reverseGeocode(location:location)
             }
         }
     }
