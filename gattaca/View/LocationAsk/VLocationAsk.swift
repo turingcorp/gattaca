@@ -2,10 +2,12 @@ import UIKit
 
 class VLocationAsk:ViewMain
 {
-    private let kInfoHeight:CGFloat = 95
-    private let kInfoBottom:CGFloat = -50
-    private let kContinueBottom:CGFloat = -40
-    private let kContinueHeight:CGFloat = 80
+    private let kInfoHeight:CGFloat = 90
+    private let kInfoBottom:CGFloat = -60
+    private let kContinueBottom:CGFloat = -30
+    private let kContinueHeight:CGFloat = 70
+    private let kIconTop:CGFloat = 40
+    private let kIconHeight:CGFloat = 300
     
     required init(controller:UIViewController)
     {
@@ -43,12 +45,27 @@ class VLocationAsk:ViewMain
         let viewInfo:VLocationAskInfo = VLocationAskInfo(
             controller:controller)
         
+        let viewIcon:VLocationAskIcon = VLocationAskIcon(
+            controller:controller)
+        
         addSubview(viewGradient)
+        addSubview(viewIcon)
         addSubview(viewInfo)
         addSubview(viewContinue)
         
         NSLayoutConstraint.equals(
             view:viewGradient,
+            toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewIcon,
+            toView:self,
+            constant:kIconTop)
+        NSLayoutConstraint.height(
+            view:viewIcon,
+            constant:kIconHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewIcon,
             toView:self)
         
         NSLayoutConstraint.bottomToBottom(
