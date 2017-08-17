@@ -81,6 +81,7 @@
 		DA6F651B1F438E3E005EA020 /* THomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F651A1F438E3E005EA020 /* THomeFactory.swift */; };
 		DA6F651E1F439187005EA020 /* TMHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F651D1F439187005EA020 /* TMHomeStrategyFactory.swift */; };
 		DA745A701F45917E005AF0DA /* VLocationAskIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA745A6F1F45917E005AF0DA /* VLocationAskIcon.swift */; };
+		DA745A721F459F1A005AF0DA /* MLocationAskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA745A711F459F1A005AF0DA /* MLocationAskDelegate.swift */; };
 		DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */; };
 		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
 		DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */; };
@@ -253,6 +254,7 @@
 		DA6F651A1F438E3E005EA020 /* THomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THomeFactory.swift; sourceTree = "<group>"; };
 		DA6F651D1F439187005EA020 /* TMHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeStrategyFactory.swift; sourceTree = "<group>"; };
 		DA745A6F1F45917E005AF0DA /* VLocationAskIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLocationAskIcon.swift; sourceTree = "<group>"; };
+		DA745A711F459F1A005AF0DA /* MLocationAskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLocationAskDelegate.swift; sourceTree = "<group>"; };
 		DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategy.swift; sourceTree = "<group>"; };
 		DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyFactory.swift; sourceTree = "<group>"; };
 		DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsShare.swift; sourceTree = "<group>"; };
@@ -898,6 +900,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB3A32D1F445951001981F4 /* MLocationAsk.swift */,
+				DA745A711F459F1A005AF0DA /* MLocationAskDelegate.swift */,
 			);
 			path = LocationAsk;
 			sourceTree = "<group>";
@@ -1464,6 +1467,7 @@
 				DA68F1B11F38E5D500C13634 /* ExtensionUIFont.swift in Sources */,
 				DAE0AFD01F3BAEF9006449D0 /* MHomeItem.swift in Sources */,
 				DAE0AFCD1F3BAEF9006449D0 /* MHome.swift in Sources */,
+				DA745A721F459F1A005AF0DA /* MLocationAskDelegate.swift in Sources */,
 				DA68F1BB1F38E5D500C13634 /* ViewProtocol.swift in Sources */,
 				DA68F1B01F38E5D500C13634 /* ExtensionUIColor.swift in Sources */,
 				DA5F44AB1F42C9A100334605 /* FDatabaseSnapshot.swift in Sources */,
