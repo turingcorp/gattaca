@@ -68,7 +68,9 @@ extension MSession
             session.rawStatus = user.status
             
             coreData.save
-            {
+            { [weak self] in
+                
+                self?.updateSession(session:session)
                 completion()
             }
         }

@@ -22,12 +22,30 @@ extension MSession
     
     //MARK: internal
     
+    func syncLocation(
+        latitude:Double,
+        longitude:Double,
+        country:String,
+        completion:@escaping(() -> ()))
+    {
+        status = MSession.Status.syncLocation
+        clearDifferentLocations(country:country)
+        
+        syncNewLocation(
+            latitude:latitude,
+            longitude:longitude,
+            country:country)
+        {
+            completion()
+        }
+    }
+    
     func clearDifferentLocations(country:String)
     {
         guard
         
-            let storedCountry:String = session?.country,
-            let userId:String = session?.userId
+            let storedCountry:String = data?.country,
+            let userId:String = data?.userId
         
         else
         {
@@ -66,7 +84,37 @@ extension MSession
         country:String,
         completion:@escaping(() -> ()))
     {
+        guard
         
+            let coreData:Database = Database(bundle:nil)
+        
+        else
+        {
+            return
+        }
+        
+        coreData.fetch
+        { (data:[DSession]) in
+            
+            guard
+                
+                let session:DSession = data.first
+                
+            else
+            {
+                return
+            }
+            
+            session.country = country
+            
+            coreData.save
+            { [weak self] in
+                
+                self?.updateSession(session:session)
+                
+                completion()
+            }
+        }
     }
     
     func firebaseLocation(
