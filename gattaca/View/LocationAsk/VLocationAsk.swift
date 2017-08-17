@@ -6,7 +6,7 @@ class VLocationAsk:ViewMain
     private let kInfoBottom:CGFloat = -60
     private let kContinueBottom:CGFloat = -30
     private let kContinueHeight:CGFloat = 70
-    private let kIconTop:CGFloat = 40
+    private let kIconTop:CGFloat = 50
     private let kIconHeight:CGFloat = 300
     
     required init(controller:UIViewController)
