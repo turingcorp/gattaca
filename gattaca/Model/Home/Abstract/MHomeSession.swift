@@ -17,8 +17,9 @@ extension MHome
         loadStrategy(controller:controller)
     }
     
-    func loadLocation(controller:CHome)
+    func waitForLocation(controller:CHome)
     {
-        
+        session.statusWaitingLocation()
+        loadStrategy(controller:controller)
     }
 }
