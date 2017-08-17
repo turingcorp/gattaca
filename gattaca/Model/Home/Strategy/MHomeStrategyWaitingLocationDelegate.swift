@@ -5,7 +5,7 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
 {
     static let kUnknownCountry:String = "unknown"
     
-    let locationManager:CLLocationManager
+    var locationManager:CLLocationManager?
     private weak var controller:CHome?
     private weak var geocoder:CLGeocoder?
     private let kDistanceFilter:CLLocationDistance = 10
@@ -13,13 +13,14 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
     
     init(controller:CHome)
     {
-        locationManager = CLLocationManager()
+        let locationManager:CLLocationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.distanceFilter = kDistanceFilter
         
         super.init()
         
         self.controller = controller
+        self.locationManager = locationManager
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
     }
@@ -27,15 +28,15 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
     deinit
     {
         geocoder?.cancelGeocode()
-        locationManager.stopUpdatingLocation()
+        locationManager?.stopUpdatingLocation()
     }
     
     //MARK: private
     
     private func showError(message:String)
     {
-        locationManager.stopUpdatingLocation()
-        locationManager.delegate = nil
+        locationManager?.stopUpdatingLocation()
+        locationManager?.delegate = nil
         
         VAlert.messageFail(message:message)
     }
@@ -144,8 +145,9 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
         
         if horizontalAccuracy <= kDistanceAccuracy
         {
-            locationManager.stopUpdatingLocation()
-            locationManager.delegate = nil
+            manager.stopUpdatingLocation()
+            manager.delegate = nil
+            locationManager = nil
             
             DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
             { [weak self] in

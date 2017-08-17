@@ -6,8 +6,8 @@ class MHomeStrategyWaitingLocation:MHomeStrategy
     
     deinit
     {
-        delegate?.locationManager.stopUpdatingLocation()
-        delegate?.locationManager.delegate = nil
+        delegate?.locationManager?.stopUpdatingLocation()
+        delegate?.locationManager?.delegate = nil
     }
     
     override func nextStep()
