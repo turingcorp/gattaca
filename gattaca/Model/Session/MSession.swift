@@ -72,9 +72,25 @@ class MSession
     func syncLocation(
         latitude:Double,
         longitude:Double,
+        country:String,
         completion:@escaping(() -> ()))
     {
         status = MSession.Status.syncLocation
+        
+        clearDifferentLocations(country:country)
+        
+        saveNewLocation(
+            country:country)
+        { [weak self] in
+            
+            self?.syncNewLocation(
+                latitude:latitude,
+                longitude:longitude,
+                country:country)
+            {
+                completion()
+            }
+        }
     }
     
     func statusAuthLocation()

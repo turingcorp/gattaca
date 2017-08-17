@@ -3,6 +3,7 @@ import CoreLocation
 
 class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
 {
+    static let kUnknownCountry:String = "unknown"
     let locationManager:CLLocationManager
     private weak var controller:CHome?
     private weak var geocoder:CLGeocoder?
@@ -53,27 +54,35 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
             
             guard
             
-                let placemark:CLPlacemark = placemarks?.last,
-                let country:String = placemark.isoCountryCode?.lowercased()
+                let country:String = self?.countryForPlacemarks(
+                    placemarks:placemarks)
             
             else
             {
                 return
             }
             
-            print(country)
+            DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+            { [weak self] in
+                
+                self?.syncLocation(
+                    location:location,
+                    country:country)
+            }
         }
     }
     
     private func syncLocation(
-        location:CLLocation)
+        location:CLLocation,
+        country:String)
     {
         let latitude:Double = location.coordinate.latitude
         let longitude:Double = location.coordinate.longitude
         
         controller?.model.session.syncLocation(
             latitude:latitude,
-            longitude:longitude)
+            longitude:longitude,
+            country:country)
         { [weak self] in
             
             guard
@@ -89,6 +98,23 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
             controller.model.loadStrategy(
                 controller:controller)
         }
+    }
+    
+    //MARK: internal
+    
+    func countryForPlacemarks(placemarks:[CLPlacemark]?) -> String
+    {
+        guard
+            
+            let placemark:CLPlacemark = placemarks?.last,
+            let country:String = placemark.isoCountryCode?.lowercased()
+            
+        else
+        {
+            return MHomeStrategyWaitingLocationDelegate.kUnknownCountry
+        }
+        
+        return country
     }
     
     //MARK: locationManagerDelegate
