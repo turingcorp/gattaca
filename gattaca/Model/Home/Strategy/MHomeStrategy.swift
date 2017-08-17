@@ -12,6 +12,10 @@ class MHomeStrategy
     
     //MARK: internal
     
+    func controllerDidAppear(controller:CHome)
+    {
+    }
+    
     func refreshStrategy()
     {
         guard

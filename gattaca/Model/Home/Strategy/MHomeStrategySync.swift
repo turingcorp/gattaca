@@ -4,6 +4,8 @@ class MHomeStrategySync:MHomeStrategy
 {
     override func nextStep()
     {
+        super.nextStep()
+        
         delayAndRefresh()
     }
 }

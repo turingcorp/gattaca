@@ -5,8 +5,17 @@ class MHomeStrategyAuthLocation:MHomeStrategy
 {
     private var strategy:MHomeStrategyAuthLocationStrategy?
     
+    override func controllerDidAppear(controller:CHome)
+    {
+        super.controllerDidAppear(controller:controller)
+        
+        controller.model.authLocation(controller:controller)
+    }
+    
     override func nextStep()
     {
+        super.nextStep()
+        
         let status:CLAuthorizationStatus = CLLocationManager.authorizationStatus()
         authStatus(status:status)
     }

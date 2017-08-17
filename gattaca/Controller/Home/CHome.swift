@@ -27,13 +27,20 @@ class CHome:Controller<VHome, MHome>
         }
     }
     
+    override func viewDidAppear(_ animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        model.strategy?.controllerDidAppear(controller:self)
+    }
+    
     //MARK: notified
     
     func notifiedBecameActive(sender notification:Notification)
     {
         if parent?.childViewControllers.last === self
         {
-            model.authLocation(controller:self)
+            model.strategy?.controllerDidAppear(controller:self)
         }
     }
     
