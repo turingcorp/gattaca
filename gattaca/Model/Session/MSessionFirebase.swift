@@ -62,15 +62,15 @@ extension MSession
             userId:userId,
             firebase:firebase,
             users:users)
-        { (user:FDatabaseUsersItem) in
+        { [weak self] (user:FDatabaseUsersItem) in
             
             session.userId = user.identifier
             session.rawStatus = user.status
             
+            self?.updateSession(session:session)
+            
             coreData.save
-            { [weak self] in
-                
-                self?.updateSession(session:session)
+            {
                 completion()
             }
         }

@@ -94,7 +94,7 @@ extension MSession
         }
         
         coreData.fetch
-        { (data:[DSession]) in
+        { [weak self] (data:[DSession]) in
             
             guard
                 
@@ -106,12 +106,10 @@ extension MSession
             }
             
             session.country = country
+            self?.updateSession(session:session)
             
             coreData.save
-            { [weak self] in
-                
-                self?.updateSession(session:session)
-                
+            {
                 completion()
             }
         }
