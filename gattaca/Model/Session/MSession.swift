@@ -69,6 +69,14 @@ class MSession
         }
     }
     
+    func syncLocation(
+        latitude:Double,
+        longitude:Double,
+        completion:@escaping(() -> ()))
+    {
+        status = MSession.Status.syncLocation
+    }
+    
     func statusAuthLocation()
     {
         status = MSession.Status.authLocation

@@ -26,6 +26,30 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
         locationManager.stopUpdatingLocation()
     }
     
+    private func syncLocation(
+        latitude:Double,
+        longitude:Double)
+    {
+        controller?.model.session.syncLocation(
+            latitude:latitude,
+            longitude:longitude)
+        { [weak self] in
+            
+            guard
+                
+                let controller:CHome = self?.controller
+            
+            
+            else
+            {
+                return
+            }
+            
+            controller.model.loadStrategy(
+                controller:controller)
+        }
+    }
+    
     //MARK: locationManagerDelegate
     
     func locationManager(
@@ -57,9 +81,15 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
             locationManager.stopUpdatingLocation()
             locationManager.delegate = nil
             
+            let latitude:Double = currentLocation.coordinate.latitude
+            let longitude:Double = currentLocation.coordinate.longitude
+            
             DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
             { [weak self] in
                 
+                self?.syncLocation(
+                    latitude:latitude,
+                    longitude:longitude)
             }
         }
     }
