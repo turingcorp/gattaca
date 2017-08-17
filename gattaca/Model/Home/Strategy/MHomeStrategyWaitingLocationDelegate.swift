@@ -55,6 +55,7 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
         if horizontalAccuracy <= kDistanceAccuracy
         {
             locationManager.stopUpdatingLocation()
+            locationManager.delegate = nil
             
             DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
             { [weak self] in

@@ -13,5 +13,17 @@ class MHomeStrategyWaitingLocation:MHomeStrategy
     override func nextStep()
     {
         super.nextStep()
+        
+        guard
+            
+            let controller:CHome = self.controller
+        
+        else
+        {
+            return
+        }
+        
+        delegate = MHomeStrategyWaitingLocationDelegate(
+            controller:controller)
     }
 }
