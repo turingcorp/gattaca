@@ -5,9 +5,11 @@ class FDatabaseUsersItem:FDatabaseProtocol
     static let kKeyCreated:String = "created"
     static let kKeySyncstamp:String = "syncstamp"
     static let kKeyStatus:String = "status"
+    static let kKeyCountry:String = "country"
     
     var identifier:String?
     var parent:FDatabaseProtocol?
+    var country:String?
     let created:TimeInterval
     let syncstamp:TimeInterval
     let status:Int16
@@ -16,10 +18,15 @@ class FDatabaseUsersItem:FDatabaseProtocol
     {
         get
         {
-            let json:[String:Any] = [
+            var json:[String:Any] = [
                 FDatabaseUsersItem.kKeyCreated:created,
                 FDatabaseUsersItem.kKeySyncstamp:syncstamp,
                 FDatabaseUsersItem.kKeyStatus:status]
+            
+            if let country:String = self.country
+            {
+                json[FDatabaseUsersItem.kKeyCountry] = country
+            }
             
             return json
         }
@@ -50,6 +57,8 @@ class FDatabaseUsersItem:FDatabaseProtocol
         {
             return nil
         }
+        
+        country = jsonMap[FDatabaseUsersItem.kKeyCountry] as? String
         
         self.created = created
         self.syncstamp = syncstamp
