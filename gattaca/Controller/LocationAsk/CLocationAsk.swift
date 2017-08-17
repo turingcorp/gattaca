@@ -11,6 +11,11 @@ class CLocationAsk:Controller<VLocationAsk, MLocationAsk>
     
     func askLocation()
     {
-        
+        model.locationDelegate.askLocation(controller:self)
+    }
+    
+    func authorizationChanged()
+    {
+        parent()?.dismissAnimateOver(completion:nil)
     }
 }
