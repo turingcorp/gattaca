@@ -1,6 +1,6 @@
 import UIKit
 
-class CLocationDenied:Controller<VLocationAsk, MLocationAsk>
+class CLocationDenied:Controller<VLocationDenied, MLocationDenied>
 {
     override var preferredStatusBarStyle:UIStatusBarStyle
     {
