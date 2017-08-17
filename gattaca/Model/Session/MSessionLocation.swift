@@ -121,6 +121,36 @@ extension MSession
         country:String,
         completion:@escaping(() -> ()))
     {
+        guard
+            
+            let userId:String = data?.userId
         
+        else
+        {
+            return
+        }
+        
+        let users:FDatabaseUsers = FDatabaseUsers()
+        let user:FDatabaseUsersItem = FDatabaseUsersItem(
+            users:users)
+        user.identifier = userId
+        
+        guard
+            
+            let location:FDatabaseUsersItemLocation = FDatabaseUsersItemLocation(
+                user:user,
+                country:country,
+                latitude:latitude,
+                longitude:longitude)
+        
+        else
+        {
+            return
+        }
+        
+        let firebase:FDatabase = FDatabase()
+        firebase.update(model:location)
+        
+        completion()
     }
 }

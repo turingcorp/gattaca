@@ -4,6 +4,7 @@ import CoreLocation
 class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
 {
     static let kUnknownCountry:String = "unknown"
+    
     let locationManager:CLLocationManager
     private weak var controller:CHome?
     private weak var geocoder:CLGeocoder?
