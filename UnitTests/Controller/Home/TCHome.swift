@@ -6,8 +6,8 @@ class TCHome:XCTestCase
     private weak var view:UIView?
     private var session:MSession?
     private var controller:CHome?
-    private let kWait:TimeInterval = 13
-    private let kExpectation:TimeInterval = 15
+    private let kWait:TimeInterval = 2
+    private let kExpectation:TimeInterval = 3
     
     override func setUp()
     {
@@ -46,9 +46,9 @@ class TCHome:XCTestCase
                 return
             }
             
-            XCTAssertEqual(
+            XCTAssertNotEqual(
                 status,
-                MSession.Status.loaded,
+                MSession.Status.new,
                 "session is not being loaded")
         }
     }
