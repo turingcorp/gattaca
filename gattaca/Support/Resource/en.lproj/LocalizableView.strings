@@ -1,3 +1,5 @@
 "VLocationAskInfo_labelTitle"="Your location";
 "VLocationAskInfo_labelSubtitle"="We need to know where you are\nto show you people nearby";
 "VLocationAskContinue_button"="Continue";
+"VLocationDeniedInfo_labelTitle"="Can't get your location";
+"VLocationDeniedInfo_labelSubtitle"="Authorisation to access\nyour location was denied";
