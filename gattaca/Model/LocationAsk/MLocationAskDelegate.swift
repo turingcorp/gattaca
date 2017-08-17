@@ -28,10 +28,13 @@ class MLocationAskDelegate:NSObject, CLLocationManagerDelegate
         _ manager:CLLocationManager,
         didChangeAuthorization status:CLAuthorizationStatus)
     {
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            self?.controller?.authorizationChanged()
+        if status != CLAuthorizationStatus.notDetermined
+        {
+            DispatchQueue.main.async
+            { [weak self] in
+                
+                self?.controller?.authorizationChanged()
+            }
         }
     }
 }
