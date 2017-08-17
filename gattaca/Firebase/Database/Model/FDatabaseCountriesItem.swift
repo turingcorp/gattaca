@@ -6,6 +6,11 @@ class FDatabaseCountriesItem:FDatabaseProtocol
     var parent:FDatabaseProtocol?
     let users:[String]
     
+    init(identifier:String)
+    {
+        self.identifier = identifier
+    }
+    
     required init?(json:Any)
     {
         guard
