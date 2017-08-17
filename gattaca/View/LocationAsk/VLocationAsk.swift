@@ -3,6 +3,8 @@ import UIKit
 class VLocationAsk:ViewMain
 {
     private let kInfoHeight:CGFloat = 95
+    private let kContinueBottom:CGFloat = -20
+    private let kContinueHeight:CGFloat = 80
     
     required init(controller:UIViewController)
     {
@@ -34,19 +36,34 @@ class VLocationAsk:ViewMain
             colourTop:UIColor.colourGradientLight,
             colourBottom:UIColor.colourGradientDark)
         
+        let viewContinue:VLocationAskContinue = VLocationAskContinue(
+            controller:controller)
+        
         let viewInfo:VLocationAskInfo = VLocationAskInfo(
             controller:controller)
         
         addSubview(viewGradient)
         addSubview(viewInfo)
+        addSubview(viewContinue)
         
         NSLayoutConstraint.equals(
             view:viewGradient,
             toView:self)
         
         NSLayoutConstraint.bottomToBottom(
-            view:viewInfo,
+            view:viewContinue,
+            toView:self,
+            constant:kContinueBottom)
+        NSLayoutConstraint.height(
+            view:viewContinue,
+            constant:kContinueHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewContinue,
             toView:self)
+        
+        NSLayoutConstraint.bottomToTop(
+            view:viewInfo,
+            toView:viewContinue)
         NSLayoutConstraint.height(
             view:viewInfo,
             constant:kInfoHeight)
