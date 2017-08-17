@@ -22,7 +22,7 @@ class TMSession:XCTestCase
         { (error:Error?) in
             
             XCTAssertNotNil(
-                session.session,
+                session.data,
                 "model not loaded")
         }
     }

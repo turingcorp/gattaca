@@ -67,10 +67,10 @@ class TCHome:XCTestCase
         waitForExpectations(timeout:kExpectation)
         { [weak self] (error:Error?) in
             
-            let session:DSession? = self?.session?.session
+            let data:MSessionData? = self?.session?.data
             
             XCTAssertNotNil(
-                session,
+                data,
                 "failed loading session from core data")
         }
     }
