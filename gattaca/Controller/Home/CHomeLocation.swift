@@ -13,6 +13,10 @@ extension CHome
     
     func openAskDeniedLocation()
     {
+        let controller:CLocationDenied = CLocationDenied(
+            session:model.session)
         
+        parent()?.animateOver(
+            controller:controller)
     }
 }
