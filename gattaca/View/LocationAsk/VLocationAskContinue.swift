@@ -4,19 +4,21 @@ class VLocationAskContinue:
     View<VLocationAsk, MLocationAsk, CLocationAsk>
 {
     private weak var layoutButtonLeft:NSLayoutConstraint!
-    private let kButtonWidth:CGFloat = 200
+    private let kButtonWidth:CGFloat = 160
     
     required init(controller:CLocationAsk)
     {
         super.init(controller:controller)
         
+        let background:UIImageView = UIImageView()
+        background.isUserInteractionEnabled = false
+        background.translatesAutoresizingMaskIntoConstraints = false
+        background.clipsToBounds = true
+        background.contentMode = UIViewContentMode.center
+        background.image = #imageLiteral(resourceName: "assetGenericButton")
+        
         let button:UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(
-            #imageLiteral(resourceName: "assetGenericButton"),
-            for:UIControlState.normal)
-        button.imageView!.clipsToBounds = true
-        button.imageView!.contentMode = UIViewContentMode.center
         button.setTitle(
             String.localizedView(key:"VLocationAskContinue_button"),
             for:UIControlState.normal)
@@ -26,8 +28,14 @@ class VLocationAskContinue:
         button.setTitleColor(
             UIColor(white:1, alpha:0.2),
             for:UIControlState.highlighted)
+        button.titleLabel!.font = UIFont.medium(size:15)
         
+        addSubview(background)
         addSubview(button)
+        
+        NSLayoutConstraint.equals(
+            view:background,
+            toView:self)
         
         NSLayoutConstraint.equalsVertical(
             view:button,

@@ -3,7 +3,8 @@ import UIKit
 class VLocationAsk:ViewMain
 {
     private let kInfoHeight:CGFloat = 95
-    private let kContinueBottom:CGFloat = -20
+    private let kInfoBottom:CGFloat = -50
+    private let kContinueBottom:CGFloat = -40
     private let kContinueHeight:CGFloat = 80
     
     required init(controller:UIViewController)
@@ -63,7 +64,8 @@ class VLocationAsk:ViewMain
         
         NSLayoutConstraint.bottomToTop(
             view:viewInfo,
-            toView:viewContinue)
+            toView:viewContinue,
+            constant:kInfoBottom)
         NSLayoutConstraint.height(
             view:viewInfo,
             constant:kInfoHeight)
