@@ -31,4 +31,14 @@ extension DSession
         let timestamp:TimeInterval = Date().timeIntervalSince1970
         created = timestamp
     }
+    
+    func factoryData() -> MSessionData
+    {
+        let data:MSessionData = MSessionData(
+            userId:userId,
+            country:country,
+            status:status)
+        
+        return data
+    }
 }
