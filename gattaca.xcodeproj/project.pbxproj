@@ -89,6 +89,7 @@
 		DA745A7D1F45AA73005AF0DA /* VLocationDeniedIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA745A7C1F45AA73005AF0DA /* VLocationDeniedIcon.swift */; };
 		DA745A7F1F45AFD0005AF0DA /* MHomeStrategyWaitingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA745A7E1F45AFD0005AF0DA /* MHomeStrategyWaitingLocation.swift */; };
 		DA745A811F45E022005AF0DA /* MHomeStrategyWaitingLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA745A801F45E022005AF0DA /* MHomeStrategyWaitingLocationDelegate.swift */; };
+		DA745A831F461586005AF0DA /* FDatabaseUsersItemLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA745A821F461586005AF0DA /* FDatabaseUsersItemLocation.swift */; };
 		DA7CE8261F3F46CE0078A26B /* MHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */; };
 		DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */; };
 		DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */; };
@@ -269,6 +270,7 @@
 		DA745A7C1F45AA73005AF0DA /* VLocationDeniedIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLocationDeniedIcon.swift; sourceTree = "<group>"; };
 		DA745A7E1F45AFD0005AF0DA /* MHomeStrategyWaitingLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyWaitingLocation.swift; sourceTree = "<group>"; };
 		DA745A801F45E022005AF0DA /* MHomeStrategyWaitingLocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyWaitingLocationDelegate.swift; sourceTree = "<group>"; };
+		DA745A821F461586005AF0DA /* FDatabaseUsersItemLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseUsersItemLocation.swift; sourceTree = "<group>"; };
 		DA7CE8251F3F46CE0078A26B /* MHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategy.swift; sourceTree = "<group>"; };
 		DA7CE8271F3F497D0078A26B /* MHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyFactory.swift; sourceTree = "<group>"; };
 		DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeActionsShare.swift; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 				DA5F44B31F42CA8300334605 /* FDatabaseUsersItem.swift */,
 				DA5F44B51F42CAB300334605 /* FDatabaseUsersItemSyncstamp.swift */,
 				DA25DF4F1F435EB200765DCA /* FDatabaseUsersItemStatus.swift */,
+				DA745A821F461586005AF0DA /* FDatabaseUsersItemLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1494,6 +1497,7 @@
 				DA5F44B21F42CA5C00334605 /* FDatabaseUsers.swift in Sources */,
 				DA745A761F45A853005AF0DA /* VLocationDenied.swift in Sources */,
 				DA90E0E71F40B75800A37538 /* MPerk.swift in Sources */,
+				DA745A831F461586005AF0DA /* FDatabaseUsersItemLocation.swift in Sources */,
 				DA90E0E81F40B75800A37538 /* MPerkFactory.swift in Sources */,
 				DA745A7F1F45AFD0005AF0DA /* MHomeStrategyWaitingLocation.swift in Sources */,
 				DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */,
