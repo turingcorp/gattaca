@@ -6,9 +6,13 @@ class FDatabaseCountriesItem:FDatabaseProtocol
     var parent:FDatabaseProtocol?
     let users:[String]
     
-    init(identifier:String)
+    init(
+        parent:FDatabaseProtocol,
+        identifier:String)
     {
+        self.parent = parent
         self.identifier = identifier
+        users = []
     }
     
     required init?(json:Any)
