@@ -45,6 +45,23 @@ class FDatabaseCountriesItemUser:FDatabaseProtocol
     
     required init?(json:Any)
     {
-        return nil
+        guard
+        
+            let jsonMap:[String:Any] = json as? [String:Any],
+            let latitude:Double = jsonMap[
+                FDatabaseCountriesItemUser.kKeyLatitude] as? Double,
+            let longitude:Double = jsonMap[
+                FDatabaseCountriesItemUser.kKeyLongitude] as? Double,
+            let syncstamp:TimeInterval = jsonMap[
+                FDatabaseCountriesItemUser.kKeySyncstamp] as? TimeInterval
+        
+        else
+        {
+            return nil
+        }
+        
+        self.latitude = latitude
+        self.longitude = longitude
+        self.syncstamp = syncstamp
     }
 }
