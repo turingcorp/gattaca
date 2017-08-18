@@ -34,6 +34,7 @@
 		DA57AEBD1F47575F004DDAD4 /* TMHomeStrategyAuthLocationStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57AEBC1F47575F004DDAD4 /* TMHomeStrategyAuthLocationStrategyFactory.swift */; };
 		DA57AEBF1F475E97004DDAD4 /* TMHomeStrategyWaitingLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57AEBE1F475E97004DDAD4 /* TMHomeStrategyWaitingLocation.swift */; };
 		DA57AEC11F475FCF004DDAD4 /* TMHomeStrategyWaitingLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57AEC01F475FCF004DDAD4 /* TMHomeStrategyWaitingLocationDelegate.swift */; };
+		DA57AEC41F4765CA004DDAD4 /* CLPlacemarkCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57AEC31F4765CA004DDAD4 /* CLPlacemarkCountry.swift */; };
 		DA5F44A71F42C98800334605 /* FDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44A61F42C98800334605 /* FDatabase.swift */; };
 		DA5F44A91F42C99100334605 /* FDatabaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44A81F42C99100334605 /* FDatabaseFactory.swift */; };
 		DA5F44AB1F42C9A100334605 /* FDatabaseSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44AA1F42C9A100334605 /* FDatabaseSnapshot.swift */; };
@@ -232,6 +233,7 @@
 		DA57AEBC1F47575F004DDAD4 /* TMHomeStrategyAuthLocationStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeStrategyAuthLocationStrategyFactory.swift; sourceTree = "<group>"; };
 		DA57AEBE1F475E97004DDAD4 /* TMHomeStrategyWaitingLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeStrategyWaitingLocation.swift; sourceTree = "<group>"; };
 		DA57AEC01F475FCF004DDAD4 /* TMHomeStrategyWaitingLocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeStrategyWaitingLocationDelegate.swift; sourceTree = "<group>"; };
+		DA57AEC31F4765CA004DDAD4 /* CLPlacemarkCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLPlacemarkCountry.swift; sourceTree = "<group>"; };
 		DA5F44A61F42C98800334605 /* FDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabase.swift; sourceTree = "<group>"; };
 		DA5F44A81F42C99100334605 /* FDatabaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseFactory.swift; sourceTree = "<group>"; };
 		DA5F44AA1F42C9A100334605 /* FDatabaseSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseSnapshot.swift; sourceTree = "<group>"; };
@@ -501,6 +503,14 @@
 				DA57AEB01F473857004DDAD4 /* TDSession.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DA57AEC21F47659B004DDAD4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				DA57AEC31F4765CA004DDAD4 /* CLPlacemarkCountry.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		DA5F44A21F42C97D00334605 /* Firebase */ = {
@@ -858,6 +868,7 @@
 		DA7CE8421F3F53DB0078A26B /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA57AEC21F47659B004DDAD4 /* Tools */,
 				DABEF9331F430B5D00420DF0 /* Firebase */,
 				DA746A321F41AED1000473A1 /* Support */,
 				DA90E0BA1F40990B00A37538 /* Controller */,
@@ -1584,6 +1595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA57AEC41F4765CA004DDAD4 /* CLPlacemarkCountry.swift in Sources */,
 				DA57AEB91F4752CF004DDAD4 /* TMHomeStrategyAuthLocation.swift in Sources */,
 				DABEF93B1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift in Sources */,
 				DA25DF4E1F4359DA00765DCA /* TFDatabaseUsersItem.swift in Sources */,
