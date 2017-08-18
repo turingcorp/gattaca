@@ -3,7 +3,37 @@ import XCTest
 
 class TDSession:XCTestCase
 {
+    private let kUserId:String = "lorem ipsum"
+    private let kCountry:String = "banana republic"
     private let kWaitExpectation:TimeInterval = 2
+    
+    //MARK: private
+    
+    private func factoryData(session:DSession)
+    {
+        session.userId = kUserId
+        session.country = kCountry
+        session.status = DSession.Status.banned
+        
+        let data:MSessionData = session.factoryData()
+        
+        XCTAssertEqual(
+            data.userId,
+            kUserId,
+            "failed assigning user id")
+        
+        XCTAssertEqual(
+            data.country,
+            kCountry,
+            "failed assigning country")
+        
+        XCTAssertEqual(
+            data.status,
+            DSession.Status.banned,
+            "failed assigning status")
+    }
+    
+    //MARK: internal
     
     func testInitialValues()
     {
@@ -101,6 +131,45 @@ class TDSession:XCTestCase
                 session.status,
                 DSession.Status.active,
                 "failed assigning status")
+        }
+    }
+    
+    func testFactoryData()
+    {
+        var session:DSession?
+        
+        guard
+            
+            let database:Database = Database(bundle:nil)
+            
+        else
+        {
+            return
+        }
+        
+        let createExpectation:XCTestExpectation = expectation(
+            description:"core data create model")
+        
+        database.create
+        { (model:DSession) in
+                
+            session = model
+            createExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { [weak self] (error:Error?) in
+            
+            guard
+                
+                let session:DSession = session
+                
+            else
+            {
+                return
+            }
+            
+            self?.factoryData(session:session)
         }
     }
 }
