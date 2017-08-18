@@ -166,6 +166,7 @@
 		DAF045941F392C520003C2EF /* ExtensionURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045931F392C520003C2EF /* ExtensionURLResponse.swift */; };
 		DAF1C1141F3947A300820417 /* ExtensionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1C1131F3947A300820417 /* ExtensionData.swift */; };
 		DAFC106B1F46CE47008C1DA1 /* MHomeStrategyReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC106A1F46CE47008C1DA1 /* MHomeStrategyReady.swift */; };
+		DAFC106D1F46CEE9008C1DA1 /* MHomeStrategySyncLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC106C1F46CEE9008C1DA1 /* MHomeStrategySyncLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -360,6 +361,7 @@
 		DAF045931F392C520003C2EF /* ExtensionURLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionURLResponse.swift; sourceTree = "<group>"; };
 		DAF1C1131F3947A300820417 /* ExtensionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionData.swift; sourceTree = "<group>"; };
 		DAFC106A1F46CE47008C1DA1 /* MHomeStrategyReady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyReady.swift; sourceTree = "<group>"; };
+		DAFC106C1F46CEE9008C1DA1 /* MHomeStrategySyncLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategySyncLocation.swift; sourceTree = "<group>"; };
 		FEE6B168EBA58734F1065B66 /* Pods_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -810,6 +812,7 @@
 				DAB3A3241F444AE2001981F4 /* MHomeStrategyAuthLocationStrategyUnknown.swift */,
 				DA745A7E1F45AFD0005AF0DA /* MHomeStrategyWaitingLocation.swift */,
 				DA745A801F45E022005AF0DA /* MHomeStrategyWaitingLocationDelegate.swift */,
+				DAFC106C1F46CEE9008C1DA1 /* MHomeStrategySyncLocation.swift */,
 				DAFC106A1F46CE47008C1DA1 /* MHomeStrategyReady.swift */,
 			);
 			path = Strategy;
@@ -1504,6 +1507,7 @@
 				DA90E0E21F40B75800A37538 /* MGifStrategy.swift in Sources */,
 				DA90E0EA1F40B75800A37538 /* MPerkDomainProtocol.swift in Sources */,
 				DA745A701F45917E005AF0DA /* VLocationAskIcon.swift in Sources */,
+				DAFC106D1F46CEE9008C1DA1 /* MHomeStrategySyncLocation.swift in Sources */,
 				DAB3A3381F44617B001981F4 /* VLocationAskInfo.swift in Sources */,
 				DA25DF5D1F43836800765DCA /* DatabaseFactory.swift in Sources */,
 				DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */,
