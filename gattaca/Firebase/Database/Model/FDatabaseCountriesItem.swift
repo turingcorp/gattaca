@@ -7,11 +7,11 @@ class FDatabaseCountriesItem:FDatabaseProtocol
     let users:[String]
     
     init(
-        parent:FDatabaseProtocol,
+        countries:FDatabaseProtocol,
         identifier:String)
     {
-        self.parent = parent
         self.identifier = identifier
+        parent = countries
         users = []
     }
     

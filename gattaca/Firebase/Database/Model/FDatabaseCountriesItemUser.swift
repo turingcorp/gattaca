@@ -25,16 +25,21 @@ class FDatabaseCountriesItemUser:FDatabaseProtocol
         }
     }
     
-    init(
-        parent:FDatabaseProtocol,
+    init?(
+        country:FDatabaseProtocol,
         identifier:String,
         latitude:Double,
         longitude:Double)
     {
-        self.parent = parent
+        if country.identifier == nil
+        {
+            return nil
+        }
+        
         self.identifier = identifier
         self.latitude = latitude
         self.longitude = longitude
+        self.parent = country
         syncstamp = Date().timeIntervalSince1970
     }
     
