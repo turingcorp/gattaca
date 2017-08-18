@@ -146,7 +146,7 @@ class TFDatabase:XCTestCase
         }
     }
     
-    func testRemove()
+    func testRemoveModel()
     {
         var firebaseUser:FDatabaseUsersItem?
         let users:FDatabaseUsers = FDatabaseUsers()
@@ -183,7 +183,7 @@ class TFDatabase:XCTestCase
         }
         
         waitForExpectations(timeout:kWaitExpectation)
-        { [weak self] (error:Error?) in
+        { (error:Error?) in
             
             XCTAssertNil(
                 firebaseUser,
