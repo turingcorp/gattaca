@@ -123,14 +123,27 @@ class TMHomeStrategyAuthLocationStrategyFactory:XCTestCase
             "failed factory for restricted")
     }
     
-    /*
-    
-     let map:[CLAuthorizationStatus:MHomeStrategyAuthLocationStrategy.Type] = [
-     CLAuthorizationStatus.authorizedAlways:MHomeStrategyAuthLocationStrategyGranted.self,
-     CLAuthorizationStatus.authorizedWhenInUse:MHomeStrategyAuthLocationStrategyGranted.self,
-     CLAuthorizationStatus.notDetermined:MHomeStrategyAuthLocationStrategyUnknown.self,
-     CLAuthorizationStatus.restricted:MHomeStrategyAuthLocationStrategyDenied.self,
-     CLAuthorizationStatus.denied:MHomeStrategyAuthLocationStrategyDenied.self]
-     
-    */
+    func testDenied()
+    {
+        guard
+            
+            let controller:CHome = self.controller
+            
+        else
+        {
+            return
+        }
+        
+        let status:CLAuthorizationStatus = CLAuthorizationStatus.denied
+        
+        let strategy:MHomeStrategyAuthLocationStrategy? = MHomeStrategyAuthLocationStrategy.factoryStrategy(
+            controller:controller,
+            status:status)
+        
+        let strategyDenied:MHomeStrategyAuthLocationStrategyDenied? = strategy as? MHomeStrategyAuthLocationStrategyDenied
+        
+        XCTAssertNotNil(
+            strategyDenied,
+            "failed factory for denied")
+    }
 }
