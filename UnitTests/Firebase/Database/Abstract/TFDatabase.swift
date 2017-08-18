@@ -190,4 +190,47 @@ class TFDatabase:XCTestCase
                 "failed removing user")
         }
     }
+    
+    func testRemoveById()
+    {
+        var firebaseUser:FDatabaseUsersItem?
+        let users:FDatabaseUsers = FDatabaseUsers()
+        let user:FDatabaseUsersItem = FDatabaseUsersItem(
+            users:users)
+        
+        guard
+            
+            let data:Any = user.json,
+            let userId:String = firebase?.create(
+                parent:users,
+                data:data)
+            
+        else
+        {
+            return
+        }
+        
+        firebase?.remove(parent:users, identifier:userId)
+        
+        let removeExpectation:XCTestExpectation = expectation(
+            description:"remove by id")
+        
+        firebase?.load(
+            parent:users,
+            identifier:userId)
+        { (loadedUser:FDatabaseUsersItem?) in
+            
+            firebaseUser = loadedUser
+            
+            removeExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            XCTAssertNil(
+                firebaseUser,
+                "failed removing user")
+        }
+    }
 }
