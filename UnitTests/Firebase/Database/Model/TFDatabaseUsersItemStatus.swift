@@ -62,6 +62,10 @@ class TFDatabaseUsersItemStatus:XCTestCase
         XCTAssertNotNil(
             status,
             "failed creating status")
+        
+        XCTAssertNotNil(
+            status?.parent,
+            "parent should not be nil")
     }
     
     func testIdentifier()
