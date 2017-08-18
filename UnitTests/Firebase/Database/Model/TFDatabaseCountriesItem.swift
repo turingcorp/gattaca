@@ -90,14 +90,14 @@ class TFDatabaseCountriesItem:XCTestCase
             XCTAssertEqual(
                 userA.identifier,
                 kUserA,
-                "failed parsing user")
+                "failed assigning identifier")
             
             let userB:FDatabaseCountriesItemUser = model.users[1]
             
             XCTAssertEqual(
                 userB.identifier,
                 kUserB,
-                "failed parsing user")
+                "failed assigning identifier")
         }
     }
 }

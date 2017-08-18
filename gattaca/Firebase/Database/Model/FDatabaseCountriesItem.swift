@@ -42,6 +42,7 @@ class FDatabaseCountriesItem:FDatabaseProtocol
                 continue
             }
             
+            user.identifier = userId
             users.append(user)
         }
         
