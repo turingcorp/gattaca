@@ -29,8 +29,7 @@ extension DSession
     
     func initialValues()
     {
-        let timestamp:TimeInterval = Date().timeIntervalSince1970
-        created = timestamp
+        created = Date().timeIntervalSince1970
     }
     
     func factoryData() -> MSessionData
