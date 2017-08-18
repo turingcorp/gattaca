@@ -52,4 +52,55 @@ class TDSession:XCTestCase
                 "failed assigning initial values")
         }
     }
+    
+    func testStatus()
+    {
+        var session:DSession?
+        
+        guard
+            
+            let database:Database = Database(bundle:nil)
+            
+        else
+        {
+            return
+        }
+        
+        let createExpectation:XCTestExpectation = expectation(
+            description:"core data create model")
+        
+        database.create
+        { (model:DSession) in
+            
+            session = model
+            createExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            guard
+                
+                let session:DSession = session
+                
+            else
+            {
+                return
+            }
+            
+            session.status = DSession.Status.banned
+            
+            XCTAssertEqual(
+                session.rawStatus,
+                DSession.Status.banned.rawValue,
+                "failed assigning raw status")
+            
+            session.rawStatus = DSession.Status.active.rawValue
+            
+            XCTAssertEqual(
+                session.status,
+                DSession.Status.active,
+                "failed assigning status")
+        }
+    }
 }
