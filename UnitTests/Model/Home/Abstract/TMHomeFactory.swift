@@ -1,7 +1,7 @@
 import XCTest
 @testable import gattaca
 
-class THomeFactory:XCTestCase
+class TMHomeFactory:XCTestCase
 {
     private let kCountActions:Int = 3
     private let kIndexHate:Int = 0

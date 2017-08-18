@@ -27,6 +27,7 @@
 		DA4DA38A1F420B070047D5D7 /* DSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA3891F420B070047D5D7 /* DSession.swift */; };
 		DA4DA38C1F420B3F0047D5D7 /* DSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA38B1F420B3F0047D5D7 /* DSessionStatus.swift */; };
 		DA57AEB11F473857004DDAD4 /* TDSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57AEB01F473857004DDAD4 /* TDSession.swift */; };
+		DA57AEB31F473E77004DDAD4 /* TMHomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57AEB21F473E77004DDAD4 /* TMHomeFactory.swift */; };
 		DA5F44A71F42C98800334605 /* FDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44A61F42C98800334605 /* FDatabase.swift */; };
 		DA5F44A91F42C99100334605 /* FDatabaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44A81F42C99100334605 /* FDatabaseFactory.swift */; };
 		DA5F44AB1F42C9A100334605 /* FDatabaseSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44AA1F42C9A100334605 /* FDatabaseSnapshot.swift */; };
@@ -82,7 +83,6 @@
 		DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1931F38E5D500C13634 /* VToast.swift */; };
 		DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1951F38E5D500C13634 /* VHome.swift */; };
 		DA6F65171F438B13005EA020 /* TMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F65161F438B13005EA020 /* TMRequest.swift */; };
-		DA6F651B1F438E3E005EA020 /* THomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F651A1F438E3E005EA020 /* THomeFactory.swift */; };
 		DA6F651E1F439187005EA020 /* TMHomeStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F651D1F439187005EA020 /* TMHomeStrategyFactory.swift */; };
 		DA745A701F45917E005AF0DA /* VLocationAskIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA745A6F1F45917E005AF0DA /* VLocationAskIcon.swift */; };
 		DA745A721F459F1A005AF0DA /* MLocationAskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA745A711F459F1A005AF0DA /* MLocationAskDelegate.swift */; };
@@ -219,6 +219,7 @@
 		DA4DA3891F420B070047D5D7 /* DSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSession.swift; sourceTree = "<group>"; };
 		DA4DA38B1F420B3F0047D5D7 /* DSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSessionStatus.swift; sourceTree = "<group>"; };
 		DA57AEB01F473857004DDAD4 /* TDSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDSession.swift; sourceTree = "<group>"; };
+		DA57AEB21F473E77004DDAD4 /* TMHomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeFactory.swift; sourceTree = "<group>"; };
 		DA5F44A61F42C98800334605 /* FDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabase.swift; sourceTree = "<group>"; };
 		DA5F44A81F42C99100334605 /* FDatabaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseFactory.swift; sourceTree = "<group>"; };
 		DA5F44AA1F42C9A100334605 /* FDatabaseSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseSnapshot.swift; sourceTree = "<group>"; };
@@ -274,7 +275,6 @@
 		DA68F1931F38E5D500C13634 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
 		DA68F1951F38E5D500C13634 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DA6F65161F438B13005EA020 /* TMRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMRequest.swift; sourceTree = "<group>"; };
-		DA6F651A1F438E3E005EA020 /* THomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THomeFactory.swift; sourceTree = "<group>"; };
 		DA6F651D1F439187005EA020 /* TMHomeStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeStrategyFactory.swift; sourceTree = "<group>"; };
 		DA745A6F1F45917E005AF0DA /* VLocationAskIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLocationAskIcon.swift; sourceTree = "<group>"; };
 		DA745A711F459F1A005AF0DA /* MLocationAskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLocationAskDelegate.swift; sourceTree = "<group>"; };
@@ -776,7 +776,7 @@
 		DA6F65191F438E31005EA020 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
-				DA6F651A1F438E3E005EA020 /* THomeFactory.swift */,
+				DA57AEB21F473E77004DDAD4 /* TMHomeFactory.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1570,6 +1570,7 @@
 				DA25DF4E1F4359DA00765DCA /* TFDatabaseUsersItem.swift in Sources */,
 				DA8EDC571F46D9AF00301A9B /* TFDatabaseUsersItemLocation.swift in Sources */,
 				DABEF93D1F43447800420DF0 /* TFDatabaseUsers.swift in Sources */,
+				DA57AEB31F473E77004DDAD4 /* TMHomeFactory.swift in Sources */,
 				DA25DF601F43879300765DCA /* TDatabase.swift in Sources */,
 				DA6F65171F438B13005EA020 /* TMRequest.swift in Sources */,
 				DA57AEB11F473857004DDAD4 /* TDSession.swift in Sources */,
@@ -1581,7 +1582,6 @@
 				DA47EAEF1F46EECB00D8D1F6 /* TFDatabaseCountriesItem.swift in Sources */,
 				DA90E0BE1F40991D00A37538 /* TCHome.swift in Sources */,
 				DA90E0F41F40B79E00A37538 /* TMSession.swift in Sources */,
-				DA6F651B1F438E3E005EA020 /* THomeFactory.swift in Sources */,
 				DA25DF521F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift in Sources */,
 				DA47EAED1F46EE4100D8D1F6 /* TFDatabaseCountries.swift in Sources */,
 				DA47EAF11F47003000D8D1F6 /* TFDatabaseCountriesItemUser.swift in Sources */,
