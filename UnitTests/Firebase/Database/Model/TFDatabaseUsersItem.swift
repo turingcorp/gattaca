@@ -132,6 +132,10 @@ class TFDatabaseUsersItem:XCTestCase
         XCTAssertNotNil(
             jsonMap?[FDatabaseUsersItem.kKeyStatus],
             "json doesn't contain status")
+        
+        XCTAssertNil(
+            jsonMap?[FDatabaseUsersItem.kKeyLocation],
+            "json shouldn't contain location")
     }
     
     func testInitJson()
