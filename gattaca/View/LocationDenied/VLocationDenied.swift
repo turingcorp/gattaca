@@ -3,7 +3,7 @@ import UIKit
 class VLocationDenied:ViewMain
 {
     private let kInfoHeight:CGFloat = 90
-    private let kInfoBottom:CGFloat = -160
+    private let kInfoBottom:CGFloat = -140
     private let kIconTop:CGFloat = 50
     private let kIconHeight:CGFloat = 300
     

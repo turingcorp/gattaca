@@ -3,7 +3,7 @@ import UIKit
 class VLocationAsk:ViewMain
 {
     private let kInfoHeight:CGFloat = 90
-    private let kInfoBottom:CGFloat = -60
+    private let kInfoBottom:CGFloat = -40
     private let kContinueBottom:CGFloat = -30
     private let kContinueHeight:CGFloat = 70
     private let kIconTop:CGFloat = 50

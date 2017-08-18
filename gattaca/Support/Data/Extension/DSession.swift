@@ -10,7 +10,8 @@ extension DSession
         {
             guard
             
-                let status:DSession.Status = DSession.Status(rawValue:rawStatus)
+                let status:DSession.Status = DSession.Status(
+                    rawValue:rawStatus)
             
             else
             {
