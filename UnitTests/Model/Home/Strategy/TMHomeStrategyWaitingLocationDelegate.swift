@@ -32,7 +32,7 @@ class TMHomeStrategyWaitingLocationDelegate:XCTestCase
             "location manager didn't start")
     }
     
-    func testCountryCode()
+    func testNoPlacemarks()
     {
         guard
         
@@ -42,17 +42,14 @@ class TMHomeStrategyWaitingLocationDelegate:XCTestCase
         {
             return
         }
- 
-        let placeMark:CLPlacemark = clp
-        let placeMarks:[CLPlacemark] = [
-            placeMark]
-        print(placeMark)
+        
+        let placeMarks:[CLPlacemark] = []
         let country:String = delegate.countryForPlacemarks(
             placemarks:placeMarks)
         
         XCTAssertEqual(
             country,
-            CLPlacemarkCountry.kCountryCode,
+            MHomeStrategyWaitingLocationDelegate.kUnknownCountry,
             "failed to get country iso")
     }
 }
