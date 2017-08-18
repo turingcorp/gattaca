@@ -5,9 +5,9 @@ class MSession
     var status:MSession.Status
     private(set) var data:MSessionData?
     
-    init(status:MSession.Status)
+    init()
     {
-        self.status = status
+        status = MSession.Status.new
     }
     
     //MARK: internal
