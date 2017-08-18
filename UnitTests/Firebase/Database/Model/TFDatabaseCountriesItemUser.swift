@@ -103,7 +103,7 @@ class TFDatabaseCountriesItemUser:XCTestCase
         
         XCTAssertEqual(
             user?.longitude,
-            kLatitude,
+            kLongitude,
             "failed parsing longitude")
         
         guard
