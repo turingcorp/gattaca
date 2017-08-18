@@ -52,7 +52,7 @@ extension MSession
         if storedCountry != country
         {
             removeCountryUser(
-                country:country,
+                country:storedCountry,
                 userId:userId)
         }
     }

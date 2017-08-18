@@ -84,7 +84,7 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
         controller?.model.session.syncLocation(
             latitude:latitude,
             longitude:longitude,
-            country:country)
+            country:"ssh")
         { [weak self] in
             
             guard

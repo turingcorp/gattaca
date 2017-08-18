@@ -39,8 +39,9 @@ extension FDatabaseProtocol
     func child(identifier:String) -> String
     {
         var childPath:String = path
+        childPath.append("/")
         childPath.append(identifier)
         
-        return path
+        return childPath
     }
 }
