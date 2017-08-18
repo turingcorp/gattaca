@@ -2,7 +2,7 @@ import Foundation
 
 class MHomeStrategyWaitingLocation:MHomeStrategy
 {
-    private var delegate:MHomeStrategyWaitingLocationDelegate?
+    private(set) var delegate:MHomeStrategyWaitingLocationDelegate?
     
     deinit
     {
