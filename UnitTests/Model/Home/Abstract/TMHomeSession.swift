@@ -36,4 +36,27 @@ class TMHomeSession:XCTestCase
             controller.model.strategy,
             "strategy should be already loaded")
     }
+    
+    func testAuthLocation()
+    {
+        guard
+        
+            let controller:CHome = self.controller
+        
+        else
+        {
+            return
+        }
+        
+        controller.model.authLocation(controller:controller)
+        
+        XCTAssertEqual(
+            controller.model.session.status,
+            MSession.Status.authLocation,
+            "status should be auth location")
+        
+        XCTAssertNotNil(
+            controller.model.strategy,
+            "strategy should be already loaded")
+    }
 }
