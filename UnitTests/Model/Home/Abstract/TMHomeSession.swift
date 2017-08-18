@@ -10,7 +10,7 @@ class TMHomeSession:XCTestCase
     {
         super.setUp()
         
-        let session:MSession = MSession(status:MSession.Status.new)
+        let session:MSession = MSession()
         self.session = session
         controller = CHome(session:session)
     }

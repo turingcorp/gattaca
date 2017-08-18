@@ -12,7 +12,7 @@ class TMSession:XCTestCase
         let sessionExpectation:XCTestExpectation = expectation(
             description:"session loaded")
         
-        let session:MSession = MSession(status:MSession.Status.new)
+        let session:MSession = MSession()
         session.load
         {
             sessionExpectation.fulfill()

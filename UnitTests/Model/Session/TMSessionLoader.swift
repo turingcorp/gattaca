@@ -26,7 +26,7 @@ class TMSessionLoader:XCTestCase
             coreData,
             "failed creating core data")
         
-        let session:MSession = MSession(status:MSession.Status.new)
+        let session:MSession = MSession()
         session.create(coreData:coreData)
         { (session:DSession) in
             
@@ -63,7 +63,7 @@ class TMSessionLoader:XCTestCase
             coreData,
             "failed creating coreData")
         
-        let session:MSession = MSession(status:MSession.Status.new)
+        let session:MSession = MSession()
         session.load(coreData:coreData)
         { (session:DSession) in
             
