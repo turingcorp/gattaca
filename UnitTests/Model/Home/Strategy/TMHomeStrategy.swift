@@ -74,6 +74,12 @@ class TMHomeStrategy:XCTestCase
         session.status = MSession.Status.ready
         strategy.delayAndRefresh()
         
+        let beforeDelayStrategy:MHomeStrategyReady? = controller?.model.strategy as? MHomeStrategyReady
+        
+        XCTAssertNil(
+            beforeDelayStrategy,
+            "refresh strategy didn't delay")
+        
         DispatchQueue.main.asyncAfter(
             deadline:DispatchTime.now() + kAsyncWait)
         { [weak self] in
@@ -81,12 +87,6 @@ class TMHomeStrategy:XCTestCase
             refreshExpectation.fulfill()
             newStrategy = self?.controller?.model.strategy as? MHomeStrategyReady
         }
-        
-        let beforeDelayStrategy:MHomeStrategyReady? = controller?.model.strategy as? MHomeStrategyReady
-        
-        XCTAssertNil(
-            beforeDelayStrategy,
-            "refresh strategy didn't delay")
         
         waitForExpectations(timeout:kWaitExpectation)
         { (error:Error?) in
