@@ -70,7 +70,7 @@ extension MSession
             country:country)
         { [weak self] in
             
-            self?.firebaseLocation(
+            self?.firebaseUserLocation(
                 latitude:latitude,
                 longitude:longitude,
                 country:country)
@@ -115,7 +115,7 @@ extension MSession
         }
     }
     
-    func firebaseLocation(
+    func firebaseUserLocation(
         latitude:Double,
         longitude:Double,
         country:String,
@@ -144,6 +144,43 @@ extension MSession
                 longitude:longitude)
         
         else
+        {
+            return
+        }
+        
+        let firebase:FDatabase = FDatabase()
+        firebase.update(model:location)
+        
+        completion()
+    }
+    
+    func firebaseCountryUser(
+        country:String,
+        completion:@escaping(() -> ()))
+    {
+        guard
+            
+            let userId:String = data?.userId
+            
+        else
+        {
+            return
+        }
+        
+        let users:FDatabaseUsers = FDatabaseUsers()
+        let user:FDatabaseUsersItem = FDatabaseUsersItem(
+            users:users)
+        user.identifier = userId
+        
+        guard
+            
+            let location:FDatabaseUsersItemLocation = FDatabaseUsersItemLocation(
+                user:user,
+                country:country,
+                latitude:latitude,
+                longitude:longitude)
+            
+            else
         {
             return
         }
