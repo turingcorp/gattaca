@@ -3,16 +3,26 @@ import XCTest
 
 class TFDatabaseCountriesItem:XCTestCase
 {
-    private var country:FDatabaseCountriesItem?
     private let kCountry:String = "banana republic"
     
-    override func setUp()
+    func testInit()
     {
-        super.setUp()
-        
         let countries:FDatabaseCountries = FDatabaseCountries()
-        country = FDatabaseCountriesItem(
+        let country:FDatabaseCountriesItem = FDatabaseCountriesItem(
             countries:countries,
             identifier:kCountry)
+        
+        XCTAssertNotNil(
+            country.identifier,
+            "identifier should not be nil")
+        
+        XCTAssertNotNil(
+            country.parent,
+            "parent should not be nil")
+        
+        XCTAssertLessThan(
+            country.users.count,
+            1,
+            "there should not be users")
     }
 }
