@@ -19,7 +19,7 @@ class FDatabaseCountriesItem:FDatabaseProtocol
     {
         guard
             
-        let rawUsers:[String:Any] = json as? [String:AnyObject]
+            let rawUsers:[String:Any] = json as? [String:AnyObject]
         
         else
         {
