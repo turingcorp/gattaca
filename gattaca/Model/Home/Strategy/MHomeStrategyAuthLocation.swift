@@ -3,7 +3,7 @@ import CoreLocation
 
 class MHomeStrategyAuthLocation:MHomeStrategy
 {
-    private var strategy:MHomeStrategyAuthLocationStrategy?
+    private(set) var strategy:MHomeStrategyAuthLocationStrategy?
     
     override func controllerDidAppear(controller:CHome)
     {
