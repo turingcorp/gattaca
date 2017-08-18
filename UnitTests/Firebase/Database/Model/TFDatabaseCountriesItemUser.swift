@@ -26,6 +26,19 @@ class TFDatabaseCountriesItemUser:XCTestCase
             longitude:kLongitude)
     }
     
+    //MARK: private
+    
+    private func factoryJson() -> Any
+    {
+        let syncstamp:TimeInterval = Date().timeIntervalSince1970
+        let json:[String:Any] = [
+            FDatabaseCountriesItemUser.kKeyLatitude:kLatitude,
+            FDatabaseCountriesItemUser.kKeyLongitude:kLongitude,
+            FDatabaseCountriesItemUser.kKeySyncstamp:syncstamp]
+        
+        return json
+    }
+    
     //MARK: internal
     
     func testInit()
@@ -62,5 +75,50 @@ class TFDatabaseCountriesItemUser:XCTestCase
             userSyncstamp,
             initialSyncstamp,
             "failed assigning syncstamp")
+    }
+    
+    func testInitJson()
+    {
+        let json:Any = factoryJson()
+        
+        let user:FDatabaseCountriesItemUser? = FDatabaseCountriesItemUser(
+            json:json)
+        
+        XCTAssertNotNil(
+            user,
+            "failed creating user from json")
+        
+        XCTAssertNil(
+            user?.identifier,
+            "identifier should be nil")
+        
+        XCTAssertNil(
+            user?.parent,
+            "parent should be nil")
+        
+        XCTAssertEqual(
+            user?.latitude,
+            kLatitude,
+            "failed parsing latitude")
+        
+        XCTAssertEqual(
+            user?.longitude,
+            kLatitude,
+            "failed parsing longitude")
+        
+        guard
+            
+            let userSyncstamp:TimeInterval = user?.syncstamp,
+            let initialSyncstamp:TimeInterval = syncstamp
+            
+        else
+        {
+            return
+        }
+        
+        XCTAssertGreaterThanOrEqual(
+            userSyncstamp,
+            initialSyncstamp,
+            "failed parsing syncstamp")
     }
 }
