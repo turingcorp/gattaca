@@ -8,4 +8,6 @@ protocol FDatabaseProtocol
     var json:Any? { get }
     
     init?(json:Any)
+    
+    func child(identifier:String) -> String
 }
