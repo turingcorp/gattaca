@@ -145,4 +145,49 @@ class TFDatabase:XCTestCase
                 "failed updating syncstamp")
         }
     }
+    
+    func testRemove()
+    {
+        var firebaseUser:FDatabaseUsersItem?
+        let users:FDatabaseUsers = FDatabaseUsers()
+        let user:FDatabaseUsersItem = FDatabaseUsersItem(
+            users:users)
+        
+        guard
+            
+            let data:Any = user.json
+            
+        else
+        {
+            return
+        }
+        
+        let userId:String? = firebase?.create(
+            parent:users,
+            data:data)
+        user.identifier = userId
+        
+        firebase?.remove(model:user)
+        
+        let removeExpectation:XCTestExpectation = expectation(
+            description:"remove model")
+        
+        firebase?.load(
+            parent:users,
+            identifier:userId)
+        { (loadedUser:FDatabaseUsersItem?) in
+            
+            firebaseUser = loadedUser
+            
+            removeExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { [weak self] (error:Error?) in
+            
+            XCTAssertNil(
+                firebaseUser,
+                "failed removing user")
+        }
+    }
 }
