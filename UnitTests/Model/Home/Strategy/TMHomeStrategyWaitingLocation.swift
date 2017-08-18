@@ -6,6 +6,8 @@ class TMHomeStrategyWaitingLocation:XCTestCase
     private let kAsyncWait:TimeInterval = 1
     private let kWaitExpectation:TimeInterval = 2
     
+    //MARK: internal
+    
     func testDelegate()
     {
         let session:MSession = MSession()
