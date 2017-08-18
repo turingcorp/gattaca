@@ -106,6 +106,8 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
     
     func countryForPlacemarks(placemarks:[CLPlacemark]?) -> String
     {
+        print(placemarks)
+        
         guard
             
             let placemark:CLPlacemark = placemarks?.last,
