@@ -10,6 +10,14 @@ class FDatabase
         reference = FirebaseDatabase.Database.database().reference()
     }
     
+    //MARK: private
+    
+    private func remove(path:String)
+    {
+        let reference:DatabaseReference = self.reference.child(path)
+        reference.removeValue()
+    }
+    
     //MARK: internal
     
     func create(
@@ -67,7 +75,12 @@ class FDatabase
     func remove(model:FDatabaseProtocol)
     {
         let path:String = model.path
-        let reference:DatabaseReference = self.reference.child(path)
-        reference.removeValue()
+        remove(path:path)
+    }
+    
+    func remove(parent:FDatabaseProtocol, identifier:String)
+    {
+        let path:String = parent.child(identifier:identifier)
+        remove(path:path)
     }
 }
