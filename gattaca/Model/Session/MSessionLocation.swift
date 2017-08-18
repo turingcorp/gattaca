@@ -32,7 +32,9 @@ extension MSession
             latitude:latitude,
             longitude:longitude,
             country:country)
-        {
+        { [weak self] in
+            
+            self?.status = MSession.Status.ready
             completion()
         }
     }
