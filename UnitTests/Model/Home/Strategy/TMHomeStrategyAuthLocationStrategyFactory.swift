@@ -99,6 +99,30 @@ class TMHomeStrategyAuthLocationStrategyFactory:XCTestCase
             "failed factory for not determined")
     }
     
+    func testRestricted()
+    {
+        guard
+            
+            let controller:CHome = self.controller
+            
+        else
+        {
+            return
+        }
+        
+        let status:CLAuthorizationStatus = CLAuthorizationStatus.restricted
+        
+        let strategy:MHomeStrategyAuthLocationStrategy? = MHomeStrategyAuthLocationStrategy.factoryStrategy(
+            controller:controller,
+            status:status)
+        
+        let strategyRestricted:MHomeStrategyAuthLocationStrategyDenied? = strategy as? MHomeStrategyAuthLocationStrategyDenied
+        
+        XCTAssertNotNil(
+            strategyRestricted,
+            "failed factory for restricted")
+    }
+    
     /*
     
      let map:[CLAuthorizationStatus:MHomeStrategyAuthLocationStrategy.Type] = [
