@@ -21,7 +21,7 @@ class FDatabaseUsersItemLocation:FDatabaseProtocol
     
     init?(
         user:FDatabaseUsersItem,
-        country:String,)
+        country:String)
     {
         if user.identifier == nil
         {
