@@ -10,9 +10,10 @@ extension MHomeStrategy
             MSession.Status.new:MHomeStrategyNew.self,
             MSession.Status.loading:MHomeStrategyLoading.self,
             MSession.Status.sync:MHomeStrategySync.self,
+            MSession.Status.loaded:MHomeStrategyLoaded.self,
             MSession.Status.authLocation:MHomeStrategyAuthLocation.self,
             MSession.Status.waitingLocation:MHomeStrategyWaitingLocation.self,
-            MSession.Status.loaded:MHomeStrategyLoaded.self,
+            MSession.Status.syncLocation:MHomeStrategySyncLocation.self,
             MSession.Status.ready:MHomeStrategyReady.self]
         
         return map
