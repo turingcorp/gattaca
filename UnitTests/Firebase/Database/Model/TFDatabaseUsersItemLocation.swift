@@ -65,6 +65,10 @@ class TFDatabaseUsersItemLocation:XCTestCase
         XCTAssertNotNil(
             location,
             "failed creating location")
+        
+        XCTAssertNotNil(
+            location?.parent,
+            "parent should not be nil")
     }
     
     func testIdentifier()
