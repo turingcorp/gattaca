@@ -165,6 +165,7 @@
 		DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */; };
 		DAF045941F392C520003C2EF /* ExtensionURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF045931F392C520003C2EF /* ExtensionURLResponse.swift */; };
 		DAF1C1141F3947A300820417 /* ExtensionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1C1131F3947A300820417 /* ExtensionData.swift */; };
+		DAFC106B1F46CE47008C1DA1 /* MHomeStrategyReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC106A1F46CE47008C1DA1 /* MHomeStrategyReady.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -358,6 +359,7 @@
 		DAF0458B1F3908160003C2EF /* VHomeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeDisplay.swift; sourceTree = "<group>"; };
 		DAF045931F392C520003C2EF /* ExtensionURLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionURLResponse.swift; sourceTree = "<group>"; };
 		DAF1C1131F3947A300820417 /* ExtensionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionData.swift; sourceTree = "<group>"; };
+		DAFC106A1F46CE47008C1DA1 /* MHomeStrategyReady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyReady.swift; sourceTree = "<group>"; };
 		FEE6B168EBA58734F1065B66 /* Pods_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -808,6 +810,7 @@
 				DAB3A3241F444AE2001981F4 /* MHomeStrategyAuthLocationStrategyUnknown.swift */,
 				DA745A7E1F45AFD0005AF0DA /* MHomeStrategyWaitingLocation.swift */,
 				DA745A801F45E022005AF0DA /* MHomeStrategyWaitingLocationDelegate.swift */,
+				DAFC106A1F46CE47008C1DA1 /* MHomeStrategyReady.swift */,
 			);
 			path = Strategy;
 			sourceTree = "<group>";
@@ -1398,6 +1401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA68F1991F38E5D500C13634 /* ControllerParentTransitions.swift in Sources */,
+				DAFC106B1F46CE47008C1DA1 /* MHomeStrategyReady.swift in Sources */,
 				DA68F1C11F38E5D500C13634 /* VGradient.swift in Sources */,
 				DA90E0EF1F40B75800A37538 /* MSession.swift in Sources */,
 				DAD67F1B1F3F5A08006E9699 /* CHomeShare.swift in Sources */,
