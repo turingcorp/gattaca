@@ -4,6 +4,8 @@ import CoreLocation
 
 class TMHomeStrategyAuthLocation:XCTestCase
 {
+    //MARK: internal
+    
     func testAuthStatus()
     {
         let session:MSession = MSession()
