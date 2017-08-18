@@ -88,4 +88,18 @@ class TMHomeStrategyFactory:XCTestCase
             strategyWaitingLocation,
             "failed loading strategy waiting for location")
     }
+    
+    func testFactoryStrategySyncLocation()
+    {
+        let session:MSession = MSession(status:MSession.Status.syncLocation)
+        let controller:CHome = CHome(session:session)
+        
+        let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
+            controller:controller)
+        let strategySyncLocation:MHomeStrategySyncLocation? = strategy as? MHomeStrategySyncLocation
+        
+        XCTAssertNotNil(
+            strategySyncLocation,
+            "failed loading strategy sync for location")
+    }
 }
