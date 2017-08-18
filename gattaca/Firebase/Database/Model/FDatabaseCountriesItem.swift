@@ -4,7 +4,7 @@ class FDatabaseCountriesItem:FDatabaseProtocol
 {
     var identifier:String?
     var parent:FDatabaseProtocol?
-    let users:[String]
+    let users:[FDatabaseCountriesItemUser]
     
     init(
         countries:FDatabaseCountries,
@@ -19,11 +19,30 @@ class FDatabaseCountriesItem:FDatabaseProtocol
     {
         guard
             
-            let users:[String] = json as? [String]
-            
+        let rawUsers:[String:Any] = json as? [String:AnyObject]
+        
         else
         {
             return nil
+        }
+        
+        var users:[FDatabaseCountriesItemUser] = []
+        let usersIds:[String] = Array(rawUsers.keys)
+        
+        for userId:String in usersIds
+        {
+            guard
+            
+                let rawUser:Any = rawUsers[userId],
+                let user:FDatabaseCountriesItemUser = FDatabaseCountriesItemUser(
+                    json:rawUser)
+            
+            else
+            {
+                continue
+            }
+            
+            users.append(user)
         }
         
         self.users = users
