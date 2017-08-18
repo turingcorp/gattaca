@@ -35,4 +35,12 @@ extension FDatabaseProtocol
             return nil
         }
     }
+    
+    func child(identifier:String) -> String
+    {
+        var childPath:String = path
+        childPath.append(identifier)
+        
+        return path
+    }
 }
