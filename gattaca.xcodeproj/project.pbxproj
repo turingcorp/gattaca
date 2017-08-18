@@ -22,6 +22,7 @@
 		DA393A331F434CCF005BB484 /* MHomeStrategySync.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA393A321F434CCF005BB484 /* MHomeStrategySync.swift */; };
 		DA47EAED1F46EE4100D8D1F6 /* TFDatabaseCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47EAEC1F46EE4100D8D1F6 /* TFDatabaseCountries.swift */; };
 		DA47EAEF1F46EECB00D8D1F6 /* TFDatabaseCountriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47EAEE1F46EECB00D8D1F6 /* TFDatabaseCountriesItem.swift */; };
+		DA47EAF11F47003000D8D1F6 /* TFDatabaseCountriesItemUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47EAF01F47003000D8D1F6 /* TFDatabaseCountriesItemUser.swift */; };
 		DA4DA3701F41E5510047D5D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA4DA36F1F41E5510047D5D7 /* GoogleService-Info.plist */; };
 		DA4DA38A1F420B070047D5D7 /* DSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA3891F420B070047D5D7 /* DSession.swift */; };
 		DA4DA38C1F420B3F0047D5D7 /* DSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DA38B1F420B3F0047D5D7 /* DSessionStatus.swift */; };
@@ -212,6 +213,7 @@
 		DA39E7891F38E3F90001CA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA47EAEC1F46EE4100D8D1F6 /* TFDatabaseCountries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseCountries.swift; sourceTree = "<group>"; };
 		DA47EAEE1F46EECB00D8D1F6 /* TFDatabaseCountriesItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseCountriesItem.swift; sourceTree = "<group>"; };
+		DA47EAF01F47003000D8D1F6 /* TFDatabaseCountriesItemUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseCountriesItemUser.swift; sourceTree = "<group>"; };
 		DA4DA36F1F41E5510047D5D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA4DA3891F420B070047D5D7 /* DSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSession.swift; sourceTree = "<group>"; };
 		DA4DA38B1F420B3F0047D5D7 /* DSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSessionStatus.swift; sourceTree = "<group>"; };
@@ -1022,6 +1024,7 @@
 				DA8EDC561F46D9AF00301A9B /* TFDatabaseUsersItemLocation.swift */,
 				DA47EAEC1F46EE4100D8D1F6 /* TFDatabaseCountries.swift */,
 				DA47EAEE1F46EECB00D8D1F6 /* TFDatabaseCountriesItem.swift */,
+				DA47EAF01F47003000D8D1F6 /* TFDatabaseCountriesItemUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1569,6 +1572,7 @@
 				DA6F651B1F438E3E005EA020 /* THomeFactory.swift in Sources */,
 				DA25DF521F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift in Sources */,
 				DA47EAED1F46EE4100D8D1F6 /* TFDatabaseCountries.swift in Sources */,
+				DA47EAF11F47003000D8D1F6 /* TFDatabaseCountriesItemUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
