@@ -12,12 +12,9 @@ extension MSession
         let country:FDatabaseCountriesItem = FDatabaseCountriesItem(
             parent:countries,
             identifier:country)
-        let user:FDatabaseCountriesItemUser = FDatabaseCountriesItemUser(
-            parent:country,
-            identifier:userId)
         
         let firebase:FDatabase = FDatabase()
-        firebase.remove(model:user)
+        firebase.remove(parent:country, identifier:userId)
     }
     
     //MARK: internal
@@ -71,11 +68,16 @@ extension MSession
         { [weak self] in
             
             self?.firebaseUserLocation(
-                latitude:latitude,
-                longitude:longitude,
                 country:country)
-            {
-                completion()
+            { [weak self] in
+                
+                self?.firebaseCountryUser(
+                    latitude:latitude,
+                    longitude:longitude,
+                    country:country)
+                {
+                    completion()
+                }
             }
         }
     }
@@ -116,8 +118,6 @@ extension MSession
     }
     
     func firebaseUserLocation(
-        latitude:Double,
-        longitude:Double,
         country:String,
         completion:@escaping(() -> ()))
     {
@@ -139,9 +139,7 @@ extension MSession
             
             let location:FDatabaseUsersItemLocation = FDatabaseUsersItemLocation(
                 user:user,
-                country:country,
-                latitude:latitude,
-                longitude:longitude)
+                country:country)
         
         else
         {
@@ -155,6 +153,8 @@ extension MSession
     }
     
     func firebaseCountryUser(
+        latitude:Double,
+        longitude:Double,
         country:String,
         completion:@escaping(() -> ()))
     {
@@ -167,26 +167,26 @@ extension MSession
             return
         }
         
-        let users:FDatabaseUsers = FDatabaseUsers()
-        let user:FDatabaseUsersItem = FDatabaseUsersItem(
-            users:users)
-        user.identifier = userId
+        let countries:FDatabaseCountries = FDatabaseCountries()
+        let country:FDatabaseCountriesItem = FDatabaseCountriesItem(
+            countries:countries,
+            identifier:country)
         
         guard
             
-            let location:FDatabaseUsersItemLocation = FDatabaseUsersItemLocation(
-                user:user,
+            let user:FDatabaseCountriesItemUser = FDatabaseCountriesItemUser(
                 country:country,
+                identifier:userId,
                 latitude:latitude,
                 longitude:longitude)
             
-            else
+        else
         {
             return
         }
         
         let firebase:FDatabase = FDatabase()
-        firebase.update(model:location)
+        firebase.update(model:user)
         
         completion()
     }
