@@ -15,6 +15,8 @@ class TMHomeSession:XCTestCase
         controller = CHome(session:session)
     }
     
+    //MARK: internal
+    
     func testLoadStrategy()
     {
         guard
