@@ -7,7 +7,7 @@ class FDatabaseCountriesItem:FDatabaseProtocol
     let users:[String]
     
     init(
-        countries:FDatabaseProtocol,
+        countries:FDatabaseCountries,
         identifier:String)
     {
         self.identifier = identifier

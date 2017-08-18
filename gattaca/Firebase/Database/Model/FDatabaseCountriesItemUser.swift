@@ -26,7 +26,7 @@ class FDatabaseCountriesItemUser:FDatabaseProtocol
     }
     
     init?(
-        country:FDatabaseProtocol,
+        country:FDatabaseCountriesItem,
         identifier:String,
         latitude:Double,
         longitude:Double)
