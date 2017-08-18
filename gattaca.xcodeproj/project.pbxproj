@@ -31,6 +31,7 @@
 		DA57AEB51F473EAC004DDAD4 /* TMHomeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57AEB41F473EAC004DDAD4 /* TMHomeSession.swift */; };
 		DA57AEB71F474C05004DDAD4 /* TMHomeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57AEB61F474C05004DDAD4 /* TMHomeStrategy.swift */; };
 		DA57AEB91F4752CF004DDAD4 /* TMHomeStrategyAuthLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57AEB81F4752CF004DDAD4 /* TMHomeStrategyAuthLocation.swift */; };
+		DA57AEBD1F47575F004DDAD4 /* TMHomeStrategyAuthLocationStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57AEBC1F47575F004DDAD4 /* TMHomeStrategyAuthLocationStrategyFactory.swift */; };
 		DA5F44A71F42C98800334605 /* FDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44A61F42C98800334605 /* FDatabase.swift */; };
 		DA5F44A91F42C99100334605 /* FDatabaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44A81F42C99100334605 /* FDatabaseFactory.swift */; };
 		DA5F44AB1F42C9A100334605 /* FDatabaseSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44AA1F42C9A100334605 /* FDatabaseSnapshot.swift */; };
@@ -226,6 +227,7 @@
 		DA57AEB41F473EAC004DDAD4 /* TMHomeSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeSession.swift; sourceTree = "<group>"; };
 		DA57AEB61F474C05004DDAD4 /* TMHomeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeStrategy.swift; sourceTree = "<group>"; };
 		DA57AEB81F4752CF004DDAD4 /* TMHomeStrategyAuthLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeStrategyAuthLocation.swift; sourceTree = "<group>"; };
+		DA57AEBC1F47575F004DDAD4 /* TMHomeStrategyAuthLocationStrategyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeStrategyAuthLocationStrategyFactory.swift; sourceTree = "<group>"; };
 		DA5F44A61F42C98800334605 /* FDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabase.swift; sourceTree = "<group>"; };
 		DA5F44A81F42C99100334605 /* FDatabaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseFactory.swift; sourceTree = "<group>"; };
 		DA5F44AA1F42C9A100334605 /* FDatabaseSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseSnapshot.swift; sourceTree = "<group>"; };
@@ -794,6 +796,7 @@
 				DA57AEB61F474C05004DDAD4 /* TMHomeStrategy.swift */,
 				DA6F651D1F439187005EA020 /* TMHomeStrategyFactory.swift */,
 				DA57AEB81F4752CF004DDAD4 /* TMHomeStrategyAuthLocation.swift */,
+				DA57AEBC1F47575F004DDAD4 /* TMHomeStrategyAuthLocationStrategyFactory.swift */,
 			);
 			path = Strategy;
 			sourceTree = "<group>";
@@ -1581,6 +1584,7 @@
 				DA8EDC571F46D9AF00301A9B /* TFDatabaseUsersItemLocation.swift in Sources */,
 				DABEF93D1F43447800420DF0 /* TFDatabaseUsers.swift in Sources */,
 				DA57AEB51F473EAC004DDAD4 /* TMHomeSession.swift in Sources */,
+				DA57AEBD1F47575F004DDAD4 /* TMHomeStrategyAuthLocationStrategyFactory.swift in Sources */,
 				DA57AEB31F473E77004DDAD4 /* TMHomeFactory.swift in Sources */,
 				DA25DF601F43879300765DCA /* TDatabase.swift in Sources */,
 				DA6F65171F438B13005EA020 /* TMRequest.swift in Sources */,
