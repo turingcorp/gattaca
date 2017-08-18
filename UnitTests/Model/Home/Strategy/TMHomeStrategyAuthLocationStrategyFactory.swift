@@ -75,6 +75,30 @@ class TMHomeStrategyAuthLocationStrategyFactory:XCTestCase
             "failed factory for when in use")
     }
     
+    func testNotDetermined()
+    {
+        guard
+            
+            let controller:CHome = self.controller
+            
+        else
+        {
+            return
+        }
+        
+        let status:CLAuthorizationStatus = CLAuthorizationStatus.notDetermined
+        
+        let strategy:MHomeStrategyAuthLocationStrategy? = MHomeStrategyAuthLocationStrategy.factoryStrategy(
+            controller:controller,
+            status:status)
+        
+        let strategyNotDetermined:MHomeStrategyAuthLocationStrategyUnknown? = strategy as? MHomeStrategyAuthLocationStrategyUnknown
+        
+        XCTAssertNotNil(
+            strategyNotDetermined,
+            "failed factory for not determined")
+    }
+    
     /*
     
      let map:[CLAuthorizationStatus:MHomeStrategyAuthLocationStrategy.Type] = [
