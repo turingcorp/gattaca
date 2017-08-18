@@ -100,6 +100,20 @@ class TMHomeStrategyFactory:XCTestCase
         
         XCTAssertNotNil(
             strategySyncLocation,
-            "failed loading strategy sync for location")
+            "failed loading strategy sync location")
+    }
+    
+    func testFactoryStrategyReady()
+    {
+        let session:MSession = MSession(status:MSession.Status.ready)
+        let controller:CHome = CHome(session:session)
+        
+        let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
+            controller:controller)
+        let strategyReady:MHomeStrategyReady? = strategy as? MHomeStrategyReady
+        
+        XCTAssertNotNil(
+            strategyReady,
+            "failed loading strategy ready")
     }
 }
