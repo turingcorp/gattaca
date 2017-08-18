@@ -2,15 +2,6 @@ import Foundation
 
 extension MHome
 {
-    func loadItems()
-    {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        { [weak self] in
-            
-            self?.dispatchLoadItems()
-        }
-    }
-    
     //MARK: notified
     
     @objc
@@ -49,5 +40,16 @@ extension MHome
             object:nil)
         
         requestGif()
+    }
+    
+    //MARK: internal
+    
+    func loadItems()
+    {
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.dispatchLoadItems()
+        }
     }
 }
