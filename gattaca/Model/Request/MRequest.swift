@@ -6,6 +6,8 @@ class MRequest
     private static let kResourceName:String = "ResourceURL"
     private static let kResourceExtension:String = "plist"
     
+    //MARK: internal
+    
     class func factorySession() -> URLSession
     {
         let configuration:URLSessionConfiguration = URLSessionConfiguration.ephemeral
