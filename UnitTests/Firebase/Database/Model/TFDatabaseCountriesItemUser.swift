@@ -121,4 +121,65 @@ class TFDatabaseCountriesItemUser:XCTestCase
             initialSyncstamp,
             "failed parsing syncstamp")
     }
+    
+    func testJson()
+    {
+        let json:Any? = user?.json
+        
+        XCTAssertNotNil(
+            json,
+            "failed building json")
+        
+        let jsonMap:[String:Any]? = json as? [String:Any]
+        
+        XCTAssertNotNil(
+            jsonMap,
+            "json is not a json map")
+        
+        let latitude:Double? = jsonMap?[
+            FDatabaseCountriesItemUser.kKeyLatitude] as? Double
+        
+        XCTAssertNotNil(
+            latitude,
+            "json doesn't contain latitude")
+        
+        XCTAssertEqual(
+            latitude,
+            kLatitude,
+            "invalid latitude")
+        
+        let longitude:Double? = jsonMap?[
+            FDatabaseCountriesItemUser.kKeyLongitude] as? Double
+        
+        XCTAssertNotNil(
+            longitude,
+            "json doesn't contain longitude")
+        
+        XCTAssertEqual(
+            longitude,
+            kLongitude,
+            "invalid longitude")
+        
+        let syncstamp:TimeInterval? = jsonMap?[
+            FDatabaseCountriesItemUser.kKeySyncstamp] as? TimeInterval
+        
+        XCTAssertNotNil(
+            syncstamp,
+            "json doesn't contain syncstamp")
+        
+        guard
+            
+            let userSyncstamp:TimeInterval = syncstamp,
+            let initialSyncstamp:TimeInterval = self.syncstamp
+            
+        else
+        {
+            return
+        }
+        
+        XCTAssertGreaterThanOrEqual(
+            userSyncstamp,
+            initialSyncstamp,
+            "invalid syncstamp")
+    }
 }
