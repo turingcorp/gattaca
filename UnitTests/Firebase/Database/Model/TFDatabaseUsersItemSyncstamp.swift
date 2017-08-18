@@ -62,6 +62,10 @@ class TFDatabaseUsersItemSyncstamp:XCTestCase
         XCTAssertNotNil(
             syncstamp,
             "failed creating syncstamp")
+        
+        XCTAssertNotNil(
+            syncstamp?.parent,
+            "parent should not be nil")
     }
     
     func testIdentifier()
