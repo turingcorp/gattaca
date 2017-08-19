@@ -9,11 +9,22 @@ class TMSession:XCTestCase
     
     func testLoad()
     {
+        let bundle:Bundle = Bundle(for:TMSession.self)
+        
+        guard
+            
+            let coreData:Database = Database(bundle:bundle)
+        
+        else
+        {
+            return
+        }
+        
         let sessionExpectation:XCTestExpectation = expectation(
             description:"session loaded")
         
         let session:MSession = MSession()
-        session.load
+        session.load(coreData:coreData)
         {
             sessionExpectation.fulfill()
         }
@@ -22,7 +33,7 @@ class TMSession:XCTestCase
         { (error:Error?) in
             
             XCTAssertNotNil(
-                session.data,
+                session.userId,
                 "model not loaded")
         }
     }

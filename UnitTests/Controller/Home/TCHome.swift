@@ -39,7 +39,7 @@ class TCHome:XCTestCase
             
             guard
                 
-                let status:MSession.Status = self?.session?.status
+                let status:MHome.Status = self?.controller?.model.status
                 
             else
             {
@@ -48,7 +48,7 @@ class TCHome:XCTestCase
             
             XCTAssertNotEqual(
                 status,
-                MSession.Status.new,
+                MHome.Status.new,
                 "session is not being loaded")
         }
     }
@@ -67,10 +67,10 @@ class TCHome:XCTestCase
         waitForExpectations(timeout:kExpectation)
         { [weak self] (error:Error?) in
             
-            let data:MSessionData? = self?.session?.data
+            let userId:String? = self?.session?.userId
             
             XCTAssertNotNil(
-                data,
+                userId,
                 "failed loading session from core data")
         }
     }

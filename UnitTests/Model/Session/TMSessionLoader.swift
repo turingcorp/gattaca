@@ -65,8 +65,7 @@ class TMSessionLoader:XCTestCase
         
         let session:MSession = MSession()
         session.load(coreData:coreData)
-        { (session:DSession) in
-            
+        {
             sessionExpectation.fulfill()
         }
         

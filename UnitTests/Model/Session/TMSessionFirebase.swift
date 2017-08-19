@@ -46,7 +46,7 @@ class TMSessionFirebase:XCTestCase
         let syncExpectation:XCTestExpectation = expectation(
             description:"sync firebase")
         
-        modelSession.sync(
+        modelSession.syncFirebase(
             coreData:coreData,
             session:session)
         {
@@ -255,7 +255,7 @@ class TMSessionFirebase:XCTestCase
         let syncExpectation:XCTestExpectation = expectation(
             description:"sync firebase")
         
-        modelSession.sync(
+        modelSession.syncFirebase(
             coreData:coreData,
             session:session)
         {
