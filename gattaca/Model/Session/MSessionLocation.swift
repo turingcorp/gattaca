@@ -26,9 +26,9 @@ extension MSession
         completion:@escaping(() -> ()))
     {
         status = MSession.Status.syncLocation
-        clearDifferentLocations(country:country)
+        removePreviousLocation(country:country)
         
-        syncNewLocation(
+        addNewLocation(
             latitude:latitude,
             longitude:longitude,
             country:country)
@@ -39,7 +39,7 @@ extension MSession
         }
     }
     
-    func clearDifferentLocations(country:String)
+    func removePreviousLocation(country:String)
     {
         guard
         
@@ -59,7 +59,7 @@ extension MSession
         }
     }
     
-    func syncNewLocation(
+    func addNewLocation(
         latitude:Double,
         longitude:Double,
         country:String,
