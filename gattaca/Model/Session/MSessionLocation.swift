@@ -6,14 +6,14 @@ extension MSession
     
     private func removeCountryUser(
         country:String,
-        userId:String)
+        userId:String,
+        firebase:FDatabase)
     {
         let countries:FDatabaseCountries = FDatabaseCountries()
         let country:FDatabaseCountriesItem = FDatabaseCountriesItem(
             countries:countries,
             identifier:country)
         
-        let firebase:FDatabase = FDatabase()
         firebase.remove(parent:country, identifier:userId)
     }
     
@@ -25,13 +25,18 @@ extension MSession
         country:String,
         completion:@escaping(() -> ()))
     {
+        let firebase:FDatabase = FDatabase()
+        
         status = MSession.Status.syncLocation
-        removePreviousLocation(country:country)
+        removePreviousLocation(
+            newCountry:country,
+            firebase:firebase)
         
         addNewLocation(
             latitude:latitude,
             longitude:longitude,
-            country:country)
+            country:country,
+            firebase:firebase)
         { [weak self] in
             
             self?.status = MSession.Status.ready
@@ -39,7 +44,9 @@ extension MSession
         }
     }
     
-    func removePreviousLocation(country:String)
+    func removePreviousLocation(
+        newCountry:String,
+        firebase:FDatabase)
     {
         guard
         
@@ -51,11 +58,12 @@ extension MSession
             return
         }
         
-        if storedCountry != country
+        if storedCountry != newCountry
         {
             removeCountryUser(
                 country:storedCountry,
-                userId:userId)
+                userId:userId,
+                firebase:firebase)
         }
     }
     
@@ -63,6 +71,7 @@ extension MSession
         latitude:Double,
         longitude:Double,
         country:String,
+        firebase:FDatabase,
         completion:@escaping(() -> ()))
     {
         coreDataLocation(
@@ -70,13 +79,15 @@ extension MSession
         { [weak self] in
             
             self?.firebaseUserLocation(
-                country:country)
+                country:country,
+                firebase:firebase)
             { [weak self] in
                 
                 self?.firebaseCountryUser(
                     latitude:latitude,
                     longitude:longitude,
-                    country:country)
+                    country:country,
+                    firebase:firebase)
                 {
                     completion()
                 }
@@ -121,6 +132,7 @@ extension MSession
     
     func firebaseUserLocation(
         country:String,
+        firebase:FDatabase,
         completion:@escaping(() -> ()))
     {
         guard
@@ -148,7 +160,6 @@ extension MSession
             return
         }
         
-        let firebase:FDatabase = FDatabase()
         firebase.update(model:location)
         
         completion()
@@ -158,6 +169,7 @@ extension MSession
         latitude:Double,
         longitude:Double,
         country:String,
+        firebase:FDatabase,
         completion:@escaping(() -> ()))
     {
         guard
@@ -187,7 +199,6 @@ extension MSession
             return
         }
         
-        let firebase:FDatabase = FDatabase()
         firebase.update(model:user)
         
         completion()
