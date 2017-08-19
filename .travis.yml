@@ -4,7 +4,7 @@ branches:
   only:
     - master
 script:
-  - if [ $MODE == 'Tests' ]; then xcodebuild -workspace gattaca.xcworkspace -scheme gattaca -sdk "iphonesimulator" -destination "platform=iOS Simulator,OS=10.0,name=iPhone 6s" -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES test; fi
+  - if [ $MODE == 'Tests' ]; then xcodebuild -workspace gattaca.xcworkspace -scheme gattaca -sdk "iphonesimulator" -destination "platform=iOS Simulator,OS=10.0,name=iPhone 6s" -configuration Debug ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES test; fi
   - if [ $MODE == 'Build' ]; then xcodebuild -workspace gattaca.xcworkspace -scheme gattaca -sdk "iphonesimulator" -destination "platform=iOS Simulator,OS=10.0,name=iPhone 6s" clean build | xcpretty; fi
 after_success:
   - bash <(curl -s https://codecov.io/bash)
