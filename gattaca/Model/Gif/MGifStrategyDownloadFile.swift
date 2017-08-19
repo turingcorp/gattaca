@@ -6,7 +6,7 @@ extension MGifStrategyDownload
     
     private func downloadSuccess(gif:DGif)
     {
-        gif.statusWaiting()
+//        gif.statusWaiting()
         downloadWithDelay()
         
         NotificationCenter.default.post(

@@ -59,7 +59,7 @@ class MGifStrategyDownload:MGifStrategy
     
     func downloadFailed(gif:DGif)
     {
-        gif.statusNew()
+//        gif.statusNew()
         model.strategyStand()
     }
 }

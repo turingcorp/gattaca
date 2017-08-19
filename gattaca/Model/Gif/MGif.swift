@@ -18,10 +18,10 @@ class MGif
     
     private func mapItems()
     {
-        for item:DGif in items
-        {
-            mapItem(item:item)
-        }
+//        for item:DGif in items
+//        {
+//            mapItem(item:item)
+//        }
     }
     
     private func mapItem(item:DGif)
@@ -52,38 +52,38 @@ class MGif
     
     func addItem(item:DGif)
     {
-        items.append(item)
-        mapItem(item:item)
+//        items.append(item)
+//        mapItem(item:item)
     }
     
     func itemsWaiting() -> [DGif]
     {
         var items:[DGif] = []
         
-        for item:DGif in self.items
-        {
-            let status:DGif.Status = item.status
-            
-            if status == DGif.Status.waiting
-            {
-                items.append(item)
-            }
-        }
+//        for item:DGif in self.items
+//        {
+//            let status:DGif.Status = item.status
+//            
+//            if status == DGif.Status.waiting
+//            {
+//                items.append(item)
+//            }
+//        }
         
         return items
     }
     
     func firstItemNew() -> DGif?
     {
-        for item:DGif in self.items
-        {
-            let status:DGif.Status = item.status
-            
-            if status == DGif.Status.new
-            {
-                return item
-            }
-        }
+//        for item:DGif in self.items
+//        {
+//            let status:DGif.Status = item.status
+//            
+//            if status == DGif.Status.new
+//            {
+//                return item
+//            }
+//        }
         
         return nil
     }
