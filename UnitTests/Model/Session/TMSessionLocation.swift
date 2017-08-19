@@ -21,6 +21,23 @@ class TMSessionLocation:XCTestCase
         session.data = sessionData
     }
     
+    private func createUserCoreData(
+        session:MSession,
+        coreData:Database,
+        completion:@escaping(() -> ()))
+    {
+        coreData.create
+        { [weak self] (user:DSession) in
+            
+            user.initialValues()
+            user.userId = self?.kUserId
+            user.country = self?.kCountry
+            session.updateSession(session:user)
+            
+            completion()
+        }
+    }
+    
     private func addLocation(
         session:MSession,
         firebase:FDatabase,
@@ -203,6 +220,45 @@ class TMSessionLocation:XCTestCase
     
     func testCoreDataLocation()
     {
+        let session:MSession = MSession()
+        let bundle:Bundle = Bundle(for:TMSessionLocation.self)
+        let newCountry:String = kOtherCountry
         
+        guard
+            
+            let coreData:Database = Database(bundle:bundle)
+        
+        else
+        {
+            return
+        }
+
+        let updateExpectation:XCTestExpectation = expectation(
+            description:"update coreData location")
+        
+        createUserCoreData(
+            session:session,
+            coreData:coreData)
+        {
+            XCTAssertNotNil(
+                session.data?.country,
+                "failed creating data")
+            
+            session.coreDataLocation(
+                country:newCountry,
+                coreData:coreData)
+            {
+                updateExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            XCTAssertEqual(
+                session.data?.country,
+                newCountry,
+                "failed updating country")
+        }
     }
 }
