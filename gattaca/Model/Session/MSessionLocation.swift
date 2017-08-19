@@ -24,8 +24,18 @@ extension MSession
         firebase:FDatabase,
         completion:@escaping(() -> ()))
     {
+        guard
+            
+            let coreData:Database = Database(bundle:nil)
+            
+        else
+        {
+            return
+        }
+        
         coreDataLocation(
-            country:country)
+            country:country,
+            coreData:coreData)
         { [weak self] in
             
             self?.firebaseUserLocation(
@@ -97,17 +107,9 @@ extension MSession
     
     func coreDataLocation(
         country:String,
+        coreData:Database,
         completion:@escaping(() -> ()))
     {
-        guard
-        
-            let coreData:Database = Database(bundle:nil)
-        
-        else
-        {
-            return
-        }
-        
         coreData.fetch
         { [weak self] (data:[DSession]) in
             

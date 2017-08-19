@@ -200,4 +200,9 @@ class TMSessionLocation:XCTestCase
                 "country user should not be removed")
         }
     }
+    
+    func testCoreDataLocation()
+    {
+        
+    }
 }
