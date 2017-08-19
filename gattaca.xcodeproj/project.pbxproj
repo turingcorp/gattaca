@@ -140,6 +140,7 @@
 		DA920BA81F48988B00AE31A4 /* DGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA920BA71F48988B00AE31A4 /* DGif.swift */; };
 		DA920BAA1F48991500AE31A4 /* DGifStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA920BA91F48991500AE31A4 /* DGifStatus.swift */; };
 		DA920BAC1F48994500AE31A4 /* DGifMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA920BAB1F48994500AE31A4 /* DGifMark.swift */; };
+		DA920BAE1F48999500AE31A4 /* DGifFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA920BAD1F48999500AE31A4 /* DGifFactory.swift */; };
 		DAB3A31D1F444323001981F4 /* MHomeStrategyAuthLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A31C1F444323001981F4 /* MHomeStrategyAuthLocation.swift */; };
 		DAB3A31F1F444A83001981F4 /* MHomeStrategyAuthLocationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A31E1F444A83001981F4 /* MHomeStrategyAuthLocationStrategy.swift */; };
 		DAB3A3211F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A3201F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift */; };
@@ -348,6 +349,7 @@
 		DA920BA71F48988B00AE31A4 /* DGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGif.swift; sourceTree = "<group>"; };
 		DA920BA91F48991500AE31A4 /* DGifStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifStatus.swift; sourceTree = "<group>"; };
 		DA920BAB1F48994500AE31A4 /* DGifMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifMark.swift; sourceTree = "<group>"; };
+		DA920BAD1F48999500AE31A4 /* DGifFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifFactory.swift; sourceTree = "<group>"; };
 		DAB3A3151F4433E6001981F4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DAB3A3161F4433E6001981F4 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		DAB3A3171F4433E6001981F4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -578,6 +580,7 @@
 				DA920BA71F48988B00AE31A4 /* DGif.swift */,
 				DA920BA91F48991500AE31A4 /* DGifStatus.swift */,
 				DA920BAB1F48994500AE31A4 /* DGifMark.swift */,
+				DA920BAD1F48999500AE31A4 /* DGifFactory.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1556,6 +1559,7 @@
 				DA68F1971F38E5D500C13634 /* Controller.swift in Sources */,
 				DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */,
 				DA25DF501F435EB200765DCA /* FDatabaseUsersItemStatus.swift in Sources */,
+				DA920BAE1F48999500AE31A4 /* DGifFactory.swift in Sources */,
 				DA920BAC1F48994500AE31A4 /* DGifMark.swift in Sources */,
 				DA5F44B61F42CAB300334605 /* FDatabaseUsersItemSyncstamp.swift in Sources */,
 				DAE0AFCE1F3BAEF9006449D0 /* MHomeFactory.swift in Sources */,
