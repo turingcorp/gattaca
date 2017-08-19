@@ -136,6 +136,7 @@
 		DA90E0F41F40B79E00A37538 /* TMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0F31F40B79E00A37538 /* TMSession.swift */; };
 		DA90E0F61F40BA7500A37538 /* TMSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0F51F40BA7500A37538 /* TMSessionLoader.swift */; };
 		DA920BA21F4893E400AE31A4 /* TMHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA920BA11F4893E400AE31A4 /* TMHome.swift */; };
+		DA920BA61F4895CB00AE31A4 /* TMHomeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA920BA51F4895CB00AE31A4 /* TMHomeLoader.swift */; };
 		DAB3A31D1F444323001981F4 /* MHomeStrategyAuthLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A31C1F444323001981F4 /* MHomeStrategyAuthLocation.swift */; };
 		DAB3A31F1F444A83001981F4 /* MHomeStrategyAuthLocationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A31E1F444A83001981F4 /* MHomeStrategyAuthLocationStrategy.swift */; };
 		DAB3A3211F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A3201F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift */; };
@@ -340,6 +341,7 @@
 		DA90E0F31F40B79E00A37538 /* TMSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSession.swift; sourceTree = "<group>"; };
 		DA90E0F51F40BA7500A37538 /* TMSessionLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionLoader.swift; sourceTree = "<group>"; };
 		DA920BA11F4893E400AE31A4 /* TMHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHome.swift; sourceTree = "<group>"; };
+		DA920BA51F4895CB00AE31A4 /* TMHomeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHomeLoader.swift; sourceTree = "<group>"; };
 		DAB3A3151F4433E6001981F4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DAB3A3161F4433E6001981F4 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		DAB3A3171F4433E6001981F4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -795,6 +797,7 @@
 				DA57AEB21F473E77004DDAD4 /* TMHomeFactory.swift */,
 				DA57AEB41F473EAC004DDAD4 /* TMHomeSession.swift */,
 				DA920BA11F4893E400AE31A4 /* TMHome.swift */,
+				DA920BA51F4895CB00AE31A4 /* TMHomeLoader.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1608,6 +1611,7 @@
 				DA25DF541F437DFB00765DCA /* TFDatabaseUsersItemStatus.swift in Sources */,
 				DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */,
 				DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */,
+				DA920BA61F4895CB00AE31A4 /* TMHomeLoader.swift in Sources */,
 				DA90E0F61F40BA7500A37538 /* TMSessionLoader.swift in Sources */,
 				DA47EAEF1F46EECB00D8D1F6 /* TFDatabaseCountriesItem.swift in Sources */,
 				DA90E0BE1F40991D00A37538 /* TCHome.swift in Sources */,
