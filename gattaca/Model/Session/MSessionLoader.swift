@@ -32,8 +32,6 @@ extension MSession
         coreData:Database,
         completion:@escaping(() -> ()))
     {
-        status = MSession.Status.loading
-        
         coreData.fetch
         { [weak self] (data:[DSession]) in
             

@@ -21,6 +21,7 @@ extension MHomeStrategyAuthLocationStrategy
     
     class func factoryStrategy(
         controller:CHome,
+        parentStrategy:MHomeStrategyAuthLocation,
         status:CLAuthorizationStatus) -> MHomeStrategyAuthLocationStrategy?
     {
         let map:[CLAuthorizationStatus:MHomeStrategyAuthLocationStrategy.Type] = factoryMap()
@@ -36,7 +37,8 @@ extension MHomeStrategyAuthLocationStrategy
         }
         
         let strategy:MHomeStrategyAuthLocationStrategy = strategyType.init(
-            controller:controller)
+            controller:controller,
+            strategy:parentStrategy)
         
         return strategy
     }

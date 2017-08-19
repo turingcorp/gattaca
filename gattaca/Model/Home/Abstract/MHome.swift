@@ -4,6 +4,7 @@ class MHome:Model
 {
     var coreData:Database?
     var strategy:MHomeStrategy?
+    var status:MHome.Status
     var requestOffset:Int
     let urlSession:URLSession
     let actions:[MHomeActionProtocol]
@@ -14,6 +15,7 @@ class MHome:Model
         actions = MHome.factoryActions()
         urlSession = MRequest.factorySession()
         items = []
+        status = MHome.Status.new
         requestOffset = 0
         
         super.init(session:session)
@@ -31,6 +33,7 @@ class MHome:Model
     {
         asyncLoadItems
         { [weak self] (items:[MHomeItem]) in
+            
             self?.items = items
         }
     }

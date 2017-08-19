@@ -19,6 +19,12 @@ class CHome:Controller<VHome, MHome>
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(notifiedBecameActive(sender:)),
+            name:NSNotification.Name.UIApplicationDidBecomeActive,
+            object:nil)
      
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
@@ -45,6 +51,11 @@ class CHome:Controller<VHome, MHome>
     }
     
     //MARK: private
+    
+    private func loadSessionStrategy()
+    {
+        model.loadStrategy(controller:self)
+    }
     
     private func asyncRefresh()
     {

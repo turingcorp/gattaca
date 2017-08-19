@@ -9,7 +9,15 @@ class MHomeStrategyNew:MHomeStrategy
         controller?.model.loadSession
         { [weak self] in
             
-            self?.refreshStrategy()
+            self?.sessionLoaded()
         }
+    }
+    
+    //MARK: private
+    
+    private func sessionLoaded()
+    {
+        controller?.model.status = MHome.Status.authLocation
+        refreshStrategy()
     }
 }

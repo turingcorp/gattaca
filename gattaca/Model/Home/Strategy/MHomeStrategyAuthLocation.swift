@@ -35,6 +35,7 @@ class MHomeStrategyAuthLocation:MHomeStrategy
         
         strategy = MHomeStrategyAuthLocationStrategy.factoryStrategy(
             controller:controller,
+            parentStrategy:self,
             status:status)
         strategy?.nextStep()
     }

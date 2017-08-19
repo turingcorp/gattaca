@@ -53,13 +53,7 @@ extension MHome
     
     func authLocation(controller:CHome)
     {
-        session.status = MSession.Status.authLocation
-        loadStrategy(controller:controller)
-    }
-    
-    func waitForLocation(controller:CHome)
-    {
-        session.status = MSession.Status.waitingLocation
+        status = MHome.Status.authLocation
         loadStrategy(controller:controller)
     }
 }
