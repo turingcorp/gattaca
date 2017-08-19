@@ -3,7 +3,7 @@ import Foundation
 class MSession
 {
     var status:MSession.Status
-    private(set) var data:MSessionData?
+    var data:MSessionData?
     
     init()
     {
