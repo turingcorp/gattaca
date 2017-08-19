@@ -85,6 +85,25 @@ class TMSessionLocation:XCTestCase
         }
     }
     
+    private func getUserLocation(
+        userId:String,
+        firebase:FDatabase,
+        completion:@escaping((FDatabaseUsersItemLocation?) -> ()))
+    {
+        let users:FDatabaseUsers = FDatabaseUsers()
+        let user:FDatabaseUsersItem = FDatabaseUsersItem(
+            users:users)
+        user.identifier = userId
+        
+        firebase.load(
+            parent:user,
+            identifier:FDatabaseUsersItem.kKeyLocation)
+        { (location:FDatabaseUsersItemLocation?) in
+            
+            completion(location)
+        }
+    }
+    
     private func createUserAtLocation(
         completion:@escaping((MSession, FDatabase) -> ()))
     {
@@ -99,6 +118,35 @@ class TMSessionLocation:XCTestCase
         {
             completion(session, firebase)
         }
+    }
+    
+    private func createFirebaseUser(
+        session:MSession,
+        firebase:FDatabase)
+    {
+        let users:FDatabaseUsers = FDatabaseUsers()
+        let user:FDatabaseUsersItem = FDatabaseUsersItem(
+            users:users)
+        
+        guard
+            
+            let userJson:Any = user.json
+        
+        else
+        {
+            return
+        }
+        
+        let userId:String = firebase.create(
+            parent:users,
+            data:userJson)
+        
+        let data:MSessionData = MSessionData(
+            userId:userId,
+            country:nil,
+            status:DSession.Status.active)
+        
+        session.data = data
     }
     
     //MARK: internal
@@ -197,7 +245,7 @@ class TMSessionLocation:XCTestCase
                     newCountry:country,
                     firebase:firebase)
                 
-                self?.getUser(
+                self?.getCountryUser(
                     userId:userId,
                     country:country,
                     firebase:firebase)
@@ -264,6 +312,56 @@ class TMSessionLocation:XCTestCase
     
     func testFirebaseUserLocation()
     {
+        var userLocation:FDatabaseUsersItemLocation?
+        let session:MSession = MSession()
+        let firebase:FDatabase = FDatabase()
         
+        let updateExpectation:XCTestExpectation = expectation(
+            description:"update firebase user location")
+        
+        createFirebaseUser(
+            session:session,
+            firebase:firebase)
+        
+        XCTAssertNotNil(
+            session.data?.userId,
+            "failed creating user")
+        
+        guard
+            
+            let userId:String = session.data?.userId
+        
+        else
+        {
+            return
+        }
+        
+        session.firebaseUserLocation(
+            country:kCountry,
+            firebase:firebase)
+        { [weak self] in
+            
+            self?.getUserLocation(
+                userId:userId,
+                firebase:firebase)
+            { (location:FDatabaseUsersItemLocation?) in
+                
+                userLocation = location
+                updateExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { [weak self] (error:Error?) in
+            
+            XCTAssertNotNil(
+                userLocation,
+                "failed updating location")
+            
+            XCTAssertEqual(
+                userLocation?.country,
+                self?.kCountry,
+                "country location mismatch")
+        }
     }
 }
