@@ -6,7 +6,7 @@ branches:
 script:
   - if [ $MODE == 'Tests' ]; then xcodebuild -workspace gattaca.xcworkspace -scheme gattaca -sdk "iphonesimulator" -destination "platform=iOS Simulator,OS=10.0,name=iPhone 6s" -enableCodeCoverage YES test | xcpretty; fi
   - if [ $MODE == 'Build' ]; then xcodebuild -workspace gattaca.xcworkspace -scheme gattaca -sdk "iphonesimulator" -destination "platform=iOS Simulator,OS=10.0,name=iPhone 6s" clean build | xcpretty; fi
-after_script:
+after_success:
   - bash <(curl -s https://codecov.io/bash)
 notifications:
   email:
