@@ -18,21 +18,13 @@ extension MSession
     }
     
     private func addNewLocation(
+        coreData:Database,
         latitude:Double,
         longitude:Double,
         country:String,
         firebase:FDatabase,
         completion:@escaping(() -> ()))
     {
-        guard
-            
-            let coreData:Database = Database(bundle:nil)
-            
-        else
-        {
-            return
-        }
-        
         coreDataLocation(
             country:country,
             coreData:coreData)
@@ -58,6 +50,7 @@ extension MSession
     //MARK: internal
     
     func syncLocation(
+        coreData:Database,
         latitude:Double,
         longitude:Double,
         country:String,
@@ -71,6 +64,7 @@ extension MSession
             firebase:firebase)
         
         addNewLocation(
+            coreData:coreData,
             latitude:latitude,
             longitude:longitude,
             country:country,

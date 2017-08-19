@@ -16,11 +16,32 @@ extension MHome
         }
         
         self.coreData = coreData
-        
-        session.load(coreData:coreData)
+        session.load(
+            coreData:coreData,
+            completion:completion)
+    }
+    
+    func syncSessionLocation(
+        latitude:Double,
+        longitude:Double,
+        country:String,
+        completion:@escaping(() -> ()))
+    {
+        guard
+            
+            let coreData:Database = self.coreData
+            
+        else
         {
-            completion()
+            return
         }
+        
+        session.syncLocation(
+            coreData:coreData,
+            latitude:latitude,
+            longitude:longitude,
+            country:country,
+            completion:completion)
     }
     
     func loadStrategy(controller:CHome)

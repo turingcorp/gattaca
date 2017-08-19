@@ -81,7 +81,7 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
         let latitude:Double = location.coordinate.latitude
         let longitude:Double = location.coordinate.longitude
         
-        controller?.model.session.syncLocation(
+        controller?.model.syncSessionLocation(
             latitude:latitude,
             longitude:longitude,
             country:country)
