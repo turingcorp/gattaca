@@ -4,17 +4,12 @@ extension MHomeStrategy
 {
     //MARK: private
     
-    private class func strategyMap() -> [MSession.Status:MHomeStrategy.Type]
+    private class func strategyMap() -> [MHome.Status:MHomeStrategy.Type]
     {
-        let map:[MSession.Status:MHomeStrategy.Type] = [
-            MSession.Status.new:MHomeStrategyNew.self,
-            MSession.Status.loading:MHomeStrategyLoading.self,
-            MSession.Status.sync:MHomeStrategySync.self,
-            MSession.Status.loaded:MHomeStrategyLoaded.self,
-            MSession.Status.authLocation:MHomeStrategyAuthLocation.self,
-            MSession.Status.waitingLocation:MHomeStrategyWaitingLocation.self,
-            MSession.Status.syncLocation:MHomeStrategySyncLocation.self,
-            MSession.Status.ready:MHomeStrategyReady.self]
+        let map:[MHome.Status:MHomeStrategy.Type] = [
+            MHome.Status.new:MHomeStrategyNew.self,
+            MHome.Status.authLocation:MHomeStrategyAuthLocation.self,
+            MHome.Status.ready:MHomeStrategyReady.self]
         
         return map
     }
@@ -23,8 +18,8 @@ extension MHomeStrategy
     
     class func factoryStrategy(controller:CHome) -> MHomeStrategy?
     {
-         let map:[MSession.Status:MHomeStrategy.Type] = strategyMap()
-         let currentStatus:MSession.Status = controller.model.session.status
+         let map:[MHome.Status:MHomeStrategy.Type] = strategyMap()
+         let currentStatus:MHome.Status = controller.model.status
          
          guard
          
