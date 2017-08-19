@@ -166,26 +166,30 @@ class TMSessionLocation:XCTestCase
         
         createUserAtLocation
         { [weak self] (session:MSession, firebase:FDatabase) in
-            
-            guard
                 
-                let userId:String = session.data?.userId
+                guard
+                    
+                    let userId:String = session.data?.userId
+                    
+                else
+                {
+                    return
+                }
                 
-            else
-            {
-                return
-            }
-            
-            self?.getUser(
-                userId:userId,
-                country:country,
-                firebase:firebase)
-            { (countryUser:FDatabaseCountriesItemUser?) in
+                session.removePreviousLocation(
+                    newCountry:country,
+                    firebase:firebase)
                 
-                firebaseCountryUser = countryUser
-                
-                removeExpectation.fulfill()
-            }
+                self?.getUser(
+                    userId:userId,
+                    country:country,
+                    firebase:firebase)
+                { (countryUser:FDatabaseCountriesItemUser?) in
+                    
+                    firebaseCountryUser = countryUser
+                    
+                    removeExpectation.fulfill()
+                }
         }
         
         waitForExpectations(timeout:kWaitExpectation)
@@ -193,7 +197,7 @@ class TMSessionLocation:XCTestCase
             
             XCTAssertNotNil(
                 firebaseCountryUser,
-                "user should not be removed")
+                "country user should not be removed")
         }
     }
 }
