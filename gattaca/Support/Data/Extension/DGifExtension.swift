@@ -19,31 +19,7 @@ extension DGif
         case cleaned
     }
     
-    var mark:Mark
-    {
-        get
-        {
-            let mark:Mark = Mark(rawValue:markRaw)!
-            
-            return mark
-        }
-    }
     
-    var status:Status
-    {
-        get
-        {
-            let status:Status = Status(rawValue:statusRaw)!
-            
-            return status
-        }
-    }
-    
-    func newGif(identifier:String)
-    {
-        self.identifier = identifier
-        self.created = Date().timeIntervalSince1970
-    }
     
     func factoryPath(directory:URL) -> URL?
     {
