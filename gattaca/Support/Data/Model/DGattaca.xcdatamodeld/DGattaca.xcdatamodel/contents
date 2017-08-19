@@ -3,8 +3,8 @@
     <entity name="DGif" representedClassName="DGif" syncable="YES" codeGenerationType="class">
         <attribute name="created" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="identifier" attributeType="String" syncable="YES"/>
-        <attribute name="markRaw" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="statusRaw" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rawMark" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rawStatus" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="DPerk" representedClassName="DPerk" isAbstract="YES" syncable="YES" codeGenerationType="class">
         <attribute name="domainIdentifier" attributeType="String" syncable="YES"/>
