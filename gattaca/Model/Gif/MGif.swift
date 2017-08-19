@@ -3,22 +3,15 @@ import Foundation
 class MGif
 {
     private(set) var strategy:MGifStrategy?
-    private(set) var items:[DGif]
+    private(set) var itemsReady:[DGif]
+    private(set) var itemsNotReady:[DGif]
     private var map:[String:DGif]
     
     init()
     {
-        items = []
+        itemsReady = []
+        itemsNotReady = []
         map = [:]
-        
-        strategyStand()
-        
-        loadGifs
-        { [weak self] (items:[DGif]) in
-            
-            self?.items = items
-            self?.mapItems()
-        }
     }
     
     //MARK: private
