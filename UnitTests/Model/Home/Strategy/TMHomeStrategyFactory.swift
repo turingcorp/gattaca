@@ -22,6 +22,7 @@ class TMHomeStrategyFactory:XCTestCase
     func testFactoryStrategyLoading()
     {
         let session:MSession = MSession()
+        session.status = MSession.Status.loading
         let controller:CHome = CHome(session:session)
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
@@ -36,6 +37,7 @@ class TMHomeStrategyFactory:XCTestCase
     func testFactoryStrategySync()
     {
         let session:MSession = MSession()
+        session.status = MSession.Status.sync
         let controller:CHome = CHome(session:session)
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
@@ -50,6 +52,7 @@ class TMHomeStrategyFactory:XCTestCase
     func testFactoryStrategyLoaded()
     {
         let session:MSession = MSession()
+        session.status = MSession.Status.loaded
         let controller:CHome = CHome(session:session)
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
@@ -64,6 +67,7 @@ class TMHomeStrategyFactory:XCTestCase
     func testFactoryStrategyAuthLocation()
     {
         let session:MSession = MSession()
+        session.status = MSession.Status.authLocation
         let controller:CHome = CHome(session:session)
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
@@ -78,6 +82,7 @@ class TMHomeStrategyFactory:XCTestCase
     func testFactoryStrategyWaitingLocation()
     {
         let session:MSession = MSession()
+        session.status = MSession.Status.waitingLocation
         let controller:CHome = CHome(session:session)
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
@@ -92,6 +97,7 @@ class TMHomeStrategyFactory:XCTestCase
     func testFactoryStrategySyncLocation()
     {
         let session:MSession = MSession()
+        session.status = MSession.Status.syncLocation
         let controller:CHome = CHome(session:session)
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
@@ -106,6 +112,7 @@ class TMHomeStrategyFactory:XCTestCase
     func testFactoryStrategyReady()
     {
         let session:MSession = MSession()
+        session.status = MSession.Status.ready
         let controller:CHome = CHome(session:session)
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
