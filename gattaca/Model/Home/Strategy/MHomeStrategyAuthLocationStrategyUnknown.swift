@@ -9,7 +9,7 @@ class MHomeStrategyAuthLocationStrategyUnknown:MHomeStrategyAuthLocationStrategy
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.controller?.openAskAuthLocation()
+            self?.strategy?.controller?.openAskAuthLocation()
         }
     }
 }

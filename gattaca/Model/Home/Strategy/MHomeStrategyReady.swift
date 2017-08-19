@@ -13,6 +13,6 @@ class MHomeStrategyReady:MHomeStrategy
     {
         super.nextStep()
         
-        controller?.sessionReady()
+        controller?.model.loadItems()
     }
 }

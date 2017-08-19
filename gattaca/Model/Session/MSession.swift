@@ -10,4 +10,13 @@ class MSession
     {
         status = DSession.Status.unknown
     }
+    
+    //MARK: internal
+    
+    func updateSession(session:DSession)
+    {
+        userId = session.userId
+        country = session.country
+        status = session.status
+    }
 }

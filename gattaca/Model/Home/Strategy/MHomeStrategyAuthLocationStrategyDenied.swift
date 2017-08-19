@@ -9,7 +9,7 @@ class MHomeStrategyAuthLocationStrategyDenied:MHomeStrategyAuthLocationStrategy
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.controller?.openAskDeniedLocation()
+            self?.strategy?.controller?.openAskDeniedLocation()
         }
     }
 }

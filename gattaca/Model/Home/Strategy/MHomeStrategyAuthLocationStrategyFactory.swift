@@ -20,7 +20,6 @@ extension MHomeStrategyAuthLocationStrategy
     //MARK: internal
     
     class func factoryStrategy(
-        controller:CHome,
         parentStrategy:MHomeStrategyAuthLocation,
         status:CLAuthorizationStatus) -> MHomeStrategyAuthLocationStrategy?
     {
@@ -37,7 +36,6 @@ extension MHomeStrategyAuthLocationStrategy
         }
         
         let strategy:MHomeStrategyAuthLocationStrategy = strategyType.init(
-            controller:controller,
             strategy:parentStrategy)
         
         return strategy

@@ -6,12 +6,12 @@ class MHomeStrategyAuthLocationDelegate:NSObject, CLLocationManagerDelegate
     static let kUnknownCountry:String = "unknown"
     
     var locationManager:CLLocationManager?
-    private weak var controller:CHome?
+    private weak var strategy:MHomeStrategyAuthLocation?
     private weak var geocoder:CLGeocoder?
     private let kDistanceFilter:CLLocationDistance = 10
     private let kDistanceAccuracy:CLLocationDistance = 100
     
-    init(controller:CHome)
+    init(strategy:MHomeStrategyAuthLocation)
     {
         let locationManager:CLLocationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
@@ -19,7 +19,7 @@ class MHomeStrategyAuthLocationDelegate:NSObject, CLLocationManagerDelegate
         
         super.init()
         
-        self.controller = controller
+        self.strategy = strategy
         self.locationManager = locationManager
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
@@ -64,41 +64,9 @@ class MHomeStrategyAuthLocationDelegate:NSObject, CLLocationManagerDelegate
                 return
             }
             
-            DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-            { [weak self] in
-                
-                self?.syncLocation(
-                    location:location,
-                    country:country)
-            }
-        }
-    }
-    
-    private func syncLocation(
-        location:CLLocation,
-        country:String)
-    {
-        let latitude:Double = location.coordinate.latitude
-        let longitude:Double = location.coordinate.longitude
-        
-        controller?.model.syncSessionLocation(
-            latitude:latitude,
-            longitude:longitude,
-            country:country)
-        { [weak self] in
-            
-            guard
-                
-                let controller:CHome = self?.controller
-                
-                
-            else
-            {
-                return
-            }
-            
-            controller.model.loadStrategy(
-                controller:controller)
+            self?.strategy?.syncLocation(
+                location:location,
+                country:country)
         }
     }
     
@@ -113,7 +81,7 @@ class MHomeStrategyAuthLocationDelegate:NSObject, CLLocationManagerDelegate
             
         else
         {
-            return MHomeStrategyWaitingLocationDelegate.kUnknownCountry
+            return MHomeStrategyAuthLocationDelegate.kUnknownCountry
         }
         
         return country

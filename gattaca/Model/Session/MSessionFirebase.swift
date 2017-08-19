@@ -7,9 +7,10 @@ extension MSession
     private func sync(
         userId:String?,
         firebase:FDatabase,
-        users:FDatabaseUsers,
         completion:@escaping((FDatabaseUsersItem) -> ()))
     {
+        let users:FDatabaseUsers = FDatabaseUsers()
+        
         if let userId:String = userId
         {
             loadFromFirebase(
@@ -49,19 +50,17 @@ extension MSession
     
     //MARK: internal
     
-    func sync(
+    func syncFirebase(
         coreData:Database,
         session:DSession,
         completion:@escaping(() -> ()))
     {
         let userId:String? = session.userId
         let firebase:FDatabase = FDatabase()
-        let users:FDatabaseUsers = FDatabaseUsers()
         
         sync(
             userId:userId,
-            firebase:firebase,
-            users:users)
+            firebase:firebase)
         { [weak self] (user:FDatabaseUsersItem) in
             
             session.userId = user.identifier

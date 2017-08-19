@@ -39,10 +39,8 @@ extension MSession
                     latitude:latitude,
                     longitude:longitude,
                     country:country,
-                    firebase:firebase)
-                {
-                    completion()
-                }
+                    firebase:firebase,
+                    completion:completion)
             }
         }
     }
@@ -58,7 +56,6 @@ extension MSession
     {
         let firebase:FDatabase = FDatabase()
         
-        status = MSession.Status.syncLocation
         removePreviousLocation(
             newCountry:country,
             firebase:firebase)
@@ -68,12 +65,8 @@ extension MSession
             latitude:latitude,
             longitude:longitude,
             country:country,
-            firebase:firebase)
-        { [weak self] in
-            
-            self?.status = MSession.Status.ready
-            completion()
-        }
+            firebase:firebase,
+            completion:completion)
     }
     
     func removePreviousLocation(
@@ -82,8 +75,8 @@ extension MSession
     {
         guard
         
-            let storedCountry:String = data?.country,
-            let userId:String = data?.userId
+            let storedCountry:String = country,
+            let userId:String = userId
         
         else
         {
@@ -133,7 +126,7 @@ extension MSession
     {
         guard
             
-            let userId:String = data?.userId
+            let userId:String = userId
         
         else
         {
@@ -170,7 +163,7 @@ extension MSession
     {
         guard
             
-            let userId:String = data?.userId
+            let userId:String = userId
             
         else
         {

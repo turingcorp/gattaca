@@ -4,26 +4,34 @@ extension MSession
 {
     //MARK: private
     
-    private func sessionLoaded(
+    private func loadCompleted(
         coreData:Database,
-        session:DSession,
+        data:[DSession],
         completion:@escaping(() -> ()))
     {
-        status = MSession.Status.sync
-        
-        sync(coreData:coreData,
-             session:session)
-        { [weak self] in
+        guard
             
-            self?.sessionSynched(completion:completion)
+            let session:DSession = data.first
+            
+        else
+        {
+            create(
+                coreData:coreData)
+            { [weak self] (session:DSession) in
+                
+                self?.syncFirebase(
+                    coreData:coreData,
+                    session:session,
+                    completion:completion)
+            }
+            
+            return
         }
-    }
-    
-    private func sessionSynched(
-        completion:@escaping(() -> ()))
-    {
-        status = MSession.Status.loaded
-        completion()
+        
+        syncFirebase(
+            coreData:coreData,
+            session:session,
+            completion:completion)
     }
     
     //MARK: internal
@@ -35,28 +43,9 @@ extension MSession
         coreData.fetch
         { [weak self] (data:[DSession]) in
             
-            guard
-                
-                let session:DSession = data.first
-                
-            else
-            {
-                self?.create(
-                    coreData:coreData)
-                { [weak self] (session:DSession) in
-                    
-                    self?.sessionLoaded(
-                        coreData:coreData,
-                        session:session,
-                        completion:completion)
-                }
-                
-                return
-            }
-            
-            self?.sessionLoaded(
+            self?.loadCompleted(
                 coreData:coreData,
-                session:session,
+                data:data,
                 completion:completion)
         }
     }

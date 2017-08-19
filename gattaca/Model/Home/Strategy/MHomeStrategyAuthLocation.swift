@@ -31,23 +31,36 @@ class MHomeStrategyAuthLocation:MHomeStrategy
     
     func authStatus(status:CLAuthorizationStatus)
     {
-        guard
-            
-            let controller:CHome = self.controller
-        
-        else
-        {
-            return
-        }
-        
         strategy = MHomeStrategyAuthLocationStrategy.factoryStrategy(
-            controller:controller,
             parentStrategy:self,
             status:status)
         strategy?.nextStep()
     }
     
     func factoryDelegate()
+    {
+        delegate = MHomeStrategyAuthLocationDelegate(
+            strategy:self)
+    }
+    
+    func syncLocation(
+        location:CLLocation,
+        country:String)
+    {
+        let latitude:Double = location.coordinate.latitude
+        let longitude:Double = location.coordinate.longitude
+        
+        controller?.model.syncSessionLocation(
+            latitude:latitude,
+            longitude:longitude,
+            country:country)
+        { [weak self] in
+            
+            self?.locationSynced()
+        }
+    }
+    
+    func locationSynced()
     {
         guard
             
@@ -58,7 +71,8 @@ class MHomeStrategyAuthLocation:MHomeStrategy
             return
         }
         
-        delegate = MHomeStrategyAuthLocationDelegate(
+        controller.model.status = MHome.Status.ready
+        controller.model.loadStrategy(
             controller:controller)
     }
 }

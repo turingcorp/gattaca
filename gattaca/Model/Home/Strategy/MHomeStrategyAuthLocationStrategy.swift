@@ -2,14 +2,10 @@ import Foundation
 
 class MHomeStrategyAuthLocationStrategy
 {
-    private(set) weak var controller:CHome?
     private(set) weak var strategy:MHomeStrategyAuthLocation?
     
-    required init(
-        controller:CHome,
-        strategy:MHomeStrategyAuthLocation)
+    required init(strategy:MHomeStrategyAuthLocation)
     {
-        self.controller = controller
         self.strategy = strategy
     }
     
