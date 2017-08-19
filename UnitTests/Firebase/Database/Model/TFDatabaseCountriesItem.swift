@@ -87,16 +87,14 @@ class TFDatabaseCountriesItem:XCTestCase
         {
             let userA:FDatabaseCountriesItemUser = model.users[0]
             
-            XCTAssertEqual(
+            XCTAssertNotNil(
                 userA.identifier,
-                kUserA,
                 "failed assigning identifier")
             
             let userB:FDatabaseCountriesItemUser = model.users[1]
             
-            XCTAssertEqual(
-                userB.identifier,
-                kUserB,
+            XCTAssertNotNil(
+                userB.identifier
                 "failed assigning identifier")
         }
     }
