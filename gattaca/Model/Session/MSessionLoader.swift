@@ -4,27 +4,6 @@ extension MSession
 {
     //MARK: private
     
-    private func asyncLoad(completion:@escaping(() -> ()))
-    {
-        guard
-            
-            let coreData:Database = Database(bundle:nil)
-            
-        else
-        {
-            return
-        }
-        
-        load(coreData:coreData)
-        { [weak self] (session:DSession) in
-            
-            self?.sessionLoaded(
-                coreData:coreData,
-                session:session,
-                completion:completion)
-        }
-    }
-    
     private func sessionLoaded(
         coreData:Database,
         session:DSession,
@@ -49,21 +28,12 @@ extension MSession
     
     //MARK: internal
     
-    func load(completion:@escaping(() -> ()))
+    func load(
+        coreData:Database,
+        completion:@escaping(() -> ()))
     {
         status = MSession.Status.loading
         
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        { [weak self] in
-            
-            self?.asyncLoad(completion:completion)
-        }
-    }
-    
-    func load(
-        coreData:Database,
-        completion:@escaping((DSession) -> ()))
-    {
         coreData.fetch
         { [weak self] (data:[DSession]) in
             
@@ -74,13 +44,22 @@ extension MSession
             else
             {
                 self?.create(
-                    coreData:coreData,
-                    completion:completion)
+                    coreData:coreData)
+                { [weak self] (session:DSession) in
+                    
+                    self?.sessionLoaded(
+                        coreData:coreData,
+                        session:session,
+                        completion:completion)
+                }
                 
                 return
             }
             
-            completion(session)
+            self?.sessionLoaded(
+                coreData:coreData,
+                session:session,
+                completion:completion)
         }
     }
     

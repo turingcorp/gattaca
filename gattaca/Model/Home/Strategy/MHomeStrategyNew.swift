@@ -6,7 +6,7 @@ class MHomeStrategyNew:MHomeStrategy
     {
         super.nextStep()
         
-        controller?.model.session.load
+        controller?.model.loadSession
         { [weak self] in
             
             self?.refreshStrategy()
