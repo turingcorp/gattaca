@@ -3,6 +3,7 @@ import XCTest
 
 class TMSessionLocation:XCTestCase
 {
+    private var coreData:Database?
     private let kUserId:String = "johnnyTest"
     private let kCountry:String = "bananaRepublic"
     private let kOtherCountry:String = "coffeeRepublic"
@@ -10,22 +11,36 @@ class TMSessionLocation:XCTestCase
     private let kLongitude:Double = 2
     private let kWaitExpectation:TimeInterval = 15
     
+    override func setUp()
+    {
+        super.setUp()
+        
+        let bundle:Bundle = Bundle(for:TMSessionLocation.self)
+        coreData = Database(bundle:bundle)
+    }
+    
     //MARK: private
     
     private func createUser(session:MSession)
     {
-        let sessionData:MSessionData = MSessionData(
-            userId:kUserId,
-            country:kCountry,
-            status:DSession.Status.active)
-        session.data = sessionData
+        session.userId = kUserId
+        session.country = kCountry
+        session.status = DSession.Status.active
     }
     
     private func createUserCoreData(
         session:MSession,
-        coreData:Database,
         completion:@escaping(() -> ()))
     {
+        guard
+            
+            let coreData:Database = self.coreData
+            
+        else
+        {
+            return
+        }
+        
         coreData.create
         { [weak self] (user:DSession) in
             
@@ -50,7 +65,7 @@ class TMSessionLocation:XCTestCase
         
         guard
             
-            let userId:String = session.data?.userId,
+            let userId:String = session.userId,
             let user:FDatabaseCountriesItemUser = FDatabaseCountriesItemUser(
                 country:country,
                 identifier:userId,
@@ -141,23 +156,28 @@ class TMSessionLocation:XCTestCase
             parent:users,
             data:userJson)
         
-        let data:MSessionData = MSessionData(
-            userId:userId,
-            country:nil,
-            status:DSession.Status.active)
-        
-        session.data = data
+        session.userId = userId
     }
     
     //MARK: internal
     
     func testSyncLocation()
     {
+        guard
+            
+            let coreData:Database = self.coreData
+            
+        else
+        {
+            return
+        }
+        
         let syncExpectation:XCTestExpectation = expectation(
             description:"sync location")
         
         let session:MSession = MSession()
         session.syncLocation(
+            coreData:coreData,
             latitude:kLatitude,
             longitude:kLongitude,
             country:kCountry)
@@ -168,9 +188,8 @@ class TMSessionLocation:XCTestCase
         waitForExpectations(timeout:kWaitExpectation)
         { (error:Error?) in
             
-            XCTAssertEqual(
-                session.status,
-                MSession.Status.ready,
+            XCTAssertNotNil(
+                session.country,
                 "location not syncing")
         }
     }
@@ -189,7 +208,7 @@ class TMSessionLocation:XCTestCase
             
             guard
             
-                let userId:String = session.data?.userId
+                let userId:String = session.userId
             
             else
             {
@@ -232,29 +251,29 @@ class TMSessionLocation:XCTestCase
         createUserAtLocation
         { [weak self] (session:MSession, firebase:FDatabase) in
                 
-                guard
-                    
-                    let userId:String = session.data?.userId
-                    
-                else
-                {
-                    return
-                }
+            guard
                 
-                session.removePreviousLocation(
-                    newCountry:country,
-                    firebase:firebase)
+                let userId:String = session.userId
                 
-                self?.getCountryUser(
-                    userId:userId,
-                    country:country,
-                    firebase:firebase)
-                { (countryUser:FDatabaseCountriesItemUser?) in
-                    
-                    firebaseCountryUser = countryUser
-                    
-                    removeExpectation.fulfill()
-                }
+            else
+            {
+                return
+            }
+            
+            session.removePreviousLocation(
+                newCountry:country,
+                firebase:firebase)
+            
+            self?.getCountryUser(
+                userId:userId,
+                country:country,
+                firebase:firebase)
+            { (countryUser:FDatabaseCountriesItemUser?) in
+                
+                firebaseCountryUser = countryUser
+                
+                removeExpectation.fulfill()
+            }
         }
         
         waitForExpectations(timeout:kWaitExpectation)
@@ -269,28 +288,25 @@ class TMSessionLocation:XCTestCase
     func testCoreDataLocation()
     {
         let session:MSession = MSession()
-        let bundle:Bundle = Bundle(for:TMSessionLocation.self)
         let newCountry:String = kOtherCountry
-        
-        guard
-            
-            let coreData:Database = Database(bundle:bundle)
-        
-        else
-        {
-            return
-        }
 
         let updateExpectation:XCTestExpectation = expectation(
             description:"update coreData location")
         
-        createUserCoreData(
-            session:session,
-            coreData:coreData)
+        createUserCoreData(session:session)
         {
             XCTAssertNotNil(
-                session.data?.country,
+                session.country,
                 "failed creating data")
+            
+            guard
+                
+                let coreData:Database = self.coreData
+                
+            else
+            {
+                return
+            }
             
             session.coreDataLocation(
                 country:newCountry,
@@ -304,7 +320,7 @@ class TMSessionLocation:XCTestCase
         { (error:Error?) in
             
             XCTAssertEqual(
-                session.data?.country,
+                session.country,
                 newCountry,
                 "failed updating country")
         }
@@ -324,12 +340,12 @@ class TMSessionLocation:XCTestCase
             firebase:firebase)
         
         XCTAssertNotNil(
-            session.data?.userId,
+            session.userId,
             "failed creating user")
         
         guard
             
-            let userId:String = session.data?.userId
+            let userId:String = session.userId
         
         else
         {
@@ -378,12 +394,12 @@ class TMSessionLocation:XCTestCase
         createUser(session:session)
         
         XCTAssertNotNil(
-            session.data?.userId,
+            session.userId,
             "failed creating user")
         
         guard
             
-            let userId:String = session.data?.userId
+            let userId:String = session.userId
         
         else
         {

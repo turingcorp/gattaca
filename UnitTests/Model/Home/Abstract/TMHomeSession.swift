@@ -53,35 +53,14 @@ class TMHomeSession:XCTestCase
         controller.model.authLocation(controller:controller)
         
         XCTAssertEqual(
-            controller.model.session.status,
-            MSession.Status.authLocation,
+            controller.model.status,
+            MHome.Status.authLocation,
             "status should be auth location")
         
-        XCTAssertNotNil(
-            controller.model.strategy,
-            "strategy should be already loaded")
-    }
-    
-    func testWaitForLocation()
-    {
-        guard
-            
-            let controller:CHome = self.controller
-            
-        else
-        {
-            return
-        }
-        
-        controller.model.waitForLocation(controller:controller)
-        
-        XCTAssertEqual(
-            controller.model.session.status,
-            MSession.Status.waitingLocation,
-            "status should be waiting for location")
+        let strategy:MHomeStrategyAuthLocation? = controller.model.strategy as? MHomeStrategyAuthLocation
         
         XCTAssertNotNil(
-            controller.model.strategy,
-            "strategy should be already loaded")
+            strategy,
+            "failed loading strategy")
     }
 }
