@@ -8,7 +8,7 @@ extension DGif
         {
             guard
             
-                let mark:Mark = Mark(rawValue:markRaw)
+                let mark:Mark = Mark(rawValue:rawMark)
             
             else
             {
@@ -16,6 +16,11 @@ extension DGif
             }
             
             return mark
+        }
+        
+        set
+        {
+            rawMark = newValue.rawValue
         }
     }
     
@@ -25,7 +30,7 @@ extension DGif
         {
             guard
             
-                let status:Status = Status(rawValue:statusRaw)
+                let status:Status = Status(rawValue:rawStatus)
             
             else
             {
@@ -33,6 +38,11 @@ extension DGif
             }
             
             return status
+        }
+        
+        set
+        {
+            rawStatus = newValue.rawValue
         }
     }
     
