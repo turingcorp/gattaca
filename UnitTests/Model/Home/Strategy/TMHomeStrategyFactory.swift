@@ -19,56 +19,11 @@ class TMHomeStrategyFactory:XCTestCase
             "failed loading strategy for status new")
     }
     
-    func testFactoryStrategyLoading()
-    {
-        let session:MSession = MSession()
-        session.status = MSession.Status.loading
-        let controller:CHome = CHome(session:session)
-        
-        let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
-            controller:controller)
-        let strategyLoading:MHomeStrategyLoading? = strategy as? MHomeStrategyLoading
-        
-        XCTAssertNotNil(
-            strategyLoading,
-            "failed loading strategy for status loading")
-    }
-    
-    func testFactoryStrategySync()
-    {
-        let session:MSession = MSession()
-        session.status = MSession.Status.sync
-        let controller:CHome = CHome(session:session)
-        
-        let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
-            controller:controller)
-        let strategySync:MHomeStrategySync? = strategy as? MHomeStrategySync
-        
-        XCTAssertNotNil(
-            strategySync,
-            "failed loading strategy for status sync")
-    }
-    
-    func testFactoryStrategyLoaded()
-    {
-        let session:MSession = MSession()
-        session.status = MSession.Status.loaded
-        let controller:CHome = CHome(session:session)
-        
-        let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
-            controller:controller)
-        let strategyLoaded:MHomeStrategyLoaded? = strategy as? MHomeStrategyLoaded
-        
-        XCTAssertNotNil(
-            strategyLoaded,
-            "failed loading strategy for status loaded")
-    }
-    
     func testFactoryStrategyAuthLocation()
     {
         let session:MSession = MSession()
-        session.status = MSession.Status.authLocation
         let controller:CHome = CHome(session:session)
+        controller.model.status = MHome.Status.authLocation
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
             controller:controller)
@@ -79,41 +34,11 @@ class TMHomeStrategyFactory:XCTestCase
             "failed loading strategy for auth location")
     }
     
-    func testFactoryStrategyWaitingLocation()
-    {
-        let session:MSession = MSession()
-        session.status = MSession.Status.waitingLocation
-        let controller:CHome = CHome(session:session)
-        
-        let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
-            controller:controller)
-        let strategyWaitingLocation:MHomeStrategyWaitingLocation? = strategy as? MHomeStrategyWaitingLocation
-        
-        XCTAssertNotNil(
-            strategyWaitingLocation,
-            "failed loading strategy waiting for location")
-    }
-    
-    func testFactoryStrategySyncLocation()
-    {
-        let session:MSession = MSession()
-        session.status = MSession.Status.syncLocation
-        let controller:CHome = CHome(session:session)
-        
-        let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
-            controller:controller)
-        let strategySyncLocation:MHomeStrategySyncLocation? = strategy as? MHomeStrategySyncLocation
-        
-        XCTAssertNotNil(
-            strategySyncLocation,
-            "failed loading strategy sync location")
-    }
-    
     func testFactoryStrategyReady()
     {
         let session:MSession = MSession()
-        session.status = MSession.Status.ready
         let controller:CHome = CHome(session:session)
+        controller.model.status = MHome.Status.ready
         
         let strategy:MHomeStrategy? = MHomeStrategy.factoryStrategy(
             controller:controller)

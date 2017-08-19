@@ -9,26 +9,27 @@ class TDSession:XCTestCase
     
     //MARK: private
     
-    private func factoryData(session:DSession)
+    private func updateData(session:DSession)
     {
         session.userId = kUserId
         session.country = kCountry
         session.status = DSession.Status.banned
         
-        let data:MSessionData = session.factoryData()
+        let model:MSession = MSession()
+        model.updateSession(session:session)
         
         XCTAssertEqual(
-            data.userId,
+            model.userId,
             kUserId,
             "failed assigning user id")
         
         XCTAssertEqual(
-            data.country,
+            model.country,
             kCountry,
             "failed assigning country")
         
         XCTAssertEqual(
-            data.status,
+            model.status,
             DSession.Status.banned,
             "failed assigning status")
     }
@@ -134,7 +135,7 @@ class TDSession:XCTestCase
         }
     }
     
-    func testFactoryData()
+    func testUpdateData()
     {
         var session:DSession?
         
@@ -169,7 +170,7 @@ class TDSession:XCTestCase
                 return
             }
             
-            self?.factoryData(session:session)
+            self?.updateData(session:session)
         }
     }
 }
