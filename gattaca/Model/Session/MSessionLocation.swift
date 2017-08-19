@@ -29,7 +29,7 @@ extension MSession
         
         status = MSession.Status.syncLocation
         removePreviousLocation(
-            oldCountry:country,
+            newCountry:country,
             firebase:firebase)
         
         addNewLocation(
@@ -45,7 +45,7 @@ extension MSession
     }
     
     func removePreviousLocation(
-        oldCountry:String,
+        newCountry:String,
         firebase:FDatabase)
     {
         guard
@@ -58,7 +58,7 @@ extension MSession
             return
         }
         
-        if storedCountry != oldCountry
+        if storedCountry != newCountry
         {
             removeCountryUser(
                 country:storedCountry,
