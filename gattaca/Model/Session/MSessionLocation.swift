@@ -17,6 +17,34 @@ extension MSession
         firebase.remove(parent:country, identifier:userId)
     }
     
+    private func addNewLocation(
+        latitude:Double,
+        longitude:Double,
+        country:String,
+        firebase:FDatabase,
+        completion:@escaping(() -> ()))
+    {
+        coreDataLocation(
+            country:country)
+        { [weak self] in
+            
+            self?.firebaseUserLocation(
+                country:country,
+                firebase:firebase)
+            { [weak self] in
+                
+                self?.firebaseCountryUser(
+                    latitude:latitude,
+                    longitude:longitude,
+                    country:country,
+                    firebase:firebase)
+                {
+                    completion()
+                }
+            }
+        }
+    }
+    
     //MARK: internal
     
     func syncLocation(
@@ -64,34 +92,6 @@ extension MSession
                 country:storedCountry,
                 userId:userId,
                 firebase:firebase)
-        }
-    }
-    
-    func addNewLocation(
-        latitude:Double,
-        longitude:Double,
-        country:String,
-        firebase:FDatabase,
-        completion:@escaping(() -> ()))
-    {
-        coreDataLocation(
-            country:country)
-        { [weak self] in
-            
-            self?.firebaseUserLocation(
-                country:country,
-                firebase:firebase)
-            { [weak self] in
-                
-                self?.firebaseCountryUser(
-                    latitude:latitude,
-                    longitude:longitude,
-                    country:country,
-                    firebase:firebase)
-                {
-                    completion()
-                }
-            }
         }
     }
     
