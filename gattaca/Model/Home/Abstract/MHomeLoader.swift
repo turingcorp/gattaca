@@ -13,7 +13,7 @@ extension MHome
     
     //MARK: private
     
-    private func dispatchLoadItems()
+    private func asyncsLoadItems()
     {/*
         let gifItems:[DGif] = MSession.sharedInstance.gif.itemsWaiting()
         let countItems:Int = gifItems.count
@@ -44,12 +44,9 @@ extension MHome
     
     //MARK: internal
     
-    func loadItems()
+    func asyncLoadItems(
+        completion:@escaping(([MHomeItem]) -> ()))
     {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        { [weak self] in
-            
-            self?.dispatchLoadItems()
-        }
+        
     }
 }

@@ -26,6 +26,14 @@ class MHome:Model
     
     //MARK: internal
     
+    func loadItems()
+    {
+        asyncLoadItems
+        { [weak self] (items:[MHomeItem]) in
+            self?.items = items
+        }
+    }
+    
     func updateItems(items:[MHomeItem])
     {/*
         self.items.append(contentsOf:items)
