@@ -45,9 +45,9 @@ class FDatabase
         
         let reference:DatabaseReference = self.reference.child(path)
         reference.observeSingleEvent(of:DataEventType.value)
-        { [weak self] (snapshot:DataSnapshot) in
+        { (snapshot:DataSnapshot) in
             
-            let model:T? = self?.modelFromSnapshot(
+            let model:T? = self.modelFromSnapshot(
                 snapshot:snapshot,
                 parent:parent,
                 identifier:identifier)
