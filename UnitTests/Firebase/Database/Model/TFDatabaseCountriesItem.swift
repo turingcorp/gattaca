@@ -94,7 +94,7 @@ class TFDatabaseCountriesItem:XCTestCase
             let userB:FDatabaseCountriesItemUser = model.users[1]
             
             XCTAssertNotNil(
-                userB.identifier
+                userB.identifier,
                 "failed assigning identifier")
         }
     }
