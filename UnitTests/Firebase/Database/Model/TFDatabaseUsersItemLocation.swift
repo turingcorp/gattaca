@@ -16,6 +16,16 @@ class TFDatabaseUsersItemLocation:XCTestCase
             users:users)
     }
     
+    //MARK: private
+    
+    private func factoryInitJson() -> Any
+    {
+        let json:[String:Any] = [
+            FDatabaseUsersItemLocation.kKeyCountry:kCountryId]
+        
+        return json
+    }
+    
     //MARK: internal
     
     func testUserIsCreated()
@@ -134,5 +144,16 @@ class TFDatabaseUsersItemLocation:XCTestCase
             jsonCountry,
             kCountryId,
             "json country does not match")
+    }
+    
+    func testInitJson()
+    {
+        let json:Any = factoryInitJson()
+        let location:FDatabaseUsersItemLocation? = FDatabaseUsersItemLocation(
+            json:json)
+        
+        XCTAssertNotNil(
+            location,
+            "failed init with json")
     }
 }
