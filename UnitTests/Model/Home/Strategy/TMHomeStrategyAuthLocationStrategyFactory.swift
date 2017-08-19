@@ -6,6 +6,7 @@ class TMHomeStrategyAuthLocationStrategyFactory:XCTestCase
 {
     private var session:MSession?
     private var controller:CHome?
+    private var strategy:MHomeStrategyAuthLocation?
     
     override func setUp()
     {
@@ -16,6 +17,29 @@ class TMHomeStrategyAuthLocationStrategyFactory:XCTestCase
         
         let controller:CHome = CHome(session:session)
         self.controller = controller
+        
+        strategy = MHomeStrategyAuthLocation(
+            controller:controller)
+    }
+    
+    //MARK: private
+    
+    private func factoryStrategy(status:CLAuthorizationStatus) -> MHomeStrategyAuthLocationStrategy?
+    {
+        guard
+            
+            let strategy:MHomeStrategyAuthLocation = self.strategy
+            
+        else
+        {
+            return nil
+        }
+        
+        let model:MHomeStrategyAuthLocationStrategy? = MHomeStrategyAuthLocationStrategy.factoryStrategy(
+            parentStrategy:strategy,
+            status:status)
+        
+        return model
     }
     
     //MARK: internal
@@ -29,20 +53,8 @@ class TMHomeStrategyAuthLocationStrategyFactory:XCTestCase
     
     func testAuthAlways()
     {
-        guard
-            
-            let controller:CHome = self.controller
-        
-        else
-        {
-            return
-        }
-        
         let status:CLAuthorizationStatus = CLAuthorizationStatus.authorizedAlways
-        
-        let strategy:MHomeStrategyAuthLocationStrategy? = MHomeStrategyAuthLocationStrategy.factoryStrategy(
-            controller:controller,
-            status:status)
+        let strategy:MHomeStrategyAuthLocationStrategy? = factoryStrategy(status:status)
         
         let strategyAuthAlways:MHomeStrategyAuthLocationStrategyGranted? = strategy as? MHomeStrategyAuthLocationStrategyGranted
         
@@ -53,20 +65,8 @@ class TMHomeStrategyAuthLocationStrategyFactory:XCTestCase
     
     func testWhenInUser()
     {
-        guard
-            
-            let controller:CHome = self.controller
-            
-        else
-        {
-            return
-        }
-        
         let status:CLAuthorizationStatus = CLAuthorizationStatus.authorizedWhenInUse
-        
-        let strategy:MHomeStrategyAuthLocationStrategy? = MHomeStrategyAuthLocationStrategy.factoryStrategy(
-            controller:controller,
-            status:status)
+        let strategy:MHomeStrategyAuthLocationStrategy? = factoryStrategy(status:status)
         
         let strategyWhenInUse:MHomeStrategyAuthLocationStrategyGranted? = strategy as? MHomeStrategyAuthLocationStrategyGranted
         
@@ -77,20 +77,8 @@ class TMHomeStrategyAuthLocationStrategyFactory:XCTestCase
     
     func testNotDetermined()
     {
-        guard
-            
-            let controller:CHome = self.controller
-            
-        else
-        {
-            return
-        }
-        
         let status:CLAuthorizationStatus = CLAuthorizationStatus.notDetermined
-        
-        let strategy:MHomeStrategyAuthLocationStrategy? = MHomeStrategyAuthLocationStrategy.factoryStrategy(
-            controller:controller,
-            status:status)
+        let strategy:MHomeStrategyAuthLocationStrategy? = factoryStrategy(status:status)
         
         let strategyNotDetermined:MHomeStrategyAuthLocationStrategyUnknown? = strategy as? MHomeStrategyAuthLocationStrategyUnknown
         
@@ -101,20 +89,8 @@ class TMHomeStrategyAuthLocationStrategyFactory:XCTestCase
     
     func testRestricted()
     {
-        guard
-            
-            let controller:CHome = self.controller
-            
-        else
-        {
-            return
-        }
-        
         let status:CLAuthorizationStatus = CLAuthorizationStatus.restricted
-        
-        let strategy:MHomeStrategyAuthLocationStrategy? = MHomeStrategyAuthLocationStrategy.factoryStrategy(
-            controller:controller,
-            status:status)
+        let strategy:MHomeStrategyAuthLocationStrategy? = factoryStrategy(status:status)
         
         let strategyRestricted:MHomeStrategyAuthLocationStrategyDenied? = strategy as? MHomeStrategyAuthLocationStrategyDenied
         
@@ -125,20 +101,8 @@ class TMHomeStrategyAuthLocationStrategyFactory:XCTestCase
     
     func testDenied()
     {
-        guard
-            
-            let controller:CHome = self.controller
-            
-        else
-        {
-            return
-        }
-        
         let status:CLAuthorizationStatus = CLAuthorizationStatus.denied
-        
-        let strategy:MHomeStrategyAuthLocationStrategy? = MHomeStrategyAuthLocationStrategy.factoryStrategy(
-            controller:controller,
-            status:status)
+        let strategy:MHomeStrategyAuthLocationStrategy? = factoryStrategy(status:status)
         
         let strategyDenied:MHomeStrategyAuthLocationStrategyDenied? = strategy as? MHomeStrategyAuthLocationStrategyDenied
         
