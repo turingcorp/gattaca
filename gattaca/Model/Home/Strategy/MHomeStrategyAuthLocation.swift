@@ -4,6 +4,13 @@ import CoreLocation
 class MHomeStrategyAuthLocation:MHomeStrategy
 {
     private(set) var strategy:MHomeStrategyAuthLocationStrategy?
+    private(set) var delegate:MHomeStrategyAuthLocationDelegate?
+    
+    deinit
+    {
+        delegate?.locationManager?.stopUpdatingLocation()
+        delegate?.locationManager?.delegate = nil
+    }
     
     override func controllerDidAppear(controller:CHome)
     {
@@ -38,5 +45,20 @@ class MHomeStrategyAuthLocation:MHomeStrategy
             parentStrategy:self,
             status:status)
         strategy?.nextStep()
+    }
+    
+    func factoryDelegate()
+    {
+        guard
+            
+            let controller:CHome = self.controller
+            
+        else
+        {
+            return
+        }
+        
+        delegate = MHomeStrategyAuthLocationDelegate(
+            controller:controller)
     }
 }

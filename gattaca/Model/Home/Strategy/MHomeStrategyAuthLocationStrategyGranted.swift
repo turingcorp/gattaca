@@ -5,17 +5,11 @@ class MHomeStrategyAuthLocationStrategyGranted:MHomeStrategyAuthLocationStrategy
     override func nextStep()
     {
         super.nextStep()
-      
-        guard
+        
+        DispatchQueue.main.async
+        { [weak self] in
             
-            let controller:CHome = self.controller
-        
-        else
-        {
-            return
+            self?.strategy?.factoryDelegate()
         }
-        
-        controller.model.waitForLocation(
-            controller:controller)
     }
 }
