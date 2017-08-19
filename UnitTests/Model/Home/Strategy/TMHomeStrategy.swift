@@ -35,7 +35,6 @@ class TMHomeStrategy:XCTestCase
     {
         guard
         
-            let session:MSession = self.session,
             let strategy:MHomeStrategy = self.strategy
         
         else
@@ -43,7 +42,7 @@ class TMHomeStrategy:XCTestCase
             return
         }
         
-        session.status = MSession.Status.ready
+        controller?.model.status = MHome.Status.ready
         strategy.refreshStrategy()
         
         let newStrategy:MHomeStrategyReady? = controller?.model.strategy as? MHomeStrategyReady
@@ -59,7 +58,6 @@ class TMHomeStrategy:XCTestCase
         
         guard
             
-            let session:MSession = self.session,
             let strategy:MHomeStrategy = self.strategy
             
         else
@@ -70,7 +68,7 @@ class TMHomeStrategy:XCTestCase
         let refreshExpectation:XCTestExpectation = expectation(
             description:"refresh strategy")
         
-        session.status = MSession.Status.ready
+        controller?.model.status = MHome.Status.ready
         strategy.delayAndRefresh()
         
         let beforeDelayStrategy:MHomeStrategyReady? = controller?.model.strategy as? MHomeStrategyReady
