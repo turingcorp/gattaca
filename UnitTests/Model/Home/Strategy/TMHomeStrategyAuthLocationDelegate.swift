@@ -2,11 +2,11 @@ import XCTest
 import CoreLocation
 @testable import gattaca
 
-class TMHomeStrategyWaitingLocationDelegate:XCTestCase
+class TMHomeStrategyAuthLocationDelegate:XCTestCase
 {
     private var session:MSession?
     private var controller:CHome?
-    private var delegate:MHomeStrategyWaitingLocationDelegate?
+    private var delegate:MHomeStrategyAuthLocationDelegate?
     private let kCountry:String = "banana republic"
     
     override func setUp()
@@ -19,8 +19,11 @@ class TMHomeStrategyWaitingLocationDelegate:XCTestCase
         let controller:CHome = CHome(session:session)
         self.controller = controller
         
-        delegate = MHomeStrategyWaitingLocationDelegate(
+        let strategy:MHomeStrategyAuthLocation = MHomeStrategyAuthLocation(
             controller:controller)
+        
+        delegate = MHomeStrategyAuthLocationDelegate(
+            strategy:strategy)
     }
     
     //MARK: internal
@@ -35,9 +38,9 @@ class TMHomeStrategyWaitingLocationDelegate:XCTestCase
     func testNoPlacemarks()
     {
         guard
-        
-            let delegate:MHomeStrategyWaitingLocationDelegate = self.delegate
-        
+            
+            let delegate:MHomeStrategyAuthLocationDelegate = self.delegate
+            
         else
         {
             return
@@ -49,7 +52,7 @@ class TMHomeStrategyWaitingLocationDelegate:XCTestCase
         
         XCTAssertEqual(
             country,
-            MHomeStrategyWaitingLocationDelegate.kUnknownCountry,
+            MHomeStrategyAuthLocationDelegate.kUnknownCountry,
             "failed to get country iso")
     }
 }
