@@ -130,7 +130,6 @@
 		DA90E0EE1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0DA1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift */; };
 		DA90E0EF1F40B75800A37538 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0DC1F40B75800A37538 /* MSession.swift */; };
 		DA90E0F01F40B75800A37538 /* MSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0DD1F40B75800A37538 /* MSessionLoader.swift */; };
-		DA90E0F11F40B75800A37538 /* MSessionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0DE1F40B75800A37538 /* MSessionStatus.swift */; };
 		DA90E0F41F40B79E00A37538 /* TMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0F31F40B79E00A37538 /* TMSession.swift */; };
 		DA90E0F61F40BA7500A37538 /* TMSessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0F51F40BA7500A37538 /* TMSessionLoader.swift */; };
 		DA920BA21F4893E400AE31A4 /* TMHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA920BA11F4893E400AE31A4 /* TMHome.swift */; };
@@ -140,6 +139,7 @@
 		DA920BAC1F48994500AE31A4 /* DGifMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA920BAB1F48994500AE31A4 /* DGifMark.swift */; };
 		DA920BAE1F48999500AE31A4 /* DGifFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA920BAD1F48999500AE31A4 /* DGifFactory.swift */; };
 		DA920BB01F4899F400AE31A4 /* DGifDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA920BAF1F4899F400AE31A4 /* DGifDirectory.swift */; };
+		DA920BB21F48AA0900AE31A4 /* MHomeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA920BB11F48AA0900AE31A4 /* MHomeStatus.swift */; };
 		DAB3A31D1F444323001981F4 /* MHomeStrategyAuthLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A31C1F444323001981F4 /* MHomeStrategyAuthLocation.swift */; };
 		DAB3A31F1F444A83001981F4 /* MHomeStrategyAuthLocationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A31E1F444A83001981F4 /* MHomeStrategyAuthLocationStrategy.swift */; };
 		DAB3A3211F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A3201F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift */; };
@@ -338,7 +338,6 @@
 		DA90E0DA1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkThumbnailPurchaseProtocol.swift; sourceTree = "<group>"; };
 		DA90E0DC1F40B75800A37538 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
 		DA90E0DD1F40B75800A37538 /* MSessionLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionLoader.swift; sourceTree = "<group>"; };
-		DA90E0DE1F40B75800A37538 /* MSessionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionStatus.swift; sourceTree = "<group>"; };
 		DA90E0F31F40B79E00A37538 /* TMSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSession.swift; sourceTree = "<group>"; };
 		DA90E0F51F40BA7500A37538 /* TMSessionLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionLoader.swift; sourceTree = "<group>"; };
 		DA920BA11F4893E400AE31A4 /* TMHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMHome.swift; sourceTree = "<group>"; };
@@ -348,6 +347,7 @@
 		DA920BAB1F48994500AE31A4 /* DGifMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifMark.swift; sourceTree = "<group>"; };
 		DA920BAD1F48999500AE31A4 /* DGifFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifFactory.swift; sourceTree = "<group>"; };
 		DA920BAF1F4899F400AE31A4 /* DGifDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGifDirectory.swift; sourceTree = "<group>"; };
+		DA920BB11F48AA0900AE31A4 /* MHomeStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStatus.swift; sourceTree = "<group>"; };
 		DAB3A3151F4433E6001981F4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DAB3A3161F4433E6001981F4 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		DAB3A3171F4433E6001981F4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -969,7 +969,6 @@
 			isa = PBXGroup;
 			children = (
 				DA90E0DC1F40B75800A37538 /* MSession.swift */,
-				DA90E0DE1F40B75800A37538 /* MSessionStatus.swift */,
 				DA90E0DD1F40B75800A37538 /* MSessionLoader.swift */,
 				DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */,
 				DA63F1BD1F4426DF002AA9FC /* MSessionLocation.swift */,
@@ -1125,6 +1124,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE0AFC31F3BAEF9006449D0 /* MHome.swift */,
+				DA920BB11F48AA0900AE31A4 /* MHomeStatus.swift */,
 				DAE0AFC41F3BAEF9006449D0 /* MHomeFactory.swift */,
 				DA90E0BF1F40AD3E00A37538 /* MHomeSession.swift */,
 				DAE0AFC71F3BAEF9006449D0 /* MHomeLoader.swift */,
@@ -1533,7 +1533,6 @@
 				DA920BAA1F48991500AE31A4 /* DGifStatus.swift in Sources */,
 				DAB3A31D1F444323001981F4 /* MHomeStrategyAuthLocation.swift in Sources */,
 				DA90E0C01F40AD3E00A37538 /* MHomeSession.swift in Sources */,
-				DA90E0F11F40B75800A37538 /* MSessionStatus.swift in Sources */,
 				DAE0AFBF1F3BAA88006449D0 /* MGiphyItem.swift in Sources */,
 				DAB3A3361F445DC4001981F4 /* CHomeLocation.swift in Sources */,
 				DAE0AFA61F3AD96B006449D0 /* MGiphyTrending.swift in Sources */,
@@ -1574,6 +1573,7 @@
 				DA7CE8281F3F497D0078A26B /* MHomeStrategyFactory.swift in Sources */,
 				DA68F1BA1F38E5D500C13634 /* ViewParentTransitions.swift in Sources */,
 				DA920BB01F4899F400AE31A4 /* DGifDirectory.swift in Sources */,
+				DA920BB21F48AA0900AE31A4 /* MHomeStatus.swift in Sources */,
 				DA68F1B71F38E5D500C13634 /* View.swift in Sources */,
 				DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */,
 				DAB3A3321F445BCB001981F4 /* VLocationAsk.swift in Sources */,

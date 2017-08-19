@@ -1,6 +1,6 @@
 import Foundation
 
-extension MSession
+extension MHome
 {
     enum Status
     {
