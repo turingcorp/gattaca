@@ -364,4 +364,66 @@ class TMSessionLocation:XCTestCase
                 "country location mismatch")
         }
     }
+    
+    func testFirebaseCountryUser()
+    {
+        var countryUser:FDatabaseCountriesItemUser?
+        let session:MSession = MSession()
+        let firebase:FDatabase = FDatabase()
+        let country:String = kCountry
+        
+        let updateExpectation:XCTestExpectation = expectation(
+            description:"update firebase country user")
+        
+        createUser(session:session)
+        
+        XCTAssertNotNil(
+            session.data?.userId,
+            "failed creating user")
+        
+        guard
+            
+            let userId:String = session.data?.userId
+        
+        else
+        {
+            return
+        }
+        
+        session.firebaseCountryUser(
+            latitude:kLatitude,
+            longitude:kLongitude,
+            country:country,
+            firebase:firebase)
+        { [weak self] in
+            
+            self?.getCountryUser(
+                userId:userId,
+                country:country,
+                firebase:firebase)
+            { (user:FDatabaseCountriesItemUser?) in
+                
+                countryUser = user
+                updateExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { [weak self] (error:Error?) in
+
+            XCTAssertNotNil(
+                countryUser,
+                "failed updating country user")
+            
+            XCTAssertEqual(
+                countryUser?.latitude,
+                self?.kLatitude,
+                "latitude mismatch")
+            
+            XCTAssertEqual(
+                countryUser?.longitude,
+                self?.kLongitude,
+                "longitude mismatch")
+        }
+    }
 }
