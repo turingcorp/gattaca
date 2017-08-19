@@ -84,22 +84,6 @@ class TMSessionLocation:XCTestCase
         }
     }
     
-    private func changeLocation(session:MSession)
-    {
-        let oldData:MSessionData? = session.data
-        
-        XCTAssertNotNil(
-            oldData,
-            "missing session data")
-        
-        let newData:MSessionData = MSessionData(
-            userId:oldData?.userId,
-            country:kOtherCountry,
-            status:DSession.Status.active)
-        
-        session.data = newData
-    }
-    
     //MARK: internal
     
     func testSyncLocation()
@@ -147,12 +131,9 @@ class TMSessionLocation:XCTestCase
                 return
             }
             
-            self?.changeLocation(session:session)
-            
-            XCTAssertEqual(
-                session.data?.country,
-                newCountry,
-                "failed changing location")
+            session.removePreviousLocation(
+                newCountry:newCountry,
+                firebase:firebase)
             
             self?.getUser(
                 userId:userId,
