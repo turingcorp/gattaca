@@ -67,7 +67,7 @@ class TMSessionLocation:XCTestCase
         completion()
     }
     
-    private func getUser(
+    private func getCountryUser(
         userId:String,
         country:String,
         firebase:FDatabase,
@@ -152,7 +152,7 @@ class TMSessionLocation:XCTestCase
                 newCountry:newCountry,
                 firebase:firebase)
             
-            self?.getUser(
+            self?.getCountryUser(
                 userId:userId,
                 country:firstCountry,
                 firebase:firebase)
@@ -260,5 +260,10 @@ class TMSessionLocation:XCTestCase
                 newCountry,
                 "failed updating country")
         }
+    }
+    
+    func testFirebaseUserLocation()
+    {
+        
     }
 }
