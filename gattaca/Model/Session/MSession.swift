@@ -2,18 +2,12 @@ import Foundation
 
 class MSession
 {
-    var status:MSession.Status
-    var data:MSessionData?
+    var userId:String?
+    var country:String?
+    var status:DSession.Status
     
     init()
     {
-        status = MSession.Status.new
-    }
-    
-    //MARK: internal
-    
-    func updateSession(session:DSession)
-    {
-        data = session.factoryData()
+        status = DSession.Status.unknown
     }
 }
