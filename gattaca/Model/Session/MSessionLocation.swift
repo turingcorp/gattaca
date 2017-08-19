@@ -17,14 +17,21 @@ extension MSession
         firebase.remove(parent:country, identifier:userId)
     }
     
-    private func addNewLocation(
+    //MARK: internal
+    
+    func syncLocation(
         coreData:Database,
         latitude:Double,
         longitude:Double,
         country:String,
-        firebase:FDatabase,
         completion:@escaping(() -> ()))
     {
+        let firebase:FDatabase = FDatabase()
+        
+        removePreviousLocation(
+            newCountry:country,
+            firebase:firebase)
+        
         coreDataLocation(
             country:country,
             coreData:coreData)
@@ -45,37 +52,13 @@ extension MSession
         }
     }
     
-    //MARK: internal
-    
-    func syncLocation(
-        coreData:Database,
-        latitude:Double,
-        longitude:Double,
-        country:String,
-        completion:@escaping(() -> ()))
-    {
-        let firebase:FDatabase = FDatabase()
-        
-        removePreviousLocation(
-            newCountry:country,
-            firebase:firebase)
-        
-        addNewLocation(
-            coreData:coreData,
-            latitude:latitude,
-            longitude:longitude,
-            country:country,
-            firebase:firebase,
-            completion:completion)
-    }
-    
     func removePreviousLocation(
         newCountry:String,
         firebase:FDatabase)
     {
         guard
         
-            let storedCountry:String = country,
+            let country:String = country,
             let userId:String = userId
         
         else
@@ -83,10 +66,10 @@ extension MSession
             return
         }
         
-        if storedCountry != newCountry
+        if country != newCountry
         {
             removeCountryUser(
-                country:storedCountry,
+                country:country,
                 userId:userId,
                 firebase:firebase)
         }
