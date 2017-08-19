@@ -2,21 +2,35 @@ import Foundation
 
 extension DGif
 {
-    var mark:Mark
+    var mark:DGif.Mark
     {
         get
         {
-            let mark:Mark = Mark(rawValue:markRaw)!
+            guard
+            
+                let mark:Mark = Mark(rawValue:markRaw)
+            
+            else
+            {
+                return DGif.Mark.none
+            }
             
             return mark
         }
     }
     
-    var status:Status
+    var status:DGif.Status
     {
         get
         {
-            let status:Status = Status(rawValue:statusRaw)!
+            guard
+            
+                let status:Status = Status(rawValue:statusRaw)
+            
+            else
+            {
+                return DGif.Status.new
+            }
             
             return status
         }
