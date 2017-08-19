@@ -1,7 +1,7 @@
 import Foundation
 import CoreLocation
 
-class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
+class MHomeStrategyAuthLocationDelegate:NSObject, CLLocationManagerDelegate
 {
     static let kUnknownCountry:String = "unknown"
     
@@ -55,10 +55,10 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
             }
             
             guard
-            
+                
                 let country:String = self?.countryForPlacemarks(
                     placemarks:placemarks)
-            
+                
             else
             {
                 return
@@ -90,8 +90,8 @@ class MHomeStrategyWaitingLocationDelegate:NSObject, CLLocationManagerDelegate
             guard
                 
                 let controller:CHome = self?.controller
-            
-            
+                
+                
             else
             {
                 return
