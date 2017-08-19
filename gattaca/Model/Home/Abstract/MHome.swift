@@ -2,6 +2,7 @@ import Foundation
 
 class MHome:Model
 {
+    var coreData:Database?
     var strategy:MHomeStrategy?
     var requestOffset:Int
     let urlSession:URLSession
