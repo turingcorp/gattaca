@@ -3,31 +3,22 @@ import XCTest
 
 class TMSessionLocation:XCTestCase
 {
-    private let kCountry:String = "banana republic"
-    private let kOtherCountry:String = "coffee republic"
+    private let kUserId:String = "johnnyTest"
+    private let kCountry:String = "bananaRepublic"
+    private let kOtherCountry:String = "coffeeRepublic"
     private let kLatitude:Double = 1
     private let kLongitude:Double = 2
     private let kWaitExpectation:TimeInterval = 15
     
     //MARK: private
     
-    private func createUser(
-        session:MSession,
-        completion:@escaping(() -> ()))
+    private func createUser(session:MSession)
     {
-        session.load
-        {
-            XCTAssertEqual(
-                session.status,
-                MSession.Status.loaded,
-                "user not loaded")
-            
-            XCTAssertNotNil(
-                session.data?.userId,
-                "missing user id")
-            
-            completion()
-        }
+        let sessionData:MSessionData = MSessionData(
+            userId:kUserId,
+            country:kCountry,
+            status:DSession.Status.active)
+        session.data = sessionData
     }
     
     private func addLocation(
@@ -84,14 +75,12 @@ class TMSessionLocation:XCTestCase
         let firebase:FDatabase = FDatabase()
         
         createUser(session:session)
-        { [weak self] in
-            
-            self?.addLocation(
-                session:session,
-                firebase:firebase)
-            {
-                completion(session, firebase)
-            }
+        
+        addLocation(
+            session:session,
+            firebase:firebase)
+        {
+            completion(session, firebase)
         }
     }
     
@@ -183,6 +172,47 @@ class TMSessionLocation:XCTestCase
             XCTAssertNil(
                 firebaseCountryUser,
                 "country user should be nil")
+        }
+    }
+    
+    func testRemovePreviousLocationSame()
+    {
+        var firebaseCountryUser:FDatabaseCountriesItemUser?
+        let country:String = kCountry
+        
+        let removeExpectation:XCTestExpectation = expectation(
+            description:"remove user from country")
+        
+        createUserAtLocation
+        { [weak self] (session:MSession, firebase:FDatabase) in
+            
+            guard
+                
+                let userId:String = session.data?.userId
+                
+            else
+            {
+                return
+            }
+            
+            self?.getUser(
+                userId:userId,
+                country:country,
+                firebase:firebase)
+            { (countryUser:FDatabaseCountriesItemUser?) in
+                
+                firebaseCountryUser = countryUser
+                
+                removeExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            XCTAssertNotNil(
+                firebaseCountryUser,
+                "user should not be removed")
         }
     }
 }
