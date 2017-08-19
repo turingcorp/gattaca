@@ -34,6 +34,17 @@ class FDatabaseUsersItemLocation:FDatabaseProtocol
     
     required init?(json:Any)
     {
-        return nil
+        guard
+        
+            let jsonMap:[String:Any] = json as? [String:Any],
+            let country:String = jsonMap[
+                FDatabaseUsersItemLocation.kKeyCountry] as? String
+        
+        else
+        {
+            return nil
+        }
+        
+        self.country = country
     }
 }
