@@ -3,15 +3,6 @@ import CoreData
 
 extension MGif
 {
-    private func gifsLoaded(
-        gifs:[DGif],
-        completion:@escaping(() -> ()))
-    {
-        DGif.createDirectory()
-        
-        
-    }
-    
     //MARK: internal
     
     func load(
@@ -27,9 +18,61 @@ extension MGif
                 return gifA.created < gifB.created
             }
             
-            self?.gifsLoaded(
+            self?.loadComplete(
                 gifs:gifs,
                 completion:completion)
+        }
+    }
+    
+    func loadComplete(
+        gifs:[DGif],
+        completion:@escaping(() -> ()))
+    {
+        DGif.createDirectory()
+        
+        for item:DGif in gifs
+        {
+            loadMap(item:item)
+            loadGroup(item:item)
+        }
+        
+        strategyStand()
+        completion()
+    }
+    
+    func loadMap(item:DGif)
+    {
+        guard
+            
+            let identifier:String = item.identifier
+            
+        else
+        {
+            return
+        }
+        
+        map[identifier] = item
+    }
+    
+    func loadGroup(item:DGif)
+    {
+        switch item.status
+        {
+        case DGif.Status.new,
+             DGif.Status.loading:
+            
+            itemsNotReady.append(item)
+            
+            break
+            
+        case DGif.Status.ready:
+            
+            itemsReady.append(item)
+            
+            break
+            
+        default:
+            break
         }
     }
 }

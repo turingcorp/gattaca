@@ -14,30 +14,6 @@ class MGif
         map = [:]
     }
     
-    //MARK: private
-    
-    private func mapItems()
-    {
-//        for item:DGif in items
-//        {
-//            mapItem(item:item)
-//        }
-    }
-    
-    private func mapItem(item:DGif)
-    {
-        guard
-            
-            let identifier:String = item.identifier
-            
-        else
-        {
-            return
-        }
-        
-        map[identifier] = item
-    }
-    
     //MARK: internal
     
     func strategyStand()
