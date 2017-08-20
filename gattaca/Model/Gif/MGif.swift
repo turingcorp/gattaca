@@ -2,10 +2,10 @@ import Foundation
 
 class MGif
 {
+    var itemsReady:[DGif]
+    var itemsNotReady:[DGif]
+    var map:[String:DGif]
     private(set) var strategy:MGifStrategy?
-    private(set) var itemsReady:[DGif]
-    private(set) var itemsNotReady:[DGif]
-    private var map:[String:DGif]
     
     init()
     {

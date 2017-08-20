@@ -5,7 +5,7 @@ extension MGif
 {
     private func gifsLoaded(
         gifs:[DGif],
-        completion:@escaping(([DGif]) -> ()))
+        completion:@escaping(() -> ()))
     {
         DGif.createDirectory()
         
@@ -24,35 +24,18 @@ extension MGif
         return sorted
     }
     
-    private func asyncLoadGifs(completion:@escaping(([DGif]) -> ()))
-    {
-//        DManager.sharedInstance?.fetch(entity:DGif.self)
-//        { [weak self] (data:[NSManagedObject]?) in
-//            
-//            guard
-//                
-//                let gifs:[DGif] = data as? [DGif]
-//                
-//            else
-//            {
-//                completion([])
-//                return
-//            }
-//            
-//            self?.gifsLoaded(
-//                gifs:gifs,
-//                completion:completion)
-//        }
-    }
-    
     //MARK: internal
     
-    func loadGifs(completion:@escaping(([DGif]) -> ()))
+    func load(
+        coreData:Database,
+        completion:@escaping(() -> ()))
     {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        { [weak self] in
+        coreData.fetch
+        { [weak self] (gifs:[DGif]) in
             
-            self?.asyncLoadGifs(completion:completion)
+            self?.gifsLoaded(
+                gifs:gifs,
+                completion:completion)
         }
     }
 }
