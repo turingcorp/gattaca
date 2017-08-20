@@ -260,4 +260,40 @@ class TMGifLoader:XCTestCase
                 "grouped item wrongly")
         }
     }
+    
+    func testLoadCompleteDone()
+    {
+        let gif:MGif = MGif()
+        let loadExpectation:XCTestExpectation = expectation(
+            description:"load done")
+        
+        gif.loadCompleteDone
+        {
+            loadExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            XCTAssertNotNil(
+                gif.strategy,
+                "failed starting strategy")
+            
+            guard
+            
+                let directory:URL = DGif.gifDirectory()
+            
+            else
+            {
+                return
+            }
+            
+            let path:String = directory.path
+            let directoryCreated:Bool = FileManager.default.fileExists(atPath:path)
+            
+            XCTAssertTrue(
+                directoryCreated,
+                "failed creating directory")
+        }
+    }
 }
