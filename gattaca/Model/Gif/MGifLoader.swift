@@ -28,19 +28,16 @@ extension MGif
         gifs:[DGif],
         completion:@escaping(() -> ()))
     {
-        DGif.createDirectory()
-        
         for item:DGif in gifs
         {
-            loadMap(item:item)
-            loadGroup(item:item)
+            loadCompleteMap(item:item)
+            loadCompleteGroup(item:item)
         }
         
-        strategyStand()
-        completion()
+        loadCompleteDone(completion:completion)
     }
     
-    func loadMap(item:DGif)
+    func loadCompleteMap(item:DGif)
     {
         guard
             
@@ -54,7 +51,7 @@ extension MGif
         map[identifier] = item
     }
     
-    func loadGroup(item:DGif)
+    func loadCompleteGroup(item:DGif)
     {
         switch item.status
         {
@@ -74,5 +71,13 @@ extension MGif
         default:
             break
         }
+    }
+    
+    func loadCompleteDone(
+        completion:(() -> ()))
+    {
+        DGif.createDirectory()
+        strategyStand()
+        completion()
     }
 }
