@@ -9,19 +9,7 @@ extension MGif
     {
         DGif.createDirectory()
         
-        let sorted:[DGif] = sortGifs(gifs:gifs)
-        completion(sorted)
-    }
-    
-    private func sortGifs(gifs:[DGif]) -> [DGif]
-    {
-        let sorted:[DGif] = gifs.sorted
-        { (gifA:DGif, gifB:DGif) -> Bool in
-            
-            return gifA.created < gifB.created
-        }
         
-        return sorted
     }
     
     //MARK: internal
@@ -31,7 +19,13 @@ extension MGif
         completion:@escaping(() -> ()))
     {
         coreData.fetch
-        { [weak self] (gifs:[DGif]) in
+        { [weak self] (data:[DGif]) in
+            
+            let gifs:[DGif] = data.sorted
+            { (gifA:DGif, gifB:DGif) -> Bool in
+                
+                return gifA.created < gifB.created
+            }
             
             self?.gifsLoaded(
                 gifs:gifs,
