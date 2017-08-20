@@ -192,4 +192,38 @@ class TMGifLoader:XCTestCase
                 "failed grouping item")
         }
     }
+    
+    func testLoadCompleteStatusMarked()
+    {
+        let gif:MGif = MGif()
+        let loadExpectation:XCTestExpectation = expectation(
+            description:"load gif marked")
+        
+        createGif
+        { (item:DGif) in
+            
+            item.status = DGif.Status.marked
+            
+            let items:[DGif] = [item]
+            gif.loadComplete(gifs:items)
+            {
+                loadExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            let firstItemNotReady:DGif? = gif.itemsNotReady.first
+            let firstItemReady:DGif? = gif.itemsReady.first
+            
+            XCTAssertNil(
+                firstItemNotReady,
+                "grouped item wrongly")
+            
+            XCTAssertNotNil(
+                firstItemReady,
+                "failed grouping item")
+        }
+    }
 }
