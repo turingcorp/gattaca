@@ -3,6 +3,44 @@ import CoreData
 
 extension MGif
 {
+    //MARK: private
+    
+    private func loadCompleteMap(item:DGif)
+    {
+        guard
+            
+            let identifier:String = item.identifier
+            
+        else
+        {
+            return
+        }
+        
+        map[identifier] = item
+    }
+    
+    private func loadCompleteGroup(item:DGif)
+    {
+        switch item.status
+        {
+        case DGif.Status.new,
+             DGif.Status.loading:
+            
+            itemsNotReady.append(item)
+            
+            break
+            
+        case DGif.Status.ready:
+            
+            itemsReady.append(item)
+            
+            break
+            
+        default:
+            break
+        }
+    }
+    
     //MARK: internal
     
     func load(
@@ -35,42 +73,6 @@ extension MGif
         }
         
         loadCompleteDone(completion:completion)
-    }
-    
-    func loadCompleteMap(item:DGif)
-    {
-        guard
-            
-            let identifier:String = item.identifier
-            
-        else
-        {
-            return
-        }
-        
-        map[identifier] = item
-    }
-    
-    func loadCompleteGroup(item:DGif)
-    {
-        switch item.status
-        {
-        case DGif.Status.new,
-             DGif.Status.loading:
-            
-            itemsNotReady.append(item)
-            
-            break
-            
-        case DGif.Status.ready:
-            
-            itemsReady.append(item)
-            
-            break
-            
-        default:
-            break
-        }
     }
     
     func loadCompleteDone(
