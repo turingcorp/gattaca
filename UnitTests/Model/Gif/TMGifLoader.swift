@@ -70,7 +70,7 @@ class TMGifLoader:XCTestCase
         let identifier:String = kIdentifier
         let gif:MGif = MGif()
         let loadExpectation:XCTestExpectation = expectation(
-            description:"load gifs")
+            description:"load and map")
         
         createGif
         { (item:DGif) in
@@ -88,6 +88,40 @@ class TMGifLoader:XCTestCase
             XCTAssertNotNil(
                 gif.map[identifier],
                 "failed mapping item")
+        }
+    }
+    
+    func testLoadCompleteStatusNew()
+    {
+        let gif:MGif = MGif()
+        let loadExpectation:XCTestExpectation = expectation(
+            description:"load gif new")
+        
+        createGif
+        { (item:DGif) in
+            
+            item.status = DGif.Status.new
+            
+            let items:[DGif] = [item]
+            gif.loadComplete(gifs:items)
+            {
+                loadExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            let firstItemNotReady:DGif? = gif.itemsNotReady.first
+            let firstItemReady:DGif? = gif.itemsReady.first
+            
+            XCTAssertNotNil(
+                firstItemNotReady,
+                "failed grouping item")
+            
+            XCTAssertNil(
+                firstItemReady,
+                "grouped item wrongly")
         }
     }
 }
