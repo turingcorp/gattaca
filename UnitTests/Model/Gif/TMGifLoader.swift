@@ -221,9 +221,9 @@ class TMGifLoader:XCTestCase
                 firstItemNotReady,
                 "grouped item wrongly")
             
-            XCTAssertNotNil(
+            XCTAssertNil(
                 firstItemReady,
-                "failed grouping item")
+                "grouped item wrongly")
         }
     }
 }
