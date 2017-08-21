@@ -132,6 +132,7 @@
 		DA9F922C1F4B47D600143F1A /* MGifStrategyNotLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F922B1F4B47D600143F1A /* MGifStrategyNotLoaded.swift */; };
 		DA9F922E1F4B4D6B00143F1A /* VHomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F922D1F4B4D6B00143F1A /* VHomeError.swift */; };
 		DA9F92321F4B90AD00143F1A /* MGifOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F92311F4B90AD00143F1A /* MGifOrganizer.swift */; };
+		DA9F92341F4B933800143F1A /* TMGifOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F92331F4B933800143F1A /* TMGifOrganizer.swift */; };
 		DAB3A31D1F444323001981F4 /* MHomeStrategyAuthLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A31C1F444323001981F4 /* MHomeStrategyAuthLocation.swift */; };
 		DAB3A31F1F444A83001981F4 /* MHomeStrategyAuthLocationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A31E1F444A83001981F4 /* MHomeStrategyAuthLocationStrategy.swift */; };
 		DAB3A3211F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A3201F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift */; };
@@ -336,6 +337,7 @@
 		DA9F922B1F4B47D600143F1A /* MGifStrategyNotLoaded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifStrategyNotLoaded.swift; sourceTree = "<group>"; };
 		DA9F922D1F4B4D6B00143F1A /* VHomeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeError.swift; sourceTree = "<group>"; };
 		DA9F92311F4B90AD00143F1A /* MGifOrganizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifOrganizer.swift; sourceTree = "<group>"; };
+		DA9F92331F4B933800143F1A /* TMGifOrganizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMGifOrganizer.swift; sourceTree = "<group>"; };
 		DAB3A3151F4433E6001981F4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DAB3A3161F4433E6001981F4 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		DAB3A3171F4433E6001981F4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 				DA0D13251F4A4C8600E9A26F /* TMGifLoader.swift */,
 				DAC902641F4B36B10091211A /* TMGifDirectory.swift */,
 				DAC902661F4B3C280091211A /* TMGifFactory.swift */,
+				DA9F92331F4B933800143F1A /* TMGifOrganizer.swift */,
 			);
 			path = Gif;
 			sourceTree = "<group>";
@@ -1605,6 +1608,7 @@
 				DA57AEB51F473EAC004DDAD4 /* TMHomeSession.swift in Sources */,
 				DADE03531F476E9600FDB279 /* TMSessionLocation.swift in Sources */,
 				DA57AEBD1F47575F004DDAD4 /* TMHomeStrategyAuthLocationStrategyFactory.swift in Sources */,
+				DA9F92341F4B933800143F1A /* TMGifOrganizer.swift in Sources */,
 				DA57AEB31F473E77004DDAD4 /* TMHomeFactory.swift in Sources */,
 				DA25DF601F43879300765DCA /* TDatabase.swift in Sources */,
 				DAC902651F4B36B10091211A /* TMGifDirectory.swift in Sources */,
