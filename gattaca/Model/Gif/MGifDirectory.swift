@@ -26,7 +26,7 @@ extension MGif
     
     //MARK: internal
     
-    class func gifDirectory() -> URL?
+    class func directory() -> URL?
     {
         guard
             
@@ -48,7 +48,7 @@ extension MGif
     {
         guard
             
-            let gifPath:URL = gifDirectory()
+            let gifPath:URL = directory()
             
         else
         {

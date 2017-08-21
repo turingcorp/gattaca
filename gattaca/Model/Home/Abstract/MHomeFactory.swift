@@ -22,7 +22,7 @@ extension MHome
         
         guard
         
-            let directory:URL = MGif.gifDirectory()
+            let directory:URL = MGif.directory()
         
         else
         {

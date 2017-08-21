@@ -21,7 +21,7 @@ extension MGifStrategyDownload
         guard
             
             let identifier:String = gif.identifier,
-            let directory:URL = MGif.gifDirectory(),
+            let directory:URL = MGif.directory(),
             let gifPath:URL = MGif.factoryPath(
                 identifier:identifier,
                 directory:directory)
