@@ -4,12 +4,12 @@ extension MGif
 {
     //MARK: internal
     
-    func factoryPath(
+    class func factoryPath(
         identifier:String,
         directory:URL) -> URL?
     {
         var fileName:String = identifier
-        fileName.append(DGif.kExtension)
+        fileName.append(MGif.kVideoExtension)
         let path:URL = directory.appendingPathComponent(fileName)
         
         return path

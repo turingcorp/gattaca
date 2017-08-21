@@ -78,7 +78,7 @@ extension MGif
     func loadCompleteDone(
         completion:(() -> ()))
     {
-        DGif.createDirectory()
+        MGif.createDirectory()
         strategyStand()
         completion()
     }

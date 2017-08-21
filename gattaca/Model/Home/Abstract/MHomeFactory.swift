@@ -22,7 +22,7 @@ extension MHome
         
         guard
         
-            let directory:URL = DGif.gifDirectory()
+            let directory:URL = MGif.gifDirectory()
         
         else
         {
@@ -33,7 +33,9 @@ extension MHome
         {
             guard
             
-                let path:URL = gifItem.factoryPath(
+                let identifier:String = gifItem.identifier,
+                let path:URL = MGif.factoryPath(
+                    identifier:identifier,
                     directory:directory)
             
             else

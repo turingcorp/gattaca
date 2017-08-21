@@ -20,8 +20,10 @@ extension MGifStrategyDownload
     {
         guard
             
-            let directory:URL = DGif.gifDirectory(),
-            let gifPath:URL = gif.factoryPath(
+            let identifier:String = gif.identifier,
+            let directory:URL = MGif.gifDirectory(),
+            let gifPath:URL = MGif.factoryPath(
+                identifier:identifier,
                 directory:directory)
             
         else
