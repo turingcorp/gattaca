@@ -3,8 +3,10 @@ import XCTest
 
 class TMHomeLoader:XCTestCase
 {
+    private var coreData:Database?
     private var session:MSession?
     private var model:MHome?
+    private let kIdentifier:String = "lorem ipsum"
     private let kWaitExpectation:TimeInterval = 1
     
     override func setUp()
@@ -14,18 +16,21 @@ class TMHomeLoader:XCTestCase
         let session:MSession = MSession()
         self.session = session
         
-        let model:MHome = MHome(session:session)
-        self.model = model
+        model = MHome(session:session)
+        
+        let bundle:Bundle = Bundle(for:TMHomeLoader.self)
+        coreData = Database(bundle:bundle)
     }
     
     //MARK: internal
     
-    func testAsyncLoadItems()
+    func testLoadItemsDone()
     {
         guard
             
-            let model:MHome = self.model
-        
+            let model:MHome = self.model,
+            let coreData:Database = self.coreData
+            
         else
         {
             return
@@ -33,14 +38,22 @@ class TMHomeLoader:XCTestCase
         
         var items:[MHomeItem]?
         
+        let identifier:String = kIdentifier
         let loadExpectation:XCTestExpectation = expectation(
             description:"load items")
         
-        model.asyncLoadItems
-        { (loadedItems:[MHomeItem]) in
-        
-            items = loadedItems
-            loadExpectation.fulfill()
+        coreData.create
+        { (item:DGif) in
+            
+            item.initialValues(identifier:identifier)
+            
+            model.gif.itemsReady.append(item)
+            model.loadItemsDone
+            { (loadedItems:[MHomeItem]) in
+                
+                items = loadedItems
+                loadExpectation.fulfill()
+            }
         }
         
         waitForExpectations(timeout:kWaitExpectation)
@@ -51,7 +64,7 @@ class TMHomeLoader:XCTestCase
                 "failed loading items")
             
             guard
-                
+            
                 let count:Int = items?.count
             
             else
@@ -62,37 +75,21 @@ class TMHomeLoader:XCTestCase
             XCTAssertGreaterThan(
                 count,
                 0,
-                "Zero loaded items")
-        }
-    }
-    
-    func testLoadItemsDone()
-    {
-        guard
+                "failed loading items")
             
-            let model:MHome = self.model
+            guard
             
-        else
-        {
-            return
-        }
-        
-        var items:[MHomeItem]?
-        
-        let loadExpectation:XCTestExpectation = expectation(
-            description:"load items")
-        
-        model.loadItemsDone
-        { (loadedItems:[MHomeItem]) in
+                let firstItem:MHomeItem = items?.first
             
-            items = loadedItems
-            loadExpectation.fulfill()
-        }
-        
-        waitForExpectations(timeout:kWaitExpectation)
-        { (error:Error?) in
+            else
+            {
+                return
+            }
             
-            
+            XCTAssertEqual(
+                firstItem.gif?.identifier,
+                identifier,
+                "identifier doesn't match")
         }
     }
 }

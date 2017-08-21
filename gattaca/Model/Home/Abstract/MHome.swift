@@ -33,18 +33,14 @@ class MHome:Model<VHome>
     
     func loadItems()
     {
-        asyncLoadItems
-        { [weak self] (items:[MHomeItem]) in
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
             
-            self?.items = items
+            self?.asyncLoadItems
+            { [weak self] (items:[MHomeItem]) in
+                
+                self?.items = items
+            }
         }
-    }
-    
-    func updateItems(items:[MHomeItem])
-    {/*
-        self.items.append(contentsOf:items)
-        delegate?.modelRefresh()
-        
-        MSession.sharedInstance.gif.strategy?.startBackgroundDownload()*/
     }
 }
