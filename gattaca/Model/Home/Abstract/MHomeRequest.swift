@@ -5,69 +5,7 @@ extension MHome
     private static let kLimit:Int = 3
     private static let kStatusCodeSuccess:Int = 200
     
-    func requestGif()
-    {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        { [weak self] in
-            
-            self?.dispatchRequestGif()
-        }
-    }
-    
     //MARK: private
-    
-    private func dispatchRequestGif()
-    {
-        guard
-            
-            let request:URLRequest = MGiphy.factoryTrendingRequest(
-                offset:requestOffset,
-                limit:MHome.kLimit)
-            
-        else
-        {
-            return
-        }
-        
-        print(request.url!)
-        
-        let sessionTask:URLSessionDataTask = urlSession.dataTask(with:request)
-        { [weak self] (data:Data?, urlResponse:URLResponse?, error:Error?) in
-            
-            guard
-                
-                let statusCode:Int = urlResponse?.httpStatusCode
-                
-            else
-            {
-                self?.requestError(error:error)
-                
-                return
-            }
-            
-            if statusCode == MHome.kStatusCodeSuccess
-            {
-                self?.requestSuccess(data:data)
-            }
-            else
-            {
-                guard
-                    
-                    let error:Error = error
-                    
-                else
-                {
-                    self?.requestError(statusCode:statusCode)
-                    
-                    return
-                }
-                
-                self?.requestError(error:error)
-            }
-        }
-        
-        sessionTask.resume()
-    }
     
     private func requestError(error:Error?)
     {
@@ -146,5 +84,60 @@ extension MHome
         {
             requestGif()
         }*/
+    }
+    
+    //MARK: internal
+    
+    func requestGif()
+    {
+        guard
+            
+            let request:URLRequest = MGiphy.factoryTrendingRequest(
+                offset:requestOffset,
+                limit:MHome.kLimit)
+            
+        else
+        {
+            return
+        }
+        
+        print(request.url!)
+        
+        let sessionTask:URLSessionDataTask = urlSession.dataTask(with:request)
+        { [weak self] (data:Data?, urlResponse:URLResponse?, error:Error?) in
+            
+            guard
+                
+                let statusCode:Int = urlResponse?.httpStatusCode
+                
+            else
+            {
+                self?.requestError(error:error)
+                
+                return
+            }
+            
+            if statusCode == MHome.kStatusCodeSuccess
+            {
+                self?.requestSuccess(data:data)
+            }
+            else
+            {
+                guard
+                    
+                    let error:Error = error
+                    
+                    else
+                {
+                    self?.requestError(statusCode:statusCode)
+                    
+                    return
+                }
+                
+                self?.requestError(error:error)
+            }
+        }
+        
+        sessionTask.resume()
     }
 }

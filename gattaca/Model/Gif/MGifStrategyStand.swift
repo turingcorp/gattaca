@@ -2,7 +2,14 @@ import Foundation
 
 class MGifStrategyStand:MGifStrategy
 {
-    override func startBackgroundDownload()
+    override func load(
+        coreData:Database,
+        completion:@escaping (() -> ()))
+    {
+        completion()
+    }
+    
+    override func download()
     {
         model.strategyDownload()
     }

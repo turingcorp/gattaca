@@ -11,7 +11,13 @@ class MGifStrategy
     
     //MARK: internal
     
-    func startBackgroundDownload()
+    func load(
+        coreData:Database,
+        completion:@escaping(() -> ()))
+    {
+    }
+    
+    func download()
     {
     }
 }

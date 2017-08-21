@@ -31,6 +31,13 @@ class MGifStrategyDownload:MGifStrategy
         session.invalidateAndCancel()
     }
     
+    override func load(
+        coreData:Database,
+        completion:@escaping (() -> ()))
+    {
+        completion()
+    }
+    
     //MARK: private
     
     private func factoryUrl()

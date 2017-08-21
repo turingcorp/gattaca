@@ -12,9 +12,16 @@ class MGif
         itemsReady = []
         itemsNotReady = []
         map = [:]
+        
+        strategyNotLoaded()
     }
     
     //MARK: internal
+    
+    func strategyNotLoaded()
+    {
+        strategy = MGifStrategyNotLoaded(model:self)
+    }
     
     func strategyStand()
     {

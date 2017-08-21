@@ -6,12 +6,14 @@ class MHome:Model
     var strategy:MHomeStrategy?
     var status:MHome.Status
     var requestOffset:Int
+    let gif:MGif
     let urlSession:URLSession
     let actions:[MHomeActionProtocol]
     private(set) var items:[MHomeItem]
     
     required init(session:MSession)
     {
+        gif = MGif()
         actions = MHome.factoryActions()
         urlSession = MRequest.factorySession()
         items = []
