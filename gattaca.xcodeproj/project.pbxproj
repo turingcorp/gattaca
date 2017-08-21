@@ -804,8 +804,8 @@
 			children = (
 				DA57AEB21F473E77004DDAD4 /* TMHomeFactory.swift */,
 				DA57AEB41F473EAC004DDAD4 /* TMHomeSession.swift */,
-				DA920BA11F4893E400AE31A4 /* TMHome.swift */,
 				DA920BA51F4895CB00AE31A4 /* TMHomeLoader.swift */,
+				DA920BA11F4893E400AE31A4 /* TMHome.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
