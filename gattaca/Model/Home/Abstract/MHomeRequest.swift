@@ -60,6 +60,11 @@ extension MHome
         urlResponse:URLResponse?,
         error:Error?) -> [MGiphyItem]?
     {
+        if let _:Error = error
+        {
+            return nil
+        }
+        
         guard
             
             let statusCode:Int = urlResponse?.httpStatusCode

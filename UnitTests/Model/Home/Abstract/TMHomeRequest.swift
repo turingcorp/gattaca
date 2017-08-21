@@ -8,9 +8,11 @@ class TMHomeRequest:XCTestCase
     private var model:MHome?
     private var urlResponseOk:URLResponse?
     private var urlResponseFail:URLResponse?
+    private var requestError:Error?
     private let kDummyUrl:String = "https://www.google.com"
     private let kTrendingName:String = "giphyTrending"
     private let kTrendingExtension:String = "json"
+    private let kErrorDomain:String = "some weird error"
     private let kStatusCodeOk:Int = 200
     private let kStatusCodeFail:Int = 0
     private let kMockedItems:Int = 3
@@ -23,6 +25,11 @@ class TMHomeRequest:XCTestCase
         self.session = session
         
         model = MHome(session:session)
+        
+        requestError = NSError(
+            domain:kErrorDomain,
+            code:0,
+            userInfo:nil)
         
         guard
             
@@ -89,6 +96,10 @@ class TMHomeRequest:XCTestCase
         XCTAssertNotNil(
             urlResponseFail,
             "failed creating url response fail")
+        
+        XCTAssertNotNil(
+            requestError,
+            "failed creating error")
     }
     
     func testRequestGifsResponse()
@@ -151,6 +162,27 @@ class TMHomeRequest:XCTestCase
             data:trendingMock,
             urlResponse:urlResponseFail,
             error:nil)
+        
+        XCTAssertNil(
+            items,
+            "should not parse items")
+    }
+    
+    func testRequestGifsResponseError()
+    {
+        guard
+            
+            let model:MHome = self.model
+            
+        else
+        {
+            return
+        }
+        
+        let items:[MGiphyItem]? = model.requestGifsResponse(
+            data:trendingMock,
+            urlResponse:urlResponseOk,
+            error:requestError)
         
         XCTAssertNil(
             items,
