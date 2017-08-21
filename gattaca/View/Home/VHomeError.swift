@@ -91,11 +91,22 @@ class VHomeError:View<VHome, MHome, CHome>
         controller?.model.loadItems()
     }
     
+    //MARK: private
+    
+    private func asyncShowError(message:String)
+    {
+        isHidden = false
+        labelMessage.text = message
+    }
+    
     //MARK: internal
     
     func showError(message:String)
     {
-        isHidden = false
-        labelMessage.text = message
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncShowError(message:message)
+        }
     }
 }
