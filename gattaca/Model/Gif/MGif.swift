@@ -33,10 +33,24 @@ class MGif
         strategy = MGifStrategyDownload(model:self)
     }
     
-    func addItem(item:DGif)
+    func mapItem(item:DGif)
     {
-//        items.append(item)
-//        mapItem(item:item)
+        guard
+            
+            let identifier:String = item.identifier
+            
+        else
+        {
+            return
+        }
+        
+        map[identifier] = item
+    }
+    
+    func newItem(item:DGif)
+    {
+        itemsNotReady.append(item)
+        mapItem(item:item)
     }
     
     func itemsWaiting() -> [DGif]

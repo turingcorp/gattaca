@@ -15,15 +15,8 @@ extension MGif
         return dispatchGroup
     }
     
-    private func storeFinished(completion:@escaping(() -> ()))
-    {
-//        DManager.sharedInstance?.save
-//        {
-//            completion()
-//        }
-    }
-    
     private func storeItems(
+        coreData:Database,
         dispatchGroup:DispatchGroup,
         items:[MGiphyItem])
     {
@@ -31,38 +24,23 @@ extension MGif
         {
             dispatchGroup.enter()
             
-            storeItem(
-                dispatchGroup:dispatchGroup,
-                item:item)
-        }
-    }
-    
-    private func storeItem(
-        dispatchGroup:DispatchGroup,
-        item:MGiphyItem)
-    {/*
-        DManager.sharedInstance?.create(entity:DGif.self)
-        { (data:NSManagedObject?) in
-            
-            guard
-            
-                let gif:DGif = data as? DGif
-            
-            else
-            {
-                return
+            coreData.create
+            { [weak self] (gif:DGif) in
+                
+                gif.initialValues(
+                    identifier:item.identifier)
+                
+                self?.newItem(item:gif)
+                
+                dispatchGroup.leave()
             }
-            
-            gif.newGif(identifier:item.identifier)
-            MSession.sharedInstance.gif.addItem(item:gif)
-            
-            dispatchGroup.leave()
-        }*/
+        }
     }
     
     //MARK: internal
     
     func storeItems(
+        coreData:Database,
         items:[MGiphyItem],
         completion:@escaping(() -> ()))
     {
@@ -74,12 +52,12 @@ extension MGif
             dispatchGroup.notify(
                 queue:
                 DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
-            { [weak self] in
-                
-                self?.storeFinished(completion:completion)
+            {
+                coreData.save(completion:completion)
             }
             
             storeItems(
+                coreData:coreData,
                 dispatchGroup:dispatchGroup,
                 items:items)
         }

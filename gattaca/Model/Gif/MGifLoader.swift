@@ -5,20 +5,6 @@ extension MGif
 {
     //MARK: private
     
-    private func loadCompleteMap(item:DGif)
-    {
-        guard
-            
-            let identifier:String = item.identifier
-            
-        else
-        {
-            return
-        }
-        
-        map[identifier] = item
-    }
-    
     private func loadCompleteGroup(item:DGif)
     {
         switch item.status
@@ -68,7 +54,7 @@ extension MGif
     {
         for item:DGif in gifs
         {
-            loadCompleteMap(item:item)
+            mapItem(item:item)
             loadCompleteGroup(item:item)
         }
         

@@ -7,88 +7,17 @@ extension MHome
     
     //MARK: private
     
-    private func requestError(error:Error?)
-    {
-        let message:String
-        
-        if let error:Error = error
-        {
-            message = error.localizedDescription
-        }
-        else
-        {
-            message = String.localizedModel(
-                key:"MHome_unknownError")
-        }
-        
-        VAlert.messageFail(message:message)
-    }
-    
-    private func requestError(statusCode:Int)
+    private func requestError()
     {
         let message:String = String.localizedModel(
-            key:"MHome_errorCode")
-        VAlert.messageFail(message:message)
-    }
-    
-    private func requestSuccess(data:Data?)
-    {
-        guard
-            
-            let data:Data = data
-            
-        else
-        {
-            requestError(error:nil)
-            
-            return
-        }
+            key:"MHome_requestError")
         
-        let json:Any
-        
-        do
-        {
-            try json = JSONSerialization.jsonObject(
-                with:data,
-                options:
-                JSONSerialization.ReadingOptions.allowFragments)
-        }
-        catch let error
-        {
-            requestError(error:error)
-            
-            return
-        }
-        
-        requestSuccess(json:json)
-    }
-    
-    private func requestSuccess(json:Any)
-    {/*
-        requestOffset += MHome.kLimit
-        
-        let items:[MGiphyItem] = MGiphy.factoryItems(
-            json:json)
-        let purged:[MGiphyItem] = MSession.sharedInstance.gif.purgeItems(
-            items:items)
-        let countPurged:Int = purged.count
-        
-        if countPurged > 0
-        {
-            MSession.sharedInstance.gif.storeItems(items:purged)
-            {
-                MSession.sharedInstance.gif.strategy?.startBackgroundDownload()
-            }
-        }
-        else
-        {
-            requestGif()
-        }*/
+        view?.loadError(message:message)
     }
     
     //MARK: internal
     
-    func requestGif()
+    func requestGifs()
     {
         guard
             
@@ -107,37 +36,105 @@ extension MHome
         { [weak self] (data:Data?, urlResponse:URLResponse?, error:Error?) in
             
             guard
-                
-                let statusCode:Int = urlResponse?.httpStatusCode
-                
+            
+                let items:[MGiphyItem] = self?.requestGifsResponse(
+                    data:data,
+                    urlResponse:urlResponse,
+                    error:error)
+            
             else
             {
-                self?.requestError(error:error)
+                self?.requestError()
                 
                 return
             }
             
-            if statusCode == MHome.kStatusCodeSuccess
-            {
-                self?.requestSuccess(data:data)
-            }
-            else
-            {
-                guard
-                    
-                    let error:Error = error
-                    
-                    else
-                {
-                    self?.requestError(statusCode:statusCode)
-                    
-                    return
-                }
-                
-                self?.requestError(error:error)
-            }
+            self?.requestGifsSuccess(items:items)
         }
         
         sessionTask.resume()
+    }
+    
+    func requestGifsResponse(
+        data:Data?,
+        urlResponse:URLResponse?,
+        error:Error?) -> [MGiphyItem]?
+    {
+        guard
+            
+            let statusCode:Int = urlResponse?.httpStatusCode
+            
+        else
+        {
+            return nil
+        }
+        
+        if statusCode == MHome.kStatusCodeSuccess
+        {
+            guard
+                
+                let json:Any = requestGifsResponse(
+                    data:data),
+                let items:[MGiphyItem] = MGiphy.factoryItems(
+                    json:json)
+            
+            else
+            {
+                return nil
+            }
+            
+            return items
+        }
+        
+        return nil
+    }
+    
+    func requestGifsResponse(data:Data?) -> Any?
+    {
+        guard
+            
+            let data:Data = data
+            
+        else
+        {
+            return nil
+        }
+        
+        let json:Any
+        
+        do
+        {
+            try json = JSONSerialization.jsonObject(
+                with:data,
+                options:
+                JSONSerialization.ReadingOptions.allowFragments)
+        }
+        catch
+        {
+            return nil
+        }
+        
+        return json
+    }
+    
+    func requestGifsSuccess(items:[MGiphyItem])
+    {
+         requestOffset += MHome.kLimit
+        
+         let purged:[MGiphyItem] = gif.purgeItems(items:items)
+         let countPurged:Int = purged.count
+         
+         if countPurged > 0
+         {
+            gif.storeItems(items:purged)
+            { [weak self] in
+                
+                self?.gif.strategy?.download()
+            }
+         }
+         else
+         {
+             requestGifs()
+         }
     }
 }

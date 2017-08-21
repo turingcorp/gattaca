@@ -1,3 +1,2 @@
-"MHome_unknownError"="Unexpected error";
-"MHome_errorCode"="Error loading GIF";
+"MHome_requestError"="Error loading GIFs";
 "MGifStrategyDownload_unknownError"="Error downloading GIF";

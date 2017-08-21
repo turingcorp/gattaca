@@ -95,10 +95,7 @@ extension MSession
             session.country = country
             self?.updateSession(session:session)
             
-            coreData.save
-            {
-                completion()
-            }
+            coreData.save(completion:completion)
         }
     }
     

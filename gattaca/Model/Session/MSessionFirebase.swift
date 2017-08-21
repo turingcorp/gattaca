@@ -68,10 +68,7 @@ extension MSession
             
             self?.updateSession(session:session)
             
-            coreData.save
-            {
-                completion()
-            }
+            coreData.save(completion:completion)
         }
     }
     
