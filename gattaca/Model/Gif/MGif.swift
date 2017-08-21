@@ -53,38 +53,6 @@ class MGif
         mapItem(item:item)
     }
     
-    func itemsWaiting() -> [DGif]
-    {
-        var items:[DGif] = []
-        
-//        for item:DGif in self.items
-//        {
-//            let status:DGif.Status = item.status
-//            
-//            if status == DGif.Status.waiting
-//            {
-//                items.append(item)
-//            }
-//        }
-        
-        return items
-    }
-    
-    func firstItemNew() -> DGif?
-    {
-//        for item:DGif in self.items
-//        {
-//            let status:DGif.Status = item.status
-//            
-//            if status == DGif.Status.new
-//            {
-//                return item
-//            }
-//        }
-        
-        return nil
-    }
-    
     func purgeItems(items:[MGiphyItem]) -> [MGiphyItem]
     {
         var purged:[MGiphyItem] = []
