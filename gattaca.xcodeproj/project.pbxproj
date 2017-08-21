@@ -134,6 +134,7 @@
 		DA9F92321F4B90AD00143F1A /* MGifOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F92311F4B90AD00143F1A /* MGifOrganizer.swift */; };
 		DA9F92341F4B933800143F1A /* TMGifOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F92331F4B933800143F1A /* TMGifOrganizer.swift */; };
 		DA9F92361F4B998F00143F1A /* TMGifStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F92351F4B998F00143F1A /* TMGifStorer.swift */; };
+		DA9F92391F4BA1C200143F1A /* giphyTrending.json in Resources */ = {isa = PBXBuildFile; fileRef = DA9F92381F4BA1C200143F1A /* giphyTrending.json */; };
 		DAB3A31D1F444323001981F4 /* MHomeStrategyAuthLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A31C1F444323001981F4 /* MHomeStrategyAuthLocation.swift */; };
 		DAB3A31F1F444A83001981F4 /* MHomeStrategyAuthLocationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A31E1F444A83001981F4 /* MHomeStrategyAuthLocationStrategy.swift */; };
 		DAB3A3211F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A3201F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift */; };
@@ -340,6 +341,7 @@
 		DA9F92311F4B90AD00143F1A /* MGifOrganizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifOrganizer.swift; sourceTree = "<group>"; };
 		DA9F92331F4B933800143F1A /* TMGifOrganizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMGifOrganizer.swift; sourceTree = "<group>"; };
 		DA9F92351F4B998F00143F1A /* TMGifStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMGifStorer.swift; sourceTree = "<group>"; };
+		DA9F92381F4BA1C200143F1A /* giphyTrending.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = giphyTrending.json; sourceTree = "<group>"; };
 		DAB3A3151F4433E6001981F4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DAB3A3161F4433E6001981F4 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		DAB3A3171F4433E6001981F4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -873,6 +875,7 @@
 		DA7CE8421F3F53DB0078A26B /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA9F92371F4BA19700143F1A /* Mocks */,
 				DABEF9331F430B5D00420DF0 /* Firebase */,
 				DA746A321F41AED1000473A1 /* Support */,
 				DA90E0BA1F40990B00A37538 /* Controller */,
@@ -988,6 +991,14 @@
 				DADE03521F476E9600FDB279 /* TMSessionLocation.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		DA9F92371F4BA19700143F1A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DA9F92381F4BA1C200143F1A /* giphyTrending.json */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		DAB3A32A1F4458A6001981F4 /* LocationAsk */ = {
@@ -1283,6 +1294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9F92391F4BA1C200143F1A /* giphyTrending.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
