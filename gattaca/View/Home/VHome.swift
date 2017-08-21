@@ -110,4 +110,9 @@ class VHome:ViewMain
     {
         
     }
+    
+    func loadError(message:String)
+    {
+        VAlert.messageFail(message:message)
+    }
 }
