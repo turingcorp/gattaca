@@ -288,6 +288,12 @@ class TMGifLoader:XCTestCase
                 return
             }
             
+            let strategyStand:MGifStrategyStand? = gif.strategy as? MGifStrategyStand
+            
+            XCTAssertNotNil(
+                strategyStand,
+                "current strategy is not stand")
+            
             let path:String = directory.path
             let directoryCreated:Bool = FileManager.default.fileExists(atPath:path)
             
