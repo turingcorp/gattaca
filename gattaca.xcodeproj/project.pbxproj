@@ -153,6 +153,7 @@
 		DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2157F1F3936FA00E281DB /* MGiphy.swift */; };
 		DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215811F39372D00E281DB /* MGiphyRandom.swift */; };
 		DAC215851F39378800E281DB /* MRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC215841F39378800E281DB /* MRequest.swift */; };
+		DAC902631F4B2D7F0091211A /* MGifFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC902621F4B2D7F0091211A /* MGifFactory.swift */; };
 		DACECC481F3A23C30009D933 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACECC471F3A23C30009D933 /* spinner.xcassets */; };
 		DAD67F191F3F56FE006E9699 /* TVHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F181F3F56FE006E9699 /* TVHome.swift */; };
 		DAD67F1B1F3F5A08006E9699 /* CHomeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD67F1A1F3F5A08006E9699 /* CHomeShare.swift */; };
@@ -359,6 +360,7 @@
 		DAC2157F1F3936FA00E281DB /* MGiphy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphy.swift; sourceTree = "<group>"; };
 		DAC215811F39372D00E281DB /* MGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGiphyRandom.swift; sourceTree = "<group>"; };
 		DAC215841F39378800E281DB /* MRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRequest.swift; sourceTree = "<group>"; };
+		DAC902621F4B2D7F0091211A /* MGifFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGifFactory.swift; sourceTree = "<group>"; };
 		DACECC471F3A23C30009D933 /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
 		DAD67F181F3F56FE006E9699 /* TVHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVHome.swift; sourceTree = "<group>"; };
 		DAD67F1A1F3F5A08006E9699 /* CHomeShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeShare.swift; sourceTree = "<group>"; };
@@ -921,6 +923,7 @@
 				DA90E0CE1F40B75800A37538 /* MGifStrategyDownloadRequest.swift */,
 				DA90E0CF1F40B75800A37538 /* MGifStrategyStand.swift */,
 				DAB847DF1F4B1E5500740443 /* MGifDirectory.swift */,
+				DAC902621F4B2D7F0091211A /* MGifFactory.swift */,
 			);
 			path = Gif;
 			sourceTree = "<group>";
@@ -1475,6 +1478,7 @@
 				DAB3A3231F444AD8001981F4 /* MHomeStrategyAuthLocationStrategyGranted.swift in Sources */,
 				DA68F1AD1F38E5D500C13634 /* ExtensionNSManagedObject.swift in Sources */,
 				DA745A7D1F45AA73005AF0DA /* VLocationDeniedIcon.swift in Sources */,
+				DAC902631F4B2D7F0091211A /* MGifFactory.swift in Sources */,
 				DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */,
 				DAF0458A1F3903780003C2EF /* VHomeBar.swift in Sources */,
 				DA68F1AC1F38E5D500C13634 /* ExtensionNSLayoutConstraint.swift in Sources */,
