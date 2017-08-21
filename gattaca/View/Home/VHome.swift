@@ -4,6 +4,7 @@ class VHome:ViewMain
 {
     private weak var viewBar:VHomeBar!
     private weak var viewDisplay:VHomeDisplay!
+    private weak var viewError:VHomeError!
     private weak var viewActions:VHomeActions!
     private let kBarHeight:CGFloat = 70
     private let kDisplayBottom:CGFloat = -140
@@ -47,9 +48,14 @@ class VHome:ViewMain
         let viewActions:VHomeActions = VHomeActions(
             controller:controller)
         self.viewActions = viewActions
+        
+        let viewError:VHomeError = VHomeError(
+            controller:controller)
+        self.viewError = viewError
 
         addSubview(viewBar)
         addSubview(viewDisplay)
+        addSubview(viewError)
         addSubview(viewActions)
         
         NSLayoutConstraint.bottomToBottom(
@@ -83,6 +89,10 @@ class VHome:ViewMain
         NSLayoutConstraint.equalsHorizontal(
             view:viewActions,
             toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:viewError,
+            toView:viewDisplay)
     }
     
     private func firstRefresh()
@@ -113,6 +123,6 @@ class VHome:ViewMain
     
     func loadError(message:String)
     {
-        VAlert.messageFail(message:message)
+        viewError.showError(message:message)
     }
 }

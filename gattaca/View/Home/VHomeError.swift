@@ -87,7 +87,8 @@ class VHomeError:View<VHome, MHome, CHome>
     
     func selectorTryAgain(sender button:UIButton)
     {
-        
+        isHidden = true
+        controller?.model.loadItems()
     }
     
     //MARK: internal
