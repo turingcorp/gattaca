@@ -126,7 +126,18 @@ extension MHome
          
          if countPurged > 0
          {
-            gif.storeItems(items:purged)
+            guard
+                
+                let coreData:Database = self.coreData
+            
+            else
+            {
+                return
+            }
+            
+            gif.storeItems(
+                coreData:coreData,
+                items:purged)
             { [weak self] in
                 
                 self?.gif.strategy?.download()

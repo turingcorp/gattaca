@@ -59,7 +59,10 @@ extension MSession
             
             session.initialValues()
             
-            coreData.save(completion:completion)
+            coreData.save
+            {
+                completion(session)
+            }
         }
     }
 }

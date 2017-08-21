@@ -9,9 +9,9 @@ extension MGifStrategyDownload
 //        gif.statusWaiting()
         downloadWithDelay()
         
-        NotificationCenter.default.post(
-            name:Notification.gifDownloaded,
-            object:nil)
+//        NotificationCenter.default.post(
+//            name:Notification.gifDownloaded,
+//            object:nil)
     }
     
     //MARK: internal

@@ -22,7 +22,7 @@ class MGifStrategyDownload:MGifStrategy
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.factoryUrl()
+//            self?.factoryUrl()
         }
     }
     

@@ -38,7 +38,7 @@ extension MHome
         }
         else
         {
-            
+            requestGifs()
         }
     }
 }
