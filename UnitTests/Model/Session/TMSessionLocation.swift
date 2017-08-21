@@ -9,7 +9,7 @@ class TMSessionLocation:XCTestCase
     private let kOtherCountry:String = "coffeeRepublic"
     private let kLatitude:Double = 1
     private let kLongitude:Double = 2
-    private let kWaitExpectation:TimeInterval = 15
+    private let kWaitExpectation:TimeInterval = 3
     
     override func setUp()
     {

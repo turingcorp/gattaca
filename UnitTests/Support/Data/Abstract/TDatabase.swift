@@ -4,7 +4,7 @@ import XCTest
 class TDatabase:XCTestCase
 {
     private var coreData:Database?
-    private let kWaitExpectation:TimeInterval = 3
+    private let kWaitExpectation:TimeInterval = 1
     
     override func setUp()
     {

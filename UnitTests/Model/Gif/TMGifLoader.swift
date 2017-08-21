@@ -5,7 +5,7 @@ class TMGifLoader:XCTestCase
 {
     private var coreData:Database?
     private let kIdentifier:String = "lorem ipsum"
-    private let kWaitExpectation:TimeInterval = 3
+    private let kWaitExpectation:TimeInterval = 2
     
     override func setUp()
     {

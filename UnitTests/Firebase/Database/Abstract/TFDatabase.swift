@@ -4,7 +4,7 @@ import XCTest
 class TFDatabase:XCTestCase
 {
     private var firebase:FDatabase?
-    private let kWaitExpectation:TimeInterval = 15
+    private let kWaitExpectation:TimeInterval = 1
     private let kUserSyncstamp:TimeInterval = 9999
     
     override func setUp()

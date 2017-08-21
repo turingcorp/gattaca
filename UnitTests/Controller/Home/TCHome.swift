@@ -6,8 +6,8 @@ class TCHome:XCTestCase
     private weak var view:UIView?
     private var session:MSession?
     private var controller:CHome?
-    private let kWait:TimeInterval = 15
-    private let kExpectation:TimeInterval = 16
+    private let kWait:TimeInterval = 2
+    private let kExpectation:TimeInterval = 3
     
     override func setUp()
     {

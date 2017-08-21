@@ -3,7 +3,7 @@ import XCTest
 
 class TMSession:XCTestCase
 {
-    private let kWaitExpectation:TimeInterval = 15
+    private let kWaitExpectation:TimeInterval = 2
     
     //MARK: internal
     

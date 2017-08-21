@@ -8,7 +8,7 @@ class TMSessionFirebase:XCTestCase
     private var session:DSession?
     private var modelSession:MSession?
     private let kUnknownId:String = "unknown_id"
-    private let kWaitExpectation:TimeInterval = 15
+    private let kWaitExpectation:TimeInterval = 2
     
     override func setUp()
     {

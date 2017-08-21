@@ -5,7 +5,7 @@ class TMHomeLoader:XCTestCase
 {
     private var session:MSession?
     private var model:MHome?
-    private let kWaitExpectation:TimeInterval = 20
+    private let kWaitExpectation:TimeInterval = 1
     
     override func setUp()
     {

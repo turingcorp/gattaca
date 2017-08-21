@@ -5,7 +5,7 @@ class TDSession:XCTestCase
 {
     private let kUserId:String = "lorem ipsum"
     private let kCountry:String = "banana republic"
-    private let kWaitExpectation:TimeInterval = 2
+    private let kWaitExpectation:TimeInterval = 1
     
     //MARK: private
     

@@ -3,8 +3,8 @@ import XCTest
 
 class TMHome:XCTestCase
 {
-    private let kDelay:TimeInterval = 20
-    private let kWaitExpectation:TimeInterval = 21
+    private let kDelay:TimeInterval = 1
+    private let kWaitExpectation:TimeInterval = 2
     
     //MARK: internal
     
@@ -19,7 +19,7 @@ class TMHome:XCTestCase
             description:"load items")
         
         DispatchQueue.main.asyncAfter(
-            deadline:DispatchTime.now())
+            deadline:DispatchTime.now() + kDelay)
         {
             loadExpectation.fulfill()
         }
