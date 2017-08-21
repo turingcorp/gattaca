@@ -35,8 +35,8 @@ class TMGifOrganizer:XCTestCase
             return
         }
         
-        let addExpectation:XCTestExpectation = XCTestExpectation(
-            description:"add item")
+        let addExpectation:XCTestExpectation = expectation(
+            description:"add item expection")
         let identifier:String = kIdentifier
         
         coreData.create
