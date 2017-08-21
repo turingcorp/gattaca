@@ -13,7 +13,7 @@ class TMHomeRequest:XCTestCase
     private let kTrendingExtension:String = "json"
     private let kStatusCodeOk:Int = 200
     private let kStatusCodeFail:Int = 0
-    private let kMockedItems:Int = 4
+    private let kMockedItems:Int = 3
     
     override func setUp()
     {
@@ -104,7 +104,7 @@ class TMHomeRequest:XCTestCase
         
         let items:[MGiphyItem]? = model.requestGifsResponse(
             data:trendingMock,
-            urlResponse:nil,
+            urlResponse:urlResponseOk,
             error:nil)
         
         XCTAssertNotNil(
@@ -134,5 +134,26 @@ class TMHomeRequest:XCTestCase
                 0,
                 "failed parsing identifier")
         }
+    }
+    
+    func testRequestGifsResponseFail()
+    {
+        guard
+            
+            let model:MHome = self.model
+            
+        else
+        {
+            return
+        }
+        
+        let items:[MGiphyItem]? = model.requestGifsResponse(
+            data:trendingMock,
+            urlResponse:urlResponseFail,
+            error:nil)
+        
+        XCTAssertNil(
+            items,
+            "should not parse items")
     }
 }
