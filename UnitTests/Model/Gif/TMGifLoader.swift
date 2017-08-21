@@ -281,7 +281,7 @@ class TMGifLoader:XCTestCase
             
             guard
             
-                let directory:URL = DGif.gifDirectory()
+                let directory:URL = MGif.gifDirectory()
             
             else
             {
