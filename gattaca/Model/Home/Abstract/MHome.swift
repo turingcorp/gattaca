@@ -1,6 +1,6 @@
 import Foundation
 
-class MHome:Model
+class MHome:Model<VHome>
 {
     var coreData:Database?
     var strategy:MHomeStrategy?

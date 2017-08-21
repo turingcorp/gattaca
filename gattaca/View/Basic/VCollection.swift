@@ -1,8 +1,8 @@
 import UIKit
 
 class VCollection
-    <T:ViewMain, S:Model, R:Controller<T, S>, Q:UICollectionViewCell>:
-    View<T, S, R>,
+    <V:ViewMain, M:Model<V>, C:Controller<V, M>, Cell:UICollectionViewCell>:
+    View<V, M, C>,
     UICollectionViewDelegate,
     UICollectionViewDataSource,
     UICollectionViewDelegateFlowLayout
@@ -10,7 +10,7 @@ class VCollection
     private(set) weak var collectionView:UICollectionView!
     private let kDeselectTime:TimeInterval = 0.3
     
-    required init(controller:R)
+    required init(controller:C)
     {
         super.init(controller:controller)
         
@@ -34,7 +34,7 @@ class VCollection
             view:collectionView,
             toView:self)
         
-        registerCell(cell:Q.self)
+        registerCell(cell:Cell.self)
     }
     
     required init?(coder:NSCoder)
@@ -44,7 +44,7 @@ class VCollection
     
     //MARK: internal
     
-    final func registerCell(cell:Q.Type)
+    final func registerCell(cell:Cell.Type)
     {
         collectionView.register(
             cell,
@@ -67,20 +67,20 @@ class VCollection
             withReuseIdentifier:header.reusableIdentifier)
     }
     
-    final func cellAtIndex(indexPath:IndexPath) -> Q
+    final func cellAtIndex(indexPath:IndexPath) -> Cell
     {
-        let cell:Q = cellAtIndex(
-            reusableIdentifier:Q.reusableIdentifier,
+        let cell:Cell = cellAtIndex(
+            reusableIdentifier:Cell.reusableIdentifier,
             indexPath:indexPath)
         
         return cell
     }
     
-    final func cellAtIndex(reusableIdentifier:String, indexPath:IndexPath) -> Q
+    final func cellAtIndex(reusableIdentifier:String, indexPath:IndexPath) -> Cell
     {
-        let cell:Q = collectionView.dequeueReusableCell(
+        let cell:Cell = collectionView.dequeueReusableCell(
             withReuseIdentifier:reusableIdentifier,
-            for:indexPath) as! Q
+            for:indexPath) as! Cell
         
         return cell
     }
@@ -176,8 +176,8 @@ class VCollection
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let cell:Q = cellAtIndex(
-            reusableIdentifier:Q.reusableIdentifier,
+        let cell:Cell = cellAtIndex(
+            reusableIdentifier:Cell.reusableIdentifier,
             indexPath:indexPath)
         
         return cell

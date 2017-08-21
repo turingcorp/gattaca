@@ -1,6 +1,6 @@
 import Foundation
 
-class MLocationAsk:Model
+class MLocationAsk:Model<VLocationAsk>
 {
     let locationDelegate:MLocationAskDelegate
     

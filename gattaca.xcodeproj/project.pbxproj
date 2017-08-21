@@ -49,7 +49,6 @@
 		DA68F1991F38E5D500C13634 /* ControllerParentTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1521F38E5D500C13634 /* ControllerParentTransitions.swift */; };
 		DA68F19A1F38E5D500C13634 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1541F38E5D500C13634 /* CHome.swift */; };
 		DA68F19B1F38E5D500C13634 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1571F38E5D500C13634 /* Model.swift */; };
-		DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F1581F38E5D500C13634 /* ModelDelegate.swift */; };
 		DA68F1A61F38E5D500C13634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA68F1691F38E5D500C13634 /* LaunchScreen.storyboard */; };
 		DA68F1A81F38E5D500C13634 /* ExtensionCGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F16D1F38E5D500C13634 /* ExtensionCGImage.swift */; };
 		DA68F1A91F38E5D500C13634 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F16E1F38E5D500C13634 /* ExtensionDictionary.swift */; };
@@ -250,7 +249,6 @@
 		DA68F1521F38E5D500C13634 /* ControllerParentTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParentTransitions.swift; sourceTree = "<group>"; };
 		DA68F1541F38E5D500C13634 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
 		DA68F1571F38E5D500C13634 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		DA68F1581F38E5D500C13634 /* ModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDelegate.swift; sourceTree = "<group>"; };
 		DA68F1691F38E5D500C13634 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA68F16D1F38E5D500C13634 /* ExtensionCGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCGImage.swift; sourceTree = "<group>"; };
 		DA68F16E1F38E5D500C13634 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
@@ -644,7 +642,6 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1571F38E5D500C13634 /* Model.swift */,
-				DA68F1581F38E5D500C13634 /* ModelDelegate.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1570,7 +1567,6 @@
 				DA68F1BA1F38E5D500C13634 /* ViewParentTransitions.swift in Sources */,
 				DA920BB21F48AA0900AE31A4 /* MHomeStatus.swift in Sources */,
 				DA68F1B71F38E5D500C13634 /* View.swift in Sources */,
-				DA68F19C1F38E5D500C13634 /* ModelDelegate.swift in Sources */,
 				DAB3A3321F445BCB001981F4 /* VLocationAsk.swift in Sources */,
 				DAC215801F3936FA00E281DB /* MGiphy.swift in Sources */,
 				DA5F44B21F42CA5C00334605 /* FDatabaseUsers.swift in Sources */,

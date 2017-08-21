@@ -1,8 +1,8 @@
 import Foundation
 
-class Model
+class Model<S:ViewMain>
 {
-    weak var delegate:ModelDelegate?
+    weak var view:S?
     private(set) weak var session:MSession!
     
     required init(session:MSession)

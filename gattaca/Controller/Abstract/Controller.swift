@@ -1,15 +1,14 @@
 import UIKit
 
-class Controller<T:ViewMain, S:Model>:UIViewController, ModelDelegate
+class Controller<V:ViewMain, M:Model<V>>:UIViewController
 {
-    let model:S
+    let model:M
     
     init(session:MSession)
     {
-        model = S(session:session)
+        model = M(session:session)
         
         super.init(nibName:nil, bundle:nil)
-        model.delegate = self
     }
     
     required init?(coder:NSCoder)
@@ -27,7 +26,8 @@ class Controller<T:ViewMain, S:Model>:UIViewController, ModelDelegate
     
     override func loadView()
     {
-        let view:T = T(controller:self)
+        let view:V = V(controller:self)
+        model.view = view
         self.view = view
     }
     
@@ -58,13 +58,6 @@ class Controller<T:ViewMain, S:Model>:UIViewController, ModelDelegate
     
     //MARK: internal
     
-    func view() -> T
-    {
-        let view:T = self.view as! T
-        
-        return view
-    }
-    
     func parent() -> ControllerParent?
     {
         guard
@@ -77,11 +70,5 @@ class Controller<T:ViewMain, S:Model>:UIViewController, ModelDelegate
         }
         
         return parent
-    }
-    
-    //MARK: model delegate
-    
-    func modelRefresh()
-    {
     }
 }

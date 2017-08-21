@@ -7,15 +7,6 @@ class CHome:Controller<VHome, MHome>
         NotificationCenter.default.removeObserver(self)
     }
     
-    override func modelRefresh()
-    {
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            self?.asyncRefresh()
-        }
-    }
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -55,9 +46,5 @@ class CHome:Controller<VHome, MHome>
     private func loadSessionStrategy()
     {
         model.loadStrategy(controller:self)
-    }
-    
-    private func asyncRefresh()
-    {
     }
 }

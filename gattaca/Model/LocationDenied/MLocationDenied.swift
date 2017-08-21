@@ -1,5 +1,5 @@
 import Foundation
 
-class MLocationDenied:Model
+class MLocationDenied:Model<VLocationDenied>
 {
 }

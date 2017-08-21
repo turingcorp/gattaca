@@ -1,10 +1,10 @@
 import UIKit
 
-class View<T:ViewMain, S:Model, R:Controller<T, S>>:UIView
+class View<V:ViewMain, M:Model<V>, C:Controller<V, M>>:UIView
 {
-    private(set) weak var controller:R!
+    private(set) weak var controller:C!
     
-    required init(controller:R)
+    required init(controller:C)
     {
         super.init(frame:CGRect.zero)
         clipsToBounds = true

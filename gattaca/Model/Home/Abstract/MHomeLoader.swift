@@ -4,12 +4,12 @@ extension MHome
 {
     //MARK: notified
     
-    @objc
-    func notifiedGifDownloaded(sender notification:Notification)
-    {
-        NotificationCenter.default.removeObserver(self)
-        loadItems()
-    }
+//    @objc
+//    func notifiedGifDownloaded(sender notification:Notification)
+//    {
+//        NotificationCenter.default.removeObserver(self)
+//        loadItems()
+//    }
     
     //MARK: private
     
@@ -33,16 +33,20 @@ extension MHome
     
     private func loadMoreGif()
     {
-        NotificationCenter.default.addObserver(
-            self,
-            selector:#selector(notifiedGifDownloaded(sender:)),
-            name:Notification.gifDownloaded,
-            object:nil)
+//        NotificationCenter.default.addObserver(
+//            self,
+//            selector:#selector(notifiedGifDownloaded(sender:)),
+//            name:Notification.gifDownloaded,
+//            object:nil)
         
         requestGif()
     }
     
     //MARK: internal
+    
+    func loadError(message:String)
+    {
+    }
     
     func asyncLoadItems(
         completion:@escaping(([MHomeItem]) -> ()))
@@ -56,7 +60,7 @@ extension MHome
             return
         }
         
-        gif.load(coreData:coreData)
+        gif.strategy?.load(coreData:coreData)
         { [weak self] in
             
             self?.loadItemsDone(completion:completion)
@@ -66,19 +70,21 @@ extension MHome
     func loadItemsDone(
         completion:@escaping(([MHomeItem]) -> ()))
     {
-        let itemsReady:[DGif] = gif.itemsReady
-        let count:Int = itemsReady.count
+        loadError(message:"dummy error")
         
-        if count > 0
-        {
-            let items:[MHomeItem] = MHome.factoryItems(
-                gifItems:itemsReady)
-            
-            completion(items)
-        }
-        else
-        {
-            
-        }
+//        let itemsReady:[DGif] = gif.itemsReady
+//        let count:Int = itemsReady.count
+//        
+//        if count > 0
+//        {
+//            let items:[MHomeItem] = MHome.factoryItems(
+//                gifItems:itemsReady)
+//            
+//            completion(items)
+//        }
+//        else
+//        {
+//            
+//        }
     }
 }
