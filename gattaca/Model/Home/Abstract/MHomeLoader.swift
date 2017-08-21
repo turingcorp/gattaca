@@ -44,10 +44,6 @@ extension MHome
     
     //MARK: internal
     
-    func loadError(message:String)
-    {
-    }
-    
     func asyncLoadItems(
         completion:@escaping(([MHomeItem]) -> ()))
     {
@@ -70,7 +66,7 @@ extension MHome
     func loadItemsDone(
         completion:@escaping(([MHomeItem]) -> ()))
     {
-        loadError(message:"dummy error")
+        view?.loadError(message:"dummy error")
         
 //        let itemsReady:[DGif] = gif.itemsReady
 //        let count:Int = itemsReady.count

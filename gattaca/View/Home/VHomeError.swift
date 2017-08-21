@@ -4,10 +4,11 @@ class VHomeError:View<VHome, MHome, CHome>
 {
     private weak var labelMessage:UILabel!
     private weak var layoutButtonLeft:NSLayoutConstraint!
-    private let kMessageMargin:CGFloat = 20
-    private let kButtonWidth:CGFloat = 120
-    private let kButtonHeight:CGFloat = 50
-    private let kButtonBottom:CGFloat = -100
+    private let kMessageTop:CGFloat = 20
+    private let kMessageMarginHorizontal:CGFloat = 20
+    private let kMessageHeight:CGFloat = 100
+    private let kButtonWidth:CGFloat = 130
+    private let kButtonHeight:CGFloat = 32
     
     required init(controller:CHome)
     {
@@ -21,22 +22,25 @@ class VHomeError:View<VHome, MHome, CHome>
         labelMessage.backgroundColor = UIColor.clear
         labelMessage.numberOfLines = 0
         labelMessage.textAlignment = NSTextAlignment.center
-        labelMessage.font = UIFont.regular(size:16)
+        labelMessage.font = UIFont.regular(size:17)
         labelMessage.textColor = UIColor.colourBackgroundDark
         self.labelMessage = labelMessage
         
         let button:UIButton = UIButton()
+        button.clipsToBounds = true
+        button.backgroundColor = UIColor.colourSuccess
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(
             String.localizedView(key:"VHomeError_button"),
             for:UIControlState.normal)
         button.setTitleColor(
-            UIColor.colourSuccess,
+            UIColor.white,
             for:UIControlState.normal)
         button.setTitleColor(
-            UIColor.colourSuccess.withAlphaComponent(0.2),
+            UIColor(white:1, alpha:0.2),
             for:UIControlState.highlighted)
-        button.titleLabel!.font = UIFont.medium(size:15)
+        button.titleLabel!.font = UIFont.medium(size:14)
+        button.layer.cornerRadius = kButtonHeight / 2.0
         button.addTarget(
             self,
             action:#selector(selectorTryAgain(sender:)),
@@ -45,18 +49,21 @@ class VHomeError:View<VHome, MHome, CHome>
         addSubview(labelMessage)
         addSubview(button)
         
-        NSLayoutConstraint.equalsVertical(
+        NSLayoutConstraint.topToTop(
             view:labelMessage,
-            toView:self)
+            toView:self,
+            constant:kMessageTop)
+        NSLayoutConstraint.height(
+            view:labelMessage,
+            constant:kMessageHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:labelMessage,
             toView:self,
-            margin:kMessageMargin)
+            margin:kMessageMarginHorizontal)
      
-        NSLayoutConstraint.bottomToBottom(
+        NSLayoutConstraint.topToBottom(
             view:button,
-            toView:self,
-            constant:kButtonBottom)
+            toView:labelMessage)
         NSLayoutConstraint.height(
             view:button,
             constant:kButtonHeight)
