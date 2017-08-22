@@ -14,8 +14,8 @@ class TMHomeRequest:XCTestCase
     private let kTrendingExtension:String = "json"
     private let kErrorDomain:String = "some weird error"
     private let kIdentifier:String = "lorem ipsum"
-    private let kDelayWait:TimeInterval = 1
-    private let kWaitExpectation:TimeInterval = 2
+    private let kDelayWait:TimeInterval = 2
+    private let kWaitExpectation:TimeInterval = 3
     private let kStatusCodeOk:Int = 200
     private let kStatusCodeFail:Int = 0
     private let kMockedItems:Int = 3
@@ -233,12 +233,6 @@ class TMHomeRequest:XCTestCase
                 model.gif.itemsNotReady.first?.identifier,
                 identifier,
                 "stored item doesn't match identifier")
-            
-            let strategy:MGifStrategyDownload? = model.gif.strategy as? MGifStrategyDownload
-            
-            XCTAssertNotNil(
-                strategy,
-                "strategy should be download")
         }
     }
 }
