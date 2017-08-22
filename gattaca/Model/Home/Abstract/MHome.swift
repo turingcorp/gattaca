@@ -46,7 +46,7 @@ class MHome:Model<VHome>
             
             if countPreviousItems == 0
             {
-                
+                self?.view?.refresh()
             }
         }
     }
