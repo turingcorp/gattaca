@@ -103,6 +103,17 @@ class VHomeActions:VCollection<
         return cell
     }
     
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        didSelectItemAt indexPath:IndexPath)
+    {
+        super.collectionView(collectionView, didSelectItemAt:indexPath)
+        
+        let item:MHomeActionProtocol = modelAtIndex(
+            index:indexPath)
+        
+    }
+    
     //MARK: private
     
     private func modelAtIndex(index:IndexPath) -> MHomeActionProtocol
