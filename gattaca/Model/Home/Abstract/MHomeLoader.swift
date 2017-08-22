@@ -31,6 +31,8 @@ extension MHome
         
         if count > 0
         {
+            gif.itemsReady = []
+            
             let items:[MHomeItem] = MHome.factoryItems(
                 gifItems:itemsReady)
             gif.strategy?.download()
