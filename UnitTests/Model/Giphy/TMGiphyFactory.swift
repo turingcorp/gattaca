@@ -5,6 +5,7 @@ class TMGiphyFactory:XCTestCase
 {
     private let kTrendingName:String = "giphyTrending"
     private let kTrendingExtension:String = "json"
+    private let kIdentifier:String = "xUNd9Cr6NMXPBO1t7y"
     private let kCountTrendingItems:Int = 3
     
     //MARK: private
@@ -101,5 +102,15 @@ class TMGiphyFactory:XCTestCase
                 0,
                 "failed parsing identifier")
         }
+    }
+    
+    func testFactoryShareGifUrl()
+    {
+        let url:URL? = MGiphy.factoryShareGifUrl(
+            identifier:kIdentifier)
+        
+        XCTAssertNotNil(
+            url,
+            "failed factorying share url")
     }
 }
