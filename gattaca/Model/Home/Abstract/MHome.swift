@@ -10,6 +10,7 @@ class MHome:Model<VHome>
     let urlSession:URLSession
     let actions:[MHomeActionProtocol]
     private(set) var items:[MHomeItem]
+    private let itemsQueue:DispatchQueue
     
     required init(session:MSession)
     {
@@ -19,6 +20,7 @@ class MHome:Model<VHome>
         items = []
         status = MHome.Status.new
         requestOffset = 0
+        itemsQueue = MHome.factoryQueue()
         
         super.init(session:session)
     }
@@ -27,6 +29,24 @@ class MHome:Model<VHome>
     {
         urlSession.invalidateAndCancel()
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    //MARK: private
+    
+    private func addItems(items:[MHomeItem])
+    {
+        let countPreviousItems:Int = items.count
+        
+        itemsQueue.async
+        { [weak self] in
+            
+            self?.items.append(contentsOf:items)
+            
+            if countPreviousItems == 0
+            {
+                
+            }
+        }
     }
     
     //MARK: internal
@@ -39,7 +59,7 @@ class MHome:Model<VHome>
             self?.asyncLoadItems
             { [weak self] (items:[MHomeItem]) in
                 
-                self?.items.append(contentsOf:items)
+                self?.addItems(items:items)
             }
         }
     }

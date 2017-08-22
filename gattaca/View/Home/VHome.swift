@@ -95,16 +95,11 @@ class VHome:ViewMain
             toView:viewDisplay)
     }
     
-    private func firstRefresh()
+    private func asyncRefresh()
     {
+        viewError.isHidden = true
         viewDisplay.isHidden = false
         viewBar.isHidden = false
-        
-        update()
-    }
-    
-    private func update()
-    {
         viewActions.refresh()
         viewDisplay.refresh()
     }
@@ -113,12 +108,20 @@ class VHome:ViewMain
     
     func viewDidAppear()
     {
-        viewDisplay.viewDidAppear()
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.viewDisplay.viewDidAppear()
+        }
     }
     
     func refresh()
     {
-        
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncRefresh()
+        }
     }
     
     func loadError(message:String)
