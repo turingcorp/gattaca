@@ -28,8 +28,6 @@ extension MGifStrategyDownload
             
         else
         {
-            //downloadFailed(gif:gif)
-            
             return
         }
         
@@ -41,11 +39,9 @@ extension MGifStrategyDownload
         }
         catch
         {
-            //downloadFailed(gif:gif)
-            
             return
         }
         
-        downloadSuccess(gif:gif)
+        gif.status = DGif.Status.ready
     }
 }

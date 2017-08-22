@@ -39,7 +39,7 @@ class MHome:Model<VHome>
             self?.asyncLoadItems
             { [weak self] (items:[MHomeItem]) in
                 
-                self?.items = items
+                self?.items.append(contentsOf:items)
             }
         }
     }

@@ -2,7 +2,21 @@ import Foundation
 
 extension MHome
 {
+    private static let kQueueLabel:String = "iturbide.gattaca.home"
+    
     //MARK: internal
+    
+    class func factoryQueue() -> DispatchQueue
+    {
+        let queue = DispatchQueue(
+            label:kQueueLabel,
+            qos:DispatchQoS.background,
+            attributes:DispatchQueue.Attributes(),
+            autoreleaseFrequency:DispatchQueue.AutoreleaseFrequency.inherit,
+            target:DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
+        
+        return queue
+    }
     
     class func factoryActions() -> [MHomeActionProtocol]
     {

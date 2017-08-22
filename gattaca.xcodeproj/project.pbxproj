@@ -931,11 +931,11 @@
 			isa = PBXGroup;
 			children = (
 				DA8FFFA11F4C8EFB00963D76 /* MGifStrategy.swift */,
-				DA8FFFA21F4C8EFB00963D76 /* MGifStrategyDownload.swift */,
-				DA8FFFA31F4C8EFB00963D76 /* MGifStrategyDownloadFile.swift */,
-				DA8FFFA41F4C8EFB00963D76 /* MGifStrategyDownloadRequest.swift */,
 				DA8FFFA51F4C8EFB00963D76 /* MGifStrategyNotLoaded.swift */,
 				DA8FFFA61F4C8EFB00963D76 /* MGifStrategyStand.swift */,
+				DA8FFFA21F4C8EFB00963D76 /* MGifStrategyDownload.swift */,
+				DA8FFFA41F4C8EFB00963D76 /* MGifStrategyDownloadRequest.swift */,
+				DA8FFFA31F4C8EFB00963D76 /* MGifStrategyDownloadFile.swift */,
 			);
 			path = Strategy;
 			sourceTree = "<group>";

@@ -33,6 +33,8 @@ extension MGifStrategyDownload
         urlResponse:URLResponse?,
         error:Error?)
     {
+        removeAndDelay(gif:gif)
+        
         guard
         
             let data:Data = downloadedData(
@@ -42,16 +44,12 @@ extension MGifStrategyDownload
         
         else
         {
-            downloadError(gif:gif)
-            
             return
         }
         
         saveGifData(
             gif:gif,
             data:data)
-        
-        delayDownloadNext()
     }
     
     //MARK: internal
@@ -150,7 +148,7 @@ extension MGifStrategyDownload
         return url
     }
     
-    func downloadError(gif:DGif)
+    func removeAndDelay(gif:DGif)
     {
         if let firstItem:DGif = model.itemsNotReady.first
         {
