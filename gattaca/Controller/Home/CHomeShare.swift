@@ -9,8 +9,9 @@ extension CHome
         guard
             
             let item:MHomeItem = model.items.first,
+            let identifier:String = item.gif?.identifier,
             let url:URL = MGiphy.factoryShareGifUrl(
-                model:item)
+                identifier:identifier)
             
         else
         {

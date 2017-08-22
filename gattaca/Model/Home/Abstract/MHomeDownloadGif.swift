@@ -39,8 +39,9 @@ extension MHome
         guard
             
             let item:MHomeItem = items.first,
+            let identifier:String = item.gif?.identifier,
             let url:URL = MGiphy.factoryShareGifUrl(
-                model:item)
+                identifier:identifier)
             
         else
         {

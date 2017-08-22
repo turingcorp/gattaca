@@ -60,15 +60,14 @@ extension MGiphy
         return items
     }
     
-    class func factoryShareGifUrl(model:MHomeItem) -> URL?
+    class func factoryShareGifUrl(identifier:String) -> URL?
     {
         guard
             
             let urlMap:[String:AnyObject] = MRequest.factoryUrlMap(),
             let giphy:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
             let downloadPrefix:String = giphy[kKeyDownloadPrefix] as? String,
-            let shareSuffix:String = giphy[kKeyShareSuffix] as? String,
-            let itemId:String = model.gif?.identifier
+            let shareSuffix:String = giphy[kKeyShareSuffix] as? String
             
         else
         {
@@ -76,7 +75,7 @@ extension MGiphy
         }
         
         var gifString:String = downloadPrefix
-        gifString.append(itemId)
+        gifString.append(identifier)
         gifString.append(shareSuffix)
         
         let url:URL? = URL(string:gifString)
