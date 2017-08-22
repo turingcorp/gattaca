@@ -11,7 +11,7 @@ extension MGiphy
     
     //MARK: internal
     
-    class func factoryUrl() -> URL?
+    class func factoryRandomUrl() -> URL?
     {
         guard
             
@@ -41,7 +41,7 @@ extension MGiphy
     {
         guard
             
-            let url:URL = factoryUrl()
+            let url:URL = factoryRandomUrl()
             
         else
         {

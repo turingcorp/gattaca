@@ -13,7 +13,7 @@ extension MGiphy
     
     //MARK: internal
     
-    class func factoryUrl(
+    class func factoryTrendingUrl(
         offset:Int,
         limit:Int) -> URL?
     {
@@ -56,7 +56,7 @@ extension MGiphy
     {
         guard
             
-            let url:URL = factoryUrl(
+            let url:URL = factoryTrendingUrl(
                 offset:offset,
                 limit:limit)
             
