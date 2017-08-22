@@ -2,48 +2,56 @@ import Foundation
 
 extension MGifStrategyDownload
 {
+    private static let kTimeout:TimeInterval = 45
+    private static let kDelay:TimeInterval = 1
+    private static let kStatusCodeOk:Int = 200
+    
     //MARK: private
     
-    private func requestSuccess(
-        gif:DGif,
-        fileUrl:URL?)
-    {/*
-        guard
-            
-            let fileUrl:URL = fileUrl
-            
-        else
-        {
-            let message:String = String.localizedModel(
-                key:"MGifStrategyDownload_unknownError")
-            downloadError(message:message)
-            downloadFailed(gif:gif)
-            
-            return
-        }
+    private class func factoryRequest(url:URL) -> URLRequest
+    {
+        let request:URLRequest = MRequest.factoryGetRequest(
+            url:url,
+            timeout:kTimeout)
         
-        let data:Data
-        
-        do
-        {
-            try data = Data(
-                contentsOf:fileUrl,
-                options:Data.ReadingOptions.uncached)
-        }
-        catch let error
-        {
-            downloadFailed(gif:gif)
-            downloadError(message:error.localizedDescription)
-            
-            return
-        }
-        
-        requestSuccess(gif:gif, data:data)*/
+        return request
     }
     
-    private func downloadError(message:String)
+    private func delayDownloadNext()
     {
-        VAlert.messageFail(message:message)
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
+            deadline:DispatchTime.now() + MGifStrategyDownload.kDelay)
+        { [weak self] in
+            
+            self?.downloadNext()
+        }
+    }
+    
+    private func downloadResponse(
+        gif:DGif,
+        fileUrl:URL?,
+        urlResponse:URLResponse?,
+        error:Error?)
+    {
+        guard
+        
+            let data:Data = downloadedData(
+                fileUrl:fileUrl,
+                urlResponse:urlResponse,
+                error:error)
+        
+        else
+        {
+            downloadError(gif:gif)
+            
+            return
+        }
+        
+        saveGifData(
+            gif:gif,
+            data:data)
+        
+        delayDownloadNext()
     }
     
     //MARK: internal
@@ -58,34 +66,77 @@ extension MGifStrategyDownload
             
         else
         {
-            model.strategyStand()
+            delayDownloadNext()
             
             return
         }
         
         print(url.path)
         
-        /*
-         let request:URLRequest = MRequest.factoryGetRequest(
-         url:url,
-         timeout:kTimeout)
-         
-         let downloadTask:URLSessionDownloadTask = session.downloadTask(
-         with:request)
-         { [weak self] (fileUrl:URL?, urlResponse:URLResponse?, error:Error?) in
-         
-         if let error:Error = error
-         {
-         self?.downloadError(message:error.localizedDescription)
-         self?.downloadFailed(gif:gif)
-         }
-         else
-         {
-         self?.requestSuccess(gif:gif, fileUrl:fileUrl)
-         }
-         }
-         
-         downloadTask.resume()*/
+        let request:URLRequest = MGifStrategyDownload.factoryRequest(
+            url:url)
+        
+        let downloadTask:URLSessionDownloadTask = session.downloadTask(
+            with:request)
+        { [weak self] (fileUrl:URL?, urlResponse:URLResponse?, error:Error?) in
+            
+            self?.downloadResponse(
+                gif:gif,
+                fileUrl:fileUrl,
+                urlResponse:urlResponse,
+                error:error)
+        }
+        
+        downloadTask.resume()
+    }
+    
+    private func downloadedData(
+        fileUrl:URL?,
+        urlResponse:URLResponse?,
+        error:Error?) -> Data?
+    {
+        if let _:Error = error
+        {
+            return nil
+        }
+        
+        guard
+        
+            let statusCode:Int = urlResponse?.httpStatusCode
+        
+        else
+        {
+            return nil
+        }
+        
+        if statusCode == MGifStrategyDownload.kStatusCodeOk
+        {
+            guard
+                
+                let fileUrl:URL = fileUrl
+                
+            else
+            {
+                return nil
+            }
+            
+            let data:Data
+            
+            do
+            {
+                try data = Data(
+                    contentsOf:fileUrl,
+                    options:Data.ReadingOptions.uncached)
+            }
+            catch
+            {
+                return nil
+            }
+            
+            return data
+        }
+        
+        return nil
     }
     
     func factoryUrl(identifier:String) -> URL?
@@ -99,13 +150,16 @@ extension MGifStrategyDownload
         return url
     }
     
-    func downloadWithDelay()
+    func downloadError(gif:DGif)
     {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
-            deadline:DispatchTime.now() + kDelayDownloadNext)
-        { [weak self] in
-            
-//            self?.dispatchDownload()
+        if let firstItem:DGif = model.itemsNotReady.first
+        {
+            if firstItem === gif
+            {
+                model.itemsNotReady.removeFirst()
+            }
         }
+        
+        delayDownloadNext()
     }
 }

@@ -16,7 +16,7 @@ extension MGifStrategyDownload
     
     //MARK: internal
     
-    func requestSuccess(gif:DGif, data:Data)
+    func saveGifData(gif:DGif, data:Data)
     {
         guard
             

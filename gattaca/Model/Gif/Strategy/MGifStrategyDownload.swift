@@ -3,8 +3,6 @@ import Foundation
 class MGifStrategyDownload:MGifStrategy
 {
     let session:URLSession
-    let kTimeout:TimeInterval = 45
-    let kDelayDownloadNext:TimeInterval = 1
     private(set) var downloadPrefix:String
     private(set) var downloadSuffix:String
     private let kKeyGiphy:String = "giphy"
