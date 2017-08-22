@@ -2,6 +2,8 @@ import Foundation
 
 extension MHome
 {
+    //MARK: internal
+    
     class func factoryActions() -> [MHomeActionProtocol]
     {
         let itemHate:MHomeActionHate = MHomeActionHate()

@@ -11,31 +11,9 @@ extension MGiphy
     private static let kKeyApiKey:String = "api_key"
     private static let kTimeout:TimeInterval = 12
     
-    class func factoryTrendingRequest(
-        offset:Int,
-        limit:Int) -> URLRequest?
-    {
-        guard
-            
-            let url:URL = factoryUrl(
-                offset:offset,
-                limit:limit)
-            
-        else
-        {
-            return nil
-        }
-        
-        let request:URLRequest = MRequest.factoryGetRequest(
-            url:url,
-            timeout:kTimeout)
-        
-        return request
-    }
+    //MARK: internal
     
-    //MARK: private
-    
-    private class func factoryUrl(
+    class func factoryUrl(
         offset:Int,
         limit:Int) -> URL?
     {
@@ -70,5 +48,27 @@ extension MGiphy
         let url:URL? =  URL(string:path)
         
         return url
+    }
+    
+    class func factoryTrendingRequest(
+        offset:Int,
+        limit:Int) -> URLRequest?
+    {
+        guard
+            
+            let url:URL = factoryUrl(
+                offset:offset,
+                limit:limit)
+            
+        else
+        {
+            return nil
+        }
+        
+        let request:URLRequest = MRequest.factoryGetRequest(
+            url:url,
+            timeout:kTimeout)
+        
+        return request
     }
 }

@@ -9,9 +9,9 @@ extension MGiphy
     private static let kKeyApiKey:String = "api_key"
     private static let kTimeout:TimeInterval = 12
     
-    //MARK: private
+    //MARK: internal
     
-    private class func factoryUrl() -> URL?
+    class func factoryUrl() -> URL?
     {
         guard
             
@@ -36,8 +36,6 @@ extension MGiphy
         
         return url
     }
-    
-    //MARK: internal
     
     class func factoryRandomRequest() -> URLRequest?
     {
