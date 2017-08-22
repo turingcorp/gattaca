@@ -2,6 +2,7 @@ import Foundation
 
 class MGif
 {
+    weak var coreData:Database?
     weak var model:MHome?
     var itemsReady:[DGif]
     var itemsNotReady:[DGif]

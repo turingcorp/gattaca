@@ -32,6 +32,7 @@ extension MGif
         coreData:Database,
         completion:@escaping(() -> ()))
     {
+        self.coreData = coreData
         coreData.fetch
         { [weak self] (data:[DGif]) in
             

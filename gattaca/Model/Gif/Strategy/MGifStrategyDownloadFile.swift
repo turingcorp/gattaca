@@ -30,8 +30,6 @@ extension MGifStrategyDownload
             return
         }
         
-        gif.status = DGif.Status.ready
-        model.itemsReady.append(gif)
-        model.model?.loadItems()
+        model.gifReady(gif:gif)
     }
 }

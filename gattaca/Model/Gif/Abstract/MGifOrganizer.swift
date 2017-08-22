@@ -40,4 +40,13 @@ extension MGif
         
         return purged
     }
+    
+    func gifReady(gif:DGif)
+    {
+        gif.status = DGif.Status.ready
+        
+        coreData?.save { }
+        itemsReady.append(gif)
+        model?.loadItems()
+    }
 }
