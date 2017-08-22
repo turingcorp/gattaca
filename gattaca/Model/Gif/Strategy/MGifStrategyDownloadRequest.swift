@@ -88,7 +88,7 @@ extension MGifStrategyDownload
         downloadTask.resume()
     }
     
-    private func downloadedData(
+    func downloadedData(
         fileUrl:URL?,
         urlResponse:URLResponse?,
         error:Error?) -> Data?
