@@ -15,6 +15,34 @@ extension MHome
         view?.loadError(message:message)
     }
     
+    private func requestGifsResponse(data:Data?) -> Any?
+    {
+        guard
+            
+            let data:Data = data
+            
+        else
+        {
+            return nil
+        }
+        
+        let json:Any
+        
+        do
+        {
+            try json = JSONSerialization.jsonObject(
+                with:data,
+                options:
+                JSONSerialization.ReadingOptions.allowFragments)
+        }
+        catch
+        {
+            return nil
+        }
+        
+        return json
+    }
+    
     //MARK: internal
     
     func requestGifs()
@@ -92,34 +120,6 @@ extension MHome
         }
         
         return nil
-    }
-    
-    func requestGifsResponse(data:Data?) -> Any?
-    {
-        guard
-            
-            let data:Data = data
-            
-        else
-        {
-            return nil
-        }
-        
-        let json:Any
-        
-        do
-        {
-            try json = JSONSerialization.jsonObject(
-                with:data,
-                options:
-                JSONSerialization.ReadingOptions.allowFragments)
-        }
-        catch
-        {
-            return nil
-        }
-        
-        return json
     }
     
     func requestGifsSuccess(items:[MGiphyItem])
