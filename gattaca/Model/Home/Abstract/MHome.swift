@@ -37,7 +37,7 @@ class MHome:Model<VHome>
     
     private func addItems(items:[MHomeItem])
     {
-        let countPreviousItems:Int = items.count
+        let countPreviousItems:Int = self.items.count
         
         itemsQueue.async
         { [weak self] in
