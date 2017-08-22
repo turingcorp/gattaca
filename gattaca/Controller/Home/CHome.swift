@@ -29,6 +29,7 @@ class CHome:Controller<VHome, MHome>
         super.viewDidAppear(animated)
         
         model.strategy?.controllerDidAppear(controller:self)
+        model.view?.viewDidAppear()
     }
     
     //MARK: notified

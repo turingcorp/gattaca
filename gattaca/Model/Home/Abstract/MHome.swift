@@ -23,6 +23,8 @@ class MHome:Model<VHome>
         itemsQueue = MHome.factoryQueue()
         
         super.init(session:session)
+        
+        gif.model = self
     }
     
     deinit
