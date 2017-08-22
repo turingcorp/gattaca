@@ -4,7 +4,7 @@ class FDatabaseGifsUser:FDatabaseProtocol
 {
     var identifier:String?
     var parent:FDatabaseProtocol?
-    let users:[FDatabaseCountriesItemUser]
+    let items:[FDatabaseGifsUserItem]
     
     init(
         gifs:FDatabaseGifs,
@@ -12,40 +12,40 @@ class FDatabaseGifsUser:FDatabaseProtocol
     {
         self.identifier = identifier
         parent = gifs
-        users = []
+        items = []
     }
     
     required init?(json:Any)
     {
         guard
             
-            let rawUsers:[String:Any] = json as? [String:AnyObject]
+            let rawItems:[String:Any] = json as? [String:AnyObject]
             
-            else
+        else
         {
             return nil
         }
         
-        var users:[FDatabaseCountriesItemUser] = []
-        let usersIds:[String] = Array(rawUsers.keys)
+        var items:[FDatabaseGifsUserItem] = []
+        let itemsIds:[String] = Array(rawItems.keys)
         
-        for userId:String in usersIds
+        for itemId:String in itemsIds
         {
             guard
                 
-                let rawUser:Any = rawUsers[userId],
-                let user:FDatabaseCountriesItemUser = FDatabaseCountriesItemUser(
-                    json:rawUser)
+                let rawItem:Any = rawItems[itemId],
+                let item:FDatabaseGifsUserItem = FDatabaseGifsUserItem(
+                    json:rawItem)
                 
-                else
+            else
             {
                 continue
             }
             
-            user.identifier = userId
-            users.append(user)
+            item.identifier = itemId
+            items.append(item)
         }
         
-        self.users = users
+        self.items = items
     }
 }
