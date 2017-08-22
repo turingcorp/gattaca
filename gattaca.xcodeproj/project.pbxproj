@@ -100,6 +100,9 @@
 		DA7CE83C1F3F52DE0078A26B /* VHomeActionsShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CE83B1F3F52DE0078A26B /* VHomeActionsShare.swift */; };
 		DA8E7F0A1F4554AB00C93E8D /* VLocationAskContinue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8E7F091F4554AB00C93E8D /* VLocationAskContinue.swift */; };
 		DA8EDC571F46D9AF00301A9B /* TFDatabaseUsersItemLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EDC561F46D9AF00301A9B /* TFDatabaseUsersItemLocation.swift */; };
+		DA8FFF941F4C779800963D76 /* TMGiphyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FFF931F4C779800963D76 /* TMGiphyFactory.swift */; };
+		DA8FFF961F4C77A200963D76 /* TMGiphyTrending.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FFF951F4C77A200963D76 /* TMGiphyTrending.swift */; };
+		DA8FFF981F4C77AC00963D76 /* TMGiphyRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FFF971F4C77AC00963D76 /* TMGiphyRandom.swift */; };
 		DA90E0BE1F40991D00A37538 /* TCHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0BD1F40991D00A37538 /* TCHome.swift */; };
 		DA90E0C01F40AD3E00A37538 /* MHomeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0BF1F40AD3E00A37538 /* MHomeSession.swift */; };
 		DA90E0C21F40AE4A00A37538 /* MHomeStrategyNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0C11F40AE4A00A37538 /* MHomeStrategyNew.swift */; };
@@ -308,6 +311,9 @@
 		DA7CE8531F3F544C0078A26B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8E7F091F4554AB00C93E8D /* VLocationAskContinue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLocationAskContinue.swift; sourceTree = "<group>"; };
 		DA8EDC561F46D9AF00301A9B /* TFDatabaseUsersItemLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseUsersItemLocation.swift; sourceTree = "<group>"; };
+		DA8FFF931F4C779800963D76 /* TMGiphyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMGiphyFactory.swift; sourceTree = "<group>"; };
+		DA8FFF951F4C77A200963D76 /* TMGiphyTrending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMGiphyTrending.swift; sourceTree = "<group>"; };
+		DA8FFF971F4C77AC00963D76 /* TMGiphyRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMGiphyRandom.swift; sourceTree = "<group>"; };
 		DA90E0BD1F40991D00A37538 /* TCHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCHome.swift; sourceTree = "<group>"; };
 		DA90E0BF1F40AD3E00A37538 /* MHomeSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSession.swift; sourceTree = "<group>"; };
 		DA90E0C11F40AE4A00A37538 /* MHomeStrategyNew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyNew.swift; sourceTree = "<group>"; };
@@ -897,6 +903,16 @@
 			path = UITests;
 			sourceTree = "<group>";
 		};
+		DA8FFF921F4C776100963D76 /* Giphy */ = {
+			isa = PBXGroup;
+			children = (
+				DA8FFF931F4C779800963D76 /* TMGiphyFactory.swift */,
+				DA8FFF951F4C77A200963D76 /* TMGiphyTrending.swift */,
+				DA8FFF971F4C77AC00963D76 /* TMGiphyRandom.swift */,
+			);
+			path = Giphy;
+			sourceTree = "<group>";
+		};
 		DA90E0BA1F40990B00A37538 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -916,6 +932,7 @@
 		DA90E0BC1F40990B00A37538 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA8FFF921F4C776100963D76 /* Giphy */,
 				DA0D13241F4A4C7300E9A26F /* Gif */,
 				DA6F65181F438E31005EA020 /* Home */,
 				DA6F65151F438B07005EA020 /* Request */,
@@ -1624,6 +1641,7 @@
 				DA8EDC571F46D9AF00301A9B /* TFDatabaseUsersItemLocation.swift in Sources */,
 				DABEF93D1F43447800420DF0 /* TFDatabaseUsers.swift in Sources */,
 				DA0D13261F4A4C8600E9A26F /* TMGifLoader.swift in Sources */,
+				DA8FFF961F4C77A200963D76 /* TMGiphyTrending.swift in Sources */,
 				DA57AEB51F473EAC004DDAD4 /* TMHomeSession.swift in Sources */,
 				DADE03531F476E9600FDB279 /* TMSessionLocation.swift in Sources */,
 				DA57AEBD1F47575F004DDAD4 /* TMHomeStrategyAuthLocationStrategyFactory.swift in Sources */,
@@ -1640,8 +1658,10 @@
 				DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */,
 				DA920BA61F4895CB00AE31A4 /* TMHomeLoader.swift in Sources */,
 				DA90E0F61F40BA7500A37538 /* TMSessionLoader.swift in Sources */,
+				DA8FFF941F4C779800963D76 /* TMGiphyFactory.swift in Sources */,
 				DA47EAEF1F46EECB00D8D1F6 /* TFDatabaseCountriesItem.swift in Sources */,
 				DA90E0BE1F40991D00A37538 /* TCHome.swift in Sources */,
+				DA8FFF981F4C77AC00963D76 /* TMGiphyRandom.swift in Sources */,
 				DA90E0F41F40B79E00A37538 /* TMSession.swift in Sources */,
 				DA57AEB71F474C05004DDAD4 /* TMHomeStrategy.swift in Sources */,
 				DA25DF521F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift in Sources */,
