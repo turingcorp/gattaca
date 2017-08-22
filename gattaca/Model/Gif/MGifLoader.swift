@@ -9,8 +9,7 @@ extension MGif
     {
         switch item.status
         {
-        case DGif.Status.new,
-             DGif.Status.loading:
+        case DGif.Status.new:
             
             itemsNotReady.append(item)
             

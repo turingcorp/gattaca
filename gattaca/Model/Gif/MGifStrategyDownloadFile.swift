@@ -28,7 +28,7 @@ extension MGifStrategyDownload
             
         else
         {
-            downloadFailed(gif:gif)
+            //downloadFailed(gif:gif)
             
             return
         }
@@ -41,7 +41,7 @@ extension MGifStrategyDownload
         }
         catch
         {
-            downloadFailed(gif:gif)
+            //downloadFailed(gif:gif)
             
             return
         }

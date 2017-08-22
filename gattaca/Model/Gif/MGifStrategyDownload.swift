@@ -11,10 +11,23 @@ class MGifStrategyDownload:MGifStrategy
     private let kKeyDownloadPrefix:String = "download_prefix"
     private let kKeyDownloadSuffix:String = "download_suffix"
     
-    override init(model:MGif)
+    override init?(model:MGif)
     {
-        downloadPrefix = ""
-        downloadSuffix = ""
+        guard
+            
+            let urlMap:[String:AnyObject] = MRequest.factoryUrlMap(),
+            let giphy:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
+            let downloadPrefix:String = giphy[kKeyDownloadPrefix] as? String,
+            let downloadSuffix:String = giphy[kKeyDownloadSuffix] as? String
+            
+        else
+        {
+            return nil
+        }
+        
+        self.downloadPrefix = downloadPrefix
+        self.downloadSuffix = downloadSuffix
+        
         session = MRequest.factorySession()
         
         super.init(model:model)
@@ -22,7 +35,7 @@ class MGifStrategyDownload:MGifStrategy
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-//            self?.factoryUrl()
+            self?.downloadNext()
         }
     }
     
@@ -36,37 +49,5 @@ class MGifStrategyDownload:MGifStrategy
         completion:@escaping (() -> ()))
     {
         completion()
-    }
-    
-    //MARK: private
-    
-    private func factoryUrl()
-    {
-        guard
-            
-            let urlMap:[String:AnyObject] = MRequest.factoryUrlMap(),
-            let giphy:[String:AnyObject] = urlMap[kKeyGiphy] as? [String:AnyObject],
-            let downloadPrefix:String = giphy[kKeyDownloadPrefix] as? String,
-            let downloadSuffix:String = giphy[kKeyDownloadSuffix] as? String
-            
-        else
-        {
-            model.strategyStand()
-            
-            return
-        }
-        
-        self.downloadPrefix = downloadPrefix
-        self.downloadSuffix = downloadSuffix
-        
-        dispatchDownload()
-    }
-    
-    //MARK: internal
-    
-    func downloadFailed(gif:DGif)
-    {
-//        gif.statusNew()
-        model.strategyStand()
     }
 }

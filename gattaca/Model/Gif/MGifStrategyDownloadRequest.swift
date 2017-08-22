@@ -4,66 +4,10 @@ extension MGifStrategyDownload
 {
     //MARK: private
     
-    private func requestGif(gif:DGif)
-    {
-        guard
-            
-            let identifier:String = gif.identifier
-            
-        else
-        {
-            downloadWithDelay()
-            
-            return
-        }
-        
-        var urlString:String = downloadPrefix
-        urlString.append(identifier)
-        urlString.append(downloadSuffix)
-        
-        guard
-            
-            let url:URL = URL(string:urlString)
-            
-        else
-        {
-            downloadWithDelay()
-            
-            return
-        }
-        
-        print(urlString)
-        requestGif(gif:gif, url:url)
-    }
-    
-    private func requestGif(gif:DGif, url:URL)
-    {
-        let request:URLRequest = MRequest.factoryGetRequest(
-            url:url,
-            timeout:kTimeout)
-        
-        let downloadTask:URLSessionDownloadTask = session.downloadTask(
-            with:request)
-        { [weak self] (fileUrl:URL?, urlResponse:URLResponse?, error:Error?) in
-            
-            if let error:Error = error
-            {
-                self?.downloadError(message:error.localizedDescription)
-                self?.downloadFailed(gif:gif)
-            }
-            else
-            {
-                self?.requestSuccess(gif:gif, fileUrl:fileUrl)
-            }
-        }
-        
-        downloadTask.resume()
-    }
-    
     private func requestSuccess(
         gif:DGif,
         fileUrl:URL?)
-    {
+    {/*
         guard
             
             let fileUrl:URL = fileUrl
@@ -94,7 +38,7 @@ extension MGifStrategyDownload
             return
         }
         
-        requestSuccess(gif:gif, data:data)
+        requestSuccess(gif:gif, data:data)*/
     }
     
     private func downloadError(message:String)
@@ -104,11 +48,13 @@ extension MGifStrategyDownload
     
     //MARK: internal
     
-    func dispatchDownload()
-    {/*
+    func downloadNext()
+    {
         guard
             
-            let gif:DGif = MSession.sharedInstance.gif.firstItemNew()
+            let gif:DGif = model.itemsNotReady.first,
+            let identifier:String = gif.identifier,
+            let url:URL = factoryUrl(identifier:identifier)
             
         else
         {
@@ -117,8 +63,40 @@ extension MGifStrategyDownload
             return
         }
         
-        gif.statusLoading()
-        requestGif(gif:gif)*/
+        print(url.path)
+        
+        /*
+         let request:URLRequest = MRequest.factoryGetRequest(
+         url:url,
+         timeout:kTimeout)
+         
+         let downloadTask:URLSessionDownloadTask = session.downloadTask(
+         with:request)
+         { [weak self] (fileUrl:URL?, urlResponse:URLResponse?, error:Error?) in
+         
+         if let error:Error = error
+         {
+         self?.downloadError(message:error.localizedDescription)
+         self?.downloadFailed(gif:gif)
+         }
+         else
+         {
+         self?.requestSuccess(gif:gif, fileUrl:fileUrl)
+         }
+         }
+         
+         downloadTask.resume()*/
+    }
+    
+    func factoryUrl(identifier:String) -> URL?
+    {
+        var urlString:String = downloadPrefix
+        urlString.append(identifier)
+        urlString.append(downloadSuffix)
+        
+        let url:URL? = URL(string:urlString)
+        
+        return url
     }
     
     func downloadWithDelay()
@@ -127,7 +105,7 @@ extension MGifStrategyDownload
             deadline:DispatchTime.now() + kDelayDownloadNext)
         { [weak self] in
             
-            self?.dispatchDownload()
+//            self?.dispatchDownload()
         }
     }
 }
