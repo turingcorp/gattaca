@@ -19,5 +19,14 @@ class TMGiphyTrending:XCTestCase
             "failed factorying url")
     }
     
-    
+    func testFactoryRequest()
+    {
+        let request:URLRequest? = MGiphy.factoryTrendingRequest(
+            offset:kOffset,
+            limit:kLimit)
+        
+        XCTAssertNotNil(
+            request,
+            "failed factorying request")
+    }
 }
