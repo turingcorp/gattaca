@@ -9,24 +9,6 @@ extension MGiphy
     private static let kKeyApiKey:String = "api_key"
     private static let kTimeout:TimeInterval = 12
     
-    class func factoryRandomRequest() -> URLRequest?
-    {
-        guard
-            
-            let url:URL = factoryUrl()
-            
-        else
-        {
-            return nil
-        }
-        
-        let request:URLRequest = MRequest.factoryGetRequest(
-            url:url,
-            timeout:kTimeout)
-        
-        return request
-    }
-    
     //MARK: private
     
     private class func factoryUrl() -> URL?
@@ -53,5 +35,25 @@ extension MGiphy
         let url:URL? =  URL(string:path)
         
         return url
+    }
+    
+    //MARK: internal
+    
+    class func factoryRandomRequest() -> URLRequest?
+    {
+        guard
+            
+            let url:URL = factoryUrl()
+            
+        else
+        {
+            return nil
+        }
+        
+        let request:URLRequest = MRequest.factoryGetRequest(
+            url:url,
+            timeout:kTimeout)
+        
+        return request
     }
 }
