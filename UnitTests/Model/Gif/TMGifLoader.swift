@@ -125,40 +125,6 @@ class TMGifLoader:XCTestCase
         }
     }
     
-    func testLoadCompleteStatusLoading()
-    {
-        let gif:MGif = MGif()
-        let loadExpectation:XCTestExpectation = expectation(
-            description:"load gif loading")
-        
-        createGif
-        { (item:DGif) in
-            
-            item.status = DGif.Status.loading
-            
-            let items:[DGif] = [item]
-            gif.loadComplete(gifs:items)
-            {
-                loadExpectation.fulfill()
-            }
-        }
-        
-        waitForExpectations(timeout:kWaitExpectation)
-        { (error:Error?) in
-            
-            let firstItemNotReady:DGif? = gif.itemsNotReady.first
-            let firstItemReady:DGif? = gif.itemsReady.first
-            
-            XCTAssertNotNil(
-                firstItemNotReady,
-                "failed grouping item")
-            
-            XCTAssertNil(
-                firstItemReady,
-                "grouped item wrongly")
-        }
-    }
-    
     func testLoadCompleteStatusReady()
     {
         let gif:MGif = MGif()
