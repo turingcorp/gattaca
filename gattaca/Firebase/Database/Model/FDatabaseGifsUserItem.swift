@@ -6,6 +6,14 @@ class FDatabaseGifsUserItem:FDatabaseProtocol
     var parent:FDatabaseProtocol?
     let mark:DGif.Mark
     
+    var json:Any?
+    {
+        get
+        {
+            return mark.rawValue
+        }
+    }
+    
     init(
         user:FDatabaseGifsUser,
         identifier:String,
@@ -20,33 +28,14 @@ class FDatabaseGifsUserItem:FDatabaseProtocol
     {
         guard
             
-            let rawUsers:[String:Any] = json as? [String:AnyObject]
-            
-            else
+            let rawMark:Int16 = json as? Int16,
+            let mark:DGif.Mark = DGif.Mark(rawValue:rawMark)
+        
+        else
         {
             return nil
         }
         
-        var users:[FDatabaseCountriesItemUser] = []
-        let usersIds:[String] = Array(rawUsers.keys)
-        
-        for userId:String in usersIds
-        {
-            guard
-                
-                let rawUser:Any = rawUsers[userId],
-                let user:FDatabaseCountriesItemUser = FDatabaseCountriesItemUser(
-                    json:rawUser)
-                
-                else
-            {
-                continue
-            }
-            
-            user.identifier = userId
-            users.append(user)
-        }
-        
-        self.users = users
+        self.mark = mark
     }
 }
