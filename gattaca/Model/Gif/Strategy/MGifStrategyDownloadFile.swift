@@ -2,18 +2,6 @@ import Foundation
 
 extension MGifStrategyDownload
 {
-    //MARK: private
-    
-    private func downloadSuccess(gif:DGif)
-    {
-//        gif.statusWaiting()
-        downloadWithDelay()
-        
-//        NotificationCenter.default.post(
-//            name:Notification.gifDownloaded,
-//            object:nil)
-    }
-    
     //MARK: internal
     
     func saveGifData(gif:DGif, data:Data)
@@ -43,5 +31,7 @@ extension MGifStrategyDownload
         }
         
         gif.status = DGif.Status.ready
+        model.itemsReady.append(gif)
+        model.model?.loadItems()
     }
 }

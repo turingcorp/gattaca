@@ -31,6 +31,11 @@ class MGif
     
     func strategyDownload()
     {
-        strategy = MGifStrategyDownload(model:self)
+        let current:MGifStrategyDownload? = strategy as? MGifStrategyDownload
+        
+        if current == nil
+        {
+            strategy = MGifStrategyDownload(model:self)
+        }
     }
 }

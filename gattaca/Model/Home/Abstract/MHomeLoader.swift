@@ -33,6 +33,7 @@ extension MHome
         {
             let items:[MHomeItem] = MHome.factoryItems(
                 gifItems:itemsReady)
+            gif.strategy?.download()
             
             completion(items)
         }
