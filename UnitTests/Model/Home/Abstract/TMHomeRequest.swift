@@ -14,8 +14,8 @@ class TMHomeRequest:XCTestCase
     private let kTrendingExtension:String = "json"
     private let kErrorDomain:String = "some weird error"
     private let kIdentifier:String = "lorem ipsum"
-    private let kDelayWait:TimeInterval = 2
-    private let kWaitExpectation:TimeInterval = 3
+    private let kDelayWait:TimeInterval = 1
+    private let kWaitExpectation:TimeInterval = 2
     private let kStatusCodeOk:Int = 200
     private let kStatusCodeFail:Int = 0
     private let kMockedItems:Int = 3
