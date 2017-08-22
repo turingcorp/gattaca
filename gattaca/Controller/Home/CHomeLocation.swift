@@ -7,7 +7,7 @@ extension CHome
         let controller:CLocationAsk = CLocationAsk(
             session:model.session)
         
-        parent()?.animateOver(
+        parentController?.animateOver(
             controller:controller)
     }
     
@@ -16,7 +16,7 @@ extension CHome
         let controller:CLocationDenied = CLocationDenied(
             session:model.session)
         
-        parent()?.animateOver(
+        parentController?.animateOver(
             controller:controller)
     }
 }

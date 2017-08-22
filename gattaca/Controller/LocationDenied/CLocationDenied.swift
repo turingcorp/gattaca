@@ -38,6 +38,6 @@ class CLocationDenied:Controller<VLocationDenied, MLocationDenied>
     
     private func back()
     {
-        parent()?.dismissAnimateOver(completion:nil)
+        parentController?.dismissAnimateOver(completion:nil)
     }
 }

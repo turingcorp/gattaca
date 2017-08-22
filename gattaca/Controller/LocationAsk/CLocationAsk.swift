@@ -16,6 +16,6 @@ class CLocationAsk:Controller<VLocationAsk, MLocationAsk>
     
     func authorizationChanged()
     {
-        parent()?.dismissAnimateOver(completion:nil)
+        parentController?.dismissAnimateOver(completion:nil)
     }
 }

@@ -4,6 +4,23 @@ class Controller<V:ViewMain, M:Model<V>>:UIViewController
 {
     let model:M
     
+    var parentController:ControllerParent?
+    {
+        get
+        {
+            guard
+                
+                let parent:ControllerParent = self.parent as? ControllerParent
+                
+            else
+            {
+                return nil
+            }
+            
+            return parent
+        }
+    }
+    
     init(session:MSession)
     {
         model = M(session:session)
@@ -54,21 +71,5 @@ class Controller<V:ViewMain, M:Model<V>>:UIViewController
     override var prefersStatusBarHidden:Bool
     {
         return false
-    }
-    
-    //MARK: internal
-    
-    func parent() -> ControllerParent?
-    {
-        guard
-        
-            let parent:ControllerParent = self.parent as? ControllerParent
-        
-        else
-        {
-            return nil
-        }
-        
-        return parent
     }
 }
