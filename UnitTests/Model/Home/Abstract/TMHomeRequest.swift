@@ -13,6 +13,9 @@ class TMHomeRequest:XCTestCase
     private let kTrendingName:String = "giphyTrending"
     private let kTrendingExtension:String = "json"
     private let kErrorDomain:String = "some weird error"
+    private let kIdentifier:String = "lorem ipsum"
+    private let kDelayWait:TimeInterval = 1
+    private let kWaitExpectation:TimeInterval = 2
     private let kStatusCodeOk:Int = 200
     private let kStatusCodeFail:Int = 0
     private let kMockedItems:Int = 3
@@ -53,6 +56,7 @@ class TMHomeRequest:XCTestCase
             headerFields:nil)
         
         let bundle:Bundle = Bundle(for:TMHomeRequest.self)
+        model?.coreData = Database(bundle:bundle)
         
         guard
         
@@ -187,5 +191,54 @@ class TMHomeRequest:XCTestCase
         XCTAssertNil(
             items,
             "should not parse items")
+    }
+    
+    func testRequestGifsSuccess()
+    {
+        let identifier:String = kIdentifier
+        let item:MGiphyItem = MGiphyItem(
+            identifier:identifier)
+        
+        guard
+            
+            let model:MHome = self.model
+            
+        else
+        {
+            return
+        }
+        
+        model.gif.strategyStand()
+        
+        let successWait:XCTestExpectation = expectation(
+            description:"expectation success")
+        
+        model.requestGifsSuccess(items:[item])
+        
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kDelayWait)
+        {
+            successWait.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            XCTAssertEqual(
+                model.gif.itemsNotReady.count,
+                1,
+                "there should be exactly 1 item store")
+            
+            XCTAssertEqual(
+                model.gif.itemsNotReady.first?.identifier,
+                identifier,
+                "stored item doesn't match identifier")
+            
+            let strategy:MGifStrategyDownload? = model.gif.strategy as? MGifStrategyDownload
+            
+            XCTAssertNotNil(
+                strategy,
+                "strategy should be download")
+        }
     }
 }
