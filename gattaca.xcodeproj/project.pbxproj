@@ -20,6 +20,7 @@
 		DA32444D1F42B50A00D40F6E /* MSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA407C871F4CBFA500E522CD /* FDatabaseGifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA407C861F4CBFA500E522CD /* FDatabaseGifs.swift */; };
+		DA407C891F4CBFEF00E522CD /* FDatabaseGifsUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA407C881F4CBFEF00E522CD /* FDatabaseGifsUser.swift */; };
 		DA47EAED1F46EE4100D8D1F6 /* TFDatabaseCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47EAEC1F46EE4100D8D1F6 /* TFDatabaseCountries.swift */; };
 		DA47EAEF1F46EECB00D8D1F6 /* TFDatabaseCountriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47EAEE1F46EECB00D8D1F6 /* TFDatabaseCountriesItem.swift */; };
 		DA47EAF11F47003000D8D1F6 /* TFDatabaseCountriesItemUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47EAF01F47003000D8D1F6 /* TFDatabaseCountriesItemUser.swift */; };
@@ -230,6 +231,7 @@
 		DA39E77A1F38E3F90001CA28 /* gattaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gattaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA39E7891F38E3F90001CA28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA407C861F4CBFA500E522CD /* FDatabaseGifs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseGifs.swift; sourceTree = "<group>"; };
+		DA407C881F4CBFEF00E522CD /* FDatabaseGifsUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseGifsUser.swift; sourceTree = "<group>"; };
 		DA47EAEC1F46EE4100D8D1F6 /* TFDatabaseCountries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseCountries.swift; sourceTree = "<group>"; };
 		DA47EAEE1F46EECB00D8D1F6 /* TFDatabaseCountriesItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseCountriesItem.swift; sourceTree = "<group>"; };
 		DA47EAF01F47003000D8D1F6 /* TFDatabaseCountriesItemUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseCountriesItemUser.swift; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 				DA745A861F461875005AF0DA /* FDatabaseCountriesItem.swift */,
 				DA745A881F46244D005AF0DA /* FDatabaseCountriesItemUser.swift */,
 				DA407C861F4CBFA500E522CD /* FDatabaseGifs.swift */,
+				DA407C881F4CBFEF00E522CD /* FDatabaseGifsUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1594,6 +1597,7 @@
 				DA90E0E91F40B75800A37538 /* MPerkLoader.swift in Sources */,
 				DA5F44A91F42C99100334605 /* FDatabaseFactory.swift in Sources */,
 				DAC215821F39372D00E281DB /* MGiphyRandom.swift in Sources */,
+				DA407C891F4CBFEF00E522CD /* FDatabaseGifsUser.swift in Sources */,
 				DA90E0EC1F40B75800A37538 /* MPerkThumbnailProtocol.swift in Sources */,
 				DA8FFFAD1F4C8EFB00963D76 /* MGifStrategy.swift in Sources */,
 				DAE0AFC11F3BAB16006449D0 /* MGiphyFactory.swift in Sources */,
