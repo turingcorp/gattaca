@@ -119,6 +119,7 @@
 		DA8FFFBC1F4C8F4300963D76 /* TMGifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FFFB61F4C8F4300963D76 /* TMGifLoader.swift */; };
 		DA8FFFBD1F4C8F4300963D76 /* TMGifOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FFFB71F4C8F4300963D76 /* TMGifOrganizer.swift */; };
 		DA8FFFBE1F4C8F4300963D76 /* TMGifStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FFFB81F4C8F4300963D76 /* TMGifStorer.swift */; };
+		DA8FFFC01F4C8F6900963D76 /* TMGifStrategyDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FFFBF1F4C8F6900963D76 /* TMGifStrategyDownload.swift */; };
 		DA90E0BE1F40991D00A37538 /* TCHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0BD1F40991D00A37538 /* TCHome.swift */; };
 		DA90E0C01F40AD3E00A37538 /* MHomeSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0BF1F40AD3E00A37538 /* MHomeSession.swift */; };
 		DA90E0C21F40AE4A00A37538 /* MHomeStrategyNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90E0C11F40AE4A00A37538 /* MHomeStrategyNew.swift */; };
@@ -330,6 +331,7 @@
 		DA8FFFB61F4C8F4300963D76 /* TMGifLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMGifLoader.swift; sourceTree = "<group>"; };
 		DA8FFFB71F4C8F4300963D76 /* TMGifOrganizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMGifOrganizer.swift; sourceTree = "<group>"; };
 		DA8FFFB81F4C8F4300963D76 /* TMGifStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMGifStorer.swift; sourceTree = "<group>"; };
+		DA8FFFBF1F4C8F6900963D76 /* TMGifStrategyDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMGifStrategyDownload.swift; sourceTree = "<group>"; };
 		DA90E0BD1F40991D00A37538 /* TCHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCHome.swift; sourceTree = "<group>"; };
 		DA90E0BF1F40AD3E00A37538 /* MHomeSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSession.swift; sourceTree = "<group>"; };
 		DA90E0C11F40AE4A00A37538 /* MHomeStrategyNew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeStrategyNew.swift; sourceTree = "<group>"; };
@@ -951,6 +953,7 @@
 		DA8FFFB91F4C8F4300963D76 /* Strategy */ = {
 			isa = PBXGroup;
 			children = (
+				DA8FFFBF1F4C8F6900963D76 /* TMGifStrategyDownload.swift */,
 			);
 			path = Strategy;
 			sourceTree = "<group>";
@@ -1698,6 +1701,7 @@
 				DA25DF521F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift in Sources */,
 				DA8FFFBB1F4C8F4300963D76 /* TMGifFactory.swift in Sources */,
 				DA8FFFBE1F4C8F4300963D76 /* TMGifStorer.swift in Sources */,
+				DA8FFFC01F4C8F6900963D76 /* TMGifStrategyDownload.swift in Sources */,
 				DA47EAED1F46EE4100D8D1F6 /* TFDatabaseCountries.swift in Sources */,
 				DABAB6DE1F48CCD80049FE6E /* TMHomeStrategyAuthLocationDelegate.swift in Sources */,
 				DA47EAF11F47003000D8D1F6 /* TFDatabaseCountriesItemUser.swift in Sources */,
