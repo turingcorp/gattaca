@@ -69,7 +69,7 @@ extension MGifStrategyDownload
             return
         }
         
-        print(url.path)
+        print(url.absoluteString)
         
         let request:URLRequest = MGifStrategyDownload.factoryRequest(
             url:url)

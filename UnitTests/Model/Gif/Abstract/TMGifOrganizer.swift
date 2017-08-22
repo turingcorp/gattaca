@@ -119,7 +119,8 @@ class TMGifOrganizer:XCTestCase
     {
         guard
             
-            let coreData:Database = self.coreData
+            let coreData:Database = self.coreData,
+            let model:MHome = self.model
             
         else
         {
@@ -128,27 +129,17 @@ class TMGifOrganizer:XCTestCase
         
         var items:[MGiphyItem]?
         let purgeExpectation:XCTestExpectation = expectation(
-            description:"map item")
+            description:"purge item")
         let identifier:String = kIdentifier
         let giphyItem:MGiphyItem = MGiphyItem(identifier:identifier)
         
         coreData.create
-        { [weak self] (item:DGif) in
+        { (item:DGif) in
                 
             item.initialValues(identifier:identifier)
-            
-            guard
-                
-                let gif:MGif = self?.model?.gif
-            
-            else
-            {
-                return
-            }
-            
-            gif.newItem(item:item)
-            
-            items = gif.purgeItems(items:[giphyItem])
+            model.gif.newItem(item:item)
+    
+            items = model.gif.purgeItems(items:[giphyItem])
             purgeExpectation.fulfill()
         }
         
@@ -172,6 +163,52 @@ class TMGifOrganizer:XCTestCase
                 count,
                 0,
                 "failed purging items")
+        }
+    }
+    
+    func testGifReady()
+    {
+        guard
+            
+            let coreData:Database = self.coreData,
+            let model:MHome = self.model
+            
+        else
+        {
+            return
+        }
+        
+        let readyExpectation:XCTestExpectation = expectation(
+            description:"ready item")
+        let identifier:String = kIdentifier
+        var gifItem:DGif?
+        
+        coreData.create
+        { (item:DGif) in
+                
+            item.initialValues(identifier:identifier)
+            model.gif.gifReady(gif:item)
+            gifItem = item
+            
+            readyExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout:kWaitExpectation)
+        { (error:Error?) in
+            
+            XCTAssertNotNil(
+                gifItem,
+                "failed creating item")
+            
+            XCTAssertEqual(
+                gifItem?.status,
+                DGif.Status.ready,
+                "failed setting status as ready")
+            
+            XCTAssertEqual(
+                model.gif.itemsReady.count,
+                1,
+                "there should be 1 item ready")
         }
     }
 }
