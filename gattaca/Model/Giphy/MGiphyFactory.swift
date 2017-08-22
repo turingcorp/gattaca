@@ -8,6 +8,25 @@ extension MGiphy
     private static let kKeyDownloadPrefix:String = "download_prefix"
     private static let kKeyShareSuffix:String = "share_suffix"
     
+    //MARK: private
+    
+    private class func parseItem(data:AnyObject) -> MGiphyItem?
+    {
+        guard
+            
+            let dataMap:[String:AnyObject] = data as? [String:AnyObject],
+            let identifier:String = dataMap[kKeyIdentifier] as? String
+            
+        else
+        {
+            return nil
+        }
+        
+        let item:MGiphyItem = MGiphyItem(identifier:identifier)
+        
+        return item
+    }
+    
     //MARK: internal
     
     class func factoryItems(json:Any) -> [MGiphyItem]?
@@ -39,23 +58,6 @@ extension MGiphy
         }
         
         return items
-    }
-    
-    class func parseItem(data:AnyObject) -> MGiphyItem?
-    {
-        guard
-            
-            let dataMap:[String:AnyObject] = data as? [String:AnyObject],
-            let identifier:String = dataMap[kKeyIdentifier] as? String
-            
-        else
-        {
-            return nil
-        }
-        
-        let item:MGiphyItem = MGiphyItem(identifier:identifier)
-        
-        return item
     }
     
     class func factoryShareGifUrl(model:MHomeItem) -> URL?
