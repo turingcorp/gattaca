@@ -6,7 +6,30 @@ extension MHome
     
     private func asyncMarkCurrent(mark:DGif.Mark)
     {
+        guard
         
+            let coreData:Database = self.coreData,
+            let item:DGif = markingItem(),
+            let userId:String = session.userId
+        
+        else
+        {
+            return
+        }
+        
+        markFirebase(
+            userId:userId,
+            item:item,
+            mark:mark)
+        markCoreData(
+            coreData:coreData,
+            item:item,
+            mark:mark)
+        { [weak self] in
+            
+            self?.markingDone(item:item)
+            self?.view?.markingDone()
+        }
     }
     
     //MARK: internal
@@ -17,6 +40,83 @@ extension MHome
         { [weak self] in
             
             self?.asyncMarkCurrent(mark:mark)
+        }
+    }
+    
+    func markingItem() -> DGif?
+    {
+        guard
+        
+            let item:MHomeItem = items.first
+        
+        else
+        {
+            return nil
+        }
+        
+        return item.gif
+    }
+    
+    func markFirebase(
+        userId:String,
+        item:DGif,
+        mark:DGif.Mark)
+    {
+        guard
+            
+            let itemId:String = item.identifier
+        
+        else
+        {
+            return
+        }
+        
+        let firebase:FDatabase = FDatabase()
+        let gifs:FDatabaseGifs = FDatabaseGifs()
+        let gifsUser:FDatabaseGifsUser = FDatabaseGifsUser(
+            gifs:gifs,
+            identifier:userId)
+        let gifsUserItem:FDatabaseGifsUserItem = FDatabaseGifsUserItem(
+            user:gifsUser,
+            identifier:itemId,
+            mark:mark)
+        
+        firebase.update(model:gifsUserItem)
+    }
+    
+    func markCoreData(
+        coreData:Database,
+        item:DGif,
+        mark:DGif.Mark,
+        completion:@escaping(() -> ()))
+    {
+        item.mark = mark
+        coreData.save(completion:completion)
+    }
+    
+    func markingDone(item:DGif)
+    {
+        removeFirst(gif:item)
+        
+        guard
+        
+            let firstReady:DGif = gif.itemsReady.first
+        
+        else
+        {
+            return
+        }
+        
+        if firstReady === item
+        {
+            gif.itemsReady.removeFirst()
+        }
+        
+        let countReady:Int = gif.itemsReady.count
+        
+        if countReady == 0
+        {
+            loadItems()
         }
     }
 }

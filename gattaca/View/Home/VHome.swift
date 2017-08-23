@@ -128,4 +128,13 @@ class VHome:ViewMain
     {
         viewError.showError(message:message)
     }
+    
+    func markingDone()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            
+        }
+    }
 }

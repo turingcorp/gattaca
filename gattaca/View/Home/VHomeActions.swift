@@ -111,7 +111,7 @@ class VHomeActions:VCollection<
         
         let item:MHomeActionProtocol = modelAtIndex(
             index:indexPath)
-        
+        controller.model.markCurrent(mark:item.mark)
     }
     
     //MARK: private

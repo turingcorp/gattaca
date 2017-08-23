@@ -65,4 +65,21 @@ class MHome:Model<VHome>
             }
         }
     }
+    
+    func removeFirst(gif:DGif)
+    {
+        guard
+            
+            let item:MHomeItem = items.first
+            
+        else
+        {
+            return
+        }
+        
+        if item.gif === gif
+        {
+            items.removeFirst()
+        }
+    }
 }
