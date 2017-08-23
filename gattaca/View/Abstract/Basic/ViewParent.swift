@@ -17,6 +17,10 @@ class ViewParent:UIView
         backgroundColor = UIColor.white
         self.controller = controller
         
+        let viewMenu:VMenu = VMenu()
+        
+        addSubview(viewMenu)
+        
         factoryGesture()
     }
     
