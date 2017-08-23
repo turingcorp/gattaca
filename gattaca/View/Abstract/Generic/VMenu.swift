@@ -16,7 +16,7 @@ class VMenu:UIView
         factoryCollection()
     }
     
-    required init?(coder aDecoder: NSCoder)
+    required init?(coder:NSCoder)
     {
         return nil
     }

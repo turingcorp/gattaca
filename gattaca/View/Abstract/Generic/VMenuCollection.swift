@@ -104,4 +104,11 @@ extension VMenu:
         
         return cell
     }
+    
+    func collectionView(
+        _ collectionView:UICollectionView,
+        didSelectItemAt indexPath:IndexPath)
+    {
+        collectionView.isUserInteractionEnabled = false
+    }
 }

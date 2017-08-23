@@ -13,7 +13,7 @@ extension ViewParent
             return
         }
         
-        addSubview(ui)
+        insertSubview(ui, belowSubview:viewMenu)
         
         view.layoutTop = NSLayoutConstraint.topToTop(
             view:ui,
@@ -45,7 +45,7 @@ extension ViewParent
             return
         }
         
-        addSubview(newUi)
+        insertSubview(newUi, belowSubview:viewMenu)
         
         newView.layoutTop = NSLayoutConstraint.topToTop(
             view:newUi,
@@ -94,7 +94,7 @@ extension ViewParent
             let pushBackground:VPushBackground = VPushBackground()
             newView.pushBackground = pushBackground
             
-            addSubview(pushBackground)
+            insertSubview(pushBackground, belowSubview:viewMenu)
             
             NSLayoutConstraint.equals(
                 view:pushBackground,
@@ -110,7 +110,7 @@ extension ViewParent
             return
         }
         
-        addSubview(newUi)
+        insertSubview(newUi, belowSubview:viewMenu)
         
         newView.layoutTop = NSLayoutConstraint.topToTop(
             view:newUi,
@@ -180,7 +180,7 @@ extension ViewParent
         }
         
         newUi.alpha = 0
-        addSubview(newUi)
+        insertSubview(newUi, belowSubview:viewMenu)
         
         newView.layoutTop = NSLayoutConstraint.topToTop(
             view:newUi,
@@ -216,7 +216,7 @@ extension ViewParent
             return
         }
         
-        addSubview(newUi)
+        insertSubview(newUi, belowSubview:viewMenu)
         
         newView.layoutTop = NSLayoutConstraint.topToTop(
             view:newUi,

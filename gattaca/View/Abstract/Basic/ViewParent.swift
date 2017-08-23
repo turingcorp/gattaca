@@ -9,7 +9,8 @@ class ViewParent:UIView
     let kMinXDelta:CGFloat = 30
     let kAnimationDuration:TimeInterval = 0.3
     private(set) weak var controller:ControllerParent!
-    private let kMenuHeight:CGFloat = 80
+    private(set) weak var viewMenu:VMenu!
+    private let kMenuHeight:CGFloat = 70
     
     init(controller:ControllerParent)
     {
@@ -19,6 +20,7 @@ class ViewParent:UIView
         self.controller = controller
         
         let viewMenu:VMenu = VMenu(controller:controller)
+        self.viewMenu = viewMenu
         
         addSubview(viewMenu)
         
