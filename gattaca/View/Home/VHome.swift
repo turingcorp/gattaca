@@ -3,6 +3,7 @@ import UIKit
 class VHome:ViewMain
 {
     private weak var viewBar:VHomeBar!
+    private weak var viewMark:VHomeMark!
     private weak var viewDisplay:VHomeDisplay!
     private weak var viewError:VHomeError!
     private weak var viewActions:VHomeActions!
@@ -41,6 +42,10 @@ class VHome:ViewMain
             controller:controller)
         self.viewDisplay = viewDisplay
         
+        let viewMark:VHomeMark = VHomeMark(
+            controller:controller)
+        self.viewMark = viewMark
+        
         let viewBar:VHomeBar = VHomeBar(
             controller:controller)
         self.viewBar = viewBar
@@ -55,6 +60,7 @@ class VHome:ViewMain
 
         addSubview(viewBar)
         addSubview(viewDisplay)
+        addSubview(viewMark)
         addSubview(viewError)
         addSubview(viewActions)
         
@@ -92,6 +98,10 @@ class VHome:ViewMain
         
         NSLayoutConstraint.equals(
             view:viewError,
+            toView:viewDisplay)
+        
+        NSLayoutConstraint.equals(
+            view:viewMark,
             toView:viewDisplay)
     }
     
