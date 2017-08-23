@@ -14,6 +14,19 @@ extension VMenu:
         return item
     }
     
+    private func selectCurrent()
+    {
+        let indexSelected:Int = controller.menu.selected.rawValue
+        let indexPath:IndexPath = IndexPath(
+            item:indexSelected,
+            section:0)
+        
+        collectionView.selectItem(
+            at:indexPath,
+            animated:false,
+            scrollPosition:UICollectionViewScrollPosition())
+    }
+    
     //MARK: internal
     
     func factoryCollection()
@@ -39,12 +52,15 @@ extension VMenu:
             VMenuCell.self,
             forCellWithReuseIdentifier:
             VMenuCell.reusableIdentifier)
+        self.collectionView = collectionView
         
         addSubview(collectionView)
         
         NSLayoutConstraint.equals(
             view:collectionView,
             toView:self)
+        
+        selectCurrent()
     }
     
     //MARK: collectionViewDelegate

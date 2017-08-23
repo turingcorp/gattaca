@@ -8,6 +8,7 @@ extension ControllerParent
     {
         let order:MMenu.Order = item.order
         let current:MMenu.Order = menu.selected
+        menu.selected = order
         
         if order.rawValue == current.rawValue
         {

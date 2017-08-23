@@ -2,8 +2,9 @@ import UIKit
 
 class VMenu:UIView
 {
-    var cellSize:CGSize?
+    weak var collectionView:UICollectionView!
     private(set) weak var controller:ControllerParent!
+    var cellSize:CGSize?
     let kDeselectTime:TimeInterval = 0.3
     private let kBorderHeight:CGFloat = 1
     
