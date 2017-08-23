@@ -3,11 +3,13 @@ import UIKit
 class ControllerParent:UIViewController
 {
     var orientation:UIInterfaceOrientationMask
+    let menu:MMenu
     private let session:MSession
     
     init()
     {
         session = MSession()
+        menu = MMenu()
         orientation = UIInterfaceOrientationMask.portrait
         super.init(nibName:nil, bundle:nil)
     }
