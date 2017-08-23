@@ -110,5 +110,12 @@ extension VMenu:
         didSelectItemAt indexPath:IndexPath)
     {
         collectionView.isUserInteractionEnabled = false
+        
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kDeselectTime)
+        { [weak collectionView] in
+            
+            collectionView?.isUserInteractionEnabled = true
+        }
     }
 }

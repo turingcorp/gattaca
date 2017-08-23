@@ -4,6 +4,7 @@ class VMenu:UIView
 {
     var cellSize:CGSize?
     private(set) weak var controller:ControllerParent!
+    let kDeselectTime:TimeInterval = 0.5
     private let kBorderHeight:CGFloat = 1
     
     init(controller:ControllerParent)
