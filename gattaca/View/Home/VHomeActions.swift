@@ -135,5 +135,11 @@ class VHomeActions:VCollection<
         {
             isHidden = true
         }
+        
+        collectionView.isUserInteractionEnabled = true
+        collectionView.selectItem(
+            at:nil,
+            animated:true,
+            scrollPosition:UICollectionViewScrollPosition())
     }
 }
