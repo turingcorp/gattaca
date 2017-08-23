@@ -2,13 +2,13 @@ import UIKit
 
 class ViewMain:UIView, ViewProtocol
 {
+    let panBack:Bool = false
     private(set) weak var controller:UIViewController!
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutRight:NSLayoutConstraint!
     weak var layoutTop:NSLayoutConstraint!
     weak var layoutBottom:NSLayoutConstraint!
     weak var pushBackground:VPushBackground?
-    private let kPanBack:Bool = false
     
     required init(controller:UIViewController)
     {
@@ -22,13 +22,5 @@ class ViewMain:UIView, ViewProtocol
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    var panBack:Bool
-    {
-        get
-        {
-            return kPanBack
-        }
     }
 }
