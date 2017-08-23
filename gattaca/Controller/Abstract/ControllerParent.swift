@@ -4,7 +4,7 @@ class ControllerParent:UIViewController
 {
     var orientation:UIInterfaceOrientationMask
     let menu:MMenu
-    private let session:MSession
+    let session:MSession
     
     init()
     {
