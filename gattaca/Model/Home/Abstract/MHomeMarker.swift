@@ -27,7 +27,7 @@ extension MHome
             mark:action.mark)
         { [weak self] in
             
-            self?.markingDone(item:item)
+            self?.removeFirst(gif:item)
             self?.view?.markingDone(action:action)
         }
     }
@@ -92,31 +92,5 @@ extension MHome
     {
         item.mark = mark
         coreData.save(completion:completion)
-    }
-    
-    func markingDone(item:DGif)
-    {
-        removeFirst(gif:item)
-        
-        guard
-        
-            let firstReady:DGif = gif.itemsReady.first
-        
-        else
-        {
-            return
-        }
-        
-        if firstReady === item
-        {
-            gif.itemsReady.removeFirst()
-        }
-        
-        let countReady:Int = gif.itemsReady.count
-        
-        if countReady == 0
-        {
-            loadItems()
-        }
     }
 }

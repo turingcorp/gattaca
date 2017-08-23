@@ -77,6 +77,16 @@ class MHome:Model<VHome>
         }
     }
     
+    private func removedItem()
+    {
+        let countItems:Int = items.count
+        
+        if countItems == 0
+        {
+            loadItems()
+        }
+    }
+    
     //MARK: internal
     
     func loadItems()
@@ -105,7 +115,12 @@ class MHome:Model<VHome>
         
         if item.gif === gif
         {
-            items.removeFirst()
+            itemsQueue.async
+            { [weak self] in
+                
+                self?.items.removeFirst()
+                self?.removedItem()
+            }
         }
     }
 }
