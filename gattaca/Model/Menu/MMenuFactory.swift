@@ -4,20 +4,30 @@ extension MMenu
 {
     //MARK: private
     
-    
+    private class func factoryOrderMap() -> [MMenu.Order:MMenuItemProtocol.Type]
+    {
+        let map:[MMenu.Order:MMenuItemProtocol.Type] = [
+            MMenu.Order.settings:MMenuItemSettings.self,
+            MMenu.Order.home:MMenuItemHome.self,
+            MMenu.Order.match:MMenuItemMatch.self]
+        
+        return map
+    }
     
     //MARK: internal
     
     class func factoryItems() -> [MMenuItemProtocol]
     {
-        let itemSettings:MMenuItemSettings = MMenuItemSettings()
-        let itemMatch:MMenuItemMatch = MMenuItemMatch()
-        let itemHome:MMenuItemHome = MMenuItemHome()
+        var items:[MMenuItemProtocol] = []
+        let map:[MMenu.Order:MMenuItemProtocol.Type] = factoryOrderMap()
         
-        let items:[MMenuItemProtocol] = [
-            itemSettings,
-            itemHome,
-            itemMatch]
+        for mapItem:(key:MMenu.Order, value:MMenuItemProtocol.Type) in map
+        {
+            let order:MMenu.Order = mapItem.key
+            let itemType:MMenuItemProtocol.Type = mapItem.value
+            let item:MMenuItemProtocol = itemType.init(order:order)
+            items.append(item)
+        }
         
         return items
     }

@@ -112,7 +112,7 @@ extension VMenu:
         collectionView.isUserInteractionEnabled = false
         
         let item:MMenuItemProtocol = modelAtIndex(index:indexPath)
-        print(item.index)
+        print(item.order)
         
         DispatchQueue.main.asyncAfter(
             deadline:DispatchTime.now() + kDeselectTime)

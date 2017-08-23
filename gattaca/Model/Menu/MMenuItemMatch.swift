@@ -2,6 +2,6 @@ import UIKit
 
 struct MMenuItemMatch:MMenuItemProtocol
 {
-    var index:Int
+    let order:MMenu.Order
     let icon:UIImage = #imageLiteral(resourceName: "assetGenericMatch")
 }
