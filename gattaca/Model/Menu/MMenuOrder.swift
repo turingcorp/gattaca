@@ -2,7 +2,7 @@ import Foundation
 
 extension MMenu
 {
-    enum Order
+    enum Order:Int
     {
         case settings
         case home

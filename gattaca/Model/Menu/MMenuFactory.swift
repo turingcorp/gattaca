@@ -29,6 +29,12 @@ extension MMenu
             items.append(item)
         }
         
+        items.sort
+        { (itemA:MMenuItemProtocol, itemB:MMenuItemProtocol) -> Bool in
+            
+            return itemA.order.rawValue < itemB.order.rawValue
+        }
+        
         return items
     }
 }
