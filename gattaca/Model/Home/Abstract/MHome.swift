@@ -35,19 +35,45 @@ class MHome:Model<VHome>
     
     //MARK: private
     
-    private func addItems(items:[MHomeItem])
+    private func loadedItems(items:[MHomeItem])
     {
         let countPreviousItems:Int = self.items.count
         
-        itemsQueue.async
+        addItems(items:items)
         { [weak self] in
-            
-            self?.items.append(contentsOf:items)
             
             if countPreviousItems == 0
             {
                 self?.view?.refresh()
             }
+            
+            self?.checkCurrentItems()
+        }
+    }
+    
+    private func addItems(
+        items:[MHomeItem],
+        completion:@escaping(() -> ()))
+    {
+        itemsQueue.async
+        { [weak self] in
+            
+            self?.items.append(contentsOf:items)
+            completion()
+        }
+    }
+    
+    private func checkCurrentItems()
+    {
+        let count:Int = items.count
+        
+        if count > 0
+        {
+            gif.strategy?.download()
+        }
+        else
+        {
+            requestGifs()
         }
     }
     
@@ -61,7 +87,7 @@ class MHome:Model<VHome>
             self?.asyncLoadItems
             { [weak self] (items:[MHomeItem]) in
                 
-                self?.addItems(items:items)
+                self?.loadedItems(items:items)
             }
         }
     }

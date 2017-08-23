@@ -64,7 +64,7 @@ extension MGifStrategyDownload
             
         else
         {
-            delayDownloadNext()
+            model.strategyStand()
             
             return
         }

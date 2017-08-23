@@ -24,24 +24,14 @@ extension MHome
     }
     
     func loadItemsDone(
-        completion:@escaping(([MHomeItem]) -> ()))
+        completion:(([MHomeItem]) -> ()))
     {
         let itemsReady:[DGif] = gif.itemsReady
-        let count:Int = itemsReady.count
+        let items:[MHomeItem] = MHome.factoryItems(
+            gifItems:itemsReady)
         
-        if count > 0
-        {
-            gif.itemsReady = []
-            
-            let items:[MHomeItem] = MHome.factoryItems(
-                gifItems:itemsReady)
-            gif.strategy?.download()
-            
-            completion(items)
-        }
-        else
-        {
-            requestGifs()
-        }
+        gif.itemsReady = []
+        
+        completion(items)
     }
 }
