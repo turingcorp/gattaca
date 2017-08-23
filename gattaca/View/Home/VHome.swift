@@ -10,7 +10,7 @@ class VHome:ViewMain
     private let kBarHeight:CGFloat = 70
     private let kDisplayBottom:CGFloat = -140
     private let kActionsHeight:CGFloat = 70
-    private let kAnimationDuration:TimeInterval = 0.3
+    private let kAnimationDuration:TimeInterval = 0.4
     
     required init(controller:UIViewController)
     {
