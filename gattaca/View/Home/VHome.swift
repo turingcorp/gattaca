@@ -129,7 +129,7 @@ class VHome:ViewMain
         viewError.showError(message:message)
     }
     
-    func markingDone()
+    func markingDone(action:MHomeActionProtocol)
     {
         DispatchQueue.main.async
         { [weak self] in

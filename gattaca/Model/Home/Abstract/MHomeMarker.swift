@@ -4,7 +4,7 @@ extension MHome
 {
     //MARK: private
     
-    private func asyncMarkCurrent(mark:DGif.Mark)
+    private func asyncMarkCurrent(action:MHomeActionProtocol)
     {
         guard
         
@@ -20,26 +20,26 @@ extension MHome
         markFirebase(
             userId:userId,
             item:item,
-            mark:mark)
+            mark:action.mark)
         markCoreData(
             coreData:coreData,
             item:item,
-            mark:mark)
+            mark:action.mark)
         { [weak self] in
             
             self?.markingDone(item:item)
-            self?.view?.markingDone()
+            self?.view?.markingDone(action:action)
         }
     }
     
     //MARK: internal
     
-    func markCurrent(mark:DGif.Mark)
+    func markCurrent(action:MHomeActionProtocol)
     {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.asyncMarkCurrent(mark:mark)
+            self?.asyncMarkCurrent(action:action)
         }
     }
     
