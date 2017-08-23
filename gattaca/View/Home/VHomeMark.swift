@@ -16,6 +16,7 @@ class VHomeMark:View<VHome, MHome, CHome>
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         imageView.contentMode = UIViewContentMode.center
+        imageView.tintColor = UIColor.colourBackgroundDark
         self.imageView = imageView
         
         addSubview(imageView)
@@ -34,6 +35,7 @@ class VHomeMark:View<VHome, MHome, CHome>
     
     func updateMark(action:MHomeActionProtocol)
     {
-        imageView.image = action.icon
+        imageView.image = action.icon.withRenderingMode(
+            UIImageRenderingMode.alwaysTemplate)
     }
 }
