@@ -29,10 +29,43 @@ class VMenuCell:UICollectionViewCell
         return nil
     }
     
+    override var isSelected:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    override var isHighlighted:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    //MARK: private
+    
+    private func hover()
+    {
+        if isSelected || isHighlighted
+        {
+            imageView.tintColor = UIColor.colourBackgroundDark
+        }
+        else
+        {
+            imageView.tintColor = UIColor.colourBackgroundDark.withAlphaComponent(
+                0.2)
+        }
+    }
+    
     //MARK: internal
     
     func config(model:MMenuItemProtocol)
     {
-        imageView.image = model.icon
+        imageView.image = model.icon.withRenderingMode(
+            UIImageRenderingMode.alwaysTemplate)
+        hover()
     }
 }

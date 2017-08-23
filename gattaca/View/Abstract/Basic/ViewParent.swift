@@ -10,7 +10,7 @@ class ViewParent:UIView
     let kAnimationDuration:TimeInterval = 0.3
     private(set) weak var controller:ControllerParent!
     private(set) weak var viewMenu:VMenu!
-    private let kMenuHeight:CGFloat = 70
+    private let kMenuHeight:CGFloat = 50
     
     init(controller:ControllerParent)
     {
