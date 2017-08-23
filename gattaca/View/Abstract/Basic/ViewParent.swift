@@ -9,6 +9,7 @@ class ViewParent:UIView
     let kMinXDelta:CGFloat = 30
     let kAnimationDuration:TimeInterval = 0.3
     private(set) weak var controller:ControllerParent!
+    private let kMenuHeight:CGFloat = 80
     
     init(controller:ControllerParent)
     {
@@ -17,9 +18,19 @@ class ViewParent:UIView
         backgroundColor = UIColor.white
         self.controller = controller
         
-        let viewMenu:VMenu = VMenu()
+        let viewMenu:VMenu = VMenu(controller:controller)
         
         addSubview(viewMenu)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:viewMenu,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:viewMenu,
+            constant:kMenuHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewMenu,
+            toView:self)
         
         factoryGesture()
     }

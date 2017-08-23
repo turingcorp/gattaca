@@ -2,7 +2,7 @@ import UIKit
 
 class VMenu:UIView
 {
-    private weak var controller:ControllerParent!
+    private(set) weak var controller:ControllerParent!
     
     init(controller:ControllerParent)
     {
