@@ -10,6 +10,7 @@ class VHome:ViewMain
     private let kBarHeight:CGFloat = 70
     private let kDisplayBottom:CGFloat = -140
     private let kActionsHeight:CGFloat = 70
+    private let kAnimationDuration:TimeInterval = 0.3
     
     required init(controller:UIViewController)
     {
@@ -114,6 +115,30 @@ class VHome:ViewMain
         viewDisplay.refresh()
     }
     
+    private func animateMark(action:MHomeActionProtocol)
+    {
+        viewMark.updateMark(action:action)
+        let animationDuration:TimeInterval = kAnimationDuration
+        
+        UIView.animate(
+            withDuration:animationDuration,
+            animations:
+        { [weak self] in
+            
+            self?.viewMark.alpha = 1
+        })
+        { [weak self] (done:Bool) in
+            
+            self?.asyncRefresh()
+            
+            UIView.animate(withDuration:animationDuration)
+            { [weak self] in
+                
+                self?.viewMark.alpha = 0
+            }
+        }
+    }
+    
     //MARK: internal
     
     func viewDidAppear()
@@ -144,7 +169,7 @@ class VHome:ViewMain
         DispatchQueue.main.async
         { [weak self] in
             
-            
+            self?.animateMark(action:action)
         }
     }
 }
