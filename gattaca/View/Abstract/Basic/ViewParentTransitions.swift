@@ -53,21 +53,31 @@ extension ViewParent
         newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
             view:newUi,
             toView:self)
-        newView.layoutLeft = NSLayoutConstraint.leftToLeft(
+        newView.layoutRight = NSLayoutConstraint.rightToRight(
             view:newUi,
             toView:self,
             constant:-left)
-        newView.layoutRight = NSLayoutConstraint.rightToRight(
+        newView.layoutLeft = NSLayoutConstraint.leftToLeft(
             view:newUi,
             toView:self,
             constant:-left)
         
         layoutIfNeeded()
         
-        currentView.layoutRight.constant = left
-        currentView.layoutLeft.constant = left
-        newView.layoutRight.constant = 0
-        newView.layoutLeft.constant = 0
+        if left >= 0
+        {
+            currentView.layoutRight.constant = left
+            currentView.layoutLeft.constant = left
+            newView.layoutRight.constant = 0
+            newView.layoutLeft.constant = 0
+        }
+        else
+        {
+            currentView.layoutLeft.constant = left
+            currentView.layoutRight.constant = left
+            newView.layoutLeft.constant = 0
+            newView.layoutRight.constant = 0
+        }
         
         UIView.animate(
             withDuration:kAnimationDuration,
