@@ -91,6 +91,7 @@ extension MHome
         completion:@escaping(() -> ()))
     {
         item.mark = mark
+        item.status = DGif.Status.marked
         coreData.save(completion:completion)
     }
 }
