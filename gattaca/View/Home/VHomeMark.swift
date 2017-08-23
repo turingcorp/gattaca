@@ -9,6 +9,7 @@ class VHomeMark:View<VHome, MHome, CHome>
         super.init(controller:controller)
         isUserInteractionEnabled = false
         backgroundColor = UIColor.white
+        alpha = 0
         
         let imageView:UIImageView = UIImageView()
         imageView.isUserInteractionEnabled = false
