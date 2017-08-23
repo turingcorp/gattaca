@@ -1,6 +1,6 @@
 import Foundation
 
-extension MMenuItemProtocol
+extension MMenu
 {
     
 }

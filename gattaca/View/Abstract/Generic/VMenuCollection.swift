@@ -111,6 +111,9 @@ extension VMenu:
     {
         collectionView.isUserInteractionEnabled = false
         
+        let item:MMenuItemProtocol = modelAtIndex(index:indexPath)
+        print(item.index)
+        
         DispatchQueue.main.asyncAfter(
             deadline:DispatchTime.now() + kDeselectTime)
         { [weak collectionView] in

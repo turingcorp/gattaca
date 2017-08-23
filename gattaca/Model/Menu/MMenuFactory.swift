@@ -2,6 +2,12 @@ import Foundation
 
 extension MMenu
 {
+    //MARK: private
+    
+    
+    
+    //MARK: internal
+    
     class func factoryItems() -> [MMenuItemProtocol]
     {
         let itemSettings:MMenuItemSettings = MMenuItemSettings()
