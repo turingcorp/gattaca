@@ -6,11 +6,17 @@ class MGifStrategyStand:MGifStrategy
         coreData:Database,
         completion:@escaping (() -> ()))
     {
+        super.load(
+            coreData:coreData,
+            completion:completion)
+        
         completion()
     }
     
     override func download()
     {
+        super.download()
+        
         model.strategyDownload()
     }
 }

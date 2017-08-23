@@ -46,6 +46,10 @@ class MGifStrategyDownload:MGifStrategy
         coreData:Database,
         completion:@escaping (() -> ()))
     {
+        super.load(
+            coreData:coreData,
+            completion:completion)
+        
         completion()
     }
 }
