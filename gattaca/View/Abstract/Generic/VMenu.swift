@@ -11,6 +11,8 @@ class VMenu:UIView
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
+        
+        factoryCollection()
     }
     
     required init?(coder aDecoder: NSCoder)
