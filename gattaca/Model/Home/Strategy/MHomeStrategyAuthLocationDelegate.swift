@@ -49,9 +49,9 @@ class MHomeStrategyAuthLocationDelegate:NSObject, CLLocationManagerDelegate
         geocoder.reverseGeocodeLocation(location)
         { [weak self] (placemarks:[CLPlacemark]?, error:Error?) in
             
-            if let error:Error = error
+            if let _:Error = error
             {
-                self?.showError(message:error.localizedDescription)
+                return
             }
             
             guard
