@@ -1,6 +1,6 @@
 import UIKit
 
-class VHomeDisplayMark:View<VHome, MHome, CHome>
+class VHomeMark:View<VHome, MHome, CHome>
 {
     private weak var imageView:UIImageView!
     
