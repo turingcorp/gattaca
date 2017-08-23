@@ -2,6 +2,7 @@ import UIKit
 
 class VMenu:UIView
 {
+    var cellSize:CGSize?
     private(set) weak var controller:ControllerParent!
     
     init(controller:ControllerParent)
