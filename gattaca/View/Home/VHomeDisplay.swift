@@ -99,6 +99,7 @@ class VHomeDisplay:View<VHome, MHome, CHome>
             
         else
         {
+            avPlayer.replaceCurrentItem(with:nil)
             spinner.startAnimating()
             
             return
