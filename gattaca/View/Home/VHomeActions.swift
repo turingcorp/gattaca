@@ -107,7 +107,7 @@ class VHomeActions:VCollection<
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-        super.collectionView(collectionView, didSelectItemAt:indexPath)
+        collectionView.isUserInteractionEnabled = false
         
         let item:MHomeActionProtocol = modelAtIndex(
             index:indexPath)

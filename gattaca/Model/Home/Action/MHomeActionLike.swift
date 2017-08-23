@@ -1,12 +1,7 @@
 import UIKit
 
-class MHomeActionLike:MHomeActionProtocol
+struct MHomeActionLike:MHomeActionProtocol
 {
-    var icon:UIImage
-    {
-        get
-        {
-            return #imageLiteral(resourceName: "assetGenericActionLike")
-        }
-    }
+    let icon:UIImage = #imageLiteral(resourceName: "assetGenericActionLike")
+    let mark:DGif.Mark = DGif.Mark.like
 }

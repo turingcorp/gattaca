@@ -1,12 +1,7 @@
 import UIKit
 
-class MHomeActionMeh:MHomeActionProtocol
+struct MHomeActionMeh:MHomeActionProtocol
 {
-    var icon:UIImage
-    {
-        get
-        {
-            return #imageLiteral(resourceName: "assetGenericActionMeh")
-        }
-    }
+    let icon:UIImage = #imageLiteral(resourceName: "assetGenericActionMeh")
+    let mark:DGif.Mark = DGif.Mark.meh
 }

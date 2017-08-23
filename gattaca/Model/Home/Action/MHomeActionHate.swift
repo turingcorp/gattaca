@@ -1,12 +1,7 @@
 import UIKit
 
-class MHomeActionHate:MHomeActionProtocol
+struct MHomeActionHate:MHomeActionProtocol
 {
-    var icon:UIImage
-    {
-        get
-        {
-            return #imageLiteral(resourceName: "assetGenericActionHate")
-        }
-    }
+    let icon:UIImage = #imageLiteral(resourceName: "assetGenericActionHate")
+    let mark:DGif.Mark = DGif.Mark.hate
 }
