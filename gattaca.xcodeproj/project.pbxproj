@@ -47,6 +47,7 @@
 		DA6514761F4F2D4300AF1D98 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514751F4F2D4300AF1D98 /* MSettings.swift */; };
 		DA6514791F4F2D6D00AF1D98 /* VSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514781F4F2D6D00AF1D98 /* VSettings.swift */; };
 		DA65147C1F4F2D9600AF1D98 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65147B1F4F2D9600AF1D98 /* CSettings.swift */; };
+		DA6514801F4F3ABE00AF1D98 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65147F1F4F3ABE00AF1D98 /* Signature.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
 		DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
@@ -178,8 +179,6 @@
 		DABD99171F4E22D5006245EC /* MMenuItemSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD99161F4E22D5006245EC /* MMenuItemSettings.swift */; };
 		DABD991B1F4E2A91006245EC /* MMenuOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD991A1F4E2A91006245EC /* MMenuOrder.swift */; };
 		DABD991D1F4E3594006245EC /* ControllerParentMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD991C1F4E3594006245EC /* ControllerParentMenu.swift */; };
-		DABD99211F4E5D0F006245EC /* MMenuItemConstructorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD99201F4E5D0F006245EC /* MMenuItemConstructorProtocol.swift */; };
-		DABD99231F4E5F9E006245EC /* MMenuConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD99221F4E5F9E006245EC /* MMenuConstructor.swift */; };
 		DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */; };
 		DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF9381F430B7B00420DF0 /* TFDatabase.swift */; };
 		DABEF93B1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */; };
@@ -279,6 +278,7 @@
 		DA6514751F4F2D4300AF1D98 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DA6514781F4F2D6D00AF1D98 /* VSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSettings.swift; sourceTree = "<group>"; };
 		DA65147B1F4F2D9600AF1D98 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
+		DA65147F1F4F3ABE00AF1D98 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -418,8 +418,6 @@
 		DABD99161F4E22D5006245EC /* MMenuItemSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuItemSettings.swift; sourceTree = "<group>"; };
 		DABD991A1F4E2A91006245EC /* MMenuOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuOrder.swift; sourceTree = "<group>"; };
 		DABD991C1F4E3594006245EC /* ControllerParentMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParentMenu.swift; sourceTree = "<group>"; };
-		DABD99201F4E5D0F006245EC /* MMenuItemConstructorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuItemConstructorProtocol.swift; sourceTree = "<group>"; };
-		DABD99221F4E5F9E006245EC /* MMenuConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuConstructor.swift; sourceTree = "<group>"; };
 		DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionFirebase.swift; sourceTree = "<group>"; };
 		DABEF9381F430B7B00420DF0 /* TFDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabase.swift; sourceTree = "<group>"; };
 		DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseProtocolExtension.swift; sourceTree = "<group>"; };
@@ -737,6 +735,7 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1571F38E5D500C13634 /* Model.swift */,
+				DA65147F1F4F3ABE00AF1D98 /* Signature.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1204,8 +1203,6 @@
 				DABD990E1F4DD777006245EC /* MMenuFactory.swift */,
 				DABD991A1F4E2A91006245EC /* MMenuOrder.swift */,
 				DABD990A1F4DD60D006245EC /* MMenuItemProtocol.swift */,
-				DABD99221F4E5F9E006245EC /* MMenuConstructor.swift */,
-				DABD99201F4E5D0F006245EC /* MMenuItemConstructorProtocol.swift */,
 				DABD990C1F4DD648006245EC /* MMenuItemMatch.swift */,
 				DABD99141F4E1BD5006245EC /* MMenuItemHome.swift */,
 				DABD99161F4E22D5006245EC /* MMenuItemSettings.swift */,
@@ -1659,7 +1656,6 @@
 				DA5F44A71F42C98800334605 /* FDatabase.swift in Sources */,
 				DA745A851F46182B005AF0DA /* FDatabaseCountries.swift in Sources */,
 				DA8FFFB01F4C8EFB00963D76 /* MGifStrategyDownloadRequest.swift in Sources */,
-				DABD99231F4E5F9E006245EC /* MMenuConstructor.swift in Sources */,
 				DABD990B1F4DD60D006245EC /* MMenuItemProtocol.swift in Sources */,
 				DA407C871F4CBFA500E522CD /* FDatabaseGifs.swift in Sources */,
 				DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */,
@@ -1715,6 +1711,7 @@
 				DAE0AFC11F3BAB16006449D0 /* MGiphyFactory.swift in Sources */,
 				DA6514791F4F2D6D00AF1D98 /* VSettings.swift in Sources */,
 				DAB3A3271F444B14001981F4 /* MHomeStrategyAuthLocationStrategyFactory.swift in Sources */,
+				DA6514801F4F3ABE00AF1D98 /* Signature.swift in Sources */,
 				DA68F1C41F38E5D500C13634 /* VSliderBar.swift in Sources */,
 				DAB3A3251F444AE2001981F4 /* MHomeStrategyAuthLocationStrategyUnknown.swift in Sources */,
 				DA5F44AE1F42CA0500334605 /* FDatabaseProtocol.swift in Sources */,
@@ -1749,7 +1746,6 @@
 				DA68F1BE1F38E5D500C13634 /* VBorder.swift in Sources */,
 				DA68F1971F38E5D500C13634 /* Controller.swift in Sources */,
 				DA8FFFA71F4C8EFB00963D76 /* MGif.swift in Sources */,
-				DABD99211F4E5D0F006245EC /* MMenuItemConstructorProtocol.swift in Sources */,
 				DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */,
 				DA25DF501F435EB200765DCA /* FDatabaseUsersItemStatus.swift in Sources */,
 				DA407C8B1F4CC05A00E522CD /* FDatabaseGifsUserItem.swift in Sources */,
