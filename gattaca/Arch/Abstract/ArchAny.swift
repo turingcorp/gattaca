@@ -1,11 +1,6 @@
 import Foundation
 
-struct ArchAny<V>:Arch
+struct ArchAny<T:Arch>:Arch
 {
-    init<T:Arch>(arch:T) where T.V == V
-    {
-        viewType = arch.viewType
-    }
-    
-    var viewType:V.Type
+    let viewType:T.V.Type = T.V.self
 }
