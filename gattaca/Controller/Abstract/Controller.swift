@@ -1,8 +1,8 @@
 import UIKit
 
-class Controller<V:ViewMain, M:Model<V>>:UIViewController
+class Controller<T>:UIViewController
 {
-    let model:M
+    let model:T.M
     
     var parentController:ControllerParent?
     {
@@ -21,9 +21,9 @@ class Controller<V:ViewMain, M:Model<V>>:UIViewController
         }
     }
     
-    init(session:MSession)
+    init<U:Arch>(arch:U, session:MSession)
     {
-        model = M(session:session)
+        model = T.M(session:session)
         
         super.init(nibName:nil, bundle:nil)
     }
@@ -43,7 +43,7 @@ class Controller<V:ViewMain, M:Model<V>>:UIViewController
     
     override func loadView()
     {
-        let view:V = V(controller:self)
+        let view:T.V = T.V(controller:self)
         model.view = view
         self.view = view
     }

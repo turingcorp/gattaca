@@ -53,6 +53,7 @@
 		DA65148A1F4F4B5300AF1D98 /* Arch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514891F4F4B5300AF1D98 /* Arch.swift */; };
 		DA65148C1F4F4B7B00AF1D98 /* ArchAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65148B1F4F4B7B00AF1D98 /* ArchAny.swift */; };
 		DA65148E1F4F4C9C00AF1D98 /* ArchHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65148D1F4F4C9C00AF1D98 /* ArchHome.swift */; };
+		DA6514901F4F56D600AF1D98 /* ArchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65148F1F4F56D600AF1D98 /* ArchContainer.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
 		DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
@@ -289,6 +290,7 @@
 		DA6514891F4F4B5300AF1D98 /* Arch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arch.swift; sourceTree = "<group>"; };
 		DA65148B1F4F4B7B00AF1D98 /* ArchAny.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchAny.swift; sourceTree = "<group>"; };
 		DA65148D1F4F4C9C00AF1D98 /* ArchHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchHome.swift; sourceTree = "<group>"; };
+		DA65148F1F4F56D600AF1D98 /* ArchContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchContainer.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -682,6 +684,7 @@
 			children = (
 				DA6514891F4F4B5300AF1D98 /* Arch.swift */,
 				DA65148B1F4F4B7B00AF1D98 /* ArchAny.swift */,
+				DA65148F1F4F56D600AF1D98 /* ArchContainer.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1820,6 +1823,7 @@
 				DA745A761F45A853005AF0DA /* VLocationDenied.swift in Sources */,
 				DABD991B1F4E2A91006245EC /* MMenuOrder.swift in Sources */,
 				DA90E0E71F40B75800A37538 /* MPerk.swift in Sources */,
+				DA6514901F4F56D600AF1D98 /* ArchContainer.swift in Sources */,
 				DA745A831F461586005AF0DA /* FDatabaseUsersItemLocation.swift in Sources */,
 				DA90E0E81F40B75800A37538 /* MPerkFactory.swift in Sources */,
 				DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */,
