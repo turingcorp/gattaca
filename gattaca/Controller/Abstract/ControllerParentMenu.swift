@@ -26,11 +26,6 @@ extension ControllerParent
             direction = ControllerParent.Horizontal.left
         }
         
-        let controller:UIViewController = item.controller(
-            session:session)
-        
-        slideTo(
-            horizontal:direction,
-            controller:controller)
+//        print(item.controller)
     }
 }
