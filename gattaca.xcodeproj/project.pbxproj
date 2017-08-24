@@ -44,6 +44,7 @@
 		DA5F44B41F42CA8300334605 /* FDatabaseUsersItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44B31F42CA8300334605 /* FDatabaseUsersItem.swift */; };
 		DA5F44B61F42CAB300334605 /* FDatabaseUsersItemSyncstamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44B51F42CAB300334605 /* FDatabaseUsersItemSyncstamp.swift */; };
 		DA63F1BE1F4426DF002AA9FC /* MSessionLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63F1BD1F4426DF002AA9FC /* MSessionLocation.swift */; };
+		DA6514761F4F2D4300AF1D98 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514751F4F2D4300AF1D98 /* MSettings.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
 		DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
@@ -273,6 +274,7 @@
 		DA5F44B31F42CA8300334605 /* FDatabaseUsersItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseUsersItem.swift; sourceTree = "<group>"; };
 		DA5F44B51F42CAB300334605 /* FDatabaseUsersItemSyncstamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseUsersItemSyncstamp.swift; sourceTree = "<group>"; };
 		DA63F1BD1F4426DF002AA9FC /* MSessionLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionLocation.swift; sourceTree = "<group>"; };
+		DA6514751F4F2D4300AF1D98 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -629,6 +631,14 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		DA6514741F4F2D3500AF1D98 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DA6514751F4F2D4300AF1D98 /* MSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		DA68A27D1F408A350094BC9B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -688,6 +698,7 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1561F38E5D500C13634 /* Abstract */,
+				DA6514741F4F2D3500AF1D98 /* Settings */,
 				DABD99071F4DD35E006245EC /* Menu */,
 				DAB3A32B1F445922001981F4 /* LocationAsk */,
 				DAB3A32C1F445922001981F4 /* LocationDenied */,
@@ -1610,6 +1621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA6514761F4F2D4300AF1D98 /* MSettings.swift in Sources */,
 				DA8FFFA81F4C8EFB00963D76 /* MGifDirectory.swift in Sources */,
 				DA68F1991F38E5D500C13634 /* ControllerParentTransitions.swift in Sources */,
 				DA8FFFAE1F4C8EFB00963D76 /* MGifStrategyDownload.swift in Sources */,
