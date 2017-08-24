@@ -52,6 +52,7 @@
 		DA6514841F4F4A9900AF1D98 /* ModelSignatureAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514831F4F4A9900AF1D98 /* ModelSignatureAny.swift */; };
 		DA65148A1F4F4B5300AF1D98 /* Arch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514891F4F4B5300AF1D98 /* Arch.swift */; };
 		DA65148C1F4F4B7B00AF1D98 /* ArchAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65148B1F4F4B7B00AF1D98 /* ArchAny.swift */; };
+		DA65148E1F4F4C9C00AF1D98 /* ArchHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65148D1F4F4C9C00AF1D98 /* ArchHome.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
 		DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
@@ -287,6 +288,7 @@
 		DA6514831F4F4A9900AF1D98 /* ModelSignatureAny.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSignatureAny.swift; sourceTree = "<group>"; };
 		DA6514891F4F4B5300AF1D98 /* Arch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arch.swift; sourceTree = "<group>"; };
 		DA65148B1F4F4B7B00AF1D98 /* ArchAny.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchAny.swift; sourceTree = "<group>"; };
+		DA65148D1F4F4C9C00AF1D98 /* ArchHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchHome.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -687,6 +689,7 @@
 		DA6514881F4F4B4900AF1D98 /* Concrete */ = {
 			isa = PBXGroup;
 			children = (
+				DA65148D1F4F4C9C00AF1D98 /* ArchHome.swift */,
 			);
 			path = Concrete;
 			sourceTree = "<group>";
@@ -1690,6 +1693,7 @@
 				DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */,
 				DA90E0EE1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift in Sources */,
 				DA5F44A71F42C98800334605 /* FDatabase.swift in Sources */,
+				DA65148E1F4F4C9C00AF1D98 /* ArchHome.swift in Sources */,
 				DA745A851F46182B005AF0DA /* FDatabaseCountries.swift in Sources */,
 				DA8FFFB01F4C8EFB00963D76 /* MGifStrategyDownloadRequest.swift in Sources */,
 				DABD990B1F4DD60D006245EC /* MMenuItemProtocol.swift in Sources */,
