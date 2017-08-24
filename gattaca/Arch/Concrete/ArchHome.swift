@@ -4,14 +4,14 @@ struct ArchHome:Arch
 {
     typealias V = VHome
     typealias M = MHome
-    typealias C = CHome
+//    typealias C = CHome
     
     let viewType:V.Type = VHome.self
     let modelType:M.Type = MHome.self
-    let controllerType:C.Type = CHome.self
+//    let controllerType:C.Type = CHome.self
 }
 
-struct ArchHomeContainer:ArchContainer
+class ArchHomeContainer:ArchContainer
 {
     typealias A = ArchHome
 
@@ -22,14 +22,14 @@ struct ArchSettings:Arch
 {
     typealias V = VSettings
     typealias M = MSession
-    typealias C = CSettings
+//    typealias C = CSettings
     
     let viewType:V.Type = VSettings.self
     let modelType:M.Type = MSession.self
-    let controllerType:C.Type = CSettings.self
+//    let controllerType:C.Type = CSettings.self
 }
 
-struct ArchSettingsContainer:ArchContainer
+class ArchSettingsContainer:ArchContainer
 {
     typealias A = ArchSettings
     
