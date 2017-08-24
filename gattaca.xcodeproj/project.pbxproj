@@ -46,6 +46,7 @@
 		DA63F1BE1F4426DF002AA9FC /* MSessionLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63F1BD1F4426DF002AA9FC /* MSessionLocation.swift */; };
 		DA6514761F4F2D4300AF1D98 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514751F4F2D4300AF1D98 /* MSettings.swift */; };
 		DA6514791F4F2D6D00AF1D98 /* VSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514781F4F2D6D00AF1D98 /* VSettings.swift */; };
+		DA65147C1F4F2D9600AF1D98 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65147B1F4F2D9600AF1D98 /* CSettings.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
 		DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
@@ -277,6 +278,7 @@
 		DA63F1BD1F4426DF002AA9FC /* MSessionLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionLocation.swift; sourceTree = "<group>"; };
 		DA6514751F4F2D4300AF1D98 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DA6514781F4F2D6D00AF1D98 /* VSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSettings.swift; sourceTree = "<group>"; };
+		DA65147B1F4F2D9600AF1D98 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -649,6 +651,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		DA65147A1F4F2D8A00AF1D98 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DA65147B1F4F2D9600AF1D98 /* CSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		DA68A27D1F408A350094BC9B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -674,6 +684,7 @@
 			isa = PBXGroup;
 			children = (
 				DA68F14E1F38E5D500C13634 /* Abstract */,
+				DA65147A1F4F2D8A00AF1D98 /* Settings */,
 				DA745A771F45A971005AF0DA /* LocationDenied */,
 				DAB3A32A1F4458A6001981F4 /* LocationAsk */,
 				DA68F1531F38E5D500C13634 /* Home */,
@@ -1716,6 +1727,7 @@
 				DABD99041F4DCEA3006245EC /* VMenuCollection.swift in Sources */,
 				DA407C8D1F4CC4AC00E522CD /* MHomeMarker.swift in Sources */,
 				DA920BB41F48B19F00AE31A4 /* MHomeStrategyAuthLocationDelegate.swift in Sources */,
+				DA65147C1F4F2D9600AF1D98 /* CSettings.swift in Sources */,
 				DAE0AFBF1F3BAA88006449D0 /* MGiphyItem.swift in Sources */,
 				DAB3A3361F445DC4001981F4 /* CHomeLocation.swift in Sources */,
 				DAE0AFA61F3AD96B006449D0 /* MGiphyTrending.swift in Sources */,
