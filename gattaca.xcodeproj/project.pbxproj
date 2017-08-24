@@ -48,6 +48,7 @@
 		DA6514791F4F2D6D00AF1D98 /* VSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514781F4F2D6D00AF1D98 /* VSettings.swift */; };
 		DA65147C1F4F2D9600AF1D98 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65147B1F4F2D9600AF1D98 /* CSettings.swift */; };
 		DA6514801F4F3ABE00AF1D98 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65147F1F4F3ABE00AF1D98 /* Signature.swift */; };
+		DA6514821F4F3AF700AF1D98 /* ModelSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514811F4F3AF700AF1D98 /* ModelSignature.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
 		DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
@@ -279,6 +280,7 @@
 		DA6514781F4F2D6D00AF1D98 /* VSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSettings.swift; sourceTree = "<group>"; };
 		DA65147B1F4F2D9600AF1D98 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DA65147F1F4F3ABE00AF1D98 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
+		DA6514811F4F3AF700AF1D98 /* ModelSignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSignature.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -734,8 +736,9 @@
 		DA68F1561F38E5D500C13634 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
-				DA68F1571F38E5D500C13634 /* Model.swift */,
 				DA65147F1F4F3ABE00AF1D98 /* Signature.swift */,
+				DA6514811F4F3AF700AF1D98 /* ModelSignature.swift */,
+				DA68F1571F38E5D500C13634 /* Model.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1734,6 +1737,7 @@
 				DA8FFFA91F4C8EFB00963D76 /* MGifFactory.swift in Sources */,
 				DA8FFFAB1F4C8EFB00963D76 /* MGifOrganizer.swift in Sources */,
 				DA745A741F45A4EF005AF0DA /* MLocationDenied.swift in Sources */,
+				DA6514821F4F3AF700AF1D98 /* ModelSignature.swift in Sources */,
 				DA68F19B1F38E5D500C13634 /* Model.swift in Sources */,
 				DA68F1C01F38E5D500C13634 /* VCollectionFlow.swift in Sources */,
 				DA68F1C51F38E5D500C13634 /* VSpinner.swift in Sources */,

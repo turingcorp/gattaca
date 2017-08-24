@@ -2,9 +2,11 @@ import Foundation
 
 protocol Signature
 {
-    associatedtype V:ViewMain
-    associatedtype M:Model<Self.V>
-    associatedtype C:Controller<Self.V, Self.M>
+    associatedtype V
     
-    var controller:C.Type? { get }
+    var viewType:V.Type { get }
+//    associatedtype M:Model<Self.V>
+//    associatedtype C:Controller<Self.V, Self.M>
+    
+//    var controller:C.Type? { get }
 }
