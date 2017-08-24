@@ -45,6 +45,7 @@
 		DA5F44B61F42CAB300334605 /* FDatabaseUsersItemSyncstamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5F44B51F42CAB300334605 /* FDatabaseUsersItemSyncstamp.swift */; };
 		DA63F1BE1F4426DF002AA9FC /* MSessionLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63F1BD1F4426DF002AA9FC /* MSessionLocation.swift */; };
 		DA6514761F4F2D4300AF1D98 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514751F4F2D4300AF1D98 /* MSettings.swift */; };
+		DA6514791F4F2D6D00AF1D98 /* VSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514781F4F2D6D00AF1D98 /* VSettings.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
 		DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
@@ -275,6 +276,7 @@
 		DA5F44B51F42CAB300334605 /* FDatabaseUsersItemSyncstamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseUsersItemSyncstamp.swift; sourceTree = "<group>"; };
 		DA63F1BD1F4426DF002AA9FC /* MSessionLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionLocation.swift; sourceTree = "<group>"; };
 		DA6514751F4F2D4300AF1D98 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
+		DA6514781F4F2D6D00AF1D98 /* VSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSettings.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -639,6 +641,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		DA6514771F4F2D6200AF1D98 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DA6514781F4F2D6D00AF1D98 /* VSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		DA68A27D1F408A350094BC9B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -797,6 +807,7 @@
 			children = (
 				DA68F1881F38E5D500C13634 /* Basic */,
 				DA68F1811F38E5D500C13634 /* Abstract */,
+				DA6514771F4F2D6200AF1D98 /* Settings */,
 				DAB3A32F1F445BBE001981F4 /* LocationAsk */,
 				DAB3A3301F445BBE001981F4 /* LocationDenied */,
 				DA68F1941F38E5D500C13634 /* Home */,
@@ -1691,6 +1702,7 @@
 				DA90E0EC1F40B75800A37538 /* MPerkThumbnailProtocol.swift in Sources */,
 				DA8FFFAD1F4C8EFB00963D76 /* MGifStrategy.swift in Sources */,
 				DAE0AFC11F3BAB16006449D0 /* MGiphyFactory.swift in Sources */,
+				DA6514791F4F2D6D00AF1D98 /* VSettings.swift in Sources */,
 				DAB3A3271F444B14001981F4 /* MHomeStrategyAuthLocationStrategyFactory.swift in Sources */,
 				DA68F1C41F38E5D500C13634 /* VSliderBar.swift in Sources */,
 				DAB3A3251F444AE2001981F4 /* MHomeStrategyAuthLocationStrategyUnknown.swift in Sources */,
