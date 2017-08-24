@@ -1,6 +1,8 @@
 import Foundation
 
-class ArchContainer
+protocol ArchContainer
 {
-    let arch:[ArchAny] = [ArchAny(ArchHome())]
+    associatedtype A:Arch
+    
+    var archType:A.Type { get }
 }
