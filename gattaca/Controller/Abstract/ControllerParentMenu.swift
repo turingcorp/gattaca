@@ -26,6 +26,5 @@ extension ControllerParent
             direction = ControllerParent.Horizontal.left
         }
         
-//        print(item.controller)
     }
 }
