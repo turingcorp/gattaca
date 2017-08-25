@@ -179,6 +179,7 @@
 		DABD991B1F4E2A91006245EC /* MMenuOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD991A1F4E2A91006245EC /* MMenuOrder.swift */; };
 		DABD991D1F4E3594006245EC /* ControllerParentMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD991C1F4E3594006245EC /* ControllerParentMenu.swift */; };
 		DABE8D711F50364900A957A5 /* MMenuItemExplore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE8D701F50364900A957A5 /* MMenuItemExplore.swift */; };
+		DABE8D731F5037F100A957A5 /* MMenuItemProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE8D721F5037F100A957A5 /* MMenuItemProfile.swift */; };
 		DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */; };
 		DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF9381F430B7B00420DF0 /* TFDatabase.swift */; };
 		DABEF93B1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */; };
@@ -418,6 +419,7 @@
 		DABD991A1F4E2A91006245EC /* MMenuOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuOrder.swift; sourceTree = "<group>"; };
 		DABD991C1F4E3594006245EC /* ControllerParentMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParentMenu.swift; sourceTree = "<group>"; };
 		DABE8D701F50364900A957A5 /* MMenuItemExplore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuItemExplore.swift; sourceTree = "<group>"; };
+		DABE8D721F5037F100A957A5 /* MMenuItemProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuItemProfile.swift; sourceTree = "<group>"; };
 		DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionFirebase.swift; sourceTree = "<group>"; };
 		DABEF9381F430B7B00420DF0 /* TFDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabase.swift; sourceTree = "<group>"; };
 		DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseProtocolExtension.swift; sourceTree = "<group>"; };
@@ -1206,6 +1208,7 @@
 				DABD99141F4E1BD5006245EC /* MMenuItemHome.swift */,
 				DABD99161F4E22D5006245EC /* MMenuItemSettings.swift */,
 				DABE8D701F50364900A957A5 /* MMenuItemExplore.swift */,
+				DABE8D721F5037F100A957A5 /* MMenuItemProfile.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -1739,6 +1742,7 @@
 				DA68F1B81F38E5D500C13634 /* ViewMain.swift in Sources */,
 				DAF1C1141F3947A300820417 /* ExtensionData.swift in Sources */,
 				DAB3A3341F445BFC001981F4 /* CLocationAsk.swift in Sources */,
+				DABE8D731F5037F100A957A5 /* MMenuItemProfile.swift in Sources */,
 				DAF045941F392C520003C2EF /* ExtensionURLResponse.swift in Sources */,
 				DAB3A3211F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift in Sources */,
 				DAE0AFD71F3BAF20006449D0 /* MHomeRequest.swift in Sources */,
