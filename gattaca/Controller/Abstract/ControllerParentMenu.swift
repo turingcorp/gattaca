@@ -2,19 +2,12 @@ import UIKit
 
 extension ControllerParent
 {
-    //MARK: internal
+    //MARK: private
     
-    func menuSelected(item:MMenuItemProtocol)
+    private func factoryDirection(item:MMenuItemProtocol) ->  ControllerParent.Horizontal
     {
         let order:MMenu.Order = item.order
         let current:MMenu.Order = menu.selected
-        menu.selected = order
-        
-        if order.rawValue == current.rawValue
-        {
-            return
-        }
-        
         let direction:ControllerParent.Horizontal
         
         if order.rawValue > current.rawValue
@@ -25,6 +18,15 @@ extension ControllerParent
         {
             direction = ControllerParent.Horizontal.left
         }
+        
+        return direction
+    }
+    
+    //MARK: internal
+    
+    func menuSelected(item:MMenuItemProtocol)
+    {
+        menu.selected = item.order
         
     }
 }
