@@ -10,7 +10,8 @@ extension MMenu
             MMenu.Order.settings:MMenuItemSettings.self,
             MMenu.Order.home:MMenuItemHome.self,
             MMenu.Order.match:MMenuItemMatch.self,
-            MMenu.Order.explore:MMenuItemExplore.self]
+            MMenu.Order.explore:MMenuItemExplore.self,
+            MMenu.Order.profile:MMenuItemProfile.self]
         
         return map
     }
