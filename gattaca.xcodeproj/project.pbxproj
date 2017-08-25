@@ -181,6 +181,7 @@
 		DABE8D711F50364900A957A5 /* MMenuItemExplore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE8D701F50364900A957A5 /* MMenuItemExplore.swift */; };
 		DABE8D731F5037F100A957A5 /* MMenuItemProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE8D721F5037F100A957A5 /* MMenuItemProfile.swift */; };
 		DABE8D7E1F50398700A957A5 /* VProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE8D7D1F50398700A957A5 /* VProfile.swift */; };
+		DABE8D801F5039A600A957A5 /* VMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE8D7F1F5039A600A957A5 /* VMatch.swift */; };
 		DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */; };
 		DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF9381F430B7B00420DF0 /* TFDatabase.swift */; };
 		DABEF93B1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */; };
@@ -422,6 +423,7 @@
 		DABE8D701F50364900A957A5 /* MMenuItemExplore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuItemExplore.swift; sourceTree = "<group>"; };
 		DABE8D721F5037F100A957A5 /* MMenuItemProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuItemProfile.swift; sourceTree = "<group>"; };
 		DABE8D7D1F50398700A957A5 /* VProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VProfile.swift; sourceTree = "<group>"; };
+		DABE8D7F1F5039A600A957A5 /* VMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMatch.swift; sourceTree = "<group>"; };
 		DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionFirebase.swift; sourceTree = "<group>"; };
 		DABEF9381F430B7B00420DF0 /* TFDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabase.swift; sourceTree = "<group>"; };
 		DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseProtocolExtension.swift; sourceTree = "<group>"; };
@@ -1234,6 +1236,7 @@
 		DABE8D751F50394600A957A5 /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				DABE8D7F1F5039A600A957A5 /* VMatch.swift */,
 			);
 			path = Match;
 			sourceTree = "<group>";
@@ -1732,6 +1735,7 @@
 				DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */,
 				DA90E0EE1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift in Sources */,
 				DA5F44A71F42C98800334605 /* FDatabase.swift in Sources */,
+				DABE8D801F5039A600A957A5 /* VMatch.swift in Sources */,
 				DA745A851F46182B005AF0DA /* FDatabaseCountries.swift in Sources */,
 				DA8FFFB01F4C8EFB00963D76 /* MGifStrategyDownloadRequest.swift in Sources */,
 				DABD990B1F4DD60D006245EC /* MMenuItemProtocol.swift in Sources */,
