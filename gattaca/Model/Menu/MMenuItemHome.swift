@@ -3,11 +3,12 @@ import UIKit
 class MMenuItemHome:MMenuItemProtocol
 {
     let order:MMenu.Order
-    let icon:UIImage = #imageLiteral(resourceName: "assetGenericGif")
+    let icon:UIImage
     
     required init(order:MMenu.Order)
     {
         self.order = order
+        icon = #imageLiteral(resourceName: "assetGenericGif")
     }
     
     func selected(session:MSession) -> UIViewController

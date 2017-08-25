@@ -1,6 +1,6 @@
 import UIKit
 
-class MMenuItemMatch:MMenuItemProtocol
+class MMenuItemExplore:MMenuItemProtocol
 {
     let order:MMenu.Order
     let icon:UIImage
@@ -8,7 +8,7 @@ class MMenuItemMatch:MMenuItemProtocol
     required init(order:MMenu.Order)
     {
         self.order = order
-        icon = #imageLiteral(resourceName: "assetGenericMatch")
+        icon = #imageLiteral(resourceName: "assetGenericExplore")
     }
     
     func selected(session:MSession) -> UIViewController
