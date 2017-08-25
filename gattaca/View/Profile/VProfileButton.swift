@@ -1,6 +1,6 @@
 import UIKit
 
-class VProfileEdit:View<VProfile, MProfile, CProfile>
+class VProfileButton:View<VProfile, MProfile, CProfile>
 {
     private weak var layoutButtonLeft:NSLayoutConstraint!
     private let kButtonWidth:CGFloat = 160
@@ -19,7 +19,7 @@ class VProfileEdit:View<VProfile, MProfile, CProfile>
         let button:UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(
-            String.localizedView(key:"VProfileEdit_button"),
+            String.localizedView(key:"VProfileButton_title"),
             for:UIControlState.normal)
         button.setTitleColor(
             UIColor.white,

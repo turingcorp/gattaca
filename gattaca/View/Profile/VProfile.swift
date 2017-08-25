@@ -5,7 +5,7 @@ class VProfile:ViewMain
     private weak var viewCard:VProfileCard!
     private weak var layoutCardHeight:NSLayoutConstraint!
     private let kCardExtraHeight:CGFloat = 80
-    private let kEditHeight:CGFloat = 70
+    private let kButtonHeight:CGFloat = 70
     
     required init(controller:UIViewController)
     {
@@ -41,17 +41,17 @@ class VProfile:ViewMain
     
     private func factoryViews(controller:CProfile)
     {
-        let editHeight_2:CGFloat = kEditHeight / 2.0
+        let editHeight_2:CGFloat = kButtonHeight / 2.0
         
         let viewCard:VProfileCard = VProfileCard(
             controller:controller)
         self.viewCard = viewCard
         
-        let viewEdit:VProfileEdit = VProfileEdit(
+        let viewButton:VProfileButton = VProfileButton(
             controller:controller)
         
         addSubview(viewCard)
-        addSubview(viewEdit)
+        addSubview(viewButton)
         
         NSLayoutConstraint.topToTop(
             view:viewCard,
@@ -63,14 +63,14 @@ class VProfile:ViewMain
             toView:self)
         
         NSLayoutConstraint.topToBottom(
-            view:viewEdit,
+            view:viewButton,
             toView:viewCard,
             constant:-editHeight_2)
         NSLayoutConstraint.height(
-            view:viewEdit,
-            constant:kEditHeight)
+            view:viewButton,
+            constant:kButtonHeight)
         NSLayoutConstraint.equalsHorizontal(
-            view:viewEdit,
+            view:viewButton,
             toView:self)
     }
 }
