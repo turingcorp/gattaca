@@ -684,6 +684,9 @@
 			isa = PBXGroup;
 			children = (
 				DA68F14E1F38E5D500C13634 /* Abstract */,
+				DABE8D7A1F50396600A957A5 /* Explore */,
+				DABE8D7B1F50396600A957A5 /* Match */,
+				DABE8D7C1F50396600A957A5 /* Profile */,
 				DA65147A1F4F2D8A00AF1D98 /* Settings */,
 				DA745A771F45A971005AF0DA /* LocationDenied */,
 				DAB3A32A1F4458A6001981F4 /* LocationAsk */,
@@ -719,6 +722,9 @@
 			isa = PBXGroup;
 			children = (
 				DA68F1561F38E5D500C13634 /* Abstract */,
+				DABE8D771F50395400A957A5 /* Explore */,
+				DABE8D781F50395400A957A5 /* Match */,
+				DABE8D791F50395400A957A5 /* Profile */,
 				DA6514741F4F2D3500AF1D98 /* Settings */,
 				DABD99071F4DD35E006245EC /* Menu */,
 				DAB3A32B1F445922001981F4 /* LocationAsk */,
@@ -818,6 +824,9 @@
 			children = (
 				DA68F1881F38E5D500C13634 /* Basic */,
 				DA68F1811F38E5D500C13634 /* Abstract */,
+				DABE8D741F50394600A957A5 /* Explore */,
+				DABE8D751F50394600A957A5 /* Match */,
+				DABE8D761F50394600A957A5 /* Profile */,
 				DA6514771F4F2D6200AF1D98 /* Settings */,
 				DAB3A32F1F445BBE001981F4 /* LocationAsk */,
 				DAB3A3301F445BBE001981F4 /* LocationDenied */,
@@ -1211,6 +1220,69 @@
 				DABE8D721F5037F100A957A5 /* MMenuItemProfile.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		DABE8D741F50394600A957A5 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		DABE8D751F50394600A957A5 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		DABE8D761F50394600A957A5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DABE8D771F50395400A957A5 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		DABE8D781F50395400A957A5 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		DABE8D791F50395400A957A5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DABE8D7A1F50396600A957A5 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		DABE8D7B1F50396600A957A5 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		DABE8D7C1F50396600A957A5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		DABEF9331F430B5D00420DF0 /* Firebase */ = {
