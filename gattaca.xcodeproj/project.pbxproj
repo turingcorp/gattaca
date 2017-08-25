@@ -539,6 +539,27 @@
 			path = Gif;
 			sourceTree = "<group>";
 		};
+		DA0EB9251F5092FD001CD0FA /* ProfileEdit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileEdit;
+			sourceTree = "<group>";
+		};
+		DA0EB9261F509309001CD0FA /* ProfileEdit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileEdit;
+			sourceTree = "<group>";
+		};
+		DA0EB9271F509317001CD0FA /* ProfileEdit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileEdit;
+			sourceTree = "<group>";
+		};
 		DA25DF591F43836700765DCA /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,6 +730,7 @@
 			isa = PBXGroup;
 			children = (
 				DA68F14E1F38E5D500C13634 /* Abstract */,
+				DA0EB9271F509317001CD0FA /* ProfileEdit */,
 				DABE8D7A1F50396600A957A5 /* Explore */,
 				DABE8D7B1F50396600A957A5 /* Match */,
 				DABE8D7C1F50396600A957A5 /* Profile */,
@@ -750,6 +772,7 @@
 				DABE8D771F50395400A957A5 /* Explore */,
 				DABE8D781F50395400A957A5 /* Match */,
 				DABE8D791F50395400A957A5 /* Profile */,
+				DA0EB9261F509309001CD0FA /* ProfileEdit */,
 				DA6514741F4F2D3500AF1D98 /* Settings */,
 				DABD99071F4DD35E006245EC /* Menu */,
 				DAB3A32B1F445922001981F4 /* LocationAsk */,
@@ -851,6 +874,7 @@
 				DA68F1811F38E5D500C13634 /* Abstract */,
 				DABE8D741F50394600A957A5 /* Explore */,
 				DABE8D751F50394600A957A5 /* Match */,
+				DA0EB9251F5092FD001CD0FA /* ProfileEdit */,
 				DABE8D761F50394600A957A5 /* Profile */,
 				DA6514771F4F2D6200AF1D98 /* Settings */,
 				DAB3A32F1F445BBE001981F4 /* LocationAsk */,
