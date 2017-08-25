@@ -185,6 +185,7 @@
 		DABE8D821F5039C800A957A5 /* VExplore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE8D811F5039C800A957A5 /* VExplore.swift */; };
 		DABE8D841F5039F700A957A5 /* MProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE8D831F5039F700A957A5 /* MProfile.swift */; };
 		DABE8D861F503A1600A957A5 /* MMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE8D851F503A1600A957A5 /* MMatch.swift */; };
+		DABE8D881F503A8D00A957A5 /* MExplore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE8D871F503A8D00A957A5 /* MExplore.swift */; };
 		DABEF9301F42E44000420DF0 /* TMSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */; };
 		DABEF9391F430B7B00420DF0 /* TFDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF9381F430B7B00420DF0 /* TFDatabase.swift */; };
 		DABEF93B1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */; };
@@ -430,6 +431,7 @@
 		DABE8D811F5039C800A957A5 /* VExplore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VExplore.swift; sourceTree = "<group>"; };
 		DABE8D831F5039F700A957A5 /* MProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MProfile.swift; sourceTree = "<group>"; };
 		DABE8D851F503A1600A957A5 /* MMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMatch.swift; sourceTree = "<group>"; };
+		DABE8D871F503A8D00A957A5 /* MExplore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MExplore.swift; sourceTree = "<group>"; };
 		DABEF92F1F42E44000420DF0 /* TMSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSessionFirebase.swift; sourceTree = "<group>"; };
 		DABEF9381F430B7B00420DF0 /* TFDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabase.swift; sourceTree = "<group>"; };
 		DABEF93A1F43379D00420DF0 /* TFDatabaseProtocolExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseProtocolExtension.swift; sourceTree = "<group>"; };
@@ -1259,6 +1261,7 @@
 		DABE8D771F50395400A957A5 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				DABE8D871F503A8D00A957A5 /* MExplore.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -1815,6 +1818,7 @@
 				DA90E0C01F40AD3E00A37538 /* MHomeSession.swift in Sources */,
 				DABD99041F4DCEA3006245EC /* VMenuCollection.swift in Sources */,
 				DA407C8D1F4CC4AC00E522CD /* MHomeMarker.swift in Sources */,
+				DABE8D881F503A8D00A957A5 /* MExplore.swift in Sources */,
 				DA920BB41F48B19F00AE31A4 /* MHomeStrategyAuthLocationDelegate.swift in Sources */,
 				DA65147C1F4F2D9600AF1D98 /* CSettings.swift in Sources */,
 				DAE0AFBF1F3BAA88006449D0 /* MGiphyItem.swift in Sources */,
