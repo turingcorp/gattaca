@@ -3,6 +3,7 @@ import UIKit
 class VProfileEditBar:View<VProfile, MProfile, CProfile>
 {
     private let kBorderHeight:CGFloat = 1
+    private let kContentTop:CGFloat = 20
     
     required init(controller:CProfile)
     {
@@ -12,7 +13,17 @@ class VProfileEditBar:View<VProfile, MProfile, CProfile>
         let border:VBorder = VBorder(
             colour:UIColor.colourBackgroundDark.withAlphaComponent(0.2))
         
+        let labelTitle:UILabel = UILabel()
+        labelTitle.isUserInteractionEnabled = false
+        labelTitle.backgroundColor = UIColor.clear
+        labelTitle.translatesAutoresizingMaskIntoConstraints = false
+        labelTitle.font = UIFont.medium(size:16)
+        labelTitle.textAlignment = NSTextAlignment.center
+        labelTitle.text = String.localizedView(
+            key:"VProfileEditBar_labelTitle")
+        
         addSubview(border)
+        addSubview(labelTitle)
         
         NSLayoutConstraint.bottomToBottom(
             view:border,
@@ -22,6 +33,17 @@ class VProfileEditBar:View<VProfile, MProfile, CProfile>
             constant:kBorderHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
+            toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:labelTitle,
+            toView:self,
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:labelTitle,
+            toView:self)
+        NSLayoutConstraint.equalsHorizontal(
+            view:labelTitle,
             toView:self)
     }
     
