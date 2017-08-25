@@ -6,4 +6,6 @@ protocol MMenuItemProtocol
     var order:MMenu.Order { get }
     
     init(order:MMenu.Order)
+    
+    func selected(session:MSession) -> UIViewController
 }
