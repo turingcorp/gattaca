@@ -50,10 +50,6 @@
 		DA6514801F4F3ABE00AF1D98 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65147F1F4F3ABE00AF1D98 /* Signature.swift */; };
 		DA6514821F4F3AF700AF1D98 /* ModelSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514811F4F3AF700AF1D98 /* ModelSignature.swift */; };
 		DA6514841F4F4A9900AF1D98 /* ModelSignatureAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514831F4F4A9900AF1D98 /* ModelSignatureAny.swift */; };
-		DA65148A1F4F4B5300AF1D98 /* Arch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6514891F4F4B5300AF1D98 /* Arch.swift */; };
-		DA65148C1F4F4B7B00AF1D98 /* ArchAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65148B1F4F4B7B00AF1D98 /* ArchAny.swift */; };
-		DA65148E1F4F4C9C00AF1D98 /* ArchHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65148D1F4F4C9C00AF1D98 /* ArchHome.swift */; };
-		DA6514901F4F56D600AF1D98 /* ArchContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65148F1F4F56D600AF1D98 /* ArchContainer.swift */; };
 		DA68A2881F408A350094BC9B /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2801F408A350094BC9B /* DSettingsExtension.swift */; };
 		DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA68A2841F408A350094BC9B /* DGattaca.xcdatamodeld */; };
 		DA68F1961F38E5D500C13634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68F14F1F38E5D500C13634 /* AppDelegate.swift */; };
@@ -287,10 +283,6 @@
 		DA65147F1F4F3ABE00AF1D98 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
 		DA6514811F4F3AF700AF1D98 /* ModelSignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSignature.swift; sourceTree = "<group>"; };
 		DA6514831F4F4A9900AF1D98 /* ModelSignatureAny.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSignatureAny.swift; sourceTree = "<group>"; };
-		DA6514891F4F4B5300AF1D98 /* Arch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arch.swift; sourceTree = "<group>"; };
-		DA65148B1F4F4B7B00AF1D98 /* ArchAny.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchAny.swift; sourceTree = "<group>"; };
-		DA65148D1F4F4C9C00AF1D98 /* ArchHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchHome.swift; sourceTree = "<group>"; };
-		DA65148F1F4F56D600AF1D98 /* ArchContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchContainer.swift; sourceTree = "<group>"; };
 		DA68A2801F408A350094BC9B /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA68A2851F408A350094BC9B /* DGattaca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DGattaca.xcdatamodel; sourceTree = "<group>"; };
 		DA68F14F1F38E5D500C13634 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -571,7 +563,6 @@
 		DA39E77C1F38E3F90001CA28 /* gattaca */ = {
 			isa = PBXGroup;
 			children = (
-				DA6514861F4F4B4900AF1D98 /* Arch */,
 				DA5F44A21F42C97D00334605 /* Firebase */,
 				DA68F14D1F38E5D500C13634 /* Controller */,
 				DA68F1551F38E5D500C13634 /* Model */,
@@ -668,33 +659,6 @@
 				DA65147B1F4F2D9600AF1D98 /* CSettings.swift */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		DA6514861F4F4B4900AF1D98 /* Arch */ = {
-			isa = PBXGroup;
-			children = (
-				DA6514871F4F4B4900AF1D98 /* Abstract */,
-				DA6514881F4F4B4900AF1D98 /* Concrete */,
-			);
-			path = Arch;
-			sourceTree = "<group>";
-		};
-		DA6514871F4F4B4900AF1D98 /* Abstract */ = {
-			isa = PBXGroup;
-			children = (
-				DA6514891F4F4B5300AF1D98 /* Arch.swift */,
-				DA65148B1F4F4B7B00AF1D98 /* ArchAny.swift */,
-				DA65148F1F4F56D600AF1D98 /* ArchContainer.swift */,
-			);
-			path = Abstract;
-			sourceTree = "<group>";
-		};
-		DA6514881F4F4B4900AF1D98 /* Concrete */ = {
-			isa = PBXGroup;
-			children = (
-				DA65148D1F4F4C9C00AF1D98 /* ArchHome.swift */,
-			);
-			path = Concrete;
 			sourceTree = "<group>";
 		};
 		DA68A27D1F408A350094BC9B /* Extension */ = {
@@ -1696,7 +1660,6 @@
 				DA68F1C61F38E5D500C13634 /* VToast.swift in Sources */,
 				DA90E0EE1F40B75800A37538 /* MPerkThumbnailPurchaseProtocol.swift in Sources */,
 				DA5F44A71F42C98800334605 /* FDatabase.swift in Sources */,
-				DA65148E1F4F4C9C00AF1D98 /* ArchHome.swift in Sources */,
 				DA745A851F46182B005AF0DA /* FDatabaseCountries.swift in Sources */,
 				DA8FFFB01F4C8EFB00963D76 /* MGifStrategyDownloadRequest.swift in Sources */,
 				DABD990B1F4DD60D006245EC /* MMenuItemProtocol.swift in Sources */,
@@ -1739,7 +1702,6 @@
 				DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */,
 				DA8FFFB11F4C8EFB00963D76 /* MGifStrategyNotLoaded.swift in Sources */,
 				DAB3A32E1F445951001981F4 /* MLocationAsk.swift in Sources */,
-				DA65148C1F4F4B7B00AF1D98 /* ArchAny.swift in Sources */,
 				DAE0AFD41F3BAEF9006449D0 /* MHomeActionMeh.swift in Sources */,
 				DA68F1981F38E5D500C13634 /* ControllerParent.swift in Sources */,
 				DAE0AFD31F3BAEF9006449D0 /* MHomeActionLike.swift in Sources */,
@@ -1787,7 +1749,6 @@
 				DAB3A3341F445BFC001981F4 /* CLocationAsk.swift in Sources */,
 				DAF045941F392C520003C2EF /* ExtensionURLResponse.swift in Sources */,
 				DAB3A3211F444ACF001981F4 /* MHomeStrategyAuthLocationStrategyDenied.swift in Sources */,
-				DA65148A1F4F4B5300AF1D98 /* Arch.swift in Sources */,
 				DAE0AFD71F3BAF20006449D0 /* MHomeRequest.swift in Sources */,
 				DA68F1BE1F38E5D500C13634 /* VBorder.swift in Sources */,
 				DA68F1971F38E5D500C13634 /* Controller.swift in Sources */,
@@ -1823,7 +1784,6 @@
 				DA745A761F45A853005AF0DA /* VLocationDenied.swift in Sources */,
 				DABD991B1F4E2A91006245EC /* MMenuOrder.swift in Sources */,
 				DA90E0E71F40B75800A37538 /* MPerk.swift in Sources */,
-				DA6514901F4F56D600AF1D98 /* ArchContainer.swift in Sources */,
 				DA745A831F461586005AF0DA /* FDatabaseUsersItemLocation.swift in Sources */,
 				DA90E0E81F40B75800A37538 /* MPerkFactory.swift in Sources */,
 				DAE0AF981F3AB49B006449D0 /* VHomeActions.swift in Sources */,
