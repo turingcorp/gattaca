@@ -13,7 +13,7 @@ class MMenuItemProfile:MMenuItemProtocol
     
     func selected(session:MSession) -> UIViewController
     {
-        let controller:CSettings = CSettings(session:session)
+        let controller:CProfile = CProfile(session:session)
         
         return controller
     }

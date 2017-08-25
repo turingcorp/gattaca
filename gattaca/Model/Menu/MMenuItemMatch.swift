@@ -13,7 +13,7 @@ class MMenuItemMatch:MMenuItemProtocol
     
     func selected(session:MSession) -> UIViewController
     {
-        let controller:CSettings = CSettings(session:session)
+        let controller:CMatch = CMatch(session:session)
         
         return controller
     }

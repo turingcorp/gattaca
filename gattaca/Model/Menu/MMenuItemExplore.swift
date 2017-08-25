@@ -13,7 +13,7 @@ class MMenuItemExplore:MMenuItemProtocol
     
     func selected(session:MSession) -> UIViewController
     {
-        let controller:CSettings = CSettings(session:session)
+        let controller:CExplore = CExplore(session:session)
         
         return controller
     }
