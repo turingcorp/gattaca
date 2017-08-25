@@ -9,7 +9,8 @@ extension MMenu
         let map:[MMenu.Order:MMenuItemProtocol.Type] = [
             MMenu.Order.settings:MMenuItemSettings.self,
             MMenu.Order.home:MMenuItemHome.self,
-            MMenu.Order.match:MMenuItemMatch.self]
+            MMenu.Order.match:MMenuItemMatch.self,
+            MMenu.Order.explore:MMenuItemExplore.self]
         
         return map
     }

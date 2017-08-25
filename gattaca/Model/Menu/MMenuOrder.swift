@@ -6,6 +6,7 @@ extension MMenu
     {
         case settings
         case home
+        case explore
         case match
     }
 }
