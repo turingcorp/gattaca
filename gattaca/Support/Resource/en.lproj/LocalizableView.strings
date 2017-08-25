@@ -4,3 +4,4 @@
 "VLocationDeniedInfo_labelTitle"="Can't get your location";
 "VLocationDeniedInfo_labelSubtitle"="Authorisation to access\nyour location was denied";
 "VHomeError_button"="Try again";
+"VProfileEdit_button"="Edit";

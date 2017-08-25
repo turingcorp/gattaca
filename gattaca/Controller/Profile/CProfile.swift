@@ -9,4 +9,11 @@ class CProfile:Controller<VProfile, MProfile>
             return UIStatusBarStyle.lightContent
         }
     }
+    
+    //MARK: internal
+    
+    func editProfile()
+    {
+        
+    }
 }
