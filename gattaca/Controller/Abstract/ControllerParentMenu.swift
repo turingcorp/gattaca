@@ -26,7 +26,15 @@ extension ControllerParent
     
     func menuSelected(item:MMenuItemProtocol)
     {
-        menu.selected = item.order
+        let direction:ControllerParent.Horizontal = factoryDirection(
+            item:item)
+        let controller:UIViewController = item.selected(
+            session:session)
         
+        slideTo(
+            horizontal:direction,
+            controller:controller)
+        
+        menu.selected = item.order
     }
 }
