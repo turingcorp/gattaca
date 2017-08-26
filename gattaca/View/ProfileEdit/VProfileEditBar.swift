@@ -4,6 +4,7 @@ class VProfileEditBar:View<VProfileEdit, MProfileEdit, CProfileEdit>
 {
     private let kBorderHeight:CGFloat = 1
     private let kContentTop:CGFloat = 20
+    private let kDoneWidth:CGFloat = 110
     
     required init(controller:CProfileEdit)
     {
@@ -22,8 +23,12 @@ class VProfileEditBar:View<VProfileEdit, MProfileEdit, CProfileEdit>
         labelTitle.text = String.localizedView(
             key:"VProfileEditBar_labelTitle")
         
+        let viewDone:VProfileEditDone = VProfileEditDone(
+            controller:controller)
+        
         addSubview(border)
         addSubview(labelTitle)
+        addSubview(viewDone)
         
         NSLayoutConstraint.bottomToBottom(
             view:border,
@@ -45,6 +50,20 @@ class VProfileEditBar:View<VProfileEdit, MProfileEdit, CProfileEdit>
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
             toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewDone,
+            toView:self,
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:viewDone,
+            toView:self)
+        NSLayoutConstraint.rightToRight(
+            view:viewDone,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:viewDone,
+            constant:kDoneWidth)
     }
     
     required init?(coder:NSCoder)
