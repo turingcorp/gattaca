@@ -29,6 +29,19 @@ class VProfileEdit:ViewMain
     
     private func factoryViews(controller:CProfileEdit)
     {
+        let viewBar:VProfileEditBar = VProfileEditBar(
+            controller:controller)
         
+        addSubview(viewBar)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewBar,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:viewBar,
+            constant:kBarHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewBar,
+            toView:self)
     }
 }
