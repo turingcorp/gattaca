@@ -17,7 +17,7 @@ class VProfileEditBar:View<VProfileEdit, MProfileEdit, CProfileEdit>
         labelTitle.isUserInteractionEnabled = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
-        labelTitle.font = UIFont.medium(size:16)
+        labelTitle.font = UIFont.medium(size:15)
         labelTitle.textAlignment = NSTextAlignment.center
         labelTitle.text = String.localizedView(
             key:"VProfileEditBar_labelTitle")

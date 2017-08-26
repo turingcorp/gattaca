@@ -17,6 +17,7 @@
 		DA0EB92D1F50941C001CD0FA /* MProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EB92C1F50941C001CD0FA /* MProfileEdit.swift */; };
 		DA0EB92F1F509441001CD0FA /* CProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EB92E1F509441001CD0FA /* CProfileEdit.swift */; };
 		DA0EB9311F50979F001CD0FA /* VProfileEditBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EB9301F50979F001CD0FA /* VProfileEditBar.swift */; };
+		DA0EB9331F52363D001CD0FA /* VProfileEditDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EB9321F52363D001CD0FA /* VProfileEditDone.swift */; };
 		DA25DF4E1F4359DA00765DCA /* TFDatabaseUsersItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF4D1F4359DA00765DCA /* TFDatabaseUsersItem.swift */; };
 		DA25DF501F435EB200765DCA /* FDatabaseUsersItemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF4F1F435EB200765DCA /* FDatabaseUsersItemStatus.swift */; };
 		DA25DF521F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF511F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift */; };
@@ -262,6 +263,7 @@
 		DA0EB92C1F50941C001CD0FA /* MProfileEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MProfileEdit.swift; sourceTree = "<group>"; };
 		DA0EB92E1F509441001CD0FA /* CProfileEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CProfileEdit.swift; sourceTree = "<group>"; };
 		DA0EB9301F50979F001CD0FA /* VProfileEditBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VProfileEditBar.swift; sourceTree = "<group>"; };
+		DA0EB9321F52363D001CD0FA /* VProfileEditDone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VProfileEditDone.swift; sourceTree = "<group>"; };
 		DA25DF4D1F4359DA00765DCA /* TFDatabaseUsersItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseUsersItem.swift; sourceTree = "<group>"; };
 		DA25DF4F1F435EB200765DCA /* FDatabaseUsersItemStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseUsersItemStatus.swift; sourceTree = "<group>"; };
 		DA25DF511F436B4F00765DCA /* TFDatabaseUsersItemSyncstamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFDatabaseUsersItemSyncstamp.swift; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 			children = (
 				DA0EB9281F50933F001CD0FA /* VProfileEdit.swift */,
 				DA0EB9301F50979F001CD0FA /* VProfileEditBar.swift */,
+				DA0EB9321F52363D001CD0FA /* VProfileEditDone.swift */,
 			);
 			path = ProfileEdit;
 			sourceTree = "<group>";
@@ -1810,6 +1813,7 @@
 				DA407C871F4CBFA500E522CD /* FDatabaseGifs.swift in Sources */,
 				DA68A28A1F408A350094BC9B /* DGattaca.xcdatamodeld in Sources */,
 				DA68F1B91F38E5D500C13634 /* ViewParent.swift in Sources */,
+				DA0EB9331F52363D001CD0FA /* VProfileEditDone.swift in Sources */,
 				DA32444D1F42B50A00D40F6E /* MSessionFirebase.swift in Sources */,
 				DA68F1C71F38E5D500C13634 /* VHome.swift in Sources */,
 				DA8FFFB21F4C8EFB00963D76 /* MGifStrategyStand.swift in Sources */,
