@@ -1,11 +1,11 @@
 import UIKit
 
-class VProfileEditBar:View<VProfile, MProfile, CProfile>
+class VProfileEditBar:View<VProfileEdit, MProfileEdit, CProfileEdit>
 {
     private let kBorderHeight:CGFloat = 1
     private let kContentTop:CGFloat = 20
     
-    required init(controller:CProfile)
+    required init(controller:CProfileEdit)
     {
         super.init(controller:controller)
         backgroundColor = UIColor.white
