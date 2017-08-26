@@ -5,3 +5,4 @@
 "VLocationDeniedInfo_labelSubtitle"="Authorisation to access\nyour location was denied";
 "VHomeError_button"="Try again";
 "VProfileButton_title"="Edit";
+"VProfileEditBar_labelTitle"="Edit profile";
