@@ -4,7 +4,7 @@ class VProfileEditBar:View<VProfileEdit, MProfileEdit, CProfileEdit>
 {
     private let kBorderHeight:CGFloat = 1
     private let kContentTop:CGFloat = 20
-    private let kDoneWidth:CGFloat = 110
+    private let kDoneWidth:CGFloat = 120
     
     required init(controller:CProfileEdit)
     {

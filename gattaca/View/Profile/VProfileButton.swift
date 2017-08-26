@@ -70,7 +70,6 @@ class VProfileButton:View<VProfile, MProfile, CProfile>
     
     func selectorButton(sender button:UIButton)
     {
-        isUserInteractionEnabled = false
         controller.editProfile()
     }
 }
