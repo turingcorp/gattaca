@@ -14,6 +14,10 @@ class CProfile:Controller<VProfile, MProfile>
     
     func editProfile()
     {
-        
+        let controller:CProfileEdit = CProfileEdit(
+            session:model.session)
+        parentController?.push(
+            controller:controller,
+            vertical:ControllerParent.Vertical.bottom)
     }
 }
