@@ -3,7 +3,7 @@ import UIKit
 class VProfileEditDone:View
     <VProfileEdit, MProfileEdit, CProfileEdit>
 {
-    private let kLabelMarginRight:CGFloat = -10
+    private let kLabelMarginRight:CGFloat = -15
     
     required init(controller:CProfileEdit)
     {
@@ -19,7 +19,16 @@ class VProfileEditDone:View
         labelTitle.text = String.localizedView(
             key:"VProfileEditDone_labelTitle")
         
+        let button:UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = UIColor.clear
+        button.addTarget(
+            self,
+            action:#selector(selectorDone(sender:)),
+            for:UIControlEvents.touchUpInside)
+        
         addSubview(labelTitle)
+        addSubview(button)
         
         NSLayoutConstraint.equalsVertical(
             view:labelTitle,
@@ -31,10 +40,21 @@ class VProfileEditDone:View
             view:labelTitle,
             toView:self,
             constant:kLabelMarginRight)
+        
+        NSLayoutConstraint.equals(
+            view:button,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: selectors
+    
+    func selectorDone(sender button:UIButton)
+    {
+        controller.done()
     }
 }

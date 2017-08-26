@@ -12,13 +12,8 @@ class CProfileEdit:Controller<VProfileEdit, MProfileEdit>
     
     //MARK: internal
     
-    func cancel()
+    func done()
     {
-        
-    }
-    
-    func save()
-    {
-        
+        back()
     }
 }
