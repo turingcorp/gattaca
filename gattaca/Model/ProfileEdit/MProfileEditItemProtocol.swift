@@ -1,7 +1,8 @@
-import Foundation
+import UIKit
 
 protocol MProfileEditItemProtocol
 {
-    var header:MProfileEditItemHeaderProtocol? { get }
-    var cell:MProfileEditItemCellProtocol? { get }
+    var headerTitle:String? { get }
+    var reusableIdentifier:String { get }
+    var height:CGFloat { get }
 }
