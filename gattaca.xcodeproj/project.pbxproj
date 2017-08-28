@@ -33,6 +33,7 @@
 		DA25DF601F43879300765DCA /* TDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF5F1F43879300765DCA /* TDatabase.swift */; };
 		DA32005C1F54792500267E45 /* MProfileEditItemName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32005B1F54792500267E45 /* MProfileEditItemName.swift */; };
 		DA32005E1F547A3C00267E45 /* VProfileEditListCellName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32005D1F547A3C00267E45 /* VProfileEditListCellName.swift */; };
+		DA3200601F547C6900267E45 /* MProfileEditFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32005F1F547C6900267E45 /* MProfileEditFactory.swift */; };
 		DA32444D1F42B50A00D40F6E /* MSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA407C871F4CBFA500E522CD /* FDatabaseGifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA407C861F4CBFA500E522CD /* FDatabaseGifs.swift */; };
@@ -287,6 +288,7 @@
 		DA25DF5F1F43879300765DCA /* TDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDatabase.swift; sourceTree = "<group>"; };
 		DA32005B1F54792500267E45 /* MProfileEditItemName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MProfileEditItemName.swift; sourceTree = "<group>"; };
 		DA32005D1F547A3C00267E45 /* VProfileEditListCellName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VProfileEditListCellName.swift; sourceTree = "<group>"; };
+		DA32005F1F547C6900267E45 /* MProfileEditFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MProfileEditFactory.swift; sourceTree = "<group>"; };
 		DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionFirebase.swift; sourceTree = "<group>"; };
 		DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
 		DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDownloadGif.swift; sourceTree = "<group>"; };
@@ -584,6 +586,7 @@
 			isa = PBXGroup;
 			children = (
 				DA0EB92C1F50941C001CD0FA /* MProfileEdit.swift */,
+				DA32005F1F547C6900267E45 /* MProfileEditFactory.swift */,
 				DA1856B41F532E8D00F805EC /* MProfileEditItemProtocol.swift */,
 				DA1856BA1F53318C00F805EC /* MProfileEditItemPictures.swift */,
 				DA32005B1F54792500267E45 /* MProfileEditItemName.swift */,
@@ -1930,6 +1933,7 @@
 				DA68F1C01F38E5D500C13634 /* VCollectionFlow.swift in Sources */,
 				DA68F1C51F38E5D500C13634 /* VSpinner.swift in Sources */,
 				DA68F1B81F38E5D500C13634 /* ViewMain.swift in Sources */,
+				DA3200601F547C6900267E45 /* MProfileEditFactory.swift in Sources */,
 				DAF1C1141F3947A300820417 /* ExtensionData.swift in Sources */,
 				DAB3A3341F445BFC001981F4 /* CLocationAsk.swift in Sources */,
 				DABE8D731F5037F100A957A5 /* MMenuItemProfile.swift in Sources */,
