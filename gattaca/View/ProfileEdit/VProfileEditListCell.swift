@@ -13,4 +13,11 @@ class VProfileEditListCell:UICollectionViewCell
     {
         return nil
     }
+    
+    //MARK: internal
+    
+    func config(model:MProfileEditItemProtocol, controller:CProfileEdit)
+    {
+        
+    }
 }

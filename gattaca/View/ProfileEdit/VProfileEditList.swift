@@ -30,7 +30,8 @@ class VProfileEditList:VCollection<
         layout collectionViewLayout:UICollectionViewLayout,
         referenceSizeForHeaderInSection section:Int) -> CGSize
     {
-        let item:MProfileEditItemProtocol = modelAtIndex(index:section)
+        let item:MProfileEditItemProtocol = modelAtIndex(
+            index:section)
         
         if item.headerTitle == nil
         {
@@ -60,7 +61,8 @@ class VProfileEditList:VCollection<
         viewForSupplementaryElementOfKind kind:String,
         at indexPath:IndexPath) -> UICollectionReusableView
     {
-        let item:MProfileEditItemProtocol = modelAtIndex(index:indexPath.section)
+        let item:MProfileEditItemProtocol = modelAtIndex(
+            index:indexPath.section)
         let header:VProfileEditListHeader = reusableAtIndex(
             kind:kind,
             type:VProfileEditListHeader.self,
@@ -68,6 +70,21 @@ class VProfileEditList:VCollection<
         header.config(model:item)
         
         return header
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let item:MProfileEditItemProtocol = modelAtIndex(
+            index:indexPath.section)
+        let cell:VProfileEditListCell = cellAtIndex(
+            reusableIdentifier:
+            item.reusableIdentifier,
+            indexPath:indexPath)
+        cell.config(model:item, controller:controller)
+        
+        return cell
     }
     
     //MARK: private
