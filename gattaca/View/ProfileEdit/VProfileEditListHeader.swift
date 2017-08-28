@@ -13,4 +13,11 @@ class VProfileEditListHeader:UICollectionReusableView
     {
         return nil
     }
+    
+    //MARK: internal
+    
+    func config(model:MProfileEditItemProtocol)
+    {
+        
+    }
 }
