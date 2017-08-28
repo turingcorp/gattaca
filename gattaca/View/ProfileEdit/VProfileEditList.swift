@@ -19,4 +19,8 @@ class VProfileEditList:VCollection<
     {
         return nil
     }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        <#code#>
+    }
 }
