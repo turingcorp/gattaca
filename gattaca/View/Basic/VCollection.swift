@@ -132,6 +132,40 @@ class VCollection
     func collectionView(
         _ collectionView:UICollectionView,
         layout collectionViewLayout:UICollectionViewLayout,
+        referenceSizeForHeaderInSection section:Int) -> CGSize
+    {
+        guard
+            
+            let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
+            
+        else
+        {
+            return CGSize.zero
+        }
+        
+        return flow.headerReferenceSize
+    }
+    
+    func collectionView(
+        _ collectionView:UICollectionView,
+        layout collectionViewLayout:UICollectionViewLayout,
+        referenceSizeForFooterInSection section:Int) -> CGSize
+    {
+        guard
+            
+            let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
+            
+        else
+        {
+            return CGSize.zero
+        }
+        
+        return flow.footerReferenceSize
+    }
+    
+    func collectionView(
+        _ collectionView:UICollectionView,
+        layout collectionViewLayout:UICollectionViewLayout,
         sizeForItemAt indexPath:IndexPath) -> CGSize
     {
         guard
