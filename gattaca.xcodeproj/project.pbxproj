@@ -32,6 +32,7 @@
 		DA25DF5D1F43836800765DCA /* DatabaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF5B1F43836700765DCA /* DatabaseFactory.swift */; };
 		DA25DF601F43879300765DCA /* TDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF5F1F43879300765DCA /* TDatabase.swift */; };
 		DA32005C1F54792500267E45 /* MProfileEditItemName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32005B1F54792500267E45 /* MProfileEditItemName.swift */; };
+		DA32005E1F547A3C00267E45 /* VProfileEditListCellName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32005D1F547A3C00267E45 /* VProfileEditListCellName.swift */; };
 		DA32444D1F42B50A00D40F6E /* MSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA407C871F4CBFA500E522CD /* FDatabaseGifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA407C861F4CBFA500E522CD /* FDatabaseGifs.swift */; };
@@ -285,6 +286,7 @@
 		DA25DF5B1F43836700765DCA /* DatabaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseFactory.swift; sourceTree = "<group>"; };
 		DA25DF5F1F43879300765DCA /* TDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDatabase.swift; sourceTree = "<group>"; };
 		DA32005B1F54792500267E45 /* MProfileEditItemName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MProfileEditItemName.swift; sourceTree = "<group>"; };
+		DA32005D1F547A3C00267E45 /* VProfileEditListCellName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VProfileEditListCellName.swift; sourceTree = "<group>"; };
 		DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionFirebase.swift; sourceTree = "<group>"; };
 		DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
 		DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDownloadGif.swift; sourceTree = "<group>"; };
@@ -573,6 +575,7 @@
 				DA1856B21F529ABC00F805EC /* VProfileEditListHeader.swift */,
 				DA1856B01F529A9C00F805EC /* VProfileEditListCell.swift */,
 				DA1856BC1F5331F000F805EC /* VProfileEditListCellPictures.swift */,
+				DA32005D1F547A3C00267E45 /* VProfileEditListCellName.swift */,
 			);
 			path = ProfileEdit;
 			sourceTree = "<group>";
@@ -1877,6 +1880,7 @@
 				DA0EB92D1F50941C001CD0FA /* MProfileEdit.swift in Sources */,
 				DA90E0ED1F40B75800A37538 /* MPerkThumbnailProtocolExtension.swift in Sources */,
 				DAF0458C1F3908160003C2EF /* VHomeDisplay.swift in Sources */,
+				DA32005E1F547A3C00267E45 /* VProfileEditListCellName.swift in Sources */,
 				DA8FFFB11F4C8EFB00963D76 /* MGifStrategyNotLoaded.swift in Sources */,
 				DAB3A32E1F445951001981F4 /* MLocationAsk.swift in Sources */,
 				DAE0AFD41F3BAEF9006449D0 /* MHomeActionMeh.swift in Sources */,
