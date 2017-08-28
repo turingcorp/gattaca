@@ -55,6 +55,21 @@ class VProfileEditList:VCollection<
         return 1
     }
     
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        viewForSupplementaryElementOfKind kind:String,
+        at indexPath:IndexPath) -> UICollectionReusableView
+    {
+        let item:MProfileEditItemProtocol = modelAtIndex(index:indexPath.section)
+        let header:VProfileEditListHeader = reusableAtIndex(
+            kind:kind,
+            type:VProfileEditListHeader.self,
+            indexPath:indexPath)
+        header.config(model:item)
+        
+        return header
+    }
+    
     //MARK: private
     
     private func modelAtIndex(index:Int) -> MProfileEditItemProtocol
