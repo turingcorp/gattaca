@@ -31,6 +31,7 @@
 		DA25DF5C1F43836800765DCA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF5A1F43836700765DCA /* Database.swift */; };
 		DA25DF5D1F43836800765DCA /* DatabaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF5B1F43836700765DCA /* DatabaseFactory.swift */; };
 		DA25DF601F43879300765DCA /* TDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25DF5F1F43879300765DCA /* TDatabase.swift */; };
+		DA32005C1F54792500267E45 /* MProfileEditItemName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32005B1F54792500267E45 /* MProfileEditItemName.swift */; };
 		DA32444D1F42B50A00D40F6E /* MSessionFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */; };
 		DA3475CA1F3DD2B00035C5CB /* MHomeDownloadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */; };
 		DA407C871F4CBFA500E522CD /* FDatabaseGifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA407C861F4CBFA500E522CD /* FDatabaseGifs.swift */; };
@@ -283,6 +284,7 @@
 		DA25DF5A1F43836700765DCA /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		DA25DF5B1F43836700765DCA /* DatabaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseFactory.swift; sourceTree = "<group>"; };
 		DA25DF5F1F43879300765DCA /* TDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDatabase.swift; sourceTree = "<group>"; };
+		DA32005B1F54792500267E45 /* MProfileEditItemName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MProfileEditItemName.swift; sourceTree = "<group>"; };
 		DA32444C1F42B50A00D40F6E /* MSessionFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionFirebase.swift; sourceTree = "<group>"; };
 		DA32853F5411186959D91314 /* Pods-gattaca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gattaca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gattaca/Pods-gattaca.debug.xcconfig"; sourceTree = "<group>"; };
 		DA3475C91F3DD2B00035C5CB /* MHomeDownloadGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeDownloadGif.swift; sourceTree = "<group>"; };
@@ -581,6 +583,7 @@
 				DA0EB92C1F50941C001CD0FA /* MProfileEdit.swift */,
 				DA1856B41F532E8D00F805EC /* MProfileEditItemProtocol.swift */,
 				DA1856BA1F53318C00F805EC /* MProfileEditItemPictures.swift */,
+				DA32005B1F54792500267E45 /* MProfileEditItemName.swift */,
 			);
 			path = ProfileEdit;
 			sourceTree = "<group>";
@@ -1861,6 +1864,7 @@
 				DA68F1AA1F38E5D500C13634 /* ExtensionFileManager.swift in Sources */,
 				DABE8D821F5039C800A957A5 /* VExplore.swift in Sources */,
 				DA63F1BE1F4426DF002AA9FC /* MSessionLocation.swift in Sources */,
+				DA32005C1F54792500267E45 /* MProfileEditItemName.swift in Sources */,
 				DA25DF5C1F43836800765DCA /* Database.swift in Sources */,
 				DAE0AF961F3AB432006449D0 /* VHomeActionsCell.swift in Sources */,
 				DA4DA38A1F420B070047D5D7 /* DSession.swift in Sources */,
