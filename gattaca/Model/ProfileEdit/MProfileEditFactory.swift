@@ -7,11 +7,13 @@ extension MProfileEdit
         let itemPictures:MProfileEditItemPictures = MProfileEditItemPictures()
         let itemName:MProfileEditItemName = MProfileEditItemName()
         let itemAge:MProfileEditItemAge = MProfileEditItemAge()
+        let itemGender:MProfileEditItemGender = MProfileEditItemGender()
         
         let items:[MProfileEditItemProtocol] = [
             itemPictures,
             itemName,
-            itemAge]
+            itemAge,
+            itemGender]
         
         return items
     }
