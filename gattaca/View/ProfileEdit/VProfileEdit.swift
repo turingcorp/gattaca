@@ -32,6 +32,10 @@ class VProfileEdit:ViewMain
         let viewBar:VProfileEditBar = VProfileEditBar(
             controller:controller)
         
+        let viewList:VProfileEditList = VProfileEditList(
+            controller:controller)
+        
+        addSubview(viewList)
         addSubview(viewBar)
         
         NSLayoutConstraint.topToTop(
@@ -42,6 +46,16 @@ class VProfileEdit:ViewMain
             constant:kBarHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
+            toView:self)
+        
+        NSLayoutConstraint.topToBottom(
+            view:viewList,
+            toView:viewBar)
+        NSLayoutConstraint.bottomToBottom(
+            view:viewList,
+            toView:self)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewList,
             toView:self)
     }
 }
