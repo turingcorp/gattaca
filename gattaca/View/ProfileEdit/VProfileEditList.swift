@@ -41,6 +41,21 @@ class VProfileEditList:VCollection<
         return headerSize
     }
     
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        layout collectionViewLayout:UICollectionViewLayout,
+        sizeForItemAt indexPath:IndexPath) -> CGSize
+    {
+        let width:CGFloat = collectionView.bounds.width
+        let item:MProfileEditItemProtocol = modelAtIndex(
+            index:indexPath.section)
+        let size:CGSize = CGSize(
+            width:width,
+            height:item.height)
+        
+        return size
+    }
+    
     override func numberOfSections(
         in collectionView:UICollectionView) -> Int
     {

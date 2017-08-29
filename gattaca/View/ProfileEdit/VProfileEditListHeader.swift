@@ -23,7 +23,7 @@ class VProfileEditListHeader:UICollectionReusableView
         
         addSubview(labelTitle)
         
-        NSLayoutConstraint.bottomToTop(
+        NSLayoutConstraint.bottomToBottom(
             view:labelTitle,
             toView:self)
         NSLayoutConstraint.height(
