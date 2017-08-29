@@ -259,10 +259,19 @@ extension ViewParent
             return
         }
         
-        currentView.layoutTop.constant = top
-        currentView.layoutBottom.constant = top
         currentView.layoutRight.constant = left
         currentView.layoutLeft.constant = left
+        
+        if top > 0
+        {
+            currentView.layoutBottom.constant = top
+            currentView.layoutTop.constant = top
+        }
+        else
+        {
+            currentView.layoutTop.constant = top
+            currentView.layoutBottom.constant = top
+        }
         
         UIView.animate(
             withDuration:kAnimationDuration,
