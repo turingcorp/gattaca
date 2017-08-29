@@ -7,7 +7,7 @@ class VProfileEditList:VCollection<
     VProfileEditListCell>
 {
     private let headerSize:CGSize
-    private let kHeaderHeight:CGFloat = 60
+    private let kHeaderHeight:CGFloat = 70
     
     required init(controller:CProfileEdit)
     {
