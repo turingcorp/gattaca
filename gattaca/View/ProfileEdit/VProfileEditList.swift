@@ -19,6 +19,7 @@ class VProfileEditList:VCollection<
         registerHeader(header:VProfileEditListHeader.self)
         registerCell(cell:VProfileEditListCellPictures.self)
         registerCell(cell:VProfileEditListCellName.self)
+        registerCell(cell:VProfileEditListCellAge.self)
     }
     
     required init?(coder:NSCoder)

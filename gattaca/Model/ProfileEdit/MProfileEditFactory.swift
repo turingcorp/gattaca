@@ -6,10 +6,12 @@ extension MProfileEdit
     {
         let itemPictures:MProfileEditItemPictures = MProfileEditItemPictures()
         let itemName:MProfileEditItemName = MProfileEditItemName()
+        let itemAge:MProfileEditItemAge = MProfileEditItemAge()
         
         let items:[MProfileEditItemProtocol] = [
             itemPictures,
-            itemName]
+            itemName,
+            itemAge]
         
         return items
     }
