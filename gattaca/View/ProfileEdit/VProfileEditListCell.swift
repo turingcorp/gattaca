@@ -6,7 +6,6 @@ class VProfileEditListCell:UICollectionViewCell
     {
         super.init(frame:frame)
         clipsToBounds = true
-        backgroundColor = UIColor.clear
     }
     
     required init?(coder:NSCoder)

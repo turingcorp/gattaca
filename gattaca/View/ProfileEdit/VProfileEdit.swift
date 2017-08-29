@@ -7,6 +7,7 @@ class VProfileEdit:ViewMain
     required init(controller:UIViewController)
     {
         super.init(controller:controller)
+        backgroundColor = UIColor.colourBackgroundGray
         
         guard
         

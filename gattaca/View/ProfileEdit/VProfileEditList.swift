@@ -7,7 +7,7 @@ class VProfileEditList:VCollection<
     VProfileEditListCell>
 {
     private let headerSize:CGSize
-    private let kHeaderHeight:CGFloat = 40
+    private let kHeaderHeight:CGFloat = 60
     
     required init(controller:CProfileEdit)
     {
@@ -15,6 +15,7 @@ class VProfileEditList:VCollection<
         
         super.init(controller:controller)
         
+        collectionView.alwaysBounceVertical = true
         registerHeader(header:VProfileEditListHeader.self)
         registerCell(cell:VProfileEditListCellPictures.self)
         registerCell(cell:VProfileEditListCellName.self)

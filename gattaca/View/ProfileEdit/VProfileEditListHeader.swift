@@ -3,7 +3,7 @@ import UIKit
 class VProfileEditListHeader:UICollectionReusableView
 {
     private weak var labelTitle:UILabel!
-    private let kTitleHeight:CGFloat = 30
+    private let kTitleHeight:CGFloat = 40
     private let kTitleMarginLeft:CGFloat = 10
     private let kTitleWidth:CGFloat = 200
     
@@ -31,7 +31,8 @@ class VProfileEditListHeader:UICollectionReusableView
             constant:kTitleHeight)
         NSLayoutConstraint.leftToLeft(
             view:labelTitle,
-            toView:self)
+            toView:self,
+            constant:kTitleMarginLeft)
         NSLayoutConstraint.width(
             view:labelTitle,
             constant:kTitleWidth)
