@@ -21,6 +21,8 @@ class VProfileEditListHeader:UICollectionReusableView
         labelTitle.textColor = UIColor.colourBackgroundDark
         self.labelTitle = labelTitle
         
+        addSubview(labelTitle)
+        
         NSLayoutConstraint.bottomToTop(
             view:labelTitle,
             toView:self)
