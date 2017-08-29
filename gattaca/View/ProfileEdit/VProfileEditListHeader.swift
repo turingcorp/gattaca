@@ -44,6 +44,6 @@ class VProfileEditListHeader:UICollectionReusableView
     
     func config(model:MProfileEditItemProtocol)
     {
-        
+        labelTitle.text = model.headerTitle
     }
 }
